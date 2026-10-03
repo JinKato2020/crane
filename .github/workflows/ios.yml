@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   testflight:
-    runs-on: macos-15
+    runs-on: macos-26
     env:
       SCHEME: CraneExam
       BUNDLE_ID: com.safa.crane
