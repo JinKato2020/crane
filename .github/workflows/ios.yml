@@ -37,11 +37,9 @@ jobs:
       - name: Build number (timestamp)
         run: echo "BUILD_NUMBER=$(date +%Y%m%d%H%M)" >> "$GITHUB_ENV"
 
-      - name: Archive
+      - name: Archive (unsigned)
         env:
           TEAM: ${{ secrets.DEVELOPMENT_TEAM }}
-          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
-          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
         run: |
           xcodebuild archive \
             -project CraneExam.xcodeproj \
@@ -51,11 +49,7 @@ jobs:
             -archivePath "$RUNNER_TEMP/CraneExam.xcarchive" \
             CURRENT_PROJECT_VERSION="$BUILD_NUMBER" \
             DEVELOPMENT_TEAM="$TEAM" \
-            CODE_SIGN_STYLE=Automatic \
-            -allowProvisioningUpdates \
-            -authenticationKeyID "$ASC_KEY_ID" \
-            -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
-            -authenticationKeyPath "$HOME/.appstoreconnect/private_keys/AuthKey_${ASC_KEY_ID}.p8"
+            CODE_SIGNING_ALLOWED=NO
 
       - name: Write ExportOptions.plist
         env:
