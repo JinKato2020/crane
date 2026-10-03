@@ -1,6 +1,6 @@
 name: CraneExam
 options:
-  bundleIdPrefix: com.jinkato
+  bundleIdPrefix: com.safa
   deploymentTarget:
     iOS: "16.0"
   createIntermediateGroups: true
@@ -17,7 +17,7 @@ targets:
       - path: CraneExam
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.jinkato.crane
+        PRODUCT_BUNDLE_IDENTIFIER: com.safa.crane
         PRODUCT_NAME: CraneExam
         GENERATE_INFOPLIST_FILE: "YES"
         INFOPLIST_KEY_CFBundleDisplayName: "クレーン試験対策"

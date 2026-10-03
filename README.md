@@ -24,7 +24,7 @@
 
 ### 前提
 1. Apple Developer Program 加入済み。
-2. App Store Connect に本アプリの枠を作成済み（**Bundle ID を `com.jinkato.crane` に合わせる**。別IDにする場合は `project.yml` と ASC を一致させる）。
+2. App Store Connect に本アプリの枠を作成済み（**Bundle ID を `com.safa.crane` に合わせる**。別IDにする場合は `project.yml` と ASC を一致させる）。
 3. App Store Connect API キー（**App Manager** 以上）を発行し、`.p8` ファイルを取得。
 
 ### GitHub Secrets（リポジトリ Settings → Secrets and variables → Actions）
