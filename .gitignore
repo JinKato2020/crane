@@ -1,0 +1,19 @@
+# XcodeGen output (generated locally/CI with `xcodegen generate`)
+*.xcodeproj/
+*.xcworkspace/
+
+# Build
+build/
+DerivedData/
+*.xcarchive
+*.ipa
+*.dSYM.zip
+
+# Signing / secrets — never commit
+*.p8
+*.p12
+*.mobileprovision
+private_keys/
+
+# macOS
+.DS_Store
