@@ -1,0 +1,53 @@
+name: ASC Build Status (diagnostic)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Query App Store Connect
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8_BASE64: ${{ secrets.ASC_KEY_P8_BASE64 }}
+          BUNDLE_ID: com.safa.crane
+        run: |
+          pip install --quiet pyjwt cryptography requests
+          python - <<'PY'
+          import jwt, time, requests, os, base64
+          kid=os.environ['ASC_KEY_ID']; iss=os.environ['ASC_ISSUER_ID']
+          key=base64.b64decode(os.environ['ASC_KEY_P8_BASE64']).decode()
+          bundle=os.environ['BUNDLE_ID']
+          now=int(time.time())
+          tok=jwt.encode({'iss':iss,'iat':now,'exp':now+1200,'aud':'appstoreconnect-v1'},
+                         key, algorithm='ES256', headers={'kid':kid,'typ':'JWT'})
+          h={'Authorization':'Bearer '+tok}
+          base='https://api.appstoreconnect.apple.com/v1'
+          apps=requests.get(base+'/apps',params={'filter[bundleId]':bundle},headers=h).json()
+          if apps.get('errors'):
+              print('APPS_ERROR:', apps['errors']); raise SystemExit(0)
+          data=apps.get('data',[])
+          print('=== APPS for',bundle,'===')
+          for a in data:
+              print(' app id=',a['id'],' name=',a['attributes'].get('name'),' sku=',a['attributes'].get('sku'))
+          if not data:
+              print('!! この API キーからは bundleId',bundle,'のアプリが見えません(別アカウント/キー権限の可能性)')
+              raise SystemExit(0)
+          aid=data[0]['id']
+          b=requests.get(base+'/builds',
+                         params={'filter[app]':aid,'limit':15,'sort':'-uploadedDate'},headers=h).json()
+          if b.get('errors'):
+              print('BUILDS_ERROR:', b['errors']); raise SystemExit(0)
+          print('=== BUILDS (newest first) ===')
+          if not b.get('data'):
+              print('!! Apple 側にビルドが1件もありません(今回のアップロードは処理段階で消えた=拒否の可能性)')
+          for x in b.get('data',[]):
+              at=x['attributes']
+              print(' version(build#)=',at.get('version'),
+                    ' processingState=',at.get('processingState'),
+                    ' uploaded=',at.get('uploadedDate'),
+                    ' expired=',at.get('expired'),
+                    ' usesNonExemptEncryption=',at.get('usesNonExemptEncryption'))
+          PY
