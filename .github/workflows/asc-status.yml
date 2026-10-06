@@ -43,11 +43,45 @@ jobs:
           print('=== BUILDS (newest first) ===')
           if not b.get('data'):
               print('!! Apple 側にビルドが1件もありません(今回のアップロードは処理段階で消えた=拒否の可能性)')
+          newest_id=None
           for x in b.get('data',[]):
+              if newest_id is None: newest_id=x['id']
               at=x['attributes']
               print(' version(build#)=',at.get('version'),
                     ' processingState=',at.get('processingState'),
                     ' uploaded=',at.get('uploadedDate'),
                     ' expired=',at.get('expired'),
                     ' usesNonExemptEncryption=',at.get('usesNonExemptEncryption'))
+
+          # --- ベータグループ(内部テスト)とテスター ---
+          print('=== BETA GROUPS ===')
+          g=requests.get(base+'/betaGroups',
+                         params={'filter[app]':aid,'limit':50,
+                                 'fields[betaGroups]':'name,isInternalGroup,hasAccessToAllBuilds,publicLinkEnabled'},
+                         headers=h).json()
+          if g.get('errors'):
+              print('BETAGROUPS_ERROR:', g['errors'])
+          groups=g.get('data',[])
+          if not groups:
+              print('!! ベータグループが0件(内部テストグループが未作成)')
+          for gr in groups:
+              ga=gr['attributes']
+              gid=gr['id']
+              t=requests.get(base+'/betaGroups/'+gid+'/betaTesters',params={'limit':200},headers=h).json()
+              tn=len(t.get('data',[]))
+              print(' group=',ga.get('name'),
+                    ' internal=',ga.get('isInternalGroup'),
+                    ' allBuilds=',ga.get('hasAccessToAllBuilds'),
+                    ' testers=',tn)
+
+          print('=== 総テスター数 ===')
+          bt=requests.get(base+'/betaTesters',params={'filter[apps]':aid,'limit':200},headers=h).json()
+          print(' betaTesters(app全体)=', len(bt.get('data',[])), bt.get('errors') or '')
+
+          if newest_id:
+              print('=== 最新ビルドのグループ割当 ===')
+              bg=requests.get(base+'/builds/'+newest_id+'/betaGroups',params={'limit':50},headers=h).json()
+              print(' 割当グループ数=', len(bg.get('data',[])), bg.get('errors') or '')
+              it=requests.get(base+'/builds/'+newest_id+'/individualTesters',params={'limit':200},headers=h).json()
+              print(' 個別テスター数=', len(it.get('data',[])), it.get('errors') or '')
           PY
