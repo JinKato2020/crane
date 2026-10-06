@@ -9,6 +9,7 @@ struct StudyView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
                     Picker("", selection: $router.studySeg) {
+                        Text("教材").tag(2)
                         Text("模擬試験").tag(0)
                         Text("分野別").tag(1)
                     }
@@ -16,8 +17,10 @@ struct StudyView: View {
 
                     if router.studySeg == 0 {
                         mockList
-                    } else {
+                    } else if router.studySeg == 1 {
                         fieldList
+                    } else {
+                        TextbookListView()
                     }
                 }
                 .padding(16)

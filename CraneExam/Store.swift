@@ -3,6 +3,7 @@ import SwiftUI
 /// 問題データの読み込みと学習状態（結果・ブックマーク・弱点）の保存
 final class ExamStore: ObservableObject {
     @Published private(set) var exams: [Exam] = []
+    @Published private(set) var textbook: Textbook? = nil
     @Published private(set) var results: [ExamResult] = []
     @Published private(set) var bookmarks: Set<String> = []
     @Published private(set) var wrongs: [WrongRef] = []
@@ -13,7 +14,17 @@ final class ExamStore: ObservableObject {
 
     init() {
         loadExams()
+        loadTextbook()
         load()
+    }
+
+    private func loadTextbook() {
+        guard let url = Bundle.main.url(forResource: "textbook", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let decoded = try? JSONDecoder().decode(Textbook.self, from: data) else {
+            textbook = nil; return
+        }
+        textbook = decoded
     }
 
     private func loadExams() {
