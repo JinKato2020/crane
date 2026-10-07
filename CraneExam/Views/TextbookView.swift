@@ -178,15 +178,16 @@ struct SectionContentView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: 24) {
                 Text(section.title)
-                    .font(.system(size: 18, weight: .heavy)).foregroundColor(Theme.fg)
-                    .padding(.leading, 10)
+                    .font(.system(size: 21, weight: .heavy)).foregroundColor(Theme.fg)
+                    .lineSpacing(5)
+                    .padding(.leading, 14)
                     .overlay(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 2).fill(Theme.gold).frame(width: 4, height: 20)
+                        RoundedRectangle(cornerRadius: 2).fill(Theme.gold).frame(width: 4, height: 26)
                     }
                     .fixedSize(horizontal: false, vertical: true)
-                    .padding(.top, 2)
+                    .padding(.top, 10).padding(.bottom, 2)
 
                 ForEach(Array(section.blocks.enumerated()), id: \.offset) { _, b in
                     BlockView(block: b)
@@ -197,9 +198,9 @@ struct SectionContentView: View {
                     Text(position < total ? "スワイプで次の節へ" : "この章の最後の節です")
                         .font(.system(size: 11)).foregroundColor(Theme.faint)
                 }
-                .frame(maxWidth: .infinity).padding(.vertical, 12)
+                .frame(maxWidth: .infinity).padding(.vertical, 20)
             }
-            .padding(16)
+            .padding(.horizontal, 24).padding(.vertical, 22)
         }
         .background(Theme.bg.ignoresSafeArea())
     }
@@ -213,28 +214,31 @@ struct BlockView: View {
         switch block.type {
         case "sub":
             Text(md(block.text))
-                .font(.system(size: 14, weight: .bold)).foregroundColor(Theme.accent2)
+                .font(.system(size: 16, weight: .bold)).foregroundColor(Theme.accent2)
+                .lineSpacing(5)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.top, 2)
+                .padding(.top, 12).padding(.bottom, 2)
 
         case "p":
             Text(md(block.text))
-                .font(.system(size: 13.5)).foregroundColor(Theme.fg)
-                .lineSpacing(4)
+                .font(.system(size: 15)).foregroundColor(Theme.fg)
+                .lineSpacing(9)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical, 2)
 
         case "ul":
-            VStack(alignment: .leading, spacing: 7) {
+            VStack(alignment: .leading, spacing: 13) {
                 ForEach(Array((block.items ?? []).enumerated()), id: \.offset) { _, s in
-                    HStack(alignment: .top, spacing: 8) {
-                        Circle().fill(Theme.accent).frame(width: 5, height: 5).padding(.top, 7)
-                        Text(md(s)).font(.system(size: 13.5)).foregroundColor(Theme.fg)
-                            .lineSpacing(3).fixedSize(horizontal: false, vertical: true)
+                    HStack(alignment: .top, spacing: 12) {
+                        Circle().fill(Theme.accent).frame(width: 5, height: 5).padding(.top, 9)
+                        Text(md(s)).font(.system(size: 15)).foregroundColor(Theme.fg)
+                            .lineSpacing(7).fixedSize(horizontal: false, vertical: true)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
             }
+            .padding(.vertical, 2)
 
         case "fig":
             ScrollView(.horizontal, showsIndicators: false) {
@@ -248,7 +252,7 @@ struct BlockView: View {
             .overlay(RoundedRectangle(cornerRadius: 10).stroke(Theme.line, lineWidth: 1))
 
         case "img":
-            VStack(alignment: .leading, spacing: 6) {
+            VStack(alignment: .leading, spacing: 10) {
                 if let name = block.asset {
                     FigureImageView(assetName: name,
                                     labels: block.labels ?? [],
@@ -258,45 +262,47 @@ struct BlockView: View {
                                     showLegend: false)
                 }
                 if let cap = block.caption, !cap.isEmpty {
-                    Text("図：" + cap).font(.system(size: 11.5)).foregroundColor(Theme.muted)
+                    Text("図：" + cap).font(.system(size: 12)).foregroundColor(Theme.muted)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 if let leg = block.legend, !leg.isEmpty {
-                    VStack(alignment: .leading, spacing: 2) {
+                    VStack(alignment: .leading, spacing: 5) {
                         ForEach(Array(leg.enumerated()), id: \.offset) { _, s in
-                            Text("・" + s).font(.system(size: 11)).foregroundColor(Theme.muted)
+                            Text("・" + s).font(.system(size: 12)).foregroundColor(Theme.muted)
+                                .lineSpacing(4)
                                 .fixedSize(horizontal: false, vertical: true)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }
-                    .padding(.top, 1)
+                    .padding(.top, 3)
                 }
             }
+            .padding(.vertical, 4)
 
         case "table":
             TableBlock(headers: block.headers ?? [], rows: block.rows ?? [])
 
         case "point":
-            VStack(alignment: .leading, spacing: 7) {
-                HStack(spacing: 6) {
-                    Image(systemName: "lightbulb.fill").font(.system(size: 12)).foregroundColor(Theme.accent)
-                    Text("ここが出る").font(.system(size: 13, weight: .heavy)).foregroundColor(Theme.accent)
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(spacing: 7) {
+                    Image(systemName: "lightbulb.fill").font(.system(size: 13)).foregroundColor(Theme.accent)
+                    Text("ここが出る").font(.system(size: 14, weight: .heavy)).foregroundColor(Theme.accent)
                 }
                 ForEach(Array((block.items ?? []).enumerated()), id: \.offset) { _, s in
-                    HStack(alignment: .top, spacing: 8) {
-                        Text("▶").font(.system(size: 9)).foregroundColor(Theme.accent).padding(.top, 4)
-                        Text(md(s)).font(.system(size: 13, weight: .medium)).foregroundColor(Theme.fg)
-                            .lineSpacing(3).fixedSize(horizontal: false, vertical: true)
+                    HStack(alignment: .top, spacing: 11) {
+                        Text("▶").font(.system(size: 9)).foregroundColor(Theme.accent).padding(.top, 6)
+                        Text(md(s)).font(.system(size: 14.5, weight: .medium)).foregroundColor(Theme.fg)
+                            .lineSpacing(7).fixedSize(horizontal: false, vertical: true)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
             }
-            .padding(13)
+            .padding(18)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(Theme.accent.opacity(0.10))
-            .clipShape(RoundedRectangle(cornerRadius: 12))
-            .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.accent.opacity(0.35), lineWidth: 1))
+            .clipShape(RoundedRectangle(cornerRadius: 14))
+            .overlay(RoundedRectangle(cornerRadius: 14).stroke(Theme.accent.opacity(0.35), lineWidth: 1))
 
         default:
             EmptyView()
@@ -328,49 +334,53 @@ struct TableBlock: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }
-                    .padding(.horizontal, 12).padding(.vertical, 7)
+                    .padding(.horizontal, 15).padding(.vertical, 11)
                     .background(Theme.raise)
                 }
                 ForEach(Array(rows.enumerated()), id: \.offset) { i, r in
-                    HStack(alignment: .top, spacing: 10) {
-                        Text(attr(r.first ?? "")).font(.system(size: 12.5, weight: .semibold)).foregroundColor(Theme.fg)
-                            .frame(width: 104, alignment: .leading)
+                    HStack(alignment: .top, spacing: 12) {
+                        Text(attr(r.first ?? "")).font(.system(size: 13.5, weight: .semibold)).foregroundColor(Theme.fg)
+                            .frame(width: 110, alignment: .leading)
+                            .lineSpacing(4)
                             .fixedSize(horizontal: false, vertical: true)
                         if r.count > 1 {
-                            Text(attr(r[1])).font(.system(size: 12.5)).foregroundColor(Theme.muted)
+                            Text(attr(r[1])).font(.system(size: 13.5)).foregroundColor(Theme.muted)
                                 .frame(maxWidth: .infinity, alignment: .leading)
+                                .lineSpacing(5)
                                 .fixedSize(horizontal: false, vertical: true)
                         }
                     }
-                    .padding(.horizontal, 12).padding(.vertical, 8)
+                    .padding(.horizontal, 15).padding(.vertical, 13)
                     .background(i % 2 == 0 ? Theme.card : Theme.card2)
                 }
             }
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Theme.line, lineWidth: 1))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.line, lineWidth: 1))
         } else {
             // 3列以上: 1行=1カード
-            VStack(spacing: 8) {
+            VStack(spacing: 12) {
                 ForEach(Array(rows.enumerated()), id: \.offset) { _, r in
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(attr(r.first ?? "")).font(.system(size: 13, weight: .bold)).foregroundColor(Theme.fg)
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(attr(r.first ?? "")).font(.system(size: 14, weight: .bold)).foregroundColor(Theme.fg)
+                            .lineSpacing(5)
                             .fixedSize(horizontal: false, vertical: true)
                         ForEach(1..<max(1, r.count), id: \.self) { j in
                             if j < headers.count {
-                                HStack(alignment: .top, spacing: 6) {
-                                    Text(headers[j]).font(.system(size: 11, weight: .semibold)).foregroundColor(Theme.accent2)
-                                        .frame(width: 58, alignment: .leading)
-                                    Text(attr(r[j])).font(.system(size: 12.5)).foregroundColor(Theme.muted)
+                                HStack(alignment: .top, spacing: 8) {
+                                    Text(headers[j]).font(.system(size: 11.5, weight: .semibold)).foregroundColor(Theme.accent2)
+                                        .frame(width: 62, alignment: .leading)
+                                    Text(attr(r[j])).font(.system(size: 13.5)).foregroundColor(Theme.muted)
                                         .frame(maxWidth: .infinity, alignment: .leading)
+                                        .lineSpacing(5)
                                         .fixedSize(horizontal: false, vertical: true)
                                 }
                             }
                         }
                     }
-                    .padding(11)
+                    .padding(16)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 10))
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Theme.line, lineWidth: 1))
+                    .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 12))
+                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.line, lineWidth: 1))
                 }
             }
         }
