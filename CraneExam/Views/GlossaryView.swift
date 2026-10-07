@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// 全4章の重要用語を集めた用語集(ホームの専用カードから開く)
 struct GlossaryView: View {
@@ -16,6 +17,11 @@ struct GlossaryView: View {
     }
 
     private var totalCount: Int { chapters.reduce(0) { $0 + ($1.glossary?.count ?? 0) } }
+
+    private func tbUIImage(_ name: String) -> UIImage? {
+        guard let path = (Bundle.main.path(forResource: name, ofType: "jpg") ?? Bundle.main.path(forResource: name, ofType: "png")) else { return nil }
+        return UIImage(contentsOfFile: path)
+    }
 
     var body: some View {
         NavigationStack {
@@ -57,6 +63,14 @@ struct GlossaryView: View {
                                                 .fixedSize(horizontal: false, vertical: true)
                                             Text(t.def).font(.system(size: 12.5)).foregroundColor(Theme.muted)
                                                 .lineSpacing(2).fixedSize(horizontal: false, vertical: true)
+                                            if let name = t.img, let ui = tbUIImage(name) {
+                                                Image(uiImage: ui).resizable().scaledToFit()
+                                                    .frame(maxWidth: .infinity, maxHeight: 108, alignment: .leading)
+                                                    .background(Color.white)
+                                                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                                                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(Theme.line, lineWidth: 1))
+                                                    .padding(.top, 5)
+                                            }
                                         }
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .padding(.horizontal, 12).padding(.vertical, 9)

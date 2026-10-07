@@ -19,6 +19,7 @@ struct TBChapter: Codable, Identifiable {
 struct TBTerm: Codable, Identifiable {
     let term: String
     let def: String
+    let img: String?     // 対応する図(あれば)
     var id: String { term }
 }
 
@@ -37,6 +38,15 @@ struct TBBlock: Codable {
     let items: [String]?
     let headers: [String]?
     let rows: [[String]]?
-    let asset: String?     // 画像(img)のファイル名(拡張子なし)
-    let caption: String?   // 画像の説明
+    let asset: String?       // 画像(img)のファイル名(拡張子なし)
+    let caption: String?     // 画像の説明
+    let labels: [TBLabel]?   // 図に重ねる文字ラベル
+    let legend: [String]?    // 図の下に出す凡例(説明)
+}
+
+/// 図に重ねる1つのラベル(x,yは0〜1の相対位置)
+struct TBLabel: Codable {
+    let x: Double
+    let y: Double
+    let text: String
 }

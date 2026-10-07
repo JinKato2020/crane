@@ -147,6 +147,19 @@ struct BlockView: View {
                     Image(uiImage: ui).resizable().scaledToFit()
                         .frame(maxWidth: .infinity)
                         .background(Color.white)
+                        .overlay(
+                            GeometryReader { g in
+                                ForEach(Array((block.labels ?? []).enumerated()), id: \.offset) { _, lb in
+                                    Text(lb.text)
+                                        .font(.system(size: 8.5, weight: .bold))
+                                        .padding(.horizontal, 3).padding(.vertical, 1)
+                                        .background(RoundedRectangle(cornerRadius: 3).fill(Color.black.opacity(0.66)))
+                                        .foregroundColor(.white)
+                                        .fixedSize()
+                                        .position(x: lb.x * g.size.width, y: lb.y * g.size.height)
+                                }
+                            }
+                        )
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         .overlay(RoundedRectangle(cornerRadius: 10).stroke(Theme.line, lineWidth: 1))
                 } else {
@@ -164,6 +177,16 @@ struct BlockView: View {
                     Text("図：" + cap).font(.system(size: 11.5)).foregroundColor(Theme.muted)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
+                }
+                if let leg = block.legend, !leg.isEmpty {
+                    VStack(alignment: .leading, spacing: 2) {
+                        ForEach(Array(leg.enumerated()), id: \.offset) { _, s in
+                            Text("・" + s).font(.system(size: 11)).foregroundColor(Theme.muted)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                    }
+                    .padding(.top, 1)
                 }
             }
 
