@@ -13,6 +13,9 @@ concurrency:
   group: ios-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: write
+
 jobs:
   testflight:
     runs-on: macos-26
@@ -141,6 +144,20 @@ jobs:
           echo "::notice::Uploading $IPA_PATH to TestFlight..."
           xcrun altool --upload-app --file "$IPA_PATH" --type ios --apiKey "$ASC_KEY_ID" --apiIssuer "$ASC_ISSUER_ID"
           rm -rf ~/.appstoreconnect
+
+      - name: Bump marketing version for next build
+        if: success()
+        run: |
+          CUR=$(grep -m1 'MARKETING_VERSION:' project.yml | sed -E 's/.*"([0-9]+\.[0-9]+\.[0-9]+)".*/\1/')
+          X=${CUR%%.*}; rest=${CUR#*.}; Y=${rest%%.*}; Z=${rest#*.}
+          NEW="$X.$Y.$((Z+1))"
+          perl -0pi -e "s/MARKETING_VERSION: \"$CUR\"/MARKETING_VERSION: \"$NEW\"/" project.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add project.yml
+          git commit -m "chore: bump version $CUR -> $NEW [skip ci]"
+          git push origin HEAD:"${GITHUB_REF_NAME}"
+          echo "::notice::次回ビルドのMARKETING_VERSION = $NEW (今回ビルドは $CUR)"
 
       - name: Save IPA artifact
         if: always()
