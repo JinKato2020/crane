@@ -12,6 +12,14 @@ struct TBChapter: Codable, Identifiable {
     let subject: String      // 対応する試験科目
     let summary: String      // 一覧に出す1行説明
     let sections: [TBSection]
+    let glossary: [TBTerm]?  // 章の重要用語(用語集カードで使用)
+}
+
+/// 用語集の1項目
+struct TBTerm: Codable, Identifiable {
+    let term: String
+    let def: String
+    var id: String { term }
 }
 
 /// 章の中の1節
@@ -29,4 +37,6 @@ struct TBBlock: Codable {
     let items: [String]?
     let headers: [String]?
     let rows: [[String]]?
+    let asset: String?     // 画像(img)のファイル名(拡張子なし)
+    let caption: String?   // 画像の説明
 }

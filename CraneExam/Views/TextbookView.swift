@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// 「学科」タブ内の教材(章一覧)
 struct TextbookListView: View {
@@ -137,6 +138,34 @@ struct BlockView: View {
             .background(Theme.card2)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .overlay(RoundedRectangle(cornerRadius: 10).stroke(Theme.line, lineWidth: 1))
+
+        case "img":
+            VStack(alignment: .leading, spacing: 6) {
+                if let name = block.asset,
+                   let path = (Bundle.main.path(forResource: name, ofType: "jpg") ?? Bundle.main.path(forResource: name, ofType: "png")),
+                   let ui = UIImage(contentsOfFile: path) {
+                    Image(uiImage: ui).resizable().scaledToFit()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Theme.line, lineWidth: 1))
+                } else {
+                    RoundedRectangle(cornerRadius: 10).fill(Theme.card2)
+                        .frame(height: 120)
+                        .overlay(
+                            VStack(spacing: 6) {
+                                Image(systemName: "photo").font(.system(size: 24)).foregroundColor(Theme.faint)
+                                Text("図は準備中").font(.system(size: 11)).foregroundColor(Theme.faint)
+                            }
+                        )
+                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Theme.line, style: StrokeStyle(lineWidth: 1, dash: [4])))
+                }
+                if let cap = block.caption, !cap.isEmpty {
+                    Text("図：" + cap).font(.system(size: 11.5)).foregroundColor(Theme.muted)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
 
         case "table":
             TableBlock(headers: block.headers ?? [], rows: block.rows ?? [])

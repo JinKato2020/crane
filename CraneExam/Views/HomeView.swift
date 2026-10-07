@@ -3,6 +3,7 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var store: ExamStore
     @EnvironmentObject var router: Router
+    @State private var showGlossary = false
 
     var body: some View {
         ScrollView {
@@ -20,6 +21,9 @@ struct HomeView: View {
             }
         }
         .background(Theme.bg.ignoresSafeArea())
+        .sheet(isPresented: $showGlossary) {
+            GlossaryView().environmentObject(store)
+        }
     }
 
     // ヒーロー
@@ -102,7 +106,8 @@ struct HomeView: View {
     private var cardsGrid: some View {
         let cols = [GridItem(.flexible(), spacing: 11), GridItem(.flexible(), spacing: 11)]
         return LazyVGrid(columns: cols, spacing: 11) {
-            homeCard("book.fill", "教材で学ぶ", "全4章の解説・用語集") { router.studySeg = 2; router.tab = 1 }
+            homeCard("book.fill", "教材で学ぶ", "全4章の解説・図表") { router.studySeg = 2; router.tab = 1 }
+            homeCard("character.book.closed.fill", "用語集", "全4章の重要用語") { showGlossary = true }
             homeCard("doc.text.fill", "模擬試験", "本番形式で力試し") { router.studySeg = 0; router.tab = 1 }
             homeCard("square.grid.2x2.fill", "分野別問題", "苦手が分かる・克服する") { router.studySeg = 1; router.tab = 1 }
             homeCard("arrow.counterclockwise", "弱点復習", "間違えた問題をもう一度") { router.noteSeg = 0; router.tab = 3 }
