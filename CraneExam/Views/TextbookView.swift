@@ -249,37 +249,13 @@ struct BlockView: View {
 
         case "img":
             VStack(alignment: .leading, spacing: 6) {
-                if let name = block.asset,
-                   let path = (Bundle.main.path(forResource: name, ofType: "jpg") ?? Bundle.main.path(forResource: name, ofType: "png")),
-                   let ui = UIImage(contentsOfFile: path) {
-                    Image(uiImage: ui).resizable().scaledToFit()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.white)
-                        .overlay(
-                            GeometryReader { g in
-                                ForEach(Array((block.labels ?? []).enumerated()), id: \.offset) { _, lb in
-                                    Text(lb.text)
-                                        .font(.system(size: 8.5, weight: .bold))
-                                        .padding(.horizontal, 3).padding(.vertical, 1)
-                                        .background(RoundedRectangle(cornerRadius: 3).fill(Color.black.opacity(0.66)))
-                                        .foregroundColor(.white)
-                                        .fixedSize()
-                                        .position(x: lb.x * g.size.width, y: lb.y * g.size.height)
-                                }
-                            }
-                        )
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Theme.line, lineWidth: 1))
-                } else {
-                    RoundedRectangle(cornerRadius: 10).fill(Theme.card2)
-                        .frame(height: 120)
-                        .overlay(
-                            VStack(spacing: 6) {
-                                Image(systemName: "photo").font(.system(size: 24)).foregroundColor(Theme.faint)
-                                Text("図は準備中").font(.system(size: 11)).foregroundColor(Theme.faint)
-                            }
-                        )
-                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Theme.line, style: StrokeStyle(lineWidth: 1, dash: [4])))
+                if let name = block.asset {
+                    FigureImageView(assetName: name,
+                                    labels: block.labels ?? [],
+                                    legend: block.legend ?? [],
+                                    caption: block.caption,
+                                    thumbMaxHeight: 300,
+                                    showLegend: false)
                 }
                 if let cap = block.caption, !cap.isEmpty {
                     Text("図：" + cap).font(.system(size: 11.5)).foregroundColor(Theme.muted)

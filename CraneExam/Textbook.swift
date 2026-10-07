@@ -50,3 +50,10 @@ struct TBLabel: Codable {
     let y: Double
     let text: String
 }
+
+/// 図アセット1枚ぶんの付随情報(教材のimgブロックから集約。用語集で同じ図にラベルを重ねるのに使う)
+struct TBFigureInfo {
+    let labels: [TBLabel]
+    let legend: [String]
+    let caption: String?
+}

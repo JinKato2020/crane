@@ -4,6 +4,8 @@ import SwiftUI
 final class ExamStore: ObservableObject {
     @Published private(set) var exams: [Exam] = []
     @Published private(set) var textbook: Textbook? = nil
+    /// 図アセット名 → ラベル/凡例/キャプション(教材imgブロックから集約)
+    private(set) var figureInfo: [String: TBFigureInfo] = [:]
     @Published private(set) var results: [ExamResult] = []
     @Published private(set) var bookmarks: Set<String> = []
     @Published private(set) var wrongs: [WrongRef] = []
@@ -25,6 +27,21 @@ final class ExamStore: ObservableObject {
             textbook = nil; return
         }
         textbook = decoded
+        buildFigureInfo()
+    }
+
+    /// 教材の全imgブロックを走査し、アセット名→ラベル/凡例/キャプションの表を作る
+    private func buildFigureInfo() {
+        var map: [String: TBFigureInfo] = [:]
+        for ch in textbook?.chapters ?? [] {
+            for sec in ch.sections {
+                for b in sec.blocks where b.type == "img" {
+                    guard let a = b.asset, map[a] == nil else { continue }
+                    map[a] = TBFigureInfo(labels: b.labels ?? [], legend: b.legend ?? [], caption: b.caption)
+                }
+            }
+        }
+        figureInfo = map
     }
 
     private func loadExams() {
