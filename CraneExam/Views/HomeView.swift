@@ -3,7 +3,7 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var store: ExamStore
     @EnvironmentObject var router: Router
-    @State private var showGlossary = false
+    @State private var showGuide = false
 
     var body: some View {
         ScrollView {
@@ -11,8 +11,8 @@ struct HomeView: View {
                 hero
                 VStack(spacing: 13) {
                     progressCard
+                    guideCard
                     cardsGrid
-                    chips
                     Text("挑戦が、現場を動かす。")
                         .font(.system(size: 11)).foregroundColor(Theme.faint)
                         .frame(maxWidth: .infinity).padding(.top, 6)
@@ -21,8 +21,30 @@ struct HomeView: View {
             }
         }
         .background(Theme.bg.ignoresSafeArea())
-        .sheet(isPresented: $showGlossary) {
-            GlossaryView().environmentObject(store)
+        .sheet(isPresented: $showGuide) { ExamGuideView() }
+    }
+
+    // 総合解説カード
+    private var guideCard: some View {
+        Button { showGuide = true } label: {
+            HStack(spacing: 13) {
+                Image(systemName: "graduationcap.fill")
+                    .font(.system(size: 17)).foregroundColor(Color(hex: 0x241703))
+                    .frame(width: 42, height: 42)
+                    .background(Theme.gold).clipShape(RoundedRectangle(cornerRadius: 12))
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("クレーン試験 総合解説").font(.system(size: 14.5, weight: .bold)).foregroundColor(Theme.fg)
+                    Text("配点・合格基準・学び方がひと目でわかる")
+                        .font(.system(size: 11.5)).foregroundColor(Theme.muted)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 6)
+                Image(systemName: "chevron.right").font(.system(size: 13, weight: .bold)).foregroundColor(Theme.faint)
+            }
+            .padding(14)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 14))
+            .overlay(RoundedRectangle(cornerRadius: 14).stroke(Theme.line, lineWidth: 1))
         }
     }
 
@@ -106,10 +128,10 @@ struct HomeView: View {
     private var cardsGrid: some View {
         let cols = [GridItem(.flexible(), spacing: 11), GridItem(.flexible(), spacing: 11)]
         return LazyVGrid(columns: cols, spacing: 11) {
-            homeCard("book.fill", "教材で学ぶ", "全4章の解説・図表") { router.studySeg = 2; router.tab = 1 }
-            homeCard("character.book.closed.fill", "用語集", "全4章の重要用語") { showGlossary = true }
-            homeCard("doc.text.fill", "模擬試験", "本番形式で力試し") { router.studySeg = 0; router.tab = 1 }
-            homeCard("square.grid.2x2.fill", "分野別問題", "苦手が分かる・克服する") { router.studySeg = 1; router.tab = 1 }
+            homeCard("book.fill", "教材で学ぶ", "全4章の解説・図表") { router.studySeg = 0; router.tab = 1 }
+            homeCard("character.book.closed.fill", "用語集", "全4章の重要用語") { router.studySeg = 1; router.tab = 1 }
+            homeCard("doc.text.fill", "模擬試験", "本番形式で力試し") { router.tab = 2 }
+            homeCard("chart.bar.xaxis", "分野別の到達度", "苦手が一目でわかる") { router.tab = 3 }
             homeCard("arrow.counterclockwise", "弱点復習", "間違えた問題をもう一度") { router.noteSeg = 0; router.tab = 3 }
             homeCard("bookmark.fill", "ブックマーク", "あとで見返す問題") { router.noteSeg = 1; router.tab = 3 }
         }
@@ -135,26 +157,4 @@ struct HomeView: View {
         }
     }
 
-    // 分野チップ
-    private var chips: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            SectionHead(title: "分野から選ぶ")
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 9) {
-                    ForEach(SUBJECTS, id: \.self) { s in
-                        Button { router.studySeg = 1; router.tab = 1 } label: {
-                            HStack(spacing: 8) {
-                                Circle().fill(Theme.subjectColor(s)).frame(width: 7, height: 7)
-                                Text(s).font(.system(size: 12.5, weight: .bold)).foregroundColor(Theme.fg)
-                            }
-                            .padding(.horizontal, 14).padding(.vertical, 9)
-                            .background(Theme.card)
-                            .overlay(Capsule().stroke(Theme.line, lineWidth: 1))
-                            .clipShape(Capsule())
-                        }
-                    }
-                }
-            }
-        }
-    }
 }

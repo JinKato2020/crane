@@ -6,20 +6,16 @@ struct TextbookListView: View {
     @EnvironmentObject var store: ExamStore
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            SectionHead(title: "教材で学ぶ(全4章)", trailing: "読んで理解")
+        VStack(alignment: .leading, spacing: 14) {
             if let chapters = store.textbook?.chapters, !chapters.isEmpty {
                 ForEach(chapters) { ch in
                     NavigationLink {
-                        ChapterReaderView(chapter: ch)
+                        ChapterSectionsView(chapter: ch)
                     } label: {
                         chapterRow(ch)
                     }
                     .buttonStyle(.plain)
                 }
-                Text("図表と用語集つきで、試験範囲をやさしく解説します。")
-                    .font(.system(size: 11.5)).foregroundColor(Theme.faint)
-                    .padding(.horizontal, 2).padding(.top, 2)
             } else {
                 Text("教材データを読み込めませんでした。")
                     .foregroundColor(Theme.muted).font(.system(size: 13)).padding()
@@ -28,38 +24,40 @@ struct TextbookListView: View {
     }
 
     private func chapterRow(_ ch: TBChapter) -> some View {
-        HStack(spacing: 13) {
+        HStack(spacing: 16) {
             VStack(spacing: 1) {
-                Text("\(ch.id)").font(.system(size: 20, weight: .bold, design: .rounded)).foregroundColor(Theme.accent2)
-                Text("第\(ch.id)章").font(.system(size: 8.5)).foregroundColor(Theme.muted)
+                Text("\(ch.id)").font(.system(size: 23, weight: .bold, design: .rounded)).foregroundColor(Theme.accent2)
+                Text("章").font(.system(size: 9)).foregroundColor(Theme.muted)
             }
-            .frame(width: 46, height: 46)
-            .background(Theme.raise).clipShape(RoundedRectangle(cornerRadius: 12))
-            .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.line, lineWidth: 1))
+            .frame(width: 54, height: 54)
+            .background(Theme.raise).clipShape(RoundedRectangle(cornerRadius: 14))
+            .overlay(RoundedRectangle(cornerRadius: 14).stroke(Theme.line, lineWidth: 1))
 
-            VStack(alignment: .leading, spacing: 3) {
-                Text(ch.title).font(.system(size: 14, weight: .bold)).foregroundColor(Theme.fg)
+            VStack(alignment: .leading, spacing: 5) {
+                Text(ch.title).font(.system(size: 15.5, weight: .bold)).foregroundColor(Theme.fg)
                     .fixedSize(horizontal: false, vertical: true)
-                Text(ch.summary).font(.system(size: 11)).foregroundColor(Theme.muted)
-                    .lineLimit(2).fixedSize(horizontal: false, vertical: true)
+                Text(ch.summary).font(.system(size: 12)).foregroundColor(Theme.muted)
+                    .lineLimit(2).lineSpacing(2).fixedSize(horizontal: false, vertical: true)
+                Text("全\(ch.sections.count)節").font(.system(size: 11)).foregroundColor(Theme.faint)
+                    .padding(.top, 1)
             }
             Spacer(minLength: 6)
-            Image(systemName: "chevron.right").font(.system(size: 13, weight: .bold)).foregroundColor(Theme.faint)
+            Image(systemName: "chevron.right").font(.system(size: 14, weight: .bold)).foregroundColor(Theme.faint)
         }
-        .padding(13)
+        .padding(18)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 12))
-        .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.line, lineWidth: 1))
+        .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 16))
+        .overlay(RoundedRectangle(cornerRadius: 16).stroke(Theme.line, lineWidth: 1))
     }
 }
 
-/// 1章を読むビュー
-struct ChapterReaderView: View {
+/// 章を選んだ後の「節の選択画面」
+struct ChapterSectionsView: View {
     let chapter: TBChapter
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 18) {
+            VStack(alignment: .leading, spacing: 12) {
                 // 章タイトル
                 VStack(alignment: .leading, spacing: 6) {
                     Text("第\(chapter.id)章").font(.system(size: 12, weight: .bold)).foregroundColor(Theme.accent2)
@@ -68,32 +66,142 @@ struct ChapterReaderView: View {
                     Text(chapter.summary).font(.system(size: 12)).foregroundColor(Theme.muted)
                         .fixedSize(horizontal: false, vertical: true)
                 }
-                .padding(.top, 4)
+                .padding(.top, 4).padding(.bottom, 2)
 
-                ForEach(chapter.sections) { sec in
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text(sec.title)
-                            .font(.system(size: 16, weight: .bold)).foregroundColor(Theme.fg)
-                            .padding(.leading, 10)
-                            .overlay(alignment: .leading) {
-                                RoundedRectangle(cornerRadius: 2).fill(Theme.gold).frame(width: 4, height: 18)
-                            }
-                        ForEach(Array(sec.blocks.enumerated()), id: \.offset) { _, b in
-                            BlockView(block: b)
-                        }
+                HStack {
+                    Text("節を選ぶ").font(.system(size: 13, weight: .heavy)).foregroundColor(Theme.fg)
+                    Spacer()
+                    Text("全\(chapter.sections.count)節").font(.system(size: 11)).foregroundColor(Theme.muted)
+                }
+                .padding(.bottom, 1)
+
+                ForEach(Array(chapter.sections.enumerated()), id: \.element.id) { idx, sec in
+                    NavigationLink {
+                        SectionPagerView(chapter: chapter, start: idx)
+                    } label: {
+                        sectionRow(number: idx + 1, title: sec.title)
                     }
-                    .padding(.bottom, 2)
+                    .buttonStyle(.plain)
                 }
 
-                Text("© クレーン試験対策 教材")
-                    .font(.system(size: 10)).foregroundColor(Theme.faint)
-                    .frame(maxWidth: .infinity).padding(.vertical, 8)
+                Text("節を開くと、左右スワイプで前後の節へ移動できます。")
+                    .font(.system(size: 11.5)).foregroundColor(Theme.faint)
+                    .padding(.horizontal, 2).padding(.top, 2)
             }
             .padding(16)
         }
         .background(Theme.bg.ignoresSafeArea())
         .navigationTitle("第\(chapter.id)章")
         .navigationBarTitleDisplayMode(.inline)
+    }
+
+    private func sectionRow(number: Int, title: String) -> some View {
+        HStack(spacing: 13) {
+            Text("\(number)")
+                .font(.system(size: 17, weight: .bold, design: .rounded)).foregroundColor(Theme.accent2)
+                .frame(width: 40, height: 40)
+                .background(Theme.raise).clipShape(RoundedRectangle(cornerRadius: 11))
+                .overlay(RoundedRectangle(cornerRadius: 11).stroke(Theme.line, lineWidth: 1))
+            Text(title).font(.system(size: 14, weight: .bold)).foregroundColor(Theme.fg)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Image(systemName: "chevron.right").font(.system(size: 13, weight: .bold)).foregroundColor(Theme.faint)
+        }
+        .padding(12)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 12))
+        .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.line, lineWidth: 1))
+    }
+}
+
+/// 1節を表示し、左右スワイプで前後の節へ移動できるビュー
+struct SectionPagerView: View {
+    let chapter: TBChapter
+    @State private var index: Int
+
+    init(chapter: TBChapter, start: Int) {
+        self.chapter = chapter
+        _index = State(initialValue: start)
+    }
+
+    var body: some View {
+        VStack(spacing: 0) {
+            // 進捗ヘッダー
+            HStack(spacing: 10) {
+                Button {
+                    if index > 0 { withAnimation { index -= 1 } }
+                } label: {
+                    Image(systemName: "chevron.left").font(.system(size: 14, weight: .bold))
+                }
+                .disabled(index == 0).foregroundColor(index == 0 ? Theme.faint : Theme.accent2)
+
+                Spacer()
+                Text("\(index + 1) / \(chapter.sections.count) 節")
+                    .font(.system(size: 12, weight: .bold)).foregroundColor(Theme.muted)
+                Spacer()
+
+                Button {
+                    if index < chapter.sections.count - 1 { withAnimation { index += 1 } }
+                } label: {
+                    Image(systemName: "chevron.right").font(.system(size: 14, weight: .bold))
+                }
+                .disabled(index == chapter.sections.count - 1)
+                .foregroundColor(index == chapter.sections.count - 1 ? Theme.faint : Theme.accent2)
+            }
+            .padding(.horizontal, 16).padding(.vertical, 9)
+            .background(Theme.raise)
+            .overlay(alignment: .bottom) { Rectangle().fill(Theme.line).frame(height: 1) }
+
+            // 節本文(ページ=スワイプ移動)
+            TabView(selection: $index) {
+                ForEach(Array(chapter.sections.enumerated()), id: \.offset) { i, sec in
+                    SectionContentView(section: sec,
+                                       position: i + 1,
+                                       total: chapter.sections.count)
+                        .tag(i)
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .animation(.easeInOut, value: index)
+        }
+        .background(Theme.bg.ignoresSafeArea())
+        .navigationTitle("第\(chapter.id)章")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+/// 1節ぶんの本文(スクロール)
+struct SectionContentView: View {
+    let section: TBSection
+    let position: Int
+    let total: Int
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 12) {
+                Text(section.title)
+                    .font(.system(size: 18, weight: .heavy)).foregroundColor(Theme.fg)
+                    .padding(.leading, 10)
+                    .overlay(alignment: .leading) {
+                        RoundedRectangle(cornerRadius: 2).fill(Theme.gold).frame(width: 4, height: 20)
+                    }
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.top, 2)
+
+                ForEach(Array(section.blocks.enumerated()), id: \.offset) { _, b in
+                    BlockView(block: b)
+                }
+
+                HStack(spacing: 6) {
+                    Image(systemName: "hand.draw").font(.system(size: 11)).foregroundColor(Theme.faint)
+                    Text(position < total ? "スワイプで次の節へ" : "この章の最後の節です")
+                        .font(.system(size: 11)).foregroundColor(Theme.faint)
+                }
+                .frame(maxWidth: .infinity).padding(.vertical, 12)
+            }
+            .padding(16)
+        }
+        .background(Theme.bg.ignoresSafeArea())
     }
 }
 

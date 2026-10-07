@@ -3,6 +3,7 @@ import SwiftUI
 struct SettingsView: View {
     @AppStorage("cr_goal") private var goal: Int = 20
     @AppStorage("cr_notify") private var notify: Bool = true
+    @AppStorage("cr_appearance") private var appearance: Int = 0   // 0:システム 1:ライト 2:ダーク
 
     var body: some View {
         NavigationStack {
@@ -13,7 +14,7 @@ struct SettingsView: View {
                     toggleRow("bell.fill", "学習リマインダー通知", "毎日 20:00", $notify)
 
                     group("表示")
-                    infoRow("moon.fill", "ダークモード", "常にオン")
+                    appearanceRow
 
                     group("データ")
                     infoRow("externaldrive.fill", "学習データ", "この端末に保存")
@@ -49,6 +50,25 @@ struct SettingsView: View {
             }
             Spacer()
             Toggle("", isOn: bind).labelsHidden().tint(Theme.accent)
+        }
+        .rowStyle()
+    }
+
+    private var appearanceRow: some View {
+        VStack(alignment: .leading, spacing: 11) {
+            HStack(spacing: 12) {
+                iconBox("circle.lefthalf.filled")
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("外観").font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg)
+                    Text("ライト／ダークを選べます").font(.system(size: 11)).foregroundColor(Theme.faint)
+                }
+                Spacer()
+            }
+            Picker("", selection: $appearance) {
+                Text("システム").tag(0)
+                Text("ライト").tag(1)
+                Text("ダーク").tag(2)
+            }.pickerStyle(.segmented)
         }
         .rowStyle()
     }
