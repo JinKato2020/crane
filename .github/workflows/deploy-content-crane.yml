@@ -1,0 +1,65 @@
+name: クレーン コンテンツ配信 (R2 / OTA)
+run-name: "クレーン コンテンツを棚(R2)へ配信"
+
+# 手動実行のみ（push では走らない＝安全）。問題(exams.json)・教材/用語(textbook.json)を直したら、
+# これを1回まわすだけでアプリに配信される（ビルド不要。反映はユーザーの次回起動）。
+# 前提: OTA対応を含む「土台ビルド」を1本入れたアプリがインストールされていること。
+#
+# 配信レイアウト（CAEと同じ棚に crane/ 名札で相乗り）:
+#   r2:<R2_BUCKET>/crane/_manifest.json
+#   r2:<R2_BUCKET>/crane/content/exams.json
+#   r2:<R2_BUCKET>/crane/content/textbook.json
+# アプリ側 BASE = https://content.safa-lang.com/crane/
+#
+# 必要 secrets: R2_ACCESS_KEY_ID / R2_SECRET_ACCESS_KEY / R2_ENDPOINT / R2_BUCKET （値はCAEと同じ）
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # 配信する実ファイルに合わせて _manifest.json（指紋台帳）を作り直す＝常に整合。
+      - name: Rebuild content manifest
+        run: |
+          python tools/content_manifest.py
+          echo "::notice::manifest 再生成完了"
+
+      - name: Sync content & manifest to Cloudflare R2
+        env:
+          RCLONE_CONFIG_R2_TYPE: s3
+          RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+          RCLONE_CONFIG_R2_REGION: auto
+          RCLONE_CONFIG_R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        run: |
+          set -euo pipefail
+          if [ -z "${RCLONE_CONFIG_R2_ACCESS_KEY_ID:-}" ] || [ -z "${R2_BUCKET:-}" ]; then
+            echo "::error::R2 secrets 未設定（R2_ACCESS_KEY_ID / R2_SECRET_ACCESS_KEY / R2_ENDPOINT / R2_BUCKET）。CAEと同じ値を crane リポジトリの Secrets に登録。"
+            exit 1
+          fi
+          # endpoint に混入しがちな末尾改行/空白を除去（Invalid region 誤表示の原因になる）。
+          RCLONE_CONFIG_R2_ENDPOINT=$(printf '%s' "$RCLONE_CONFIG_R2_ENDPOINT" | tr -d '[:space:]'); export RCLONE_CONFIG_R2_ENDPOINT
+          curl -fsSL https://rclone.org/install.sh | sudo bash
+
+          DEST="r2:${R2_BUCKET}/crane"
+          RES="CraneExam/Resources"
+          FLAGS=(--s3-no-check-bucket --header-upload "Cache-Control: no-cache")
+
+          # ① 先に実ファイル(content/)を上げる ② 最後に manifest を上げる
+          #    （manifest が指すのにまだ無いファイル、を配信中に作らない＝DL失敗を防ぐ）
+          rclone copyto "$RES/exams.json"     "$DEST/content/exams.json"     "${FLAGS[@]}"
+          rclone copyto "$RES/textbook.json"  "$DEST/content/textbook.json"  "${FLAGS[@]}"
+          rclone copyto "$RES/_manifest.json" "$DEST/_manifest.json"         "${FLAGS[@]}"
+
+          echo "::notice::配信完了 → https://content.safa-lang.com/crane/_manifest.json"

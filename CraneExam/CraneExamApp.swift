@@ -1,13 +1,19 @@
 import SwiftUI
+import RevenueCat
 
 @main
 struct CraneExamApp: App {
     @StateObject private var store = ExamStore()
     @StateObject private var router = Router()
+    @StateObject private var purchases = PurchaseStore()
     // 0:システム 1:ライト 2:ダーク
     @AppStorage("cr_appearance") private var appearance: Int = 0
 
     init() {
+        // 課金(RevenueCat)初期化 ― いちばん最初に行う
+        Purchases.logLevel = .warn
+        Purchases.configure(withAPIKey: RCConfig.apiKey)
+
         // タブバー/ナビバー外観(明暗で自動追従する動的カラー)
         let tab = UITabBarAppearance()
         tab.configureWithOpaqueBackground()
@@ -39,6 +45,7 @@ struct CraneExamApp: App {
             RootView()
                 .environmentObject(store)
                 .environmentObject(router)
+                .environmentObject(purchases)
                 .preferredColorScheme(scheme)
         }
     }

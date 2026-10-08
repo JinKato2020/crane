@@ -18,11 +18,21 @@ final class ExamStore: ObservableObject {
         loadExams()
         loadTextbook()
         load()
+        // OTA: 裏で棚(R2)の最新コンテンツを取り込み、更新があれば同じ起動中に反映する。
+        // 通信断などで失敗しても内蔵データで動く(壊れない)。反映は次回起動 or ここでの再読込。
+        Task { [weak self] in
+            let updated = await ContentOTA.sync()
+            if updated > 0 {
+                await MainActor.run {
+                    self?.loadExams()
+                    self?.loadTextbook()
+                }
+            }
+        }
     }
 
     private func loadTextbook() {
-        guard let url = Bundle.main.url(forResource: "textbook", withExtension: "json"),
-              let data = try? Data(contentsOf: url),
+        guard let data = ContentOTA.contentData(key: "content/textbook.json", bundledResource: "textbook"),
               let decoded = try? JSONDecoder().decode(Textbook.self, from: data) else {
             textbook = nil; return
         }
@@ -45,8 +55,7 @@ final class ExamStore: ObservableObject {
     }
 
     private func loadExams() {
-        guard let url = Bundle.main.url(forResource: "exams", withExtension: "json"),
-              let data = try? Data(contentsOf: url),
+        guard let data = ContentOTA.contentData(key: "content/exams.json", bundledResource: "exams"),
               let decoded = try? JSONDecoder().decode([Exam].self, from: data) else {
             exams = []; return
         }

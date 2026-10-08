@@ -1,14 +1,19 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var purchases: PurchaseStore
     @AppStorage("cr_goal") private var goal: Int = 20
     @AppStorage("cr_notify") private var notify: Bool = true
     @AppStorage("cr_appearance") private var appearance: Int = 0   // 0:システム 1:ライト 2:ダーク
+    @State private var showPaywall = false
 
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 9) {
+                    group("プラン")
+                    planSection
+
                     group("学習")
                     Stepperish(title: "1日の目標問題数", value: $goal, range: 5...100, step: 5, unit: "問")
                     toggleRow("bell.fill", "学習リマインダー通知", "毎日 20:00", $notify)
@@ -32,6 +37,60 @@ struct SettingsView: View {
             .background(Theme.bg.ignoresSafeArea())
             .navigationTitle("設定")
             .navigationBarTitleDisplayMode(.inline)
+            .sheet(isPresented: $showPaywall) { PaywallView() }
+            .alert("お知らせ", isPresented: Binding(
+                get: { purchases.message != nil },
+                set: { if !$0 { purchases.message = nil } }
+            )) {
+                Button("OK") { purchases.message = nil }
+            } message: {
+                Text(purchases.message ?? "")
+            }
+        }
+    }
+
+    // プラン(Pro購入/復元)セクション
+    private var planSection: some View {
+        VStack(spacing: 9) {
+            if purchases.isPro {
+                HStack(spacing: 12) {
+                    iconBox("crown.fill")
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("クレーン Pro 有効").font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg)
+                        Text("すべての模擬試験が使えます").font(.system(size: 11)).foregroundColor(Theme.faint)
+                    }
+                    Spacer()
+                    Image(systemName: "checkmark.seal.fill").foregroundColor(Theme.good).font(.system(size: 16))
+                }
+                .rowStyle()
+            } else {
+                Button { showPaywall = true } label: {
+                    HStack(spacing: 12) {
+                        iconBox("crown.fill")
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Proにアップグレード").font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg)
+                            Text("模擬試験 全8回を解放(買い切り)").font(.system(size: 11)).foregroundColor(Theme.faint)
+                        }
+                        Spacer()
+                        Image(systemName: "chevron.right").font(.system(size: 13, weight: .bold)).foregroundColor(Theme.faint)
+                    }
+                    .rowStyle()
+                }
+                .buttonStyle(.plain)
+            }
+
+            Button {
+                Task { await purchases.restore() }
+            } label: {
+                HStack(spacing: 12) {
+                    iconBox("arrow.clockwise")
+                    Text("購入を復元").font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg)
+                    Spacer()
+                    if purchases.isWorking { ProgressView() }
+                }
+                .rowStyle()
+            }
+            .buttonStyle(.plain)
         }
     }
 
