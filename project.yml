@@ -14,8 +14,8 @@ settings:
     # ここがバージョンの唯一の採番源(CIはこの2値を読んで使う)。手動で管理する。
     #   MARKETING_VERSION      = 表示バージョン(例 1.0.1)
     #   CURRENT_PROJECT_VERSION = ビルド番号(例 2001)。※再ビルド時は必ず増やす
-    MARKETING_VERSION: "1.0.1"
-    CURRENT_PROJECT_VERSION: "2001"
+    MARKETING_VERSION: "1.0.7"
+    CURRENT_PROJECT_VERSION: "2007"
 targets:
   CraneExam:
     type: application
