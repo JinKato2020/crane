@@ -16,7 +16,9 @@ struct Question: Codable, Identifiable {
     let choices: [String]
     let answer: Int          // 1始まりの正解番号
     let explanation: String
-    let figure: String?      // ASCII図（あれば）
+    let figure: String?      // 旧ASCII図（現在は未使用）
+    let figImg: String?      // 回答前の図アセット名（条件図）
+    let figImgExp: String?   // 回答後の図アセット名（解説図）
     var id: Int { no }
 }
 

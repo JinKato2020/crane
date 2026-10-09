@@ -118,9 +118,8 @@ struct ExamGuideView: View {
     private var linksCard: some View {
         Card(padding: 18) {
             VStack(alignment: .leading, spacing: 12) {
-                sectionTitle("公式・参考リンク", "link")
+                sectionTitle("公式リンク", "link")
                 linkRow("公益財団法人 安全衛生技術試験協会（公式）", "https://www.exam.or.jp/")
-                linkRow("クレーン・デリック運転士 過去問（参考）", "https://cranederrick.kakomonn.com/")
             }
         }
     }

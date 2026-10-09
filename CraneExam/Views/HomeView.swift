@@ -48,12 +48,13 @@ struct HomeView: View {
         }
     }
 
-    // ヒーロー
+    // ヒーロー(画像全体を切らずに表示=fit。上に余白を作らず横幅いっぱい・縦は縦横比なり)
     private var hero: some View {
         ZStack(alignment: .bottomLeading) {
             Image("Hero")
-                .resizable().aspectRatio(contentMode: .fill)
-                .frame(height: 220).frame(maxWidth: .infinity).clipped()
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(maxWidth: .infinity)
             LinearGradient(
                 colors: [Color.black.opacity(0.45), Color.clear, Theme.bg],
                 startPoint: .top, endPoint: .bottom)
@@ -71,9 +72,7 @@ struct HomeView: View {
             .shadow(color: .black.opacity(0.7), radius: 8)
             .padding(16)
         }
-        .frame(height: 220)
         .frame(maxWidth: .infinity)
-        .clipped()
     }
 
     // 進捗カード

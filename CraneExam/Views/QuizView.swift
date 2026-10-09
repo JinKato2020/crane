@@ -80,7 +80,9 @@ struct QuizView: View {
                         .fixedSize(horizontal: false, vertical: true)
                         .lineSpacing(5)
 
-                    if let fig = q.figure, !fig.isEmpty {
+                    if let fig = q.figImg, !fig.isEmpty {
+                        FigureImageView(assetName: fig, thumbMaxHeight: 230)
+                    } else if let fig = q.figure, !fig.isEmpty {
                         ScrollView(.horizontal, showsIndicators: false) {
                             Text(fig)
                                 .font(.system(size: 11, design: .monospaced))
@@ -172,6 +174,9 @@ struct QuizView: View {
             Text("【解説】\(q.explanation)")
                 .font(.system(size: 12.5)).foregroundColor(Theme.muted).lineSpacing(4)
                 .fixedSize(horizontal: false, vertical: true)
+            if let fe = q.figImgExp, !fe.isEmpty {
+                FigureImageView(assetName: fe, thumbMaxHeight: 230)
+            }
         }
         .padding(13)
         .frame(maxWidth: .infinity, alignment: .leading)
