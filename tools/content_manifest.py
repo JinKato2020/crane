@@ -44,6 +44,16 @@ def main():
         key = f"content/{name}"
         files[key] = {"sha256": sha256_of(full), "size": os.path.getsize(full)}
 
+    # 図などの画像もOTA対象に含める(キー: content/images/<name.ext>)。
+    # これにより図の追加・差し替えもビルド無しで配信できる。
+    img_dir = os.path.join(root, RES_DIR, "images")
+    if os.path.isdir(img_dir):
+        for name in sorted(os.listdir(img_dir)):
+            if name.lower().endswith((".jpg", ".png")):
+                full = os.path.join(img_dir, name)
+                key = f"content/images/{name}"
+                files[key] = {"sha256": sha256_of(full), "size": os.path.getsize(full)}
+
     manifest = {
         "appId": APP_ID,
         "schema": 1,

@@ -17,3 +17,9 @@ private_keys/
 
 # macOS
 .DS_Store
+
+# OTA upload secrets
+tools/.r2.env
+
+# backups (never bundle/commit)
+*.bak

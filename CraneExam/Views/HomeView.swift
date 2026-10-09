@@ -20,6 +20,7 @@ struct HomeView: View {
                 .padding(16)
             }
         }
+        .ignoresSafeArea(edges: .top)   // ヒーローを画面最上端まで伸ばし、上の白い余白を無くす
         .background(Theme.bg.ignoresSafeArea())
         .sheet(isPresented: $showGuide) { ExamGuideView() }
     }

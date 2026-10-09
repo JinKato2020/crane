@@ -70,6 +70,19 @@ enum ContentOTA {
         return nil
     }
 
+    /// 図などの画像を「キャッシュ(同梱タグ一致時)優先・無ければ内蔵」で解決してファイルパスを返す。
+    /// キー体系: content/images/<name>.<jpg|png>(sync()が content/ 配下として自動DL・キャッシュする)。
+    static func imagePath(name: String) -> String? {
+        if storedBundleTag() == bundleTag() {
+            for ext in ["jpg", "png"] {
+                let f = cacheDir.appendingPathComponent(localName("content/images/\(name).\(ext)"))
+                if FileManager.default.fileExists(atPath: f.path) { return f.path }
+            }
+        }
+        return Bundle.main.path(forResource: name, ofType: "jpg")
+            ?? Bundle.main.path(forResource: name, ofType: "png")
+    }
+
     // MARK: - 同期(棚の最新を取り込む)
 
     private static func readShas() -> [String: String] {

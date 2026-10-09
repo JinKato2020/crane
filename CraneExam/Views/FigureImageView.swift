@@ -3,7 +3,7 @@ import UIKit
 
 /// 図アセットをバンドルから読む
 func loadFigureUIImage(_ name: String) -> UIImage? {
-    guard let path = (Bundle.main.path(forResource: name, ofType: "jpg") ?? Bundle.main.path(forResource: name, ofType: "png")) else { return nil }
+    guard let path = ContentOTA.imagePath(name: name) else { return nil }
     return UIImage(contentsOfFile: path)
 }
 
