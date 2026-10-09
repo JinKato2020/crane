@@ -28,8 +28,15 @@ jobs:
       - name: Install XcodeGen
         run: brew install xcodegen
 
-      - name: Build number (timestamp)
-        run: echo "BUILD_NUMBER=$(date +%Y%m%d%H%M)" >> "$GITHUB_ENV"
+      - name: Read version (project.yml が唯一の採番源)
+        run: |
+          VER=$(grep -m1 'MARKETING_VERSION:' project.yml | sed -E 's/.*"([^"]+)".*/\1/')
+          BLD=$(grep -m1 'CURRENT_PROJECT_VERSION:' project.yml | sed -E 's/.*"([^"]+)".*/\1/')
+          echo "VER=$VER" >> "$GITHUB_ENV"
+          echo "BLD=$BLD" >> "$GITHUB_ENV"
+          # GitHub Actions の先頭(通知)とサマリに必ず v{VER} ({BLD}) を表示
+          echo "::notice title=Version::v$VER ($BLD)"
+          echo "## 🏷️ v$VER ($BLD)" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Generate Xcode project
         run: xcodegen generate
@@ -97,7 +104,8 @@ jobs:
             -configuration Release \
             -destination "generic/platform=iOS" \
             -archivePath "$RUNNER_TEMP/CraneExam.xcarchive" \
-            CURRENT_PROJECT_VERSION="$BUILD_NUMBER"
+            MARKETING_VERSION="$VER" \
+            CURRENT_PROJECT_VERSION="$BLD"
 
       - name: Write ExportOptions.plist
         env:
@@ -145,19 +153,24 @@ jobs:
           xcrun altool --upload-app --file "$IPA_PATH" --type ios --apiKey "$ASC_KEY_ID" --apiIssuer "$ASC_ISSUER_ID"
           rm -rf ~/.appstoreconnect
 
-      - name: Bump marketing version for next build
+      # GitHub側にも必ず v{VER} ({BLD}) をタイトルとして残す(タグ＋リリース)。
+      # バージョンは project.yml で手動管理。再ビルド時は CURRENT_PROJECT_VERSION を必ず増やすこと。
+      - name: Tag & Release (GitHub タイトル = v{VER} ({BLD}))
         if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          CUR=$(grep -m1 'MARKETING_VERSION:' project.yml | sed -E 's/.*"([0-9]+\.[0-9]+\.[0-9]+)".*/\1/')
-          X=${CUR%%.*}; rest=${CUR#*.}; Y=${rest%%.*}; Z=${rest#*.}
-          NEW="$X.$Y.$((Z+1))"
-          perl -0pi -e "s/MARKETING_VERSION: \"$CUR\"/MARKETING_VERSION: \"$NEW\"/" project.yml
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add project.yml
-          git commit -m "chore: bump version $CUR -> $NEW [skip ci]"
-          git push origin HEAD:"${GITHUB_REF_NAME}"
-          echo "::notice::次回ビルドのMARKETING_VERSION = $NEW (今回ビルドは $CUR)"
+          TAG="v$VER+$BLD"
+          TITLE="v$VER ($BLD)"
+          git tag -f "$TAG" "$GITHUB_SHA"
+          git push -f origin "refs/tags/$TAG"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release edit "$TAG" --title "$TITLE" --target "$GITHUB_SHA"
+          else
+            gh release create "$TAG" --title "$TITLE" --target "$GITHUB_SHA" \
+              --notes "TestFlight build $TITLE (bundle $BUNDLE_ID)"
+          fi
+          echo "::notice title=Released::$TITLE"
 
       - name: Save IPA artifact
         if: always()
