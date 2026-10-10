@@ -8,6 +8,7 @@ on:
       - '**.md'
       - '.gitignore'
       - '.github/**'
+      - 'tools/**'
 
 concurrency:
   group: ios-${{ github.ref }}

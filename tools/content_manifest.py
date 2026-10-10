@@ -49,7 +49,7 @@ def main():
     img_dir = os.path.join(root, RES_DIR, "images")
     if os.path.isdir(img_dir):
         for name in sorted(os.listdir(img_dir)):
-            if name.lower().endswith((".jpg", ".png")):
+            if name.lower().endswith((".jpg", ".png", ".svg")):
                 full = os.path.join(img_dir, name)
                 key = f"content/images/{name}"
                 files[key] = {"sha256": sha256_of(full), "size": os.path.getsize(full)}

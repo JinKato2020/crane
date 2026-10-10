@@ -9,6 +9,7 @@ run-name: "クレーン コンテンツを棚(R2)へ配信"
 #   r2:<R2_BUCKET>/crane/_manifest.json
 #   r2:<R2_BUCKET>/crane/content/exams.json
 #   r2:<R2_BUCKET>/crane/content/textbook.json
+#   r2:<R2_BUCKET>/crane/content/images/<name>.<jpg|png|svg>  ← 図もOTA配信(ビルド不要で差し替え)
 # アプリ側 BASE = https://content.safa-lang.com/crane/
 #
 # 必要 secrets: R2_ACCESS_KEY_ID / R2_SECRET_ACCESS_KEY / R2_ENDPOINT / R2_BUCKET （値はCAEと同じ）
@@ -60,6 +61,9 @@ jobs:
           #    （manifest が指すのにまだ無いファイル、を配信中に作らない＝DL失敗を防ぐ）
           rclone copyto "$RES/exams.json"     "$DEST/content/exams.json"     "${FLAGS[@]}"
           rclone copyto "$RES/textbook.json"  "$DEST/content/textbook.json"  "${FLAGS[@]}"
+          # 図(images/)も content/images/ へ。jpg/png/svg のみ。manifest より前に上げる。
+          rclone copy   "$RES/images"         "$DEST/content/images" \
+            --include "*.jpg" --include "*.png" --include "*.svg" "${FLAGS[@]}"
           rclone copyto "$RES/_manifest.json" "$DEST/_manifest.json"         "${FLAGS[@]}"
 
           echo "::notice::配信完了 → https://content.safa-lang.com/crane/_manifest.json"
