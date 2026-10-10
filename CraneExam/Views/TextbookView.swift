@@ -280,6 +280,30 @@ struct BlockView: View {
             }
             .padding(.vertical, 4)
 
+        case "svg":
+            VStack(alignment: .leading, spacing: 10) {
+                if let f = block.file {
+                    SVGFigureView(file: f, caption: block.caption, thumbMaxHeight: 320)
+                }
+                if let cap = block.caption, !cap.isEmpty {
+                    Text("図：" + cap).font(.system(size: 12)).foregroundColor(Theme.muted)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                if let leg = block.legend, !leg.isEmpty {
+                    VStack(alignment: .leading, spacing: 5) {
+                        ForEach(Array(leg.enumerated()), id: \.offset) { _, s in
+                            Text("・" + s).font(.system(size: 12)).foregroundColor(Theme.muted)
+                                .lineSpacing(4)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                    }
+                    .padding(.top, 3)
+                }
+            }
+            .padding(.vertical, 4)
+
         case "table":
             TableBlock(headers: block.headers ?? [], rows: block.rows ?? [])
 

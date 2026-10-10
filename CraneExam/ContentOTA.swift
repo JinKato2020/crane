@@ -83,6 +83,16 @@ enum ContentOTA {
             ?? Bundle.main.path(forResource: name, ofType: "png")
     }
 
+    /// SVG図のファイルパスを「キャッシュ(同梱タグ一致時)優先・無ければ内蔵」で解決する。
+    /// jpg/png と同じ figure名(拡張子なし)で引く。imagePathとは別にする(同名のjpgを拾わないため)。
+    static func svgPath(name: String) -> String? {
+        if storedBundleTag() == bundleTag() {
+            let f = cacheDir.appendingPathComponent(localName("content/images/\(name).svg"))
+            if FileManager.default.fileExists(atPath: f.path) { return f.path }
+        }
+        return Bundle.main.path(forResource: name, ofType: "svg")
+    }
+
     // MARK: - 同期(棚の最新を取り込む)
 
     private static func readShas() -> [String: String] {

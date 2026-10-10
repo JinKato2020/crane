@@ -39,6 +39,7 @@ struct TBBlock: Codable {
     let headers: [String]?
     let rows: [[String]]?
     let asset: String?       // 画像(img)のファイル名(拡張子なし)
+    let file: String?        // SVG図(svg)のファイル名(拡張子つき 例 2-1_xxx.svg)
     let caption: String?     // 画像の説明
     let labels: [TBLabel]?   // 図に重ねる文字ラベル
     let legend: [String]?    // 図の下に出す凡例(説明)
