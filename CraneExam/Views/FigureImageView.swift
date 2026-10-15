@@ -104,8 +104,10 @@ struct ZoomableFigureView: View {
     }
 
     var body: some View {
-        ZStack {
-            Color.black.ignoresSafeArea()
+        // 閉じるバーはズーム画像と重ねない独立した上部バーに置く。
+        // (ジェスチャ付き画像の上にボタンを重ねると、ドラッグ等がタップを奪って閉じられないため)
+        VStack(spacing: 0) {
+            ZoomCloseBar(onClose: onClose)
 
             GeometryReader { geo in
                 let fit = fitted(geo.size)
@@ -148,41 +150,22 @@ struct ZoomableFigureView: View {
                     }
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
 
             // キャプション・凡例(下部)
-            VStack {
-                Spacer()
-                if caption != nil || !legend.isEmpty {
-                    VStack(alignment: .leading, spacing: 4) {
-                        if let c = caption { Text("図：\(c)").font(.system(size: 12, weight: .bold)).foregroundColor(.white) }
-                        ForEach(Array(legend.enumerated()), id: \.offset) { _, s in
-                            Text("・" + s).font(.system(size: 11)).foregroundColor(.white.opacity(0.85))
-                                .fixedSize(horizontal: false, vertical: true)
-                        }
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(14)
-                    .background(Color.black.opacity(0.55))
-                }
-            }
-            .ignoresSafeArea(edges: .bottom)
-
-            // 閉じる・操作ヒント(上部)
-            VStack {
-                HStack {
-                    Text("ピンチ/ダブルタップで拡大")
-                        .font(.system(size: 11)).foregroundColor(.white.opacity(0.8))
-                        .padding(.horizontal, 10).padding(.vertical, 6)
-                        .background(Capsule().fill(Color.white.opacity(0.15)))
-                    Spacer()
-                    Button(action: onClose) {
-                        Image(systemName: "xmark.circle.fill")
-                            .font(.system(size: 30)).foregroundColor(.white.opacity(0.9))
+            if caption != nil || !legend.isEmpty {
+                VStack(alignment: .leading, spacing: 4) {
+                    if let c = caption { Text("図：\(c)").font(.system(size: 12, weight: .bold)).foregroundColor(.white) }
+                    ForEach(Array(legend.enumerated()), id: \.offset) { _, s in
+                        Text("・" + s).font(.system(size: 11)).foregroundColor(.white.opacity(0.85))
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                 }
-                .padding(.horizontal, 16).padding(.top, 10)
-                Spacer()
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(14)
+                .background(Color.black)
             }
         }
+        .background(Color.black.ignoresSafeArea())
     }
 }

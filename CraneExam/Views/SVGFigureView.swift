@@ -108,35 +108,46 @@ struct ZoomableSVGView: View {
     let onClose: () -> Void
 
     var body: some View {
-        ZStack {
-            Color.black.ignoresSafeArea()
+        // 閉じるバーは WKWebView と重ねない独立した上部バーに置く。
+        // (全画面の WKWebView の上にボタンを重ねると、WebView がタップを奪って閉じられないため)
+        VStack(spacing: 0) {
+            ZoomCloseBar(onClose: onClose)
             SVGWebView(svg: svg, scalable: true)
                 .background(Color.white)
-                .ignoresSafeArea(edges: .horizontal)
-
-            VStack {
-                HStack {
-                    Text("ピンチ/ダブルタップで拡大")
-                        .font(.system(size: 11)).foregroundColor(.white.opacity(0.8))
-                        .padding(.horizontal, 10).padding(.vertical, 6)
-                        .background(Capsule().fill(Color.white.opacity(0.15)))
-                    Spacer()
-                    Button(action: onClose) {
-                        Image(systemName: "xmark.circle.fill")
-                            .font(.system(size: 30)).foregroundColor(.white.opacity(0.9))
-                    }
-                }
-                .padding(.horizontal, 16).padding(.top, 10)
-                Spacer()
-                if let c = caption, !c.isEmpty {
-                    Text("図：\(c)")
-                        .font(.system(size: 12, weight: .bold)).foregroundColor(.white)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(14)
-                        .background(Color.black.opacity(0.55))
-                }
+            if let c = caption, !c.isEmpty {
+                Text("図：\(c)")
+                    .font(.system(size: 12, weight: .bold)).foregroundColor(.white)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(14)
+                    .background(Color.black)
             }
-            .ignoresSafeArea(edges: .bottom)
         }
+        .background(Color.black.ignoresSafeArea())
+    }
+}
+
+/// 拡大ビューア共通の上部バー(操作ヒント＋確実に押せる閉じるボタン)。
+/// 操作対象(WebView/ズーム画像)と重ならない独立レイヤーにするのが要点。
+struct ZoomCloseBar: View {
+    let onClose: () -> Void
+    var body: some View {
+        HStack {
+            Text("ピンチ/ダブルタップで拡大")
+                .font(.system(size: 11)).foregroundColor(.white)
+                .padding(.horizontal, 10).padding(.vertical, 6)
+                .background(Capsule().fill(Color.white.opacity(0.18)))
+            Spacer()
+            Button(action: onClose) {
+                Image(systemName: "xmark.circle.fill")
+                    .font(.system(size: 32))
+                    .symbolRenderingMode(.palette)
+                    .foregroundStyle(Color.white, Color.white.opacity(0.28))
+            }
+            .contentShape(Rectangle())
+            .accessibilityLabel("閉じる")
+        }
+        .padding(.horizontal, 16).padding(.vertical, 10)
+        .frame(maxWidth: .infinity)
+        .background(Color.black)
     }
 }
