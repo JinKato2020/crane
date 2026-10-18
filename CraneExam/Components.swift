@@ -156,6 +156,9 @@ struct RadarChart: View {
             let cy = Double(sz.height) / 2
             let radius = Double(min(sz.width, sz.height)) / 2 - 34
             let center = CGPoint(x: cx, y: cy)
+            // Theme.gold は LinearGradient なので Canvas の .color() には渡せない。
+            // Canvas 内ではブランドゴールドの単色を使う。
+            let gold = Color(hex: 0xF6A425)
 
             // 目盛りの多角形（25/50/75/100%）
             for k in 1...4 {
@@ -174,14 +177,14 @@ struct RadarChart: View {
             }
             // データ多角形
             let dp = dataPath(cx: cx, cy: cy, radius: radius, n: n)
-            ctx.fill(dp, with: .color(Theme.gold.opacity(0.30)))
-            ctx.stroke(dp, with: .color(Theme.gold), lineWidth: 2)
+            ctx.fill(dp, with: .color(gold.opacity(0.30)))
+            ctx.stroke(dp, with: .color(gold), lineWidth: 2)
             // 頂点
             for i in 0..<n {
                 let frac: Double = max(0.02, Double(data[i].pct) / 100.0)
                 let q = axisPoint(cx: cx, cy: cy, radius: radius, i: i, n: n, frac: frac)
                 let dot = CGRect(x: q.x - 3, y: q.y - 3, width: 6, height: 6)
-                ctx.fill(Path(ellipseIn: dot), with: .color(Theme.gold))
+                ctx.fill(Path(ellipseIn: dot), with: .color(gold))
             }
             // ラベル（分野名＋％）
             for i in 0..<n {
