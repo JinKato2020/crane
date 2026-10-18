@@ -25,27 +25,35 @@ struct HomeView: View {
         .sheet(isPresented: $showGuide) { ExamGuideView() }
     }
 
-    // 総合解説カード
+    // 総合解説カード（CAE流用：写真背景＋オーバーレイ）
     private var guideCard: some View {
         Button { showGuide = true } label: {
-            HStack(spacing: 13) {
-                Image(systemName: "graduationcap.fill")
-                    .font(.system(size: 17)).foregroundColor(Color(hex: 0x241703))
-                    .frame(width: 42, height: 42)
-                    .background(Theme.gold).clipShape(RoundedRectangle(cornerRadius: 12))
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("クレーン試験 総合解説").font(.system(size: 14.5, weight: .bold)).foregroundColor(Theme.fg)
-                    Text("配点・合格基準・学び方がひと目でわかる")
-                        .font(.system(size: 11.5)).foregroundColor(Theme.muted)
-                        .fixedSize(horizontal: false, vertical: true)
+            ZStack(alignment: .bottomLeading) {
+                Image("ExamGuideBg")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 112)
+                    .clipped()
+                LinearGradient(colors: [Color.black.opacity(0.12), Color.black.opacity(0.74)],
+                               startPoint: .top, endPoint: .bottom)
+                HStack(alignment: .bottom) {
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("クレーン試験 総合解説")
+                            .font(.system(size: 15.5, weight: .heavy)).foregroundColor(.white)
+                        Text("配点・合格基準・学び方がひと目でわかる")
+                            .font(.system(size: 11.5, weight: .semibold)).foregroundColor(.white.opacity(0.9))
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    Spacer(minLength: 6)
+                    Image(systemName: "chevron.right").font(.system(size: 14, weight: .bold)).foregroundColor(.white.opacity(0.9))
                 }
-                Spacer(minLength: 6)
-                Image(systemName: "chevron.right").font(.system(size: 13, weight: .bold)).foregroundColor(Theme.faint)
+                .padding(14)
+                .shadow(color: .black.opacity(0.6), radius: 4, y: 1)
             }
-            .padding(14)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 14))
-            .overlay(RoundedRectangle(cornerRadius: 14).stroke(Theme.line, lineWidth: 1))
+            .frame(height: 112)
+            .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(Theme.line, lineWidth: 1))
         }
     }
 
@@ -80,16 +88,29 @@ struct HomeView: View {
     private var progressCard: some View {
         Card {
             VStack(spacing: 14) {
-                HStack(spacing: 16) {
-                    Ring(progress: Double(store.progress) / 100,
-                         size: 92, label: "\(store.progress)%", sub: "達成度")
-                    VStack(spacing: 9) {
-                        statRow("受験した回数", "\(store.examsTaken)", "/8回", Theme.fg)
-                        Divider().overlay(Theme.line)
-                        statRow("解いた問題数", "\(store.totalAnswered)", "問", Theme.fg)
-                        Divider().overlay(Theme.line)
-                        statRow("正答率", "\(store.accuracy)", "%", Theme.accent2)
+                HStack {
+                    Text("分野別の正答率").font(.system(size: 14, weight: .bold)).foregroundColor(Theme.fg)
+                    Spacer()
+                    Text("全体 \(store.accuracy)%").font(.system(size: 12, weight: .bold)).foregroundColor(Theme.accent2)
+                }
+                if store.totalAnswered == 0 {
+                    VStack(spacing: 6) {
+                        Image(systemName: "chart.dots.scatter").font(.system(size: 30)).foregroundColor(Theme.faint)
+                        Text("模擬試験を受けると、分野別の正答率が表示されます")
+                            .font(.system(size: 11.5)).foregroundColor(Theme.muted)
+                            .multilineTextAlignment(.center)
                     }
+                    .frame(maxWidth: .infinity).frame(height: 150)
+                } else {
+                    RadarChart(data: store.subjectAccuracy(), size: 196)
+                        .frame(maxWidth: .infinity)
+                }
+                VStack(spacing: 9) {
+                    statRow("受験した回数", "\(store.examsTaken)", "/8回", Theme.fg)
+                    Divider().overlay(Theme.line)
+                    statRow("解いた問題数", "\(store.totalAnswered)", "問", Theme.fg)
+                    Divider().overlay(Theme.line)
+                    statRow("正答率", "\(store.accuracy)", "%", Theme.accent2)
                 }
                 Button {
                     router.tab = 1

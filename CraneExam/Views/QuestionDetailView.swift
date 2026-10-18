@@ -7,6 +7,7 @@ struct QuestionDetailView: View {
     @Environment(\.dismiss) private var dismiss
     let round: Int
     let q: Question
+    @State private var showRef = false
 
     private var bookmarkID: String { "\(round)-\(q.no)" }
 
@@ -51,6 +52,9 @@ struct QuestionDetailView: View {
                     Button("閉じる") { dismiss() }
                 }
             }
+            .sheet(isPresented: $showRef) {
+                if let r = q.ref { TextbookRefSheet(ref: r).environmentObject(store) }
+            }
         }
     }
 
@@ -84,6 +88,9 @@ struct QuestionDetailView: View {
                 .fixedSize(horizontal: false, vertical: true)
             if let fe = q.figImgExp, !fe.isEmpty {
                 FigureImageView(assetName: fe, thumbMaxHeight: 230)
+            }
+            if let ref = q.ref {
+                TextRefButton(ref: ref) { showRef = true }.padding(.top, 2)
             }
         }
         .padding(13)

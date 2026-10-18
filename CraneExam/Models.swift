@@ -19,7 +19,17 @@ struct Question: Codable, Identifiable {
     let figure: String?      // 旧ASCII図（現在は未使用）
     let figImg: String?      // 回答前の図アセット名（条件図）
     let figImgExp: String?   // 回答後の図アセット名（解説図）
+    let ref: TextRef?        // 関連する教材へのピンポイント直リンク（任意）
     var id: Int { no }
+}
+
+/// 問題の解説から教材へ直リンクするための参照。
+/// section = 節ID（例 "4-1"）、anchor = その節内の小見出し等のキーワード（例 "モーメント"）。
+/// anchor があれば、その位置まで自動スクロールして示す。
+struct TextRef: Codable {
+    let section: String
+    let anchor: String?
+    let label: String?       // ボタンに出す補足（例 "力のモーメント"）
 }
 
 /// 受験結果（端末内に保存）
