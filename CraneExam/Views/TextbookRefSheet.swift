@@ -98,16 +98,7 @@ struct TextbookRefSheet: View {
                     .padding(.top, 10)
 
                     ForEach(Array(section.blocks.enumerated()), id: \.offset) { i, b in
-                        BlockView(block: b)
-                            .id(i)
-                            .padding(ai == i ? 10 : 0)
-                            .background(ai == i ? Theme.gold.opacity(0.16) : Color.clear)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .overlay {
-                                if ai == i {
-                                    RoundedRectangle(cornerRadius: 10).stroke(Theme.gold.opacity(0.5), lineWidth: 1)
-                                }
-                            }
+                        blockRow(i, b, highlighted: ai == i)
                     }
                 }
                 .padding(.horizontal, 20).padding(.bottom, 32)
@@ -119,5 +110,19 @@ struct TextbookRefSheet: View {
                 }
             }
         }
+    }
+
+    @ViewBuilder
+    private func blockRow(_ i: Int, _ b: TBBlock, highlighted: Bool) -> some View {
+        BlockView(block: b)
+            .id(i)
+            .padding(highlighted ? 10 : 0)
+            .background(highlighted ? Theme.gold.opacity(0.16) : Color.clear)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .overlay {
+                if highlighted {
+                    RoundedRectangle(cornerRadius: 10).stroke(Theme.gold.opacity(0.5), lineWidth: 1)
+                }
+            }
     }
 }
