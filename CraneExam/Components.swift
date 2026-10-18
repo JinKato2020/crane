@@ -143,6 +143,14 @@ struct RadarChart: View {
 
     var body: some View {
         Canvas { ctx, sz in
+            drawChart(&ctx, size: sz)
+        }
+        .frame(width: size, height: size)
+    }
+
+    // 描画本体は some View の型推論の外（ただのVoid関数）に出す。
+    // Canvas 内の長い式を body に直書きすると型チェックが破綻する（build 2012/2013の失敗原因）。
+    private func drawChart(_ ctx: inout GraphicsContext, size sz: CGSize) {
             let n = max(3, data.count)
             let cx = Double(sz.width) / 2
             let cy = Double(sz.height) / 2
@@ -185,7 +193,5 @@ struct RadarChart: View {
                 ctx.draw(nameText, at: CGPoint(x: lx, y: ly - 6))
                 ctx.draw(pctText, at: CGPoint(x: lx, y: ly + 6))
             }
-        }
-        .frame(width: size, height: size)
     }
 }

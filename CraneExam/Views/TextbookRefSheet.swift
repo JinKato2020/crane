@@ -114,15 +114,15 @@ struct TextbookRefSheet: View {
 
     @ViewBuilder
     private func blockRow(_ i: Int, _ b: TBBlock, highlighted: Bool) -> some View {
-        BlockView(block: b)
-            .id(i)
-            .padding(highlighted ? 10 : 0)
-            .background(highlighted ? Theme.gold.opacity(0.16) : Color.clear)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .overlay {
-                if highlighted {
-                    RoundedRectangle(cornerRadius: 10).stroke(Theme.gold.opacity(0.5), lineWidth: 1)
-                }
-            }
+        if highlighted {
+            BlockView(block: b)
+                .id(i)
+                .padding(10)
+                .background(Theme.gold.opacity(0.16))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Theme.gold.opacity(0.5), lineWidth: 1))
+        } else {
+            BlockView(block: b).id(i)
+        }
     }
 }
