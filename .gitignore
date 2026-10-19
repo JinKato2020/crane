@@ -23,3 +23,11 @@ tools/.r2.env
 
 # backups (never bundle/commit)
 *.bak
+
+# backup snapshots (keep on disk, never bundle/commit)
+*.bak_*
+_images_bak*/
+
+# python cache
+__pycache__/
+*.pyc
