@@ -4,6 +4,7 @@ struct HomeView: View {
     @EnvironmentObject var store: ExamStore
     @EnvironmentObject var router: Router
     @State private var showGuide = false
+    @State private var showBookmarks = false
 
     var body: some View {
         ScrollView {
@@ -23,6 +24,7 @@ struct HomeView: View {
         .ignoresSafeArea(edges: .top)   // ヒーローを画面最上端まで伸ばし、上の白い余白を無くす
         .background(Theme.bg.ignoresSafeArea())
         .sheet(isPresented: $showGuide) { ExamGuideView() }
+        .sheet(isPresented: $showBookmarks) { BookmarkView().environmentObject(store) }
     }
 
     // 総合解説カード（CAE流用：写真背景＋オーバーレイ）
@@ -106,7 +108,7 @@ struct HomeView: View {
                         .frame(maxWidth: .infinity)
                 }
                 VStack(spacing: 9) {
-                    statRow("受験した回数", "\(store.examsTaken)", "/8回", Theme.fg)
+                    statRow("受験した回数", "\(store.examsTaken)", "/\(store.examTotal)回", Theme.fg)
                     Divider().overlay(Theme.line)
                     statRow("解いた問題数", "\(store.totalAnswered)", "問", Theme.fg)
                     Divider().overlay(Theme.line)
@@ -153,8 +155,8 @@ struct HomeView: View {
             homeCard("character.book.closed.fill", "用語集", "全4章の重要用語") { router.studySeg = 1; router.tab = 1 }
             homeCard("doc.text.fill", "模擬試験", "本番形式で力試し") { router.tab = 2 }
             homeCard("chart.bar.xaxis", "分野別の到達度", "苦手が一目でわかる") { router.tab = 3 }
-            homeCard("arrow.counterclockwise", "弱点復習", "間違えた問題をもう一度") { router.noteSeg = 0; router.tab = 3 }
-            homeCard("bookmark.fill", "ブックマーク", "あとで見返す問題") { router.noteSeg = 1; router.tab = 3 }
+            homeCard("arrow.counterclockwise", "弱点復習", "模試ごとに間違いを確認") { router.tab = 3 }
+            homeCard("bookmark.fill", "ブックマーク", "あとで見返す問題") { showBookmarks = true }
         }
     }
 

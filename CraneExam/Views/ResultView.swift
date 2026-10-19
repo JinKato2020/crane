@@ -1,10 +1,18 @@
 import SwiftUI
 
 struct ResultView: View {
+    @EnvironmentObject var store: ExamStore
     let exam: Exam
     let result: ExamResult
 
     @Environment(\.dismiss) private var dismiss
+    @State private var detail: QDetail?
+
+    /// タップした問題の詳細シート用
+    struct QDetail: Identifiable {
+        let round: Int; let q: Question
+        var id: String { "\(round)-\(q.no)" }
+    }
 
     private var pass: Bool { result.percent >= 60 }
 
@@ -24,6 +32,7 @@ struct ResultView: View {
                     }
                 }
                 weakSection
+                wrongSection
                 Button { dismiss() } label: {
                     Text("完了").font(.system(size: 15, weight: .heavy)).foregroundColor(Color(hex: 0x241703))
                         .frame(maxWidth: .infinity, minHeight: 50)
@@ -36,6 +45,26 @@ struct ResultView: View {
         .background(Theme.bg.ignoresSafeArea())
         .navigationTitle("模擬試験 結果")
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(item: $detail) { d in
+            QuestionDetailView(round: d.round, q: d.q).environmentObject(store)
+        }
+    }
+
+    // この回で間違えた問題（タップで問題の詳細＝解説・正解・教材リンクへ）
+    private var wrongSection: some View {
+        let wrongQs = store.wrongQuestions(round: exam.round)
+        return Group {
+            if !wrongQs.isEmpty {
+                SectionHead(title: "間違えた問題", trailing: "\(wrongQs.count)問")
+                VStack(spacing: 12) {
+                    ForEach(Array(wrongQs.enumerated()), id: \.offset) { _, q in
+                        QCard(round: exam.round, q: q, tagColor: Theme.warn, tagText: "要復習") {
+                            detail = QDetail(round: exam.round, q: q)
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private var hero: some View {

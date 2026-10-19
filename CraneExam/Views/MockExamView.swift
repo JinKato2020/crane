@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// 「模試」タブ：本番形式の模擬試験(全8回)。ゆとりある一覧デザイン。
+/// 「模試」タブ：本番形式の模擬試験(全12回)。ゆとりある一覧デザイン。
 /// 無料は第1回のみ。第2回以降は Pro(買い切り)で解放。
 struct MockExamView: View {
     @EnvironmentObject var store: ExamStore
@@ -21,13 +21,19 @@ struct MockExamView: View {
                         VStack(spacing: 14) {
                             ForEach(store.exams) { exam in
                                 let locked = exam.round > freeRounds && !purchases.isPro
+                                let r = store.latestResult(round: exam.round)
+                                let status: ExamCard.Status = r.map { .score($0.percent) } ?? .untaken
                                 if locked {
-                                    Button { showPaywall = true } label: { examCard(exam, locked: true) }
-                                        .buttonStyle(.plain)
+                                    Button { showPaywall = true } label: {
+                                        ExamCard(round: exam.round, questionCount: exam.questions.count, status: .locked)
+                                    }
+                                    .buttonStyle(.plain)
                                 } else {
                                     NavigationLink {
                                         QuizView(exam: exam, mode: .full)
-                                    } label: { examCard(exam, locked: false) }
+                                    } label: {
+                                        ExamCard(round: exam.round, questionCount: exam.questions.count, status: status)
+                                    }
                                     .buttonStyle(.plain)
                                 }
                             }
@@ -72,49 +78,6 @@ struct MockExamView: View {
         HStack(alignment: .firstTextBaseline, spacing: 3) {
             Text(v).font(.system(size: 20, weight: .bold, design: .rounded)).foregroundColor(Theme.accent2)
             Text(unit).font(.system(size: 11)).foregroundColor(Theme.muted)
-        }
-    }
-
-    private func examCard(_ exam: Exam, locked: Bool = false) -> some View {
-        let r = store.latestResult(round: exam.round)
-        return HStack(spacing: 16) {
-            ZStack {
-                Circle().stroke(Theme.line, lineWidth: 1).frame(width: 54, height: 54)
-                VStack(spacing: 0) {
-                    Text("\(exam.round)").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Theme.accent2)
-                    Text("回").font(.system(size: 9)).foregroundColor(Theme.muted)
-                }
-            }
-            VStack(alignment: .leading, spacing: 6) {
-                Text("模擬試験 第\(exam.round)回").font(.system(size: 16, weight: .bold)).foregroundColor(Theme.fg)
-                HStack(spacing: 14) {
-                    label("doc.text", "全\(exam.questions.count)問")
-                    label("clock", "40分")
-                }
-                if locked {
-                    Pill(text: "PRO で解放", fg: Theme.accent2, bg: Theme.accent2.opacity(0.16))
-                } else if let r = r {
-                    Pill(text: "受験済 \(r.percent)点", fg: r.percent >= 60 ? Theme.good : Theme.accent2,
-                         bg: (r.percent >= 60 ? Theme.good : Theme.accent2).opacity(0.16))
-                } else {
-                    Pill(text: "未受験", fg: Color(hex: 0x5AA9FF), bg: Color(hex: 0x5AA9FF).opacity(0.16))
-                }
-            }
-            Spacer(minLength: 4)
-            Image(systemName: locked ? "lock.fill" : "chevron.right")
-                .font(.system(size: 14, weight: .bold))
-                .foregroundColor(locked ? Theme.accent2 : Theme.faint)
-        }
-        .padding(18)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 16))
-        .overlay(RoundedRectangle(cornerRadius: 16).stroke(Theme.line, lineWidth: 1))
-    }
-
-    private func label(_ icon: String, _ text: String) -> some View {
-        HStack(spacing: 5) {
-            Image(systemName: icon).font(.system(size: 11)).foregroundColor(Theme.faint)
-            Text(text).font(.system(size: 12)).foregroundColor(Theme.muted)
         }
     }
 

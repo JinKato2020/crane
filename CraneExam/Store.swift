@@ -103,7 +103,16 @@ final class ExamStore: ObservableObject {
     var totalCorrect: Int { results.reduce(0) { $0 + $1.correct } }
     var accuracy: Int { totalAnswered == 0 ? 0 : Int((Double(totalCorrect) / Double(totalAnswered) * 100).rounded()) }
     var examsTaken: Int { Set(results.map { $0.round }).count }
-    var progress: Int { Int((Double(examsTaken) / 8.0 * 100).rounded()) }
+    /// 収録されている模試の総数（1回分＝40問、現在12回）。分母に使う。
+    var examTotal: Int { exams.count }
+    var progress: Int { examTotal == 0 ? 0 : Int((Double(examsTaken) / Double(examTotal) * 100).rounded()) }
+
+    /// 指定回で「間違えた問題」を問題番号順に返す（成績の復習用）
+    func wrongQuestions(round: Int) -> [Question] {
+        guard let ex = exam(round) else { return [] }
+        let nos = Set(wrongs.filter { $0.round == round }.map { $0.no })
+        return ex.questions.filter { nos.contains($0.no) }
+    }
 
     func subjectAccuracy() -> [(name: String, pct: Int)] {
         var agg: [String: [Int]] = [:]

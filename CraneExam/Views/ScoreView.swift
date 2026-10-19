@@ -1,18 +1,22 @@
 import SwiftUI
 
-/// 「成績」タブ：成績履歴・分野別の到達度・マイノートを1画面に統合。
+/// 「成績」タブ：第1回〜第12回の模試を模試タブと同じカードで一覧表示。
+/// 受験済カードをタップすると、その回の結果＋間違えた問題を確認できる。
 struct ScoreView: View {
     @EnvironmentObject var store: ExamStore
+    @EnvironmentObject var purchases: PurchaseStore
+    @EnvironmentObject var router: Router
+    @State private var showPaywall = false
 
-    private var sorted: [ExamResult] { store.results.sorted { $0.date > $1.date } }
+    /// 無料で解放する回数（第1回まで無料）
+    private let freeRounds = 1
 
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
-                    scoreSection
+                    examListSection
                     fieldSection
-                    noteSection
                 }
                 .padding(.horizontal, 20)
                 .padding(.top, 10)
@@ -21,36 +25,55 @@ struct ScoreView: View {
             .background(Theme.bg.ignoresSafeArea())
             .navigationTitle("成績")
             .navigationBarTitleDisplayMode(.inline)
+            .sheet(isPresented: $showPaywall) { PaywallView() }
         }
     }
 
-    // MARK: 成績履歴
-    private var scoreSection: some View {
+    // MARK: 模試一覧（第1回〜第12回）
+    private var examListSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            if sorted.isEmpty {
-                SectionHead(title: "成績")
-                emptyCard("chart.bar.doc.horizontal", "まだ受験記録がありません",
-                          "「模試」タブで模擬試験を受けると、ここに結果が表示されます。")
+            SectionHead(title: "模擬試験の成績", trailing: "\(store.examsTaken)/\(store.examTotal) 受験")
+            if store.exams.isEmpty {
+                emptyCard("chart.bar.doc.horizontal", "問題データを読み込めませんでした",
+                          "通信環境を確認して、アプリを開き直してください。")
             } else {
-                if let latest = sorted.first, let ex = store.exam(latest.round) {
-                    SectionHead(title: "最新の結果")
-                    NavigationLink { ResultView(exam: ex, result: latest) } label: { latestCard(latest) }
-                        .buttonStyle(.plain)
+                VStack(spacing: 14) {
+                    ForEach(store.exams) { exam in examRow(exam) }
                 }
-                SectionHead(title: "受験履歴")
-                VStack(spacing: 12) {
-                    ForEach(sorted) { r in
-                        if let ex = store.exam(r.round) {
-                            NavigationLink { ResultView(exam: ex, result: r) } label: { row(r) }
-                                .buttonStyle(.plain)
-                        }
-                    }
-                }
+                Text("受験済の回をタップすると、結果と間違えた問題を確認できます。")
+                    .font(.system(size: 12)).foregroundColor(Theme.faint).padding(.horizontal, 2)
             }
         }
     }
 
-    // MARK: 分野別の到達度
+    @ViewBuilder
+    private func examRow(_ exam: Exam) -> some View {
+        let locked = exam.round > freeRounds && !purchases.isPro
+        let r = store.latestResult(round: exam.round)
+        if locked {
+            // 未購入でロック中 → 購入画面へ
+            Button { showPaywall = true } label: {
+                ExamCard(round: exam.round, questionCount: exam.questions.count, status: .locked)
+            }
+            .buttonStyle(.plain)
+        } else if let r = r {
+            // 受験済 → 結果＋間違えた問題の詳細へ
+            NavigationLink {
+                ResultView(exam: exam, result: r)
+            } label: {
+                ExamCard(round: exam.round, questionCount: exam.questions.count, status: .score(r.percent))
+            }
+            .buttonStyle(.plain)
+        } else {
+            // 未受験 → 模試タブへ移動して受験
+            Button { router.tab = 2 } label: {
+                ExamCard(round: exam.round, questionCount: exam.questions.count, status: .untaken)
+            }
+            .buttonStyle(.plain)
+        }
+    }
+
+    // MARK: 分野別の到達度（全結果の合算）
     private var fieldSection: some View {
         let acc = store.subjectAccuracy()
         return VStack(alignment: .leading, spacing: 12) {
@@ -62,57 +85,11 @@ struct ScoreView: View {
                     }
                 }
             }
-            if sorted.isEmpty {
+            if store.results.isEmpty {
                 Text("模擬試験を受けると、分野別の正答率がここに反映されます。")
                     .font(.system(size: 12)).foregroundColor(Theme.faint).padding(.horizontal, 2)
             }
         }
-    }
-
-    // MARK: マイノート
-    private var noteSection: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            SectionHead(title: "マイノート")
-            NoteView()
-        }
-    }
-
-    // MARK: パーツ
-    private func latestCard(_ r: ExamResult) -> some View {
-        Card(padding: 18) {
-            HStack(spacing: 18) {
-                Ring(progress: Double(r.percent) / 100, size: 90, line: 10,
-                     label: "\(r.percent)", sub: "点")
-                VStack(alignment: .leading, spacing: 6) {
-                    Text("第\(r.round)回 模擬試験").font(.system(size: 16, weight: .bold)).foregroundColor(Theme.fg)
-                    Text("正答 \(r.correct)/\(r.total)問").font(.system(size: 12.5)).foregroundColor(Theme.muted)
-                    Text(r.percent >= 60 ? "合格ライン超え" : "もう一歩")
-                        .font(.system(size: 11.5, weight: .bold))
-                        .foregroundColor(r.percent >= 60 ? Theme.good : Theme.accent2)
-                }
-                Spacer()
-                Image(systemName: "chevron.right").foregroundColor(Theme.faint)
-            }
-        }
-    }
-
-    private func row(_ r: ExamResult) -> some View {
-        HStack(spacing: 16) {
-            Text("\(r.percent)")
-                .font(.system(size: 19, weight: .bold, design: .rounded))
-                .foregroundColor(r.percent >= 60 ? Theme.good : Theme.accent2)
-                .frame(width: 54, height: 54)
-                .background(Theme.raise).clipShape(RoundedRectangle(cornerRadius: 14))
-            VStack(alignment: .leading, spacing: 4) {
-                Text("第\(r.round)回 模擬試験").font(.system(size: 15, weight: .bold)).foregroundColor(Theme.fg)
-                Text("\(dateStr(r.date)) · 正答 \(r.correct)/\(r.total)").font(.system(size: 12)).foregroundColor(Theme.muted)
-            }
-            Spacer()
-            Image(systemName: "chevron.right").font(.system(size: 14, weight: .bold)).foregroundColor(Theme.faint)
-        }
-        .padding(16)
-        .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 16))
-        .overlay(RoundedRectangle(cornerRadius: 16).stroke(Theme.line, lineWidth: 1))
     }
 
     private func emptyCard(_ icon: String, _ title: String, _ sub: String) -> some View {
@@ -124,10 +101,5 @@ struct ScoreView: View {
         .frame(maxWidth: .infinity).padding(.vertical, 36)
         .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 16))
         .overlay(RoundedRectangle(cornerRadius: 16).stroke(Theme.line, lineWidth: 1))
-    }
-
-    private func dateStr(_ d: Date) -> String {
-        let f = DateFormatter(); f.locale = Locale(identifier: "ja_JP"); f.dateFormat = "M/d HH:mm"
-        return f.string(from: d)
     }
 }
