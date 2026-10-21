@@ -98,64 +98,6 @@ struct SectionHead: View {
     }
 }
 
-/// 模試タブ・成績タブ共通の試験カード（体裁を統一）。
-struct ExamCard: View {
-    enum Status { case locked, score(Int), untaken }
-    let round: Int
-    let questionCount: Int
-    let status: Status
-
-    private var isLocked: Bool { if case .locked = status { return true } else { return false } }
-
-    var body: some View {
-        HStack(spacing: 16) {
-            ZStack {
-                Circle().stroke(Theme.line, lineWidth: 1).frame(width: 54, height: 54)
-                VStack(spacing: 0) {
-                    Text("\(round)").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Theme.accent2)
-                    Text("回").font(.system(size: 9)).foregroundColor(Theme.muted)
-                }
-            }
-            VStack(alignment: .leading, spacing: 6) {
-                Text("模擬試験 第\(round)回").font(.system(size: 16, weight: .bold)).foregroundColor(Theme.fg)
-                HStack(spacing: 14) {
-                    labelItem("doc.text", "全\(questionCount)問")
-                    labelItem("clock", "40分")
-                }
-                statusPill
-            }
-            Spacer(minLength: 4)
-            Image(systemName: isLocked ? "lock.fill" : "chevron.right")
-                .font(.system(size: 14, weight: .bold))
-                .foregroundColor(isLocked ? Theme.accent2 : Theme.faint)
-        }
-        .padding(18)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 16))
-        .overlay(RoundedRectangle(cornerRadius: 16).stroke(Theme.line, lineWidth: 1))
-    }
-
-    @ViewBuilder private var statusPill: some View {
-        switch status {
-        case .locked:
-            Pill(text: "PRO で解放", fg: Theme.accent2, bg: Theme.accent2.opacity(0.16))
-        case .score(let p):
-            Pill(text: "受験済 \(p)点",
-                 fg: p >= 60 ? Theme.good : Theme.accent2,
-                 bg: (p >= 60 ? Theme.good : Theme.accent2).opacity(0.16))
-        case .untaken:
-            Pill(text: "未受験", fg: Color(hex: 0x5AA9FF), bg: Color(hex: 0x5AA9FF).opacity(0.16))
-        }
-    }
-
-    private func labelItem(_ icon: String, _ text: String) -> some View {
-        HStack(spacing: 5) {
-            Image(systemName: icon).font(.system(size: 11)).foregroundColor(Theme.faint)
-            Text(text).font(.system(size: 12)).foregroundColor(Theme.muted)
-        }
-    }
-}
-
 /// 間違えた問題・ブックマークの一覧カード（タップで問題の詳細を開く）。
 struct QCard: View {
     @EnvironmentObject var store: ExamStore

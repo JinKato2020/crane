@@ -1,6 +1,41 @@
 import SwiftUI
 import UIKit
 
+/// 「用語」タブ：全4章の用語集（学科から独立した専用タブ）。
+struct GlossaryView: View {
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    header
+                    GlossaryContent()
+                }
+                .padding(.horizontal, 20)
+                .padding(.top, 10)
+                .padding(.bottom, 28)
+            }
+            .background(Theme.bg.ignoresSafeArea())
+            .navigationTitle("用語")
+            .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+
+    private var header: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("GLOSSARY")
+                .font(.system(size: 11, weight: .semibold)).tracking(2)
+                .foregroundColor(Theme.accent2)
+            Text("用語で確かめる")
+                .font(.system(size: 24, weight: .heavy)).foregroundColor(Theme.fg)
+            Text("全4章の重要用語を、図つきで検索できます。")
+                .font(.system(size: 12.5)).foregroundColor(Theme.muted)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.vertical, 2)
+    }
+}
+
 /// 1用語のカード(用語集で共有)。図は教材のラベルを重ねて表示し、タップで全画面拡大。
 private struct GlossaryTermCard: View {
     @EnvironmentObject var store: ExamStore

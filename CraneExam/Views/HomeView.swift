@@ -151,11 +151,11 @@ struct HomeView: View {
     private var cardsGrid: some View {
         let cols = [GridItem(.flexible(), spacing: 11), GridItem(.flexible(), spacing: 11)]
         return LazyVGrid(columns: cols, spacing: 11) {
-            homeCard("book.fill", "教材で学ぶ", "全4章の解説・図表") { router.studySeg = 0; router.tab = 1 }
-            homeCard("character.book.closed.fill", "用語集", "全4章の重要用語") { router.studySeg = 1; router.tab = 1 }
+            homeCard("book.fill", "教材で学ぶ", "全4章の解説・図表") { router.tab = 1 }
+            homeCard("character.book.closed.fill", "用語集", "全4章の重要用語") { router.tab = 3 }
             homeCard("doc.text.fill", "模擬試験", "本番形式で力試し") { router.tab = 2 }
-            homeCard("chart.bar.xaxis", "分野別の到達度", "苦手が一目でわかる") { router.tab = 3 }
-            homeCard("arrow.counterclockwise", "弱点復習", "模試ごとに間違いを確認") { router.tab = 3 }
+            homeCard("chart.bar.xaxis", "分野別の到達度", "苦手が一目でわかる") { router.tab = 2 }
+            homeCard("arrow.counterclockwise", "弱点復習", "模試ごとに間違いを確認") { router.tab = 2 }
             homeCard("bookmark.fill", "ブックマーク", "あとで見返す問題") { showBookmarks = true }
         }
     }
