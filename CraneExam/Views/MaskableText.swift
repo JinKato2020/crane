@@ -6,8 +6,10 @@ import SwiftUI
 private struct QuizModeKey: EnvironmentKey { static let defaultValue = false }
 private struct QuizSeedKey: EnvironmentKey { static let defaultValue = 0 }
 private struct QuizCategoryKey: EnvironmentKey { static let defaultValue = "all" }
+private struct QuizAnswersKey: EnvironmentKey { static let defaultValue = false }
 
 extension EnvironmentValues {
+    var quizAnswersVisible: Bool { get { self[QuizAnswersKey.self] } set { self[QuizAnswersKey.self] = newValue } }
     var quizMode: Bool { get { self[QuizModeKey.self] } set { self[QuizModeKey.self] = newValue } }
     var quizSeed: Int { get { self[QuizSeedKey.self] } set { self[QuizSeedKey.self] = newValue } }
     var quizCategory: String { get { self[QuizCategoryKey.self] } set { self[QuizCategoryKey.self] = newValue } }
@@ -58,8 +60,10 @@ struct MaskableText: View {
     @Environment(\.quizMode) private var quizMode
     @Environment(\.quizSeed) private var quizSeed
     @Environment(\.quizCategory) private var quizCategory
+    @Environment(\.quizAnswersVisible) private var quizAnswersVisible
 
     let raw: String
+    var terms: [String] = []
     var size: CGFloat = 15
     var weight: Font.Weight = .regular
     var color: Color = Theme.fg
@@ -68,8 +72,6 @@ struct MaskableText: View {
     @State private var revealed: Set<Int> = []
 
     private static let maskRed = Color(hex: 0xD83A2E)
-    /// 出題パターンで実際に隠す割合（%）
-    private static let hideRatio = 62
 
     var body: some View {
         Text(attributed)
@@ -88,54 +90,67 @@ struct MaskableText: View {
             })
             .onChange(of: quizSeed) { _ in revealed.removeAll() }
             .onChange(of: quizMode) { _ in revealed.removeAll() }
+            .onChange(of: quizCategory) { _ in revealed.removeAll() }
+            .onChange(of: quizAnswersVisible) { visible in
+                if !visible { revealed.removeAll() }
+            }
     }
 
     private var attributed: AttributedString {
-        var out = AttributedString("")
-        for seg in MaskParser.parse(raw) {
+        var source = raw
+        if !MaskParser.hasMask(source), !terms.isEmpty {
+            let pattern = terms.sorted { $0.count > $1.count }
+                .map { NSRegularExpression.escapedPattern(for: $0) }.joined(separator: "|")
+            if let regex = try? NSRegularExpression(pattern: pattern) {
+                let matches = regex.matches(in: source, range: NSRange(source.startIndex..., in: source))
+                for match in matches.reversed() {
+                    if let range = Range(match.range, in: source) {
+                        let word = String(source[range])
+                        let cat = word.rangeOfCharacter(from: .decimalDigits) == nil ? "key" : "num"
+                        source.replaceSubrange(range, with: "{{\(word)::\(cat)}}")
+                    }
+                }
+            }
+        }
+        var formatted = ""
+        var candidates: [Int: String] = [:]
+        for seg in MaskParser.parse(source) {
             switch seg {
             case .plain(let s):
-                out += markdown(s)
+                formatted += s
             case .masked(let id, let text, let cat):
-                out += maskedRun(id: id, text: text, cat: cat)
+                if isCandidate(id: id, cat: cat) {
+                    formatted += "[\(text)](mask://\(id))"
+                    candidates[id] = cat
+                } else { formatted += text }
+            }
+        }
+        var out = markdown(formatted)
+        for run in Array(out.runs) {
+            guard let url = run.link, url.scheme == "mask", let host = url.host,
+                  let id = Int(host), let cat = candidates[id] else { continue }
+            let range = run.range
+            if isHiddenNow(id: id, cat: cat) {
+                out[range].foregroundColor = Self.maskRed
+                out[range].backgroundColor = Self.maskRed
+            } else {
+                out[range].link = nil
+                out[range].foregroundColor = color
+                out[range].backgroundColor = Theme.accent2.opacity(0.22)
             }
         }
         return out
     }
 
-    private func maskedRun(id: Int, text: String, cat: String) -> AttributedString {
-        var run = AttributedString(text)
-        if isHiddenNow(id: id, cat: cat) {
-            // 隠し中：赤帯（文字色＝背景色で文字を見えなくする）＋タップ用リンク
-            run.foregroundColor = Self.maskRed
-            run.backgroundColor = Self.maskRed
-            run.link = URL(string: "mask://\(id)")
-        } else if quizMode && isCandidate(id: id, cat: cat) {
-            // この回の出題対象で、タップ済み（答え表示）：薄い強調
-            run.foregroundColor = color
-            run.backgroundColor = Theme.accent2.opacity(0.22)
-        } else {
-            // 出題対象外 or クイズOFF：通常表示
-            run.foregroundColor = color
-        }
-        return run
-    }
-
-    /// クイズON・カテゴリ一致・この seed で抽選に当たった語か
+    /// クイズが有効で、選んだカテゴリに属する語句をすべて出題する。
     private func isCandidate(id: Int, cat: String) -> Bool {
         guard quizMode else { return false }
         guard quizCategory == "all" || quizCategory == cat else { return false }
-        return pick(id: id, seed: quizSeed)
+        return true
     }
 
     private func isHiddenNow(id: Int, cat: String) -> Bool {
-        isCandidate(id: id, cat: cat) && !revealed.contains(id)
-    }
-
-    /// (id, seed) から決まる擬似乱数で出題有無を決める（同じ回では安定、別パターンで変化）
-    private func pick(id: Int, seed: Int) -> Bool {
-        let mixed = ((id &+ 1) &* 73856093) ^ ((seed &+ 1) &* 19349663)
-        return (mixed % 100 + 100) % 100 < Self.hideRatio
+        isCandidate(id: id, cat: cat) && !quizAnswersVisible && !revealed.contains(id)
     }
 
     private func markdown(_ s: String) -> AttributedString {

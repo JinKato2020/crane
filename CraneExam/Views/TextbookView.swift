@@ -180,10 +180,12 @@ struct SectionContentView: View {
     @State private var quizOn = false
     @State private var quizSeed = 0
     @State private var quizCat = "all"
+    @State private var answersVisible = false
 
     /// この節に {{ }} の印が1つでもあるか（あるときだけクイズのトグルを出す）
     private var hasMasks: Bool {
         section.blocks.contains { b in
+            if !(b.quizTerms ?? []).isEmpty { return true }
             if MaskParser.hasMask(b.text) { return true }
             return (b.items ?? []).contains { MaskParser.hasMask($0) }
         }
@@ -221,6 +223,9 @@ struct SectionContentView: View {
         .environment(\.quizMode, quizOn)
         .environment(\.quizSeed, quizSeed)
         .environment(\.quizCategory, quizCat)
+        .environment(\.quizAnswersVisible, answersVisible)
+        .onChange(of: quizOn) { _ in answersVisible = false; quizSeed += 1 }
+        .onChange(of: quizCat) { _ in answersVisible = false; quizSeed += 1 }
     }
 
     // 暗記クイズの操作バー
@@ -230,7 +235,7 @@ struct SectionContentView: View {
                 Image(systemName: "rectangle.on.rectangle.angled").font(.system(size: 13, weight: .bold)).foregroundColor(Theme.accent)
                 Text("暗記クイズ").font(.system(size: 14, weight: .heavy)).foregroundColor(Theme.fg)
                 Spacer()
-                Toggle("", isOn: $quizOn).labelsHidden().tint(Theme.accent)
+                Toggle("暗記クイズ", isOn: $quizOn).labelsHidden().tint(Theme.accent)
             }
             if quizOn {
                 HStack(spacing: 10) {
@@ -238,16 +243,21 @@ struct SectionContentView: View {
                         Button("すべて") { quizCat = "all" }
                         Button("数値") { quizCat = "num" }
                         Button("用語") { quizCat = "key" }
-                        Button("ひっかけ") { quizCat = "trap" }
                     } label: {
                         chipLabel("line.3.horizontal.decrease.circle", "対象：" + catLabel(quizCat))
                     }
-                    Button { quizSeed += 1 } label: {
-                        chipLabel("shuffle", "別のパターン")
+                    Button { answersVisible = false; quizSeed += 1 } label: {
+                        chipLabel("arrow.counterclockwise", "もう一度")
                     }
                     Spacer()
                 }
-                Text("赤い部分をタップすると答えが出ます。")
+                Button { answersVisible.toggle() } label: {
+                    Label(answersVisible ? "解答を隠す" : "解答を表示", systemImage: answersVisible ? "eye.slash" : "eye")
+                        .font(.system(size: 14, weight: .bold))
+                        .frame(maxWidth: .infinity).padding(.vertical, 10)
+                }
+                .buttonStyle(.borderedProminent).tint(Theme.accent)
+                Text("重要語句・数値を思い出してから解答を表示。赤い部分は個別にもタップできます。")
                     .font(.system(size: 11.5)).foregroundColor(Theme.faint)
             }
         }
@@ -288,7 +298,7 @@ struct BlockView: View {
                 .padding(.top, 12).padding(.bottom, 2)
 
         case "p":
-            MaskableText(raw: block.text ?? "", size: 15, color: Theme.fg, lineSpacingV: 9)
+            MaskableText(raw: block.text ?? "", terms: block.quizTerms ?? [], size: 15, color: Theme.fg, lineSpacingV: 9)
                 .padding(.vertical, 2)
 
         case "ul":
@@ -296,7 +306,7 @@ struct BlockView: View {
                 ForEach(Array((block.items ?? []).enumerated()), id: \.offset) { _, s in
                     HStack(alignment: .top, spacing: 12) {
                         Circle().fill(Theme.accent).frame(width: 5, height: 5).padding(.top, 9)
-                        MaskableText(raw: s, size: 15, color: Theme.fg, lineSpacingV: 7)
+                        MaskableText(raw: s, terms: block.quizTerms ?? [], size: 15, color: Theme.fg, lineSpacingV: 7)
                     }
                 }
             }
@@ -378,7 +388,7 @@ struct BlockView: View {
                 ForEach(Array((block.items ?? []).enumerated()), id: \.offset) { _, s in
                     HStack(alignment: .top, spacing: 11) {
                         Text("▶").font(.system(size: 9)).foregroundColor(Theme.accent).padding(.top, 6)
-                        MaskableText(raw: s, size: 14.5, weight: .medium, color: Theme.fg, lineSpacingV: 7)
+                        MaskableText(raw: s, terms: block.quizTerms ?? [], size: 14.5, weight: .medium, color: Theme.fg, lineSpacingV: 7)
                     }
                 }
             }
