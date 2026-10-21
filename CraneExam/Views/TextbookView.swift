@@ -176,6 +176,19 @@ struct SectionContentView: View {
     let position: Int
     let total: Int
 
+    // 暗記クイズ（赤シート）：この節だけに効く状態
+    @State private var quizOn = false
+    @State private var quizSeed = 0
+    @State private var quizCat = "all"
+
+    /// この節に {{ }} の印が1つでもあるか（あるときだけクイズのトグルを出す）
+    private var hasMasks: Bool {
+        section.blocks.contains { b in
+            if MaskParser.hasMask(b.text) { return true }
+            return (b.items ?? []).contains { MaskParser.hasMask($0) }
+        }
+    }
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
@@ -188,6 +201,8 @@ struct SectionContentView: View {
                     }
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.top, 10).padding(.bottom, 2)
+
+                if hasMasks { quizBar }
 
                 ForEach(Array(section.blocks.enumerated()), id: \.offset) { _, b in
                     BlockView(block: b)
@@ -203,6 +218,62 @@ struct SectionContentView: View {
             .padding(.horizontal, 24).padding(.vertical, 22)
         }
         .background(Theme.bg.ignoresSafeArea())
+        .environment(\.quizMode, quizOn)
+        .environment(\.quizSeed, quizSeed)
+        .environment(\.quizCategory, quizCat)
+    }
+
+    // 暗記クイズの操作バー
+    private var quizBar: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 8) {
+                Image(systemName: "rectangle.on.rectangle.angled").font(.system(size: 13, weight: .bold)).foregroundColor(Theme.accent)
+                Text("暗記クイズ").font(.system(size: 14, weight: .heavy)).foregroundColor(Theme.fg)
+                Spacer()
+                Toggle("", isOn: $quizOn).labelsHidden().tint(Theme.accent)
+            }
+            if quizOn {
+                HStack(spacing: 10) {
+                    Menu {
+                        Button("すべて") { quizCat = "all" }
+                        Button("数値") { quizCat = "num" }
+                        Button("用語") { quizCat = "key" }
+                        Button("ひっかけ") { quizCat = "trap" }
+                    } label: {
+                        chipLabel("line.3.horizontal.decrease.circle", "対象：" + catLabel(quizCat))
+                    }
+                    Button { quizSeed += 1 } label: {
+                        chipLabel("shuffle", "別のパターン")
+                    }
+                    Spacer()
+                }
+                Text("赤い部分をタップすると答えが出ます。")
+                    .font(.system(size: 11.5)).foregroundColor(Theme.faint)
+            }
+        }
+        .padding(14)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Theme.card2).clipShape(RoundedRectangle(cornerRadius: 12))
+        .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.line, lineWidth: 1))
+    }
+
+    private func chipLabel(_ icon: String, _ text: String) -> some View {
+        HStack(spacing: 5) {
+            Image(systemName: icon).font(.system(size: 12, weight: .bold))
+            Text(text).font(.system(size: 12.5, weight: .bold))
+        }
+        .foregroundColor(Theme.accent2)
+        .padding(.horizontal, 11).padding(.vertical, 7)
+        .background(Theme.accent2.opacity(0.12)).clipShape(Capsule())
+    }
+
+    private func catLabel(_ c: String) -> String {
+        switch c {
+        case "num": return "数値"
+        case "key": return "用語"
+        case "trap": return "ひっかけ"
+        default: return "すべて"
+        }
     }
 }
 
@@ -213,18 +284,11 @@ struct BlockView: View {
     var body: some View {
         switch block.type {
         case "sub":
-            Text(md(block.text))
-                .font(.system(size: 16, weight: .bold)).foregroundColor(Theme.accent2)
-                .lineSpacing(5)
-                .frame(maxWidth: .infinity, alignment: .leading)
+            MaskableText(raw: block.text ?? "", size: 16, weight: .bold, color: Theme.accent2, lineSpacingV: 5)
                 .padding(.top, 12).padding(.bottom, 2)
 
         case "p":
-            Text(md(block.text))
-                .font(.system(size: 15)).foregroundColor(Theme.fg)
-                .lineSpacing(9)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: .infinity, alignment: .leading)
+            MaskableText(raw: block.text ?? "", size: 15, color: Theme.fg, lineSpacingV: 9)
                 .padding(.vertical, 2)
 
         case "ul":
@@ -232,9 +296,7 @@ struct BlockView: View {
                 ForEach(Array((block.items ?? []).enumerated()), id: \.offset) { _, s in
                     HStack(alignment: .top, spacing: 12) {
                         Circle().fill(Theme.accent).frame(width: 5, height: 5).padding(.top, 9)
-                        Text(md(s)).font(.system(size: 15)).foregroundColor(Theme.fg)
-                            .lineSpacing(7).fixedSize(horizontal: false, vertical: true)
-                            .frame(maxWidth: .infinity, alignment: .leading)
+                        MaskableText(raw: s, size: 15, color: Theme.fg, lineSpacingV: 7)
                     }
                 }
             }
@@ -316,9 +378,7 @@ struct BlockView: View {
                 ForEach(Array((block.items ?? []).enumerated()), id: \.offset) { _, s in
                     HStack(alignment: .top, spacing: 11) {
                         Text("▶").font(.system(size: 9)).foregroundColor(Theme.accent).padding(.top, 6)
-                        Text(md(s)).font(.system(size: 14.5, weight: .medium)).foregroundColor(Theme.fg)
-                            .lineSpacing(7).fixedSize(horizontal: false, vertical: true)
-                            .frame(maxWidth: .infinity, alignment: .leading)
+                        MaskableText(raw: s, size: 14.5, weight: .medium, color: Theme.fg, lineSpacingV: 7)
                     }
                 }
             }
@@ -331,13 +391,6 @@ struct BlockView: View {
         default:
             EmptyView()
         }
-    }
-
-    /// Markdownの**太字**を解釈(失敗時はそのまま)
-    private func md(_ s: String?) -> AttributedString {
-        let raw = s ?? ""
-        if let a = try? AttributedString(markdown: raw) { return a }
-        return AttributedString(raw)
     }
 }
 
