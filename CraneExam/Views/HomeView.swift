@@ -22,7 +22,8 @@ struct HomeView: View {
                 .padding(16)
             }
         }
-        .background(Theme.bg.ignoresSafeArea())   // 背景は最上端まで(白余白なし)。ヒーロー自体はステータスバー下に収め、クレーン上部まで見えるようにする
+        .ignoresSafeArea(edges: .top)   // ヒーローを画面最上端まで伸ばし、上の白い余白を無くす
+        .background(Theme.bg.ignoresSafeArea())
         .sheet(isPresented: $showGuide) { ExamGuideView() }
         .sheet(isPresented: $showBookmarks) { BookmarkView().environmentObject(store) }
     }
@@ -73,7 +74,7 @@ struct HomeView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity)
             LinearGradient(
-                colors: [Color.black.opacity(0.18), Color.clear, Theme.bg],
+                colors: [Color.black.opacity(0.45), Color.clear, Theme.bg],
                 startPoint: .top, endPoint: .bottom)
             VStack(alignment: .leading, spacing: 4) {
                 Text("KNOWLEDGE BUILDS TOMORROW")
@@ -119,6 +120,26 @@ struct HomeView: View {
                     statRow("解いた問題数", "\(store.totalAnswered)", "問", Theme.fg)
                     Divider().overlay(Theme.line)
                     statRow("正答率", "\(store.accuracy)", "%", Theme.accent2)
+                }
+                Button {
+                    router.tab = 1
+                } label: {
+                    HStack(spacing: 13) {
+                        Image(systemName: "book.fill")
+                            .frame(width: 34, height: 34)
+                            .background(Color.white.opacity(0.22))
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                        VStack(alignment: .leading, spacing: 1) {
+                            Text("学習を始める").font(.system(size: 15, weight: .heavy))
+                            Text("確かな一歩、合格へ").font(.system(size: 11, weight: .bold)).opacity(0.75)
+                        }
+                        Spacer()
+                        Image(systemName: "chevron.right").font(.system(size: 15, weight: .bold))
+                    }
+                    .foregroundColor(Color(hex: 0x241703))
+                    .padding(15)
+                    .background(Theme.gold)
+                    .clipShape(RoundedRectangle(cornerRadius: 14))
                 }
             }
         }
