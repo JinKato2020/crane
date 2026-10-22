@@ -165,4 +165,3 @@ for number,config in CONFIGS.items():
   r=subprocess.run(['C:/Program Files/Google/Chrome/Application/chrome.exe','--headless=new','--disable-gpu','--hide-scrollbars','--no-first-run','--user-data-dir='+profile,f'--window-size={W},{H}','--force-device-scale-factor=1','--screenshot='+str(OUT/f'chapter{number}_relation_map.png'),html.as_uri()],capture_output=True,timeout=60)
   assert r.returncode==0 and (OUT/f'chapter{number}_relation_map.png').exists()
  print(f'Chapter {number}: six branches, 18 topics; {len(refs)} section references. Labels validated; rendered PNG.')
- 
