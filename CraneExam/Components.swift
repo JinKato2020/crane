@@ -200,7 +200,7 @@ struct RadarChart: View {
             let n = max(3, data.count)
             let cx = Double(sz.width) / 2
             let cy = Double(sz.height) / 2
-            let radius = Double(min(sz.width, sz.height)) / 2 - 34
+            let radius = Double(min(sz.width, sz.height)) / 2 - 50
             let center = CGPoint(x: cx, y: cy)
             // Theme.gold は LinearGradient なので Canvas の .color() には渡せない。
             // Canvas 内ではブランドゴールドの単色を使う。
@@ -235,12 +235,12 @@ struct RadarChart: View {
             // ラベル（分野名＋％）
             for i in 0..<n {
                 let ang: Double = -Double.pi / 2 + 2 * Double.pi * Double(i) / Double(n)
-                let lx = cx + cos(ang) * (radius + 20)
-                let ly = cy + sin(ang) * (radius + 14)
-                let nameText = Text(shortName(data[i].name)).font(.system(size: 10.5, weight: .bold)).foregroundColor(Theme.fg)
-                let pctText = Text("\(data[i].pct)%").font(.system(size: 10.5, weight: .heavy)).foregroundColor(Theme.accent2)
-                ctx.draw(nameText, at: CGPoint(x: lx, y: ly - 6))
-                ctx.draw(pctText, at: CGPoint(x: lx, y: ly + 6))
+                let lx = cx + cos(ang) * (radius + 22)
+                let ly = cy + sin(ang) * (radius + 16)
+                let nameText = Text(shortName(data[i].name)).font(.system(size: 12.5, weight: .bold)).foregroundColor(Theme.fg)
+                let pctText = Text("\(data[i].pct)%").font(.system(size: 12.5, weight: .heavy)).foregroundColor(Theme.accent2)
+                ctx.draw(nameText, at: CGPoint(x: lx, y: ly - 7))
+                ctx.draw(pctText, at: CGPoint(x: lx, y: ly + 8))
             }
     }
 }

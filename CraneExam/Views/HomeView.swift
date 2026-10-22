@@ -19,9 +19,7 @@ struct HomeView: View {
                     progressCard
                     guideCard
                     cardsGrid
-                    Text("挑戦が、現場を動かす。")
-                        .font(.system(size: 11)).foregroundColor(Theme.faint)
-                        .frame(maxWidth: .infinity).padding(.top, 6)
+                    motivationFooter
                 }
                 .padding(16)
             }
@@ -158,6 +156,26 @@ struct HomeView: View {
         }
     }
 
+    // ホーム最下部の“決めゼリフ”。ゴールドのグラデ文字＋英語キッカーでモチベを上げる。
+    private var motivationFooter: some View {
+        VStack(spacing: 9) {
+            HStack(spacing: 8) {
+                Rectangle().fill(Theme.gold).frame(width: 22, height: 2).opacity(0.9)
+                Image(systemName: "flame.fill").font(.system(size: 11)).foregroundStyle(Theme.gold)
+                Rectangle().fill(Theme.gold).frame(width: 22, height: 2).opacity(0.9)
+            }
+            Text("挑戦が、現場を動かす。")
+                .font(.system(size: 16, weight: .heavy))
+                .foregroundStyle(Theme.gold)
+                .shadow(color: Theme.accent.opacity(0.25), radius: 6, y: 1)
+            Text("CHALLENGE MOVES THE FIELD")
+                .font(.system(size: 9, weight: .bold)).tracking(2.5)
+                .foregroundColor(Theme.faint)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.top, 16).padding(.bottom, 4)
+    }
+
     // 進捗カード
     private var progressCard: some View {
         Card {
@@ -176,7 +194,7 @@ struct HomeView: View {
                     }
                     .frame(maxWidth: .infinity).frame(height: 150)
                 } else {
-                    RadarChart(data: store.subjectAccuracy(), size: 196)
+                    RadarChart(data: store.subjectAccuracy(), size: 212)
                         .frame(maxWidth: .infinity)
                 }
                 VStack(spacing: 9) {
