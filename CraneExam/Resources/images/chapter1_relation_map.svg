@@ -1,72 +1,125 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1480" viewBox="0 0 2000 1480">
-<rect width="2000" height="1480" fill="#fff"/>
-<g font-family="Meiryo, sans-serif" fill="#20374B">
-<text x="1000" y="72" font-size="62" font-weight="700" text-anchor="middle" fill="#20374B">第1章｜クレーンのつながり</text>
-<text x="1000" y="119" font-size="34" font-weight="500" text-anchor="middle" fill="#586C7C">部品の名前を、荷が動く仕組みと結びつける</text>
-<path d="M 755 660 C 680 660, 715 260, 640 260" stroke="#2D6685" stroke-width="6" fill="none" opacity=".55"/><circle cx="640" cy="260" r="7" fill="#2D6685"/>
-<path d="M 755 700 C 680 700, 715 510, 640 510" stroke="#3B7286" stroke-width="6" fill="none" opacity=".55"/><circle cx="640" cy="510" r="7" fill="#3B7286"/>
-<path d="M 755 740 C 680 740, 715 760, 640 760" stroke="#37775C" stroke-width="6" fill="none" opacity=".55"/><circle cx="640" cy="760" r="7" fill="#37775C"/>
-<path d="M 755 780 C 680 780, 715 1010, 640 1010" stroke="#4B776C" stroke-width="6" fill="none" opacity=".55"/><circle cx="640" cy="1010" r="7" fill="#4B776C"/>
-<path d="M 755 820 C 680 820, 715 1260, 640 1260" stroke="#526D8D" stroke-width="6" fill="none" opacity=".55"/><circle cx="640" cy="1260" r="7" fill="#526D8D"/>
-<path d="M 1245 660 C 1320 660, 1285 260, 1360 260" stroke="#9C6A24" stroke-width="6" fill="none" opacity=".55"/><circle cx="1360" cy="260" r="7" fill="#9C6A24"/>
-<path d="M 1245 700 C 1320 700, 1285 510, 1360 510" stroke="#8B7135" stroke-width="6" fill="none" opacity=".55"/><circle cx="1360" cy="510" r="7" fill="#8B7135"/>
-<path d="M 1245 740 C 1320 740, 1285 760, 1360 760" stroke="#89616C" stroke-width="6" fill="none" opacity=".55"/><circle cx="1360" cy="760" r="7" fill="#89616C"/>
-<path d="M 1245 780 C 1320 780, 1285 1010, 1360 1010" stroke="#9A5E4D" stroke-width="6" fill="none" opacity=".55"/><circle cx="1360" cy="1010" r="7" fill="#9A5E4D"/>
-<path d="M 1245 820 C 1320 820, 1285 1260, 1360 1260" stroke="#68754D" stroke-width="6" fill="none" opacity=".55"/><circle cx="1360" cy="1260" r="7" fill="#68754D"/>
-<rect x="40" y="150" width="600" height="220" rx="22" fill="#F8FAFC" stroke="#D9E2E9" stroke-width="2"/><rect x="40" y="172" width="7" height="42" rx="3" fill="#2D6685"/>
-<text x="66" y="201" font-size="43" font-weight="700" text-anchor="start" fill="#2D6685">形と動き</text>
-<text x="66" y="251" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">天井・橋形・ジブ・ケーブル</text>
-<text x="66" y="296" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">走行＝全体、横行＝トロリ</text>
-<text x="66" y="341" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">巻上げ・起伏・旋回も区別</text>
-<rect x="40" y="400" width="600" height="220" rx="22" fill="#F8FAFC" stroke="#D9E2E9" stroke-width="2"/><rect x="40" y="422" width="7" height="42" rx="3" fill="#3B7286"/>
-<text x="66" y="451" font-size="43" font-weight="700" text-anchor="start" fill="#3B7286">能力と作業の条件</text>
-<text x="66" y="501" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">定格荷重＝条件ごとの荷の上限</text>
-<text x="66" y="546" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">作業半径＝旋回中心〜荷（水平）</text>
-<text x="66" y="591" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">揚程＝つり具が上下できる範囲</text>
-<rect x="40" y="650" width="600" height="220" rx="22" fill="#F8FAFC" stroke="#D9E2E9" stroke-width="2"/><rect x="40" y="672" width="7" height="42" rx="3" fill="#37775C"/>
-<text x="66" y="701" font-size="43" font-weight="700" text-anchor="start" fill="#37775C">骨組み：天井の例</text>
-<text x="66" y="751" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">荷 → ロープ・つり具 → トロリ</text>
-<text x="66" y="796" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">→ ガーダ → サドル・車輪</text>
-<text x="66" y="841" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">→ 走行レール → 建物・基礎</text>
-<rect x="40" y="900" width="600" height="220" rx="22" fill="#F8FAFC" stroke="#D9E2E9" stroke-width="2"/><rect x="40" y="922" width="7" height="42" rx="3" fill="#4B776C"/>
-<text x="66" y="951" font-size="43" font-weight="700" text-anchor="start" fill="#4B776C">ワイヤロープの構造</text>
-<text x="66" y="1001" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">素線 → ストランド → ロープ</text>
-<text x="66" y="1046" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">心綱のまわりにより合わせる</text>
-<text x="66" y="1091" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">普通より／ラングよりを区別</text>
-<rect x="40" y="1150" width="600" height="220" rx="22" fill="#F8FAFC" stroke="#D9E2E9" stroke-width="2"/><rect x="40" y="1172" width="7" height="42" rx="3" fill="#526D8D"/>
-<text x="66" y="1201" font-size="43" font-weight="700" text-anchor="start" fill="#526D8D">荷に合わせるつり具</text>
-<text x="66" y="1251" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">フック＝玉掛け用具を掛ける</text>
-<text x="66" y="1296" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">バケット＝砂・鉱石などをつかむ</text>
-<text x="66" y="1341" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">磁石＝磁性のある鋼材を扱う</text>
-<rect x="1360" y="150" width="600" height="220" rx="22" fill="#F8FAFC" stroke="#D9E2E9" stroke-width="2"/><rect x="1360" y="172" width="7" height="42" rx="3" fill="#9C6A24"/>
-<text x="1386" y="201" font-size="43" font-weight="700" text-anchor="start" fill="#9C6A24">荷を動かす装置</text>
-<text x="1386" y="251" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">電動機 → 減速機 → ドラム</text>
-<text x="1386" y="296" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">ドラムがロープを巻き取る</text>
-<text x="1386" y="341" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">ロープ → つり具 → 荷が動く</text>
-<rect x="1360" y="400" width="600" height="220" rx="22" fill="#F8FAFC" stroke="#D9E2E9" stroke-width="2"/><rect x="1360" y="422" width="7" height="42" rx="3" fill="#8B7135"/>
-<text x="1386" y="451" font-size="43" font-weight="700" text-anchor="start" fill="#8B7135">回転を伝え・支える</text>
-<text x="1386" y="501" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">歯車・軸・継手・キーで伝える</text>
-<text x="1386" y="546" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">軸受は、回る軸を支える</text>
-<text x="1386" y="591" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">ボルト・座金・ナットで締結</text>
-<rect x="1360" y="650" width="600" height="220" rx="22" fill="#F8FAFC" stroke="#D9E2E9" stroke-width="2"/><rect x="1360" y="672" width="7" height="42" rx="3" fill="#89616C"/>
-<text x="1386" y="701" font-size="43" font-weight="700" text-anchor="start" fill="#89616C">止める・保持する</text>
-<text x="1386" y="751" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">ブレーキで減速し、停止する</text>
-<text x="1386" y="796" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">停止後も、荷をその場に保つ</text>
-<text x="1386" y="841" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">止め方と保持の仕組みを学ぶ</text>
-<rect x="1360" y="900" width="600" height="220" rx="22" fill="#F8FAFC" stroke="#D9E2E9" stroke-width="2"/><rect x="1360" y="922" width="7" height="42" rx="3" fill="#9A5E4D"/>
-<text x="1386" y="951" font-size="43" font-weight="700" text-anchor="start" fill="#9A5E4D">危険を防いで運転</text>
-<text x="1386" y="1001" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">巻過ぎ・過負荷・逸走を防ぐ</text>
-<text x="1386" y="1046" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">重心・玉掛け・周囲を確認</text>
-<text x="1386" y="1091" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">ゆっくり地切りして状態を見る</text>
-<rect x="1360" y="1150" width="600" height="220" rx="22" fill="#F8FAFC" stroke="#D9E2E9" stroke-width="2"/><rect x="1360" y="1172" width="7" height="42" rx="3" fill="#68754D"/>
-<text x="1386" y="1201" font-size="43" font-weight="700" text-anchor="start" fill="#68754D">状態を保つ・調べる</text>
-<text x="1386" y="1251" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">給油で摩擦と摩耗を抑える</text>
-<text x="1386" y="1296" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">点検で損傷・異常を見つける</text>
-<text x="1386" y="1341" font-size="36" font-weight="500" text-anchor="start" fill="#20374B">作業前・月次・年次を区別</text>
-<rect x="755" y="590" width="490" height="360" rx="36" fill="#F0F4F8" stroke="#BDCAD6" stroke-width="3"/>
-<text x="1000" y="650" font-size="56" font-weight="700" text-anchor="middle" fill="#20374B">クレーン</text>
-<text x="1000" y="699" font-size="31" font-weight="600" text-anchor="middle" fill="#20374B">動力でつり上げ、水平に運ぶ</text>
-<g fill="none" stroke="#35516A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M825 889V760H1175V889M825 775H1175"/><path d="M980 761H1030V785H980Z" fill="#E4AF57"/><path d="M1005 785V829Q1025 849 1005 861Q989 866 987 849"/><path d="M868 901H1132" stroke="#ADBCC8" stroke-width="5"/></g><path d="M948 746H1060M1050 737L1060 746L1050 755" fill="none" stroke="#2E7AA2" stroke-width="6" stroke-linecap="round"/><path d="M1048 806V854M1040 846L1048 854L1056 846" fill="none" stroke="#AD634A" stroke-width="6" stroke-linecap="round"/>
-<text x="1000" y="1438" font-size="37" font-weight="600" text-anchor="middle" fill="#20374B">全体像をつかむ → 部品の役割を知る → 安全な運転・点検につなげる</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="3400" height="2200" viewBox="0 0 3400 2200" role="img" aria-labelledby="title desc">
+<title id="title">第1章 クレーンのマインドマップ</title>
+<desc id="desc">中心のクレーンから、姿と動き、能力と範囲、荷を支える、荷を動かす、止める・守る、点検・手入れの6本の枝が伸び、部品と役割へ分かれます。</desc>
+<metadata>{&quot;chapter&quot;: 1, &quot;sectionReferences&quot;: [&quot;1-1&quot;, &quot;1-10&quot;, &quot;1-11&quot;, &quot;1-12&quot;, &quot;1-13&quot;, &quot;1-14&quot;, &quot;1-2&quot;, &quot;1-3&quot;, &quot;1-4&quot;, &quot;1-5&quot;, &quot;1-6&quot;, &quot;1-7&quot;, &quot;1-8&quot;, &quot;1-9&quot;]}</metadata>
+<rect width="3400" height="2200" fill="white"/>
+<g font-family="Meiryo, sans-serif" fill="#233C50" stroke-linecap="round" stroke-linejoin="round">
+<text x="1700" y="78" text-anchor="middle" font-size="44" font-weight="700" fill="#233C50">第1章  クレーンに関する知識</text>
+<text x="1700" y="128" text-anchor="middle" font-size="30" font-weight="500" fill="#647B8C">中心から外へ、部品の役割とつながりをたどる</text>
+<path d="M 1510 1100 C 1440 1100 1450 430 1390 430 L 1080 430" fill="none" stroke="#326F9B" stroke-width="17" opacity="1"/>
+<text x="1090" y="402" text-anchor="start" font-size="48" font-weight="700" fill="#326F9B">姿と動き</text>
+<path d="M 1080 430 C 1025 430 1040 220 990 220 L 740 220" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
+<text x="755" y="202" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">クレーンの形</text>
+<path d="M 740 220 C 690 220 695 188.0 640 188.0 L 90 188.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="174.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">天井・橋形</text>
+<path d="M 740 220 C 690 220 695 252.0 640 252.0 L 90 252.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="238.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">ジブ・ケーブル など</text>
+<path d="M 1080 430 C 1025 430 1040 440 990 440 L 740 440" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
+<text x="755" y="422" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">上下・水平</text>
+<path d="M 740 440 C 690 440 695 408.0 640 408.0 L 90 408.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="394.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">巻上げ・巻下げ＝荷が上下</text>
+<path d="M 740 440 C 690 440 695 472.0 640 472.0 L 90 472.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="458.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">横行＝トロリ ／ 走行＝全体</text>
+<path d="M 1080 430 C 1025 430 1040 660 990 660 L 740 660" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
+<text x="755" y="642" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">ジブの動き</text>
+<path d="M 740 660 C 690 660 695 628.0 640 628.0 L 90 628.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="614.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">起伏＝ジブを上げ下げ</text>
+<path d="M 740 660 C 690 660 695 692.0 640 692.0 L 90 692.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="678.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">旋回＝向きを変える</text>
+<path d="M 1510 1100 C 1440 1100 1450 1090 1390 1090 L 1080 1090" fill="none" stroke="#527D94" stroke-width="17" opacity="1"/>
+<text x="1090" y="1062" text-anchor="start" font-size="48" font-weight="700" fill="#527D94">能力と範囲</text>
+<path d="M 1080 1090 C 1025 1090 1040 880 990 880 L 740 880" fill="none" stroke="#527D94" stroke-width="7" opacity="0.85"/>
+<text x="755" y="862" text-anchor="start" font-size="36" font-weight="700" fill="#527D94">定格荷重</text>
+<path d="M 740 880 C 690 880 695 880.0 640 880.0 L 90 880.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="866.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">その作業条件で、つれる荷の上限</text>
+<path d="M 1080 1090 C 1025 1090 1040 1100 990 1100 L 740 1100" fill="none" stroke="#527D94" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1082" text-anchor="start" font-size="36" font-weight="700" fill="#527D94">作業半径</text>
+<path d="M 740 1100 C 690 1100 695 1100.0 640 1100.0 L 90 1100.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1086.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">旋回中心から荷までの水平距離</text>
+<path d="M 1080 1090 C 1025 1090 1040 1320 990 1320 L 740 1320" fill="none" stroke="#527D94" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1302" text-anchor="start" font-size="36" font-weight="700" fill="#527D94">揚程</text>
+<path d="M 740 1320 C 690 1320 695 1320.0 640 1320.0 L 90 1320.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1306.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">つり具が上下できる範囲</text>
+<path d="M 1510 1100 C 1440 1100 1450 1750 1390 1750 L 1080 1750" fill="none" stroke="#398574" stroke-width="17" opacity="1"/>
+<text x="1090" y="1722" text-anchor="start" font-size="48" font-weight="700" fill="#398574">荷を支える</text>
+<path d="M 1080 1750 C 1025 1750 1040 1540 990 1540 L 740 1540" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1522" text-anchor="start" font-size="36" font-weight="700" fill="#398574">骨組み（天井）</text>
+<path d="M 740 1540 C 690 1540 695 1476.0 640 1476.0 L 90 1476.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1462.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">荷 → つり具・ロープ → トロリ</text>
+<path d="M 740 1540 C 690 1540 695 1540.0 640 1540.0 L 90 1540.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1526.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">→ ガーダ → サドル・車輪</text>
+<path d="M 740 1540 C 690 1540 695 1604.0 640 1604.0 L 90 1604.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1590.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">→ レール → 建物・基礎</text>
+<path d="M 1080 1750 C 1025 1750 1040 1760 990 1760 L 740 1760" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1742" text-anchor="start" font-size="36" font-weight="700" fill="#398574">ワイヤロープ</text>
+<path d="M 740 1760 C 690 1760 695 1728.0 640 1728.0 L 90 1728.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1714.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">素線 → ストランド → ロープ</text>
+<path d="M 740 1760 C 690 1760 695 1792.0 640 1792.0 L 90 1792.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1778.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">心綱のまわりに、より合わせる</text>
+<path d="M 1080 1750 C 1025 1750 1040 1980 990 1980 L 740 1980" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1962" text-anchor="start" font-size="36" font-weight="700" fill="#398574">つり具</text>
+<path d="M 740 1980 C 690 1980 695 1916.0 640 1916.0 L 90 1916.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1902.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">フック＝玉掛け用具を掛ける</text>
+<path d="M 740 1980 C 690 1980 695 1980.0 640 1980.0 L 90 1980.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1966.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">バケット＝砂などをつかむ</text>
+<path d="M 740 1980 C 690 1980 695 2044.0 640 2044.0 L 90 2044.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="2030.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">磁石＝磁性のある鋼材を扱う</text>
+<path d="M 1890 1100 C 1960 1100 1950 430 2010 430 L 2320 430" fill="none" stroke="#AF792D" stroke-width="17" opacity="1"/>
+<text x="2310" y="402" text-anchor="end" font-size="48" font-weight="700" fill="#AF792D">荷を動かす</text>
+<path d="M 2320 430 C 2375 430 2360 220 2410 220 L 2660 220" fill="none" stroke="#AF792D" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="202" text-anchor="end" font-size="36" font-weight="700" fill="#AF792D">動力の流れ</text>
+<path d="M 2660 220 C 2710 220 2705 188.0 2760 188.0 L 3310 188.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="174.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">電動機 → 減速機 → ドラム</text>
+<path d="M 2660 220 C 2710 220 2705 252.0 2760 252.0 L 3310 252.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="238.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">ドラム → ロープ → 荷</text>
+<path d="M 2320 430 C 2375 430 2360 440 2410 440 L 2660 440" fill="none" stroke="#AF792D" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="422" text-anchor="end" font-size="36" font-weight="700" fill="#AF792D">回転を伝える</text>
+<path d="M 2660 440 C 2710 440 2705 440.0 2760 440.0 L 3310 440.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="426.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">歯車・軸・継手・キー</text>
+<path d="M 2320 430 C 2375 430 2360 660 2410 660 L 2660 660" fill="none" stroke="#AF792D" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="642" text-anchor="end" font-size="36" font-weight="700" fill="#AF792D">支える・留める</text>
+<path d="M 2660 660 C 2710 660 2705 628.0 2760 628.0 L 3310 628.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="614.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">軸受＝回る軸を支える</text>
+<path d="M 2660 660 C 2710 660 2705 692.0 2760 692.0 L 3310 692.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="678.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">ボルト・ナット＝部品を留める</text>
+<path d="M 1890 1100 C 1960 1100 1950 1090 2010 1090 L 2320 1090" fill="none" stroke="#B46758" stroke-width="17" opacity="1"/>
+<text x="2310" y="1062" text-anchor="end" font-size="48" font-weight="700" fill="#B46758">止める・守る</text>
+<path d="M 2320 1090 C 2375 1090 2360 880 2410 880 L 2660 880" fill="none" stroke="#B46758" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="862" text-anchor="end" font-size="36" font-weight="700" fill="#B46758">ブレーキ</text>
+<path d="M 2660 880 C 2710 880 2705 848.0 2760 848.0 L 3310 848.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="834.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">動きを減速して止める</text>
+<path d="M 2660 880 C 2710 880 2705 912.0 2760 912.0 L 3310 912.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="898.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">停止後も、荷を保持する</text>
+<path d="M 2320 1090 C 2375 1090 2360 1100 2410 1100 L 2660 1100" fill="none" stroke="#B46758" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1082" text-anchor="end" font-size="36" font-weight="700" fill="#B46758">安全装置</text>
+<path d="M 2660 1100 C 2710 1100 2705 1100.0 2760 1100.0 L 3310 1100.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1086.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">巻過ぎ・過負荷・逸走を防ぐ</text>
+<path d="M 2320 1090 C 2375 1090 2360 1320 2410 1320 L 2660 1320" fill="none" stroke="#B46758" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1302" text-anchor="end" font-size="36" font-weight="700" fill="#B46758">安全な運転</text>
+<path d="M 2660 1320 C 2710 1320 2705 1288.0 2760 1288.0 L 3310 1288.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1274.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">重心・玉掛け・周囲を確認</text>
+<path d="M 2660 1320 C 2710 1320 2705 1352.0 2760 1352.0 L 3310 1352.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1338.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">ゆっくり地切り → 状態を確認</text>
+<path d="M 1890 1100 C 1960 1100 1950 1750 2010 1750 L 2320 1750" fill="none" stroke="#7D8951" stroke-width="17" opacity="1"/>
+<text x="2310" y="1722" text-anchor="end" font-size="48" font-weight="700" fill="#7D8951">点検・手入れ</text>
+<path d="M 2320 1750 C 2375 1750 2360 1540 2410 1540 L 2660 1540" fill="none" stroke="#7D8951" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1522" text-anchor="end" font-size="36" font-weight="700" fill="#7D8951">給油</text>
+<path d="M 2660 1540 C 2710 1540 2705 1540.0 2760 1540.0 L 3310 1540.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1526.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">摩擦・摩耗を減らす</text>
+<path d="M 2320 1750 C 2375 1750 2360 1760 2410 1760 L 2660 1760" fill="none" stroke="#7D8951" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1742" text-anchor="end" font-size="36" font-weight="700" fill="#7D8951">損傷を見つける</text>
+<path d="M 2660 1760 C 2710 1760 2705 1760.0 2760 1760.0 L 3310 1760.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1746.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">ロープ・つり具・ブレーキなど</text>
+<path d="M 2320 1750 C 2375 1750 2360 1980 2410 1980 L 2660 1980" fill="none" stroke="#7D8951" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1962" text-anchor="end" font-size="36" font-weight="700" fill="#7D8951">点検の時期</text>
+<path d="M 2660 1980 C 2710 1980 2705 1980.0 2760 1980.0 L 3310 1980.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1966.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">作業前・月次・年次</text>
+<ellipse cx="1700" cy="1100" rx="199" ry="177" fill="#F1F6FA" stroke="#D0DEE9" stroke-width="3"/>
+<text x="1700" y="1029" text-anchor="middle" font-size="54" font-weight="700" fill="#233C50">クレーン</text>
+<text x="1700" y="1080" text-anchor="middle" font-size="30" font-weight="600" fill="#233C50">動力でつり上げ</text>
+<text x="1700" y="1123" text-anchor="middle" font-size="30" font-weight="600" fill="#233C50">水平に運ぶ</text>
+<path d="M1575 1230V1165H1825V1230 M1575 1180H1825" fill="none" stroke="#355972" stroke-width="7" opacity="1"/>
+<rect x="1675" y="1153" width="50" height="30" rx="5" fill="#E8B965" stroke="#355972" stroke-width="4"/>
+<path d="M1700 1184V1208 Q1719 1221 1701 1234 Q1687 1240 1684 1227" fill="none" stroke="#355972" stroke-width="5" opacity="1"/>
 </g>
 </svg>

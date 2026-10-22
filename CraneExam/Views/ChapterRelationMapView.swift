@@ -11,17 +11,12 @@ struct ChapterRelationMapView: View {
                 VStack(alignment: .leading, spacing: 20) {
                     Text("第1章 クレーンに関する知識")
                         .font(.system(size: 20, weight: .heavy)).foregroundColor(Theme.fg)
-                    Text("荷が動くまでに、どの部品が何をするのか。つながりから全体像をつかみましょう。")
+                    Text("6つの役割から、部品の名前と働きを整理します。中心から外へ、太い枝から細い枝へたどってください。")
                         .font(.system(size: 14)).lineSpacing(5).foregroundColor(Theme.muted)
                     SVGFigureView(file: "chapter1_relation_map.svg", caption: "第1章の相関図", thumbMaxHeight: 440)
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("相関図の読み方").font(.system(size: 16, weight: .bold))
-                        Text("① 中央のクレーンから、枝の見出しを見ます。\n② 「動かす」「支える」「守る」の役割を結びつけます。\n③ 気になる枝を拡大し、教材で詳しく確認します。")
-                            .font(.system(size: 14)).lineSpacing(7)
-                    }
-                    .foregroundColor(Theme.fg).padding(18)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 14))
+                    Label("図をタップして全画面へ。ピンチで枝の先まで拡大できます。", systemImage: "hand.draw")
+                        .font(.system(size: 13)).lineSpacing(5)
+                        .foregroundColor(Theme.muted)
                     if let chapter = store.textbook?.chapters.first(where: { $0.id == 1 }) {
                         NavigationLink {
                             ChapterSectionsView(chapter: chapter)
