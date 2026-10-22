@@ -1,6 +1,22 @@
 {
-  "images" : [
-    { "filename" : "examguide.jpg", "idiom" : "universal" }
-  ],
-  "info" : { "author" : "xcode", "version" : 1 }
+  "info": {
+    "author": "xcode",
+    "version": 1
+  },
+  "images": [
+    {
+      "idiom": "universal",
+      "filename": "examguide-light.png"
+    },
+    {
+      "filename": "examguide.jpg",
+      "idiom": "universal",
+      "appearances": [
+        {
+          "value": "dark",
+          "appearance": "luminosity"
+        }
+      ]
+    }
+  ]
 }

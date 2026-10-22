@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Environment(\.colorScheme) private var colorScheme
     @EnvironmentObject var store: ExamStore
     @EnvironmentObject var router: Router
     @State private var showGuide = false
@@ -21,13 +22,12 @@ struct HomeView: View {
                 .padding(16)
             }
         }
-        .ignoresSafeArea(edges: .top)   // ヒーローを画面最上端まで伸ばし、上の白い余白を無くす
-        .background(Theme.bg.ignoresSafeArea())
+        .background(Theme.bg.ignoresSafeArea())   // 背景は最上端まで(白余白なし)。ヒーロー自体はステータスバー下に収め、クレーン上部まで見えるようにする
         .sheet(isPresented: $showGuide) { ExamGuideView() }
         .sheet(isPresented: $showBookmarks) { BookmarkView().environmentObject(store) }
     }
 
-    // 総合解説カード（CAE流用：写真背景＋オーバーレイ）
+    // 外観別の写真とオーバーレイで、ホームの背景と文字の読みやすさをそろえる。
     private var guideCard: some View {
         Button { showGuide = true } label: {
             ZStack(alignment: .bottomLeading) {
@@ -37,26 +37,32 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity)
                     .frame(height: 112)
                     .clipped()
-                LinearGradient(colors: [Color.black.opacity(0.12), Color.black.opacity(0.74)],
+                LinearGradient(colors: colorScheme == .dark
+                               ? [Color.black.opacity(0.12), Color.black.opacity(0.74)]
+                               : [Color.white.opacity(0.08), Color.white.opacity(0.92)],
                                startPoint: .top, endPoint: .bottom)
                 HStack(alignment: .bottom) {
                     VStack(alignment: .leading, spacing: 3) {
                         Text("クレーン試験 総合解説")
-                            .font(.system(size: 15.5, weight: .heavy)).foregroundColor(.white)
+                            .font(.system(size: 15.5, weight: .heavy)).foregroundColor(guideTextColor)
                         Text("配点・合格基準・学び方がひと目でわかる")
-                            .font(.system(size: 11.5, weight: .semibold)).foregroundColor(.white.opacity(0.9))
+                            .font(.system(size: 11.5, weight: .semibold)).foregroundColor(guideTextColor.opacity(0.9))
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     Spacer(minLength: 6)
-                    Image(systemName: "chevron.right").font(.system(size: 14, weight: .bold)).foregroundColor(.white.opacity(0.9))
+                    Image(systemName: "chevron.right").font(.system(size: 14, weight: .bold)).foregroundColor(guideTextColor.opacity(0.9))
                 }
                 .padding(14)
-                .shadow(color: .black.opacity(0.6), radius: 4, y: 1)
+                .shadow(color: colorScheme == .dark ? .black.opacity(0.6) : .clear, radius: 4, y: 1)
             }
             .frame(height: 112)
             .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(Theme.line, lineWidth: 1))
         }
+    }
+
+    private var guideTextColor: Color {
+        colorScheme == .dark ? .white : Color(hex: 0x1F3349)
     }
 
     // ヒーロー(画像全体を切らずに表示=fit。上に余白を作らず横幅いっぱい・縦は縦横比なり)
@@ -67,7 +73,7 @@ struct HomeView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity)
             LinearGradient(
-                colors: [Color.black.opacity(0.45), Color.clear, Theme.bg],
+                colors: [Color.black.opacity(0.18), Color.clear, Theme.bg],
                 startPoint: .top, endPoint: .bottom)
             VStack(alignment: .leading, spacing: 4) {
                 Text("KNOWLEDGE BUILDS TOMORROW")
@@ -113,26 +119,6 @@ struct HomeView: View {
                     statRow("解いた問題数", "\(store.totalAnswered)", "問", Theme.fg)
                     Divider().overlay(Theme.line)
                     statRow("正答率", "\(store.accuracy)", "%", Theme.accent2)
-                }
-                Button {
-                    router.tab = 1
-                } label: {
-                    HStack(spacing: 13) {
-                        Image(systemName: "book.fill")
-                            .frame(width: 34, height: 34)
-                            .background(Color.white.opacity(0.22))
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                        VStack(alignment: .leading, spacing: 1) {
-                            Text("学習を始める").font(.system(size: 15, weight: .heavy))
-                            Text("確かな一歩、合格へ").font(.system(size: 11, weight: .bold)).opacity(0.75)
-                        }
-                        Spacer()
-                        Image(systemName: "chevron.right").font(.system(size: 15, weight: .bold))
-                    }
-                    .foregroundColor(Color(hex: 0x241703))
-                    .padding(15)
-                    .background(Theme.gold)
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
                 }
             }
         }
