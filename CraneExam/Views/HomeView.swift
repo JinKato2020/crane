@@ -17,7 +17,7 @@ struct HomeView: View {
                 hero
                 VStack(spacing: 13) {
                     countdownCard
-                    progressCard
+                    relationMapCard
                     guideCard
                     cardsGrid
                     motivationFooter
@@ -178,44 +178,31 @@ struct HomeView: View {
         .padding(.top, 16).padding(.bottom, 4)
     }
 
-    // 進捗カード
-    private var progressCard: some View {
+    // 4章の全体像を、ホームから直接拡大して読めるカード。
+    private var relationMapCard: some View {
         Card {
-            VStack(spacing: 14) {
+            VStack(alignment: .leading, spacing: 14) {
                 HStack {
-                    Text("分野別の正答率").font(.system(size: 14, weight: .bold)).foregroundColor(Theme.fg)
+                    Label("相関図", systemImage: "point.3.connected.trianglepath.dotted")
+                        .font(.system(size: 15, weight: .bold))
+                        .foregroundColor(Theme.fg)
                     Spacer()
-                    Text("全体 \(store.accuracy)%").font(.system(size: 12, weight: .bold)).foregroundColor(Theme.accent2)
+                    Text("タップで拡大")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundColor(Theme.muted)
                 }
-                if store.totalAnswered == 0 {
-                    VStack(spacing: 6) {
-                        Image(systemName: "chart.dots.scatter").font(.system(size: 30)).foregroundColor(Theme.faint)
-                        Text("模擬試験を受けると、分野別の正答率が表示されます")
-                            .font(.system(size: 11.5)).foregroundColor(Theme.muted)
-                            .multilineTextAlignment(.center)
+                LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 16) {
+                    ForEach(1...4, id: \.self) { number in
+                        VStack(alignment: .leading, spacing: 7) {
+                            Text("第\(number)章 · \(["クレーン", "関係法令", "電気・電動機", "力学"][number - 1])")
+                                .font(.system(size: 12, weight: .bold))
+                                .foregroundColor(Theme.fg)
+                                .fixedSize(horizontal: false, vertical: true)
+                            SVGFigureView(file: "chapter\(number)_relation_map.svg", caption: "第\(number)章の相関図", thumbMaxHeight: 180)
+                        }
                     }
-                    .frame(maxWidth: .infinity).frame(height: 150)
-                } else {
-                    RadarChart(data: store.subjectAccuracy(), size: 212)
-                        .frame(maxWidth: .infinity)
-                }
-                VStack(spacing: 9) {
-                    statRow("受験した回数", "\(store.examsTaken)", "/\(store.examTotal)回", Theme.fg)
-                    Divider().overlay(Theme.line)
-                    statRow("解いた問題数", "\(store.totalAnswered)", "問", Theme.fg)
-                    Divider().overlay(Theme.line)
-                    statRow("正答率", "\(store.accuracy)", "%", Theme.accent2)
                 }
             }
-        }
-    }
-
-    private func statRow(_ k: String, _ v: String, _ unit: String, _ color: Color) -> some View {
-        HStack(alignment: .firstTextBaseline) {
-            Text(k).font(.system(size: 12)).foregroundColor(Theme.muted)
-            Spacer()
-            Text(v).font(.system(size: 19, weight: .semibold, design: .rounded)).foregroundColor(color)
-            Text(unit).font(.system(size: 11)).foregroundColor(Theme.muted)
         }
     }
 
