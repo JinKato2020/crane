@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3400" height="2200" viewBox="0 0 3400 2200" role="img" aria-labelledby="title desc">
+<title id="title">第3章 原動機及び電気に関する知識のマインドマップ</title>
+<desc id="desc">中心から6本の枝が伸び、電気の基本、回路と電力、回るしくみ、動きを操る、電気を届ける、電気を守るへ分かれます。</desc>
+<metadata>{&quot;chapter&quot;: 3, &quot;sectionReferences&quot;: [&quot;3-0&quot;, &quot;3-1&quot;, &quot;3-2&quot;, &quot;3-3&quot;, &quot;3-4&quot;, &quot;3-5&quot;, &quot;3-6&quot;, &quot;3-7&quot;]}</metadata>
+<rect width="3400" height="2200" fill="white"/>
+<g font-family="Meiryo, sans-serif" fill="#233C50" stroke-linecap="round" stroke-linejoin="round">
+<text x="1700" y="78" text-anchor="middle" font-size="44" font-weight="700" fill="#233C50">第3章  原動機及び電気に関する知識</text>
+<text x="1700" y="128" text-anchor="middle" font-size="30" font-weight="500" fill="#647B8C">中心から外へ、役割としくみのつながりをたどる</text>
+<path d="M 1510 1100 C 1440 1100 1450 430 1390 430 L 1080 430" fill="none" stroke="#326F9B" stroke-width="17" opacity="1"/>
+<text x="1090" y="402" text-anchor="start" font-size="48" font-weight="700" fill="#326F9B">電気の基本</text>
+<path d="M 1080 430 C 1025 430 1040 220 990 220 L 740 220" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
+<text x="755" y="202" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">流れと抵抗</text>
+<path d="M 740 220 C 690 220 695 156.0 640 156.0 L 90 156.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="142.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">電流＝流れる量 ／ 電圧＝押す力</text>
+<path d="M 740 220 C 690 220 695 220.0 640 220.0 L 90 220.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="206.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">抵抗＝流れにくさ</text>
+<path d="M 740 220 C 690 220 695 284.0 640 284.0 L 90 284.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="270.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">水の流れにたとえて考える</text>
+<path d="M 1080 430 C 1025 430 1040 440 990 440 L 740 440" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
+<text x="755" y="422" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">直流と交流</text>
+<path d="M 740 440 C 690 440 695 408.0 640 408.0 L 90 408.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="394.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">直流＝向きが一定</text>
+<path d="M 740 440 C 690 440 695 472.0 640 472.0 L 90 472.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="458.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">交流＝向きが周期的に変わる</text>
+<path d="M 1080 430 C 1025 430 1040 660 990 660 L 740 660" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
+<text x="755" y="642" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">三相と周波数</text>
+<path d="M 740 660 C 690 660 695 628.0 640 628.0 L 90 628.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="614.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">三相＝タイミングがずれた交流</text>
+<path d="M 740 660 C 690 660 695 692.0 640 692.0 L 90 692.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="678.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">周波数＝1秒間の繰返し数</text>
+<path d="M 1510 1100 C 1440 1100 1450 1090 1390 1090 L 1080 1090" fill="none" stroke="#527D94" stroke-width="17" opacity="1"/>
+<text x="1090" y="1062" text-anchor="start" font-size="48" font-weight="700" fill="#527D94">回路と電力</text>
+<path d="M 1080 1090 C 1025 1090 1040 880 990 880 L 740 880" fill="none" stroke="#527D94" stroke-width="7" opacity="0.85"/>
+<text x="755" y="862" text-anchor="start" font-size="36" font-weight="700" fill="#527D94">オームの法則</text>
+<path d="M 740 880 C 690 880 695 880.0 640 880.0 L 90 880.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="866.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">電圧＝電流×抵抗</text>
+<path d="M 1080 1090 C 1025 1090 1040 1100 990 1100 L 740 1100" fill="none" stroke="#527D94" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1082" text-anchor="start" font-size="36" font-weight="700" fill="#527D94">直列と並列</text>
+<path d="M 740 1100 C 690 1100 695 1068.0 640 1068.0 L 90 1068.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1054.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">直列＝一本道 ／ 抵抗を足す</text>
+<path d="M 740 1100 C 690 1100 695 1132.0 640 1132.0 L 90 1132.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1118.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">並列＝枝分かれ ／ 通りやすい</text>
+<path d="M 1080 1090 C 1025 1090 1040 1320 990 1320 L 740 1320" fill="none" stroke="#527D94" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1302" text-anchor="start" font-size="36" font-weight="700" fill="#527D94">使う電気と熱</text>
+<path d="M 740 1320 C 690 1320 695 1256.0 640 1256.0 L 90 1256.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1242.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">電力＝1秒あたりのエネルギー</text>
+<path d="M 740 1320 C 690 1320 695 1320.0 640 1320.0 L 90 1320.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1306.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">電力量＝電力×時間</text>
+<path d="M 740 1320 C 690 1320 695 1384.0 640 1384.0 L 90 1384.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1370.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">ジュール熱＝電流が生む熱</text>
+<path d="M 1510 1100 C 1440 1100 1450 1750 1390 1750 L 1080 1750" fill="none" stroke="#398574" stroke-width="17" opacity="1"/>
+<text x="1090" y="1722" text-anchor="start" font-size="48" font-weight="700" fill="#398574">回るしくみ</text>
+<path d="M 1080 1750 C 1025 1750 1040 1540 990 1540 L 740 1540" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1522" text-anchor="start" font-size="36" font-weight="700" fill="#398574">磁界と回転子</text>
+<path d="M 740 1540 C 690 1540 695 1540.0 640 1540.0 L 90 1540.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1526.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">回る磁界 → 誘導電流 → 回す力</text>
+<path d="M 1080 1750 C 1025 1750 1040 1760 990 1760 L 740 1760" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1742" text-anchor="start" font-size="36" font-weight="700" fill="#398574">かご形・巻線形</text>
+<path d="M 740 1760 C 690 1760 695 1728.0 640 1728.0 L 90 1728.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1714.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">どちらも電気で軸を回す</text>
+<path d="M 740 1760 C 690 1760 695 1792.0 640 1792.0 L 90 1792.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1778.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">回転子の作りが違う</text>
+<path d="M 1080 1750 C 1025 1750 1040 1980 990 1980 L 740 1980" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1962" text-anchor="start" font-size="36" font-weight="700" fill="#398574">磁界と回転の差</text>
+<path d="M 740 1980 C 690 1980 695 1948.0 640 1948.0 L 90 1948.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1934.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">同期速度＝磁界が回る速さ</text>
+<path d="M 740 1980 C 690 1980 695 2012.0 640 2012.0 L 90 2012.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1998.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">回転子は磁界より少し遅れる</text>
+<path d="M 1890 1100 C 1960 1100 1950 430 2010 430 L 2320 430" fill="none" stroke="#AF792D" stroke-width="17" opacity="1"/>
+<text x="2310" y="402" text-anchor="end" font-size="48" font-weight="700" fill="#AF792D">動きを操る</text>
+<path d="M 2320 430 C 2375 430 2360 220 2410 220 L 2660 220" fill="none" stroke="#AF792D" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="202" text-anchor="end" font-size="36" font-weight="700" fill="#AF792D">制御器</text>
+<path d="M 2660 220 C 2710 220 2705 188.0 2760 188.0 L 3310 188.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="174.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">ハンドル・ボタンで運転を指令</text>
+<path d="M 2660 220 C 2710 220 2705 252.0 2760 252.0 L 3310 252.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="238.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">直接制御 ／ 接触器で間接制御</text>
+<path d="M 2320 430 C 2375 430 2360 440 2410 440 L 2660 440" fill="none" stroke="#AF792D" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="422" text-anchor="end" font-size="36" font-weight="700" fill="#AF792D">速度の調整</text>
+<path d="M 2660 440 C 2710 440 2705 408.0 2760 408.0 L 3310 408.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="394.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">インバーターで周波数を変える</text>
+<path d="M 2660 440 C 2710 440 2705 472.0 2760 472.0 L 3310 472.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="458.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">巻線形は二次抵抗でも調整</text>
+<path d="M 2320 430 C 2375 430 2360 660 2410 660 L 2660 660" fill="none" stroke="#AF792D" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="642" text-anchor="end" font-size="36" font-weight="700" fill="#AF792D">回転方向</text>
+<path d="M 2660 660 C 2710 660 2705 660.0 2760 660.0 L 3310 660.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="646.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">三相のうち2本を入れ替える</text>
+<path d="M 1890 1100 C 1960 1100 1950 1090 2010 1090 L 2320 1090" fill="none" stroke="#B46758" stroke-width="17" opacity="1"/>
+<text x="2310" y="1062" text-anchor="end" font-size="48" font-weight="700" fill="#B46758">電気を届ける</text>
+<path d="M 2320 1090 C 2375 1090 2360 880 2410 880 L 2660 880" fill="none" stroke="#B46758" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="862" text-anchor="end" font-size="36" font-weight="700" fill="#B46758">トロリ線給電</text>
+<path d="M 2660 880 C 2710 880 2705 880.0 2760 880.0 L 3310 880.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="866.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">集電子が電線に触れて受電</text>
+<path d="M 2320 1090 C 2375 1090 2360 1100 2410 1100 L 2660 1100" fill="none" stroke="#B46758" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1082" text-anchor="end" font-size="36" font-weight="700" fill="#B46758">ケーブル給電</text>
+<path d="M 2660 1100 C 2710 1100 2705 1100.0 2760 1100.0 L 3310 1100.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1086.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">動く本体へケーブルを追従</text>
+<path d="M 2320 1090 C 2375 1090 2360 1320 2410 1320 L 2660 1320" fill="none" stroke="#B46758" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1302" text-anchor="end" font-size="36" font-weight="700" fill="#B46758">回転部への給電</text>
+<path d="M 2660 1320 C 2710 1320 2705 1320.0 2760 1320.0 L 3310 1320.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1306.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">スリップリングで電気を渡す</text>
+<path d="M 1890 1100 C 1960 1100 1950 1750 2010 1750 L 2320 1750" fill="none" stroke="#7D8951" stroke-width="17" opacity="1"/>
+<text x="2310" y="1722" text-anchor="end" font-size="48" font-weight="700" fill="#7D8951">電気を守る</text>
+<path d="M 2320 1750 C 2375 1750 2360 1540 2410 1540 L 2660 1540" fill="none" stroke="#7D8951" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1522" text-anchor="end" font-size="36" font-weight="700" fill="#7D8951">絶縁と接地</text>
+<path d="M 2660 1540 C 2710 1540 2705 1508.0 2760 1508.0 L 3310 1508.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1494.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">絶縁＝電気を外へ漏らさない</text>
+<path d="M 2660 1540 C 2710 1540 2705 1572.0 2760 1572.0 L 3310 1572.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1558.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">接地＝漏れた電気の逃げ道</text>
+<path d="M 2320 1750 C 2375 1750 2360 1760 2410 1760 L 2660 1760" fill="none" stroke="#7D8951" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1742" text-anchor="end" font-size="36" font-weight="700" fill="#7D8951">保護装置</text>
+<path d="M 2660 1760 C 2710 1760 2705 1728.0 2760 1728.0 L 3310 1728.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1714.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">過負荷・短絡などを検出</text>
+<path d="M 2660 1760 C 2710 1760 2705 1792.0 2760 1792.0 L 3310 1792.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1778.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">異常時に回路を遮断</text>
+<path d="M 2320 1750 C 2375 1750 2360 1980 2410 1980 L 2660 1980" fill="none" stroke="#7D8951" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1962" text-anchor="end" font-size="36" font-weight="700" fill="#7D8951">測定と点検</text>
+<path d="M 2660 1980 C 2710 1980 2705 1948.0 2760 1948.0 L 3310 1948.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1934.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">電圧・電流・絶縁抵抗を測る</text>
+<path d="M 2660 1980 C 2710 1980 2705 2012.0 2760 2012.0 L 3310 2012.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1998.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">異音・発熱・接点の状態を確認</text>
+<ellipse cx="1700" cy="1100" rx="199" ry="177" fill="#F1F6FA" stroke="#D0DEE9" stroke-width="3"/>
+<text x="1700" y="1029" text-anchor="middle" font-size="54" font-weight="700" fill="#233C50">電気と電動機</text>
+<text x="1700" y="1080" text-anchor="middle" font-size="30" font-weight="600" fill="#233C50">電気を届けて</text>
+<text x="1700" y="1123" text-anchor="middle" font-size="30" font-weight="600" fill="#233C50">動きを生み出す</text>
+<path d="M1610 1202H1660 M1740 1202H1790" fill="none" stroke="#355972" stroke-width="5" opacity="1"/>
+<circle cx="1700" cy="1202" r="39" fill="white" stroke="#355972" stroke-width="5"/>
+<text x="1700" y="1217" text-anchor="middle" font-size="40" font-weight="700" fill="#233C50">M</text>
+</g>
+</svg>

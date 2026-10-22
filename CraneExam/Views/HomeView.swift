@@ -226,7 +226,7 @@ struct HomeView: View {
             homeCard("book.fill", "教材で学ぶ", "全4章の解説・図表") { router.tab = 1 }
             homeCard("character.book.closed.fill", "用語集", "全4章の重要用語") { router.tab = 3 }
             homeCard("doc.text.fill", "模擬試験", "本番形式で力試し") { router.tab = 2 }
-            homeCard("point.3.connected.trianglepath.dotted", "相関図", "第1章のつながりをつかむ") { showRelationMap = true }
+            homeCard("point.3.connected.trianglepath.dotted", "相関図", "第1〜4章のつながりをつかむ") { showRelationMap = true }
             homeCard("heart.fill", "お気に入りの用語", "ハートを付けた用語を見直す") { showFavTerms = true }
             homeCard("bookmark.fill", "ブックマーク", "あとで見返す問題") { showBookmarks = true }
         }

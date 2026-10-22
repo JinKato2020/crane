@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3400" height="2200" viewBox="0 0 3400 2200" role="img" aria-labelledby="title desc">
+<title id="title">第2章 関係法令のマインドマップ</title>
+<desc id="desc">中心から6本の枝が伸び、設置する前に、使うときに、点検を続ける、変える・やめる、玉掛用具を選ぶ、資格と読み方へ分かれます。</desc>
+<metadata>{&quot;chapter&quot;: 2, &quot;sectionReferences&quot;: [&quot;2-0&quot;, &quot;2-1&quot;, &quot;2-2&quot;, &quot;2-3&quot;, &quot;2-4&quot;, &quot;2-5&quot;, &quot;2-6&quot;]}</metadata>
+<rect width="3400" height="2200" fill="white"/>
+<g font-family="Meiryo, sans-serif" fill="#233C50" stroke-linecap="round" stroke-linejoin="round">
+<text x="1700" y="78" text-anchor="middle" font-size="44" font-weight="700" fill="#233C50">第2章  関係法令</text>
+<text x="1700" y="128" text-anchor="middle" font-size="30" font-weight="500" fill="#647B8C">中心から外へ、役割としくみのつながりをたどる</text>
+<path d="M 1510 1100 C 1440 1100 1450 430 1390 430 L 1080 430" fill="none" stroke="#326F9B" stroke-width="17" opacity="1"/>
+<text x="1090" y="402" text-anchor="start" font-size="48" font-weight="700" fill="#326F9B">設置する前に</text>
+<path d="M 1080 430 C 1025 430 1040 220 990 220 L 740 220" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
+<text x="755" y="202" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">対象を分ける</text>
+<path d="M 740 220 C 690 220 695 188.0 640 188.0 L 90 188.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="174.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">つり上げ荷重・種類で区分</text>
+<path d="M 740 220 C 690 220 695 252.0 640 252.0 L 90 252.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="238.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">区分ごとに必要な手続き</text>
+<path d="M 1080 430 C 1025 430 1040 440 990 440 L 740 440" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
+<text x="755" y="422" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">許可・届出</text>
+<path d="M 740 440 C 690 440 695 408.0 640 408.0 L 90 408.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="394.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">製造許可＝作る前</text>
+<path d="M 740 440 C 690 440 695 472.0 640 472.0 L 90 472.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="458.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">設置届＝据え付け工事の前</text>
+<path d="M 1080 430 C 1025 430 1040 660 990 660 L 740 660" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
+<text x="755" y="642" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">使い始める前</text>
+<path d="M 740 660 C 690 660 695 628.0 640 628.0 L 90 628.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="614.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">落成検査 → 検査証</text>
+<path d="M 740 660 C 690 660 695 692.0 640 692.0 L 90 692.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="678.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">建物・歩道との間隔も確保</text>
+<path d="M 1510 1100 C 1440 1100 1450 1090 1390 1090 L 1080 1090" fill="none" stroke="#527D94" stroke-width="17" opacity="1"/>
+<text x="1090" y="1062" text-anchor="start" font-size="48" font-weight="700" fill="#527D94">使うときに</text>
+<path d="M 1080 1090 C 1025 1090 1040 880 990 880 L 740 880" fill="none" stroke="#527D94" stroke-width="7" opacity="0.85"/>
+<text x="755" y="862" text-anchor="start" font-size="36" font-weight="700" fill="#527D94">能力を守る</text>
+<path d="M 740 880 C 690 880 695 848.0 640 848.0 L 90 848.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="834.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">定格荷重・ジブの角度を確認</text>
+<path d="M 740 880 C 690 880 695 912.0 640 912.0 L 90 912.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="898.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">安全装置を有効に保つ</text>
+<path d="M 1080 1090 C 1025 1090 1040 1100 990 1100 L 740 1100" fill="none" stroke="#527D94" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1082" text-anchor="start" font-size="36" font-weight="700" fill="#527D94">人を守る</text>
+<path d="M 740 1100 C 690 1100 695 1068.0 640 1068.0 L 90 1068.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1054.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">合図を決め、危険な立入りを防ぐ</text>
+<path d="M 740 1100 C 690 1100 695 1132.0 640 1132.0 L 90 1132.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1118.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">荷をつったまま運転位置を離れない</text>
+<path d="M 1080 1090 C 1025 1090 1040 1320 990 1320 L 740 1320" fill="none" stroke="#527D94" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1302" text-anchor="start" font-size="36" font-weight="700" fill="#527D94">風・修理対策</text>
+<path d="M 740 1320 C 690 1320 695 1288.0 640 1288.0 L 90 1288.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1274.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">強風時は作業中止・逸走防止</text>
+<path d="M 740 1320 C 690 1320 695 1352.0 640 1352.0 L 90 1352.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1338.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">修理中の運転を防ぐ</text>
+<path d="M 1510 1100 C 1440 1100 1450 1750 1390 1750 L 1080 1750" fill="none" stroke="#398574" stroke-width="17" opacity="1"/>
+<text x="1090" y="1722" text-anchor="start" font-size="48" font-weight="700" fill="#398574">点検を続ける</text>
+<path d="M 1080 1750 C 1025 1750 1040 1540 990 1540 L 740 1540" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1522" text-anchor="start" font-size="36" font-weight="700" fill="#398574">いつ調べる？</text>
+<path d="M 740 1540 C 690 1540 695 1540.0 640 1540.0 L 90 1540.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1526.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">作業開始前・月次・年次</text>
+<path d="M 1080 1750 C 1025 1750 1040 1760 990 1760 L 740 1760" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1742" text-anchor="start" font-size="36" font-weight="700" fill="#398574">特別な点検</text>
+<path d="M 740 1760 C 690 1760 695 1760.0 640 1760.0 L 90 1760.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1746.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">暴風・地震の後も状態を確認</text>
+<path d="M 1080 1750 C 1025 1750 1040 1980 990 1980 L 740 1980" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1962" text-anchor="start" font-size="36" font-weight="700" fill="#398574">異常への対応</text>
+<path d="M 740 1980 C 690 1980 695 1948.0 640 1948.0 L 90 1948.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1934.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">直ちに補修する</text>
+<path d="M 740 1980 C 690 1980 695 2012.0 640 2012.0 L 90 2012.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1998.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">検査・点検記録を保存</text>
+<path d="M 1890 1100 C 1960 1100 1950 430 2010 430 L 2320 430" fill="none" stroke="#AF792D" stroke-width="17" opacity="1"/>
+<text x="2310" y="402" text-anchor="end" font-size="48" font-weight="700" fill="#AF792D">変える・やめる</text>
+<path d="M 2320 430 C 2375 430 2360 220 2410 220 L 2660 220" fill="none" stroke="#AF792D" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="202" text-anchor="end" font-size="36" font-weight="700" fill="#AF792D">検査証の更新</text>
+<path d="M 2660 220 C 2710 220 2705 220.0 2760 220.0 L 3310 220.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="206.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">性能検査 → 有効期間を更新</text>
+<path d="M 2320 430 C 2375 430 2360 440 2410 440 L 2660 440" fill="none" stroke="#AF792D" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="422" text-anchor="end" font-size="36" font-weight="700" fill="#AF792D">設備の変更</text>
+<path d="M 2660 440 C 2710 440 2705 440.0 2760 440.0 L 3310 440.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="426.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">変更内容に応じた届出・検査</text>
+<path d="M 2320 430 C 2375 430 2360 660 2410 660 L 2660 660" fill="none" stroke="#AF792D" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="642" text-anchor="end" font-size="36" font-weight="700" fill="#AF792D">休止から廃止へ</text>
+<path d="M 2660 660 C 2710 660 2705 628.0 2760 628.0 L 3310 628.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="614.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">使用再開には必要な検査</text>
+<path d="M 2660 660 C 2710 660 2705 692.0 2760 692.0 L 3310 692.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="678.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">廃止などでは検査証を返還</text>
+<path d="M 1890 1100 C 1960 1100 1950 1090 2010 1090 L 2320 1090" fill="none" stroke="#B46758" stroke-width="17" opacity="1"/>
+<text x="2310" y="1062" text-anchor="end" font-size="48" font-weight="700" fill="#B46758">玉掛用具を選ぶ</text>
+<path d="M 2320 1090 C 2375 1090 2360 880 2410 880 L 2660 880" fill="none" stroke="#B46758" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="862" text-anchor="end" font-size="36" font-weight="700" fill="#B46758">強さの余裕</text>
+<path d="M 2660 880 C 2710 880 2705 880.0 2760 880.0 L 3310 880.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="866.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">安全係数＝切断荷重÷最大荷重</text>
+<path d="M 2320 1090 C 2375 1090 2360 1100 2410 1100 L 2660 1100" fill="none" stroke="#B46758" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1082" text-anchor="end" font-size="36" font-weight="700" fill="#B46758">使用禁止を知る</text>
+<path d="M 2660 1100 C 2710 1100 2705 1068.0 2760 1068.0 L 3310 1068.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1054.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">断線・摩耗・変形・き裂を確認</text>
+<path d="M 2660 1100 C 2710 1100 2705 1132.0 2760 1132.0 L 3310 1132.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1118.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">用具ごとに限度が違う</text>
+<path d="M 2320 1090 C 2375 1090 2360 1320 2410 1320 L 2660 1320" fill="none" stroke="#B46758" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1302" text-anchor="end" font-size="36" font-weight="700" fill="#B46758">使用前に確認</text>
+<path d="M 2660 1320 C 2710 1320 2705 1288.0 2760 1288.0 L 3310 1288.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1274.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">荷に合う用具を選ぶ</text>
+<path d="M 2660 1320 C 2710 1320 2705 1352.0 2760 1352.0 L 3310 1352.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1338.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">作業開始前に用具を点検</text>
+<path d="M 1890 1100 C 1960 1100 1950 1750 2010 1750 L 2320 1750" fill="none" stroke="#7D8951" stroke-width="17" opacity="1"/>
+<text x="2310" y="1722" text-anchor="end" font-size="48" font-weight="700" fill="#7D8951">資格と読み方</text>
+<path d="M 2320 1750 C 2375 1750 2360 1540 2410 1540 L 2660 1540" fill="none" stroke="#7D8951" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1522" text-anchor="end" font-size="36" font-weight="700" fill="#7D8951">運転の資格</text>
+<path d="M 2660 1540 C 2710 1540 2705 1540.0 2760 1540.0 L 3310 1540.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1526.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">つり上げ荷重＋操作方式で決まる</text>
+<path d="M 2320 1750 C 2375 1750 2360 1760 2410 1760 L 2660 1760" fill="none" stroke="#7D8951" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1742" text-anchor="end" font-size="36" font-weight="700" fill="#7D8951">玉掛けの資格</text>
+<path d="M 2660 1760 C 2710 1760 2705 1760.0 2760 1760.0 L 3310 1760.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1746.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">運転資格とは別に確認する</text>
+<path d="M 2320 1750 C 2375 1750 2360 1980 2410 1980 L 2660 1980" fill="none" stroke="#7D8951" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1962" text-anchor="end" font-size="36" font-weight="700" fill="#7D8951">法令の読み方</text>
+<path d="M 2660 1980 C 2710 1980 2705 1948.0 2760 1948.0 L 3310 1948.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1934.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">だれが・いつ・何をするか</text>
+<path d="M 2660 1980 C 2710 1980 2705 2012.0 2760 2012.0 L 3310 2012.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1998.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">数字＋以上・未満＋例外条件</text>
+<ellipse cx="1700" cy="1100" rx="199" ry="177" fill="#F1F6FA" stroke="#D0DEE9" stroke-width="3"/>
+<text x="1700" y="1029" text-anchor="middle" font-size="54" font-weight="700" fill="#233C50">関係法令</text>
+<text x="1700" y="1080" text-anchor="middle" font-size="30" font-weight="600" fill="#233C50">安全に働くための</text>
+<text x="1700" y="1123" text-anchor="middle" font-size="30" font-weight="600" fill="#233C50">ルールをつなぐ</text>
+<path d="M1655 1152H1730L1753 1175V1240H1655Z" fill="white" stroke="#355972" stroke-width="5"/>
+<path d="M1730 1152V1175H1753 M1673 1182H1715 M1673 1200H1734" fill="none" stroke="#355972" stroke-width="4" opacity="1"/>
+<path d="M1684 1220L1696 1231L1720 1209" fill="none" stroke="#398574" stroke-width="5" opacity="1"/>
+</g>
+</svg>

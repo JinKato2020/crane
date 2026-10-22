@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3400" height="2200" viewBox="0 0 3400 2200" role="img" aria-labelledby="title desc">
+<title id="title">第4章 クレーンの運転のために必要な力学に関する知識のマインドマップ</title>
+<desc id="desc">中心から6本の枝が伸び、重さと力、つり合いと安定、動きの変化、材料への負担、ロープの選定、滑車と仕事へ分かれます。</desc>
+<metadata>{&quot;chapter&quot;: 4, &quot;sectionReferences&quot;: [&quot;4-0&quot;, &quot;4-1&quot;, &quot;4-2&quot;, &quot;4-3&quot;, &quot;4-4&quot;, &quot;4-5&quot;, &quot;4-6&quot;, &quot;4-7&quot;]}</metadata>
+<rect width="3400" height="2200" fill="white"/>
+<g font-family="Meiryo, sans-serif" fill="#233C50" stroke-linecap="round" stroke-linejoin="round">
+<text x="1700" y="78" text-anchor="middle" font-size="44" font-weight="700" fill="#233C50">第4章  クレーンの運転のために必要な力学に関する知識</text>
+<text x="1700" y="128" text-anchor="middle" font-size="30" font-weight="500" fill="#647B8C">中心から外へ、役割としくみのつながりをたどる</text>
+<path d="M 1510 1100 C 1440 1100 1450 430 1390 430 L 1080 430" fill="none" stroke="#326F9B" stroke-width="17" opacity="1"/>
+<text x="1090" y="402" text-anchor="start" font-size="48" font-weight="700" fill="#326F9B">重さと力</text>
+<path d="M 1080 430 C 1025 430 1040 220 990 220 L 740 220" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
+<text x="755" y="202" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">質量と重量</text>
+<path d="M 740 220 C 690 220 695 188.0 640 188.0 L 90 188.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="174.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">質量kg × 重力加速度 → 重量N</text>
+<path d="M 740 220 C 690 220 695 252.0 640 252.0 L 90 252.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="238.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">月でも質量は同じ、重量は違う</text>
+<path d="M 1080 430 C 1025 430 1040 440 990 440 L 740 440" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
+<text x="755" y="422" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">体積から質量</text>
+<path d="M 740 440 C 690 440 695 408.0 640 408.0 L 90 408.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="394.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">形から体積 → 密度を掛ける</text>
+<path d="M 740 440 C 690 440 695 472.0 640 472.0 L 90 472.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="458.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">中空なら外側の体積−内側の体積</text>
+<path d="M 1080 430 C 1025 430 1040 660 990 660 L 740 660" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
+<text x="755" y="642" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">力の三要素</text>
+<path d="M 740 660 C 690 660 695 660.0 640 660.0 L 90 660.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="646.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">大きさ・向き・作用点</text>
+<path d="M 1510 1100 C 1440 1100 1450 1090 1390 1090 L 1080 1090" fill="none" stroke="#527D94" stroke-width="17" opacity="1"/>
+<text x="1090" y="1062" text-anchor="start" font-size="48" font-weight="700" fill="#527D94">つり合いと安定</text>
+<path d="M 1080 1090 C 1025 1090 1040 880 990 880 L 740 880" fill="none" stroke="#527D94" stroke-width="7" opacity="0.85"/>
+<text x="755" y="862" text-anchor="start" font-size="36" font-weight="700" fill="#527D94">合力と分力</text>
+<path d="M 740 880 C 690 880 695 848.0 640 848.0 L 90 848.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="834.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">複数の力をまとめる＝合成</text>
+<path d="M 740 880 C 690 880 695 912.0 640 912.0 L 90 912.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="898.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">1つの力を向き別に分ける＝分解</text>
+<path d="M 1080 1090 C 1025 1090 1040 1100 990 1100 L 740 1100" fill="none" stroke="#527D94" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1082" text-anchor="start" font-size="36" font-weight="700" fill="#527D94">モーメント</text>
+<path d="M 740 1100 C 690 1100 695 1068.0 640 1068.0 L 90 1068.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1054.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">回す働き＝力×垂直な腕の長さ</text>
+<path d="M 740 1100 C 690 1100 695 1132.0 640 1132.0 L 90 1132.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1118.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">長いスパナほど小さな力で回る</text>
+<path d="M 1080 1090 C 1025 1090 1040 1320 990 1320 L 740 1320" fill="none" stroke="#527D94" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1302" text-anchor="start" font-size="36" font-weight="700" fill="#527D94">重心と安定</text>
+<path d="M 740 1320 C 690 1320 695 1288.0 640 1288.0 L 90 1288.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1274.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">荷は重心の真上からつる</text>
+<path d="M 740 1320 C 690 1320 695 1352.0 640 1352.0 L 90 1352.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1338.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">重心の真下が支持範囲内なら安定</text>
+<path d="M 1510 1100 C 1440 1100 1450 1750 1390 1750 L 1080 1750" fill="none" stroke="#398574" stroke-width="17" opacity="1"/>
+<text x="1090" y="1722" text-anchor="start" font-size="48" font-weight="700" fill="#398574">動きの変化</text>
+<path d="M 1080 1750 C 1025 1750 1040 1540 990 1540 L 740 1540" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1522" text-anchor="start" font-size="36" font-weight="700" fill="#398574">速度と加速度</text>
+<path d="M 740 1540 C 690 1540 695 1508.0 640 1508.0 L 90 1508.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1494.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">速さ＋向き＝速度</text>
+<path d="M 740 1540 C 690 1540 695 1572.0 640 1572.0 L 90 1572.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1558.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">加速度＝速度の変わり方</text>
+<path d="M 1080 1750 C 1025 1750 1040 1760 990 1760 L 740 1760" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1742" text-anchor="start" font-size="36" font-weight="700" fill="#398574">慣性と円運動</text>
+<path d="M 740 1760 C 690 1760 695 1728.0 640 1728.0 L 90 1728.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1714.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">急発進 → 荷は元の状態を保つ</text>
+<path d="M 740 1760 C 690 1760 695 1792.0 640 1792.0 L 90 1792.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1778.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">円運動には中心向きの力</text>
+<path d="M 1080 1750 C 1025 1750 1040 1980 990 1980 L 740 1980" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
+<text x="755" y="1962" text-anchor="start" font-size="36" font-weight="700" fill="#398574">摩擦</text>
+<path d="M 740 1980 C 690 1980 695 1916.0 640 1916.0 L 90 1916.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1902.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">静止中＝押す力とつり合う</text>
+<path d="M 740 1980 C 690 1980 695 1980.0 640 1980.0 L 90 1980.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1966.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">動き出す限界が最大静止摩擦力</text>
+<path d="M 740 1980 C 690 1980 695 2044.0 640 2044.0 L 90 2044.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="2030.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">動いた後は動摩擦力</text>
+<path d="M 1890 1100 C 1960 1100 1950 430 2010 430 L 2320 430" fill="none" stroke="#AF792D" stroke-width="17" opacity="1"/>
+<text x="2310" y="402" text-anchor="end" font-size="48" font-weight="700" fill="#AF792D">材料への負担</text>
+<path d="M 2320 430 C 2375 430 2360 220 2410 220 L 2660 220" fill="none" stroke="#AF792D" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="202" text-anchor="end" font-size="36" font-weight="700" fill="#AF792D">荷重のかかり方</text>
+<path d="M 2660 220 C 2710 220 2705 188.0 2760 188.0 L 3310 188.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="174.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">引張り・圧縮・曲げ・ねじりなど</text>
+<path d="M 2660 220 C 2710 220 2705 252.0 2760 252.0 L 3310 252.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="238.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">一定・繰返し・衝撃でも分類</text>
+<path d="M 2320 430 C 2375 430 2360 440 2410 440 L 2660 440" fill="none" stroke="#AF792D" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="422" text-anchor="end" font-size="36" font-weight="700" fill="#AF792D">応力とひずみ</text>
+<path d="M 2660 440 C 2710 440 2705 408.0 2760 408.0 L 3310 408.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="394.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">応力＝力÷断面積</text>
+<path d="M 2660 440 C 2710 440 2705 472.0 2760 472.0 L 3310 472.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="458.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">ひずみ＝伸び÷もとの長さ</text>
+<path d="M 2320 430 C 2375 430 2360 660 2410 660 L 2660 660" fill="none" stroke="#AF792D" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="642" text-anchor="end" font-size="36" font-weight="700" fill="#AF792D">変形と疲労</text>
+<path d="M 2660 660 C 2710 660 2705 628.0 2760 628.0 L 3310 628.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="614.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">弾性＝戻る ／ 塑性＝変形が残る</text>
+<path d="M 2660 660 C 2710 660 2705 692.0 2760 692.0 L 3310 692.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="678.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">繰返す負担 → 疲労破壊</text>
+<path d="M 1890 1100 C 1960 1100 1950 1090 2010 1090 L 2320 1090" fill="none" stroke="#B46758" stroke-width="17" opacity="1"/>
+<text x="2310" y="1062" text-anchor="end" font-size="48" font-weight="700" fill="#B46758">ロープの選定</text>
+<path d="M 2320 1090 C 2375 1090 2360 880 2410 880 L 2660 880" fill="none" stroke="#B46758" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="862" text-anchor="end" font-size="36" font-weight="700" fill="#B46758">つり角度と張力</text>
+<path d="M 2660 880 C 2710 880 2705 848.0 2760 848.0 L 3310 848.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="834.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">開きが大きいほど張力が増える</text>
+<path d="M 2660 880 C 2710 880 2705 912.0 2760 912.0 L 3310 912.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="898.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">左右対称なら縦の分担は同じ</text>
+<path d="M 2320 1090 C 2375 1090 2360 1100 2410 1100 L 2660 1100" fill="none" stroke="#B46758" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1082" text-anchor="end" font-size="36" font-weight="700" fill="#B46758">張力・安全係数</text>
+<path d="M 2660 1100 C 2710 1100 2705 1068.0 2760 1068.0 L 3310 1068.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1054.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">張力係数＝縦の分力に対する倍率</text>
+<path d="M 2660 1100 C 2710 1100 2705 1132.0 2760 1132.0 L 3310 1132.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1118.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">安全係数＝切断荷重÷最大荷重</text>
+<path d="M 2320 1090 C 2375 1090 2360 1320 2410 1320 L 2660 1320" fill="none" stroke="#B46758" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1302" text-anchor="end" font-size="36" font-weight="700" fill="#B46758">モード係数</text>
+<path d="M 2660 1320 C 2710 1320 2705 1288.0 2760 1288.0 L 3310 1288.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1274.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">つり方で、つれる質量が変わる</text>
+<path d="M 2660 1320 C 2710 1320 2705 1352.0 2760 1352.0 L 3310 1352.0" fill="none" stroke="#B46758" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1338.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">基本安全荷重×係数＝つれる質量</text>
+<path d="M 1890 1100 C 1960 1100 1950 1750 2010 1750 L 2320 1750" fill="none" stroke="#7D8951" stroke-width="17" opacity="1"/>
+<text x="2310" y="1722" text-anchor="end" font-size="48" font-weight="700" fill="#7D8951">滑車と仕事</text>
+<path d="M 2320 1750 C 2375 1750 2360 1540 2410 1540 L 2660 1540" fill="none" stroke="#7D8951" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1522" text-anchor="end" font-size="36" font-weight="700" fill="#7D8951">定滑車・動滑車</text>
+<path d="M 2660 1540 C 2710 1540 2705 1508.0 2760 1508.0 L 3310 1508.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1494.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">定滑車＝引く向きを変える</text>
+<path d="M 2660 1540 C 2710 1540 2705 1572.0 2760 1572.0 L 3310 1572.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1558.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">動滑車＝力を分担して支える</text>
+<path d="M 2320 1750 C 2375 1750 2360 1760 2410 1760 L 2660 1760" fill="none" stroke="#7D8951" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1742" text-anchor="end" font-size="36" font-weight="700" fill="#7D8951">ロープをたどる</text>
+<path d="M 2660 1760 C 2710 1760 2705 1728.0 2760 1728.0 L 3310 1728.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1714.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">組合せ＝荷を支える部分を数える</text>
+<path d="M 2660 1760 C 2710 1760 2705 1792.0 2760 1792.0 L 3310 1792.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1778.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">段階式＝別ロープごとに半分</text>
+<path d="M 2320 1750 C 2375 1750 2360 1980 2410 1980 L 2660 1980" fill="none" stroke="#7D8951" stroke-width="7" opacity="0.85"/>
+<text x="2645" y="1962" text-anchor="end" font-size="36" font-weight="700" fill="#7D8951">仕事と動力</text>
+<path d="M 2660 1980 C 2710 1980 2705 1916.0 2760 1916.0 L 3310 1916.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1902.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">力を減らすほど、長く引く</text>
+<path d="M 2660 1980 C 2710 1980 2705 1980.0 2760 1980.0 L 3310 1980.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="1966.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">仕事＝力×力の向きの移動距離</text>
+<path d="M 2660 1980 C 2710 1980 2705 2044.0 2760 2044.0 L 3310 2044.0" fill="none" stroke="#7D8951" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="2030.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">動力＝仕事÷時間</text>
+<ellipse cx="1700" cy="1100" rx="199" ry="177" fill="#F1F6FA" stroke="#D0DEE9" stroke-width="3"/>
+<text x="1700" y="1029" text-anchor="middle" font-size="54" font-weight="700" fill="#233C50">力学</text>
+<text x="1700" y="1080" text-anchor="middle" font-size="30" font-weight="600" fill="#233C50">荷に働く力から</text>
+<text x="1700" y="1123" text-anchor="middle" font-size="30" font-weight="600" fill="#233C50">動きと安全を考える</text>
+<path d="M1620 1210H1780 M1700 1166V1210 M1650 1210L1632 1241H1668Z" fill="none" stroke="#355972" stroke-width="5" opacity="1"/>
+<rect x="1730" y="1175" width="33" height="35" rx="3" fill="#E8B965" stroke="#355972" stroke-width="4"/>
+</g>
+</svg>
