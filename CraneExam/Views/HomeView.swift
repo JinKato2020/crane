@@ -6,12 +6,16 @@ struct HomeView: View {
     @EnvironmentObject var router: Router
     @State private var showGuide = false
     @State private var showBookmarks = false
+    @State private var showFavTerms = false
+    @AppStorage("cr_exam_date") private var examEpoch: Double = 0   // 試験日(0=未設定, timeIntervalSince1970)
+    @State private var showDateSheet = false
 
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
                 hero
                 VStack(spacing: 13) {
+                    countdownCard
                     progressCard
                     guideCard
                     cardsGrid
@@ -22,10 +26,11 @@ struct HomeView: View {
                 .padding(16)
             }
         }
-        .ignoresSafeArea(edges: .top)   // ヒーローを画面最上端まで伸ばし、上の白い余白を無くす
-        .background(Theme.bg.ignoresSafeArea())
+        .background(Theme.bg.ignoresSafeArea())   // 背景は最上端まで(白余白なし)。ヒーロー自体はステータスバー下に収め、クレーン上部まで見えるようにする
         .sheet(isPresented: $showGuide) { ExamGuideView() }
         .sheet(isPresented: $showBookmarks) { BookmarkView().environmentObject(store) }
+        .sheet(isPresented: $showFavTerms) { FavoriteTermsScreen().environmentObject(store) }
+        .sheet(isPresented: $showDateSheet) { ExamDateSheet(examEpoch: $examEpoch) }
     }
 
     // 外観別の写真とオーバーレイで、ホームの背景と文字の読みやすさをそろえる。
@@ -74,7 +79,7 @@ struct HomeView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity)
             LinearGradient(
-                colors: [Color.black.opacity(0.45), Color.clear, Theme.bg],
+                colors: [Color.black.opacity(0.18), Color.clear, Theme.bg],
                 startPoint: .top, endPoint: .bottom)
             VStack(alignment: .leading, spacing: 4) {
                 Text("KNOWLEDGE BUILDS TOMORROW")
@@ -91,6 +96,66 @@ struct HomeView: View {
             .padding(16)
         }
         .frame(maxWidth: .infinity)
+    }
+
+    // 試験までの残り日数（ヒーロー直下に大きく表示）。未設定ならタップで設定を促す。
+    private var examDate: Date? { examEpoch > 0 ? Date(timeIntervalSince1970: examEpoch) : nil }
+    private var daysLeft: Int? {
+        guard let d = examDate else { return nil }
+        let cal = Calendar.current
+        return cal.dateComponents([.day], from: cal.startOfDay(for: Date()), to: cal.startOfDay(for: d)).day
+    }
+    private func examDateText(_ d: Date) -> String {
+        let f = DateFormatter()
+        f.calendar = Calendar(identifier: .gregorian)
+        f.locale = Locale(identifier: "ja_JP")
+        f.dateFormat = "yyyy年M月d日(E)"
+        return f.string(from: d)
+    }
+    private var inkColor: Color { Color(hex: 0x241703) }   // ゴールド地に合う濃茶文字
+
+    private var countdownCard: some View {
+        Button { showDateSheet = true } label: {
+            HStack(spacing: 14) {
+                Image(systemName: "calendar")
+                    .font(.system(size: 20, weight: .bold)).foregroundColor(inkColor)
+                    .frame(width: 46, height: 46)
+                    .background(Color.white.opacity(0.28)).clipShape(RoundedRectangle(cornerRadius: 12))
+                countdownBody
+                Spacer(minLength: 6)
+                Image(systemName: daysLeft == nil ? "plus.circle.fill" : "pencil.circle.fill")
+                    .font(.system(size: 18, weight: .bold)).foregroundColor(inkColor.opacity(0.75))
+            }
+            .padding(15)
+            .frame(maxWidth: .infinity)
+            .background(Theme.gold)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+        }
+    }
+
+    @ViewBuilder private var countdownBody: some View {
+        if let n = daysLeft {
+            VStack(alignment: .leading, spacing: 2) {
+                if n > 0 {
+                    HStack(alignment: .firstTextBaseline, spacing: 5) {
+                        Text("試験まで").font(.system(size: 12, weight: .bold)).foregroundColor(inkColor.opacity(0.8))
+                        Text("あと\(n)日").font(.system(size: 22, weight: .heavy)).foregroundColor(inkColor)
+                    }
+                } else if n == 0 {
+                    Text("試験当日です").font(.system(size: 20, weight: .heavy)).foregroundColor(inkColor)
+                } else {
+                    Text("試験日は過ぎました").font(.system(size: 17, weight: .heavy)).foregroundColor(inkColor)
+                }
+                if let d = examDate {
+                    Text(examDateText(d)).font(.system(size: 11.5, weight: .semibold)).foregroundColor(inkColor.opacity(0.8))
+                }
+            }
+        } else {
+            VStack(alignment: .leading, spacing: 2) {
+                Text("試験日を設定").font(.system(size: 16, weight: .heavy)).foregroundColor(inkColor)
+                Text("残り日数をここに大きく表示します").font(.system(size: 11.5, weight: .semibold)).foregroundColor(inkColor.opacity(0.8))
+            }
+        }
     }
 
     // 進捗カード
@@ -121,26 +186,6 @@ struct HomeView: View {
                     Divider().overlay(Theme.line)
                     statRow("正答率", "\(store.accuracy)", "%", Theme.accent2)
                 }
-                Button {
-                    router.tab = 1
-                } label: {
-                    HStack(spacing: 13) {
-                        Image(systemName: "book.fill")
-                            .frame(width: 34, height: 34)
-                            .background(Color.white.opacity(0.22))
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                        VStack(alignment: .leading, spacing: 1) {
-                            Text("学習を始める").font(.system(size: 15, weight: .heavy))
-                            Text("確かな一歩、合格へ").font(.system(size: 11, weight: .bold)).opacity(0.75)
-                        }
-                        Spacer()
-                        Image(systemName: "chevron.right").font(.system(size: 15, weight: .bold))
-                    }
-                    .foregroundColor(Color(hex: 0x241703))
-                    .padding(15)
-                    .background(Theme.gold)
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
-                }
             }
         }
     }
@@ -162,7 +207,7 @@ struct HomeView: View {
             homeCard("character.book.closed.fill", "用語集", "全4章の重要用語") { router.tab = 3 }
             homeCard("doc.text.fill", "模擬試験", "本番形式で力試し") { router.tab = 2 }
             homeCard("chart.bar.xaxis", "分野別の到達度", "苦手が一目でわかる") { router.tab = 2 }
-            homeCard("arrow.counterclockwise", "弱点復習", "模試ごとに間違いを確認") { router.tab = 2 }
+            homeCard("heart.fill", "お気に入りの用語", "ハートを付けた用語を見直す") { showFavTerms = true }
             homeCard("bookmark.fill", "ブックマーク", "あとで見返す問題") { showBookmarks = true }
         }
     }
@@ -187,4 +232,53 @@ struct HomeView: View {
         }
     }
 
+}
+
+/// 試験日を設定するシート（日付ピッカー）。保存値は timeIntervalSince1970。
+private struct ExamDateSheet: View {
+    @Environment(\.dismiss) private var dismiss
+    @Binding var examEpoch: Double
+    @State private var date: Date
+
+    init(examEpoch: Binding<Double>) {
+        _examEpoch = examEpoch
+        let stored = examEpoch.wrappedValue
+        let d0 = stored > 0 ? Date(timeIntervalSince1970: stored) : Date()
+        _date = State(initialValue: max(d0, Date()))
+    }
+
+    var body: some View {
+        NavigationStack {
+            VStack(spacing: 18) {
+                DatePicker("試験日", selection: $date, in: Date()..., displayedComponents: .date)
+                    .datePickerStyle(.graphical)
+                    .tint(Theme.accent)
+                    .padding(.horizontal, 4)
+
+                Button {
+                    examEpoch = Calendar.current.startOfDay(for: date).timeIntervalSince1970
+                    dismiss()
+                } label: {
+                    Text("この日に設定").font(.system(size: 15, weight: .heavy))
+                        .frame(maxWidth: .infinity).padding(.vertical, 13)
+                        .foregroundColor(Color(hex: 0x241703)).background(Theme.gold)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+
+                if examEpoch > 0 {
+                    Button(role: .destructive) {
+                        examEpoch = 0; dismiss()
+                    } label: {
+                        Text("試験日の設定を消す").font(.system(size: 13.5, weight: .bold))
+                    }
+                }
+                Spacer()
+            }
+            .padding(16)
+            .background(Theme.bg.ignoresSafeArea())
+            .navigationTitle("試験日の設定")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar { ToolbarItem(placement: .topBarTrailing) { Button("閉じる") { dismiss() } } }
+        }
+    }
 }

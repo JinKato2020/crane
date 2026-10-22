@@ -9,10 +9,12 @@ final class ExamStore: ObservableObject {
     @Published private(set) var results: [ExamResult] = []
     @Published private(set) var bookmarks: Set<String> = []
     @Published private(set) var wrongs: [WrongRef] = []
+    @Published private(set) var favTerms: Set<String> = []   // お気に入り用語(TBTerm.id=用語名で保持)
 
     private let kResults = "cr_results"
     private let kBookmarks = "cr_bookmarks"
     private let kWrongs = "cr_wrongs"
+    private let kFavTerms = "cr_fav_terms"
 
     init() {
         loadExams()
@@ -69,6 +71,7 @@ final class ExamStore: ObservableObject {
         if let b = d.stringArray(forKey: kBookmarks) { bookmarks = Set(b) }
         if let w = d.data(forKey: kWrongs),
            let v = try? JSONDecoder().decode([WrongRef].self, from: w) { wrongs = v }
+        if let f = d.stringArray(forKey: kFavTerms) { favTerms = Set(f) }
     }
 
     private func save() {
@@ -76,6 +79,7 @@ final class ExamStore: ObservableObject {
         d.set(try? JSONEncoder().encode(results), forKey: kResults)
         d.set(Array(bookmarks), forKey: kBookmarks)
         d.set(try? JSONEncoder().encode(wrongs), forKey: kWrongs)
+        d.set(Array(favTerms), forKey: kFavTerms)
     }
 
     func exam(_ round: Int) -> Exam? { exams.first { $0.round == round } }
@@ -95,6 +99,25 @@ final class ExamStore: ObservableObject {
         save()
     }
     func isBookmarked(_ id: String) -> Bool { bookmarks.contains(id) }
+
+    // お気に入り用語（用語集のハート）
+    func toggleFavTerm(_ id: String) {
+        if favTerms.contains(id) { favTerms.remove(id) } else { favTerms.insert(id) }
+        save()
+    }
+    func isFavTerm(_ id: String) -> Bool { favTerms.contains(id) }
+
+    /// お気に入り登録された用語を、章の並び順で返す（同名用語は最初の1件）。
+    func favoriteTerms() -> [(chapter: TBChapter, term: TBTerm)] {
+        var seen: Set<String> = []
+        var out: [(chapter: TBChapter, term: TBTerm)] = []
+        for ch in textbook?.chapters ?? [] {
+            for t in ch.glossary ?? [] where favTerms.contains(t.id) && !seen.contains(t.id) {
+                seen.insert(t.id); out.append((chapter: ch, term: t))
+            }
+        }
+        return out
+    }
 
     func removeWrong(_ w: WrongRef) { wrongs.removeAll { $0 == w }; save() }
 

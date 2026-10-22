@@ -44,8 +44,19 @@ private struct GlossaryTermCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
-            Text(term.term).font(.system(size: 14, weight: .bold)).foregroundColor(Theme.accent2)
-                .fixedSize(horizontal: false, vertical: true)
+            HStack(alignment: .top, spacing: 8) {
+                Text(term.term).font(.system(size: 14, weight: .bold)).foregroundColor(Theme.accent2)
+                    .fixedSize(horizontal: false, vertical: true)
+                Spacer(minLength: 6)
+                Button { store.toggleFavTerm(term.id) } label: {
+                    Image(systemName: store.isFavTerm(term.id) ? "heart.fill" : "heart")
+                        .font(.system(size: 15))
+                        .foregroundColor(store.isFavTerm(term.id) ? Theme.accent2 : Theme.muted)
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(store.isFavTerm(term.id) ? "お気に入り解除" : "お気に入りに追加")
+            }
             Text(term.def).font(.system(size: 12.5)).foregroundColor(Theme.muted)
                 .lineSpacing(3).fixedSize(horizontal: false, vertical: true)
             if let name = term.img {
@@ -126,6 +137,8 @@ struct GlossaryContent: View {
     // 章を選ぶ一覧
     private var chapterList: some View {
         VStack(alignment: .leading, spacing: 14) {
+            NavigationLink { FavoriteTermsView() } label: { favEntryRow }
+                .buttonStyle(.plain)
             HStack {
                 Text("章を選ぶ").font(.system(size: 13, weight: .heavy)).foregroundColor(Theme.fg)
                 Spacer()
@@ -147,6 +160,28 @@ struct GlossaryContent: View {
                 }
             }
         }
+    }
+
+    // お気に入り用語への入口（章一覧の先頭に表示）
+    private var favEntryRow: some View {
+        HStack(spacing: 14) {
+            Image(systemName: "heart.fill").font(.system(size: 16, weight: .bold))
+                .foregroundColor(Theme.accent2)
+                .frame(width: 44, height: 44)
+                .background(Theme.accent2.opacity(0.12)).clipShape(RoundedRectangle(cornerRadius: 12))
+            VStack(alignment: .leading, spacing: 3) {
+                Text("お気に入りの用語").font(.system(size: 14.5, weight: .bold)).foregroundColor(Theme.fg)
+                Text("ハートを付けた用語をまとめて見直す").font(.system(size: 11.5)).foregroundColor(Theme.muted)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer(minLength: 6)
+            Text("\(store.favoriteTerms().count)語").font(.system(size: 12, weight: .bold)).foregroundColor(Theme.accent2)
+            Image(systemName: "chevron.right").font(.system(size: 13, weight: .bold)).foregroundColor(Theme.faint)
+        }
+        .padding(14)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 14))
+        .overlay(RoundedRectangle(cornerRadius: 14).stroke(Theme.line, lineWidth: 1))
     }
 
     private func chapterRow(_ ch: TBChapter) -> some View {
@@ -265,5 +300,66 @@ struct GlossaryChapterView: View {
         .background(Theme.bg.ignoresSafeArea())
         .navigationTitle("第\(chapter.id)章 用語")
         .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+/// お気に入り登録した用語の一覧（本体）。NavigationStackは持たない＝用語タブからはpush、ホームからはsheetで包む。
+struct FavoriteTermsView: View {
+    @EnvironmentObject var store: ExamStore
+
+    var body: some View {
+        let groups = groupByChapter(store.favoriteTerms())
+        return ScrollView {
+            VStack(alignment: .leading, spacing: 18) {
+                if groups.isEmpty {
+                    VStack(spacing: 12) {
+                        Image(systemName: "heart").font(.system(size: 40)).foregroundColor(Theme.faint)
+                        Text("お気に入りの用語はありません").font(.system(size: 14, weight: .bold)).foregroundColor(Theme.fg)
+                        Text("用語カードのハートを押すと、ここに集まります。")
+                            .font(.system(size: 12)).foregroundColor(Theme.muted).multilineTextAlignment(.center)
+                    }
+                    .frame(maxWidth: .infinity).padding(.vertical, 60)
+                } else {
+                    ForEach(groups, id: \.0.id) { ch, items in
+                        VStack(alignment: .leading, spacing: 11) {
+                            HStack(spacing: 9) {
+                                Text("第\(ch.id)章").font(.system(size: 11, weight: .bold)).foregroundColor(Color(hex: 0x241703))
+                                    .padding(.horizontal, 9).padding(.vertical, 4)
+                                    .background(Theme.gold).clipShape(Capsule())
+                                Text(ch.title).font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg).lineLimit(1)
+                                Spacer()
+                                Text("\(items.count)語").font(.system(size: 11)).foregroundColor(Theme.muted)
+                            }
+                            GlossaryTermList(items: items)
+                        }
+                    }
+                }
+            }
+            .padding(16)
+        }
+        .background(Theme.bg.ignoresSafeArea())
+        .navigationTitle("お気に入りの用語")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+
+    private func groupByChapter(_ items: [(chapter: TBChapter, term: TBTerm)]) -> [(TBChapter, [TBTerm])] {
+        var order: [Int] = []
+        var map: [Int: (TBChapter, [TBTerm])] = [:]
+        for it in items {
+            if map[it.chapter.id] == nil { map[it.chapter.id] = (it.chapter, []); order.append(it.chapter.id) }
+            map[it.chapter.id]?.1.append(it.term)
+        }
+        return order.compactMap { map[$0] }
+    }
+}
+
+/// ホームからお気に入り用語をsheetで開くためのラッパ（NavigationStack＋閉じる）。
+struct FavoriteTermsScreen: View {
+    @Environment(\.dismiss) private var dismiss
+    var body: some View {
+        NavigationStack {
+            FavoriteTermsView()
+                .toolbar { ToolbarItem(placement: .topBarTrailing) { Button("閉じる") { dismiss() } } }
+        }
     }
 }

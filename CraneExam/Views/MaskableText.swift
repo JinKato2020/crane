@@ -71,14 +71,15 @@ struct MaskableText: View {
 
     @State private var revealed: Set<Int> = []
 
-    private static let maskRed = Color(hex: 0xD83A2E)
+    // A案（毎回ちがう一部だけを隠す）用：本文ごとに固定のソルト
+    private var salt: Int { raw.hashValue }
 
     var body: some View {
         Text(attributed)
             .font(.system(size: size, weight: weight))
             .foregroundColor(color)
             .lineSpacing(lineSpacingV)
-            .tint(Self.maskRed)   // 隠し語=リンクなので tint を赤にして帯を赤一色に
+            .tint(Theme.maskFill)   // 隠し語=リンク。tint を隠し帯色に合わせて帯を一色に
             .fixedSize(horizontal: false, vertical: true)
             .frame(maxWidth: .infinity, alignment: .leading)
             .environment(\.openURL, OpenURLAction { url in
@@ -131,8 +132,8 @@ struct MaskableText: View {
                   let id = Int(host), let cat = candidates[id] else { continue }
             let range = run.range
             if isHiddenNow(id: id, cat: cat) {
-                out[range].foregroundColor = Self.maskRed
-                out[range].backgroundColor = Self.maskRed
+                out[range].foregroundColor = Theme.maskFill
+                out[range].backgroundColor = Theme.maskFill
             } else {
                 out[range].link = nil
                 out[range].foregroundColor = color
@@ -142,11 +143,23 @@ struct MaskableText: View {
         return out
     }
 
-    /// クイズが有効で、選んだカテゴリに属する語句をすべて出題する。
+    /// クイズが有効で、選んだカテゴリに属する語句のうち、その回に隠す分だけを出題する。
     private func isCandidate(id: Int, cat: String) -> Bool {
         guard quizMode else { return false }
         guard quizCategory == "all" || quizCategory == cat else { return false }
-        return true
+        // A案：毎回ちがう約6割だけを隠す（「もう一度」で別の組み合わせになる）
+        return shouldHide(id: id)
+    }
+
+    /// seed・id・本文ソルトから決まる擬似乱数で、その回に隠すかを決める（約60%）。
+    /// quizSeed は「もう一度」やトグルのたびに変わるので、回ごとに顔ぶれが変わる。
+    private func shouldHide(id: Int) -> Bool {
+        var h = UInt64(bitPattern: Int64((id &+ 1) &* 2654435761))
+        h ^= UInt64(bitPattern: Int64((quizSeed &+ 1) &* 40503))
+        h ^= UInt64(bitPattern: Int64(salt))
+        h = h &* 0x9E3779B97F4A7C15
+        h ^= (h >> 29)
+        return Int(h % 100) < 60
     }
 
     private func isHiddenNow(id: Int, cat: String) -> Bool {

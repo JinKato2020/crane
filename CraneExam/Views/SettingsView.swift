@@ -7,6 +7,15 @@ struct SettingsView: View {
     @AppStorage("cr_appearance") private var appearance: Int = 0   // 0:システム 1:ライト 2:ダーク
     @State private var showPaywall = false
 
+    // Info.plist(＝project.yml の MARKETING_VERSION / CURRENT_PROJECT_VERSION)から実行時に読む。
+    // これでビルドのたびに手で書き換える必要がなく、実バージョンと必ず一致する。
+    static var appVersionText: String {
+        let info = Bundle.main.infoDictionary
+        let version = info?["CFBundleShortVersionString"] as? String ?? "-"
+        let build = info?["CFBundleVersion"] as? String ?? "-"
+        return "\(version) (\(build))"
+    }
+
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -25,7 +34,7 @@ struct SettingsView: View {
                     infoRow("externaldrive.fill", "学習データ", "この端末に保存")
 
                     group("アプリについて")
-                    infoRow("info.circle.fill", "バージョン", "1.0.0 (内部配信)")
+                    infoRow("info.circle.fill", "バージョン", Self.appVersionText)
 
                     Text("BUILD A SAFER TOMORROW")
                         .font(.system(size: 10, weight: .bold)).tracking(1)

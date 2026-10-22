@@ -48,6 +48,9 @@ enum Theme {
     static let good    = dyn(0x3EC27A, 0x1E9E57)
     static let warn    = dyn(0xFF6A52, 0xDE432A)
 
+    /// 暗記クイズの隠し帯（外観に馴染む自然な色。原色赤は使わず、ゴールド基調に寄せる）
+    static let maskFill = dyn(0x5A4A2A, 0xE4D3A3)
+
     /// ブランドのゴールド(濃色文字をのせる前提なので明暗共通)
     static let gold = LinearGradient(
         colors: [Color(hex: 0xF6A425), Color(hex: 0xFFCB5B)],
