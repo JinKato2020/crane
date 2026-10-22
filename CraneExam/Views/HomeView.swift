@@ -5,6 +5,7 @@ struct HomeView: View {
     @EnvironmentObject var store: ExamStore
     @EnvironmentObject var router: Router
     @State private var showGuide = false
+    @State private var showRelationMap = false
     @State private var showBookmarks = false
     @State private var showFavTerms = false
     @AppStorage("cr_exam_date") private var examEpoch: Double = 0   // 試験日(0=未設定, timeIntervalSince1970)
@@ -26,6 +27,7 @@ struct HomeView: View {
         }
         .background(Theme.bg.ignoresSafeArea())   // 背景は最上端まで(白余白なし)。ヒーロー自体はステータスバー下に収め、クレーン上部まで見えるようにする
         .sheet(isPresented: $showGuide) { ExamGuideView() }
+        .sheet(isPresented: $showRelationMap) { ChapterRelationMapView().environmentObject(store) }
         .sheet(isPresented: $showBookmarks) { BookmarkView().environmentObject(store) }
         .sheet(isPresented: $showFavTerms) { FavoriteTermsScreen().environmentObject(store) }
         .sheet(isPresented: $showDateSheet) { ExamDateSheet(examEpoch: $examEpoch) }
@@ -224,7 +226,7 @@ struct HomeView: View {
             homeCard("book.fill", "教材で学ぶ", "全4章の解説・図表") { router.tab = 1 }
             homeCard("character.book.closed.fill", "用語集", "全4章の重要用語") { router.tab = 3 }
             homeCard("doc.text.fill", "模擬試験", "本番形式で力試し") { router.tab = 2 }
-            homeCard("chart.bar.xaxis", "分野別の到達度", "苦手が一目でわかる") { router.tab = 2 }
+            homeCard("point.3.connected.trianglepath.dotted", "相関図", "第1章のつながりをつかむ") { showRelationMap = true }
             homeCard("heart.fill", "お気に入りの用語", "ハートを付けた用語を見直す") { showFavTerms = true }
             homeCard("bookmark.fill", "ブックマーク", "あとで見返す問題") { showBookmarks = true }
         }
