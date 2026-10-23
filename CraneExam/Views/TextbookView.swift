@@ -230,60 +230,55 @@ struct SectionContentView: View {
 
     // 暗記クイズの操作バー
     private var quizBar: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 8) {
-                Image(systemName: "rectangle.on.rectangle.angled").font(.system(size: 13, weight: .bold)).foregroundColor(Theme.accent)
-                Text("暗記クイズ").font(.system(size: 14, weight: .heavy)).foregroundColor(Theme.fg)
+        VStack(alignment: .leading, spacing: 13) {
+            HStack(spacing: 11) {
+                Image(systemName: "rectangle.on.rectangle.angled")
+                    .font(.system(size: 15, weight: .bold)).foregroundColor(Theme.accent)
+                    .frame(width: 34, height: 34)
+                    .background(Theme.accent.opacity(0.14)).clipShape(RoundedRectangle(cornerRadius: 10))
+                VStack(alignment: .leading, spacing: 1) {
+                    Text("暗記クイズ").font(.system(size: 14.5, weight: .heavy)).foregroundColor(Theme.fg)
+                    Text("重要語句をかくして思い出す").font(.system(size: 11)).foregroundColor(Theme.faint)
+                }
                 Spacer()
                 Toggle("暗記クイズ", isOn: $quizOn).labelsHidden().tint(Theme.accent)
             }
             if quizOn {
+                Picker("", selection: $quizCat) {
+                    Text("すべて").tag("all")
+                    Text("用語").tag("key")
+                    Text("数値").tag("num")
+                }
+                .pickerStyle(.segmented)
+
                 HStack(spacing: 10) {
-                    Menu {
-                        Button("すべて") { quizCat = "all" }
-                        Button("数値") { quizCat = "num" }
-                        Button("用語") { quizCat = "key" }
-                    } label: {
-                        chipLabel("line.3.horizontal.decrease.circle", "対象：" + catLabel(quizCat))
+                    Button { answersVisible.toggle() } label: {
+                        HStack(spacing: 7) {
+                            Image(systemName: answersVisible ? "eye.slash.fill" : "eye.fill").font(.system(size: 13, weight: .bold))
+                            Text(answersVisible ? "答えを隠す" : "答えを表示").font(.system(size: 14.5, weight: .heavy))
+                        }
+                        .foregroundColor(Color(hex: 0x241703))
+                        .frame(maxWidth: .infinity, minHeight: 46)
+                        .background(Theme.gold).clipShape(RoundedRectangle(cornerRadius: 12))
                     }
+                    .buttonStyle(.plain)
                     Button { answersVisible = false; quizSeed += 1 } label: {
-                        chipLabel("arrow.counterclockwise", "もう一度")
+                        Image(systemName: "arrow.counterclockwise").font(.system(size: 15, weight: .bold))
+                            .foregroundColor(Theme.accent2)
+                            .frame(width: 46, height: 46)
+                            .background(Theme.raise).clipShape(RoundedRectangle(cornerRadius: 12))
+                            .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.line, lineWidth: 1))
                     }
-                    Spacer()
+                    .buttonStyle(.plain)
                 }
-                Button { answersVisible.toggle() } label: {
-                    Label(answersVisible ? "解答を隠す" : "解答を表示", systemImage: answersVisible ? "eye.slash" : "eye")
-                        .font(.system(size: 14, weight: .bold))
-                        .frame(maxWidth: .infinity).padding(.vertical, 10)
-                }
-                .buttonStyle(.borderedProminent).tint(Theme.accent)
-                Text("重要語句・数値を思い出してから解答を表示。赤い部分は個別にもタップできます。")
-                    .font(.system(size: 11.5)).foregroundColor(Theme.faint)
+                Text("かくれた部分をタップで1つずつ、または「答えを表示」でまとめて確認できます。")
+                    .font(.system(size: 11.5)).foregroundColor(Theme.faint).lineSpacing(3)
             }
         }
-        .padding(14)
+        .padding(15)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Theme.card2).clipShape(RoundedRectangle(cornerRadius: 12))
-        .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.line, lineWidth: 1))
-    }
-
-    private func chipLabel(_ icon: String, _ text: String) -> some View {
-        HStack(spacing: 5) {
-            Image(systemName: icon).font(.system(size: 12, weight: .bold))
-            Text(text).font(.system(size: 12.5, weight: .bold))
-        }
-        .foregroundColor(Theme.accent2)
-        .padding(.horizontal, 11).padding(.vertical, 7)
-        .background(Theme.accent2.opacity(0.12)).clipShape(Capsule())
-    }
-
-    private func catLabel(_ c: String) -> String {
-        switch c {
-        case "num": return "数値"
-        case "key": return "用語"
-        case "trap": return "ひっかけ"
-        default: return "すべて"
-        }
+        .background(Theme.card2).clipShape(RoundedRectangle(cornerRadius: 14))
+        .overlay(RoundedRectangle(cornerRadius: 14).stroke(Theme.line, lineWidth: 1))
     }
 }
 

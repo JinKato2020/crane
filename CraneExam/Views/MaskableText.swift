@@ -79,7 +79,7 @@ struct MaskableText: View {
             .font(.system(size: size, weight: weight))
             .foregroundColor(color)
             .lineSpacing(lineSpacingV)
-            .tint(Theme.maskFill)   // 隠し語=リンク。tint を隠し帯色に合わせて帯を一色に
+            .tint(Theme.accent)   // 隠し語=リンク。既定リンク色をアクセントに（各runで上書きするので保険）
             .fixedSize(horizontal: false, vertical: true)
             .frame(maxWidth: .infinity, alignment: .leading)
             .environment(\.openURL, OpenURLAction { url in
@@ -132,12 +132,15 @@ struct MaskableText: View {
                   let id = Int(host), let cat = candidates[id] else { continue }
             let range = run.range
             if isHiddenNow(id: id, cat: cat) {
-                out[range].foregroundColor = Theme.maskFill
-                out[range].backgroundColor = Theme.maskFill
+                // 隠し中＝空欄。文字を透明にし、淡いアクセントの下地だけ残す
+                // （黒塗りの“検閲バー”でなく「ここを思い出す空欄」に見えるように）。
+                out[range].foregroundColor = .clear
+                out[range].backgroundColor = Theme.accent.opacity(0.20)
             } else {
+                // 表示中＝その語句を淡くハイライトし「ここが出題部分だった」と分かる。
                 out[range].link = nil
                 out[range].foregroundColor = color
-                out[range].backgroundColor = Theme.accent2.opacity(0.22)
+                out[range].backgroundColor = Theme.accent2.opacity(0.18)
             }
         }
         return out
