@@ -191,9 +191,10 @@ final class ExamStore: ObservableObject {
         return ex.questions.filter { nos.contains($0.no) }
     }
 
-    func subjectAccuracy() -> [(name: String, pct: Int)] {
+    /// 分野別の正答率。asOf を渡すと「その日時までに受けた模試」だけで計算する（過去時点の実力＝成長比較用）。既定(nil)は全期間＝現在。
+    func subjectAccuracy(asOf date: Date? = nil) -> [(name: String, pct: Int)] {
         var agg: [String: [Int]] = [:]
-        for r in results {
+        for r in results where (date == nil || r.date <= date!) {
             for (s, v) in r.perSubject {
                 var cur = agg[s] ?? [0, 0]; cur[0] += v[0]; cur[1] += v[1]; agg[s] = cur
             }
