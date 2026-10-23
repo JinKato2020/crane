@@ -197,7 +197,7 @@ struct HomeView: View {
                 HStack(alignment: .bottom, spacing: 5) {
                     ForEach(Array(data.enumerated()), id: \.offset) { _, item in
                         RoundedRectangle(cornerRadius: 3)
-                            .fill(item.count > 0 ? Theme.gold : Theme.line)
+                            .fill(item.count > 0 ? AnyShapeStyle(Theme.gold) : AnyShapeStyle(Theme.line))
                             .frame(maxWidth: .infinity)
                             .frame(height: barHeight(item.count, maxC))
                     }
