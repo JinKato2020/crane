@@ -1,0 +1,935 @@
+[
+  {
+    "id": "F01",
+    "title": "クレーン・移動式クレーン・デリックの比較",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-1_supplement_f01_20261023",
+    "final_spec": "Three views: overhead bridge crane on elevated runway rails; mobile truck crane with outriggers; guy derrick with mast held by guys and pivoting boom at its base. Labels クレーン／移動式クレーン／デリック.",
+    "sha256": "25a8ed5050cb9be8cb515b215e1d6052cf962de0af927ee11d614d0c295b1994",
+    "locations": [
+      {
+        "section": "1-1",
+        "position": 9,
+        "caption": "同じ「つって運ぶ」機械でも、構造によって区分が違う。"
+      }
+    ]
+  },
+  {
+    "id": "F02",
+    "title": "スパン・揚程・揚程基準面",
+    "style": "シンプルな模式図",
+    "method": "native SVG coordinates",
+    "asset": "1-2_supplement_f02_20261023",
+    "final_spec": "正面図。走行レール中心間をスパン、同じつり具位置の上下移動範囲を揚程として座標で作図。",
+    "sha256": "8b5fc8b38c346b0954d8d0ac17bcc056b8fd13f84ce81cd1799296cee393ca1c",
+    "locations": [
+      {
+        "section": "1-2",
+        "position": 21,
+        "caption": "スパンは走行レールの中心間、揚程はつり具の上限から下限まで。同じ部分の位置を比べる。"
+      }
+    ]
+  },
+  {
+    "id": "F03",
+    "title": "クレーン形式による作業範囲の違い",
+    "style": "正確な2D",
+    "method": "native SVG coordinates",
+    "asset": "1-2_supplement_f03_20261023",
+    "final_spec": "Three true top-view plans: monorail telpher follows straight narrow path; overhead bridge crane covers rectangular area by two perpendicular motions; fixed jib crane covers circular/sector area around its pivot. Shade reachable area lightly; labels 直線／長方形／円・扇形.",
+    "sha256": "5a5e64dc8c596669cae20a7c235b827214453cd7f133e7b6ce7078bbf6dc876e",
+    "locations": [
+      {
+        "section": "1-2",
+        "position": 39,
+        "caption": "荷のつり位置が動ける範囲の模式図。固定ジブの実際の範囲は旋回制限・作業半径などで決まる。"
+      }
+    ]
+  },
+  {
+    "id": "F04",
+    "title": "普通形天井クレーンとレードルクレーン",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-4_supplement_f04_20261023",
+    "final_spec": "Two realistic overhead crane assemblies: 普通形天井クレーン with hoist trolley and one hook over industrial load; レードルクレーン with robust main lifting hooks holding a steel ladle and separate auxiliary hook used for tilting. Show main/aux function safely with no glowing liquid. Equal scale and position.",
+    "sha256": "8581d26ba6e1f30cb3d01933f0c75c598419e97a660aebbc6c94a4e52845c183",
+    "locations": [
+      {
+        "section": "1-4",
+        "position": 6,
+        "caption": "溶けた金属を運ぶクレーンは、高温の荷に対応する。"
+      }
+    ]
+  },
+  {
+    "id": "F05",
+    "title": "ジブクレーンの支持形式比較（高脚・低脚・ポスト・つち形・壁）",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-4_supplement_f05_20261023",
+    "final_spec": "Five compact realistic static jib crane supports labelled 高脚ジブクレーン／低脚ジブクレーン／ポスト形／つち形／壁クレーン. Distinguish portal high support with passage, low traveling foundation, fixed vertical post, hammerhead horizontal balanced jib on tower, and wall-bracket-supported slewing jib. No mobile truck chassis. Arrange 3 upper and 2 lower with whitespace.",
+    "sha256": "33207339b6980126cdc15109d872c20477bbe559c27a3ce4320b6731d7f1f33f",
+    "locations": [
+      {
+        "section": "1-4",
+        "position": 15,
+        "caption": "高脚・低脚・ポスト形・つち形・壁クレーン。ジブだけでなく、下から何が支えるかを見る。"
+      }
+    ]
+  },
+  {
+    "id": "F06",
+    "title": "マストクライミングとフロアクライミング",
+    "style": "シンプルな模式図",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-4_supplement_f06_20261023",
+    "final_spec": "マスト継足しは組立前後のみ。浮いた機体や支持を省略した組立途中は描かない。",
+    "sha256": "9da5a2c8dbb70103bee1c1aeb9c9d65adf1c5f77769aee2d9d9e6d4bdee5f112",
+    "locations": [
+      {
+        "section": "1-4",
+        "position": 11,
+        "caption": "マストを継ぎ足す方式と、建物の床を支えに上がる方式。違いを示す模式図で、組立・上昇手順は省略。"
+      }
+    ]
+  },
+  {
+    "id": "F07",
+    "title": "引込みクレーン4方式の機構比較",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-4_supplement_f07_20261023",
+    "final_spec": "Four accurate engineering 3D simplified cutaway mechanism comparison panels, labelled ダブルリンク／スイングレバー／ロープバランス／テンションロープ. Double link has two articulated booms creating near-horizontal hook path. Swing lever uses rear balancing lever. Rope-balance uses reeving to compensate boom movement. Tension-rope has support rope compensating boom tip. Only one pose per method plus understated motion arrows. Prioritize mechanically plausible link joints and rope paths; do not invent joint geometries.",
+    "sha256": "68ce835165f2aaf03406ad0231a2332639ef6fe57aa2228c631cdac7908fdbd0",
+    "locations": [
+      {
+        "section": "1-4",
+        "position": 34,
+        "caption": "ジブの形やロープの使い方を変え、荷の高さの変化を抑える。"
+      }
+    ]
+  },
+  {
+    "id": "F08",
+    "title": "スタッカークレーンの形式比較",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-4_supplement_f08_20261023",
+    "final_spec": "Three realistic stacker crane assemblies for rack storage, labelled 天井走行形／床上形／懸垂形. Show a vertical mast and vertically moving load carriage with forks; distinguish overhead bridge mounted mast, floor-rail traveling mast, and overhead-suspended carriage. Indicate 走行・昇降・フォーク only where unambiguous.",
+    "sha256": "1149e948a3e19d524ee991050718fd61128f47d3e9aa61f0695d90a252c1fbfc",
+    "locations": [
+      {
+        "section": "1-4",
+        "position": 31,
+        "caption": "走路と荷を出し入れする部分の位置を見分ける。"
+      }
+    ]
+  },
+  {
+    "id": "F09",
+    "title": "カンチレバー（張出し部）",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-5_supplement_f09_20261023",
+    "final_spec": "Realistic steel bridge/gantry crane frame with a girder extending beyond one support leg. Highlight only the overhanging end red, label カンチレバー（張出し部） with elbow callout. Mark 支持位置. Show that the overhang is outside support, do not highlight the central simply supported span.",
+    "sha256": "71a11cc28c4dfa5123836002ca75c8759103eb00d8516ab728cc503253ffd0db",
+    "locations": [
+      {
+        "section": "1-5",
+        "position": 14,
+        "caption": "脚の外まで張り出した桁の部分がカンチレバー。"
+      }
+    ]
+  },
+  {
+    "id": "F10",
+    "title": "サスペンション形とトップランニング形ホイスト",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-4_supplement_f10_20261023",
+    "final_spec": "右は上部レールに車輪を載せる。左は下フランジに懸垂する。",
+    "sha256": "57381a71d45846d5afebb954b2eb51d7f1a970e5d127b5cc858defe446a9d1bf",
+    "locations": [
+      {
+        "section": "1-4",
+        "position": 37,
+        "caption": "下からぶら下がるか、上のレールに乗るかが違う。"
+      }
+    ]
+  },
+  {
+    "id": "F11",
+    "title": "横行装置の駆動経路",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-6_supplement_f11_20261023",
+    "final_spec": "Realistic oblique view of a trolley chassis with electric motor, reduction gearbox, shaft and flanged driven wheels. Small blue arrows show motor shaft rotation transmitted to wheels. Elbow labels 電動機／減速機／車輪／横行レール. This is the trolley drive, not the overhead bridge travel drive and not hoisting drum.",
+    "sha256": "50112b39b2eb8571a00cd319de3f0f2e5634f7f8c9fcc4eef422c77d183f5290",
+    "locations": [
+      {
+        "section": "1-6",
+        "position": 14,
+        "caption": "モーターの回転が車輪へ伝わり、トロリが動く。"
+      }
+    ]
+  },
+  {
+    "id": "F12",
+    "title": "ジブの起伏装置",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-6_supplement_f12_20261023",
+    "final_spec": "起伏ロープはシーブ間を張った直線にする。宙に折れ点や大きなたるみを描かない。",
+    "sha256": "2bfc17d4bcedb8f4e9d1c0cff90736e6e2ee255181dd40511b3a68e7a8e3325e",
+    "locations": [
+      {
+        "section": "1-6",
+        "position": 16,
+        "caption": "起伏ロープを巻き取り・繰り出し、ジブの角度を変える。"
+      }
+    ]
+  },
+  {
+    "id": "F13",
+    "title": "普通より・ラングよりとSより・Zよりの4組合せ",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-7_supplement_f13_20261023",
+    "final_spec": "縦向きの実際のストランド傾斜をZ=/、S=\\として比較。普通・ラングの素線方向の組合せを区別。",
+    "sha256": "46d37d0971957e7ff05b933de0eb1a8186f21a5a1b6695bd6c7e9233fd009397",
+    "locations": [
+      {
+        "section": "1-7",
+        "position": 12,
+        "caption": "Zより・Sよりはロープのより方向。普通より・ラングよりは、素線とストランドのより方向の組合せで区別する。"
+      }
+    ]
+  },
+  {
+    "id": "F14",
+    "title": "フィラ線と素線・ストランド・1よりの数え方",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-7_supplement_f14_20261023",
+    "final_spec": "1本のストランドの1回転を赤で追い、同じ周方向位置へ戻る区間を1よりとして示す。",
+    "sha256": "407708cde45142a21fb37094363440f678ec159f83d52a624d62df58693f7d40",
+    "locations": [
+      {
+        "section": "1-7",
+        "position": 7,
+        "caption": "赤い細線がフィラ線。右の赤いストランドが1回転して、同じ側に戻るまでの長さが「1より」。断線率ではフィラ線を除く。"
+      },
+      {
+        "section": "2-5",
+        "position": 11,
+        "caption": "赤い細線がフィラ線。右の赤いストランドが1回転して、同じ側に戻るまでの長さが「1より」。断線率ではフィラ線を除く。"
+      }
+    ]
+  },
+  {
+    "id": "F15",
+    "title": "片フックと両フック",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-8_supplement_f15_20261023",
+    "final_spec": "フック先端を掛け位置とする誤った引出線を削除。形の比較だけにする。",
+    "sha256": "19f6015d5c3d3965b586b5c8c4073ffddaa27e2b806872eaa6e5572c24c55e72",
+    "locations": [
+      {
+        "section": "1-8",
+        "position": 22,
+        "caption": "片側に掛ける形と、左右の両側に掛ける形がある。"
+      }
+    ]
+  },
+  {
+    "id": "F16",
+    "title": "クロー（鋼材をつかむつり具）",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-8_supplement_f16_20261023",
+    "final_spec": "Realistic crane lifting claw クロー: two opposed curved steel arms pivot on a top lifting head, clasp a bundle of round steel bars symmetrically. Red accent on arm tips, steel/navy structure. Labels クロー／鋼材. It must not look like a vacuum pad, magnet or scoop bucket.",
+    "sha256": "578b8eeca93a1337253df051f714b8c81c42f2794f92c635797151885b6caca5",
+    "locations": [
+      {
+        "section": "1-8",
+        "position": 25,
+        "caption": "クローは、鋼材をつかんで持ち上げるつり具。"
+      }
+    ]
+  },
+  {
+    "id": "F17",
+    "title": "皿座金・ばねナットの形と働き",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-9_supplement_f17_20261023",
+    "final_spec": "Realistic engineering closeup comparison: conical disc washer 皿座金 shown side profile and bolted joint compressed slightly; thin double-layer spring nut ばねナット shown engaged on screw thread with its characteristic slightly offset resilient thin plates. Compare to gray silhouettes 平座金 and ダブルナット only as small reference; avoid mistaking a helical spring washer for a spring nut.",
+    "sha256": "72da30fac5c04faddf8aa99932e3f5a28950b1609fa0a0edbdb9268f2603999a",
+    "locations": [
+      {
+        "section": "1-9",
+        "position": 44,
+        "caption": "皿ばね座金は皿形のばね。ばねナットはナット側に緩み止めの作用を持たせたもの。座金とナットを区別する。"
+      }
+    ]
+  },
+  {
+    "id": "F18",
+    "title": "回転軸と固定軸",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-9_supplement_f18_20261023",
+    "final_spec": "固定軸の軸端を固定し、軸受を車輪のボス内部に配置する。",
+    "sha256": "71b4ba0070b72b449dfac7881bf8b0adf3b1a1ebac352291066e6168de2d2d5f",
+    "locations": [
+      {
+        "section": "1-9",
+        "position": 20,
+        "caption": "左は車輪と軸が一体で回り、支持部の軸受で支える例。右は軸を固定し、車輪の中心の軸受で回す例。"
+      }
+    ]
+  },
+  {
+    "id": "F19",
+    "title": "円すいころ軸受とプランマブロック",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-9_supplement_f19_20261023",
+    "final_spec": "単列円すいころ軸受のアキシアル荷重は片方向として表示。",
+    "sha256": "91773c1a635a82d60ca9b8fb9d8e9892bb9bbd25430726d58611898c5cc5340e",
+    "locations": [
+      {
+        "section": "1-9",
+        "position": 26,
+        "caption": "円すいころ軸受はラジアル荷重と片方向のアキシアル荷重を受ける例。プランマブロックは軸受を収める軸受箱。"
+      }
+    ]
+  },
+  {
+    "id": "F20",
+    "title": "ローラチェーン軸継手・歯車形軸継手",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-9_supplement_f20_20261023",
+    "final_spec": "左右の軸端を離し、外筒と歯付きボスのかみ合いでつながることを見せる。",
+    "sha256": "11dad58bf2109ca2bcb196e7da137ed6d223088e14d179aae2642061571758f8",
+    "locations": [
+      {
+        "section": "1-9",
+        "position": 52,
+        "caption": "チェーンや歯のかみ合いで、2本の軸へ回転を伝える。"
+      }
+    ]
+  },
+  {
+    "id": "F21",
+    "title": "回転部分の安全カバー",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-9_supplement_f21_20261023",
+    "final_spec": "Realistic small drive system with shaft coupling and meshing gears, a cutaway protective metal cover over moving parts, shown normal closed cover in main view and small separated cover ghost for identification. Labels 回転部分／安全カバー. No hands, no workers servicing live machinery.",
+    "sha256": "5f95d967a924620297d24f9b69c2692d1ac3911b5e71219d040865ff12735fcd",
+    "locations": [
+      {
+        "section": "1-9",
+        "position": 59,
+        "caption": "回転する歯車や軸継手などをガードで覆い、接触・巻き込まれを防ぐ。"
+      }
+    ]
+  },
+  {
+    "id": "F22",
+    "title": "D/dとロープの曲げ応力",
+    "style": "正確な2D",
+    "method": "native SVG coordinates",
+    "asset": "1-13_supplement_f22_20261023",
+    "final_spec": "Two accurately scaled side-view rope bends on drum: identical rope diameter d in both, smaller drum diameter D on left and larger D on right. Keep straight rope thickness same; show increased curvature on small drum without kinking. Labels D/dが小さい／D/dが大きい and 曲がりがきつい／曲がりがゆるい. No arbitrary numerical mandated ratios.",
+    "sha256": "fc18036d81c883ec30761666e1e926eca3d0a0aa6c19e971f7e68ec9fa9d6706",
+    "locations": [
+      {
+        "section": "1-13",
+        "position": 7,
+        "caption": "Dはロープの中心が通るピッチ円の直径、dはロープ径。同じdなら、Dが大きいほど曲がりが緩やか。"
+      }
+    ]
+  },
+  {
+    "id": "F23",
+    "title": "ロッド形を含む巻過防止の検出方式",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-10_supplement_f23_20261023",
+    "final_spec": "検出用重錘はフックの荷ではなく、巻上げロープが通る重錘と検出リンクとして表示。",
+    "sha256": "805623599de359273b0a675c69cd3876a4be25afedd094a9840cf1ae98a2475d",
+    "locations": [
+      {
+        "section": "1-10",
+        "position": 3,
+        "caption": "重錘形・ロッド形は、つり具の動きを直接検出する例。ねじ形はドラムの回転から位置を検出する例。連動部・停止回路の細部は省略。"
+      }
+    ]
+  },
+  {
+    "id": "F24",
+    "title": "走行端の車輪止めと緩衝装置",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-10_supplement_f24_20261023",
+    "final_spec": "Realistic runway end-stop system, wheel running atop rail with wheel stop in one view and rubber buffer on crane end frame against fixed bumper in adjacent view. Labels 走行車輪／車輪止め／緩衝装置. Add only schematic contact/stop arrows, do not invent dimensions or numeric height requirements.",
+    "sha256": "9ba600931f8f0b8da16a10efe184a5d6b46089af3b55a74f14643b236902cd82",
+    "locations": [
+      {
+        "section": "1-10",
+        "position": 18,
+        "caption": "車輪止めで走行を制限し、緩衝装置で衝撃を和らげる。"
+      }
+    ]
+  },
+  {
+    "id": "F25",
+    "title": "クレーン同士の衝突防止装置",
+    "style": "シンプルな模式図",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-10_supplement_f25_20261023",
+    "final_spec": "検出後は停止表示に統一。進行矢印と運転中表示を削除。",
+    "sha256": "5fb294194b5ad8d3142098d96d2ac8553df8365a51f3830a18db731915dd1d50",
+    "locations": [
+      {
+        "section": "1-10",
+        "position": 21,
+        "caption": "接近を検出して停止させ、クレーン同士の衝突を防ぐ。"
+      }
+    ]
+  },
+  {
+    "id": "F26",
+    "title": "レールクランプとアンカー",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-10_supplement_f26_20261023",
+    "final_spec": "黄色い背景構造を濃紺鋼材に変更し、背景の現場風景を削除。",
+    "sha256": "b0964abe8b079f2a7f601b1971f8c16ec6ebe5dae2cffac57c3740ad406693d5",
+    "locations": [
+      {
+        "section": "1-10",
+        "position": 25,
+        "caption": "レールを挟むか、地面側へ固定して、風による逸走を防ぐ。"
+      }
+    ]
+  },
+  {
+    "id": "F27",
+    "title": "フートスイッチ（安全床スイッチ）",
+    "style": "シンプルな模式図",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-10_supplement_f27_20261023",
+    "final_spec": "通路の床を踏むと主回路を遮断する安全床スイッチ。運転者の在席ペダルとして描かない。",
+    "sha256": "5e5cbf68b26529791b6787a136374fe58810888aa15246afb0c030ad02986600",
+    "locations": [
+      {
+        "section": "1-10",
+        "position": 30,
+        "caption": "通路に設ける安全床スイッチの例。床を踏むと主回路を遮断し、通行時の感電を防ぐ。"
+      }
+    ]
+  },
+  {
+    "id": "F28",
+    "title": "電磁ブレーキの通電時・無通電時",
+    "style": "シンプルな模式図",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-11_supplement_f28_20261023",
+    "final_spec": "Simple schematic comparison of spring-applied electromagnet-released drum brake. LEFT 通電：開放: energized coil pulls armature and linked brake shoes away from drum against spring force. RIGHT 無通電：制動: spring presses shoes against drum. Same geometry both views, coil blue and force arrows red; label 電磁石／ばね／シュー／ドラム. Make all link motions mechanically consistent.",
+    "sha256": "eb8c78bf8698a1cfedc0fe6c4253795d7f0e40ab6d346f7ce7be8f627818b6b5",
+    "locations": [
+      {
+        "section": "1-11",
+        "position": 8,
+        "caption": "ばねで制動し、通電した電磁石で開放する方式の模式図。部品の形による分類と、作動方式による分類を分ける。"
+      }
+    ]
+  },
+  {
+    "id": "F29",
+    "title": "電動油圧押上機ブレーキ",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-11_supplement_f29_20261023",
+    "final_spec": "Realistic 3D engineering diagram of electrohydraulic thruster drum brake. A small motor drives oil pump in cylinder; piston rod rises and lever opens external brake shoes against spring. Show cutaway thruster cylinder/piston separate from rotating brake drum, blue oil path arrows and red rod upward arrow. Labels 電動機／油圧押上機／リンク／ばね／シュー. Do not portray oil pressure applied to close brake in this mechanism.",
+    "sha256": "22d47acfae46f6ce131dba608906d2dfc34e3de5c7783d33e245b0843b1c5973",
+    "locations": [
+      {
+        "section": "1-11",
+        "position": 16,
+        "caption": "電動機で油圧を作り、押上機とリンクでブレーキを開放する代表的な方式。"
+      }
+    ]
+  },
+  {
+    "id": "F30",
+    "title": "バンドブレーキ",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-11_supplement_f30_20261023",
+    "final_spec": "Realistic 3D band brake assembly: rotating drum partly encircled externally by flexible steel band with friction lining, one band end fixed at anchor and other pulled by lever. Red highlight on band friction lining, labels ドラム／バンド／レバー／固定端. Curved drum arrow and one lever tension arrow. Distinguish continuous band from two separate shoes.",
+    "sha256": "ca6e073892d4d9a65f84b9f8bb57063b03a62d2ce700d3fc506508646348c4b5",
+    "locations": [
+      {
+        "section": "1-11",
+        "position": 14,
+        "caption": "ドラムのまわりの帯を締め、摩擦で回転を止める。"
+      }
+    ]
+  },
+  {
+    "id": "F31",
+    "title": "足踏み油圧式ディスクブレーキ",
+    "style": "シンプルな模式図",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-11_supplement_f31_20261023",
+    "final_spec": "Simple hydraulic brake force-path diagram: foot presses pedal linked to master cylinder piston; continuous oil-filled pipe to brake caliper slave pistons; pistons squeeze two pads against opposite sides of a brake disc. Labels ペダル／油圧シリンダ／配管／パッド／ディスク. Show red arrows of transmitted force, not oil squirting out, no hydraulic thruster release mechanism.",
+    "sha256": "c42fcbec8af105db496ee282663227c414374f2b5019a6cda6f115d49cef029d",
+    "locations": [
+      {
+        "section": "1-11",
+        "position": 19,
+        "caption": "足で加えた力を油圧で伝え、パッドで円板を挟んで制動する模式図。押上機ブレーキの開放動作とは区別する。"
+      }
+    ]
+  },
+  {
+    "id": "F32",
+    "title": "荷振れを抑える追いノッチの時系列",
+    "style": "シンプルな模式図",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-14_supplement_f32_20261023",
+    "final_spec": "発進時に荷が後ろに遅れ、進行方向へ戻る様子と、加速を合わせる考え方を示す。",
+    "sha256": "e89d1b2b0b06a5b80a4005a4736824a8e2fcdd16249cc4fd45a47e2ad635f062",
+    "locations": [
+      {
+        "section": "1-14",
+        "position": 27,
+        "caption": "発進時の追いノッチの考え方。荷が進行方向へ戻る動きに合わせて加速する。実際の操作は機種・制御方式に対応する手順による。"
+      }
+    ]
+  },
+  {
+    "id": "F33",
+    "title": "惰行とインチング",
+    "style": "シンプルな模式図",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "1-14_supplement_f33_20261023",
+    "final_spec": "Two paired simple trolley schematics: 惰行: after switch切, ghost trolley positions move a little to right before stopping; インチング: short repeated on/off input shown with small spaced timeline pulses and small motion increments towards marked target. Clear separation of electrical command vs physical motion. Labels 切っても少し進む／短い操作で位置を合わせる.",
+    "sha256": "329a97c1d6731b527dcac8f60e7baf625e7a86822d9bec246e73bf942287f3c2",
+    "locations": [
+      {
+        "section": "1-14",
+        "position": 29,
+        "caption": "切った後も少し進むため、短い操作で位置を合わせる。"
+      }
+    ]
+  },
+  {
+    "id": "F34",
+    "title": "シャックルの本体とピン",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "2-5_supplement_f34_20261023",
+    "final_spec": "Realistic 3D forged steel bow shackle with threaded screw pin. Main view assembled, small adjacent pin removed showing eye holes; labels 本体／ピン. A small safe connection vignette shows sling eyes seated on shackle body and pin through lifting lug, symmetric axial loading. No load rating markings or arbitrary brand.",
+    "sha256": "77e05eef5576df439bbc871216751891121408e256eb6740d251b5200db65816",
+    "locations": [
+      {
+        "section": "2-5",
+        "position": 19,
+        "caption": "シャックルは本体とピンで用具などをつなぐ。使用形態は製品の指定に従う。"
+      }
+    ]
+  },
+  {
+    "id": "F35",
+    "title": "キンクができる過程",
+    "style": "シンプルな模式図",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "2-5_supplement_f35_20261023",
+    "final_spec": "Three-step simple schematic of same wire rope: loose loop forms, ends are pulled while loop is not released, permanent kink remains. Labels 輪ができる／無理に引く／キンクが残る. Sequence left-to-right with arrows, no people. Keep rope one continuous line with twisted-rope texture only enough to identify.",
+    "sha256": "92d1916cce04a61966bb043d727188e4e6a32a085d76cc3f448b30999e15bd8b",
+    "locations": [
+      {
+        "section": "2-5",
+        "position": 22,
+        "caption": "できた輪を無理に引き締めると、元に戻らない形くずれ（キンク）が生じる。"
+      }
+    ]
+  },
+  {
+    "id": "F36",
+    "title": "直流電動機の内部構造",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "3-3_supplement_f36_20261023",
+    "final_spec": "Realistic cutaway DC electric motor showing fixed stator field poles 界磁, wound rotating armature 電機子 on shaft, segmented copper commutator 整流子 at one shaft end, two carbon brushes ブラシ touching commutator. Clean elbow callouts; red short rotation arrow. Do not depict slip rings as commutator or induction cage.",
+    "sha256": "9d8abdb5fb7ea33bddfafc3033b81e005573b0b4ab92e685490693eb8409f0ce",
+    "locations": [
+      {
+        "section": "3-3",
+        "position": 38,
+        "caption": "界磁が磁界を作り、電機子が回る。整流子とブラシが、回転する電機子へ電流を受け渡す。"
+      }
+    ]
+  },
+  {
+    "id": "F37",
+    "title": "ドラム形直接制御器",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "3-4_supplement_f37_20261023",
+    "final_spec": "Realistic simplified drum direct controller cutaway: handle turns insulated vertical cylinder fitted with conducting segment arcs; stationary spring fingers contact segments at various rotation positions, completing main circuit. Labels ハンドル／セグメント／固定フィンガー. Clear physical contacts, no sparks, no complicated circuit text.",
+    "sha256": "9aa71d5277e21865b7ad7a0f0ee07e2445636b609abf511f848e1ed807b4418f",
+    "locations": [
+      {
+        "section": "3-4",
+        "position": 7,
+        "caption": "ハンドルと一緒に接点部分が回り、主回路を切り替える。"
+      }
+    ]
+  },
+  {
+    "id": "F38",
+    "title": "カム形間接制御器",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "3-4_supplement_f38_20261023",
+    "final_spec": "Realistic cam indirect controller with handle turning insulated cam shaft, cam lobes operate small switch followers; a separate magnetic contactor shown beside it with a thin blue control-command arrow. Labels カム／スイッチ／電磁接触器. Keep low-current control path distinct from thick motor power leads, do not make cam itself bridge main-circuit contacts.",
+    "sha256": "87f943caac9fa60c95b0afc0e0d00afd75bad2cc41a302db4751bae7c9fa6ee0",
+    "locations": [
+      {
+        "section": "3-4",
+        "position": 12,
+        "caption": "カムでスイッチを動かし、接触器へ指令を送る。"
+      }
+    ]
+  },
+  {
+    "id": "F39",
+    "title": "操作ハンドルとノッチの配置",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "3-4_supplement_f39_20261023",
+    "final_spec": "クランクは水平回転、レバーは縦方向。ノッチの目盛例を別に示す。押ボタンをノッチと呼ばない。",
+    "sha256": "5fa61d27e9ef2c6207e6d9fd9f7e9abe42879777828a9388b62ce8af607529e7",
+    "locations": [
+      {
+        "section": "3-4",
+        "position": 23,
+        "caption": "クランクハンドルは水平に回し、レバーハンドルは縦に動かす。下の目盛はノッチの数え方の例で、0が停止位置。"
+      }
+    ]
+  },
+  {
+    "id": "F40",
+    "title": "二次抵抗制御の回路と抵抗の変化",
+    "style": "正確な2D",
+    "method": "native SVG coordinates",
+    "asset": "3-6_supplement_f40_20261023",
+    "final_spec": "A true electrical schematic of wound-rotor induction motor: stator supplied by three-phase R S T, rotor three terminals through slip rings to three external resistor legs. Each external resistor has a linked bypass switch, shown two states 抵抗を入れる／抵抗を小さくする. All three phases treated symmetrically, resistor symbols rectangles; no accidental short across mains.",
+    "sha256": "6d463bb0f87d19f489480294eedfdc2736016c8379a00d793f77a4928c344afc",
+    "locations": [
+      {
+        "section": "3-6",
+        "position": 17,
+        "caption": "巻線形の二次抵抗制御。回転子の巻線を3個のスリップリング経由で外部抵抗へつなぐ。接点は抵抗を迂回する道を作る。"
+      }
+    ]
+  },
+  {
+    "id": "F41",
+    "title": "露出トロリと絶縁トロリダクト",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "3-5_supplement_f41_20261023",
+    "final_spec": "導体・集電子・絶縁物の指示先を区別。相間や支持構造との絶縁を示す。",
+    "sha256": "506356d8282360dbec5461efbf0ace32a5889619e997b89b506ca3c2bfe23a4d",
+    "locations": [
+      {
+        "section": "3-5",
+        "position": 1,
+        "caption": "固定した導体に、動く集電子を接触させる。がいし・絶縁物で導体と支持構造を分離する。右はダクト内部を見せた切欠き図。"
+      }
+    ]
+  },
+  {
+    "id": "F42",
+    "title": "カーテン・ガーランド・特殊チェーン・ケーブルキャリヤ",
+    "style": "構造3D",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "3-5_supplement_f42_20261023",
+    "final_spec": "正式な4方式：カーテン式・ケーブル巻取式・特殊チェーン式・ケーブルキャリア式。ガーランドの重複例を除去。巻取式は外周から接線方向にケーブルが出る。キャリア式はケーブルホイールを備えた台車。",
+    "sha256": "8c01953c86f45e3881ada6686e03e8bd391983d52a990ff910ea6bf6e548f0ab",
+    "locations": [
+      {
+        "section": "3-5",
+        "position": 16,
+        "caption": "カーテン式・ケーブル巻取式・特殊チェーン式・ケーブルキャリア式。余るケーブルを支え、動く本体へ追従させる構造例。"
+      }
+    ]
+  },
+  {
+    "id": "F43",
+    "title": "三相電動機の正転・逆転結線",
+    "style": "正確な2D",
+    "method": "native SVG coordinates",
+    "asset": "3-6_supplement_f43_20261023",
+    "final_spec": "Two exact circuit connection sketches for induction motor terminals U V W and supply R S T. LEFT 正転 R→U S→V T→W. RIGHT 逆転 R→V S→U T→W. Use three distinguishable restrained colored wires and contact dots only at terminal ends, two crossing wires cross without electrical junction dot. Curved rotation arrows opposite. Labels 2本を入れ替える.",
+    "sha256": "d647bd21f4b92e97c5afed6210b962869739f0a6aa8c92af1f5bfbde6a071e77",
+    "locations": [
+      {
+        "section": "3-6",
+        "position": 4,
+        "caption": "三相のうち2本を入れ替えると、回転方向が変わる。"
+      }
+    ]
+  },
+  {
+    "id": "F44",
+    "title": "渦電流ブレーキ",
+    "style": "シンプルな模式図",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "3-6_supplement_f44_20261023",
+    "final_spec": "磁極を円板の上下面に置き、局所的に板厚方向へ磁界が通る構図。回転と逆向きの制動力。",
+    "sha256": "e2e1dc0c04e95ef1ab47dd97318ea7c6aae12fd0a193dd57684f00367f33de32",
+    "locations": [
+      {
+        "section": "3-6",
+        "position": 19,
+        "caption": "磁極の間を円板が動くと誘導電流が生じ、回転を妨げる力が働く。円板と磁極は接触しない。原理を示す模式図。"
+      }
+    ]
+  },
+  {
+    "id": "F45",
+    "title": "サイリスタレオナードとワードレオナード",
+    "style": "正確な2D",
+    "method": "native SVG coordinates",
+    "asset": "3-6_supplement_f45_20261023",
+    "final_spec": "Two exact block flow diagrams in two horizontal rows. サイリスタレオナード：交流電源 → サイリスタ装置（可変直流） → 直流電動機. ワードレオナード：交流電源 → 三相電動機 ━mechanical shaft━ 直流発電機 → 直流電動機. Distinguish electric connection arrows blue from mechanical shaft gray and a compact legend. No false AC directly connected to DC motor.",
+    "sha256": "23b9b45cd3b2b98d98f15d2e05f2518e43b19d5950cc72a9c43fa14f9dbc1797",
+    "locations": [
+      {
+        "section": "3-6",
+        "position": 27,
+        "caption": "直流電動機へ送る電圧を変える装置が違う。"
+      }
+    ]
+  },
+  {
+    "id": "F46",
+    "title": "ナイフスイッチとスパーク",
+    "style": "シンプルな模式図",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "3-7_supplement_f46_20261023",
+    "final_spec": "Simple side-view knife switch in two states closed and opening. Show insulated handgrip separated from contacts, small restrained spark/arc at separation between blade tip and fixed metal jaw only. Labels 接点／開くときの火花. No person touching live metal, no giant lightning or flames. Instruction is understanding phenomenon, not DIY live operation.",
+    "sha256": "9641668f166cad9bc14578fe03c94519df9cf55f199a0435681e9620b5a494a0",
+    "locations": [
+      {
+        "section": "3-7",
+        "position": 15,
+        "caption": "通電中に接点が離れると、そのすき間に火花が生じることがある。負荷電流の遮断は、本文の手順を確認する。"
+      }
+    ]
+  },
+  {
+    "id": "F47",
+    "title": "人体影響と通電電流・時間の関係",
+    "style": "正確な2D",
+    "method": "native SVG coordinates",
+    "asset": "3-7_supplement_f47_20261023",
+    "final_spec": "Do not invent medical safety thresholds. Create a qualitative scientific chart explaining two variables: horizontal 通電電流（小→大） and vertical 通電時間（短→長）, larger toward right and up. Continuous very pale gray/rose background increases at upper-right, no numeric scales, no IEC boundary curves or safe-zone boundary. Label right-up arrow 影響が大きくなりやすい. Footer explicitly「関係を示す模式図」; short main conclusion on both current and time. This interprets the relation from source, not reproducing the IEC graph.",
+    "sha256": "2d671d055815f37a295cde72ca57b7a439f77884062b494ea8d31eab3c10d792",
+    "locations": [
+      {
+        "section": "3-7",
+        "position": 24,
+        "caption": "電流の大きさと通電時間の関係を示す模式図。電流の経路・電源の種類などでも影響は変わる。"
+      }
+    ]
+  },
+  {
+    "id": "F48",
+    "title": "3つ以上の力の合成",
+    "style": "正確な2D",
+    "method": "native SVG coordinates",
+    "asset": "4-1_supplement_f48_20261023",
+    "final_spec": "Precise vector example: three blue displacement-equivalent force arrows drawn head-to-tail: right 4N, up 3N, left 2N. Red resultant connects initial origin to final point, which is right2/up3 from initial origin. An adjacent same vectors sharing origin illustrates original forces. Same scale, arrowhead at end; label 矢印を順につなぐ／最初と最後を結ぶ. Do not label magnitude as 5N; resultant magnitude is sqrt13 N if omitted better.",
+    "sha256": "9f72dce3b751f30c872bf32acfe3f107d565879f860c3069f9bf24507d2d954d",
+    "locations": [
+      {
+        "section": "4-1",
+        "position": 14,
+        "caption": "1点に働く3つの力の合成例。矢印を平行移動して順につなぎ、最初から最後へ結ぶ。"
+      }
+    ]
+  },
+  {
+    "id": "F49",
+    "title": "同一直線上の力の合成",
+    "style": "正確な2D",
+    "method": "native SVG coordinates",
+    "asset": "4-1_supplement_f49_20261023",
+    "final_spec": "Two exact collinear force comparisons. TOP same origin two rightward forces 3N and2N, resulting red right5N arrow displayed separately. BOTTOM right5N and left2N, red resultant right3N displayed separately. All force arrows same scale per N, parallel separated slightly not stacked ambiguously. Label 同方向は足す／反対方向は差.",
+    "sha256": "83ffb8d8e07600bf309a006bbba1319377aaae87f4ca538d82fc13ad88c00095",
+    "locations": [
+      {
+        "section": "4-1",
+        "position": 12,
+        "caption": "同じ縮尺の矢印で比較。同方向は3＋2＝5 N、反対方向は5−2＝3 N。"
+      }
+    ]
+  },
+  {
+    "id": "F50",
+    "title": "ジブクレーンの作業半径とモーメント",
+    "style": "シンプルな模式図",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "4-1_supplement_f50_20261023",
+    "final_spec": "Simple fixed post-jib crane side elevation comparison, one load shown at 2m radius then at4m radius, same 1kN downward force, same pivot/support. Show horizontal perpendicular moment arm from pivot vertical line to load force line, labels 2m／4m, 2kN・m／4kN・m. Do not use inclined boom length as arm. The pictured crane is schematic and no rated lifting capacity implication.",
+    "sha256": "fa0b7530a9bcc22818fbadb2763eb403207e4b5881ee7fb3f9faa4e6cdc8adc0",
+    "locations": [
+      {
+        "section": "4-1",
+        "position": 26,
+        "caption": "同じ1 kNでも、作業半径2 mでは2 kN・m、4 mでは4 kN・m。荷だけによるモーメントの比較例。"
+      }
+    ]
+  },
+  {
+    "id": "F51",
+    "title": "2か所からつって重心を求める",
+    "style": "シンプルな模式図",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "4-3_supplement_f51_20261023",
+    "final_spec": "別の穴からつったときの線を板上に記し、向きをそろえた2本の交点をGとして示す。",
+    "sha256": "0a235ce3eba25b9704397634872e574f0b5f7191727d00a681596f454cd26305",
+    "locations": [
+      {
+        "section": "4-3",
+        "position": 3,
+        "caption": "別々の位置からつり、各回の鉛直線を板に記す。板の向きをそろえて重ねた2本の線の交点が重心G。"
+      }
+    ]
+  },
+  {
+    "id": "F52",
+    "title": "つり点と重心の上下関係",
+    "style": "シンプルな模式図",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "4-3_supplement_f52_20261023",
+    "final_spec": "固定支点OがGの上・一致・下の3条件。つり糸で全例を上から下げる誤図を避ける。",
+    "sha256": "3f1def2f0919c7b275985480def172e4886fbd7a0f07340cd260fdfb16c4913d",
+    "locations": [
+      {
+        "section": "4-3",
+        "position": 10,
+        "caption": "棒を自由に回れる支点Oで支える例。Gは重心。OとGの位置によって、少し傾けた後の動きが変わる。"
+      }
+    ]
+  },
+  {
+    "id": "F53",
+    "title": "未掲載形状の重心",
+    "style": "正確な2D",
+    "method": "native SVG coordinates",
+    "asset": "4-3_supplement_f53_20261023",
+    "final_spec": "一様な四角形の重心は三角形分割と面積比で計算。一般の四角形では対角線の交点を重心にしない。",
+    "sha256": "17791db8d423c587726506f83b64b357ee06dadba827b2387a4fecfbbfef5d93",
+    "locations": [
+      {
+        "section": "4-3",
+        "position": 15,
+        "caption": "材質・厚さが一様な板、または密度が一様な中実の四角錐の場合。不規則な四角形では2つの三角形の面積と重心から求める。"
+      }
+    ]
+  },
+  {
+    "id": "F54",
+    "title": "低い重心・広い底面と安定",
+    "style": "シンプルな模式図",
+    "method": "built-in image_gen (generated and reviewed revisions)",
+    "asset": "4-3_supplement_f54_20261023",
+    "final_spec": "底面幅をそろえて重心高さを比較、重心高さをそろえて底面幅を比較。",
+    "sha256": "2d963cac1922ed7880e102ec9672c0be77c9550ed245488281354a97a55e4c3e",
+    "locations": [
+      {
+        "section": "4-3",
+        "position": 21,
+        "caption": "左は質量・底面幅を同じにして重心高さを比較。右は質量・重心高さを同じにして底面幅を比較した模式図。"
+      }
+    ]
+  },
+  {
+    "id": "F55",
+    "title": "軟鋼と明瞭な降伏点がない材料の曲線",
+    "style": "正確な2D",
+    "method": "native SVG coordinates",
+    "asset": "4-5_supplement_f55_20261023",
+    "final_spec": "Two schematic stress-strain graphs same orientation, axes 応力 andひずみ. Left 軟鋼 with elastic line, clear yield plateau, rising work hardening to maximum, falling to fracture. Right 降伏点が明瞭でない材料 smooth transition from elastic slope to nonlinear rise then maximum/fall. Label 降伏点 only on left, do NOT label smooth knee as precise yield point or add fictitious values.",
+    "sha256": "9beefcf072ebb412b1a7b7c118f986df64eab28aa29e4b7205095fd7169b4b3f",
+    "locations": [
+      {
+        "section": "4-5",
+        "position": 29,
+        "caption": "軟鋼と、明瞭な降伏がない材料の曲線の模式比較。軸の縮尺・数値は示していない。"
+      }
+    ]
+  },
+  {
+    "id": "F56",
+    "title": "円柱の質量から2本つりの張力を求める例題",
+    "style": "正確な2D",
+    "method": "native SVG coordinates",
+    "asset": "4-6_supplement_f56_20261023",
+    "final_spec": "Exact textbook example, simple outlined cylinder suspended by symmetric two-leg sling. Diameter1m, height4m, density2.3t/m³. Included angle at top between sling legs60°. Show below a compact 3-step chain: 体積3.14m³ → 質量7.222t → 1本の張力 約41.0kN. Use g9.8, tension coefficient1.16. Keep radius0.5m distinct from diameter1m; optional calculations few short equalities. Four correct arrows not required only two ropes.",
+    "sha256": "28ef45ba4ba7a0bcc4144242e89b929b9e594c4a74ecf6f47a282badfab5be0f",
+    "locations": [
+      {
+        "section": "4-6",
+        "position": 16,
+        "caption": "例題1。密度2.3 t/m³の円柱を、左右対称・均等分担でつる。直径を半分にして半径から体積を求める。"
+      }
+    ]
+  },
+  {
+    "id": "F57",
+    "title": "4本つりの張力・切断荷重を求める例題",
+    "style": "正確な2D",
+    "method": "native SVG coordinates",
+    "asset": "4-6_supplement_f57_20261023",
+    "final_spec": "Exact example: load36t suspended by four equal-length slings uniformly sharing load. Perspective schematic with four separate corner slings meeting single hook, plus a small true 2D opposite-leg cross section showing each leg45° from vertical and included90°. Formula below: 1本の張力＝(36÷4)×9.8×1.41＝124.362kN; 必要な切断荷重＝124.362×6≒746.2kN. Label 均等に分担／安全係数6. Never label arbitrary adjacent perspective angle90°.",
+    "sha256": "f76fbb6062f1c3a493de7b86dbda7e6428b9faef5706be68bf0f128f8e1273a5",
+    "locations": [
+      {
+        "section": "4-6",
+        "position": 26,
+        "caption": "例題2。図は向かい合う2本を含む断面。奥にも2本あり、合計4本で均等分担する条件。"
+      }
+    ]
+  },
+  {
+    "id": "F58",
+    "title": "6本・8本で支える組合せ滑車",
+    "style": "正確な2D",
+    "method": "native SVG coordinates",
+    "asset": "4-7_supplement_f58_20261023",
+    "final_spec": "Exact rope routing comparison: LEFT 3 lower moving sheaves and3 upper fixed sheaves, one continuous rope anchored upper, reeved alternating down around lower up around upper until6 vertical supporting segments. Pull end goes down from last upper and is NOT counted. RIGHT 4lower+4upper gives8 supporting segments. Number only load-supporting segments1..6 or1..8, lower pulleys on common moving block with load. Same rope tension, no loose ends inside block. Labels 6本で支える／8本で支える, arrows on supports upward. Diagram geometry precise, rope never branches or connects axle to unrelated rope.",
+    "sha256": "3dd2516f7ddd78c61ff556ac123add5d676d54bc527d26641aea113fd5cededf",
+    "locations": [
+      {
+        "section": "4-7",
+        "position": 16,
+        "caption": "下の滑車と荷を一つのまとまりとして、上へ支えるロープ部分を数える。右端の引く部分は支持本数に含めない。"
+      }
+    ]
+  }
+]
