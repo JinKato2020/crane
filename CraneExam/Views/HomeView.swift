@@ -17,7 +17,7 @@ struct HomeView: View {
                 hero
                 VStack(spacing: 13) {
                     countdownCard
-                    relationMapCard
+                    streakCard
                     guideCard
                     cardsGrid
                     motivationFooter
@@ -178,32 +178,46 @@ struct HomeView: View {
         .padding(.top, 16).padding(.bottom, 4)
     }
 
-    // 4章の全体像を、ホームから直接拡大して読めるカード。
-    private var relationMapCard: some View {
-        Card {
-            VStack(alignment: .leading, spacing: 14) {
+    // 学習の継続カード：直近14日の「解いた問題数」を棒で示し、連続学習日数を添える。
+    private var streakCard: some View {
+        let data = store.recentDaily(14)
+        let maxC = max(data.map { $0.count }.max() ?? 0, 1)
+        let streak = store.studyStreak
+        return Card {
+            VStack(alignment: .leading, spacing: 11) {
                 HStack {
-                    Label("相関図", systemImage: "point.3.connected.trianglepath.dotted")
+                    Label("学習の継続", systemImage: "flame.fill")
                         .font(.system(size: 15, weight: .bold))
                         .foregroundColor(Theme.fg)
                     Spacer()
-                    Text("タップで拡大")
-                        .font(.system(size: 12, weight: .semibold))
-                        .foregroundColor(Theme.muted)
+                    Text(streak > 0 ? "\(streak)日連続" : "今日から始めよう")
+                        .font(.system(size: 13, weight: .heavy))
+                        .foregroundColor(streak > 0 ? Theme.accent2 : Theme.muted)
                 }
-                LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 16) {
-                    ForEach(1...4, id: \.self) { number in
-                        VStack(alignment: .leading, spacing: 7) {
-                            Text("第\(number)章 · \(["クレーン", "関係法令", "電気・電動機", "力学"][number - 1])")
-                                .font(.system(size: 12, weight: .bold))
-                                .foregroundColor(Theme.fg)
-                                .fixedSize(horizontal: false, vertical: true)
-                            SVGFigureView(file: "chapter\(number)_relation_map.svg", caption: "第\(number)章の相関図", thumbMaxHeight: 180)
-                        }
+                HStack(alignment: .bottom, spacing: 5) {
+                    ForEach(Array(data.enumerated()), id: \.offset) { _, item in
+                        RoundedRectangle(cornerRadius: 3)
+                            .fill(item.count > 0 ? Theme.gold : Theme.line)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: barHeight(item.count, maxC))
                     }
                 }
+                .frame(height: 56, alignment: .bottom)
+                HStack {
+                    Text("14日前").font(.system(size: 10)).foregroundColor(Theme.faint)
+                    Spacer()
+                    Text("今日").font(.system(size: 10)).foregroundColor(Theme.faint)
+                }
+                Text("解いた問題数の推移。毎日つづけて、連続日数をのばそう。")
+                    .font(.system(size: 11)).foregroundColor(Theme.muted)
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }
+    }
+    private func barHeight(_ c: Int, _ maxC: Int) -> CGFloat {
+        let minH: CGFloat = 4, maxH: CGFloat = 52
+        guard c > 0 else { return minH }
+        return minH + (maxH - minH) * CGFloat(c) / CGFloat(maxC)
     }
 
     // 2x2 カード

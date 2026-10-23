@@ -2,7 +2,6 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var purchases: PurchaseStore
-    @AppStorage("cr_goal") private var goal: Int = 20
     @AppStorage("cr_notify") private var notify: Bool = true
     @AppStorage("cr_appearance") private var appearance: Int = 0   // 0:システム 1:ライト 2:ダーク
     @State private var showPaywall = false
@@ -24,7 +23,6 @@ struct SettingsView: View {
                     planSection
 
                     group("学習")
-                    Stepperish(title: "1日の目標問題数", value: $goal, range: 5...100, step: 5, unit: "問")
                     toggleRow("bell.fill", "学習リマインダー通知", "毎日 20:00", $notify)
 
                     group("表示")

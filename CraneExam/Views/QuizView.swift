@@ -215,6 +215,7 @@ struct QuizView: View {
             if sel == q.answer - 1 { correctCount += 1; ps[0] += 1 }
             else { wrongRefs.append(WrongRef(round: exam.round, no: q.no, subject: q.subject)) }
             perSubject[q.subject] = ps
+            store.recordAnswers(1)   // 学習の継続カード用に、今日の解答数を加算
         } else {
             if index == count - 1 { finish() }
             else { index += 1; selected = nil; answered = false }

@@ -15,12 +15,15 @@ final class ExamStore: ObservableObject {
     /// trueの間、ビューがApp Store評価依頼(requestReview)を出す。出したらfalseへ戻す(非永続)
     @Published var pendingReview = false
     private let reviewMilestones: Set<Int> = [1, 7]
+    /// 学習の継続カード用: 日別の解答数。キー="yyyy-MM-dd" → その日に解いた問題数
+    @Published private(set) var dailyAnswers: [String: Int] = [:]
 
     private let kResults = "cr_results"
     private let kBookmarks = "cr_bookmarks"
     private let kWrongs = "cr_wrongs"
     private let kFavTerms = "cr_fav_terms"
     private let kReviewAsked = "cr_review_asked"
+    private let kDaily = "cr_daily_answers"
 
     init() {
         loadExams()
@@ -79,6 +82,7 @@ final class ExamStore: ObservableObject {
            let v = try? JSONDecoder().decode([WrongRef].self, from: w) { wrongs = v }
         if let f = d.stringArray(forKey: kFavTerms) { favTerms = Set(f) }
         if let a = d.array(forKey: kReviewAsked) as? [Int] { reviewAsked = Set(a) }
+        if let m = d.dictionary(forKey: kDaily) as? [String: Int] { dailyAnswers = m }
     }
 
     private func save() {
@@ -88,6 +92,7 @@ final class ExamStore: ObservableObject {
         d.set(try? JSONEncoder().encode(wrongs), forKey: kWrongs)
         d.set(Array(favTerms), forKey: kFavTerms)
         d.set(Array(reviewAsked), forKey: kReviewAsked)
+        d.set(dailyAnswers, forKey: kDaily)
     }
 
     func exam(_ round: Int) -> Exam? { exams.first { $0.round == round } }
@@ -106,6 +111,41 @@ final class ExamStore: ObservableObject {
             pendingReview = true
         }
         save()
+    }
+
+    // MARK: - 学習の継続（日別の解答数）
+    private func dayKey(_ date: Date) -> String {
+        let f = DateFormatter()
+        f.calendar = Calendar(identifier: .gregorian)
+        f.locale = Locale(identifier: "en_US_POSIX")
+        f.dateFormat = "yyyy-MM-dd"
+        return f.string(from: date)
+    }
+    /// 今日の解答数に n を加算（模試で問題に答えるたびに呼ぶ）。
+    func recordAnswers(_ n: Int) {
+        guard n > 0 else { return }
+        dailyAnswers[dayKey(Date()), default: 0] += n
+        save()
+    }
+    /// 直近 days 日（今日を含む）の (日付, 解答数)。古い順。
+    func recentDaily(_ days: Int) -> [(date: Date, count: Int)] {
+        let cal = Calendar.current
+        let today = cal.startOfDay(for: Date())
+        return (0..<days).reversed().map { off in
+            let d = cal.date(byAdding: .day, value: -off, to: today) ?? today
+            return (date: d, count: dailyAnswers[dayKey(d)] ?? 0)
+        }
+    }
+    /// 今日からさかのぼって連続して学習した日数。
+    var studyStreak: Int {
+        let cal = Calendar.current
+        var day = cal.startOfDay(for: Date())
+        var streak = 0
+        while (dailyAnswers[dayKey(day)] ?? 0) > 0 {
+            streak += 1
+            day = cal.date(byAdding: .day, value: -1, to: day) ?? day
+        }
+        return streak
     }
 
     func toggleBookmark(_ id: String) {
