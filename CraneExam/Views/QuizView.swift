@@ -1,4 +1,5 @@
 import SwiftUI
+import StoreKit
 
 enum QuizMode { case full }
 
@@ -8,6 +9,7 @@ struct QuizView: View {
 
     @EnvironmentObject var store: ExamStore
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.requestReview) private var requestReview
 
     @State private var index = 0
     @State private var selected: Int? = nil     // 0始まり
@@ -37,6 +39,12 @@ struct QuizView: View {
         .navigationBarBackButtonHidden(true)
         .toolbar(.hidden, for: .tabBar)
         .onReceive(timer) { _ in if !finished { elapsed += 1 } }
+        .onChange(of: finished) { done in
+            // 模試を完了した直後、1回目/7回目ならApp Store評価を一度だけ依頼する
+            guard done, store.pendingReview else { return }
+            store.pendingReview = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) { requestReview() }
+        }
     }
 
     private var quiz: some View {

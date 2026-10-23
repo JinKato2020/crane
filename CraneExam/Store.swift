@@ -10,11 +10,17 @@ final class ExamStore: ObservableObject {
     @Published private(set) var bookmarks: Set<String> = []
     @Published private(set) var wrongs: [WrongRef] = []
     @Published private(set) var favTerms: Set<String> = []   // お気に入り用語(TBTerm.id=用語名で保持)
+    /// 評価依頼: 完了回数のうちマイルストーン(1回目/7回目)で一度だけ依頼済みにする
+    @Published private(set) var reviewAsked: Set<Int> = []
+    /// trueの間、ビューがApp Store評価依頼(requestReview)を出す。出したらfalseへ戻す(非永続)
+    @Published var pendingReview = false
+    private let reviewMilestones: Set<Int> = [1, 7]
 
     private let kResults = "cr_results"
     private let kBookmarks = "cr_bookmarks"
     private let kWrongs = "cr_wrongs"
     private let kFavTerms = "cr_fav_terms"
+    private let kReviewAsked = "cr_review_asked"
 
     init() {
         loadExams()
@@ -72,6 +78,7 @@ final class ExamStore: ObservableObject {
         if let w = d.data(forKey: kWrongs),
            let v = try? JSONDecoder().decode([WrongRef].self, from: w) { wrongs = v }
         if let f = d.stringArray(forKey: kFavTerms) { favTerms = Set(f) }
+        if let a = d.array(forKey: kReviewAsked) as? [Int] { reviewAsked = Set(a) }
     }
 
     private func save() {
@@ -80,6 +87,7 @@ final class ExamStore: ObservableObject {
         d.set(Array(bookmarks), forKey: kBookmarks)
         d.set(try? JSONEncoder().encode(wrongs), forKey: kWrongs)
         d.set(Array(favTerms), forKey: kFavTerms)
+        d.set(Array(reviewAsked), forKey: kReviewAsked)
     }
 
     func exam(_ round: Int) -> Exam? { exams.first { $0.round == round } }
@@ -91,6 +99,12 @@ final class ExamStore: ObservableObject {
     func saveResult(_ r: ExamResult, wrongRefs: [WrongRef]) {
         results.append(r)
         for w in wrongRefs where !wrongs.contains(w) { wrongs.append(w) }
+        // 完了回数が1回目/7回目に達し、まだ依頼していなければ評価依頼を予約(各一度だけ)
+        let count = results.count
+        if reviewMilestones.contains(count), !reviewAsked.contains(count) {
+            reviewAsked.insert(count)
+            pendingReview = true
+        }
         save()
     }
 
