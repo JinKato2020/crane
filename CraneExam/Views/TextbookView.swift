@@ -53,7 +53,14 @@ struct TextbookListView: View {
 
 /// 章を選んだ後の「節の選択画面」
 struct ChapterSectionsView: View {
-    let chapter: TBChapter
+    @EnvironmentObject private var store: ExamStore
+    private let initialChapter: TBChapter
+
+    init(chapter: TBChapter) { initialChapter = chapter }
+
+    private var chapter: TBChapter {
+        store.textbook?.chapters.first(where: { $0.id == initialChapter.id }) ?? initialChapter
+    }
 
     var body: some View {
         ScrollView {
@@ -116,11 +123,16 @@ struct ChapterSectionsView: View {
 
 /// 1節を表示し、左右スワイプで前後の節へ移動できるビュー
 struct SectionPagerView: View {
-    let chapter: TBChapter
+    @EnvironmentObject private var store: ExamStore
+    private let initialChapter: TBChapter
     @State private var index: Int
 
+    private var chapter: TBChapter {
+        store.textbook?.chapters.first(where: { $0.id == initialChapter.id }) ?? initialChapter
+    }
+
     init(chapter: TBChapter, start: Int) {
-        self.chapter = chapter
+        initialChapter = chapter
         _index = State(initialValue: start)
     }
 
@@ -158,6 +170,7 @@ struct SectionPagerView: View {
                     SectionContentView(section: sec,
                                        position: i + 1,
                                        total: chapter.sections.count)
+                        .id("\(sec.id)-\(store.contentRevision)")
                         .tag(i)
                 }
             }
@@ -167,6 +180,9 @@ struct SectionPagerView: View {
         .background(Theme.bg.ignoresSafeArea())
         .navigationTitle("第\(chapter.id)章")
         .navigationBarTitleDisplayMode(.inline)
+        .onChange(of: chapter.sections.count) { count in
+            index = min(index, max(0, count - 1))
+        }
     }
 }
 

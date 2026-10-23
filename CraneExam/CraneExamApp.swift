@@ -6,6 +6,7 @@ struct CraneExamApp: App {
     @StateObject private var store = ExamStore()
     @StateObject private var router = Router()
     @StateObject private var purchases = PurchaseStore()
+    @Environment(\.scenePhase) private var scenePhase
     // 0:システム 1:ライト 2:ダーク
     @AppStorage("cr_appearance") private var appearance: Int = 0
 
@@ -47,6 +48,11 @@ struct CraneExamApp: App {
                 .environmentObject(router)
                 .environmentObject(purchases)
                 .preferredColorScheme(scheme)
+                .onChange(of: scenePhase) { phase in
+                    if phase == .active {
+                        Task { await store.syncContent() }
+                    }
+                }
         }
     }
 }

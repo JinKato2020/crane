@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var purchases: PurchaseStore
+    @EnvironmentObject private var store: ExamStore
     @AppStorage("cr_notify") private var notify: Bool = true
     @AppStorage("cr_appearance") private var appearance: Int = 0   // 0:システム 1:ライト 2:ダーク
     @State private var showPaywall = false
@@ -29,6 +30,7 @@ struct SettingsView: View {
                     appearanceRow
 
                     group("データ")
+                    contentUpdateSection
                     infoRow("externaldrive.fill", "学習データ", "この端末に保存")
 
                     group("アプリについて")
@@ -54,6 +56,37 @@ struct SettingsView: View {
                 Text(purchases.message ?? "")
             }
         }
+    }
+
+    // 教材・画像の更新状況と手動更新
+    private var contentUpdateSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Button {
+                Task { await store.syncContent(manual: true) }
+            } label: {
+                HStack(spacing: 12) {
+                    iconBox("arrow.triangle.2.circlepath")
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("教材・画像を更新")
+                            .font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg)
+                        Text(store.contentSyncMessage)
+                            .font(.system(size: 11)).foregroundColor(Theme.muted)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    Spacer()
+                    if store.isSyncingContent { ProgressView() }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .disabled(store.isSyncingContent)
+            if store.isSyncingContent, store.contentSyncTotal > 0 {
+                ProgressView(value: Double(store.contentSyncCompleted), total: Double(store.contentSyncTotal))
+                    .tint(Theme.accent2)
+            }
+        }
+        .rowStyle()
     }
 
     // プラン(Pro購入/復元)セクション

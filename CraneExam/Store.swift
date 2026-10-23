@@ -4,6 +4,12 @@ import SwiftUI
 final class ExamStore: ObservableObject {
     @Published private(set) var exams: [Exam] = []
     @Published private(set) var textbook: Textbook? = nil
+    @Published private(set) var isSyncingContent = false
+    @Published private(set) var contentSyncMessage = "起動時に更新を確認します"
+    @Published private(set) var contentSyncCompleted = 0
+    @Published private(set) var contentSyncTotal = 0
+    @Published private(set) var contentRevision = 0
+    private var lastContentSyncAt: Date?
     /// 図アセット名 → ラベル/凡例/キャプション(教材imgブロックから集約)
     private(set) var figureInfo: [String: TBFigureInfo] = [:]
     @Published private(set) var results: [ExamResult] = []
@@ -32,13 +38,34 @@ final class ExamStore: ObservableObject {
         // OTA: 裏で棚(R2)の最新コンテンツを取り込み、更新があれば同じ起動中に反映する。
         // 通信断などで失敗しても内蔵データで動く(壊れない)。反映は次回起動 or ここでの再読込。
         Task { [weak self] in
-            let updated = await ContentOTA.sync()
-            if updated > 0 {
-                await MainActor.run {
-                    self?.loadExams()
-                    self?.loadTextbook()
-                }
-            }
+            await self?.syncContent()
+        }
+    }
+
+    @MainActor
+    func syncContent(manual: Bool = false) async {
+        guard !isSyncingContent else { return }
+        if !manual, let lastContentSyncAt, Date().timeIntervalSince(lastContentSyncAt) < 60 { return }
+        isSyncingContent = true
+        contentSyncCompleted = 0
+        contentSyncTotal = 0
+        contentSyncMessage = "更新を確認しています…"
+        defer { isSyncingContent = false }
+        let result = await ContentOTA.sync { [weak self] completed, total in
+            self?.contentSyncCompleted = completed
+            self?.contentSyncTotal = total
+            if total > 0 { self?.contentSyncMessage = "教材・画像を取得中 \(completed) / \(total)" }
+        }
+        if result.updated > 0 {
+            loadExams()
+            loadTextbook()
+            contentRevision += 1
+        }
+        if let message = result.message {
+            contentSyncMessage = message
+        } else {
+            lastContentSyncAt = Date()
+            contentSyncMessage = result.updated > 0 ? "教材・画像を更新しました" : "最新の教材・画像です"
         }
     }
 
