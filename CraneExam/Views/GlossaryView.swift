@@ -296,7 +296,6 @@ struct GlossaryChapterView: View {
     private var lockedIDs: Set<String> {
         purchases.isPro ? [] : Set(allItems.map { $0.id }).subtracting(store.freeGlossaryTermIDs)
     }
-    private var freeCount: Int { allItems.filter { store.freeGlossaryTermIDs.contains($0.id) }.count }
 
     private var allItems: [TBTerm] { chapter.glossary ?? [] }
     private var items: [TBTerm] {
@@ -320,9 +319,7 @@ struct GlossaryChapterView: View {
                 if !purchases.isPro && lockedIDs.count > 0 {
                     HStack(spacing: 8) {
                         Image(systemName: "lock.fill").font(.system(size: 12, weight: .bold)).foregroundColor(Theme.accent2)
-                        Text(freeCount > 0
-                             ? "無料プランでは用語集の先頭10語まで読めます。残りは Pro で解放。"
-                             : "この章の用語は Pro で解放されます（無料は第1章の先頭10語）。")
+                        Text("無料プランでは各章の先頭10語まで読めます。残りは Pro で解放。")
                             .font(.system(size: 11.5)).foregroundColor(Theme.accent2)
                             .fixedSize(horizontal: false, vertical: true)
                     }

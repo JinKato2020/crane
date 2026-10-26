@@ -188,10 +188,13 @@ final class ExamStore: ObservableObject {
     }
     func isFavTerm(_ id: String) -> Bool { favTerms.contains(id) }
 
-    /// 無料で読める用語IDの集合（＝用語集の先頭＝第1章の最初の10語）。Pro判定は呼び出し側で併用する。
+    /// 無料で読める用語IDの集合（＝各章それぞれの先頭10語）。Pro判定は呼び出し側で併用する。
     var freeGlossaryTermIDs: Set<String> {
-        let g = textbook?.chapters.first(where: { $0.id == 1 })?.glossary ?? []
-        return Set(g.prefix(10).map { $0.id })
+        var ids: Set<String> = []
+        for ch in textbook?.chapters ?? [] {
+            ids.formUnion((ch.glossary ?? []).prefix(10).map { $0.id })
+        }
+        return ids
     }
 
     /// お気に入り登録された用語を、章の並び順で返す（同名用語は最初の1件）。
