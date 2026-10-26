@@ -54,6 +54,9 @@ struct TextbookListView: View {
 /// 章を選んだ後の「節の選択画面」
 struct ChapterSectionsView: View {
     @EnvironmentObject private var store: ExamStore
+    @EnvironmentObject private var purchases: PurchaseStore
+    @State private var showPaywall = false
+    private let freeSections = 4   // 無料は各章の先頭4節まで
     private let initialChapter: TBChapter
 
     init(chapter: TBChapter) { initialChapter = chapter }
@@ -83,14 +86,28 @@ struct ChapterSectionsView: View {
                 .padding(.bottom, 1)
 
                 ForEach(Array(chapter.sections.enumerated()), id: \.element.id) { idx, sec in
-                    NavigationLink {
-                        SectionPagerView(chapter: chapter, start: idx)
-                    } label: {
-                        sectionRow(number: idx + 1, title: sec.title)
+                    let locked = idx >= freeSections && !purchases.isPro
+                    if locked {
+                        Button { showPaywall = true } label: {
+                            sectionRow(number: idx + 1, title: sec.title, locked: true)
+                        }
+                        .buttonStyle(.plain)
+                    } else {
+                        NavigationLink {
+                            SectionPagerView(chapter: chapter, start: idx)
+                        } label: {
+                            sectionRow(number: idx + 1, title: sec.title, locked: false)
+                        }
+                        .buttonStyle(.plain)
                     }
-                    .buttonStyle(.plain)
                 }
 
+                if !purchases.isPro && chapter.sections.count > freeSections {
+                    Text("無料プランでは各章の先頭\(freeSections)節まで読めます。\(freeSections + 1)節目以降は Pro で解放されます。")
+                        .font(.system(size: 11.5)).foregroundColor(Theme.accent2)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(.horizontal, 2).padding(.top, 2)
+                }
                 Text("節を開くと、左右スワイプで前後の節へ移動できます。")
                     .font(.system(size: 11.5)).foregroundColor(Theme.faint)
                     .padding(.horizontal, 2).padding(.top, 2)
@@ -98,37 +115,52 @@ struct ChapterSectionsView: View {
             .padding(16)
         }
         .background(Theme.bg.ignoresSafeArea())
+        .sheet(isPresented: $showPaywall) { PaywallView() }
         .navigationTitle("第\(chapter.id)章")
         .navigationBarTitleDisplayMode(.inline)
     }
 
-    private func sectionRow(number: Int, title: String) -> some View {
+    private func sectionRow(number: Int, title: String, locked: Bool = false) -> some View {
         HStack(spacing: 13) {
             Text("\(number)")
                 .font(.system(size: 17, weight: .bold, design: .rounded)).foregroundColor(Theme.accent2)
                 .frame(width: 40, height: 40)
                 .background(Theme.raise).clipShape(RoundedRectangle(cornerRadius: 11))
                 .overlay(RoundedRectangle(cornerRadius: 11).stroke(Theme.line, lineWidth: 1))
-            Text(title).font(.system(size: 14, weight: .bold)).foregroundColor(Theme.fg)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            Image(systemName: "chevron.right").font(.system(size: 13, weight: .bold)).foregroundColor(Theme.faint)
+            VStack(alignment: .leading, spacing: 3) {
+                Text(title).font(.system(size: 14, weight: .bold)).foregroundColor(Theme.fg)
+                    .fixedSize(horizontal: false, vertical: true)
+                if locked {
+                    Text("PRO で解放").font(.system(size: 10.5, weight: .heavy)).foregroundColor(Theme.accent2)
+                }
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            Image(systemName: locked ? "lock.fill" : "chevron.right")
+                .font(.system(size: 13, weight: .bold)).foregroundColor(locked ? Theme.accent2 : Theme.faint)
         }
         .padding(12)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 12))
-        .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.line, lineWidth: 1))
+        .overlay(RoundedRectangle(cornerRadius: 12).stroke(locked ? Theme.accent2.opacity(0.3) : Theme.line, lineWidth: 1))
     }
 }
 
 /// 1節を表示し、左右スワイプで前後の節へ移動できるビュー
 struct SectionPagerView: View {
     @EnvironmentObject private var store: ExamStore
+    @EnvironmentObject private var purchases: PurchaseStore
+    private let freeSections = 4   // 無料は各章の先頭4節まで
     private let initialChapter: TBChapter
     @State private var index: Int
 
     private var chapter: TBChapter {
         store.textbook?.chapters.first(where: { $0.id == initialChapter.id }) ?? initialChapter
+    }
+
+    /// 実際にページ送りできる節（無料は先頭4節まで）。
+    private var secs: [TBSection] {
+        let all = chapter.sections
+        return purchases.isPro ? all : Array(all.prefix(freeSections))
     }
 
     init(chapter: TBChapter, start: Int) {
@@ -148,17 +180,17 @@ struct SectionPagerView: View {
                 .disabled(index == 0).foregroundColor(index == 0 ? Theme.faint : Theme.accent2)
 
                 Spacer()
-                Text("\(index + 1) / \(chapter.sections.count) 節")
+                Text("\(index + 1) / \(secs.count) 節")
                     .font(.system(size: 12, weight: .bold)).foregroundColor(Theme.muted)
                 Spacer()
 
                 Button {
-                    if index < chapter.sections.count - 1 { withAnimation { index += 1 } }
+                    if index < secs.count - 1 { withAnimation { index += 1 } }
                 } label: {
                     Image(systemName: "chevron.right").font(.system(size: 14, weight: .bold))
                 }
-                .disabled(index == chapter.sections.count - 1)
-                .foregroundColor(index == chapter.sections.count - 1 ? Theme.faint : Theme.accent2)
+                .disabled(index == secs.count - 1)
+                .foregroundColor(index == secs.count - 1 ? Theme.faint : Theme.accent2)
             }
             .padding(.horizontal, 16).padding(.vertical, 9)
             .background(Theme.raise)
@@ -166,10 +198,10 @@ struct SectionPagerView: View {
 
             // 節本文(ページ=スワイプ移動)
             TabView(selection: $index) {
-                ForEach(Array(chapter.sections.enumerated()), id: \.offset) { i, sec in
+                ForEach(Array(secs.enumerated()), id: \.offset) { i, sec in
                     SectionContentView(section: sec,
                                        position: i + 1,
-                                       total: chapter.sections.count)
+                                       total: secs.count)
                         .id("\(sec.id)-\(store.contentRevision)")
                         .tag(i)
                 }
@@ -180,7 +212,7 @@ struct SectionPagerView: View {
         .background(Theme.bg.ignoresSafeArea())
         .navigationTitle("第\(chapter.id)章")
         .navigationBarTitleDisplayMode(.inline)
-        .onChange(of: chapter.sections.count) { count in
+        .onChange(of: secs.count) { count in
             index = min(index, max(0, count - 1))
         }
     }

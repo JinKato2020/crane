@@ -6,8 +6,10 @@ struct PaywallView: View {
     @Environment(\.dismiss) private var dismiss
 
     private let benefits = [
-        "模擬試験 全8回(320問)がすべて解放",
-        "本番形式・全問オリジナルの作り込み問題",
+        "模擬試験 全12回(480問)がすべて解放",
+        "教材 全4章のすべての節を制限なく閲覧",
+        "用語集 全4章のすべての用語を閲覧",
+        "相関図 第1〜4章をすべて閲覧",
         "何度でも挑戦でき、成績・弱点も記録",
         "一度の購入でずっと使える(買い切り・定期課金なし)"
     ]
@@ -27,7 +29,7 @@ struct PaywallView: View {
                     .font(.system(size: 46)).foregroundColor(Theme.accent2)
                 Text("クレーン Pro")
                     .font(.system(size: 26, weight: .heavy)).foregroundColor(Theme.fg)
-                Text("すべての模擬試験を解放して、本番に備えましょう。")
+                Text("教材・模試・用語・相関図をすべて解放して、本番に備えましょう。")
                     .font(.system(size: 14)).foregroundColor(Theme.muted)
                     .multilineTextAlignment(.center)
 

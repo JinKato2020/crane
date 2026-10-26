@@ -41,8 +41,38 @@ private struct GlossaryTermCard: View {
     @EnvironmentObject var store: ExamStore
     let term: TBTerm
     let striped: Bool
+    var locked: Bool = false
+    var onLockedTap: (() -> Void)? = nil
 
     var body: some View {
+        if locked {
+            Button { onLockedTap?() } label: { lockedBody }
+                .buttonStyle(.plain)
+        } else {
+            normalBody
+        }
+    }
+
+    // ロック時：用語名だけ見せ、定義・図は隠してProへ誘導する。
+    private var lockedBody: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "lock.fill").font(.system(size: 14)).foregroundColor(Theme.accent2)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(term.term).font(.system(size: 14, weight: .bold)).foregroundColor(Theme.fg)
+                    .fixedSize(horizontal: false, vertical: true)
+                Text("この用語は Pro で解放").font(.system(size: 11.5)).foregroundColor(Theme.muted)
+            }
+            Spacer(minLength: 6)
+            Text("PRO").font(.system(size: 10, weight: .heavy)).foregroundColor(Theme.accent2)
+                .padding(.horizontal, 7).padding(.vertical, 3)
+                .background(Theme.accent2.opacity(0.14)).clipShape(Capsule())
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal, 15).padding(.vertical, 13)
+        .background(striped ? Theme.card2 : Theme.card)
+    }
+
+    private var normalBody: some View {
         VStack(alignment: .leading, spacing: 5) {
             HStack(alignment: .top, spacing: 8) {
                 Text(term.term).font(.system(size: 14, weight: .bold)).foregroundColor(Theme.accent2)
@@ -79,10 +109,13 @@ private struct GlossaryTermCard: View {
 /// 複数用語をひとまとめのカードにする
 private struct GlossaryTermList: View {
     let items: [TBTerm]
+    var lockedIDs: Set<String> = []
+    var onLockedTap: (() -> Void)? = nil
     var body: some View {
         VStack(spacing: 0) {
             ForEach(Array(items.enumerated()), id: \.offset) { i, t in
-                GlossaryTermCard(term: t, striped: i % 2 == 1)
+                GlossaryTermCard(term: t, striped: i % 2 == 1,
+                                 locked: lockedIDs.contains(t.id), onLockedTap: onLockedTap)
             }
         }
         .clipShape(RoundedRectangle(cornerRadius: 13))
@@ -94,7 +127,14 @@ private struct GlossaryTermList: View {
 /// 検索していないときは「章を選ぶ」一覧 → 章ごとの用語へ。検索中は全章横断のフラット結果。
 struct GlossaryContent: View {
     @EnvironmentObject var store: ExamStore
+    @EnvironmentObject var purchases: PurchaseStore
     @State private var query: String = ""
+    @State private var showPaywall = false
+
+    /// 表示中の用語のうちロックすべきID（無料は先頭10語以外）。
+    private func locked(_ items: [TBTerm]) -> Set<String> {
+        purchases.isPro ? [] : Set(items.map { $0.id }).subtracting(store.freeGlossaryTermIDs)
+    }
 
     private var chapters: [TBChapter] { store.textbook?.chapters ?? [] }
 
@@ -132,6 +172,7 @@ struct GlossaryContent: View {
                 chapterList
             }
         }
+        .sheet(isPresented: $showPaywall) { PaywallView() }
     }
 
     // 章を選ぶ一覧
@@ -227,7 +268,7 @@ struct GlossaryContent: View {
                             Spacer()
                             Text("\(items.count)語").font(.system(size: 11)).foregroundColor(Theme.muted)
                         }
-                        GlossaryTermList(items: items)
+                        GlossaryTermList(items: items, lockedIDs: locked(items), onLockedTap: { showPaywall = true })
                     }
                 }
             }
@@ -246,8 +287,16 @@ struct GlossaryContent: View {
 
 /// 章を選んだ後の「その章の用語一覧」
 struct GlossaryChapterView: View {
+    @EnvironmentObject private var store: ExamStore
+    @EnvironmentObject private var purchases: PurchaseStore
     let chapter: TBChapter
     @State private var query: String = ""
+    @State private var showPaywall = false
+
+    private var lockedIDs: Set<String> {
+        purchases.isPro ? [] : Set(allItems.map { $0.id }).subtracting(store.freeGlossaryTermIDs)
+    }
+    private var freeCount: Int { allItems.filter { store.freeGlossaryTermIDs.contains($0.id) }.count }
 
     private var allItems: [TBTerm] { chapter.glossary ?? [] }
     private var items: [TBTerm] {
@@ -267,6 +316,20 @@ struct GlossaryChapterView: View {
                     Text("用語 全\(allItems.count)語").font(.system(size: 12)).foregroundColor(Theme.muted)
                 }
                 .padding(.top, 4).padding(.bottom, 2)
+
+                if !purchases.isPro && lockedIDs.count > 0 {
+                    HStack(spacing: 8) {
+                        Image(systemName: "lock.fill").font(.system(size: 12, weight: .bold)).foregroundColor(Theme.accent2)
+                        Text(freeCount > 0
+                             ? "無料プランでは用語集の先頭10語まで読めます。残りは Pro で解放。"
+                             : "この章の用語は Pro で解放されます（無料は第1章の先頭10語）。")
+                            .font(.system(size: 11.5)).foregroundColor(Theme.accent2)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(11)
+                    .background(Theme.accent2.opacity(0.10)).clipShape(RoundedRectangle(cornerRadius: 10))
+                }
 
                 // この章の中で検索
                 HStack(spacing: 10) {
@@ -292,12 +355,13 @@ struct GlossaryChapterView: View {
                     }
                     .frame(maxWidth: .infinity).padding(.vertical, 48)
                 } else {
-                    GlossaryTermList(items: items)
+                    GlossaryTermList(items: items, lockedIDs: lockedIDs, onLockedTap: { showPaywall = true })
                 }
             }
             .padding(16)
         }
         .background(Theme.bg.ignoresSafeArea())
+        .sheet(isPresented: $showPaywall) { PaywallView() }
         .navigationTitle("第\(chapter.id)章 用語")
         .navigationBarTitleDisplayMode(.inline)
     }

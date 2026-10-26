@@ -3,6 +3,7 @@ import SwiftUI
 struct HomeView: View {
     @Environment(\.colorScheme) private var colorScheme
     @EnvironmentObject var store: ExamStore
+    @EnvironmentObject var purchases: PurchaseStore
     @EnvironmentObject var router: Router
     @State private var showGuide = false
     @State private var showRelationMap = false
@@ -28,7 +29,7 @@ struct HomeView: View {
         }
         .background(Theme.bg.ignoresSafeArea())   // 背景は最上端まで(白余白なし)。ヒーロー自体はステータスバー下に収め、クレーン上部まで見えるようにする
         .sheet(isPresented: $showGuide) { ExamGuideView() }
-        .sheet(isPresented: $showRelationMap) { ChapterRelationMapView().environmentObject(store) }
+        .sheet(isPresented: $showRelationMap) { ChapterRelationMapView().environmentObject(store).environmentObject(purchases) }
         .sheet(isPresented: $showBookmarks) { BookmarkView().environmentObject(store) }
         .sheet(isPresented: $showFavTerms) { FavoriteTermsScreen().environmentObject(store) }
         .sheet(isPresented: $showDateSheet) { ExamDateSheet(examEpoch: $examEpoch) }

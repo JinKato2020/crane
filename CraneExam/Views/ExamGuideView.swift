@@ -16,6 +16,7 @@ struct ExamGuideView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 22) {
                     header
+                    briefingImage
                     overviewCard
                     scoringCard
                     passCard
@@ -36,6 +37,19 @@ struct ExamGuideView: View {
                 }
             }
         }
+    }
+
+    // 総合解説の冒頭バナー（作業前ミーティングの様子）。学習の導入としてヘッダー直後に置く。
+    private var briefingImage: some View {
+        Image("WorkshopBriefing")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(maxWidth: .infinity)
+            .frame(height: 172)
+            .clipped()
+            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).stroke(Theme.line, lineWidth: 1))
+            .accessibilityLabel("作業開始前のミーティングの様子")
     }
 
     private var header: some View {
