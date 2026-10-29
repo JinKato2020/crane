@@ -20,16 +20,27 @@ struct Question: Codable, Identifiable {
     let figImg: String?      // 回答前の図アセット名（条件図）
     let figImgExp: String?   // 回答後の図アセット名（解説図）
     let ref: TextRef?        // 関連する教材へのピンポイント直リンク（任意）
+    let refs: [TextRef]?     // 複数の根拠を参照。refは旧データ・旧アプリ用に維持
+    var textbookReferences: [TextRef] {
+        let candidates: [TextRef]
+        if let refs, !refs.isEmpty { candidates = refs }
+        else if let ref { candidates = [ref] }
+        else { candidates = [] }
+        var seen = Set<String>()
+        return candidates.filter { seen.insert($0.id).inserted }
+    }
     var id: Int { no }
 }
 
 /// 問題の解説から教材へ直リンクするための参照。
 /// section = 節ID（例 "4-1"）、anchor = その節内の小見出し等のキーワード（例 "モーメント"）。
 /// anchor があれば、その位置まで自動スクロールして示す。
-struct TextRef: Codable {
+struct TextRef: Codable, Identifiable {
     let section: String
+    let blockID: String?     // 文言・並び順の変更でずれない教材ブロックID
     let anchor: String?
     let label: String?       // ボタンに出す補足（例 "力のモーメント"）
+    var id: String { [section, blockID ?? "", anchor ?? ""].joined(separator: "|") }
 }
 
 /// 受験結果（端末内に保存）

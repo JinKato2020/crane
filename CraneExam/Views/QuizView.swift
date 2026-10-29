@@ -20,7 +20,7 @@ struct QuizView: View {
     @State private var elapsed = 0
     @State private var finished = false
     @State private var result: ExamResult? = nil
-    @State private var showRef = false
+    @State private var selectedRef: TextRef?
 
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
@@ -135,8 +135,8 @@ struct QuizView: View {
             .background(Theme.bg)
         }
         .background(Theme.bg.ignoresSafeArea())
-        .sheet(isPresented: $showRef) {
-            if let r = q.ref { TextbookRefSheet(ref: r).environmentObject(store) }
+        .sheet(item: $selectedRef) { ref in
+            TextbookRefSheet(ref: ref).environmentObject(store)
         }
     }
 
@@ -189,8 +189,8 @@ struct QuizView: View {
             if let fe = q.figImgExp, !fe.isEmpty {
                 FigureImageView(assetName: fe, thumbMaxHeight: 230)
             }
-            if let ref = q.ref {
-                TextRefButton(ref: ref) { showRef = true }.padding(.top, 2)
+            ForEach(q.textbookReferences) { ref in
+                TextRefButton(ref: ref) { selectedRef = ref }.padding(.top, 2)
             }
         }
         .padding(13)

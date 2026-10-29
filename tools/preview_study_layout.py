@@ -16,7 +16,7 @@ def md(text):
 def block(b):
     t = b['type']
     if t == 'sub':
-        return '<h2>' + md(b['text']) + '</h2>'
+        return '<h2 id="b' + html.escape(b.get('id', '')) + '">' + md(b['text']) + '</h2>'
     if t == 'p':
         style = b.get('style', '')
         label = {'lead': 'まず、これだけ', 'tip': 'なるほど', 'caution': '取り違え注意'}.get(style, '')

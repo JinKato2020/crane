@@ -26,6 +26,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Verify textbook references and data compatibility
+        run: |
+          python3 tools/verify_textbook_links.py
+          swiftc CraneExam/Models.swift CraneExam/Textbook.swift tools/verify_reference_resolver.swift -o "$RUNNER_TEMP/verify-references"
+          "$RUNNER_TEMP/verify-references" "$GITHUB_WORKSPACE/CraneExam/Resources"
+
       - name: Install XcodeGen
         run: brew install xcodegen
 

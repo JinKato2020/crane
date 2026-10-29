@@ -42,11 +42,9 @@ struct TextbookRefSheet: View {
         return nil
     }
 
-    /// anchor に一致する最初のブロックの位置（小見出し優先、無ければ本文）
+    /// 固定IDを優先。古いデータでは小見出し・本文・表・箇条書きを検索する。
     private func anchorIndex(_ sec: TBSection) -> Int? {
-        guard let a = ref.anchor, !a.isEmpty else { return nil }
-        if let i = sec.blocks.firstIndex(where: { $0.type == "sub" && ($0.text ?? "").contains(a) }) { return i }
-        return sec.blocks.firstIndex(where: { ($0.text ?? "").contains(a) })
+        TextbookReferenceResolver.index(in: sec, for: ref)
     }
 
     var body: some View {
@@ -97,17 +95,24 @@ struct TextbookRefSheet: View {
                     }
                     .padding(.top, 10)
 
+                    if ai == nil && (ref.blockID != nil || ref.anchor?.isEmpty == false) {
+                        Text("指定の箇所が見つからないため、この節の全体を表示しています。設定から教材を更新してください。")
+                            .font(.system(size: 14)).foregroundColor(Theme.muted)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+
                     ForEach(Array(section.blocks.enumerated()), id: \.offset) { i, b in
                         blockRow(i, b, highlighted: ai == i)
                     }
                 }
                 .padding(.horizontal, 20).padding(.bottom, 32)
             }
-            .onAppear {
+            .task(id: "\(store.contentRevision)-\(ref.id)") {
                 guard let target = ai else { return }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    withAnimation(.easeInOut(duration: 0.4)) { proxy.scrollTo(target, anchor: .top) }
-                }
+                // キャンセル可能にして、閉じたシート・古い教材への遅延移動を防ぐ。
+                try? await Task.sleep(nanoseconds: 300_000_000)
+                guard !Task.isCancelled else { return }
+                proxy.scrollTo(target, anchor: .top)
             }
         }
     }

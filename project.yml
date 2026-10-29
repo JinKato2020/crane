@@ -17,7 +17,7 @@ settings:
     #   ※ここの値は“下限(フロア)”。CI(ios.yml)がApp Store Connectの現状を見て、
     #     表示バージョン・ビルド番号を必ず「既存より上」に自動採番し上書きする(90062/同一番号を仕組みで防止)。
     MARKETING_VERSION: "1.0.9"
-    CURRENT_PROJECT_VERSION: "2033"
+    CURRENT_PROJECT_VERSION: "2034"
 targets:
   CraneExam:
     type: application

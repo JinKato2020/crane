@@ -1,0 +1,4802 @@
+[
+  {
+    "id": "1-1",
+    "round": 1,
+    "no": 1,
+    "recommended_section": "1-4",
+    "recommended_anchor": "天井クレーン",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-2",
+    "round": 1,
+    "no": 2,
+    "recommended_section": "1-2",
+    "recommended_anchor": "スパンと揚程",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": "スパン・作業半径・キャンバの複数箇所を参照する問題。現行はジブ能力の説明へ移動する。"
+  },
+  {
+    "id": "1-3",
+    "round": 1,
+    "no": 3,
+    "recommended_section": "1-5",
+    "recommended_anchor": "ガーダの形が違う理由",
+    "coverage": "解説の補足推奨",
+    "gap": "プレートガーダのウェブ・フランジと、それぞれの働きが本文にはない（形式の大まかな違いのみ）。",
+    "notes": ""
+  },
+  {
+    "id": "1-4",
+    "round": 1,
+    "no": 4,
+    "recommended_section": "1-8",
+    "recommended_anchor": "バキューム式つり具",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-5",
+    "round": 1,
+    "no": 5,
+    "recommended_section": "1-7",
+    "recommended_anchor": "素線・ストランド・心綱",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-6",
+    "round": 1,
+    "no": 6,
+    "recommended_section": "1-10",
+    "recommended_anchor": "衝突防止・逸走防止・斜行防止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": "巻過防止・逸走防止・外れ止めの複数項目。単一見出しだけでは全項目を追えない。別件：問題文混入で選択肢6個、正解番号と解説の対応も不一致。"
+  },
+  {
+    "id": "1-7",
+    "round": 1,
+    "no": 7,
+    "recommended_section": "1-2",
+    "recommended_anchor": "つり上げ荷重と定格荷重",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-8",
+    "round": 1,
+    "no": 8,
+    "recommended_section": "1-11",
+    "recommended_anchor": "形による分類と",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-9",
+    "round": 1,
+    "no": 9,
+    "recommended_section": "1-3",
+    "recommended_anchor": "横行と走行",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-10",
+    "round": 1,
+    "no": 10,
+    "recommended_section": "1-12",
+    "recommended_anchor": "どこへ給油",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-11",
+    "round": 1,
+    "no": 11,
+    "recommended_section": "2-1",
+    "recommended_anchor": "設置届",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-12",
+    "round": 1,
+    "no": 12,
+    "recommended_section": "2-4",
+    "recommended_anchor": "性能検査(検査証の更新)",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-13",
+    "round": 1,
+    "no": 13,
+    "recommended_section": "2-3",
+    "recommended_anchor": "年次自主検査",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-14",
+    "round": 1,
+    "no": 14,
+    "recommended_section": "2-1",
+    "recommended_anchor": "建設物等との間隔",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-15",
+    "round": 1,
+    "no": 15,
+    "recommended_section": "2-3",
+    "recommended_anchor": "暴風後・地震後の点検",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-16",
+    "round": 1,
+    "no": 16,
+    "recommended_section": "2-6",
+    "recommended_anchor": "操作方式と限定免許",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-17",
+    "round": 1,
+    "no": 17,
+    "recommended_section": "2-2",
+    "recommended_anchor": "立入禁止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-18",
+    "round": 1,
+    "no": 18,
+    "recommended_section": "2-6",
+    "recommended_anchor": "免許の欠格・携帯",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-19",
+    "round": 1,
+    "no": 19,
+    "recommended_section": "2-5",
+    "recommended_anchor": "不適格な玉掛用具",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-20",
+    "round": 1,
+    "no": 20,
+    "recommended_section": "2-2",
+    "recommended_anchor": "強風時の決まり",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-21",
+    "round": 1,
+    "no": 21,
+    "recommended_section": "3-2",
+    "recommended_anchor": "直列と並列が混ざった回路",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-22",
+    "round": 1,
+    "no": 22,
+    "recommended_section": "3-1",
+    "recommended_anchor": "直流と交流",
+    "coverage": "主根拠の説明不足",
+    "gap": "変圧器の電圧比＝巻数比が本文・表にない。 / 全波整流の具体的な波形変換と平滑回路の働きがない。整流後の脈流の概略は記載済み。",
+    "notes": ""
+  },
+  {
+    "id": "1-23",
+    "round": 1,
+    "no": 23,
+    "recommended_section": "3-3",
+    "recommended_anchor": "かご形・巻線形：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-24",
+    "round": 1,
+    "no": 24,
+    "recommended_section": "3-7",
+    "recommended_anchor": "導体・半導体・絶縁体",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-25",
+    "round": 1,
+    "no": 25,
+    "recommended_section": "3-4",
+    "recommended_anchor": "直接制御器（ドラム形）",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-26",
+    "round": 1,
+    "no": 26,
+    "recommended_section": "3-6",
+    "recommended_anchor": "巻線形三相誘導電動機の速度制御",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-27",
+    "round": 1,
+    "no": 27,
+    "recommended_section": "3-7",
+    "recommended_anchor": "電気装置の故障と原因",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-28",
+    "round": 1,
+    "no": 28,
+    "recommended_section": "3-7",
+    "recommended_anchor": "測定機器",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-29",
+    "round": 1,
+    "no": 29,
+    "recommended_section": "3-7",
+    "recommended_anchor": "接地（アース）",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-30",
+    "round": 1,
+    "no": 30,
+    "recommended_section": "3-5",
+    "recommended_anchor": "スリップリング給電",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-31",
+    "round": 1,
+    "no": 31,
+    "recommended_section": "4-1",
+    "recommended_anchor": "2．合力と分力",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-32",
+    "round": 1,
+    "no": 32,
+    "recommended_section": "4-1",
+    "recommended_anchor": "6．梁を両端で支える",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-33",
+    "round": 1,
+    "no": 33,
+    "recommended_section": "4-7",
+    "recommended_anchor": "1．定滑車と動滑車",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-34",
+    "round": 1,
+    "no": 34,
+    "recommended_section": "4-6",
+    "recommended_anchor": "3．つり角度を読み",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-35",
+    "round": 1,
+    "no": 35,
+    "recommended_section": "4-3",
+    "recommended_anchor": "1．重心は",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-36",
+    "round": 1,
+    "no": 36,
+    "recommended_section": "4-2",
+    "recommended_anchor": "中空・丸い形",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-37",
+    "round": 1,
+    "no": 37,
+    "recommended_section": "4-4",
+    "recommended_anchor": "2．合成速度",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-38",
+    "round": 1,
+    "no": 38,
+    "recommended_section": "4-4",
+    "recommended_anchor": "計算例：摩擦係数",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-39",
+    "round": 1,
+    "no": 39,
+    "recommended_section": "4-5",
+    "recommended_anchor": "3．応力：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "1-40",
+    "round": 1,
+    "no": 40,
+    "recommended_section": "4-5",
+    "recommended_anchor": "1．荷重の種類",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-1",
+    "round": 2,
+    "no": 1,
+    "recommended_section": "1-4",
+    "recommended_anchor": "ジブクレーン",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-2",
+    "round": 2,
+    "no": 2,
+    "recommended_section": "1-11",
+    "recommended_anchor": "1.5倍は",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-3",
+    "round": 2,
+    "no": 3,
+    "recommended_section": "1-8",
+    "recommended_anchor": "グラブバケット",
+    "coverage": "主根拠の説明不足",
+    "gap": "2本ロープ式グラブの支持ロープ・開閉ロープの分担、およびスプレッダのツイストロックの説明が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "2-4",
+    "round": 2,
+    "no": 4,
+    "recommended_section": "1-7",
+    "recommended_anchor": "普通よりとラングより",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-5",
+    "round": 2,
+    "no": 5,
+    "recommended_section": "1-7",
+    "recommended_anchor": "端を加工すると",
+    "coverage": "主根拠の説明不足",
+    "gap": "合金詰めソケット止めの素線を開いて合金で固定する工程が本文にはない（ソケット固定の概略のみ）。",
+    "notes": ""
+  },
+  {
+    "id": "2-6",
+    "round": 2,
+    "no": 6,
+    "recommended_section": "1-10",
+    "recommended_anchor": "衝突防止・逸走防止・斜行防止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-7",
+    "round": 2,
+    "no": 7,
+    "recommended_section": "3-6",
+    "recommended_anchor": "巻線形三相誘導電動機の速度制御",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-8",
+    "round": 2,
+    "no": 8,
+    "recommended_section": "1-2",
+    "recommended_anchor": "つり上げ荷重と定格荷重",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-9",
+    "round": 2,
+    "no": 9,
+    "recommended_section": "1-12",
+    "recommended_anchor": "給油のしかた",
+    "coverage": "主根拠の説明不足",
+    "gap": "異種グリースの混合・混和性による性能変化の説明が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "2-10",
+    "round": 2,
+    "no": 10,
+    "recommended_section": "1-14",
+    "recommended_anchor": "行ってはいけない操作",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-11",
+    "round": 2,
+    "no": 11,
+    "recommended_section": "3-2",
+    "recommended_anchor": "直列と並列が混ざった回路",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-12",
+    "round": 2,
+    "no": 12,
+    "recommended_section": "3-2",
+    "recommended_anchor": "電力・電力量・ジュール熱",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-13",
+    "round": 2,
+    "no": 13,
+    "recommended_section": "3-1",
+    "recommended_anchor": "直流と交流",
+    "coverage": "主根拠の説明不足",
+    "gap": "変圧器で一定直流を継続変圧できない理由（磁束の変化・誘導起電力）が本文では明示されていない。",
+    "notes": ""
+  },
+  {
+    "id": "2-14",
+    "round": 2,
+    "no": 14,
+    "recommended_section": "3-3",
+    "recommended_anchor": "かご形・巻線形：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-15",
+    "round": 2,
+    "no": 15,
+    "recommended_section": "3-3",
+    "recommended_anchor": "すべり――",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-16",
+    "round": 2,
+    "no": 16,
+    "recommended_section": "3-6",
+    "recommended_anchor": "かご形三相誘導電動機の速度制御",
+    "coverage": "主根拠の説明不足",
+    "gap": "スターデルタ始動の線電流・始動トルクがデルタ直接始動の約1/3となる説明がない。",
+    "notes": ""
+  },
+  {
+    "id": "2-17",
+    "round": 2,
+    "no": 17,
+    "recommended_section": "3-7",
+    "recommended_anchor": "電気装置の故障と原因",
+    "coverage": "主根拠の説明不足",
+    "gap": "サーマルリレーの役割、短絡保護との分担、バイメタルでの検出が本文・表にない。過電流継電器の概略のみ。",
+    "notes": ""
+  },
+  {
+    "id": "2-18",
+    "round": 2,
+    "no": 18,
+    "recommended_section": "3-7",
+    "recommended_anchor": "接地（アース）",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-19",
+    "round": 2,
+    "no": 19,
+    "recommended_section": "3-3",
+    "recommended_anchor": "回転子はなぜ",
+    "coverage": "解説の補足推奨",
+    "gap": "コイルを貫く磁束の変化と起電力、電流方向と磁極の反転の説明が不足（回転磁界の概略のみ）。",
+    "notes": ""
+  },
+  {
+    "id": "2-20",
+    "round": 2,
+    "no": 20,
+    "recommended_section": "3-4",
+    "recommended_anchor": "間接制御器",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-21",
+    "round": 2,
+    "no": 21,
+    "recommended_section": "4-7",
+    "recommended_anchor": "1．定滑車と動滑車",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-22",
+    "round": 2,
+    "no": 22,
+    "recommended_section": "4-4",
+    "recommended_anchor": "計算例：摩擦係数",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-23",
+    "round": 2,
+    "no": 23,
+    "recommended_section": "4-1",
+    "recommended_anchor": "5．つり合い",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-24",
+    "round": 2,
+    "no": 24,
+    "recommended_section": "4-1",
+    "recommended_anchor": "5．つり合い",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-25",
+    "round": 2,
+    "no": 25,
+    "recommended_section": "4-6",
+    "recommended_anchor": "3．つり角度を読み",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-26",
+    "round": 2,
+    "no": 26,
+    "recommended_section": "4-3",
+    "recommended_anchor": "1．重心は",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-27",
+    "round": 2,
+    "no": 27,
+    "recommended_section": "4-2",
+    "recommended_anchor": "3．密度と比重",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-28",
+    "round": 2,
+    "no": 28,
+    "recommended_section": "4-4",
+    "recommended_anchor": "1．速さ・速度・加速度",
+    "coverage": "主根拠の説明不足",
+    "gap": "等加速度の移動距離＝平均速度×時間、平均速度＝(初速＋終速)/2の導出・例題がない。",
+    "notes": ""
+  },
+  {
+    "id": "2-29",
+    "round": 2,
+    "no": 29,
+    "recommended_section": "4-5",
+    "recommended_anchor": "3．応力：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-30",
+    "round": 2,
+    "no": 30,
+    "recommended_section": "4-5",
+    "recommended_anchor": "2．時間や場所",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-31",
+    "round": 2,
+    "no": 31,
+    "recommended_section": "2-1",
+    "recommended_anchor": "設置届",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-32",
+    "round": 2,
+    "no": 32,
+    "recommended_section": "2-4",
+    "recommended_anchor": "性能検査(検査証の更新)",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-33",
+    "round": 2,
+    "no": 33,
+    "recommended_section": "2-4",
+    "recommended_anchor": "変更の手続き",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-34",
+    "round": 2,
+    "no": 34,
+    "recommended_section": "2-3",
+    "recommended_anchor": "月次自主検査",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-35",
+    "round": 2,
+    "no": 35,
+    "recommended_section": "2-3",
+    "recommended_anchor": "暴風後・地震後の点検",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-36",
+    "round": 2,
+    "no": 36,
+    "recommended_section": "2-2",
+    "recommended_anchor": "巻過ぎの防止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-37",
+    "round": 2,
+    "no": 37,
+    "recommended_section": "2-6",
+    "recommended_anchor": "操作方式と限定免許",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-38",
+    "round": 2,
+    "no": 38,
+    "recommended_section": "2-5",
+    "recommended_anchor": "安全係数(切断荷重",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-39",
+    "round": 2,
+    "no": 39,
+    "recommended_section": "2-5",
+    "recommended_anchor": "不適格な玉掛用具",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "2-40",
+    "round": 2,
+    "no": 40,
+    "recommended_section": "2-2",
+    "recommended_anchor": "並置クレーン",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-1",
+    "round": 3,
+    "no": 1,
+    "recommended_section": "1-4",
+    "recommended_anchor": "テルハ",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-2",
+    "round": 3,
+    "no": 2,
+    "recommended_section": "1-5",
+    "recommended_anchor": "ガーダの形が違う理由",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-3",
+    "round": 3,
+    "no": 3,
+    "recommended_section": "1-11",
+    "recommended_anchor": "ばねで制動し",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-4",
+    "round": 3,
+    "no": 4,
+    "recommended_section": "1-7",
+    "recommended_anchor": "普通よりとラングより",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-5",
+    "round": 3,
+    "no": 5,
+    "recommended_section": "1-8",
+    "recommended_anchor": "バキューム式つり具",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-6",
+    "round": 3,
+    "no": 6,
+    "recommended_section": "1-10",
+    "recommended_anchor": "巻過防止装置",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-7",
+    "round": 3,
+    "no": 7,
+    "recommended_section": "1-2",
+    "recommended_anchor": "作業半径とジブ傾斜角",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-8",
+    "round": 3,
+    "no": 8,
+    "recommended_section": "1-12",
+    "recommended_anchor": "給油のしかた",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-9",
+    "round": 3,
+    "no": 9,
+    "recommended_section": "1-7",
+    "recommended_anchor": "ワイヤクリップの向き",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-10",
+    "round": 3,
+    "no": 10,
+    "recommended_section": "1-9",
+    "recommended_anchor": "二段の減速比",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-11",
+    "round": 3,
+    "no": 11,
+    "recommended_section": "2-1",
+    "recommended_anchor": "クレーン検査証",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-12",
+    "round": 3,
+    "no": 12,
+    "recommended_section": "2-4",
+    "recommended_anchor": "休止・使用再開",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-13",
+    "round": 3,
+    "no": 13,
+    "recommended_section": "2-3",
+    "recommended_anchor": "年次自主検査",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-14",
+    "round": 3,
+    "no": 14,
+    "recommended_section": "2-3",
+    "recommended_anchor": "作業開始前の点検",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-15",
+    "round": 3,
+    "no": 15,
+    "recommended_section": "2-2",
+    "recommended_anchor": "組立て等の作業",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-16",
+    "round": 3,
+    "no": 16,
+    "recommended_section": "2-2",
+    "recommended_anchor": "巻過ぎの防止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-17",
+    "round": 3,
+    "no": 17,
+    "recommended_section": "2-6",
+    "recommended_anchor": "運転に必要な資格",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-18",
+    "round": 3,
+    "no": 18,
+    "recommended_section": "2-5",
+    "recommended_anchor": "安全係数(切断荷重",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-19",
+    "round": 3,
+    "no": 19,
+    "recommended_section": "2-5",
+    "recommended_anchor": "不適格な玉掛用具",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-20",
+    "round": 3,
+    "no": 20,
+    "recommended_section": "2-2",
+    "recommended_anchor": "傾斜角の制限",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-21",
+    "round": 3,
+    "no": 21,
+    "recommended_section": "3-2",
+    "recommended_anchor": "直列と並列が混ざった回路",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-22",
+    "round": 3,
+    "no": 22,
+    "recommended_section": "3-2",
+    "recommended_anchor": "電力・電力量・ジュール熱",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-23",
+    "round": 3,
+    "no": 23,
+    "recommended_section": "3-1",
+    "recommended_anchor": "直流と交流",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-24",
+    "round": 3,
+    "no": 24,
+    "recommended_section": "3-3",
+    "recommended_anchor": "すべり――",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-25",
+    "round": 3,
+    "no": 25,
+    "recommended_section": "3-3",
+    "recommended_anchor": "すべり――",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-26",
+    "round": 3,
+    "no": 26,
+    "recommended_section": "3-7",
+    "recommended_anchor": "電気装置の故障と原因",
+    "coverage": "主根拠の説明不足",
+    "gap": "サーマルリレーの役割、短絡保護との分担、バイメタルでの検出が本文・表にない。過電流継電器の概略のみ。",
+    "notes": ""
+  },
+  {
+    "id": "3-27",
+    "round": 3,
+    "no": 27,
+    "recommended_section": "3-7",
+    "recommended_anchor": "絶縁・漏えい電流",
+    "coverage": "解説の補足推奨",
+    "gap": "絶縁抵抗計の試験電圧で電子機器が損傷する場合と、切離しの説明がない。停電・無電圧確認は記載済み。",
+    "notes": ""
+  },
+  {
+    "id": "3-28",
+    "round": 3,
+    "no": 28,
+    "recommended_section": "3-1",
+    "recommended_anchor": "抵抗――",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-29",
+    "round": 3,
+    "no": 29,
+    "recommended_section": "3-6",
+    "recommended_anchor": "インバーターを",
+    "coverage": "主根拠の説明不足",
+    "gap": "回生制動と抵抗制動、エネルギーの行先の区別が本文・表にない。",
+    "notes": ""
+  },
+  {
+    "id": "3-30",
+    "round": 3,
+    "no": 30,
+    "recommended_section": "3-2",
+    "recommended_anchor": "ジュール熱：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-31",
+    "round": 3,
+    "no": 31,
+    "recommended_section": "4-1",
+    "recommended_anchor": "2．合力と分力",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-32",
+    "round": 3,
+    "no": 32,
+    "recommended_section": "4-1",
+    "recommended_anchor": "5．つり合い",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-33",
+    "round": 3,
+    "no": 33,
+    "recommended_section": "4-7",
+    "recommended_anchor": "3．組合せ滑車",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-34",
+    "round": 3,
+    "no": 34,
+    "recommended_section": "4-6",
+    "recommended_anchor": "3．つり角度を読み",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-35",
+    "round": 3,
+    "no": 35,
+    "recommended_section": "4-5",
+    "recommended_anchor": "3．応力：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-36",
+    "round": 3,
+    "no": 36,
+    "recommended_section": "4-3",
+    "recommended_anchor": "1．重心は",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-37",
+    "round": 3,
+    "no": 37,
+    "recommended_section": "4-4",
+    "recommended_anchor": "3．慣性と、円運動",
+    "coverage": "主根拠の説明不足",
+    "gap": "F=maの概略はあるが、鉛直方向の運動方程式 T−mg=ma、T=m(g±a)の説明・例題がない。",
+    "notes": ""
+  },
+  {
+    "id": "3-38",
+    "round": 3,
+    "no": 38,
+    "recommended_section": "4-2",
+    "recommended_anchor": "1．形から体積",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-39",
+    "round": 3,
+    "no": 39,
+    "recommended_section": "4-4",
+    "recommended_anchor": "4．摩擦",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "3-40",
+    "round": 3,
+    "no": 40,
+    "recommended_section": "4-5",
+    "recommended_anchor": "2．時間や場所",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-1",
+    "round": 4,
+    "no": 1,
+    "recommended_section": "1-4",
+    "recommended_anchor": "天井クレーン",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-2",
+    "round": 4,
+    "no": 2,
+    "recommended_section": "1-11",
+    "recommended_anchor": "モーターを止めるだけ",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-3",
+    "round": 4,
+    "no": 3,
+    "recommended_section": "1-8",
+    "recommended_anchor": "リフティングマグネット",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-4",
+    "round": 4,
+    "no": 4,
+    "recommended_section": "1-7",
+    "recommended_anchor": "ロープ径の測り方",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-5",
+    "round": 4,
+    "no": 5,
+    "recommended_section": "1-10",
+    "recommended_anchor": "巻過防止装置",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-6",
+    "round": 4,
+    "no": 6,
+    "recommended_section": "3-3",
+    "recommended_anchor": "かご形・巻線形：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-7",
+    "round": 4,
+    "no": 7,
+    "recommended_section": "1-4",
+    "recommended_anchor": "ホイストの横行方式",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-8",
+    "round": 4,
+    "no": 8,
+    "recommended_section": "1-5",
+    "recommended_anchor": "ガーダの形が違う理由",
+    "coverage": "主根拠の説明不足",
+    "gap": "シングルガーダとダブルガーダの容量・スパンによる使い分けが本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "4-9",
+    "round": 4,
+    "no": 9,
+    "recommended_section": "1-12",
+    "recommended_anchor": "どこへ給油",
+    "coverage": "解説の補足推奨",
+    "gap": "油・グリースの過剰充填によるかくはん抵抗・発熱、規定油量の説明が不足。「多く入れればよいわけではない」という概略のみ。",
+    "notes": ""
+  },
+  {
+    "id": "4-10",
+    "round": 4,
+    "no": 10,
+    "recommended_section": "1-2",
+    "recommended_anchor": "作業半径とジブ傾斜角",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-11",
+    "round": 4,
+    "no": 11,
+    "recommended_section": "3-2",
+    "recommended_anchor": "電力・電力量・ジュール熱",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-12",
+    "round": 4,
+    "no": 12,
+    "recommended_section": "3-2",
+    "recommended_anchor": "直列と並列が混ざった回路",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-13",
+    "round": 4,
+    "no": 13,
+    "recommended_section": "3-3",
+    "recommended_anchor": "すべり――",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-14",
+    "round": 4,
+    "no": 14,
+    "recommended_section": "3-4",
+    "recommended_anchor": "操作ハンドル",
+    "coverage": "主根拠の説明不足",
+    "gap": "ペンダントスイッチを押している間だけ動作し、離すと止まる構造の説明が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "4-15",
+    "round": 4,
+    "no": 15,
+    "recommended_section": "3-3",
+    "recommended_anchor": "すべり――",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-16",
+    "round": 4,
+    "no": 16,
+    "recommended_section": "3-7",
+    "recommended_anchor": "接地（アース）",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-17",
+    "round": 4,
+    "no": 17,
+    "recommended_section": "3-4",
+    "recommended_anchor": "付属機器と保護装置",
+    "coverage": "主根拠の説明不足",
+    "gap": "接触器コイル電圧の低下による吸引力不足・チャタリングの説明がない。",
+    "notes": ""
+  },
+  {
+    "id": "4-18",
+    "round": 4,
+    "no": 18,
+    "recommended_section": "3-7",
+    "recommended_anchor": "絶縁・漏えい電流",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-19",
+    "round": 4,
+    "no": 19,
+    "recommended_section": "3-2",
+    "recommended_anchor": "オームの法則",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-20",
+    "round": 4,
+    "no": 20,
+    "recommended_section": "3-5",
+    "recommended_anchor": "スリップリング給電",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-21",
+    "round": 4,
+    "no": 21,
+    "recommended_section": "4-1",
+    "recommended_anchor": "5．つり合い",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-22",
+    "round": 4,
+    "no": 22,
+    "recommended_section": "4-7",
+    "recommended_anchor": "3．組合せ滑車",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-23",
+    "round": 4,
+    "no": 23,
+    "recommended_section": "4-6",
+    "recommended_anchor": "3．つり角度を読み",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-24",
+    "round": 4,
+    "no": 24,
+    "recommended_section": "4-5",
+    "recommended_anchor": "3．応力：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-25",
+    "round": 4,
+    "no": 25,
+    "recommended_section": "4-2",
+    "recommended_anchor": "中空・丸い形",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-26",
+    "round": 4,
+    "no": 26,
+    "recommended_section": "4-4",
+    "recommended_anchor": "4．摩擦",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-27",
+    "round": 4,
+    "no": 27,
+    "recommended_section": "4-3",
+    "recommended_anchor": "4．安定",
+    "coverage": "主根拠の説明不足",
+    "gap": "転倒限界のtanθ＝底面幅の半分÷重心高さ、および角度を求める説明が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "4-28",
+    "round": 4,
+    "no": 28,
+    "recommended_section": "1-2",
+    "recommended_anchor": "つり上げ荷重と定格荷重",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-29",
+    "round": 4,
+    "no": 29,
+    "recommended_section": "4-1",
+    "recommended_anchor": "2．合力と分力",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-30",
+    "round": 4,
+    "no": 30,
+    "recommended_section": "4-4",
+    "recommended_anchor": "1．速さ・速度・加速度",
+    "coverage": "主根拠の説明不足",
+    "gap": "等加速度の移動距離＝平均速度×時間、平均速度＝(初速＋終速)/2の導出・例題がない。",
+    "notes": ""
+  },
+  {
+    "id": "4-31",
+    "round": 4,
+    "no": 31,
+    "recommended_section": "2-1",
+    "recommended_anchor": "設置届",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": "設置届の期限と落成検査の荷重試験の2箇所が必要。"
+  },
+  {
+    "id": "4-32",
+    "round": 4,
+    "no": 32,
+    "recommended_section": "2-2",
+    "recommended_anchor": "過負荷の制限",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-33",
+    "round": 4,
+    "no": 33,
+    "recommended_section": "2-3",
+    "recommended_anchor": "月次自主検査",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-34",
+    "round": 4,
+    "no": 34,
+    "recommended_section": "2-3",
+    "recommended_anchor": "暴風後・地震後の点検",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-35",
+    "round": 4,
+    "no": 35,
+    "recommended_section": "2-6",
+    "recommended_anchor": "運転に必要な資格",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-36",
+    "round": 4,
+    "no": 36,
+    "recommended_section": "2-6",
+    "recommended_anchor": "玉掛け業務の資格",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-37",
+    "round": 4,
+    "no": 37,
+    "recommended_section": "2-5",
+    "recommended_anchor": "不適格な玉掛用具",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-38",
+    "round": 4,
+    "no": 38,
+    "recommended_section": "2-5",
+    "recommended_anchor": "不適格な玉掛用具",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-39",
+    "round": 4,
+    "no": 39,
+    "recommended_section": "2-2",
+    "recommended_anchor": "立入禁止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "4-40",
+    "round": 4,
+    "no": 40,
+    "recommended_section": "2-2",
+    "recommended_anchor": "強風時の決まり",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-1",
+    "round": 5,
+    "no": 1,
+    "recommended_section": "1-4",
+    "recommended_anchor": "ケーブルクレーン",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-2",
+    "round": 5,
+    "no": 2,
+    "recommended_section": "4-1",
+    "recommended_anchor": "6．梁を両端で支える",
+    "coverage": "主根拠の説明不足",
+    "gap": "最大曲げモーメント Mmax=Pab/L と荷重点・中央荷重の比較が本文にない。支点反力の説明だけでは不足。",
+    "notes": ""
+  },
+  {
+    "id": "5-3",
+    "round": 5,
+    "no": 3,
+    "recommended_section": "1-11",
+    "recommended_anchor": "形による分類と",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-4",
+    "round": 5,
+    "no": 4,
+    "recommended_section": "1-8",
+    "recommended_anchor": "フックブロック",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-5",
+    "round": 5,
+    "no": 5,
+    "recommended_section": "1-7",
+    "recommended_anchor": "普通よりとラングより",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-6",
+    "round": 5,
+    "no": 6,
+    "recommended_section": "1-7",
+    "recommended_anchor": "ワイヤクリップの向き",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-7",
+    "round": 5,
+    "no": 7,
+    "recommended_section": "1-10",
+    "recommended_anchor": "車輪止めと緩衝装置",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-8",
+    "round": 5,
+    "no": 8,
+    "recommended_section": "1-9",
+    "recommended_anchor": "二段の減速比",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-9",
+    "round": 5,
+    "no": 9,
+    "recommended_section": "1-2",
+    "recommended_anchor": "作業半径とジブ傾斜角",
+    "coverage": "主根拠の説明不足",
+    "gap": "作業半径に旋回中心から起伏支点までの距離を足す式 R=offset+Lcosθ と水平投影の計算例がない。",
+    "notes": ""
+  },
+  {
+    "id": "5-10",
+    "round": 5,
+    "no": 10,
+    "recommended_section": "1-12",
+    "recommended_anchor": "どこへ給油",
+    "coverage": "主根拠の説明不足",
+    "gap": "追加給脂を必要としない密封形軸受の例外の説明が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "5-11",
+    "round": 5,
+    "no": 11,
+    "recommended_section": "3-2",
+    "recommended_anchor": "直列と並列が混ざった回路",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-12",
+    "round": 5,
+    "no": 12,
+    "recommended_section": "3-2",
+    "recommended_anchor": "電力・電力量・ジュール熱",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-13",
+    "round": 5,
+    "no": 13,
+    "recommended_section": "3-1",
+    "recommended_anchor": "直流と交流",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-14",
+    "round": 5,
+    "no": 14,
+    "recommended_section": "3-3",
+    "recommended_anchor": "すべり――",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-15",
+    "round": 5,
+    "no": 15,
+    "recommended_section": "3-3",
+    "recommended_anchor": "かご形・巻線形：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-16",
+    "round": 5,
+    "no": 16,
+    "recommended_section": "3-4",
+    "recommended_anchor": "付属機器と保護装置",
+    "coverage": "解説の補足推奨",
+    "gap": "過負荷継電器と主接点の役割分担、非常停止の解除と再始動を分ける説明が不足。",
+    "notes": ""
+  },
+  {
+    "id": "5-17",
+    "round": 5,
+    "no": 17,
+    "recommended_section": "3-7",
+    "recommended_anchor": "電気装置の故障と原因",
+    "coverage": "主根拠の説明不足",
+    "gap": "保護動作の原因を調べずにヒューズ容量・過電流設定値を上げない説明が不足。ヒューズの概略のみ。",
+    "notes": ""
+  },
+  {
+    "id": "5-18",
+    "round": 5,
+    "no": 18,
+    "recommended_section": "3-7",
+    "recommended_anchor": "測定機器",
+    "coverage": "主根拠の説明不足",
+    "gap": "絶縁抵抗計の試験電圧で電子機器が損傷する場合と、切離しの説明がない。停電・無電圧確認は記載済み。",
+    "notes": ""
+  },
+  {
+    "id": "5-19",
+    "round": 5,
+    "no": 19,
+    "recommended_section": "3-7",
+    "recommended_anchor": "接地（アース）",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-20",
+    "round": 5,
+    "no": 20,
+    "recommended_section": "3-6",
+    "recommended_anchor": "インバーターを",
+    "coverage": "主根拠の説明不足",
+    "gap": "回生制動と抵抗制動、エネルギーの行先の区別が本文・表にない。",
+    "notes": ""
+  },
+  {
+    "id": "5-21",
+    "round": 5,
+    "no": 21,
+    "recommended_section": "4-1",
+    "recommended_anchor": "2．合力と分力",
+    "coverage": "解説の補足推奨",
+    "gap": "直角の分力の考え方はあるが、二力のなす角が増えると合力が減る一般の場合・余弦定理の説明が不足。",
+    "notes": ""
+  },
+  {
+    "id": "5-22",
+    "round": 5,
+    "no": 22,
+    "recommended_section": "4-1",
+    "recommended_anchor": "5．つり合い",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-23",
+    "round": 5,
+    "no": 23,
+    "recommended_section": "4-7",
+    "recommended_anchor": "3．組合せ滑車",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-24",
+    "round": 5,
+    "no": 24,
+    "recommended_section": "4-3",
+    "recommended_anchor": "1．重心は",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-25",
+    "round": 5,
+    "no": 25,
+    "recommended_section": "4-2",
+    "recommended_anchor": "中空・丸い形",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-26",
+    "round": 5,
+    "no": 26,
+    "recommended_section": "4-4",
+    "recommended_anchor": "3．慣性と、円運動",
+    "coverage": "主根拠の説明不足",
+    "gap": "F=maの概略はあるが、鉛直方向の運動方程式 T−mg=ma、T=m(g±a)の説明・例題がない。",
+    "notes": ""
+  },
+  {
+    "id": "5-27",
+    "round": 5,
+    "no": 27,
+    "recommended_section": "4-6",
+    "recommended_anchor": "3．つり角度を読み",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-28",
+    "round": 5,
+    "no": 28,
+    "recommended_section": "4-5",
+    "recommended_anchor": "5．応力ひずみ",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-29",
+    "round": 5,
+    "no": 29,
+    "recommended_section": "4-4",
+    "recommended_anchor": "4．摩擦",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-30",
+    "round": 5,
+    "no": 30,
+    "recommended_section": "4-7",
+    "recommended_anchor": "6．動力：",
+    "coverage": "主根拠の説明不足",
+    "gap": "効率を考慮して必要入力＝有効出力÷効率とする計算の説明・例題が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "5-31",
+    "round": 5,
+    "no": 31,
+    "recommended_section": "2-1",
+    "recommended_anchor": "設置届",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-32",
+    "round": 5,
+    "no": 32,
+    "recommended_section": "2-4",
+    "recommended_anchor": "性能検査(検査証の更新)",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-33",
+    "round": 5,
+    "no": 33,
+    "recommended_section": "2-1",
+    "recommended_anchor": "クレーン検査証",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": "検査証の書替えに加え、変更届と変更検査の違いは2-4も必要。"
+  },
+  {
+    "id": "5-34",
+    "round": 5,
+    "no": 34,
+    "recommended_section": "2-3",
+    "recommended_anchor": "年次自主検査",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-35",
+    "round": 5,
+    "no": 35,
+    "recommended_section": "2-3",
+    "recommended_anchor": "暴風後・地震後の点検",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-36",
+    "round": 5,
+    "no": 36,
+    "recommended_section": "2-6",
+    "recommended_anchor": "運転に必要な資格",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-37",
+    "round": 5,
+    "no": 37,
+    "recommended_section": "2-5",
+    "recommended_anchor": "安全係数(切断荷重",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-38",
+    "round": 5,
+    "no": 38,
+    "recommended_section": "2-5",
+    "recommended_anchor": "不適格な玉掛用具",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-39",
+    "round": 5,
+    "no": 39,
+    "recommended_section": "2-2",
+    "recommended_anchor": "巻過ぎの防止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "5-40",
+    "round": 5,
+    "no": 40,
+    "recommended_section": "2-2",
+    "recommended_anchor": "強風時の決まり",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-1",
+    "round": 6,
+    "no": 1,
+    "recommended_section": "1-3",
+    "recommended_anchor": "起伏と旋回",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-2",
+    "round": 6,
+    "no": 2,
+    "recommended_section": "1-11",
+    "recommended_anchor": "ばねで制動し",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-3",
+    "round": 6,
+    "no": 3,
+    "recommended_section": "1-7",
+    "recommended_anchor": "普通よりとラングより",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-4",
+    "round": 6,
+    "no": 4,
+    "recommended_section": "1-10",
+    "recommended_anchor": "衝突防止・逸走防止・斜行防止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-5",
+    "round": 6,
+    "no": 5,
+    "recommended_section": "1-8",
+    "recommended_anchor": "バキューム式つり具",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-6",
+    "round": 6,
+    "no": 6,
+    "recommended_section": "1-2",
+    "recommended_anchor": "寄り・インチング・地切り・キャンバ",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-7",
+    "round": 6,
+    "no": 7,
+    "recommended_section": "1-2",
+    "recommended_anchor": "作業半径とジブ傾斜角",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-8",
+    "round": 6,
+    "no": 8,
+    "recommended_section": "3-3",
+    "recommended_anchor": "かご形・巻線形：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-9",
+    "round": 6,
+    "no": 9,
+    "recommended_section": "1-12",
+    "recommended_anchor": "どこへ給油",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-10",
+    "round": 6,
+    "no": 10,
+    "recommended_section": "1-7",
+    "recommended_anchor": "端を加工すると",
+    "coverage": "主根拠の説明不足",
+    "gap": "合金詰めソケット止めの素線を開いて合金で固定する工程が本文にはない（ソケット固定の概略のみ）。",
+    "notes": ""
+  },
+  {
+    "id": "6-11",
+    "round": 6,
+    "no": 11,
+    "recommended_section": "3-2",
+    "recommended_anchor": "直列と並列が混ざった回路",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-12",
+    "round": 6,
+    "no": 12,
+    "recommended_section": "3-1",
+    "recommended_anchor": "抵抗――",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-13",
+    "round": 6,
+    "no": 13,
+    "recommended_section": "3-3",
+    "recommended_anchor": "同期速度――",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-14",
+    "round": 6,
+    "no": 14,
+    "recommended_section": "3-6",
+    "recommended_anchor": "かご形三相誘導電動機の速度制御",
+    "coverage": "主根拠の説明不足",
+    "gap": "スターデルタ始動の線電流・始動トルクがデルタ直接始動の約1/3となる説明がない。",
+    "notes": ""
+  },
+  {
+    "id": "6-15",
+    "round": 6,
+    "no": 15,
+    "recommended_section": "3-4",
+    "recommended_anchor": "間接制御器",
+    "coverage": "解説の補足推奨",
+    "gap": "主幹制御器と熱動継電器が指令し接触器が主電流を開閉する役割分担を補足する必要がある。",
+    "notes": ""
+  },
+  {
+    "id": "6-16",
+    "round": 6,
+    "no": 16,
+    "recommended_section": "3-5",
+    "recommended_anchor": "キャブタイヤケーブル給電",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-17",
+    "round": 6,
+    "no": 17,
+    "recommended_section": "3-7",
+    "recommended_anchor": "導体・半導体・絶縁体",
+    "coverage": "主根拠の説明不足",
+    "gap": "ニクロムの抵抗・耐熱性と用途、鉄心を積層して渦電流損失を減らす説明がない。材料名の一覧のみ。",
+    "notes": ""
+  },
+  {
+    "id": "6-18",
+    "round": 6,
+    "no": 18,
+    "recommended_section": "3-7",
+    "recommended_anchor": "接地（アース）",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-19",
+    "round": 6,
+    "no": 19,
+    "recommended_section": "3-6",
+    "recommended_anchor": "直流電動機の速度制御",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-20",
+    "round": 6,
+    "no": 20,
+    "recommended_section": "3-3",
+    "recommended_anchor": "すべり――",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-21",
+    "round": 6,
+    "no": 21,
+    "recommended_section": "4-1",
+    "recommended_anchor": "2．合力と分力",
+    "coverage": "主根拠の説明不足",
+    "gap": "力の方向を求める tanθ＝鉛直成分÷水平成分が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "6-22",
+    "round": 6,
+    "no": 22,
+    "recommended_section": "4-1",
+    "recommended_anchor": "5．つり合い",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-23",
+    "round": 6,
+    "no": 23,
+    "recommended_section": "4-7",
+    "recommended_anchor": "3．組合せ滑車",
+    "coverage": "主根拠の説明不足",
+    "gap": "効率を考慮して必要入力＝有効出力÷効率とする計算の説明・例題が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "6-24",
+    "round": 6,
+    "no": 24,
+    "recommended_section": "4-6",
+    "recommended_anchor": "1．荷を支える力",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-25",
+    "round": 6,
+    "no": 25,
+    "recommended_section": "4-5",
+    "recommended_anchor": "3．応力：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-26",
+    "round": 6,
+    "no": 26,
+    "recommended_section": "4-3",
+    "recommended_anchor": "支点と重心の上下関係",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-27",
+    "round": 6,
+    "no": 27,
+    "recommended_section": "4-4",
+    "recommended_anchor": "1．速さ・速度・加速度",
+    "coverage": "主根拠の説明不足",
+    "gap": "等加速度の移動距離＝平均速度×時間、平均速度＝(初速＋終速)/2の導出・例題がない。",
+    "notes": ""
+  },
+  {
+    "id": "6-28",
+    "round": 6,
+    "no": 28,
+    "recommended_section": "4-4",
+    "recommended_anchor": "3．慣性と、円運動",
+    "coverage": "主根拠の説明不足",
+    "gap": "F=maの概略はあるが、鉛直方向の運動方程式 T−mg=ma、T=m(g±a)の説明・例題がない。",
+    "notes": ""
+  },
+  {
+    "id": "6-29",
+    "round": 6,
+    "no": 29,
+    "recommended_section": "4-2",
+    "recommended_anchor": "中空・丸い形",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-30",
+    "round": 6,
+    "no": 30,
+    "recommended_section": "4-4",
+    "recommended_anchor": "4．摩擦",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-31",
+    "round": 6,
+    "no": 31,
+    "recommended_section": "2-4",
+    "recommended_anchor": "性能検査(検査証の更新)",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-32",
+    "round": 6,
+    "no": 32,
+    "recommended_section": "2-3",
+    "recommended_anchor": "年次自主検査",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-33",
+    "round": 6,
+    "no": 33,
+    "recommended_section": "2-3",
+    "recommended_anchor": "暴風後・地震後の点検",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-34",
+    "round": 6,
+    "no": 34,
+    "recommended_section": "2-6",
+    "recommended_anchor": "運転に必要な資格",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-35",
+    "round": 6,
+    "no": 35,
+    "recommended_section": "2-6",
+    "recommended_anchor": "玉掛け業務の資格",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-36",
+    "round": 6,
+    "no": 36,
+    "recommended_section": "2-5",
+    "recommended_anchor": "安全係数(切断荷重",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-37",
+    "round": 6,
+    "no": 37,
+    "recommended_section": "2-5",
+    "recommended_anchor": "不適格な玉掛用具",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-38",
+    "round": 6,
+    "no": 38,
+    "recommended_section": "2-2",
+    "recommended_anchor": "巻過ぎの防止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-39",
+    "round": 6,
+    "no": 39,
+    "recommended_section": "2-2",
+    "recommended_anchor": "立入禁止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "6-40",
+    "round": 6,
+    "no": 40,
+    "recommended_section": "2-3",
+    "recommended_anchor": "作業開始前の点検",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": "開始前点検は2-3、検査証備付けと定格荷重周知は2-2に分かれる。"
+  },
+  {
+    "id": "7-1",
+    "round": 7,
+    "no": 1,
+    "recommended_section": "1-4",
+    "recommended_anchor": "橋形クレーン",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-2",
+    "round": 7,
+    "no": 2,
+    "recommended_section": "1-5",
+    "recommended_anchor": "ガーダの形が違う理由",
+    "coverage": "主根拠の説明不足",
+    "gap": "中央集中荷重で最大たわみが最大となる説明が本文にない。キャンバの説明だけでは不足。",
+    "notes": ""
+  },
+  {
+    "id": "7-3",
+    "round": 7,
+    "no": 3,
+    "recommended_section": "1-13",
+    "recommended_anchor": "ドラムとシーブの違い",
+    "coverage": "主根拠の説明不足",
+    "gap": "ドラムの巻取り速度＝π×有効径×回転速度と、減速比・掛け数をつなぐ計算例が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "7-4",
+    "round": 7,
+    "no": 4,
+    "recommended_section": "1-11",
+    "recommended_anchor": "ばねで制動し",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-5",
+    "round": 7,
+    "no": 5,
+    "recommended_section": "1-8",
+    "recommended_anchor": "リフティングマグネット",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-6",
+    "round": 7,
+    "no": 6,
+    "recommended_section": "1-7",
+    "recommended_anchor": "素線・ストランド・心綱",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-7",
+    "round": 7,
+    "no": 7,
+    "recommended_section": "1-10",
+    "recommended_anchor": "巻過防止装置",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-8",
+    "round": 7,
+    "no": 8,
+    "recommended_section": "1-2",
+    "recommended_anchor": "ジブクレーンは、姿勢",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-9",
+    "round": 7,
+    "no": 9,
+    "recommended_section": "1-12",
+    "recommended_anchor": "どこへ給油",
+    "coverage": "解説の補足推奨",
+    "gap": "油・グリースの過剰充填によるかくはん抵抗・発熱、規定油量の説明が不足。「多く入れればよいわけではない」という概略のみ。",
+    "notes": ""
+  },
+  {
+    "id": "7-10",
+    "round": 7,
+    "no": 10,
+    "recommended_section": "1-14",
+    "recommended_anchor": "フックを荷の重心",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-11",
+    "round": 7,
+    "no": 11,
+    "recommended_section": "3-2",
+    "recommended_anchor": "直列と並列が混ざった回路",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-12",
+    "round": 7,
+    "no": 12,
+    "recommended_section": "3-2",
+    "recommended_anchor": "電力・電力量・ジュール熱",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-13",
+    "round": 7,
+    "no": 13,
+    "recommended_section": "3-1",
+    "recommended_anchor": "周波数",
+    "coverage": "主根拠の説明不足",
+    "gap": "1周期中に電流の向きが2回変わり、50Hzなら毎秒100回となる説明が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "7-14",
+    "round": 7,
+    "no": 14,
+    "recommended_section": "3-3",
+    "recommended_anchor": "同期速度――",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-15",
+    "round": 7,
+    "no": 15,
+    "recommended_section": "3-6",
+    "recommended_anchor": "巻線形三相誘導電動機の速度制御",
+    "coverage": "主根拠の説明不足",
+    "gap": "二次抵抗を増やすと同一負荷トルクに必要なすべりが増え、実速度が低下する関係の説明が不足。",
+    "notes": ""
+  },
+  {
+    "id": "7-16",
+    "round": 7,
+    "no": 16,
+    "recommended_section": "3-7",
+    "recommended_anchor": "電気装置の故障と原因",
+    "coverage": "主根拠の説明不足",
+    "gap": "保護動作の原因を調べずにヒューズ容量・過電流設定値を上げない説明が不足。ヒューズの概略のみ。",
+    "notes": ""
+  },
+  {
+    "id": "7-17",
+    "round": 7,
+    "no": 17,
+    "recommended_section": "3-4",
+    "recommended_anchor": "付属機器と保護装置",
+    "coverage": "主根拠の説明不足",
+    "gap": "配線用遮断器の手動復帰と、漏電遮断器・過負荷継電器・ヒューズの分担の比較が不足。",
+    "notes": ""
+  },
+  {
+    "id": "7-18",
+    "round": 7,
+    "no": 18,
+    "recommended_section": "3-7",
+    "recommended_anchor": "絶縁・漏えい電流",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-19",
+    "round": 7,
+    "no": 19,
+    "recommended_section": "3-7",
+    "recommended_anchor": "接地（アース）",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-20",
+    "round": 7,
+    "no": 20,
+    "recommended_section": "3-1",
+    "recommended_anchor": "直流と交流",
+    "coverage": "主根拠の説明不足",
+    "gap": "変圧器の電圧比＝巻数比が本文・表にない。",
+    "notes": ""
+  },
+  {
+    "id": "7-21",
+    "round": 7,
+    "no": 21,
+    "recommended_section": "4-1",
+    "recommended_anchor": "2．合力と分力",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-22",
+    "round": 7,
+    "no": 22,
+    "recommended_section": "4-1",
+    "recommended_anchor": "5．つり合い",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-23",
+    "round": 7,
+    "no": 23,
+    "recommended_section": "4-7",
+    "recommended_anchor": "1．定滑車と動滑車",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-24",
+    "round": 7,
+    "no": 24,
+    "recommended_section": "4-1",
+    "recommended_anchor": "6．梁を両端で支える",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-25",
+    "round": 7,
+    "no": 25,
+    "recommended_section": "4-5",
+    "recommended_anchor": "4．ひずみ：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-26",
+    "round": 7,
+    "no": 26,
+    "recommended_section": "4-4",
+    "recommended_anchor": "3．慣性と、円運動",
+    "coverage": "主根拠の説明不足",
+    "gap": "F=maの概略はあるが、鉛直方向の運動方程式 T−mg=ma、T=m(g±a)の説明・例題がない。",
+    "notes": ""
+  },
+  {
+    "id": "7-27",
+    "round": 7,
+    "no": 27,
+    "recommended_section": "4-3",
+    "recommended_anchor": "4．安定",
+    "coverage": "主根拠の説明不足",
+    "gap": "転倒限界のtanθ＝底面幅の半分÷重心高さ、および角度を求める説明が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "7-28",
+    "round": 7,
+    "no": 28,
+    "recommended_section": "4-4",
+    "recommended_anchor": "4．摩擦",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-29",
+    "round": 7,
+    "no": 29,
+    "recommended_section": "4-2",
+    "recommended_anchor": "3．密度と比重",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-30",
+    "round": 7,
+    "no": 30,
+    "recommended_section": "4-4",
+    "recommended_anchor": "1．速さ・速度・加速度",
+    "coverage": "主根拠の説明不足",
+    "gap": "等加速度の移動距離＝平均速度×時間、平均速度＝(初速＋終速)/2の導出・例題がない。",
+    "notes": ""
+  },
+  {
+    "id": "7-31",
+    "round": 7,
+    "no": 31,
+    "recommended_section": "2-1",
+    "recommended_anchor": "落成検査",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-32",
+    "round": 7,
+    "no": 32,
+    "recommended_section": "2-4",
+    "recommended_anchor": "性能検査(検査証の更新)",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-33",
+    "round": 7,
+    "no": 33,
+    "recommended_section": "2-3",
+    "recommended_anchor": "年次自主検査",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-34",
+    "round": 7,
+    "no": 34,
+    "recommended_section": "2-3",
+    "recommended_anchor": "作業開始前の点検",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": "開始前点検と地震後点検の両方。2-3の表内の各行へ参照できる必要がある。"
+  },
+  {
+    "id": "7-35",
+    "round": 7,
+    "no": 35,
+    "recommended_section": "2-2",
+    "recommended_anchor": "強風時の決まり",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-36",
+    "round": 7,
+    "no": 36,
+    "recommended_section": "2-6",
+    "recommended_anchor": "運転に必要な資格",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-37",
+    "round": 7,
+    "no": 37,
+    "recommended_section": "2-6",
+    "recommended_anchor": "玉掛け業務の資格",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-38",
+    "round": 7,
+    "no": 38,
+    "recommended_section": "2-5",
+    "recommended_anchor": "不適格な玉掛用具",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-39",
+    "round": 7,
+    "no": 39,
+    "recommended_section": "2-2",
+    "recommended_anchor": "巻過ぎの防止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "7-40",
+    "round": 7,
+    "no": 40,
+    "recommended_section": "2-2",
+    "recommended_anchor": "強風時の決まり",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-1",
+    "round": 8,
+    "no": 1,
+    "recommended_section": "1-3",
+    "recommended_anchor": "横行と走行",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-2",
+    "round": 8,
+    "no": 2,
+    "recommended_section": "1-11",
+    "recommended_anchor": "形による分類と",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-3",
+    "round": 8,
+    "no": 3,
+    "recommended_section": "1-7",
+    "recommended_anchor": "ロープ径の測り方",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-4",
+    "round": 8,
+    "no": 4,
+    "recommended_section": "1-2",
+    "recommended_anchor": "つり上げ荷重と定格荷重",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-5",
+    "round": 8,
+    "no": 5,
+    "recommended_section": "1-10",
+    "recommended_anchor": "巻過防止装置",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-6",
+    "round": 8,
+    "no": 6,
+    "recommended_section": "1-2",
+    "recommended_anchor": "寄り・インチング・地切り・キャンバ",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-7",
+    "round": 8,
+    "no": 7,
+    "recommended_section": "1-2",
+    "recommended_anchor": "作業半径とジブ傾斜角",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-8",
+    "round": 8,
+    "no": 8,
+    "recommended_section": "1-12",
+    "recommended_anchor": "どこへ給油",
+    "coverage": "解説の補足推奨",
+    "gap": "油・グリースの過剰充填によるかくはん抵抗・発熱、規定油量の説明が不足。「多く入れればよいわけではない」という概略のみ。",
+    "notes": ""
+  },
+  {
+    "id": "8-9",
+    "round": 8,
+    "no": 9,
+    "recommended_section": "1-13",
+    "recommended_anchor": "ドラムとシーブの違い",
+    "coverage": "主根拠の説明不足",
+    "gap": "ドラムの巻取り速度＝π×有効径×回転速度と、減速比・掛け数をつなぐ計算例が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "8-10",
+    "round": 8,
+    "no": 10,
+    "recommended_section": "1-10",
+    "recommended_anchor": "衝突防止・逸走防止・斜行防止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-11",
+    "round": 8,
+    "no": 11,
+    "recommended_section": "3-2",
+    "recommended_anchor": "電力・電力量・ジュール熱",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-12",
+    "round": 8,
+    "no": 12,
+    "recommended_section": "3-3",
+    "recommended_anchor": "電動機とは",
+    "coverage": "主根拠の説明不足",
+    "gap": "電動機の効率＝軸出力÷電気入力、損失＝入力−出力の説明が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "8-13",
+    "round": 8,
+    "no": 13,
+    "recommended_section": "3-1",
+    "recommended_anchor": "周波数",
+    "coverage": "主根拠の説明不足",
+    "gap": "周波数と周期 T=1/f、および正の山から負の山までが半周期という計算の説明が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "8-14",
+    "round": 8,
+    "no": 14,
+    "recommended_section": "3-3",
+    "recommended_anchor": "かご形・巻線形：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-15",
+    "round": 8,
+    "no": 15,
+    "recommended_section": "3-6",
+    "recommended_anchor": "回転方向の変え方",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-16",
+    "round": 8,
+    "no": 16,
+    "recommended_section": "3-7",
+    "recommended_anchor": "電気装置の故障と原因",
+    "coverage": "主根拠の説明不足",
+    "gap": "サーマルリレーの役割、短絡保護との分担、バイメタルでの検出が本文・表にない。過電流継電器の概略のみ。",
+    "notes": ""
+  },
+  {
+    "id": "8-17",
+    "round": 8,
+    "no": 17,
+    "recommended_section": "3-5",
+    "recommended_anchor": "キャブタイヤケーブル給電",
+    "coverage": "主根拠の説明不足",
+    "gap": "配線選定で定格電流だけでなく電圧降下・始動・保護協調・周囲温度・可動条件を確認する説明がない。",
+    "notes": ""
+  },
+  {
+    "id": "8-18",
+    "round": 8,
+    "no": 18,
+    "recommended_section": "3-7",
+    "recommended_anchor": "測定機器",
+    "coverage": "主根拠の説明不足",
+    "gap": "絶縁抵抗測定後の残留電荷と放電・安全確認の説明が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "8-19",
+    "round": 8,
+    "no": 19,
+    "recommended_section": "3-7",
+    "recommended_anchor": "接地（アース）",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-20",
+    "round": 8,
+    "no": 20,
+    "recommended_section": "3-1",
+    "recommended_anchor": "直流と交流",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-21",
+    "round": 8,
+    "no": 21,
+    "recommended_section": "4-7",
+    "recommended_anchor": "1．定滑車と動滑車",
+    "coverage": "主根拠の説明不足",
+    "gap": "加速する動滑車に2F=m(g+a)を適用する説明がない。静止・等速の滑車の説明のみ。",
+    "notes": ""
+  },
+  {
+    "id": "8-22",
+    "round": 8,
+    "no": 22,
+    "recommended_section": "4-1",
+    "recommended_anchor": "4．モーメント",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-23",
+    "round": 8,
+    "no": 23,
+    "recommended_section": "4-6",
+    "recommended_anchor": "3．つり角度を読み",
+    "coverage": "主根拠の説明不足",
+    "gap": "鉛直成分はcosで説明されるが、水平成分＝張力×sinとsinの意味の説明が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "8-24",
+    "round": 8,
+    "no": 24,
+    "recommended_section": "4-5",
+    "recommended_anchor": "3．応力：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-25",
+    "round": 8,
+    "no": 25,
+    "recommended_section": "4-4",
+    "recommended_anchor": "3．慣性と、円運動",
+    "coverage": "主根拠の説明不足",
+    "gap": "F=maの概略はあるが、鉛直方向の運動方程式 T−mg=ma、T=m(g±a)の説明・例題がない。",
+    "notes": ""
+  },
+  {
+    "id": "8-26",
+    "round": 8,
+    "no": 26,
+    "recommended_section": "4-1",
+    "recommended_anchor": "2．合力と分力",
+    "coverage": "主根拠の説明不足",
+    "gap": "直角でない二力の合力を求める余弦定理、120°での計算例が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "8-27",
+    "round": 8,
+    "no": 27,
+    "recommended_section": "4-3",
+    "recommended_anchor": "4．安定",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-28",
+    "round": 8,
+    "no": 28,
+    "recommended_section": "4-4",
+    "recommended_anchor": "4．摩擦",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-29",
+    "round": 8,
+    "no": 29,
+    "recommended_section": "4-7",
+    "recommended_anchor": "5．仕事：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-30",
+    "round": 8,
+    "no": 30,
+    "recommended_section": "4-7",
+    "recommended_anchor": "5．仕事：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-31",
+    "round": 8,
+    "no": 31,
+    "recommended_section": "2-1",
+    "recommended_anchor": "設置届",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-32",
+    "round": 8,
+    "no": 32,
+    "recommended_section": "2-4",
+    "recommended_anchor": "変更の手続き",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-33",
+    "round": 8,
+    "no": 33,
+    "recommended_section": "2-3",
+    "recommended_anchor": "記録して3年間保存",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-34",
+    "round": 8,
+    "no": 34,
+    "recommended_section": "2-3",
+    "recommended_anchor": "暴風後・地震後の点検",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-35",
+    "round": 8,
+    "no": 35,
+    "recommended_section": "2-6",
+    "recommended_anchor": "運転に必要な資格",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-36",
+    "round": 8,
+    "no": 36,
+    "recommended_section": "2-5",
+    "recommended_anchor": "安全係数(切断荷重",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-37",
+    "round": 8,
+    "no": 37,
+    "recommended_section": "2-5",
+    "recommended_anchor": "不適格な玉掛用具",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-38",
+    "round": 8,
+    "no": 38,
+    "recommended_section": "2-2",
+    "recommended_anchor": "巻過ぎの防止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-39",
+    "round": 8,
+    "no": 39,
+    "recommended_section": "2-2",
+    "recommended_anchor": "強風時の決まり",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "8-40",
+    "round": 8,
+    "no": 40,
+    "recommended_section": "2-3",
+    "recommended_anchor": "暴風後・地震後の点検",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-1",
+    "round": 9,
+    "no": 1,
+    "recommended_section": "1-2",
+    "recommended_anchor": "定格速度",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-2",
+    "round": 9,
+    "no": 2,
+    "recommended_section": "1-5",
+    "recommended_anchor": "剛脚と揺脚",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-3",
+    "round": 9,
+    "no": 3,
+    "recommended_section": "1-7",
+    "recommended_anchor": "素線・ストランド・心綱",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-4",
+    "round": 9,
+    "no": 4,
+    "recommended_section": "1-10",
+    "recommended_anchor": "巻過防止装置",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": "複数の安全装置を比較する問題。巻過防止だけでなく終端・逸走・過負荷の項目も必要。"
+  },
+  {
+    "id": "9-5",
+    "round": 9,
+    "no": 5,
+    "recommended_section": "1-9",
+    "recommended_anchor": "ボルトを締めても",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-6",
+    "round": 9,
+    "no": 6,
+    "recommended_section": "1-11",
+    "recommended_anchor": "形による分類と",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-7",
+    "round": 9,
+    "no": 7,
+    "recommended_section": "1-12",
+    "recommended_anchor": "どこへ給油",
+    "coverage": "解説の補足推奨",
+    "gap": "油・グリースの過剰充填によるかくはん抵抗・発熱、規定油量の説明が不足。「多く入れればよいわけではない」という概略のみ。",
+    "notes": ""
+  },
+  {
+    "id": "9-8",
+    "round": 9,
+    "no": 8,
+    "recommended_section": "1-4",
+    "recommended_anchor": "天井クレーン",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-9",
+    "round": 9,
+    "no": 9,
+    "recommended_section": "1-5",
+    "recommended_anchor": "トロリとホイスト",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-10",
+    "round": 9,
+    "no": 10,
+    "recommended_section": "1-14",
+    "recommended_anchor": "行ってはいけない操作",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-11",
+    "round": 9,
+    "no": 11,
+    "recommended_section": "2-1",
+    "recommended_anchor": "建設物等との間隔",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-12",
+    "round": 9,
+    "no": 12,
+    "recommended_section": "2-2",
+    "recommended_anchor": "立入禁止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-13",
+    "round": 9,
+    "no": 13,
+    "recommended_section": "2-5",
+    "recommended_anchor": "不適格な玉掛用具",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-14",
+    "round": 9,
+    "no": 14,
+    "recommended_section": "2-6",
+    "recommended_anchor": "免許の欠格・携帯",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-15",
+    "round": 9,
+    "no": 15,
+    "recommended_section": "2-4",
+    "recommended_anchor": "性能検査(検査証の更新)",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-16",
+    "round": 9,
+    "no": 16,
+    "recommended_section": "2-1",
+    "recommended_anchor": "設置報告書",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-17",
+    "round": 9,
+    "no": 17,
+    "recommended_section": "2-3",
+    "recommended_anchor": "記録して3年間保存",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-18",
+    "round": 9,
+    "no": 18,
+    "recommended_section": "2-6",
+    "recommended_anchor": "運転に必要な資格",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-19",
+    "round": 9,
+    "no": 19,
+    "recommended_section": "2-2",
+    "recommended_anchor": "強風時の決まり",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-20",
+    "round": 9,
+    "no": 20,
+    "recommended_section": "2-2",
+    "recommended_anchor": "並置クレーン",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-21",
+    "round": 9,
+    "no": 21,
+    "recommended_section": "3-1",
+    "recommended_anchor": "直流と交流",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-22",
+    "round": 9,
+    "no": 22,
+    "recommended_section": "3-2",
+    "recommended_anchor": "直列と並列が混ざった回路",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-23",
+    "round": 9,
+    "no": 23,
+    "recommended_section": "3-3",
+    "recommended_anchor": "かご形・巻線形：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-24",
+    "round": 9,
+    "no": 24,
+    "recommended_section": "3-4",
+    "recommended_anchor": "間接制御器",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-25",
+    "round": 9,
+    "no": 25,
+    "recommended_section": "3-5",
+    "recommended_anchor": "トロリ線給電",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-26",
+    "round": 9,
+    "no": 26,
+    "recommended_section": "3-4",
+    "recommended_anchor": "付属機器と保護装置",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-27",
+    "round": 9,
+    "no": 27,
+    "recommended_section": "3-6",
+    "recommended_anchor": "巻線形三相誘導電動機の速度制御",
+    "coverage": "解説の補足推奨",
+    "gap": "二次抵抗を増やすと同一負荷トルクに必要なすべりが増え、実速度が低下する関係の説明が不足。",
+    "notes": ""
+  },
+  {
+    "id": "9-28",
+    "round": 9,
+    "no": 28,
+    "recommended_section": "3-7",
+    "recommended_anchor": "導体・半導体・絶縁体",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-29",
+    "round": 9,
+    "no": 29,
+    "recommended_section": "3-7",
+    "recommended_anchor": "測定機器",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-30",
+    "round": 9,
+    "no": 30,
+    "recommended_section": "3-7",
+    "recommended_anchor": "接地（アース）",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-31",
+    "round": 9,
+    "no": 31,
+    "recommended_section": "4-1",
+    "recommended_anchor": "5．つり合い",
+    "coverage": "解説の補足推奨",
+    "gap": "偶力（合力が0でも回転作用が残る）の定義と例が本文にない。つり合いの二条件自体は記載済み。",
+    "notes": ""
+  },
+  {
+    "id": "9-32",
+    "round": 9,
+    "no": 32,
+    "recommended_section": "4-1",
+    "recommended_anchor": "6．梁を両端で支える",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-33",
+    "round": 9,
+    "no": 33,
+    "recommended_section": "4-2",
+    "recommended_anchor": "中空・丸い形",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-34",
+    "round": 9,
+    "no": 34,
+    "recommended_section": "4-3",
+    "recommended_anchor": "4．安定",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-35",
+    "round": 9,
+    "no": 35,
+    "recommended_section": "4-4",
+    "recommended_anchor": "2．合成速度",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-36",
+    "round": 9,
+    "no": 36,
+    "recommended_section": "4-4",
+    "recommended_anchor": "4．摩擦",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-37",
+    "round": 9,
+    "no": 37,
+    "recommended_section": "4-5",
+    "recommended_anchor": "2．時間や場所",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-38",
+    "round": 9,
+    "no": 38,
+    "recommended_section": "4-6",
+    "recommended_anchor": "3．つり角度を読み",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-39",
+    "round": 9,
+    "no": 39,
+    "recommended_section": "4-5",
+    "recommended_anchor": "3．応力：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "9-40",
+    "round": 9,
+    "no": 40,
+    "recommended_section": "4-7",
+    "recommended_anchor": "1．定滑車と動滑車",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-1",
+    "round": 10,
+    "no": 1,
+    "recommended_section": "1-2",
+    "recommended_anchor": "つり上げ荷重と定格荷重",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-2",
+    "round": 10,
+    "no": 2,
+    "recommended_section": "1-5",
+    "recommended_anchor": "ガーダの形が違う理由",
+    "coverage": "解説の補足推奨",
+    "gap": "プレートガーダのウェブ・フランジと、それぞれの働きが本文にはない（形式の大まかな違いのみ）。",
+    "notes": ""
+  },
+  {
+    "id": "10-3",
+    "round": 10,
+    "no": 3,
+    "recommended_section": "1-7",
+    "recommended_anchor": "ワイヤクリップの向き",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-4",
+    "round": 10,
+    "no": 4,
+    "recommended_section": "1-10",
+    "recommended_anchor": "衝突防止・逸走防止・斜行防止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-5",
+    "round": 10,
+    "no": 5,
+    "recommended_section": "1-9",
+    "recommended_anchor": "駆動歯車と従動歯車",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-6",
+    "round": 10,
+    "no": 6,
+    "recommended_section": "1-11",
+    "recommended_anchor": "1.5倍は",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-7",
+    "round": 10,
+    "no": 7,
+    "recommended_section": "1-12",
+    "recommended_anchor": "どこへ給油",
+    "coverage": "解説の補足推奨",
+    "gap": "油・グリースの過剰充填によるかくはん抵抗・発熱、規定油量の説明が不足。「多く入れればよいわけではない」という概略のみ。",
+    "notes": ""
+  },
+  {
+    "id": "10-8",
+    "round": 10,
+    "no": 8,
+    "recommended_section": "1-4",
+    "recommended_anchor": "ケーブルクレーン",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-9",
+    "round": 10,
+    "no": 9,
+    "recommended_section": "1-5",
+    "recommended_anchor": "トロリとホイスト",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-10",
+    "round": 10,
+    "no": 10,
+    "recommended_section": "1-14",
+    "recommended_anchor": "作業前に何を",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-11",
+    "round": 10,
+    "no": 11,
+    "recommended_section": "2-1",
+    "recommended_anchor": "建設物等との間隔",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-12",
+    "round": 10,
+    "no": 12,
+    "recommended_section": "2-2",
+    "recommended_anchor": "立入禁止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-13",
+    "round": 10,
+    "no": 13,
+    "recommended_section": "2-5",
+    "recommended_anchor": "安全係数(切断荷重",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-14",
+    "round": 10,
+    "no": 14,
+    "recommended_section": "2-6",
+    "recommended_anchor": "免許の欠格・携帯",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-15",
+    "round": 10,
+    "no": 15,
+    "recommended_section": "2-4",
+    "recommended_anchor": "休止・使用再開",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-16",
+    "round": 10,
+    "no": 16,
+    "recommended_section": "2-4",
+    "recommended_anchor": "休止・使用再開",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-17",
+    "round": 10,
+    "no": 17,
+    "recommended_section": "2-3",
+    "recommended_anchor": "月次自主検査",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-18",
+    "round": 10,
+    "no": 18,
+    "recommended_section": "2-6",
+    "recommended_anchor": "玉掛け業務の資格",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-19",
+    "round": 10,
+    "no": 19,
+    "recommended_section": "2-2",
+    "recommended_anchor": "安全弁の調整",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-20",
+    "round": 10,
+    "no": 20,
+    "recommended_section": "2-2",
+    "recommended_anchor": "並置クレーン",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-21",
+    "round": 10,
+    "no": 21,
+    "recommended_section": "3-1",
+    "recommended_anchor": "直流と交流",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-22",
+    "round": 10,
+    "no": 22,
+    "recommended_section": "3-2",
+    "recommended_anchor": "直列と並列が混ざった回路",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-23",
+    "round": 10,
+    "no": 23,
+    "recommended_section": "3-3",
+    "recommended_anchor": "直流電動機",
+    "coverage": "主根拠の説明不足",
+    "gap": "直巻直流電動機の無負荷での異常な速度上昇と始動特性の説明がない。",
+    "notes": ""
+  },
+  {
+    "id": "10-24",
+    "round": 10,
+    "no": 24,
+    "recommended_section": "3-4",
+    "recommended_anchor": "間接制御器",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-25",
+    "round": 10,
+    "no": 25,
+    "recommended_section": "3-5",
+    "recommended_anchor": "トロリ線給電",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-26",
+    "round": 10,
+    "no": 26,
+    "recommended_section": "3-4",
+    "recommended_anchor": "複合制御器（半間接制御）",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-27",
+    "round": 10,
+    "no": 27,
+    "recommended_section": "3-6",
+    "recommended_anchor": "インバーターを",
+    "coverage": "解説の補足推奨",
+    "gap": "回生制動・抵抗制動の補足が必要。10-27ではV/f制御と周波数に応じた電圧調整の理由も不足。",
+    "notes": ""
+  },
+  {
+    "id": "10-28",
+    "round": 10,
+    "no": 28,
+    "recommended_section": "3-7",
+    "recommended_anchor": "導体・半導体・絶縁体",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-29",
+    "round": 10,
+    "no": 29,
+    "recommended_section": "3-7",
+    "recommended_anchor": "電気装置の故障と原因",
+    "coverage": "主根拠の説明不足",
+    "gap": "保護動作の原因を調べずにヒューズ容量・過電流設定値を上げない説明が不足。ヒューズの概略のみ。",
+    "notes": ""
+  },
+  {
+    "id": "10-30",
+    "round": 10,
+    "no": 30,
+    "recommended_section": "3-7",
+    "recommended_anchor": "感電",
+    "coverage": "解説の補足推奨",
+    "gap": "感電防止・電源遮断は記載済みだが、残留電荷の確認・放電の具体的説明を補足する必要がある。",
+    "notes": ""
+  },
+  {
+    "id": "10-31",
+    "round": 10,
+    "no": 31,
+    "recommended_section": "4-1",
+    "recommended_anchor": "2．合力と分力",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-32",
+    "round": 10,
+    "no": 32,
+    "recommended_section": "4-1",
+    "recommended_anchor": "5．つり合い",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-33",
+    "round": 10,
+    "no": 33,
+    "recommended_section": "4-2",
+    "recommended_anchor": "1．形から体積",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-34",
+    "round": 10,
+    "no": 34,
+    "recommended_section": "4-3",
+    "recommended_anchor": "1．重心は",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-35",
+    "round": 10,
+    "no": 35,
+    "recommended_section": "4-4",
+    "recommended_anchor": "3．慣性と、円運動",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": "向心力の概念と遠心力の式があるが、等速円運動でも加速度があることを明示するとよい。"
+  },
+  {
+    "id": "10-36",
+    "round": 10,
+    "no": 36,
+    "recommended_section": "4-4",
+    "recommended_anchor": "4．摩擦",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-37",
+    "round": 10,
+    "no": 37,
+    "recommended_section": "4-5",
+    "recommended_anchor": "1．荷重の種類",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-38",
+    "round": 10,
+    "no": 38,
+    "recommended_section": "4-6",
+    "recommended_anchor": "3．つり角度を読み",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-39",
+    "round": 10,
+    "no": 39,
+    "recommended_section": "4-5",
+    "recommended_anchor": "3．応力：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "10-40",
+    "round": 10,
+    "no": 40,
+    "recommended_section": "4-7",
+    "recommended_anchor": "3．組合せ滑車",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-1",
+    "round": 11,
+    "no": 1,
+    "recommended_section": "1-2",
+    "recommended_anchor": "スパンと揚程",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-2",
+    "round": 11,
+    "no": 2,
+    "recommended_section": "1-5",
+    "recommended_anchor": "ガーダの形が違う理由",
+    "coverage": "解説の補足推奨",
+    "gap": "プレートガーダのウェブ・フランジと、それぞれの働きが本文にはない（形式の大まかな違いのみ）。",
+    "notes": ""
+  },
+  {
+    "id": "11-3",
+    "round": 11,
+    "no": 3,
+    "recommended_section": "1-7",
+    "recommended_anchor": "ワイヤクリップの向き",
+    "coverage": "主根拠の説明不足",
+    "gap": "シンブルという部品名・形と、アイのつぶれや摩耗を防ぐ役目が本文・表にない。",
+    "notes": ""
+  },
+  {
+    "id": "11-4",
+    "round": 11,
+    "no": 4,
+    "recommended_section": "1-10",
+    "recommended_anchor": "巻過防止装置",
+    "coverage": "主根拠の説明不足",
+    "gap": "非常停止と通常の停止の違い・解除後の再始動条件が本文で説明されていない。",
+    "notes": ""
+  },
+  {
+    "id": "11-5",
+    "round": 11,
+    "no": 5,
+    "recommended_section": "1-9",
+    "recommended_anchor": "回転を伝える軸と軸",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-6",
+    "round": 11,
+    "no": 6,
+    "recommended_section": "1-11",
+    "recommended_anchor": "ばねで制動し",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-7",
+    "round": 11,
+    "no": 7,
+    "recommended_section": "1-12",
+    "recommended_anchor": "どこへ給油",
+    "coverage": "解説の補足推奨",
+    "gap": "油面計による所定条件での油量確認と、給油周期を運転時間等に合わせる説明が不足。",
+    "notes": ""
+  },
+  {
+    "id": "11-8",
+    "round": 11,
+    "no": 8,
+    "recommended_section": "1-4",
+    "recommended_anchor": "ケーブルクレーン",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-9",
+    "round": 11,
+    "no": 9,
+    "recommended_section": "1-3",
+    "recommended_anchor": "横行と走行",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-10",
+    "round": 11,
+    "no": 10,
+    "recommended_section": "3-4",
+    "recommended_anchor": "制御器による制御",
+    "coverage": "主根拠の説明不足",
+    "gap": "加速しないときに最終ノッチまで進めない理由が本文にない。教材の「追いノッチ」は振れ止め操作の説明。",
+    "notes": ""
+  },
+  {
+    "id": "11-11",
+    "round": 11,
+    "no": 11,
+    "recommended_section": "2-1",
+    "recommended_anchor": "建設物等との間隔",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-12",
+    "round": 11,
+    "no": 12,
+    "recommended_section": "2-2",
+    "recommended_anchor": "立入禁止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-13",
+    "round": 11,
+    "no": 13,
+    "recommended_section": "2-5",
+    "recommended_anchor": "不適格な玉掛用具",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-14",
+    "round": 11,
+    "no": 14,
+    "recommended_section": "2-6",
+    "recommended_anchor": "免許の欠格・携帯",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-15",
+    "round": 11,
+    "no": 15,
+    "recommended_section": "2-3",
+    "recommended_anchor": "年次自主検査",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-16",
+    "round": 11,
+    "no": 16,
+    "recommended_section": "2-1",
+    "recommended_anchor": "クレーン検査証",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-17",
+    "round": 11,
+    "no": 17,
+    "recommended_section": "2-3",
+    "recommended_anchor": "記録して3年間保存",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-18",
+    "round": 11,
+    "no": 18,
+    "recommended_section": "2-6",
+    "recommended_anchor": "運転に必要な資格",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-19",
+    "round": 11,
+    "no": 19,
+    "recommended_section": "2-2",
+    "recommended_anchor": "強風時の決まり",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-20",
+    "round": 11,
+    "no": 20,
+    "recommended_section": "2-2",
+    "recommended_anchor": "並置クレーン",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-21",
+    "round": 11,
+    "no": 21,
+    "recommended_section": "3-1",
+    "recommended_anchor": "直流と交流",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-22",
+    "round": 11,
+    "no": 22,
+    "recommended_section": "3-2",
+    "recommended_anchor": "直列と並列が混ざった回路",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-23",
+    "round": 11,
+    "no": 23,
+    "recommended_section": "3-3",
+    "recommended_anchor": "同期速度――",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-24",
+    "round": 11,
+    "no": 24,
+    "recommended_section": "3-4",
+    "recommended_anchor": "付属機器と保護装置",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-25",
+    "round": 11,
+    "no": 25,
+    "recommended_section": "3-5",
+    "recommended_anchor": "キャブタイヤケーブル給電",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-26",
+    "round": 11,
+    "no": 26,
+    "recommended_section": "3-4",
+    "recommended_anchor": "付属機器と保護装置",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-27",
+    "round": 11,
+    "no": 27,
+    "recommended_section": "3-3",
+    "recommended_anchor": "かご形・巻線形：",
+    "coverage": "解説の補足推奨",
+    "gap": "回生制動・抵抗制動の補足が必要。10-27ではV/f制御と周波数に応じた電圧調整の理由も不足。",
+    "notes": ""
+  },
+  {
+    "id": "11-28",
+    "round": 11,
+    "no": 28,
+    "recommended_section": "3-7",
+    "recommended_anchor": "導体・半導体・絶縁体",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-29",
+    "round": 11,
+    "no": 29,
+    "recommended_section": "3-7",
+    "recommended_anchor": "測定機器",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-30",
+    "round": 11,
+    "no": 30,
+    "recommended_section": "3-7",
+    "recommended_anchor": "接地（アース）",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-31",
+    "round": 11,
+    "no": 31,
+    "recommended_section": "4-1",
+    "recommended_anchor": "2．合力と分力",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-32",
+    "round": 11,
+    "no": 32,
+    "recommended_section": "4-1",
+    "recommended_anchor": "6．梁を両端で支える",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-33",
+    "round": 11,
+    "no": 33,
+    "recommended_section": "4-2",
+    "recommended_anchor": "中空・丸い形",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-34",
+    "round": 11,
+    "no": 34,
+    "recommended_section": "4-3",
+    "recommended_anchor": "4．安定",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-35",
+    "round": 11,
+    "no": 35,
+    "recommended_section": "4-4",
+    "recommended_anchor": "3．慣性と、円運動",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-36",
+    "round": 11,
+    "no": 36,
+    "recommended_section": "4-4",
+    "recommended_anchor": "4．摩擦",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-37",
+    "round": 11,
+    "no": 37,
+    "recommended_section": "4-5",
+    "recommended_anchor": "2．時間や場所",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-38",
+    "round": 11,
+    "no": 38,
+    "recommended_section": "4-6",
+    "recommended_anchor": "3．つり角度を読み",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-39",
+    "round": 11,
+    "no": 39,
+    "recommended_section": "4-5",
+    "recommended_anchor": "5．応力ひずみ",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "11-40",
+    "round": 11,
+    "no": 40,
+    "recommended_section": "4-7",
+    "recommended_anchor": "3．組合せ滑車",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-1",
+    "round": 12,
+    "no": 1,
+    "recommended_section": "1-3",
+    "recommended_anchor": "起伏と旋回",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-2",
+    "round": 12,
+    "no": 2,
+    "recommended_section": "1-13",
+    "recommended_anchor": "車輪――",
+    "coverage": "主根拠の説明不足",
+    "gap": "車輪の脱輪防止用フランジと、ガーダのキャンバを区別する説明が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "12-3",
+    "round": 12,
+    "no": 3,
+    "recommended_section": "1-7",
+    "recommended_anchor": "普通よりとラングより",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-4",
+    "round": 12,
+    "no": 4,
+    "recommended_section": "1-10",
+    "recommended_anchor": "衝突防止・逸走防止・斜行防止",
+    "coverage": "主根拠の説明不足",
+    "gap": "非常停止と通常の停止の違い・解除後の再始動条件が本文で説明されていない。",
+    "notes": ""
+  },
+  {
+    "id": "12-5",
+    "round": 12,
+    "no": 5,
+    "recommended_section": "1-9",
+    "recommended_anchor": "二段の減速比",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-6",
+    "round": 12,
+    "no": 6,
+    "recommended_section": "1-11",
+    "recommended_anchor": "形による分類と",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-7",
+    "round": 12,
+    "no": 7,
+    "recommended_section": "1-12",
+    "recommended_anchor": "どこへ給油",
+    "coverage": "主根拠の説明不足",
+    "gap": "潤滑油の粘度と温度・速度・荷重、過大粘度による抵抗・発熱の説明が本文にない。",
+    "notes": ""
+  },
+  {
+    "id": "12-8",
+    "round": 12,
+    "no": 8,
+    "recommended_section": "1-8",
+    "recommended_anchor": "スプレッダ",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-9",
+    "round": 12,
+    "no": 9,
+    "recommended_section": "1-13",
+    "recommended_anchor": "ドラムとシーブの違い",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-10",
+    "round": 12,
+    "no": 10,
+    "recommended_section": "1-14",
+    "recommended_anchor": "フックを荷の重心",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-11",
+    "round": 12,
+    "no": 11,
+    "recommended_section": "2-1",
+    "recommended_anchor": "建設物等との間隔",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-12",
+    "round": 12,
+    "no": 12,
+    "recommended_section": "2-2",
+    "recommended_anchor": "立入禁止",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-13",
+    "round": 12,
+    "no": 13,
+    "recommended_section": "2-5",
+    "recommended_anchor": "不適格な玉掛用具",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-14",
+    "round": 12,
+    "no": 14,
+    "recommended_section": "2-6",
+    "recommended_anchor": "免許の欠格・携帯",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-15",
+    "round": 12,
+    "no": 15,
+    "recommended_section": "2-4",
+    "recommended_anchor": "性能検査(検査証の更新)",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-16",
+    "round": 12,
+    "no": 16,
+    "recommended_section": "2-4",
+    "recommended_anchor": "休止・使用再開",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-17",
+    "round": 12,
+    "no": 17,
+    "recommended_section": "2-3",
+    "recommended_anchor": "作業開始前の点検",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-18",
+    "round": 12,
+    "no": 18,
+    "recommended_section": "2-6",
+    "recommended_anchor": "玉掛け業務の資格",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-19",
+    "round": 12,
+    "no": 19,
+    "recommended_section": "2-2",
+    "recommended_anchor": "過負荷の制限",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-20",
+    "round": 12,
+    "no": 20,
+    "recommended_section": "2-2",
+    "recommended_anchor": "組立て等の作業",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-21",
+    "round": 12,
+    "no": 21,
+    "recommended_section": "3-2",
+    "recommended_anchor": "並列接続の合成抵抗",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-22",
+    "round": 12,
+    "no": 22,
+    "recommended_section": "3-2",
+    "recommended_anchor": "電力・電力量・ジュール熱",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-23",
+    "round": 12,
+    "no": 23,
+    "recommended_section": "3-3",
+    "recommended_anchor": "すべり――",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-24",
+    "round": 12,
+    "no": 24,
+    "recommended_section": "3-4",
+    "recommended_anchor": "間接制御器",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-25",
+    "round": 12,
+    "no": 25,
+    "recommended_section": "3-2",
+    "recommended_anchor": "ジュール熱：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-26",
+    "round": 12,
+    "no": 26,
+    "recommended_section": "3-4",
+    "recommended_anchor": "付属機器と保護装置",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-27",
+    "round": 12,
+    "no": 27,
+    "recommended_section": "3-6",
+    "recommended_anchor": "インバーターを",
+    "coverage": "主根拠の説明不足",
+    "gap": "回生制動と抵抗制動、エネルギーの行先の区別が本文・表にない。",
+    "notes": ""
+  },
+  {
+    "id": "12-28",
+    "round": 12,
+    "no": 28,
+    "recommended_section": "3-7",
+    "recommended_anchor": "絶縁・漏えい電流",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-29",
+    "round": 12,
+    "no": 29,
+    "recommended_section": "3-7",
+    "recommended_anchor": "電気装置の故障と原因",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-30",
+    "round": 12,
+    "no": 30,
+    "recommended_section": "3-7",
+    "recommended_anchor": "感電",
+    "coverage": "解説の補足推奨",
+    "gap": "感電防止・電源遮断は記載済みだが、残留電荷の確認・放電の具体的説明を補足する必要がある。",
+    "notes": ""
+  },
+  {
+    "id": "12-31",
+    "round": 12,
+    "no": 31,
+    "recommended_section": "4-1",
+    "recommended_anchor": "4．モーメント",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-32",
+    "round": 12,
+    "no": 32,
+    "recommended_section": "4-1",
+    "recommended_anchor": "6．梁を両端で支える",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-33",
+    "round": 12,
+    "no": 33,
+    "recommended_section": "4-2",
+    "recommended_anchor": "中空・丸い形",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-34",
+    "round": 12,
+    "no": 34,
+    "recommended_section": "4-3",
+    "recommended_anchor": "3．よく出る形の重心",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": "対称な質量分布の重心が対称面上にある一般則は、形別重心からの応用になる。"
+  },
+  {
+    "id": "12-35",
+    "round": 12,
+    "no": 35,
+    "recommended_section": "4-4",
+    "recommended_anchor": "1．速さ・速度・加速度",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-36",
+    "round": 12,
+    "no": 36,
+    "recommended_section": "4-4",
+    "recommended_anchor": "4．摩擦",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-37",
+    "round": 12,
+    "no": 37,
+    "recommended_section": "4-5",
+    "recommended_anchor": "2．時間や場所",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-38",
+    "round": 12,
+    "no": 38,
+    "recommended_section": "4-6",
+    "recommended_anchor": "3．つり角度を読み",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-39",
+    "round": 12,
+    "no": 39,
+    "recommended_section": "4-5",
+    "recommended_anchor": "3．応力：",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  },
+  {
+    "id": "12-40",
+    "round": 12,
+    "no": 40,
+    "recommended_section": "4-7",
+    "recommended_anchor": "1．定滑車と動滑車",
+    "coverage": "主な正解根拠の記載あり",
+    "gap": "",
+    "notes": ""
+  }
+]
