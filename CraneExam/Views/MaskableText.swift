@@ -57,6 +57,7 @@ enum MaskParser {
 /// {{ }} で囲まれた語句を、クイズON時に赤い帯で隠す。1語ずつタップで解除。
 /// クイズOFF時は従来の Text(markdown) と同じ見た目で描く。
 struct MaskableText: View {
+    @ScaledMetric(relativeTo: .body) private var textScale: CGFloat = 1
     @Environment(\.quizMode) private var quizMode
     @Environment(\.quizSeed) private var quizSeed
     @Environment(\.quizCategory) private var quizCategory
@@ -76,7 +77,7 @@ struct MaskableText: View {
 
     var body: some View {
         Text(attributed)
-            .font(.system(size: size, weight: weight))
+            .font(.system(size: size * textScale, weight: weight))
             .foregroundColor(color)
             .lineSpacing(lineSpacingV)
             .tint(Theme.accent)   // 隠し語=リンク。既定リンク色をアクセントに（各runで上書きするので保険）
@@ -127,6 +128,13 @@ struct MaskableText: View {
             }
         }
         var out = markdown(formatted)
+        // 太字は「読む場所」が分かる控えめなマーカーに。隠し語の処理はこの後に優先する。
+        for run in Array(out.runs) {
+            if run.inlinePresentationIntent?.contains(.stronglyEmphasized) == true {
+                out[run.range].foregroundColor = Theme.studyKey
+                out[run.range].backgroundColor = Theme.studyKey.opacity(0.09)
+            }
+        }
         for run in Array(out.runs) {
             guard let url = run.link, url.scheme == "mask", let host = url.host,
                   let id = Int(host), let cat = candidates[id] else { continue }
@@ -170,7 +178,7 @@ struct MaskableText: View {
     }
 
     private func markdown(_ s: String) -> AttributedString {
-        if let a = try? AttributedString(markdown: s) { return a }
+        if let a = try? AttributedString(markdown: s, options: .init(interpretedSyntax: .inlineOnlyPreservingWhitespace)) { return a }
         return AttributedString(s)
     }
 }

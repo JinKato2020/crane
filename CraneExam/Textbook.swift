@@ -33,6 +33,7 @@ struct TBSection: Codable, Identifiable {
 /// 本文を構成するブロック
 /// type: "sub"(小見出し) / "p"(本文) / "ul"(箇条書き) / "table"(表) / "fig"(図・等幅) / "point"(ここが出る)
 struct TBBlock: Codable {
+    let style: String?      // lead / tip / caution / numbers。既存の型を保った表示指定
     let quizTerms: [String]? // このブロックで思い出す重要語句・数値（本文は変更しない）
     let type: String
     let text: String?

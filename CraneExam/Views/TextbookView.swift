@@ -235,13 +235,14 @@ struct SectionContentView: View {
         section.blocks.contains { b in
             if !(b.quizTerms ?? []).isEmpty { return true }
             if MaskParser.hasMask(b.text) { return true }
+            if (b.rows ?? []).joined().contains(where: { MaskParser.hasMask($0) }) { return true }
             return (b.items ?? []).contains { MaskParser.hasMask($0) }
         }
     }
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 24) {
+            VStack(alignment: .leading, spacing: 18) {
                 Text(section.title)
                     .font(.system(size: 21, weight: .heavy)).foregroundColor(Theme.fg)
                     .lineSpacing(5)
@@ -337,12 +338,15 @@ struct BlockView: View {
     var body: some View {
         switch block.type {
         case "sub":
-            MaskableText(raw: block.text ?? "", size: 16, weight: .bold, color: Theme.accent2, lineSpacingV: 5)
-                .padding(.top, 12).padding(.bottom, 2)
+            MaskableText(raw: block.text ?? "", size: 19, weight: .bold, color: Theme.fg, lineSpacingV: 6)
+                .padding(.leading, 12)
+                .overlay(alignment: .leading) {
+                    RoundedRectangle(cornerRadius: 2).fill(Theme.studyKey).frame(width: 4)
+                }
+                .padding(.top, 20).padding(.bottom, 6)
 
         case "p":
-            MaskableText(raw: block.text ?? "", terms: block.quizTerms ?? [], size: 15, color: Theme.fg, lineSpacingV: 9)
-                .padding(.vertical, 2)
+            paragraph
 
         case "ul":
             VStack(alignment: .leading, spacing: 13) {
@@ -420,18 +424,19 @@ struct BlockView: View {
             .padding(.vertical, 4)
 
         case "table":
-            TableBlock(headers: block.headers ?? [], rows: block.rows ?? [])
+            TableBlock(headers: block.headers ?? [], rows: block.rows ?? [],
+                       terms: block.quizTerms ?? [], numberStyle: block.style == "numbers")
 
         case "point":
             VStack(alignment: .leading, spacing: 12) {
                 HStack(spacing: 7) {
                     Image(systemName: "lightbulb.fill").font(.system(size: 13)).foregroundColor(Theme.accent)
-                    Text("ここが出る").font(.system(size: 14, weight: .heavy)).foregroundColor(Theme.accent)
+                    Text("ここを覚える").font(.system(size: 16, weight: .heavy)).foregroundColor(Theme.accent2)
                 }
                 ForEach(Array((block.items ?? []).enumerated()), id: \.offset) { _, s in
                     HStack(alignment: .top, spacing: 11) {
                         Text("▶").font(.system(size: 9)).foregroundColor(Theme.accent).padding(.top, 6)
-                        MaskableText(raw: s, terms: block.quizTerms ?? [], size: 14.5, weight: .medium, color: Theme.fg, lineSpacingV: 7)
+                        MaskableText(raw: s, terms: block.quizTerms ?? [], size: 16, weight: .medium, color: Theme.fg, lineSpacingV: 7)
                     }
                 }
             }
@@ -445,22 +450,62 @@ struct BlockView: View {
             EmptyView()
         }
     }
+
+    private var studyColor: Color {
+        block.style == "caution" ? Theme.warn : Theme.studyKey
+    }
+
+    @ViewBuilder private var paragraph: some View {
+        if let style = block.style, ["lead", "tip", "caution"].contains(style) {
+            VStack(alignment: .leading, spacing: 10) {
+                Label(style == "lead" ? "まず、これだけ" : (style == "tip" ? "なるほど" : "取り違え注意"),
+                      systemImage: style == "lead" ? "bookmark.fill" : (style == "tip" ? "lightbulb" : "exclamationmark.circle"))
+                    .font(.system(size: 13, weight: .bold)).foregroundColor(studyColor)
+                MaskableText(raw: block.text ?? "", terms: block.quizTerms ?? [],
+                             size: style == "lead" ? 18 : 16,
+                             weight: style == "lead" ? .semibold : .regular,
+                             color: Theme.fg, lineSpacingV: 7)
+            }
+            .padding(18).frame(maxWidth: .infinity, alignment: .leading)
+            .background(studyColor.opacity(0.07))
+            .clipShape(RoundedRectangle(cornerRadius: 14))
+        } else {
+            MaskableText(raw: block.text ?? "", terms: block.quizTerms ?? [], size: 16, color: Theme.fg, lineSpacingV: 8)
+                .padding(.vertical, 2)
+        }
+    }
 }
 
 /// 表の描画(2列はキー/値、3列以上は行カード)
 struct TableBlock: View {
     let headers: [String]
     let rows: [[String]]
+    var terms: [String] = []
+    var numberStyle = false
 
     var body: some View {
-        if headers.count <= 2 {
+        if numberStyle {
+            VStack(alignment: .leading, spacing: 12) {
+                ForEach(Array(rows.enumerated()), id: \.offset) { _, row in
+                    let value = row.dropFirst().joined(separator: " ／ ")
+                    VStack(alignment: .leading, spacing: 9) {
+                        MaskableText(raw: row.first ?? "", size: 14, weight: .semibold, color: Theme.muted, lineSpacingV: 5)
+                        MaskableText(raw: value, terms: terms,
+                                     size: value.count > 36 ? 16 : 22, weight: .bold, color: Theme.fg, lineSpacingV: 7)
+                    }
+                    .padding(18).frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Theme.studyKey.opacity(0.06))
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+            }
+        } else if headers.count <= 2 {
             VStack(spacing: 0) {
                 if !headers.isEmpty {
                     HStack(alignment: .top, spacing: 10) {
-                        Text(headers[0]).font(.system(size: 11, weight: .bold)).foregroundColor(Theme.muted)
-                            .frame(width: 104, alignment: .leading)
+                        Text(headers[0]).font(.system(size: 13, weight: .bold)).foregroundColor(Theme.muted)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         if headers.count > 1 {
-                            Text(headers[1]).font(.system(size: 11, weight: .bold)).foregroundColor(Theme.muted)
+                            Text(headers[1]).font(.system(size: 13, weight: .bold)).foregroundColor(Theme.muted)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }
@@ -469,15 +514,11 @@ struct TableBlock: View {
                 }
                 ForEach(Array(rows.enumerated()), id: \.offset) { i, r in
                     HStack(alignment: .top, spacing: 12) {
-                        Text(attr(r.first ?? "")).font(.system(size: 13.5, weight: .semibold)).foregroundColor(Theme.fg)
-                            .frame(width: 110, alignment: .leading)
-                            .lineSpacing(4)
-                            .fixedSize(horizontal: false, vertical: true)
+                        MaskableText(raw: r.first ?? "", terms: terms, size: 15, weight: .semibold, color: Theme.fg, lineSpacingV: 5)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         if r.count > 1 {
-                            Text(attr(r[1])).font(.system(size: 13.5)).foregroundColor(Theme.muted)
+                            MaskableText(raw: r[1], terms: terms, size: 15, color: Theme.fg, lineSpacingV: 6)
                                 .frame(maxWidth: .infinity, alignment: .leading)
-                                .lineSpacing(5)
-                                .fixedSize(horizontal: false, vertical: true)
                         }
                     }
                     .padding(.horizontal, 15).padding(.vertical, 13)
@@ -491,18 +532,14 @@ struct TableBlock: View {
             VStack(spacing: 12) {
                 ForEach(Array(rows.enumerated()), id: \.offset) { _, r in
                     VStack(alignment: .leading, spacing: 8) {
-                        Text(attr(r.first ?? "")).font(.system(size: 14, weight: .bold)).foregroundColor(Theme.fg)
-                            .lineSpacing(5)
-                            .fixedSize(horizontal: false, vertical: true)
+                        MaskableText(raw: r.first ?? "", terms: terms, size: 16, weight: .bold, color: Theme.fg, lineSpacingV: 5)
                         ForEach(1..<max(1, r.count), id: \.self) { j in
                             if j < headers.count {
                                 HStack(alignment: .top, spacing: 8) {
                                     Text(headers[j]).font(.system(size: 11.5, weight: .semibold)).foregroundColor(Theme.accent2)
                                         .frame(width: 62, alignment: .leading)
-                                    Text(attr(r[j])).font(.system(size: 13.5)).foregroundColor(Theme.muted)
+                                    MaskableText(raw: r[j], terms: terms, size: 15, color: Theme.fg, lineSpacingV: 6)
                                         .frame(maxWidth: .infinity, alignment: .leading)
-                                        .lineSpacing(5)
-                                        .fixedSize(horizontal: false, vertical: true)
                                 }
                             }
                         }

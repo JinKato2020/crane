@@ -19,7 +19,10 @@ enum ContentOTA {
     ]
 
     struct Entry: Decodable { let sha256: String; let size: Int? }
-    struct Manifest: Decodable { let files: [String: Entry] }
+    struct Manifest: Decodable {
+        let files: [String: Entry]
+        let generatedAt: String?
+    }
 
     // 端末のキャッシュ置き場(Caches)
     private static var cacheDir: URL {
@@ -141,6 +144,17 @@ enum ContentOTA {
               (mresp as? HTTPURLResponse)?.statusCode == 200,
               let remote = try? JSONDecoder().decode(Manifest.self, from: mdata) else {
             return SyncResult(updated: 0, failed: 1, message: "更新を確認できませんでした。通信を確認して、もう一度お試しください。")
+        }
+
+        // 新しいアプリの教材を、まだ更新されていない棚の古い教材へ戻さない。
+        // 配信日時のない従来形式では、これまで通りshaによる同期を行う。
+        let dateFormatter = ISO8601DateFormatter()
+        if let bundledDateString = bundledManifest()?.generatedAt,
+           let remoteDateString = remote.generatedAt,
+           let bundledDate = dateFormatter.date(from: bundledDateString),
+           let remoteDate = dateFormatter.date(from: remoteDateString),
+           remoteDate < bundledDate {
+            return SyncResult(updated: 0, failed: 0, message: nil)
         }
 
         var cached = storedBundleTag() == bundleTag() ? readShas() : [:]
