@@ -1,0 +1,5463 @@
+{
+  "date": "2026-11-01",
+  "scope": {
+    "activeFiles": 370,
+    "uniqueContentsBefore": 341,
+    "activeFilesChanged": 44,
+    "allResourceVariantsChanged": 56
+  },
+  "coverage": "全参照画像の一覧目視と参照先確認を実施。原寸確認と本文・問題文との照合は懸念箇所を重点実施。全341種類を公式PDFの全図と一対一照合したという意味ではない。",
+  "contentCorrection": {
+    "question": "第9回 問3",
+    "finding": "問題文の「破線で囲んだ一組」に対し、3D出題図に破線がなかった。",
+    "fix": "最上部のストランドだけを破線で囲み、A/B/Cの指示先を維持。正解や用語名は図に追加していない。"
+  },
+  "sourceChecks": [
+    {
+      "source": "テキスト/書籍1.txt:729-733",
+      "subject": "キャンバ",
+      "result": "原寸図の無負荷側は正しく上向き。修正不要。"
+    },
+    {
+      "source": "テキスト/書籍1.txt:5985-6019",
+      "subject": "ロープ廃棄基準",
+      "result": "断線10%以上、222本なら23本以上、公称径7%超減少と一致。図の数値は維持。"
+    },
+    {
+      "source": "テキスト/書籍1.txt:6063-6068",
+      "subject": "チェーン廃棄基準",
+      "result": "伸び5%超、断面直径10%超の減少と一致。"
+    },
+    {
+      "source": "exams.json 第3回問10",
+      "subject": "二段歯車",
+      "result": "B=900×20/80=225、D=225×24/72=75。図の計算結果を円の外に移動。"
+    },
+    {
+      "source": "exams.json 第4回問8",
+      "subject": "シングル・ダブルガーダ",
+      "result": "解説図の英文を問題解説に合わせて日本語化。出題図には解答の説明を加えていない。"
+    }
+  ],
+  "validation": {
+    "missingActiveImages": 0,
+    "editedSVGTextOverlap": 0,
+    "editedSVGTextOutsideCanvas": 0,
+    "nativeSVGNumericCountersUnchanged": 32,
+    "manifestFilesChecked": 513,
+    "textbookAndExamJSONChanged": false,
+    "iOSDeviceTest": false
+  },
+  "publication": {
+    "OTA": false,
+    "build": false,
+    "commit": false,
+    "push": false
+  },
+  "generatedEdit": {
+    "skill": "C:/Users/jwpsa/.codex/skills/.system/imagegen/SKILL.md",
+    "source": "exec-88a31475-55f8-4236-9607-90606c2ba556.png",
+    "purpose": "第9回問3の破線不足の修正"
+  },
+  "assets": [
+    {
+      "id": 1,
+      "file": "1-10_supplement_f23_20261023.png",
+      "usage": [
+        "教材 1-10 重錘形・ロッド形は、つり具の動きを直接検出する例。ねじ形はドラムの回転から位置を検出する例。連動部・停止回路の細部は省略。"
+      ],
+      "exists": true,
+      "sha256": "805623599de359273b0a675c69cd3876a4be25afedd094a9840cf1ae98a2475d",
+      "width": 1473,
+      "height": 1068,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "805623599de359273b0a675c69cd3876a4be25afedd094a9840cf1ae98a2475d"
+    },
+    {
+      "id": 2,
+      "file": "1-10_supplement_f24_20261023.png",
+      "usage": [
+        "教材 1-10 車輪止めで走行を制限し、緩衝装置で衝撃を和らげる。"
+      ],
+      "exists": true,
+      "sha256": "9ba600931f8f0b8da16a10efe184a5d6b46089af3b55a74f14643b236902cd82",
+      "width": 1472,
+      "height": 1069,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "9ba600931f8f0b8da16a10efe184a5d6b46089af3b55a74f14643b236902cd82"
+    },
+    {
+      "id": 3,
+      "file": "1-10_supplement_f25_20261023.png",
+      "usage": [
+        "教材 1-10 接近を検出して停止させ、クレーン同士の衝突を防ぐ。"
+      ],
+      "exists": true,
+      "sha256": "5fb294194b5ad8d3142098d96d2ac8553df8365a51f3830a18db731915dd1d50",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "5fb294194b5ad8d3142098d96d2ac8553df8365a51f3830a18db731915dd1d50"
+    },
+    {
+      "id": 4,
+      "file": "1-10_supplement_f26_20261023.png",
+      "usage": [
+        "教材 1-10 レールを挟むか、地面側へ固定して、風による逸走を防ぐ。"
+      ],
+      "exists": true,
+      "sha256": "b0964abe8b079f2a7f601b1971f8c16ec6ebe5dae2cffac57c3740ad406693d5",
+      "width": 1472,
+      "height": 1068,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "b0964abe8b079f2a7f601b1971f8c16ec6ebe5dae2cffac57c3740ad406693d5"
+    },
+    {
+      "id": 5,
+      "file": "1-10_supplement_f27_20261023.png",
+      "usage": [
+        "教材 1-10 通路に設ける安全床スイッチの例。床を踏むと主回路を遮断し、通行時の感電を防ぐ。"
+      ],
+      "exists": true,
+      "sha256": "5e5cbf68b26529791b6787a136374fe58810888aa15246afb0c030ad02986600",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "5e5cbf68b26529791b6787a136374fe58810888aa15246afb0c030ad02986600"
+    },
+    {
+      "id": 6,
+      "file": "1-11.svg",
+      "usage": [
+        "教材 1-11 電磁ブレーキの作動"
+      ],
+      "exists": true,
+      "sha256": "9e9225f15d45e668717415f02e25383c2bbc17493906e73cea543ff3c772fa39",
+      "width": 1440.0,
+      "height": 1000.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "28ae1aec084b1408c7791029c4bf8ce4da9bdf340c0ccbef23247578eeec2fab",
+      "changes": [
+        "不要な定型フッターを削除",
+        "小さい補足文字を拡大",
+        "引出線のコントラストを改善",
+        "線・矢印を太く",
+        "見出し・説明行の余白と行間を再配置"
+      ]
+    },
+    {
+      "id": 7,
+      "file": "1-11_readable21.png",
+      "usage": [
+        "用語 1 無電圧作動型ブレーキ"
+      ],
+      "exists": true,
+      "sha256": "ced5377bbef06786206ae5750ea2450c3e10a443e130e0f0355429c78653e04e",
+      "width": 1440,
+      "height": 1000,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "fef726e34cb2fc81e9cce01b272afd2be22ec12537539f4a239cfa53518c9956",
+      "changes": [
+        "不要な定型フッターを削除",
+        "小さい補足文字を拡大",
+        "引出線のコントラストを改善",
+        "線・矢印を太く",
+        "見出し・説明行の余白と行間を再配置"
+      ]
+    },
+    {
+      "id": 8,
+      "file": "1-11_supplement_f28_20261023.png",
+      "usage": [
+        "教材 1-11 ばねで制動し、通電した電磁石で開放する方式の模式図。部品の形による分類と、作動方式による分類を分ける。"
+      ],
+      "exists": true,
+      "sha256": "9a613366e3c27ca97617f0935bc777f091dfa95f6ff4319fc65c42099a3fbceb",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "9a613366e3c27ca97617f0935bc777f091dfa95f6ff4319fc65c42099a3fbceb"
+    },
+    {
+      "id": 9,
+      "file": "1-11_supplement_f29_20261023.png",
+      "usage": [
+        "教材 1-11 電動機で油圧を作り、押上機とリンクでブレーキを開放する代表的な方式。"
+      ],
+      "exists": true,
+      "sha256": "22d47acfae46f6ce131dba608906d2dfc34e3de5c7783d33e245b0843b1c5973",
+      "width": 1472,
+      "height": 1068,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "22d47acfae46f6ce131dba608906d2dfc34e3de5c7783d33e245b0843b1c5973"
+    },
+    {
+      "id": 10,
+      "file": "1-11_supplement_f30_20261023.png",
+      "usage": [
+        "教材 1-11 ドラムのまわりの帯を締め、摩擦で回転を止める。"
+      ],
+      "exists": true,
+      "sha256": "ca6e073892d4d9a65f84b9f8bb57063b03a62d2ce700d3fc506508646348c4b5",
+      "width": 1472,
+      "height": 1069,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "ca6e073892d4d9a65f84b9f8bb57063b03a62d2ce700d3fc506508646348c4b5"
+    },
+    {
+      "id": 11,
+      "file": "1-11_supplement_f31_20261023.png",
+      "usage": [
+        "教材 1-11 足で加えた力を油圧で伝え、パッドで円板を挟んで制動する模式図。押上機ブレーキの開放動作とは区別する。"
+      ],
+      "exists": true,
+      "sha256": "c42fcbec8af105db496ee282663227c414374f2b5019a6cda6f115d49cef029d",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c42fcbec8af105db496ee282663227c414374f2b5019a6cda6f115d49cef029d"
+    },
+    {
+      "id": 12,
+      "file": "1-12_lubrication_readable21.png",
+      "usage": [
+        "教材 1-12 給油の方式と周期。給油周期は軸受形式・荷重・回転数・環境で異なる。指定の種類・量・周期に従う"
+      ],
+      "exists": true,
+      "sha256": "56f9e453bdc5d93f7d41564c6431f74470c65911e62cb2370b7e1e5fdb15dd70",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "56f9e453bdc5d93f7d41564c6431f74470c65911e62cb2370b7e1e5fdb15dd70"
+    },
+    {
+      "id": 13,
+      "file": "1-12_sway_concept21.png",
+      "usage": [
+        "教材 1-14 動かし始めには荷が後ろに残り、止めるときには前へ進もうとする。荷の慣性が揺れにつながる。"
+      ],
+      "exists": true,
+      "sha256": "678a22a16c6c4a3971e3552e4bd4923f8fc76de71fe2855e2a80e5781c839f01",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "678a22a16c6c4a3971e3552e4bd4923f8fc76de71fe2855e2a80e5781c839f01"
+    },
+    {
+      "id": 14,
+      "file": "1-12_wheel_stop.svg",
+      "usage": [
+        "教材 1-10 横行レールの車輪止め。クレーン構造規格 第39条。寸法はレールの走行面を基準に測る。寸法の位置を示す模式図"
+      ],
+      "exists": true,
+      "sha256": "705722017c65ef2a0cc6c1f74d80ed963b504670526f7315deeb82ccb8afb3cb",
+      "width": 2200.0,
+      "height": 1500.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "9489592833034585d348f0179e5eb609994f4f65865a8119e68d74122901df9b",
+      "changes": [
+        "引出線のコントラストを改善",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 15,
+      "file": "1-13_supplement_f22_20261023.svg",
+      "usage": [
+        "教材 1-13 Dはロープの中心が通るピッチ円の直径、dはロープ径。同じdなら、Dが大きいほど曲がりが緩やか。"
+      ],
+      "exists": true,
+      "sha256": "fc18036d81c883ec30761666e1e926eca3d0a0aa6c19e971f7e68ec9fa9d6706",
+      "width": 1600.0,
+      "height": 900.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "ebe78bc90b92377433f991f1e6ef2d04e3ad3862c935e4eeb9dbf5628adb523b",
+      "changes": [
+        "小さい補足文字を拡大"
+      ]
+    },
+    {
+      "id": 16,
+      "file": "1-14_supplement_f32_20261023.png",
+      "usage": [
+        "教材 1-14 発進時の追いノッチの考え方。荷が進行方向へ戻る動きに合わせて加速する。実際の操作は機種・制御方式に対応する手順による。"
+      ],
+      "exists": true,
+      "sha256": "e89d1b2b0b06a5b80a4005a4736824a8e2fcdd16249cc4fd45a47e2ad635f062",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "e89d1b2b0b06a5b80a4005a4736824a8e2fcdd16249cc4fd45a47e2ad635f062"
+    },
+    {
+      "id": 17,
+      "file": "1-14_supplement_f33_20261023.png",
+      "usage": [
+        "教材 1-14 切った後も少し進むため、短い操作で位置を合わせる。"
+      ],
+      "exists": true,
+      "sha256": "329a97c1d6731b527dcac8f60e7baf625e7a86822d9bec246e73bf942287f3c2",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "329a97c1d6731b527dcac8f60e7baf625e7a86822d9bec246e73bf942287f3c2"
+    },
+    {
+      "id": 18,
+      "file": "1-1_supplement_f01_20261023.png",
+      "usage": [
+        "教材 1-1 同じ「つって運ぶ」機械でも、構造によって区分が違う。"
+      ],
+      "exists": true,
+      "sha256": "25a8ed5050cb9be8cb515b215e1d6052cf962de0af927ee11d614d0c295b1994",
+      "width": 1473,
+      "height": 1068,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "25a8ed5050cb9be8cb515b215e1d6052cf962de0af927ee11d614d0c295b1994"
+    },
+    {
+      "id": 19,
+      "file": "1-2_camber_concept21.png",
+      "usage": [
+        "教材 1-2 キャンバは無負荷時の上向きのそり。荷をつると、荷重によってはりが下向きにたわむ。"
+      ],
+      "exists": true,
+      "sha256": "b9b3f50d0119e3197423e3afcadcdf4c6e0d9b1a4e53b42eb190f9bb402ef55b",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "b9b3f50d0119e3197423e3afcadcdf4c6e0d9b1a4e53b42eb190f9bb402ef55b"
+    },
+    {
+      "id": 20,
+      "file": "1-2_jib_radius.svg",
+      "usage": [
+        "教材 1-2 ジブ傾斜角と作業半径"
+      ],
+      "exists": true,
+      "sha256": "1598441ced955d22e9a50f0678b422c263f0c32be6ffe26a4722cdae4bcfb1d5",
+      "width": 1440.0,
+      "height": 1000.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "9a7b620eb406b4ae5cd812f754f5eae87f4ee36ffc3dc3e3e84034617948a106",
+      "changes": [
+        "不要な定型フッターを削除",
+        "引出線のコントラストを改善",
+        "線・矢印を太く",
+        "見出し・説明行の余白と行間を再配置"
+      ]
+    },
+    {
+      "id": 21,
+      "file": "1-2_jib_radius_readable21.png",
+      "usage": [
+        "用語 1 定格荷重・作業半径／傾斜角"
+      ],
+      "exists": true,
+      "sha256": "10728e40f722f210c08e8aae8899166f7d706eaa2c4db5209031465454ce9965",
+      "width": 1440,
+      "height": 1000,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "ecb50fad93c79324399c60ee59a9e65323c6666ff6a76bbb2369d36f591ac134",
+      "changes": [
+        "不要な定型フッターを削除",
+        "引出線のコントラストを改善",
+        "線・矢印を太く",
+        "見出し・説明行の余白と行間を再配置"
+      ]
+    },
+    {
+      "id": 22,
+      "file": "1-2_lifting_load.svg",
+      "usage": [
+        "教材 1-2 つり上げ荷重と定格荷重"
+      ],
+      "exists": true,
+      "sha256": "aa22bb8c3aae2f4770c264dc8b8eeb07acb37a53a5860b394fa01eb83821e20f",
+      "width": 1440.0,
+      "height": 1000.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "dadaf1fdc189a02d636302b562bed7996f3a52075eb3125b6a7d8925fdec2674",
+      "changes": [
+        "不要な定型フッターを削除",
+        "小さい補足文字を拡大",
+        "引出線のコントラストを改善",
+        "線・矢印を太く",
+        "見出し・説明行の余白と行間を再配置"
+      ]
+    },
+    {
+      "id": 23,
+      "file": "1-2_radius_overload.svg",
+      "usage": [
+        "教材 1-2 作業半径と過負荷。数値は説明用の例。機械の姿勢は模式。実際の機種・ジブ長さ・姿勢に対応した定格荷重表を確認する"
+      ],
+      "exists": true,
+      "sha256": "6a3eff7bad2a50886f98a141dccbe1e2a16a3c3422b75e1a327d7f4931b029a8",
+      "width": 2400.0,
+      "height": 1650.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "6a3eff7bad2a50886f98a141dccbe1e2a16a3c3422b75e1a327d7f4931b029a8"
+    },
+    {
+      "id": 24,
+      "file": "1-2_runway_rail_readable21.png",
+      "usage": [
+        "教材 1-2 ランウェイと走行レール。赤の細長い部材＝走行レール　｜　受け桁・支持・継目・固定部を含む範囲＝ランウェイ"
+      ],
+      "exists": true,
+      "sha256": "7e1f21333e21505f91c5b9348e8de17e8a85314757e7f0627ccf22a11deab25d",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "7e1f21333e21505f91c5b9348e8de17e8a85314757e7f0627ccf22a11deab25d"
+    },
+    {
+      "id": 25,
+      "file": "1-2_supplement_f02_20261023.svg",
+      "usage": [
+        "教材 1-2 スパンは走行レールの中心間、揚程はつり具の上限から下限まで。同じ部分の位置を比べる。"
+      ],
+      "exists": true,
+      "sha256": "8b5fc8b38c346b0954d8d0ac17bcc056b8fd13f84ce81cd1799296cee393ca1c",
+      "width": 1600.0,
+      "height": 900.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "359f3d7f1e8cf8e2d411a098bcde3b7e7aa372a390f1ee2cbc3d81ebe1d0b0ab",
+      "changes": [
+        "小さい補足文字を拡大",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 26,
+      "file": "1-2_supplement_f03_20261023.svg",
+      "usage": [
+        "教材 1-2 荷のつり位置が動ける範囲の模式図。固定ジブの実際の範囲は旋回制限・作業半径などで決まる。"
+      ],
+      "exists": true,
+      "sha256": "5a5e64dc8c596669cae20a7c235b827214453cd7f133e7b6ce7078bbf6dc876e",
+      "width": 1600.0,
+      "height": 900.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "7777ce1ce028f82a9dc805723ae342eb8e8a1848c726f9be14f95c13b8bd491b",
+      "changes": [
+        "小さい補足文字を拡大"
+      ]
+    },
+    {
+      "id": 27,
+      "file": "1-3.svg",
+      "usage": [
+        "教材 1-3 クレーンの主な運動(天井＝走行・横行・巻上げ／ジブ＝起伏・旋回)"
+      ],
+      "exists": true,
+      "sha256": "940cdd391cda7e1cb08f6a4a01e32bcef31a13169f3343105c50d9cfdd6680d7",
+      "width": 1440.0,
+      "height": 1000.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "6b1b4d087bbdf06411229fb834bc426ac4c471c2988647c25aed78902d3120d6",
+      "changes": [
+        "不要な定型フッターを削除",
+        "見出し・説明行の余白と行間を再配置"
+      ]
+    },
+    {
+      "id": 28,
+      "file": "1-3_readable21.png",
+      "usage": [
+        "用語 1 横行／走行・起伏／旋回"
+      ],
+      "exists": true,
+      "sha256": "5631e0b2f6924412aa8d20302282b1ddb38e06696efc9952e0c550c19c85b325",
+      "width": 1440,
+      "height": 1000,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "7041ca471f9a3f9e87afe8f52d94b10350353873ea1e939efc8a6f413c5d35c3",
+      "changes": [
+        "不要な定型フッターを削除",
+        "見出し・説明行の余白と行間を再配置"
+      ]
+    },
+    {
+      "id": 29,
+      "file": "1-4_crane_types_readable21.png",
+      "usage": [
+        "教材 1-4 クレーンの種類。外観と基本機能を示す模式図。能力・機構・設置方法は用途と機種により異なる"
+      ],
+      "exists": true,
+      "sha256": "c62d065393cf346d5c2e0b01023656d56c104c2a1a79d0c7b96bce5ada544d2c",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c62d065393cf346d5c2e0b01023656d56c104c2a1a79d0c7b96bce5ada544d2c"
+    },
+    {
+      "id": 30,
+      "file": "1-4_supplement_f04_20261023.png",
+      "usage": [
+        "教材 1-4 溶けた金属を運ぶクレーンは、高温の荷に対応する。"
+      ],
+      "exists": true,
+      "sha256": "8581d26ba6e1f30cb3d01933f0c75c598419e97a660aebbc6c94a4e52845c183",
+      "width": 1472,
+      "height": 1069,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "8581d26ba6e1f30cb3d01933f0c75c598419e97a660aebbc6c94a4e52845c183"
+    },
+    {
+      "id": 31,
+      "file": "1-4_supplement_f05_20261023.png",
+      "usage": [
+        "教材 1-4 高脚・低脚・ポスト形・つち形・壁クレーン。ジブだけでなく、下から何が支えるかを見る。"
+      ],
+      "exists": true,
+      "sha256": "33207339b6980126cdc15109d872c20477bbe559c27a3ce4320b6731d7f1f33f",
+      "width": 1473,
+      "height": 1068,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "33207339b6980126cdc15109d872c20477bbe559c27a3ce4320b6731d7f1f33f"
+    },
+    {
+      "id": 32,
+      "file": "1-4_supplement_f06_20261023.png",
+      "usage": [
+        "教材 1-4 マストを継ぎ足す方式と、建物の床を支えに上がる方式。違いを示す模式図で、組立・上昇手順は省略。"
+      ],
+      "exists": true,
+      "sha256": "9da5a2c8dbb70103bee1c1aeb9c9d65adf1c5f77769aee2d9d9e6d4bdee5f112",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "9da5a2c8dbb70103bee1c1aeb9c9d65adf1c5f77769aee2d9d9e6d4bdee5f112"
+    },
+    {
+      "id": 33,
+      "file": "1-4_supplement_f07_20261023.png",
+      "usage": [
+        "教材 1-4 ジブの形やロープの使い方を変え、荷の高さの変化を抑える。"
+      ],
+      "exists": true,
+      "sha256": "68ce835165f2aaf03406ad0231a2332639ef6fe57aa2228c631cdac7908fdbd0",
+      "width": 1472,
+      "height": 1069,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "68ce835165f2aaf03406ad0231a2332639ef6fe57aa2228c631cdac7908fdbd0"
+    },
+    {
+      "id": 34,
+      "file": "1-4_supplement_f08_20261023.png",
+      "usage": [
+        "教材 1-4 走路と荷を出し入れする部分の位置を見分ける。"
+      ],
+      "exists": true,
+      "sha256": "1149e948a3e19d524ee991050718fd61128f47d3e9aa61f0695d90a252c1fbfc",
+      "width": 1472,
+      "height": 1069,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "1149e948a3e19d524ee991050718fd61128f47d3e9aa61f0695d90a252c1fbfc"
+    },
+    {
+      "id": 35,
+      "file": "1-4_supplement_f10_20261023.png",
+      "usage": [
+        "教材 1-4 下からぶら下がるか、上のレールに乗るかが違う。"
+      ],
+      "exists": true,
+      "sha256": "57381a71d45846d5afebb954b2eb51d7f1a970e5d127b5cc858defe446a9d1bf",
+      "width": 1472,
+      "height": 1068,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "57381a71d45846d5afebb954b2eb51d7f1a970e5d127b5cc858defe446a9d1bf"
+    },
+    {
+      "id": 36,
+      "file": "1-5_girder_sections_readable21.png",
+      "usage": [
+        "教材 1-5 ガーダの構造比較。特徴：トラスは軽量化しやすい。I・プレートは曲げ、ボックスはねじりへの抵抗を確保しやすい。 強さは寸法・材質・接合・荷重条件で決まる。断面形式だけで優劣を断定しない",
+        "用語 1 ガーダ／カンチレバー"
+      ],
+      "exists": true,
+      "sha256": "4eefeee148ac0a93784ac6e38c4612b30cafbda8b3908cd382b7057be6b09a65",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "4eefeee148ac0a93784ac6e38c4612b30cafbda8b3908cd382b7057be6b09a65"
+    },
+    {
+      "id": 37,
+      "file": "1-5_overhead_parts.svg",
+      "usage": [
+        "教材 1-5 天井クレーン主要部品"
+      ],
+      "exists": true,
+      "sha256": "8d0aefdc5eb1d6647bd67498c1289a2c7c7781a28d87acc095f74f2a898d02a2",
+      "width": 2000.0,
+      "height": 1450.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "d9c402400706790c9a0adbf946095e769aec66e6bf359d55cc6402ef3869dcc3",
+      "changes": [
+        "小さい補足文字を拡大",
+        "引出線のコントラストを改善",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 38,
+      "file": "1-5_overhead_parts_readable21.png",
+      "usage": [
+        "用語 1 クラブトロリ／ホイスト"
+      ],
+      "exists": true,
+      "sha256": "463ea90d7f0ecfc320329320d53970ee8bb200e4ab754eeea77455e404b6d236",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "e5f791da391dd5a283051c015c917b9bd4daa44585bfa4024bc89e563a35a941",
+      "changes": [
+        "小さい補足文字を拡大",
+        "引出線のコントラストを改善",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 39,
+      "file": "1-5_rigid_pin_detail_readable21.png",
+      "usage": [
+        "教材 1-5 剛接合とピン接合"
+      ],
+      "exists": true,
+      "sha256": "e7b04414305e0aac2d303d9271312574eb0c765c3cf9bb5fec0b0a2170a19568",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "e7b04414305e0aac2d303d9271312574eb0c765c3cf9bb5fec0b0a2170a19568"
+    },
+    {
+      "id": 40,
+      "file": "1-5_rigid_pin_legs_readable21.png",
+      "usage": [
+        "教材 1-5 剛脚・揺脚",
+        "用語 1 剛脚／揺脚"
+      ],
+      "exists": true,
+      "sha256": "d1cf3651d9164c1814c255bd7c78e7621d0d3601ec4cc6d6fa33f966b585f2d0",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "d1cf3651d9164c1814c255bd7c78e7621d0d3601ec4cc6d6fa33f966b585f2d0"
+    },
+    {
+      "id": 41,
+      "file": "1-5_supplement_f09_20261023.png",
+      "usage": [
+        "教材 1-5 脚の外まで張り出した桁の部分がカンチレバー。"
+      ],
+      "exists": true,
+      "sha256": "71a11cc28c4dfa5123836002ca75c8759103eb00d8516ab728cc503253ffd0db",
+      "width": 1472,
+      "height": 1069,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "71a11cc28c4dfa5123836002ca75c8759103eb00d8516ab728cc503253ffd0db"
+    },
+    {
+      "id": 42,
+      "file": "1-5_trolley_types_readable21.png",
+      "usage": [
+        "教材 1-5 トロリの種類。巻上装置を台車に搭載／外部の巻上装置からロープを導く／運転室を台車に設ける"
+      ],
+      "exists": true,
+      "sha256": "c7227f142fc138a6ed6bb30ce5a085832d1c4aa0939400364ba3bec74941f426",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c7227f142fc138a6ed6bb30ce5a085832d1c4aa0939400364ba3bec74941f426"
+    },
+    {
+      "id": 43,
+      "file": "1-6_drum_equalizer.svg",
+      "usage": [
+        "教材 1-13 エコライザシーブ"
+      ],
+      "exists": true,
+      "sha256": "bada031f230a4ac091d6e41748f200a560eab60f6b52a026c286353bc8fe40fb",
+      "width": 1536.0,
+      "height": 1024.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "bada031f230a4ac091d6e41748f200a560eab60f6b52a026c286353bc8fe40fb"
+    },
+    {
+      "id": 44,
+      "file": "1-6_drum_equalizer_readable21.png",
+      "usage": [
+        "用語 1 すて巻／エコライザシーブ・D/d"
+      ],
+      "exists": true,
+      "sha256": "12e7bc6125fd593ca8aeeb268a3864b233616a84b03486a450d00e57b69a9c1c",
+      "width": 1536,
+      "height": 1024,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "12e7bc6125fd593ca8aeeb268a3864b233616a84b03486a450d00e57b69a9c1c"
+    },
+    {
+      "id": 45,
+      "file": "1-6_hoist_system_readable21.png",
+      "usage": [
+        "教材 1-6 巻上装置。電動機 → 制動用ブレーキ → 減速機 → ドラム → ワイヤロープ → フック 制動用ブレーキは荷を保持し、巻上げ・巻下げを停止させる。図は代表的な配置"
+      ],
+      "exists": true,
+      "sha256": "2bd7d9582f989facf7e61ee6a578f895d6652d96a8e96306fe54a2e3aa360a10",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "bc711abdab9c35df03d572155aaa79da5b7d4e1037582cdad1318f1ef949d926",
+      "changes": [
+        "引出線のコントラストを改善",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置",
+        "線・矢印を太く",
+        "荷重・動力伝達矢印に太線と白縁"
+      ]
+    },
+    {
+      "id": 46,
+      "file": "1-6_slewing.svg",
+      "usage": [
+        "教材 1-6 旋回装置(センターポスト方式)。外歯かみ合いの原理を示す模式図。実際の駆動装置・支持構造は機種により異なる"
+      ],
+      "exists": true,
+      "sha256": "0dc9613662d5d89f188d307f12accf17229d4f3cc9576b233a0e016e6f1aac46",
+      "width": 2000.0,
+      "height": 1450.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "433a36f1cbf4c84cff641cbe6a3c1fec5974cf9b6da7f4e111ef49414bda2c2f",
+      "changes": [
+        "小さい補足文字を拡大",
+        "引出線のコントラストを改善",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 47,
+      "file": "1-6_supplement_f11_20261023.png",
+      "usage": [
+        "教材 1-6 モーターの回転が車輪へ伝わり、トロリが動く。"
+      ],
+      "exists": true,
+      "sha256": "50112b39b2eb8571a00cd319de3f0f2e5634f7f8c9fcc4eef422c77d183f5290",
+      "width": 1473,
+      "height": 1068,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "50112b39b2eb8571a00cd319de3f0f2e5634f7f8c9fcc4eef422c77d183f5290"
+    },
+    {
+      "id": 48,
+      "file": "1-6_supplement_f12_20261023.png",
+      "usage": [
+        "教材 1-6 起伏ロープを巻き取り・繰り出し、ジブの角度を変える。"
+      ],
+      "exists": true,
+      "sha256": "2bfc17d4bcedb8f4e9d1c0cff90736e6e2ee255181dd40511b3a68e7a8e3325e",
+      "width": 1472,
+      "height": 1069,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "2bfc17d4bcedb8f4e9d1c0cff90736e6e2ee255181dd40511b3a68e7a8e3325e"
+    },
+    {
+      "id": 49,
+      "file": "1-6_travel_drive_readable21.png",
+      "usage": [
+        "教材 1-6 走行装置の電動機配置"
+      ],
+      "exists": true,
+      "sha256": "a39dcaa5aca21a2d847c1cd9422a9014998b293284e9e71a13216315a259ad00",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a39dcaa5aca21a2d847c1cd9422a9014998b293284e9e71a13216315a259ad00"
+    },
+    {
+      "id": 50,
+      "file": "1-7_end_fittings.svg",
+      "usage": [
+        "教材 1-7 ワイヤクリップの向き"
+      ],
+      "exists": true,
+      "sha256": "cb823f3b27aca900b36c8435e842c3331fd3e0d471cf8e30b38cd8e784c41736",
+      "width": 1536.0,
+      "height": 1024.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "cb823f3b27aca900b36c8435e842c3331fd3e0d471cf8e30b38cd8e784c41736"
+    },
+    {
+      "id": 51,
+      "file": "1-7_rope_diameter.svg",
+      "usage": [
+        "教材 1-7 ロープ径の測定"
+      ],
+      "exists": true,
+      "sha256": "f51a2122dd42be9125b9ec89a3f2cbabd21af6302c27e059714d9b41d14be78b",
+      "width": 1536.0,
+      "height": 1024.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f51a2122dd42be9125b9ec89a3f2cbabd21af6302c27e059714d9b41d14be78b"
+    },
+    {
+      "id": 52,
+      "file": "1-7_supplement_f13_20261023.png",
+      "usage": [
+        "教材 1-7 Zより・Sよりはロープのより方向。普通より・ラングよりは、素線とストランドのより方向の組合せで区別する。"
+      ],
+      "exists": true,
+      "sha256": "46d37d0971957e7ff05b933de0eb1a8186f21a5a1b6695bd6c7e9233fd009397",
+      "width": 1472,
+      "height": 1069,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "46d37d0971957e7ff05b933de0eb1a8186f21a5a1b6695bd6c7e9233fd009397"
+    },
+    {
+      "id": 53,
+      "file": "1-7_supplement_f14_20261023.png",
+      "usage": [
+        "教材 1-7 赤い細線がフィラ線。右の赤いストランドが1回転して、同じ側に戻るまでの長さが「1より」。断線率ではフィラ線を除く。",
+        "教材 2-5 赤い細線がフィラ線。右の赤いストランドが1回転して、同じ側に戻るまでの長さが「1より」。断線率ではフィラ線を除く。"
+      ],
+      "exists": true,
+      "sha256": "407708cde45142a21fb37094363440f678ec159f83d52a624d62df58693f7d40",
+      "width": 1470,
+      "height": 1070,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "407708cde45142a21fb37094363440f678ec159f83d52a624d62df58693f7d40"
+    },
+    {
+      "id": 54,
+      "file": "1-7_wire_lay_readable21.png",
+      "usage": [
+        "用語 1 普通より／ラングより"
+      ],
+      "exists": true,
+      "sha256": "3262218fd76dfccfad216eda071edb0179fa9ffc4f177532341711884352545f",
+      "width": 1536,
+      "height": 1024,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "3262218fd76dfccfad216eda071edb0179fa9ffc4f177532341711884352545f"
+    },
+    {
+      "id": 55,
+      "file": "1-7_wire_reject_readable21.png",
+      "usage": [
+        "教材 1-12 ワイヤ損傷の例"
+      ],
+      "exists": true,
+      "sha256": "7bd0f0cdb8e7f812637c793f1e85d61d6217de56b8706e1f8ea4131db978b4a9",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "7bd0f0cdb8e7f812637c793f1e85d61d6217de56b8706e1f8ea4131db978b4a9"
+    },
+    {
+      "id": 56,
+      "file": "1-7_wire_structure_readable21.png",
+      "usage": [
+        "教材 1-7 ワイヤ構造。心綱はストランドを支え、柔軟性や潤滑に関わる。構成・心綱の材質は製品で異なる",
+        "用語 1 素線・ストランド・心綱"
+      ],
+      "exists": true,
+      "sha256": "e391536cc3ade728d5eacad87dfc43b7b13eb8615624340dd16194f241606c46",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "e391536cc3ade728d5eacad87dfc43b7b13eb8615624340dd16194f241606c46"
+    },
+    {
+      "id": 57,
+      "file": "1-8_hook_latch.svg",
+      "usage": [
+        "教材 1-8 フックの外れ止め"
+      ],
+      "exists": true,
+      "sha256": "7194c44a4bd8171faf45dd98970ce155b5eebcf2cda9006a5e57019c012bf337",
+      "width": 2000.0,
+      "height": 1450.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "9dbe1623736fa6970d0e2af843876dd5429d5451abf690314caccb8ecd79a5e4",
+      "changes": [
+        "小さい補足文字を拡大",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 58,
+      "file": "1-8_hook_slings_readable21.png",
+      "usage": [
+        "教材 1-8 つり具の種類。マグネットは磁性体、バキューム式は表面状態など、各つり具の使用条件を確認する"
+      ],
+      "exists": true,
+      "sha256": "aa64001cedea8358612af00e11ab6884ed10edc1e74b2c6092d61fd899ccc5d9",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "aa64001cedea8358612af00e11ab6884ed10edc1e74b2c6092d61fd899ccc5d9"
+    },
+    {
+      "id": 59,
+      "file": "1-8_supplement_f15_20261023.png",
+      "usage": [
+        "教材 1-8 片側に掛ける形と、左右の両側に掛ける形がある。"
+      ],
+      "exists": true,
+      "sha256": "19f6015d5c3d3965b586b5c8c4073ffddaa27e2b806872eaa6e5572c24c55e72",
+      "width": 1470,
+      "height": 1070,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "19f6015d5c3d3965b586b5c8c4073ffddaa27e2b806872eaa6e5572c24c55e72"
+    },
+    {
+      "id": 60,
+      "file": "1-8_supplement_f16_20261023.png",
+      "usage": [
+        "教材 1-8 クローは、鋼材をつかんで持ち上げるつり具。"
+      ],
+      "exists": true,
+      "sha256": "578b8eeca93a1337253df051f714b8c81c42f2794f92c635797151885b6caca5",
+      "width": 1470,
+      "height": 1070,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "578b8eeca93a1337253df051f714b8c81c42f2794f92c635797151885b6caca5"
+    },
+    {
+      "id": 61,
+      "file": "1-9_bearings_readable21.png",
+      "usage": [
+        "教材 1-9 軸受。受けられる荷重の種類・大きさは軸受の形式による。玉軸受の対応範囲も形式で異なる"
+      ],
+      "exists": true,
+      "sha256": "b6b7097285e93e589fc3e328e120b302ee7b9c9bbc759e9f5a73c741532cd7c3",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "bc324d7dd85a567ba2fe14ddeb7eba5ea0384bd882fc6b6f563fa3bb34f53e93",
+      "changes": [
+        "日本語フォントの高さに合わせ見出しと説明行を再配置",
+        "線・矢印を太く",
+        "荷重・動力伝達矢印に太線と白縁"
+      ]
+    },
+    {
+      "id": 62,
+      "file": "1-9_bolts_readable21.png",
+      "usage": [
+        "教材 1-9 ボルト。引張を軸で受ける／締付けによる接触面の摩擦で滑りを止める／密着した軸で横ずれを受ける",
+        "用語 1 高力ボルト／リーマボルト"
+      ],
+      "exists": true,
+      "sha256": "627f2c9c9800ddf372279774ae7ce4d87887dcef018489bca767475c69ac5ce8",
+      "width": 1672,
+      "height": 941,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "627f2c9c9800ddf372279774ae7ce4d87887dcef018489bca767475c69ac5ce8"
+    },
+    {
+      "id": 63,
+      "file": "1-9_couplings.svg",
+      "usage": [
+        "教材 1-9 軸継手の種類"
+      ],
+      "exists": true,
+      "sha256": "72b20afb8bac885c77f29fc70c108cecf2359e957309c2d15fc4c48e794fb2c0",
+      "width": 2000.0,
+      "height": 1450.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "42dd2e255173553467d3c664845d54d6788c3b339a5962aac4e2e56e4b071fa8",
+      "changes": [
+        "小さい補足文字を拡大",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置"
+      ]
+    },
+    {
+      "id": 64,
+      "file": "1-9_gears.svg",
+      "usage": [
+        "教材 1-9 歯車の種類とかみ合い"
+      ],
+      "exists": true,
+      "sha256": "ffb753dcd7fd6ef22f02ff29189d5b14738924cd1968dafc8f7b9fa7a657cf15",
+      "width": 1505.0,
+      "height": 1045.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "ffb753dcd7fd6ef22f02ff29189d5b14738924cd1968dafc8f7b9fa7a657cf15"
+    },
+    {
+      "id": 65,
+      "file": "1-9_gears_readable21.png",
+      "usage": [
+        "用語 1 減速比"
+      ],
+      "exists": true,
+      "sha256": "0f346b6183d38e502a4849c575360be1545239388cd3602d120b7f4b488ee53b",
+      "width": 1505,
+      "height": 1045,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "0f346b6183d38e502a4849c575360be1545239388cd3602d120b7f4b488ee53b"
+    },
+    {
+      "id": 66,
+      "file": "1-9_key.svg",
+      "usage": [
+        "教材 1-9 キーによる固定"
+      ],
+      "exists": true,
+      "sha256": "9c859bfe04ede6c51721a3b51c5934552ea721c20b0b29ef65b3fdeee0acc256",
+      "width": 2000.0,
+      "height": 1450.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "141af57fd0555480f8e16d668f017c87dee7f528d2aef6f94c2118151420aa29",
+      "changes": [
+        "小さい補足文字を拡大",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 67,
+      "file": "1-9_supplement_f17_20261023.png",
+      "usage": [
+        "教材 1-9 皿ばね座金は皿形のばね。ばねナットはナット側に緩み止めの作用を持たせたもの。座金とナットを区別する。"
+      ],
+      "exists": true,
+      "sha256": "72da30fac5c04faddf8aa99932e3f5a28950b1609fa0a0edbdb9268f2603999a",
+      "width": 1472,
+      "height": 1069,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "72da30fac5c04faddf8aa99932e3f5a28950b1609fa0a0edbdb9268f2603999a"
+    },
+    {
+      "id": 68,
+      "file": "1-9_supplement_f18_20261023.png",
+      "usage": [
+        "教材 1-9 左は車輪と軸が一体で回り、支持部の軸受で支える例。右は軸を固定し、車輪の中心の軸受で回す例。"
+      ],
+      "exists": true,
+      "sha256": "71b4ba0070b72b449dfac7881bf8b0adf3b1a1ebac352291066e6168de2d2d5f",
+      "width": 1472,
+      "height": 1068,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "71b4ba0070b72b449dfac7881bf8b0adf3b1a1ebac352291066e6168de2d2d5f"
+    },
+    {
+      "id": 69,
+      "file": "1-9_supplement_f19_20261023.png",
+      "usage": [
+        "教材 1-9 円すいころ軸受はラジアル荷重と片方向のアキシアル荷重を受ける例。プランマブロックは軸受を収める軸受箱。"
+      ],
+      "exists": true,
+      "sha256": "91773c1a635a82d60ca9b8fb9d8e9892bb9bbd25430726d58611898c5cc5340e",
+      "width": 1472,
+      "height": 1069,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "91773c1a635a82d60ca9b8fb9d8e9892bb9bbd25430726d58611898c5cc5340e"
+    },
+    {
+      "id": 70,
+      "file": "1-9_supplement_f20_20261023.png",
+      "usage": [
+        "教材 1-9 チェーンや歯のかみ合いで、2本の軸へ回転を伝える。"
+      ],
+      "exists": true,
+      "sha256": "11dad58bf2109ca2bcb196e7da137ed6d223088e14d179aae2642061571758f8",
+      "width": 1472,
+      "height": 1068,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "11dad58bf2109ca2bcb196e7da137ed6d223088e14d179aae2642061571758f8"
+    },
+    {
+      "id": 71,
+      "file": "1-9_supplement_f21_20261023.png",
+      "usage": [
+        "教材 1-9 回転する歯車や軸継手などをガードで覆い、接触・巻き込まれを防ぐ。"
+      ],
+      "exists": true,
+      "sha256": "5f95d967a924620297d24f9b69c2692d1ac3911b5e71219d040865ff12735fcd",
+      "width": 1472,
+      "height": 1069,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "5f95d967a924620297d24f9b69c2692d1ac3911b5e71219d040865ff12735fcd"
+    },
+    {
+      "id": 72,
+      "file": "1-9_thrust_bearing_readable21.png",
+      "usage": [
+        "教材 1-9 スラスト軸受"
+      ],
+      "exists": true,
+      "sha256": "011c2df6efc4202a008b8d77572ac286ea63bd2481551e5cd059a5f3585b0527",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "03128dc5ebb4d9cd1c2d8b5b1b1eb1f61494690cfac49b96b8ff2a4264600a7c",
+      "changes": [
+        "小さい補足文字を拡大",
+        "引出線のコントラストを改善",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置",
+        "線・矢印を太く",
+        "荷重・動力伝達矢印に太線と白縁"
+      ]
+    },
+    {
+      "id": 73,
+      "file": "1-9_two_stage_gear.svg",
+      "usage": [
+        "教材 1-9 2段減速の歯車。1段目 60/20 ＝ 3　×　2段目 60/20 ＝ 3　→　全体の減速比 9 歯数は計算用の例。描画した歯の本数は模式で、例示歯数を正確に表したものではない"
+      ],
+      "exists": true,
+      "sha256": "5003c1690f4656e71339c72638ba3a0986b317cded80bc9fb93d1dc2abb7edd7",
+      "width": 2000.0,
+      "height": 1450.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "0bc37605a3b676f6cf2c07967569aa2ad247abaff1ee13e442788202cc320eb9",
+      "changes": [
+        "引出線のコントラストを改善",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 74,
+      "file": "1-9_washers_locking.svg",
+      "usage": [
+        "教材 1-9 座金と緩み止め。舌付き座金：舌を折り曲げて回り止め。平座金は座面を保護し、接触面を広げる。 ばね座金だけで緩み止めを保証するものではない。振動条件と指定施工法を確認する"
+      ],
+      "exists": true,
+      "sha256": "ff72469f400e4cbf217bcfeb90524a648a076f70c7f6198c98c2d3201b1162a9",
+      "width": 2000.0,
+      "height": 1450.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "0faf8f1e31bd751aff6486841f96e8a708dcb42338a4ddb2556da7d81e5ca115",
+      "changes": [
+        "小さい補足文字を拡大",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置"
+      ]
+    },
+    {
+      "id": 75,
+      "file": "2-1_clearance_elevation.svg",
+      "usage": [
+        "教材 2-1 建設物等との間隔(立面図)。0.4m：集電装置を除く最高部から上方の物まで　｜　1.8m：歩道の床面から上方の物まで クレーン等安全規則 第13条。寸法の位置を示す模式図で、縮尺は一定ではない"
+      ],
+      "exists": true,
+      "sha256": "e5d42b05db5f7c96e5002952003a7d83f67a859e1c2cbb969e31eb58ec9d5f02",
+      "width": 2000.0,
+      "height": 1450.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "a2f6cd90f57031e709f3a4a92bf6a002fb0cbe765af2fd2dd3c7b79c214f8fa2",
+      "changes": [
+        "引出線のコントラストを改善",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 76,
+      "file": "2-1_clearance_plan.svg",
+      "usage": [
+        "教材 2-1 建設物等との間隔(平面図)。歩道はクレーンと建設物の間に設けるもの。運転室・運転台の端と歩道の端を測る。 クレーン等安全規則 第14条・第15条。寸法の位置を示す模式図（縮尺不同）"
+      ],
+      "exists": true,
+      "sha256": "79355e8f5eabffc3bb6502b1ca8200c1a3b2cee305a28359c5323c19faa51905",
+      "width": 2000.0,
+      "height": 1450.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "f6ed1536d252269fac65487b25e2124bd66339ae0f3baf25870912b1c0b1ba84",
+      "changes": [
+        "小さい補足文字を拡大",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 77,
+      "file": "2-1_procedure_concept21.png",
+      "usage": [
+        "教材 2-1 製造許可と設置届は別の手続。設置後の検査を経て検査証が交付され、性能検査で更新する。対象・例外・提出先は本文で確認する。"
+      ],
+      "exists": true,
+      "sha256": "04d9b93f8b4967ae8e8175a93a0f551d48ba6050590afe90748b43038b69b5b3",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "04d9b93f8b4967ae8e8175a93a0f551d48ba6050590afe90748b43038b69b5b3"
+    },
+    {
+      "id": 78,
+      "file": "2-2_no_entry_patterns.svg",
+      "usage": [
+        "教材 2-2 つり荷の下への立入禁止パターン"
+      ],
+      "exists": true,
+      "sha256": "066cb1f61ded34ad3de3782335a2c8dfd434486170bef4c21a8049dd89bf9bab",
+      "width": 1600.0,
+      "height": 1080.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "37c32dda900b02d813662c134f62ffc17bca84898ccb0074e317ab9258ac31e3",
+      "changes": [
+        "小さい補足文字を拡大",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 79,
+      "file": "2-2_overwind_gap.svg",
+      "usage": [
+        "教材 2-2 巻過ぎの防止(間接式0.25m/直働式0.05m)。クレーン等安全規則 第18条。作動原理と測定位置の説明図。図中の長さは実寸比ではない"
+      ],
+      "exists": true,
+      "sha256": "ca9faf5fcdeba23fbad38b7869c8baec5d5bea29e6ea7abea2c87ecf6b36b1e4",
+      "width": 2200.0,
+      "height": 1630.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "364fc544b6a3c7f66da1d4380c6b7f3adae3e143c9af069fc4479ba6e79685b5",
+      "changes": [
+        "小さい補足文字を拡大",
+        "引出線のコントラストを改善",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 80,
+      "file": "2-3_storm_concept21.png",
+      "usage": [
+        "教材 2-3 定期的な検査とは別に、所定の暴風・地震の後には作業前の点検が必要になる。屋外・屋内の適用や風速の条件は本文のとおり。"
+      ],
+      "exists": true,
+      "sha256": "a5825feb6a0efc7e87a524f6cb50dea20f1a9841a7d196ab3433739914d02b30",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a5825feb6a0efc7e87a524f6cb50dea20f1a9841a7d196ab3433739914d02b30"
+    },
+    {
+      "id": 81,
+      "file": "2-5_supplement_f34_20261023.png",
+      "usage": [
+        "教材 2-5 シャックルは本体とピンで用具などをつなぐ。使用形態は製品の指定に従う。"
+      ],
+      "exists": true,
+      "sha256": "77e05eef5576df439bbc871216751891121408e256eb6740d251b5200db65816",
+      "width": 1472,
+      "height": 1068,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "77e05eef5576df439bbc871216751891121408e256eb6740d251b5200db65816"
+    },
+    {
+      "id": 82,
+      "file": "2-5_supplement_f35_20261023.png",
+      "usage": [
+        "教材 2-5 できた輪を無理に引き締めると、元に戻らない形くずれ（キンク）が生じる。"
+      ],
+      "exists": true,
+      "sha256": "92d1916cce04a61966bb043d727188e4e6a32a085d76cc3f448b30999e15bd8b",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "92d1916cce04a61966bb043d727188e4e6a32a085d76cc3f448b30999e15bd8b"
+    },
+    {
+      "id": 83,
+      "file": "2-6_chain_reject.svg",
+      "usage": [
+        "教材 2-5 不適格なつりチェーンの見分け。クレーン等安全規則 第216条。ワイヤロープの「10%以上・7%超」と混同しない"
+      ],
+      "exists": true,
+      "sha256": "2a7aa472c09e579174f60ea1b565abf460e9526fff5008fb0659832974054527",
+      "width": 2000.0,
+      "height": 1450.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "89445328f3fa984d5a62b1cf1218be766cf5727a9b388410cf2479f426c32bec",
+      "changes": [
+        "小さい補足文字を拡大",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置"
+      ]
+    },
+    {
+      "id": 84,
+      "file": "2-6_safety_concept21.png",
+      "usage": [
+        "教材 2-5 安全係数は切断荷重を、その用具にかかる最大荷重で割った比。図は安全係数6の比較例。用具別の数値は本文の表で確認する。"
+      ],
+      "exists": true,
+      "sha256": "80eef59e6a086d9cee4389558c42235587e0f4af24b79ef366d23aa1805d92c7",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "80eef59e6a086d9cee4389558c42235587e0f4af24b79ef366d23aa1805d92c7"
+    },
+    {
+      "id": 85,
+      "file": "2-6_wire_reject.svg",
+      "usage": [
+        "教材 2-5 不適格なワイヤロープの見分け。断線率を計算する素線数からフィラ線を除く。222本は、対象素線数を6×37とした説明例。 クレーン等安全規則 第215条。腐食・形くずれの禁止基準は「著しい」状態"
+      ],
+      "exists": true,
+      "sha256": "86098cafb69a5687838a8c5cba60960850c5edd811be6ec006da6f2f7b7c64f6",
+      "width": 2000.0,
+      "height": 1450.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "8a0ad57643ddf35574dfb2575314613eac12be1bf1344e863039c7bb8868e676",
+      "changes": [
+        "5列の長い見出しを改行し、数値例を各ロープの下に配置",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置"
+      ]
+    },
+    {
+      "id": 86,
+      "file": "2-6_wire_reject_readable21.png",
+      "usage": [
+        "用語 2 不適格なワイヤロープ"
+      ],
+      "exists": true,
+      "sha256": "9d66cf95595c1e712a288db46880595809543b5ac700dd7d732d1a1df5e122a7",
+      "width": 2000,
+      "height": 1450,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "32e1909f3f254aaf2bcb3ec46d8108e5ccf02cf69dd783800abda7632dab4283",
+      "changes": [
+        "5列の長い見出しを改行し、数値例を各ロープの下に配置",
+        "日本語フォントの高さに合わせ見出しと説明行を再配置"
+      ]
+    },
+    {
+      "id": 87,
+      "file": "2-8_slingqual_concept21.png",
+      "usage": [
+        "教材 2-6 同じ軽い荷をつる場合でも、資格の区分は機械のつり上げ荷重で判断する。図は1t未満と1t以上の境目を比べた例。"
+      ],
+      "exists": true,
+      "sha256": "42ceb5c625f29abf87fd0bf8784ced8451581429d9a75209c49cbabcea7e6213",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "42ceb5c625f29abf87fd0bf8784ced8451581429d9a75209c49cbabcea7e6213"
+    },
+    {
+      "id": 88,
+      "file": "3-1_blink_frequency_daily.png",
+      "usage": [
+        "教材 3-1 ランプが点灯して消える1組を1回と数えるたとえ。同じ1秒間に2組なら2Hz、3組なら3Hz。"
+      ],
+      "exists": true,
+      "sha256": "372fed82bef6f44adb9a7d1ba0a18a1ac0f8d8251bf4d89899560434d400d0b8",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "372fed82bef6f44adb9a7d1ba0a18a1ac0f8d8251bf4d89899560434d400d0b8"
+    },
+    {
+      "id": 89,
+      "file": "3-1_current_wire_daily.png",
+      "usage": [
+        "教材 3-1 電池とランプをつないだ導線。拡大した金属内では、電子の移動と、約束で決めた電流の向きが逆になる。"
+      ],
+      "exists": true,
+      "sha256": "4f6bff9ae910aef2963c5e3dc77bb1f9ab7a1e82de9d83a7ebf296f87f47d705",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "4f6bff9ae910aef2963c5e3dc77bb1f9ab7a1e82de9d83a7ebf296f87f47d705"
+    },
+    {
+      "id": 90,
+      "file": "3-1_dc_ac_devices_daily.png",
+      "usage": [
+        "教材 3-1 電池は直流、家庭のコンセントは交流の例。交流の反対向きの矢印は、別々の瞬間の向きを示す。"
+      ],
+      "exists": true,
+      "sha256": "358cba4552dfa7fbc5c20ae800a2703055f283bc9fd23df7ef4b02fddbc8c499",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "358cba4552dfa7fbc5c20ae800a2703055f283bc9fd23df7ef4b02fddbc8c499"
+    },
+    {
+      "id": 91,
+      "file": "3-1_dc_ac_schematic.png",
+      "usage": [
+        "教材 3-1 縦は電流、横は時間。0線の上下で、流れる向きが反対になる。"
+      ],
+      "exists": true,
+      "sha256": "643bf9ad86a23d8b4e240f4338498d790b5ac0a502961904799d7f7f4cd576b2",
+      "width": 1500,
+      "height": 1360,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "643bf9ad86a23d8b4e240f4338498d790b5ac0a502961904799d7f7f4cd576b2"
+    },
+    {
+      "id": 92,
+      "file": "3-1_frequency_schematic.png",
+      "usage": [
+        "教材 3-1 山と谷で1組。図では、同じ1秒間に2回・3回くり返す波を比較している。"
+      ],
+      "exists": true,
+      "sha256": "c30a8aa5b323e0a74210892557a3e99e587c5182724ea763fde8ccc6e1126d8d",
+      "width": 1500,
+      "height": 1040,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c30a8aa5b323e0a74210892557a3e99e587c5182724ea763fde8ccc6e1126d8d"
+    },
+    {
+      "id": 93,
+      "file": "3-1_three_phase_schematic.png",
+      "usage": [
+        "教材 3-1 左は1つの波、右は同じ振幅・周波数で1/3周期ずつずれた3つの波。",
+        "用語 3 直流／交流・単相／三相"
+      ],
+      "exists": true,
+      "sha256": "8832a1828dbadb5cb9bf7b9b4d2eb615f0b2262a58d66fb488461f037999ec4d",
+      "width": 1500,
+      "height": 1040,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "8832a1828dbadb5cb9bf7b9b4d2eb615f0b2262a58d66fb488461f037999ec4d"
+    },
+    {
+      "id": 94,
+      "file": "3-1_three_phase_turns_daily.png",
+      "usage": [
+        "教材 3-1 三相の「タイミングのずれ」を、等間隔に並んだ3人が順番に働く様子にたとえる。電動機内部の構造図ではない。"
+      ],
+      "exists": true,
+      "sha256": "5cbb28e5a62ebd2652ea63d0b87b03d9829c316b54683b4c8c73ab22250b50b4",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "5cbb28e5a62ebd2652ea63d0b87b03d9829c316b54683b4c8c73ab22250b50b4"
+    },
+    {
+      "id": 95,
+      "file": "3-1_water_quantities_daily.png",
+      "usage": [
+        "教材 3-0 水位の差・流れる水の量・管の通りにくさを、電圧・電流・抵抗に対応させるたとえ。",
+        "用語 3 電流／電圧／抵抗"
+      ],
+      "exists": true,
+      "sha256": "eaffaaa20c39db934259e282f06bc80b4aa9003ef1616105c2a7781f2581b6c2",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "eaffaaa20c39db934259e282f06bc80b4aa9003ef1616105c2a7781f2581b6c2"
+    },
+    {
+      "id": 96,
+      "file": "3-1_wire_shapes_daily.png",
+      "usage": [
+        "教材 3-1 同じ材料・同じ温度の電線で比較。形は長さや太さの違いをつかむ模式図で、計算には本文の比を使う。"
+      ],
+      "exists": true,
+      "sha256": "48e9891e1d39514eea8e79331a1beec20a2a7de26c7217577fed5a7af159ceec",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "48e9891e1d39514eea8e79331a1beec20a2a7de26c7217577fed5a7af159ceec"
+    },
+    {
+      "id": 97,
+      "file": "3-2_joule_heat_daily.png",
+      "usage": [
+        "教材 3-2 どちらも抵抗に電流が流れて発熱する。トースターでは加熱に利用し、モーターの巻線では熱損失になる。赤は熱、青は回転。"
+      ],
+      "exists": true,
+      "sha256": "cf3b407b773a7550c0828f0c76c26c0f8e18fa3e33a1c0c397cd4ee7f83389dc",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "cf3b407b773a7550c0828f0c76c26c0f8e18fa3e33a1c0c397cd4ee7f83389dc"
+    },
+    {
+      "id": 98,
+      "file": "3-2_mixed_concept.png",
+      "usage": [
+        "教材 3-2 例題4の電流と電圧。分岐の手前3Aが、30Ω側2A・60Ω側1Aに分かれる。"
+      ],
+      "exists": true,
+      "sha256": "5c02ac1074edbc729dbbbd55530c82e1feed6836db153409b9063bb47ce7eaa1",
+      "width": 1400,
+      "height": 840,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "5c02ac1074edbc729dbbbd55530c82e1feed6836db153409b9063bb47ce7eaa1"
+    },
+    {
+      "id": 99,
+      "file": "3-2_mixed_reduce_steps.png",
+      "usage": [
+        "教材 3-2 例題4の前半。上の並列部分だけを20Ωに置き換えると、10Ωと20Ωの直列になる。"
+      ],
+      "exists": true,
+      "sha256": "0430946e738aaf402c6bf855950b50c4f077f38a37a0e7d850a108b0a7b8967f",
+      "width": 1400,
+      "height": 1150,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "0430946e738aaf402c6bf855950b50c4f077f38a37a0e7d850a108b0a7b8967f"
+    },
+    {
+      "id": 100,
+      "file": "3-2_parallel_formula_steps.png",
+      "usage": [
+        "教材 3-2 並列の公式と例題3。各枝に同じ電圧がかかり、枝の電流を足すことから逆数の和が出てくる。"
+      ],
+      "exists": true,
+      "sha256": "8438e44cb440bd8bf0f6ca501c03e1947b8b476fd76de9508002ab11f98ced9e",
+      "width": 1400,
+      "height": 1170,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "8438e44cb440bd8bf0f6ca501c03e1947b8b476fd76de9508002ab11f98ced9e"
+    },
+    {
+      "id": 101,
+      "file": "3-2_pipe_paths_daily.png",
+      "usage": [
+        "教材 3-2 同じ水位差の配管で考えるたとえ。直列は1本の道に通りにくい所が続き、並列は通り道が増える。"
+      ],
+      "exists": true,
+      "sha256": "71fe6258ee149887f575fd3b86b2fb853a8e2580e502282a5410f5f1f30d6ce9",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "71fe6258ee149887f575fd3b86b2fb853a8e2580e502282a5410f5f1f30d6ce9"
+    },
+    {
+      "id": 102,
+      "file": "3-2_power_energy_heater_daily.png",
+      "usage": [
+        "教材 3-2 一定の電力でヒーターを使う例。中央の1,000W×1時間と、右の500W×2時間は、どちらも1,000Wh。時計は使用時間のイメージ。"
+      ],
+      "exists": true,
+      "sha256": "e80824488f4ebb1a13b51981bf92bbcf544c6c23960f5d5af97604a1bc14e620",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "e80824488f4ebb1a13b51981bf92bbcf544c6c23960f5d5af97604a1bc14e620"
+    },
+    {
+      "id": 103,
+      "file": "3-2_rotor_compare_panel21_1.png",
+      "usage": [
+        "教材 3-3 かご形回転子：導体バーの両端を短絡環で接続。ブラシ・スリップリングは使わない。"
+      ],
+      "exists": true,
+      "sha256": "0e4cc71e8210739d66553df10e88fbcbb2447713541143c3776c98d631f5c131",
+      "width": 900,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "0e4cc71e8210739d66553df10e88fbcbb2447713541143c3776c98d631f5c131"
+    },
+    {
+      "id": 104,
+      "file": "3-2_rotor_compare_panel21_2.png",
+      "usage": [
+        "教材 3-3 巻線形回転子：巻線をスリップリング・ブラシ経由で外部抵抗へ接続。交流電流は一定方向に流れ続けない。",
+        "用語 3 同期速度・滑り・固定子／回転子・かご形／巻線形"
+      ],
+      "exists": true,
+      "sha256": "04e406c45a0584011f81c28d60cb0ea537aec63655d8781935fbee142a9e1410",
+      "width": 900,
+      "height": 860,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "04e406c45a0584011f81c28d60cb0ea537aec63655d8781935fbee142a9e1410"
+    },
+    {
+      "id": 105,
+      "file": "3-2_series_formula_steps.png",
+      "usage": [
+        "教材 3-2 直列の公式と例題2。一本道の抵抗を足して、20Ω＋30Ω＝50Ω。"
+      ],
+      "exists": true,
+      "sha256": "8414a95ddba81e51f1807ca855dcefb9d7db730466a60be13f650bdcb9b9e7c6",
+      "width": 1400,
+      "height": 900,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "8414a95ddba81e51f1807ca855dcefb9d7db730466a60be13f650bdcb9b9e7c6"
+    },
+    {
+      "id": 106,
+      "file": "3-3_arago_rotor_daily.png",
+      "usage": [
+        "教材 3-3 アラゴの円板の模式図。磁石は円板に触れず、ふちに沿って動く。円板は磁石と同じ方向に、少し遅れて回る。"
+      ],
+      "exists": true,
+      "sha256": "fc9b14104c0bd96735ff44b9fa00b818a9889daf23cc557ab5867a776299b534",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "fc9b14104c0bd96735ff44b9fa00b818a9889daf23cc557ab5867a776299b534"
+    },
+    {
+      "id": 107,
+      "file": "3-3_control_protection_panel21_1.png",
+      "usage": [
+        "教材 3-4 継電器：異常などを検知する。"
+      ],
+      "exists": true,
+      "sha256": "cfa24ec3f7a124bc1de34dbc1f9a497f9affb7f188dc784170910671852216da",
+      "width": 900,
+      "height": 380,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "cfa24ec3f7a124bc1de34dbc1f9a497f9affb7f188dc784170910671852216da"
+    },
+    {
+      "id": 108,
+      "file": "3-3_control_protection_panel21_2.png",
+      "usage": [
+        "教材 3-4 遮断器：回路の開閉・保護。"
+      ],
+      "exists": true,
+      "sha256": "d481d617b505dea21030c053d634cca80fe7f22f0423d42b4bb88fa8b6fff75a",
+      "width": 900,
+      "height": 300,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "d481d617b505dea21030c053d634cca80fe7f22f0423d42b4bb88fa8b6fff75a"
+    },
+    {
+      "id": 109,
+      "file": "3-3_control_protection_panel21_3.png",
+      "usage": [
+        "教材 3-4 電磁接触器：コイルで主接点を操作する。"
+      ],
+      "exists": true,
+      "sha256": "d3145580742ca7ab655a3eb41bc62f324f324edca5ba571ae6477fb989ec9d25",
+      "width": 900,
+      "height": 300,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "d3145580742ca7ab655a3eb41bc62f324f324edca5ba571ae6477fb989ec9d25"
+    },
+    {
+      "id": 110,
+      "file": "3-3_control_protection_panel21_4.png",
+      "usage": [
+        "教材 3-4 電動機：電気を回転力に変える。始動前には制御器をゼロノッチへ。主回路と制御回路を分けて考える。"
+      ],
+      "exists": true,
+      "sha256": "7a188081269f97c4e5058d7572732ac4664dcefa75ee32097bfecf3879fbc1ea",
+      "width": 900,
+      "height": 320,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "7a188081269f97c4e5058d7572732ac4664dcefa75ee32097bfecf3879fbc1ea"
+    },
+    {
+      "id": 111,
+      "file": "3-3_motor_jobs_daily.png",
+      "usage": [
+        "教材 3-3 モーターの回転を、巻上げや移動へ伝える模式図。青は回転、赤は荷や台車の動く向き。伝動の細部は省略。"
+      ],
+      "exists": true,
+      "sha256": "a3cb99f9c4adf161a8c9474dc7180cda4fe6803f2b356ed63867baef4bb60317",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a3cb99f9c4adf161a8c9474dc7180cda4fe6803f2b356ed63867baef4bb60317"
+    },
+    {
+      "id": 112,
+      "file": "3-3_slip_train_daily.png",
+      "usage": [
+        "教材 3-3 同じ大きさの模型コースを同じ1分間で回る比較。青100周に対して赤98周なら、差2周を基準の100周で割って2％。"
+      ],
+      "exists": true,
+      "sha256": "26efe93f1a7d6bab1d6caed79218af02be253e7c57ac1e0b7dc4a1a39b0167c5",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "26efe93f1a7d6bab1d6caed79218af02be253e7c57ac1e0b7dc4a1a39b0167c5"
+    },
+    {
+      "id": 113,
+      "file": "3-3_supplement_f36_20261023.png",
+      "usage": [
+        "教材 3-3 界磁が磁界を作り、電機子が回る。整流子とブラシが、回転する電機子へ電流を受け渡す。"
+      ],
+      "exists": true,
+      "sha256": "9d8abdb5fb7ea33bddfafc3033b81e005573b0b4ab92e685490693eb8409f0ce",
+      "width": 1472,
+      "height": 1068,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "9d8abdb5fb7ea33bddfafc3033b81e005573b0b4ab92e685490693eb8409f0ce"
+    },
+    {
+      "id": 114,
+      "file": "3-3_sync_fan_daily.png",
+      "usage": [
+        "教材 3-3 4極の誘導電動機で羽根を回すモデル。数値は回転磁界の速さ（同期速度）で、羽根の実際の回転数ではない。波は同じ時間で周波数を比べる模式図。"
+      ],
+      "exists": true,
+      "sha256": "5db24d0969aca1e2782e219eff7d0bc059d158f4aba2ed35c0a94a764ba22005",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "5db24d0969aca1e2782e219eff7d0bc059d158f4aba2ed35c0a94a764ba22005"
+    },
+    {
+      "id": 115,
+      "file": "3-4_contactor_motion_daily.png",
+      "usage": [
+        "教材 3-4 電磁接触器の動きの模式図。電流を流してコイルを電磁石にすると鉄片が引かれ、接点が閉じる。主回路と操作回路の配線は省略。"
+      ],
+      "exists": true,
+      "sha256": "34384f58cf074ec37a8173ba04717fcea61f03ec48f1b19570b4bdc832dd9727",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "34384f58cf074ec37a8173ba04717fcea61f03ec48f1b19570b4bdc832dd9727"
+    },
+    {
+      "id": 116,
+      "file": "3-4_indirect_door_daily.png",
+      "usage": [
+        "教材 3-4 役割を分けるためのたとえ。手で動かす扉と、ボタンで駆動装置へ指示する扉を比較。制御器そのものの配線図ではない。"
+      ],
+      "exists": true,
+      "sha256": "db43fc71229db4f3bfd7a5036989d83efd609742adf9ba3d6ffaf38efc9fd7fc",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "db43fc71229db4f3bfd7a5036989d83efd609742adf9ba3d6ffaf38efc9fd7fc"
+    },
+    {
+      "id": 117,
+      "file": "3-4_panel21_1.png",
+      "usage": [
+        "用語 3 スリップリング給電"
+      ],
+      "exists": true,
+      "sha256": "a8e23fce14699fc70a201d9979aaa557df13163fa62d1d3e7c1801dbf671b1fc",
+      "width": 900,
+      "height": 920,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a8e23fce14699fc70a201d9979aaa557df13163fa62d1d3e7c1801dbf671b1fc"
+    },
+    {
+      "id": 118,
+      "file": "3-4_panel21_2.png",
+      "usage": [
+        "教材 3-5 ケーブルリール：移動に合わせてケーブルを巻き取り・繰り出す。"
+      ],
+      "exists": true,
+      "sha256": "8f95ae9e62a3137ec2a88ffeac57093331f25c1c678aa19efee0a9e9b710f076",
+      "width": 900,
+      "height": 920,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "8f95ae9e62a3137ec2a88ffeac57093331f25c1c678aa19efee0a9e9b710f076"
+    },
+    {
+      "id": 119,
+      "file": "3-4_panel21_3.png",
+      "usage": [
+        "教材 3-5 スリップリング・ブラシ：固定側のブラシが回転側のリングに接触。各相のリングを互いに絶縁する。"
+      ],
+      "exists": true,
+      "sha256": "9e3761f2fd58c870d7c45d160176235dd1abab9bf9e398cf10629c0eab1d8620",
+      "width": 900,
+      "height": 770,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "9e3761f2fd58c870d7c45d160176235dd1abab9bf9e398cf10629c0eab1d8620"
+    },
+    {
+      "id": 120,
+      "file": "3-4_supplement_f37_20261023.png",
+      "usage": [
+        "教材 3-4 ハンドルと一緒に接点部分が回り、主回路を切り替える。"
+      ],
+      "exists": true,
+      "sha256": "9aa71d5277e21865b7ad7a0f0ee07e2445636b609abf511f848e1ed807b4418f",
+      "width": 1472,
+      "height": 1069,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "9aa71d5277e21865b7ad7a0f0ee07e2445636b609abf511f848e1ed807b4418f"
+    },
+    {
+      "id": 121,
+      "file": "3-4_supplement_f38_20261023.png",
+      "usage": [
+        "教材 3-4 カムでスイッチを動かし、接触器へ指令を送る。"
+      ],
+      "exists": true,
+      "sha256": "87f943caac9fa60c95b0afc0e0d00afd75bad2cc41a302db4751bae7c9fa6ee0",
+      "width": 1472,
+      "height": 1068,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "87f943caac9fa60c95b0afc0e0d00afd75bad2cc41a302db4751bae7c9fa6ee0"
+    },
+    {
+      "id": 122,
+      "file": "3-4_supplement_f39_20261023.png",
+      "usage": [
+        "教材 3-4 クランクハンドルは水平に回し、レバーハンドルは縦に動かす。下の目盛はノッチの数え方の例で、0が停止位置。"
+      ],
+      "exists": true,
+      "sha256": "5fa61d27e9ef2c6207e6d9fd9f7e9abe42879777828a9388b62ce8af607529e7",
+      "width": 1473,
+      "height": 1068,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "5fa61d27e9ef2c6207e6d9fd9f7e9abe42879777828a9388b62ce8af607529e7"
+    },
+    {
+      "id": 123,
+      "file": "3-4_zero_handles_daily.png",
+      "usage": [
+        "教材 3-4 3本の操作レバーが停止位置にある条件を比べる。錠の絵は投入を許す・止める働きのたとえで、実物の施錠方法ではない。ほかの保護条件は省略。"
+      ],
+      "exists": true,
+      "sha256": "5ea05d289205743c56dcc0bfceeb6d5495e15cf121cd1d22c21501fdb5da4584",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "5ea05d289205743c56dcc0bfceeb6d5495e15cf121cd1d22c21501fdb5da4584"
+    },
+    {
+      "id": 124,
+      "file": "3-5_rotating_contact_daily.png",
+      "usage": [
+        "教材 3-5 回転する輪に、固定側のブラシを接触させて電気を受け渡す模式図。1接点の働きを示し、回路全体や戻り側は省略。"
+      ],
+      "exists": true,
+      "sha256": "84216485967dc8bcd54d3efaaa00e88c2bc689a23770712e96cc9e5066a32e40",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "84216485967dc8bcd54d3efaaa00e88c2bc689a23770712e96cc9e5066a32e40"
+    },
+    {
+      "id": 125,
+      "file": "3-5_star_delta.svg",
+      "usage": [
+        "教材 3-6 スターデルタ始動の切替"
+      ],
+      "exists": true,
+      "sha256": "f79563b31a6e5d26376c162376306382f929efc743774a6f213efd3b55095f64",
+      "width": 900.0,
+      "height": 1930.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f79563b31a6e5d26376c162376306382f929efc743774a6f213efd3b55095f64"
+    },
+    {
+      "id": 126,
+      "file": "3-5_supplement_f41_20261023.png",
+      "usage": [
+        "教材 3-5 固定した導体に、動く集電子を接触させる。がいし・絶縁物で導体と支持構造を分離する。右はダクト内部を見せた切欠き図。"
+      ],
+      "exists": true,
+      "sha256": "506356d8282360dbec5461efbf0ace32a5889619e997b89b506ca3c2bfe23a4d",
+      "width": 1473,
+      "height": 1068,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "506356d8282360dbec5461efbf0ace32a5889619e997b89b506ca3c2bfe23a4d"
+    },
+    {
+      "id": 127,
+      "file": "3-5_supplement_f42_20261023.png",
+      "usage": [
+        "教材 3-5 カーテン式・ケーブル巻取式・特殊チェーン式・ケーブルキャリア式。余るケーブルを支え、動く本体へ追従させる構造例。"
+      ],
+      "exists": true,
+      "sha256": "8c01953c86f45e3881ada6686e03e8bd391983d52a990ff910ea6bf6e548f0ab",
+      "width": 1473,
+      "height": 1068,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "8c01953c86f45e3881ada6686e03e8bd391983d52a990ff910ea6bf6e548f0ab"
+    },
+    {
+      "id": 128,
+      "file": "3-6_grounding_concept21.png",
+      "usage": [
+        "教材 3-7 保護接地によって、故障時の電流が流れる経路を設け、金属外被の電位上昇を抑える。接地があっても人体を流れる電流がゼロになるとは限らず、漏電遮断器などと組み合わせる。"
+      ],
+      "exists": true,
+      "sha256": "abee2ad275f6ab4f6e0e68d0288bc47d6833e293c40f1358d5d2cd2f35313d86",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "abee2ad275f6ab4f6e0e68d0288bc47d6833e293c40f1358d5d2cd2f35313d86"
+    },
+    {
+      "id": 129,
+      "file": "3-6_inverter_concept.png",
+      "usage": [
+        "教材 3-6 上は電気の変換、下は周波数の比較。波は周波数を説明する模式図で、実際のPWM出力波形ではない。"
+      ],
+      "exists": true,
+      "sha256": "fe4de9808f884bc8ed97d66efdfb2d2e7f8f13af71f49ef4ce8abc2ce9275b7e",
+      "width": 1400,
+      "height": 810,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "fe4de9808f884bc8ed97d66efdfb2d2e7f8f13af71f49ef4ce8abc2ce9275b7e"
+    },
+    {
+      "id": 130,
+      "file": "3-6_megger_panel21_1.png",
+      "usage": [
+        "教材 3-7 絶縁抵抗が大きい場合の表示例。必ず電源を切り、無電圧を確認してから測定する。"
+      ],
+      "exists": true,
+      "sha256": "35b548290deeadc826e8758711bd94ee508f20ed44026f542502709284386a40",
+      "width": 900,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "35b548290deeadc826e8758711bd94ee508f20ed44026f542502709284386a40"
+    },
+    {
+      "id": 131,
+      "file": "3-6_megger_panel21_2.png",
+      "usage": [
+        "教材 3-7 絶縁抵抗が低下した場合の表示例。比較用の数値であり、良否基準ではない。測定電圧・端子名は取扱説明書で確認し、測定後は所定の方法で放電する。"
+      ],
+      "exists": true,
+      "sha256": "0a93b222884c9ee54788068c15aacbfd9f1acb7214a5291dff6594aede82800e",
+      "width": 900,
+      "height": 660,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "0a93b222884c9ee54788068c15aacbfd9f1acb7214a5291dff6594aede82800e"
+    },
+    {
+      "id": 132,
+      "file": "3-6_soft_start_daily.png",
+      "usage": [
+        "教材 3-6 身近な台車で加速の違いを比べる模式図。緩始動は、急な力の変化による衝撃を抑える。",
+        "教材 4-4 急な加速と、ゆるやかな加速。左では水が台車に対して後ろ側へ偏る。矢印は加速の向きを示す模式図。"
+      ],
+      "exists": true,
+      "sha256": "7442efd9cd458d1ad28ff48e92bd514fb079d602c86a21e34f55fb22da8350f2",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "7442efd9cd458d1ad28ff48e92bd514fb079d602c86a21e34f55fb22da8350f2"
+    },
+    {
+      "id": 133,
+      "file": "3-6_supplement_f40_20261023.svg",
+      "usage": [
+        "教材 3-6 巻線形の二次抵抗制御。回転子の巻線を3個のスリップリング経由で外部抵抗へつなぐ。接点は抵抗を迂回する道を作る。"
+      ],
+      "exists": true,
+      "sha256": "6d463bb0f87d19f489480294eedfdc2736016c8379a00d793f77a4928c344afc",
+      "width": 1600.0,
+      "height": 900.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "146023be8e81a3e3098d94e701db413aea17e74161934edad7da17014c8de8d3",
+      "changes": [
+        "小さい補足文字を拡大"
+      ]
+    },
+    {
+      "id": 134,
+      "file": "3-6_supplement_f43_20261023.svg",
+      "usage": [
+        "教材 3-6 三相のうち2本を入れ替えると、回転方向が変わる。"
+      ],
+      "exists": true,
+      "sha256": "d647bd21f4b92e97c5afed6210b962869739f0a6aa8c92af1f5bfbde6a071e77",
+      "width": 1600.0,
+      "height": 900.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "04361ec66fc0b094d0423fd9fcb80b0a210f808889b11a3d87059c5d7a4ef454",
+      "changes": [
+        "小さい補足文字を拡大"
+      ]
+    },
+    {
+      "id": 135,
+      "file": "3-6_supplement_f44_20261023.png",
+      "usage": [
+        "教材 3-6 磁極の間を円板が動くと誘導電流が生じ、回転を妨げる力が働く。円板と磁極は接触しない。原理を示す模式図。"
+      ],
+      "exists": true,
+      "sha256": "e2e1dc0c04e95ef1ab47dd97318ea7c6aae12fd0a193dd57684f00367f33de32",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "e2e1dc0c04e95ef1ab47dd97318ea7c6aae12fd0a193dd57684f00367f33de32"
+    },
+    {
+      "id": 136,
+      "file": "3-6_supplement_f45_20261023.svg",
+      "usage": [
+        "教材 3-6 直流電動機へ送る電圧を変える装置が違う。"
+      ],
+      "exists": true,
+      "sha256": "23b9b45cd3b2b98d98f15d2e05f2518e43b19d5950cc72a9c43fa14f9dbc1797",
+      "width": 1600.0,
+      "height": 900.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "e423c580a8d3b79db12d7d0988e644665fc8cdaadf341c6fb1a53ebbb0b12d80",
+      "changes": [
+        "小さい補足文字を拡大",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 137,
+      "file": "3-7_faults_concept.png",
+      "usage": [
+        "教材 3-7 断線と短絡を、電流の通り道で見分ける。"
+      ],
+      "exists": true,
+      "sha256": "bb0381f65a26fb72d536743564e92b2da0bbba67585076976de805aeec37fd7f",
+      "width": 1400,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "bb0381f65a26fb72d536743564e92b2da0bbba67585076976de805aeec37fd7f"
+    },
+    {
+      "id": 138,
+      "file": "3-7_measurement_water_daily.png",
+      "usage": [
+        "教材 3-7 水の流量計と水位差の測定で、測る場所の違いを考えるたとえ。下の電気回路図で、電流計は直列・電圧計は並列に対応させる。"
+      ],
+      "exists": true,
+      "sha256": "9b05a18cac2d977c11202cc7624e1731190198a4c15832c66595899149db5963",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "9b05a18cac2d977c11202cc7624e1731190198a4c15832c66595899149db5963"
+    },
+    {
+      "id": 139,
+      "file": "3-7_meters_concept.png",
+      "usage": [
+        "教材 3-7 Aは電流計、Vは電圧計。抵抗の両端の電位差をVで測り、その道の電流をAで測る。"
+      ],
+      "exists": true,
+      "sha256": "c9203f2415c31db07e3c8ba247547fe1ba46a90ffaeae9a0b9780173ea362f2c",
+      "width": 1400,
+      "height": 790,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c9203f2415c31db07e3c8ba247547fe1ba46a90ffaeae9a0b9780173ea362f2c"
+    },
+    {
+      "id": 140,
+      "file": "3-7_supplement_f46_20261023.png",
+      "usage": [
+        "教材 3-7 通電中に接点が離れると、そのすき間に火花が生じることがある。負荷電流の遮断は、本文の手順を確認する。"
+      ],
+      "exists": true,
+      "sha256": "9641668f166cad9bc14578fe03c94519df9cf55f199a0435681e9620b5a494a0",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "9641668f166cad9bc14578fe03c94519df9cf55f199a0435681e9620b5a494a0"
+    },
+    {
+      "id": 141,
+      "file": "3-7_supplement_f47_20261023.svg",
+      "usage": [
+        "教材 3-7 電流の大きさと通電時間の関係を示す模式図。電流の経路・電源の種類などでも影響は変わる。"
+      ],
+      "exists": true,
+      "sha256": "2d671d055815f37a295cde72ca57b7a439f77884062b494ea8d31eab3c10d792",
+      "width": 1600.0,
+      "height": 900.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "4275952f99e24447f05988f8463ff68c9785980b364b7b28d205680845f35245",
+      "changes": [
+        "小さい補足文字を拡大"
+      ]
+    },
+    {
+      "id": 142,
+      "file": "4-0_earth_moon_schematic.png",
+      "usage": [
+        "教材 4-0 同じ100kgの荷を地表面と月面に置いた模式図。重量は地表面で980N、月面で約162N。"
+      ],
+      "exists": true,
+      "sha256": "84b7c2fee7ff96ef9697119ea524f7042bf3a2284d0a4b6e9f5d2e4fcccb54ea",
+      "width": 1881,
+      "height": 836,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "84b7c2fee7ff96ef9697119ea524f7042bf3a2284d0a4b6e9f5d2e4fcccb54ea"
+    },
+    {
+      "id": 143,
+      "file": "4-1_action_concept21.png",
+      "usage": [
+        "教材 4-1 作用・反作用は別々の物体に働く一対の力。つり合いは、同じ物体に働く力を合わせて考える。"
+      ],
+      "exists": true,
+      "sha256": "f2b62c538a88e0d07c761a4e46c05abf871f6eb85fcc5f5ed23b70be1dad9114",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f2b62c538a88e0d07c761a4e46c05abf871f6eb85fcc5f5ed23b70be1dad9114"
+    },
+    {
+      "id": 144,
+      "file": "4-1_balance_example3.png",
+      "usage": [
+        "教材 4-1 左2m・右2.5mを同じ縮尺で描いた天秤。棒とつり具の重さは無視する。"
+      ],
+      "exists": true,
+      "sha256": "b5d334821250403c0c1816b907fbb322d46614c6b6e54a27ac3dd2dd506ae0f6",
+      "width": 1500,
+      "height": 1000,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "b5d334821250403c0c1816b907fbb322d46614c6b6e54a27ac3dd2dd506ae0f6"
+    },
+    {
+      "id": 145,
+      "file": "4-1_balance_example5.png",
+      "usage": [
+        "教材 4-1 35cm・20cm・70cmは、すべて支点Oから測る。棒とつり具の自重は無視。"
+      ],
+      "exists": true,
+      "sha256": "558a3fdaa5624f787a77fe7fed24ed08e93041d0cc058ef93ac9382e0b0b0c33",
+      "width": 1500,
+      "height": 1050,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "558a3fdaa5624f787a77fe7fed24ed08e93041d0cc058ef93ac9382e0b0b0c33"
+    },
+    {
+      "id": 146,
+      "file": "4-1_beam_moments_example4.png",
+      "usage": [
+        "教材 4-1 R_A・R_Bは各支点が梁を上へ支える力。梁・トロリ・つり具の自重を無視する。"
+      ],
+      "exists": true,
+      "sha256": "1ba8eb2948055488f1c2233a94a14fa936f293d8e889d37009b85343239a140b",
+      "width": 1500,
+      "height": 1000,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "1ba8eb2948055488f1c2233a94a14fa936f293d8e889d37009b85343239a140b"
+    },
+    {
+      "id": 147,
+      "file": "4-1_force_elements_door.png",
+      "usage": [
+        "教材 4-1 同じドアを押す場面で、力の大きさ・向き・作用点を比べる。矢印は力のかけ方を示す模式表現。"
+      ],
+      "exists": true,
+      "sha256": "2366a3f46ac1955d651594c9b64199bfd164f4289672845f870e257b0cb3712d",
+      "width": 1838,
+      "height": 856,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "2366a3f46ac1955d651594c9b64199bfd164f4289672845f870e257b0cb3712d"
+    },
+    {
+      "id": 148,
+      "file": "4-1_force_vector_clear.png",
+      "usage": [
+        "教材 4-1 青の横4N・縦3Nを合わせると赤の5N。同じ縮尺で描いている。",
+        "用語 4 合力／分力"
+      ],
+      "exists": true,
+      "sha256": "702703af053193328ccd1ae3e6097bedb547907198b60e21ce1bec4285165913",
+      "width": 1500,
+      "height": 980,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "702703af053193328ccd1ae3e6097bedb547907198b60e21ce1bec4285165913"
+    },
+    {
+      "id": 149,
+      "file": "4-1_spanner_schematic.png",
+      "usage": [
+        "教材 4-1 短いスパナと長いスパナを直角に押す模式図。50×0.2＝25×0.4＝10N・m。",
+        "用語 4 力のモーメント"
+      ],
+      "exists": true,
+      "sha256": "c06e0048061c71c264f78bff1e5d29c344427ff3e4d4a5a61e2ecb117cdb1dfa",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c06e0048061c71c264f78bff1e5d29c344427ff3e4d4a5a61e2ecb117cdb1dfa"
+    },
+    {
+      "id": 150,
+      "file": "4-1_stepped_pulley_example6.png",
+      "usage": [
+        "教材 4-1 一体で回る2つの滑車を正面から示す模式図。半径50cm側につり荷、80cm側に別のロープで力Fをかける。"
+      ],
+      "exists": true,
+      "sha256": "7486f6e3187e4d9900281be783e6bec31a9ce5038c7e432d91f350e342bf7ce1",
+      "width": 1500,
+      "height": 1150,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "7486f6e3187e4d9900281be783e6bec31a9ce5038c7e432d91f350e342bf7ce1"
+    },
+    {
+      "id": 151,
+      "file": "4-1_supplement_f48_20261023.svg",
+      "usage": [
+        "教材 4-1 1点に働く3つの力の合成例。矢印を平行移動して順につなぎ、最初から最後へ結ぶ。"
+      ],
+      "exists": true,
+      "sha256": "9f72dce3b751f30c872bf32acfe3f107d565879f860c3069f9bf24507d2d954d",
+      "width": 1600.0,
+      "height": 900.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "81a228fb60f6d946de8e5a3cb95c9c2c251ac1f61e749af4db0736c20ea6e0b9",
+      "changes": [
+        "小さい補足文字を拡大"
+      ]
+    },
+    {
+      "id": 152,
+      "file": "4-1_supplement_f49_20261023.svg",
+      "usage": [
+        "教材 4-1 同じ縮尺の矢印で比較。同方向は3＋2＝5 N、反対方向は5−2＝3 N。"
+      ],
+      "exists": true,
+      "sha256": "83ffb8d8e07600bf309a006bbba1319377aaae87f4ca538d82fc13ad88c00095",
+      "width": 1600.0,
+      "height": 900.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "34f343b73bf1663d70f95539441ea8f018630ad5d97cbfffa237f0494facc445",
+      "changes": [
+        "小さい補足文字を拡大"
+      ]
+    },
+    {
+      "id": 153,
+      "file": "4-1_supplement_f50_20261023.png",
+      "usage": [
+        "教材 4-1 同じ1 kNでも、作業半径2 mでは2 kN・m、4 mでは4 kN・m。荷だけによるモーメントの比較例。"
+      ],
+      "exists": true,
+      "sha256": "fa0b7530a9bcc22818fbadb2763eb403207e4b5881ee7fb3f9faa4e6cdc8adc0",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "fa0b7530a9bcc22818fbadb2763eb403207e4b5881ee7fb3f9faa4e6cdc8adc0"
+    },
+    {
+      "id": 154,
+      "file": "4-2_pipe_volume_clear.png",
+      "usage": [
+        "教材 4-2 Rは外半径、rは空洞の内半径。空洞を除いた断面積に、高さを掛ける。"
+      ],
+      "exists": true,
+      "sha256": "2759e10d2e235839e720c8ef479739e4c4882c7018b5af0ddcd4337d14bfca61",
+      "width": 1500,
+      "height": 1000,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "2759e10d2e235839e720c8ef479739e4c4882c7018b5af0ddcd4337d14bfca61"
+    },
+    {
+      "id": 155,
+      "file": "4-2_scale_clear.png",
+      "usage": [
+        "教材 4-2 1辺を全部2倍にした立方体。小さい立方体8個分になる。"
+      ],
+      "exists": true,
+      "sha256": "724c0016eca3d21fdf4d659739a0ad70ffdc72a58d2d53b2e3a04b38765b50fe",
+      "width": 1500,
+      "height": 870,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "724c0016eca3d21fdf4d659739a0ad70ffdc72a58d2d53b2e3a04b38765b50fe"
+    },
+    {
+      "id": 156,
+      "file": "4-2_sphere_cone_volume_clear.png",
+      "usage": [
+        "教材 4-2 球のrは中心から表面までの距離。円錐のrは底面の半径、hは底面から頂点までの垂直な高さ。"
+      ],
+      "exists": true,
+      "sha256": "c1db5db1b5d47460777893879cd5ec9a9fc00ac819ef0de84ea4487f871e831c",
+      "width": 1600,
+      "height": 1050,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c1db5db1b5d47460777893879cd5ec9a9fc00ac819ef0de84ea4487f871e831c"
+    },
+    {
+      "id": 157,
+      "file": "4-2_volume_shapes_clear.png",
+      "usage": [
+        "教材 4-2 a・b・h・L・rは寸法を表す。rは円の中心から縁までの半径。π＝3.14とする。"
+      ],
+      "exists": true,
+      "sha256": "a8213bee0ec3d4e19329ac5c91ab0a1fa1a77e2360e61809c69fa67fae995446",
+      "width": 1500,
+      "height": 1000,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a8213bee0ec3d4e19329ac5c91ab0a1fa1a77e2360e61809c69fa67fae995446"
+    },
+    {
+      "id": 158,
+      "file": "4-3_centroid_clear.png",
+      "usage": [
+        "教材 4-3 赤い点Gが重心。形と質量の分布が一様な場合。円錐は断面を使った模式図。",
+        "用語 4 重心"
+      ],
+      "exists": true,
+      "sha256": "38fd968f5a979fb8f087e659eec88ee04acb82dd8ca01bdd57783f6618cccb0b",
+      "width": 1500,
+      "height": 1000,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "38fd968f5a979fb8f087e659eec88ee04acb82dd8ca01bdd57783f6618cccb0b"
+    },
+    {
+      "id": 159,
+      "file": "4-3_lifting_centroid_schematic.png",
+      "usage": [
+        "教材 4-3 左側に重い物が入った同じ箱を比較。左は重い側へ傾く様子、右はロープの長さも調整して水平に保った模式図。"
+      ],
+      "exists": true,
+      "sha256": "b45f482c6098a66935f6fd82e25c83857f4d556c0a81dbf8913900e9903c4a6e",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "b45f482c6098a66935f6fd82e25c83857f4d556c0a81dbf8913900e9903c4a6e"
+    },
+    {
+      "id": 160,
+      "file": "4-3_stability_concept21.png",
+      "usage": [
+        "教材 4-3 支点を基準に、重心を通る鉛直線が内側にあれば戻す向き、外側なら倒す向きのモーメントになる。"
+      ],
+      "exists": true,
+      "sha256": "55581b67d7eb055a45a30e93929b3691e49ab03a1be03052ea673cfa9decfa28",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "55581b67d7eb055a45a30e93929b3691e49ab03a1be03052ea673cfa9decfa28"
+    },
+    {
+      "id": 161,
+      "file": "4-3_supplement_f51_20261023.png",
+      "usage": [
+        "教材 4-3 別々の位置からつり、各回の鉛直線を板に記す。板の向きをそろえて重ねた2本の線の交点が重心G。"
+      ],
+      "exists": true,
+      "sha256": "0a235ce3eba25b9704397634872e574f0b5f7191727d00a681596f454cd26305",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "0a235ce3eba25b9704397634872e574f0b5f7191727d00a681596f454cd26305"
+    },
+    {
+      "id": 162,
+      "file": "4-3_supplement_f52_20261023.png",
+      "usage": [
+        "教材 4-3 棒を自由に回れる支点Oで支える例。Gは重心。OとGの位置によって、少し傾けた後の動きが変わる。"
+      ],
+      "exists": true,
+      "sha256": "3f1def2f0919c7b275985480def172e4886fbd7a0f07340cd260fdfb16c4913d",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "3f1def2f0919c7b275985480def172e4886fbd7a0f07340cd260fdfb16c4913d"
+    },
+    {
+      "id": 163,
+      "file": "4-3_supplement_f53_20261023.svg",
+      "usage": [
+        "教材 4-3 材質・厚さが一様な板、または密度が一様な中実の四角錐の場合。不規則な四角形では2つの三角形の面積と重心から求める。"
+      ],
+      "exists": true,
+      "sha256": "17791db8d423c587726506f83b64b357ee06dadba827b2387a4fecfbbfef5d93",
+      "width": 1600.0,
+      "height": 900.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "536222bdef34860a24e50d4d403155f3bec7b2cfcbbc88a2708cd30302296a23",
+      "changes": [
+        "小さい補足文字を拡大",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 164,
+      "file": "4-3_supplement_f54_20261023.png",
+      "usage": [
+        "教材 4-3 左は質量・底面幅を同じにして重心高さを比較。右は質量・重心高さを同じにして底面幅を比較した模式図。"
+      ],
+      "exists": true,
+      "sha256": "2d963cac1922ed7880e102ec9672c0be77c9550ed245488281354a97a55e4c3e",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "2d963cac1922ed7880e102ec9672c0be77c9550ed245488281354a97a55e4c3e"
+    },
+    {
+      "id": 165,
+      "file": "4-4_brake_example5.png",
+      "usage": [
+        "教材 4-4 ドラムに働く力を示す模式図。シューを押す力Fと、回転を止める摩擦力μFを分けて見る。"
+      ],
+      "exists": true,
+      "sha256": "1e05a514816a60c144d1b8cefcec2f2d85ec87c29d0f696fccb4ac1bef266bb8",
+      "width": 1500,
+      "height": 1150,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "1e05a514816a60c144d1b8cefcec2f2d85ec87c29d0f696fccb4ac1bef266bb8"
+    },
+    {
+      "id": 166,
+      "file": "4-4_carousel_inertia.png",
+      "usage": [
+        "教材 4-4 回転ブランコの模式図。真上から見た赤矢印は、ロープの力のうち中心へ向かう水平方向の分力。青矢印は進む向き。"
+      ],
+      "exists": true,
+      "sha256": "5bb540fa875f2bf0b43ed3ccd1e4b1e769ba84022d519ed143e100cc11c199e6",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "5bb540fa875f2bf0b43ed3ccd1e4b1e769ba84022d519ed143e100cc11c199e6"
+    },
+    {
+      "id": 167,
+      "file": "4-4_friction_daily.png",
+      "usage": [
+        "教材 4-4 同じ箱を水平なロープで引く模式図。赤は引く力、青は床から箱に働く摩擦力。",
+        "用語 4 摩擦力と静止摩擦係数"
+      ],
+      "exists": true,
+      "sha256": "f26b31061d856906a6be060e519a775dc9208e8d2ad6f20740aa7147a890d65c",
+      "width": 1942,
+      "height": 809,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f26b31061d856906a6be060e519a775dc9208e8d2ad6f20740aa7147a890d65c"
+    },
+    {
+      "id": 168,
+      "file": "4-4_friction_example3.png",
+      "usage": [
+        "教材 4-4 動き出す直前は、引く力980Nと最大静止摩擦力が等しい。上下では重量と垂直抗力がつり合う。"
+      ],
+      "exists": true,
+      "sha256": "9d489baa23731cf079706576831d211251942b3559de264e93950c98c0982202",
+      "width": 1500,
+      "height": 1000,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "9d489baa23731cf079706576831d211251942b3559de264e93950c98c0982202"
+    },
+    {
+      "id": 169,
+      "file": "4-4_friction_example4.png",
+      "usage": [
+        "教材 4-4 100kgの重量は980N。床からの垂直抗力も980Nとなり、動き出す直前の引く力を求められる。"
+      ],
+      "exists": true,
+      "sha256": "2e8e4111945b03bb00a5f62fb522877bd4bd8840edf90b5fed380f5f3decc65b",
+      "width": 1500,
+      "height": 1000,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "2e8e4111945b03bb00a5f62fb522877bd4bd8840edf90b5fed380f5f3decc65b"
+    },
+    {
+      "id": 170,
+      "file": "4-4_friction_transition.png",
+      "usage": [
+        "教材 4-4 引く力を少しずつ増やしたときの摩擦力。静止中は斜めに増え、滑り始めると小さくなり、その後は横ばいになる。"
+      ],
+      "exists": true,
+      "sha256": "752a375384eef08453a746a077025a2b588f0e3cf3efb6724297c06f1531184a",
+      "width": 1400,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "752a375384eef08453a746a077025a2b588f0e3cf3efb6724297c06f1531184a"
+    },
+    {
+      "id": 171,
+      "file": "4-4_speed_velocity_acceleration_trolley.png",
+      "usage": [
+        "教材 4-4 同じ台車で3つの意味を比べる。右の例は、同じ向きへ一定の加速度で速くなる場合。"
+      ],
+      "exists": true,
+      "sha256": "4d1126dda74178e0d5d2da52d817276467523a34065b0291e8b8b39b12363d85",
+      "width": 2172,
+      "height": 724,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "4d1126dda74178e0d5d2da52d817276467523a34065b0291e8b8b39b12363d85"
+    },
+    {
+      "id": 172,
+      "file": "4-4_velocity_pythagoras.png",
+      "usage": [
+        "教材 4-4 走行40m/minと横行30m/minの合成。直角三角形の斜辺が合成速度。荷振れは無視する。",
+        "用語 4 合成速度"
+      ],
+      "exists": true,
+      "sha256": "79e7ffe4a175e5bb95d2bc88011ef87e3393a5481f4fee903861784df93b57e6",
+      "width": 1700,
+      "height": 1100,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "79e7ffe4a175e5bb95d2bc88011ef87e3393a5481f4fee903861784df93b57e6"
+    },
+    {
+      "id": 173,
+      "file": "4-5_distribution_concept21.png",
+      "usage": [
+        "教材 4-5 集中荷重は狭い範囲、分布荷重は広い範囲で力を受ける。図は力のかかる場所の違いを表す。"
+      ],
+      "exists": true,
+      "sha256": "a9865ac01ea2522deb0257556c1491e75e11343005ead28716bb07f8ed02be44",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a9865ac01ea2522deb0257556c1491e75e11343005ead28716bb07f8ed02be44"
+    },
+    {
+      "id": 174,
+      "file": "4-5_load_types_clear.png",
+      "usage": [
+        "教材 4-5 矢印は力のかけ方を示す。実物の変形を分かりやすくした模式図。",
+        "用語 4 応力"
+      ],
+      "exists": true,
+      "sha256": "dc918ab2a9cf2655f65c917c89eb4db94094f5fe253de3fd3326566fe244f7a3",
+      "width": 1500,
+      "height": 1500,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "dc918ab2a9cf2655f65c917c89eb4db94094f5fe253de3fd3326566fe244f7a3"
+    },
+    {
+      "id": 175,
+      "file": "4-5_loadtime_concept21.png",
+      "usage": [
+        "教材 4-5 荷重の大きさが一定か、増減するか、向きも変わるかを見る。衝撃荷重は短い時間に大きな力がかかる場合。"
+      ],
+      "exists": true,
+      "sha256": "366a11fb9981b57234ddc170166c6bb764c56312ffa2f34f2fe965704079752f",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "366a11fb9981b57234ddc170166c6bb764c56312ffa2f34f2fe965704079752f"
+    },
+    {
+      "id": 176,
+      "file": "4-5_strain_concept21.png",
+      "usage": [
+        "教材 4-5 ひずみは、伸びた長さをもとの長さで割った割合。1000mmに対して1mm伸びると、1÷1000＝0.001。図の伸びは見やすく拡大している。",
+        "用語 4 比例限度／引張強さ／破断点"
+      ],
+      "exists": true,
+      "sha256": "c9c26cf5014d993de0e6ca425ae74dedcb5b359c5e2abd92f5d4eddd9771fee4",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c9c26cf5014d993de0e6ca425ae74dedcb5b359c5e2abd92f5d4eddd9771fee4"
+    },
+    {
+      "id": 177,
+      "file": "4-5_stress_concept21.png",
+      "usage": [
+        "教材 4-5 同じ1000Nでも、断面積50mm²なら20MPa、100mm²なら10MPa。細い部分ほど、断面積あたりの負担が大きい。"
+      ],
+      "exists": true,
+      "sha256": "ae87c1b10303cb9bcfc20fd7c5235957646b57ebb85ee39be9bda59729538df1",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "ae87c1b10303cb9bcfc20fd7c5235957646b57ebb85ee39be9bda59729538df1"
+    },
+    {
+      "id": 178,
+      "file": "4-5_stress_curve_clear.png",
+      "usage": [
+        "教材 4-5 軟鋼の応力ひずみ曲線。縦が応力、横がひずみ。"
+      ],
+      "exists": true,
+      "sha256": "7fc1e91304a070e36111995a8d7e1562e3a3df86824959ef5f515e7f307b4a25",
+      "width": 1500,
+      "height": 1040,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "7fc1e91304a070e36111995a8d7e1562e3a3df86824959ef5f515e7f307b4a25"
+    },
+    {
+      "id": 179,
+      "file": "4-5_supplement_f55_20261023.svg",
+      "usage": [
+        "教材 4-5 軟鋼と、明瞭な降伏がない材料の曲線の模式比較。軸の縮尺・数値は示していない。"
+      ],
+      "exists": true,
+      "sha256": "9beefcf072ebb412b1a7b7c118f986df64eab28aa29e4b7205095fd7169b4b3f",
+      "width": 1600.0,
+      "height": 900.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "18c3640c90d381a8cf89c5963f339aab4322982fa5b66a5748d697f421ec3020",
+      "changes": [
+        "小さい補足文字を拡大",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 180,
+      "file": "4-6_mode_factor_easy.png",
+      "usage": [
+        "教材 4-6 1本つり・2本の鉛直つり・つり角度90°の2本つりの比較（荷重を均等に負担する場合。係数は下表による）"
+      ],
+      "exists": true,
+      "sha256": "2d156d77a5dd1f128ae021a5e7611747fe9d3ab73a51425faa0176f36869464e",
+      "width": 1800,
+      "height": 1080,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "2d156d77a5dd1f128ae021a5e7611747fe9d3ab73a51425faa0176f36869464e"
+    },
+    {
+      "id": 181,
+      "file": "4-6_sling_support_easy.png",
+      "usage": [
+        "教材 4-6 同じ重量の荷を、異なる開きでつった比較",
+        "用語 4 張力係数・モード係数"
+      ],
+      "exists": true,
+      "sha256": "6d39ead2e7c74a996b7d780924933e777e298cea8e0b3ed9667fb27a1c8f1600",
+      "width": 1536,
+      "height": 1024,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "6d39ead2e7c74a996b7d780924933e777e298cea8e0b3ed9667fb27a1c8f1600"
+    },
+    {
+      "id": 182,
+      "file": "4-6_supplement_f56_20261023.svg",
+      "usage": [
+        "教材 4-6 例題1。密度2.3 t/m³の円柱を、左右対称・均等分担でつる。直径を半分にして半径から体積を求める。"
+      ],
+      "exists": true,
+      "sha256": "28ef45ba4ba7a0bcc4144242e89b929b9e594c4a74ecf6f47a282badfab5be0f",
+      "width": 1600.0,
+      "height": 900.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "49c5a0f76fe976bc1dfe4acb7dc4c5e3e86064ef221f2957278cbee25e17237d",
+      "changes": [
+        "小さい補足文字を拡大",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 183,
+      "file": "4-6_supplement_f57_20261023.svg",
+      "usage": [
+        "教材 4-6 例題2。図は向かい合う2本を含む断面。奥にも2本あり、合計4本で均等分担する条件。"
+      ],
+      "exists": true,
+      "sha256": "f76fbb6062f1c3a493de7b86dbda7e6428b9faef5706be68bf0f128f8e1273a5",
+      "width": 1600.0,
+      "height": 900.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "5b36b7bc0d72ff5bfa1b5fb638ba823eabdb0e32ce30ced1d1f59f80707c349c",
+      "changes": [
+        "小さい補足文字を拡大",
+        "線・矢印を太く"
+      ]
+    },
+    {
+      "id": 184,
+      "file": "4-6_tension_coefficient_ratio.png",
+      "usage": [
+        "教材 4-6 同じ縮尺で比較。縦5kNに対して斜め6.25kNなら1.25倍、斜め10kNなら2倍"
+      ],
+      "exists": true,
+      "sha256": "4ac6b4a60775b11df5aa07994575d4395700c64b403431e0e3b92d39468bd32a",
+      "width": 1700,
+      "height": 960,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "4ac6b4a60775b11df5aa07994575d4395700c64b403431e0e3b92d39468bd32a"
+    },
+    {
+      "id": 185,
+      "file": "4-7_cascade_clear.png",
+      "usage": [
+        "教材 4-7 AとBは別のロープ。Aの右端は上の動滑車の軸側に取り付けられ、50Nの荷重をかける。"
+      ],
+      "exists": true,
+      "sha256": "fdf2c0dc9db72d5cc991263bb06a7f591c683a0701a3c9ca1a166d487c3e67b0",
+      "width": 1500,
+      "height": 1100,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "fdf2c0dc9db72d5cc991263bb06a7f591c683a0701a3c9ca1a166d487c3e67b0"
+    },
+    {
+      "id": 186,
+      "file": "4-7_compound_clear.png",
+      "usage": [
+        "教材 4-7 下の2個の動滑車と荷は一緒に動く。①〜④は、そのまとまりを上向きに支えるロープ部分。"
+      ],
+      "exists": true,
+      "sha256": "5d42c15be9152d1c94440ac65abf45e1175d8f6a71277314795dad9abd8c3c3f",
+      "width": 1500,
+      "height": 1100,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "5d42c15be9152d1c94440ac65abf45e1175d8f6a71277314795dad9abd8c3c3f"
+    },
+    {
+      "id": 187,
+      "file": "4-7_fixed_moving_clear.png",
+      "usage": [
+        "教材 4-7 青い線は1本の連続したロープ。灰色の棒は滑車を取り付ける支え。図のロープの支持部分は鉛直。",
+        "用語 4 定滑車／動滑車／組合せ滑車"
+      ],
+      "exists": true,
+      "sha256": "c1724292a1eedcfe17493fd207385744533fa3da4e21680d03d7531633acf14e",
+      "width": 1600,
+      "height": 1050,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c1724292a1eedcfe17493fd207385744533fa3da4e21680d03d7531633acf14e"
+    },
+    {
+      "id": 188,
+      "file": "4-7_supplement_f58_20261023.svg",
+      "usage": [
+        "教材 4-7 下の滑車と荷を一つのまとまりとして、上へ支えるロープ部分を数える。右端の引く部分は支持本数に含めない。"
+      ],
+      "exists": true,
+      "sha256": "3dd2516f7ddd78c61ff556ac123add5d676d54bc527d26641aea113fd5cededf",
+      "width": 1600.0,
+      "height": 900.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "3f750968e0531867dea27bfea970eb7d099a5439d2d62ae9d1ac13c2e1a37d80",
+      "changes": [
+        "小さい補足文字を拡大"
+      ]
+    },
+    {
+      "id": 189,
+      "file": "4-7_work_clear.png",
+      "usage": [
+        "教材 4-7 縦が力、横が動かす距離。同じ面積は同じ仕事を表す。"
+      ],
+      "exists": true,
+      "sha256": "f4b8c60c4cfc29eea2702c3fa8dd49455a8dc7b2d2665c54a5a355189b10eba1",
+      "width": 1500,
+      "height": 950,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f4b8c60c4cfc29eea2702c3fa8dd49455a8dc7b2d2665c54a5a355189b10eba1"
+    },
+    {
+      "id": 190,
+      "file": "chapter1_relation_map.svg",
+      "usage": [
+        "相関図"
+      ],
+      "exists": true,
+      "sha256": "756460a2e3021a9e9ee681d0ae7f2d7eb420e5a8a5d58f90f18f48c4de97bcbc",
+      "width": 3400.0,
+      "height": 2200.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "756460a2e3021a9e9ee681d0ae7f2d7eb420e5a8a5d58f90f18f48c4de97bcbc"
+    },
+    {
+      "id": 191,
+      "file": "chapter2_relation_map.svg",
+      "usage": [
+        "相関図"
+      ],
+      "exists": true,
+      "sha256": "a515e3bd505f7f02d99cbceff8198c2501ecfe394b44454435748374e2020ebe",
+      "width": 3400.0,
+      "height": 2200.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a515e3bd505f7f02d99cbceff8198c2501ecfe394b44454435748374e2020ebe"
+    },
+    {
+      "id": 192,
+      "file": "chapter3_relation_map.svg",
+      "usage": [
+        "相関図"
+      ],
+      "exists": true,
+      "sha256": "0ef2363aee6dafefccad55d2beb1528900ad0ed352ecc37b054fc12387dce5fc",
+      "width": 3400.0,
+      "height": 2200.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "0ef2363aee6dafefccad55d2beb1528900ad0ed352ecc37b054fc12387dce5fc"
+    },
+    {
+      "id": 193,
+      "file": "chapter4_relation_map.svg",
+      "usage": [
+        "相関図"
+      ],
+      "exists": true,
+      "sha256": "a4e28bdcfe427a13720b9e0366be2e08301260adf4918b5e240cfc42449515dd",
+      "width": 3400.0,
+      "height": 2200.0,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a4e28bdcfe427a13720b9e0366be2e08301260adf4918b5e240cfc42449515dd"
+    },
+    {
+      "id": 194,
+      "file": "exam_1-21_e.png",
+      "usage": [
+        "模試 1-21 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "366cda39417a317307b8107d2a583e6743da9feae3a50487e522b090466b2b36",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "366cda39417a317307b8107d2a583e6743da9feae3a50487e522b090466b2b36"
+    },
+    {
+      "id": 195,
+      "file": "exam_1-21_q.png",
+      "usage": [
+        "模試 1-21 figImg"
+      ],
+      "exists": true,
+      "sha256": "1ed8deab0830b3bd051f4ccbb46d013dfa03907e3868e1ee8758b1483001ff6f",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "1ed8deab0830b3bd051f4ccbb46d013dfa03907e3868e1ee8758b1483001ff6f"
+    },
+    {
+      "id": 196,
+      "file": "exam_1-31_e.png",
+      "usage": [
+        "模試 1-31 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "6c61b66ac25ea0a98c73a1bcd17f3a77e5b002fdee3689a5d1b3ac1e7f251a1b",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "6c61b66ac25ea0a98c73a1bcd17f3a77e5b002fdee3689a5d1b3ac1e7f251a1b"
+    },
+    {
+      "id": 197,
+      "file": "exam_1-31_q.png",
+      "usage": [
+        "模試 1-31 figImg"
+      ],
+      "exists": true,
+      "sha256": "341cea548ebe3006f4779e7390624ed8a208fce2ebed6546df484ae2062a0e8e",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "341cea548ebe3006f4779e7390624ed8a208fce2ebed6546df484ae2062a0e8e"
+    },
+    {
+      "id": 198,
+      "file": "exam_1-32_e.png",
+      "usage": [
+        "模試 1-32 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "773eeb148e17d5567ea9f06fa729d7cbbe52e3372adf1d663c67cc0297c9347e",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "773eeb148e17d5567ea9f06fa729d7cbbe52e3372adf1d663c67cc0297c9347e"
+    },
+    {
+      "id": 199,
+      "file": "exam_1-32_q.png",
+      "usage": [
+        "模試 1-32 figImg"
+      ],
+      "exists": true,
+      "sha256": "c25b7f7f6958cfe982645feab1059c7d3372fd38e9bd2c4f6e3f10b1fb48b7e8",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c25b7f7f6958cfe982645feab1059c7d3372fd38e9bd2c4f6e3f10b1fb48b7e8"
+    },
+    {
+      "id": 200,
+      "file": "exam_1-33_e.png",
+      "usage": [
+        "模試 1-33 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "45fb219ac8abe1afc4f0b499cdc4bda00fa69226c807cfc62557abe2e4ba0935",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "45fb219ac8abe1afc4f0b499cdc4bda00fa69226c807cfc62557abe2e4ba0935"
+    },
+    {
+      "id": 201,
+      "file": "exam_1-33_q.png",
+      "usage": [
+        "模試 1-33 figImg"
+      ],
+      "exists": true,
+      "sha256": "1c6ab20ef6a1fa518eecc031724e47080dbb1bbcca241cc7183ede5eedc53f84",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "1c6ab20ef6a1fa518eecc031724e47080dbb1bbcca241cc7183ede5eedc53f84"
+    },
+    {
+      "id": 202,
+      "file": "exam_1-34_e.png",
+      "usage": [
+        "模試 1-34 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "2a23ed69ec7e01600f27fd182a2454147b9045efe0714f4b39aaa3346c8f76e3",
+      "width": 1800,
+      "height": 820,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "2a23ed69ec7e01600f27fd182a2454147b9045efe0714f4b39aaa3346c8f76e3"
+    },
+    {
+      "id": 203,
+      "file": "exam_1-34_q.png",
+      "usage": [
+        "模試 1-34 figImg"
+      ],
+      "exists": true,
+      "sha256": "01fa73c86798027cf387d15936d5f5119dd7e9c5776b5384c1a1afc2c7d664a2",
+      "width": 1800,
+      "height": 820,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "01fa73c86798027cf387d15936d5f5119dd7e9c5776b5384c1a1afc2c7d664a2"
+    },
+    {
+      "id": 204,
+      "file": "exam_1-36_e.png",
+      "usage": [
+        "模試 1-36 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "5b6fdb862738460b04f8ab9c86bba7606649395596e89d76ce35503c8c4578ec",
+      "width": 1800,
+      "height": 840,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "5b6fdb862738460b04f8ab9c86bba7606649395596e89d76ce35503c8c4578ec"
+    },
+    {
+      "id": 205,
+      "file": "exam_1-36_q.png",
+      "usage": [
+        "模試 1-36 figImg"
+      ],
+      "exists": true,
+      "sha256": "ab4c165c533bc817ee324b6d31c9a6ac02508a1aa2c4dde4ee9e145b46b05fac",
+      "width": 1800,
+      "height": 840,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "ab4c165c533bc817ee324b6d31c9a6ac02508a1aa2c4dde4ee9e145b46b05fac"
+    },
+    {
+      "id": 206,
+      "file": "exam_1-37_e.png",
+      "usage": [
+        "模試 1-37 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "a1e40c02ec9d527d61242b4145a3f38cee19efe7408aec6311ac659c7b828f77",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a1e40c02ec9d527d61242b4145a3f38cee19efe7408aec6311ac659c7b828f77"
+    },
+    {
+      "id": 207,
+      "file": "exam_1-37_q.png",
+      "usage": [
+        "模試 1-37 figImg"
+      ],
+      "exists": true,
+      "sha256": "9642c04803bba45a8160a903d2a5d4760098d760d68fa88e42081b9b13c44af3",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "9642c04803bba45a8160a903d2a5d4760098d760d68fa88e42081b9b13c44af3"
+    },
+    {
+      "id": 208,
+      "file": "exam_1-38_e.png",
+      "usage": [
+        "模試 1-38 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "b086560bea26bc7b2354d8951373cc22838883db659ee390972b64fbf7c35c6c",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "b086560bea26bc7b2354d8951373cc22838883db659ee390972b64fbf7c35c6c"
+    },
+    {
+      "id": 209,
+      "file": "exam_1-38_q.png",
+      "usage": [
+        "模試 1-38 figImg"
+      ],
+      "exists": true,
+      "sha256": "13d9a11221d9eb740701f06700228b1e5fc52aed801ecde13c21b7cdd1be01b3",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "13d9a11221d9eb740701f06700228b1e5fc52aed801ecde13c21b7cdd1be01b3"
+    },
+    {
+      "id": 210,
+      "file": "exam_1-39_e.png",
+      "usage": [
+        "模試 1-39 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "13c378ff17ca39bfad1d3905137f174698ce983053abe2b2f3eaf0baf0572539",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "13c378ff17ca39bfad1d3905137f174698ce983053abe2b2f3eaf0baf0572539"
+    },
+    {
+      "id": 211,
+      "file": "exam_1-39_q.png",
+      "usage": [
+        "模試 1-39 figImg"
+      ],
+      "exists": true,
+      "sha256": "f3cebd3179d1d21b73075119dbf2901227956da527bed6afa18dc11258326786",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f3cebd3179d1d21b73075119dbf2901227956da527bed6afa18dc11258326786"
+    },
+    {
+      "id": 212,
+      "file": "exam_1-5_e.png",
+      "usage": [
+        "模試 1-5 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "f0b2c365e7631fb07ce4ad1f1b2423ba82875332f2a496f23fb721d1569197f7",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f0b2c365e7631fb07ce4ad1f1b2423ba82875332f2a496f23fb721d1569197f7"
+    },
+    {
+      "id": 213,
+      "file": "exam_10-22_e.png",
+      "usage": [
+        "模試 10-22 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "12d27d5ee9f9de89800d6bb9c6e1ca4d6b2958dc70934ddc953eb97dd9096dc5",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "12d27d5ee9f9de89800d6bb9c6e1ca4d6b2958dc70934ddc953eb97dd9096dc5"
+    },
+    {
+      "id": 214,
+      "file": "exam_10-22_q.png",
+      "usage": [
+        "模試 10-22 figImg"
+      ],
+      "exists": true,
+      "sha256": "12d27d5ee9f9de89800d6bb9c6e1ca4d6b2958dc70934ddc953eb97dd9096dc5",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "12d27d5ee9f9de89800d6bb9c6e1ca4d6b2958dc70934ddc953eb97dd9096dc5"
+    },
+    {
+      "id": 215,
+      "file": "exam_10-32_e.png",
+      "usage": [
+        "模試 10-32 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "e54ba9206970d95aa29b98d038f6e9185e9797a2eaa7e8491e46a2c2f6b136d1",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "e54ba9206970d95aa29b98d038f6e9185e9797a2eaa7e8491e46a2c2f6b136d1"
+    },
+    {
+      "id": 216,
+      "file": "exam_10-32_q.png",
+      "usage": [
+        "模試 10-32 figImg"
+      ],
+      "exists": true,
+      "sha256": "e54ba9206970d95aa29b98d038f6e9185e9797a2eaa7e8491e46a2c2f6b136d1",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "e54ba9206970d95aa29b98d038f6e9185e9797a2eaa7e8491e46a2c2f6b136d1"
+    },
+    {
+      "id": 217,
+      "file": "exam_10-33_e.png",
+      "usage": [
+        "模試 10-33 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "8e233229200983779d25619436406c31e80e79f8f7f9e18f402b0b2fbc87d0d9",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "8e233229200983779d25619436406c31e80e79f8f7f9e18f402b0b2fbc87d0d9"
+    },
+    {
+      "id": 218,
+      "file": "exam_10-33_q.png",
+      "usage": [
+        "模試 10-33 figImg"
+      ],
+      "exists": true,
+      "sha256": "8e233229200983779d25619436406c31e80e79f8f7f9e18f402b0b2fbc87d0d9",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "8e233229200983779d25619436406c31e80e79f8f7f9e18f402b0b2fbc87d0d9"
+    },
+    {
+      "id": 219,
+      "file": "exam_10-36_e.png",
+      "usage": [
+        "模試 10-36 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "6eee0a183500240c84119184b858acce84aac9c6456b9060801109b46fa09c6e",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "6eee0a183500240c84119184b858acce84aac9c6456b9060801109b46fa09c6e"
+    },
+    {
+      "id": 220,
+      "file": "exam_10-36_q.png",
+      "usage": [
+        "模試 10-36 figImg"
+      ],
+      "exists": true,
+      "sha256": "6eee0a183500240c84119184b858acce84aac9c6456b9060801109b46fa09c6e",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "6eee0a183500240c84119184b858acce84aac9c6456b9060801109b46fa09c6e"
+    },
+    {
+      "id": 221,
+      "file": "exam_10-38_e.png",
+      "usage": [
+        "模試 10-38 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "7c598f5a250c7913cfdae85b9eada79cdea5b046048ae8348abd8a2e82212f5b",
+      "width": 1600,
+      "height": 660,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "7c598f5a250c7913cfdae85b9eada79cdea5b046048ae8348abd8a2e82212f5b"
+    },
+    {
+      "id": 222,
+      "file": "exam_10-38_q.png",
+      "usage": [
+        "模試 10-38 figImg"
+      ],
+      "exists": true,
+      "sha256": "7c598f5a250c7913cfdae85b9eada79cdea5b046048ae8348abd8a2e82212f5b",
+      "width": 1600,
+      "height": 660,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "7c598f5a250c7913cfdae85b9eada79cdea5b046048ae8348abd8a2e82212f5b"
+    },
+    {
+      "id": 223,
+      "file": "exam_10-3_e.png",
+      "usage": [
+        "模試 10-3 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "1a61cd0b6ad30e13f96a2f2dd5713b79a9879d5b35d09f1daf2031e53278bfaf",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "1a61cd0b6ad30e13f96a2f2dd5713b79a9879d5b35d09f1daf2031e53278bfaf"
+    },
+    {
+      "id": 224,
+      "file": "exam_10-3_q.png",
+      "usage": [
+        "模試 10-3 figImg"
+      ],
+      "exists": true,
+      "sha256": "0ec76461813353fb22964d39cf700918dfd5abf7321ceb994bb245460b06aebb",
+      "width": 1677,
+      "height": 938,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "0ec76461813353fb22964d39cf700918dfd5abf7321ceb994bb245460b06aebb"
+    },
+    {
+      "id": 225,
+      "file": "exam_10-40_e.png",
+      "usage": [
+        "模試 10-40 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "6ee1d49b6850929c58e3394a847aa03af51c0fb4276a0be0fe651ff58564279e",
+      "width": 1360,
+      "height": 790,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "6ee1d49b6850929c58e3394a847aa03af51c0fb4276a0be0fe651ff58564279e"
+    },
+    {
+      "id": 226,
+      "file": "exam_10-40_q.png",
+      "usage": [
+        "模試 10-40 figImg"
+      ],
+      "exists": true,
+      "sha256": "6ee1d49b6850929c58e3394a847aa03af51c0fb4276a0be0fe651ff58564279e",
+      "width": 1360,
+      "height": 790,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "6ee1d49b6850929c58e3394a847aa03af51c0fb4276a0be0fe651ff58564279e"
+    },
+    {
+      "id": 227,
+      "file": "exam_10-5_e.png",
+      "usage": [
+        "模試 10-5 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "da7ced249dd5174b0fb79506e264c35c32e895b59af8bd60c0c35b1f12ab668f",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "da7ced249dd5174b0fb79506e264c35c32e895b59af8bd60c0c35b1f12ab668f"
+    },
+    {
+      "id": 228,
+      "file": "exam_10-5_q.png",
+      "usage": [
+        "模試 10-5 figImg"
+      ],
+      "exists": true,
+      "sha256": "6aa2bd1cc13b0e62e0339be4040867c9a4c256f0add5afa6d1985e0024fd4db2",
+      "width": 1677,
+      "height": 938,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "6aa2bd1cc13b0e62e0339be4040867c9a4c256f0add5afa6d1985e0024fd4db2"
+    },
+    {
+      "id": 229,
+      "file": "exam_11-22_e.png",
+      "usage": [
+        "模試 11-22 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "ed171c11a08641eb8662499078834c8145f0ffff48e6da19eee2255242e52ef3",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "ed171c11a08641eb8662499078834c8145f0ffff48e6da19eee2255242e52ef3"
+    },
+    {
+      "id": 230,
+      "file": "exam_11-22_q.png",
+      "usage": [
+        "模試 11-22 figImg"
+      ],
+      "exists": true,
+      "sha256": "ed171c11a08641eb8662499078834c8145f0ffff48e6da19eee2255242e52ef3",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "ed171c11a08641eb8662499078834c8145f0ffff48e6da19eee2255242e52ef3"
+    },
+    {
+      "id": 231,
+      "file": "exam_11-31_e.png",
+      "usage": [
+        "模試 11-31 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "752b2398bc119a717bb6ad9cb0c9bdb8f7640d35b7bf050e18399e88c6d2cccf",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "752b2398bc119a717bb6ad9cb0c9bdb8f7640d35b7bf050e18399e88c6d2cccf"
+    },
+    {
+      "id": 232,
+      "file": "exam_11-31_q.png",
+      "usage": [
+        "模試 11-31 figImg"
+      ],
+      "exists": true,
+      "sha256": "752b2398bc119a717bb6ad9cb0c9bdb8f7640d35b7bf050e18399e88c6d2cccf",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "752b2398bc119a717bb6ad9cb0c9bdb8f7640d35b7bf050e18399e88c6d2cccf"
+    },
+    {
+      "id": 233,
+      "file": "exam_11-32_e.png",
+      "usage": [
+        "模試 11-32 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "b8564d777ab954f3129e68554ad6e694022eab102f28339cb9e8d71f1259df16",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "b8564d777ab954f3129e68554ad6e694022eab102f28339cb9e8d71f1259df16"
+    },
+    {
+      "id": 234,
+      "file": "exam_11-32_q.png",
+      "usage": [
+        "模試 11-32 figImg"
+      ],
+      "exists": true,
+      "sha256": "b8564d777ab954f3129e68554ad6e694022eab102f28339cb9e8d71f1259df16",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "b8564d777ab954f3129e68554ad6e694022eab102f28339cb9e8d71f1259df16"
+    },
+    {
+      "id": 235,
+      "file": "exam_11-33_e.png",
+      "usage": [
+        "模試 11-33 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "f711fa7fa36959441c4d9009eb02a38f359158105eb524bb79ed92573ec641dd",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f711fa7fa36959441c4d9009eb02a38f359158105eb524bb79ed92573ec641dd"
+    },
+    {
+      "id": 236,
+      "file": "exam_11-33_q.png",
+      "usage": [
+        "模試 11-33 figImg"
+      ],
+      "exists": true,
+      "sha256": "f711fa7fa36959441c4d9009eb02a38f359158105eb524bb79ed92573ec641dd",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f711fa7fa36959441c4d9009eb02a38f359158105eb524bb79ed92573ec641dd"
+    },
+    {
+      "id": 237,
+      "file": "exam_11-34_e.png",
+      "usage": [
+        "模試 11-34 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "0431ac4ad2ec303f06cc70c43d50a0fdd71b09e53afe700c0eb12971d7b337ca",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "0431ac4ad2ec303f06cc70c43d50a0fdd71b09e53afe700c0eb12971d7b337ca"
+    },
+    {
+      "id": 238,
+      "file": "exam_11-34_q.png",
+      "usage": [
+        "模試 11-34 figImg"
+      ],
+      "exists": true,
+      "sha256": "0431ac4ad2ec303f06cc70c43d50a0fdd71b09e53afe700c0eb12971d7b337ca",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "0431ac4ad2ec303f06cc70c43d50a0fdd71b09e53afe700c0eb12971d7b337ca"
+    },
+    {
+      "id": 239,
+      "file": "exam_11-38_e.png",
+      "usage": [
+        "模試 11-38 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "35210dbd326c3c9aecc394c91792278f759c1aed9f82b520c03b69ec7869b7c1",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "35210dbd326c3c9aecc394c91792278f759c1aed9f82b520c03b69ec7869b7c1"
+    },
+    {
+      "id": 240,
+      "file": "exam_11-38_q.png",
+      "usage": [
+        "模試 11-38 figImg"
+      ],
+      "exists": true,
+      "sha256": "35210dbd326c3c9aecc394c91792278f759c1aed9f82b520c03b69ec7869b7c1",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "35210dbd326c3c9aecc394c91792278f759c1aed9f82b520c03b69ec7869b7c1"
+    },
+    {
+      "id": 241,
+      "file": "exam_11-3_e.png",
+      "usage": [
+        "模試 11-3 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "82328af1ec2c5176efe3cb487fb0bf195b1da8b110ce425bea33a5bd8fdfa628",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "82328af1ec2c5176efe3cb487fb0bf195b1da8b110ce425bea33a5bd8fdfa628"
+    },
+    {
+      "id": 242,
+      "file": "exam_11-3_q.png",
+      "usage": [
+        "模試 11-3 figImg"
+      ],
+      "exists": true,
+      "sha256": "fc0364608fb97093ff24ca66933d87ed70db2abf0ac557dd525392ba742d61c1",
+      "width": 1677,
+      "height": 938,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "fc0364608fb97093ff24ca66933d87ed70db2abf0ac557dd525392ba742d61c1"
+    },
+    {
+      "id": 243,
+      "file": "exam_11-40_e.png",
+      "usage": [
+        "模試 11-40 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "4c05b39496c6cf580b7f40770301f81d18d3035e10169da84a16734f6519249e",
+      "width": 1360,
+      "height": 800,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "4c05b39496c6cf580b7f40770301f81d18d3035e10169da84a16734f6519249e"
+    },
+    {
+      "id": 244,
+      "file": "exam_11-40_q.png",
+      "usage": [
+        "模試 11-40 figImg"
+      ],
+      "exists": true,
+      "sha256": "4c05b39496c6cf580b7f40770301f81d18d3035e10169da84a16734f6519249e",
+      "width": 1360,
+      "height": 800,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "4c05b39496c6cf580b7f40770301f81d18d3035e10169da84a16734f6519249e"
+    },
+    {
+      "id": 245,
+      "file": "exam_12-22_e.png",
+      "usage": [
+        "模試 12-22 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "2965cd385abcddf41acbc41f33a0f259f4e6aaaec3a066cb669e2109f973b1b2",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "2965cd385abcddf41acbc41f33a0f259f4e6aaaec3a066cb669e2109f973b1b2"
+    },
+    {
+      "id": 246,
+      "file": "exam_12-22_q.png",
+      "usage": [
+        "模試 12-22 figImg"
+      ],
+      "exists": true,
+      "sha256": "2965cd385abcddf41acbc41f33a0f259f4e6aaaec3a066cb669e2109f973b1b2",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "2965cd385abcddf41acbc41f33a0f259f4e6aaaec3a066cb669e2109f973b1b2"
+    },
+    {
+      "id": 247,
+      "file": "exam_12-32_e.png",
+      "usage": [
+        "模試 12-32 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "bce38f9c4009bc68bb5166492fcd53a72239d84c15aefcd257171efd9e251fa6",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "bce38f9c4009bc68bb5166492fcd53a72239d84c15aefcd257171efd9e251fa6"
+    },
+    {
+      "id": 248,
+      "file": "exam_12-32_q.png",
+      "usage": [
+        "模試 12-32 figImg"
+      ],
+      "exists": true,
+      "sha256": "bce38f9c4009bc68bb5166492fcd53a72239d84c15aefcd257171efd9e251fa6",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "bce38f9c4009bc68bb5166492fcd53a72239d84c15aefcd257171efd9e251fa6"
+    },
+    {
+      "id": 249,
+      "file": "exam_12-33_e.png",
+      "usage": [
+        "模試 12-33 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "5b20c69f43716b44f086e32720185034aa277a0c18403c07a7b2af9c69d2d2ab",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "5b20c69f43716b44f086e32720185034aa277a0c18403c07a7b2af9c69d2d2ab"
+    },
+    {
+      "id": 250,
+      "file": "exam_12-33_q.png",
+      "usage": [
+        "模試 12-33 figImg"
+      ],
+      "exists": true,
+      "sha256": "5b20c69f43716b44f086e32720185034aa277a0c18403c07a7b2af9c69d2d2ab",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "5b20c69f43716b44f086e32720185034aa277a0c18403c07a7b2af9c69d2d2ab"
+    },
+    {
+      "id": 251,
+      "file": "exam_12-35_e.png",
+      "usage": [
+        "模試 12-35 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "0b17f661d79d6f036f064af736b6f66737e4143477e7821571203116394c3863",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "0b17f661d79d6f036f064af736b6f66737e4143477e7821571203116394c3863"
+    },
+    {
+      "id": 252,
+      "file": "exam_12-35_q.png",
+      "usage": [
+        "模試 12-35 figImg"
+      ],
+      "exists": true,
+      "sha256": "0b17f661d79d6f036f064af736b6f66737e4143477e7821571203116394c3863",
+      "width": 1360,
+      "height": 760,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "0b17f661d79d6f036f064af736b6f66737e4143477e7821571203116394c3863"
+    },
+    {
+      "id": 253,
+      "file": "exam_12-38_e.png",
+      "usage": [
+        "模試 12-38 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "8c86a178cc7cbecb99a0d6313c8b8a47ea3d8ee7ef6eec951579696330c5a5bd",
+      "width": 1600,
+      "height": 700,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "8c86a178cc7cbecb99a0d6313c8b8a47ea3d8ee7ef6eec951579696330c5a5bd"
+    },
+    {
+      "id": 254,
+      "file": "exam_12-38_q.png",
+      "usage": [
+        "模試 12-38 figImg"
+      ],
+      "exists": true,
+      "sha256": "8c86a178cc7cbecb99a0d6313c8b8a47ea3d8ee7ef6eec951579696330c5a5bd",
+      "width": 1600,
+      "height": 700,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "8c86a178cc7cbecb99a0d6313c8b8a47ea3d8ee7ef6eec951579696330c5a5bd"
+    },
+    {
+      "id": 255,
+      "file": "exam_12-39_e.png",
+      "usage": [
+        "模試 12-39 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "9dc0e40cfa8a7cb6e9fc34fc4e20b8d00f711698c9f008ab4040e8a9a2ea1b21",
+      "width": 1360,
+      "height": 840,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "9dc0e40cfa8a7cb6e9fc34fc4e20b8d00f711698c9f008ab4040e8a9a2ea1b21"
+    },
+    {
+      "id": 256,
+      "file": "exam_12-39_q.png",
+      "usage": [
+        "模試 12-39 figImg"
+      ],
+      "exists": true,
+      "sha256": "9dc0e40cfa8a7cb6e9fc34fc4e20b8d00f711698c9f008ab4040e8a9a2ea1b21",
+      "width": 1360,
+      "height": 840,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "9dc0e40cfa8a7cb6e9fc34fc4e20b8d00f711698c9f008ab4040e8a9a2ea1b21"
+    },
+    {
+      "id": 257,
+      "file": "exam_12-3_e.png",
+      "usage": [
+        "模試 12-3 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "f55dbf47618bdc9df063ea6e6fdbddc0333737f149dda9a60ebea97564caf2ff",
+      "width": 1520,
+      "height": 730,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f55dbf47618bdc9df063ea6e6fdbddc0333737f149dda9a60ebea97564caf2ff"
+    },
+    {
+      "id": 258,
+      "file": "exam_12-3_q.png",
+      "usage": [
+        "模試 12-3 figImg"
+      ],
+      "exists": true,
+      "sha256": "f55dbf47618bdc9df063ea6e6fdbddc0333737f149dda9a60ebea97564caf2ff",
+      "width": 1520,
+      "height": 730,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f55dbf47618bdc9df063ea6e6fdbddc0333737f149dda9a60ebea97564caf2ff"
+    },
+    {
+      "id": 259,
+      "file": "exam_12-40_e.png",
+      "usage": [
+        "模試 12-40 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "62bab58a8c745f534dc9a52e22b2293448afb211abdd34c4eccd56fe7e649867",
+      "width": 1360,
+      "height": 890,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "62bab58a8c745f534dc9a52e22b2293448afb211abdd34c4eccd56fe7e649867"
+    },
+    {
+      "id": 260,
+      "file": "exam_12-40_q.png",
+      "usage": [
+        "模試 12-40 figImg"
+      ],
+      "exists": true,
+      "sha256": "62bab58a8c745f534dc9a52e22b2293448afb211abdd34c4eccd56fe7e649867",
+      "width": 1360,
+      "height": 890,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "62bab58a8c745f534dc9a52e22b2293448afb211abdd34c4eccd56fe7e649867"
+    },
+    {
+      "id": 261,
+      "file": "exam_12-5_e.png",
+      "usage": [
+        "模試 12-5 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "bf11d15c5651802647f3da4ef769b3a7cf73f3e7f13ce2978bba6fb2d8fd615d",
+      "width": 1360,
+      "height": 800,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "bf11d15c5651802647f3da4ef769b3a7cf73f3e7f13ce2978bba6fb2d8fd615d"
+    },
+    {
+      "id": 262,
+      "file": "exam_12-5_q.png",
+      "usage": [
+        "模試 12-5 figImg"
+      ],
+      "exists": true,
+      "sha256": "bf11d15c5651802647f3da4ef769b3a7cf73f3e7f13ce2978bba6fb2d8fd615d",
+      "width": 1360,
+      "height": 800,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "bf11d15c5651802647f3da4ef769b3a7cf73f3e7f13ce2978bba6fb2d8fd615d"
+    },
+    {
+      "id": 263,
+      "file": "exam_2-11_e.png",
+      "usage": [
+        "模試 2-11 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "07a82335bb38d5bf3077048a79e03eb3b6fed83269e480b322762863607170ff",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "07a82335bb38d5bf3077048a79e03eb3b6fed83269e480b322762863607170ff"
+    },
+    {
+      "id": 264,
+      "file": "exam_2-11_q.png",
+      "usage": [
+        "模試 2-11 figImg"
+      ],
+      "exists": true,
+      "sha256": "06b061748511d1f272180e54edd6560ec363ae9b32fc00c9e5477f6ce743ba6f",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "06b061748511d1f272180e54edd6560ec363ae9b32fc00c9e5477f6ce743ba6f"
+    },
+    {
+      "id": 265,
+      "file": "exam_2-21_e.png",
+      "usage": [
+        "模試 2-21 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "9822f83dd7339c8b7370f74cc687e129001335f2f533f23d9b5b8a978cab4996",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "9822f83dd7339c8b7370f74cc687e129001335f2f533f23d9b5b8a978cab4996"
+    },
+    {
+      "id": 266,
+      "file": "exam_2-21_q.png",
+      "usage": [
+        "模試 2-21 figImg"
+      ],
+      "exists": true,
+      "sha256": "73bcbaf12d22c06675a76e9e863173f45df8bb7cb7a8f313f63445a2e4316b3e",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "73bcbaf12d22c06675a76e9e863173f45df8bb7cb7a8f313f63445a2e4316b3e"
+    },
+    {
+      "id": 267,
+      "file": "exam_2-23_e.png",
+      "usage": [
+        "模試 2-23 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "44977ab120352a67309aff574ea366e4a7cb033f986123c14b0dbdeaf1989a03",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "44977ab120352a67309aff574ea366e4a7cb033f986123c14b0dbdeaf1989a03"
+    },
+    {
+      "id": 268,
+      "file": "exam_2-23_q.png",
+      "usage": [
+        "模試 2-23 figImg"
+      ],
+      "exists": true,
+      "sha256": "bf07eb9a8a8c4788222126c63a369b9365adbb7dde5c0428b741f92ff5a904e7",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "bf07eb9a8a8c4788222126c63a369b9365adbb7dde5c0428b741f92ff5a904e7"
+    },
+    {
+      "id": 269,
+      "file": "exam_2-24_e.png",
+      "usage": [
+        "模試 2-24 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "539491fb42e6d6ef803691ff755103ef24457f16175b5918f5c0eb4dc1a0787b",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "539491fb42e6d6ef803691ff755103ef24457f16175b5918f5c0eb4dc1a0787b"
+    },
+    {
+      "id": 270,
+      "file": "exam_2-24_q.png",
+      "usage": [
+        "模試 2-24 figImg"
+      ],
+      "exists": true,
+      "sha256": "ddd75b2c810f43314f9ab815b9279fa4ce8fa96118d9875ba4b56d6c85a93395",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "ddd75b2c810f43314f9ab815b9279fa4ce8fa96118d9875ba4b56d6c85a93395"
+    },
+    {
+      "id": 271,
+      "file": "exam_2-25_e.png",
+      "usage": [
+        "模試 2-25 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "43b52d274327632198081e6dd2220430390b8dd250be72427fe15c8e49e50ce2",
+      "width": 1800,
+      "height": 820,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "43b52d274327632198081e6dd2220430390b8dd250be72427fe15c8e49e50ce2"
+    },
+    {
+      "id": 272,
+      "file": "exam_2-25_q.png",
+      "usage": [
+        "模試 2-25 figImg"
+      ],
+      "exists": true,
+      "sha256": "bbf199307ffd3e3503a3fac6dc5379679e6016f9d5748d6e174b12533f7f82a8",
+      "width": 1800,
+      "height": 820,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "bbf199307ffd3e3503a3fac6dc5379679e6016f9d5748d6e174b12533f7f82a8"
+    },
+    {
+      "id": 273,
+      "file": "exam_2-29_e.png",
+      "usage": [
+        "模試 2-29 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "f4a8441d2532ad91011a7e3838a1a22f7a6a58b254003dbd886f363022210dd2",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f4a8441d2532ad91011a7e3838a1a22f7a6a58b254003dbd886f363022210dd2"
+    },
+    {
+      "id": 274,
+      "file": "exam_2-29_q.png",
+      "usage": [
+        "模試 2-29 figImg"
+      ],
+      "exists": true,
+      "sha256": "37e2912ea086ae4433faa367003a575082ea3256aaf8029049dec6d2bf6b5393",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "37e2912ea086ae4433faa367003a575082ea3256aaf8029049dec6d2bf6b5393"
+    },
+    {
+      "id": 275,
+      "file": "exam_3-10_e.png",
+      "usage": [
+        "模試 3-10 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "4f7a8a1e01fc72876c257d33d9a868f574d94816e018fd605fe9e854cf8e4d55",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "668814c6d8efead5b1829010e20f001c4ec06d5231ff3ea83326e36a805f69d8",
+      "changes": [
+        "計算結果と円の重なりを解消",
+        "同軸の説明を日本語化"
+      ]
+    },
+    {
+      "id": 276,
+      "file": "exam_3-10_q.png",
+      "usage": [
+        "模試 3-10 figImg"
+      ],
+      "exists": true,
+      "sha256": "a2f0e742db928509a2ee1162a3c18bd517bc5b419fd23b80b56a76331c24ee43",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "e791f18f991ed4225415c2dce9b321ab38a4f5dde155e3a6ee90bdc7249a050c",
+      "changes": [
+        "計算結果と円の重なりを解消",
+        "同軸の説明を日本語化"
+      ]
+    },
+    {
+      "id": 277,
+      "file": "exam_3-21_e.png",
+      "usage": [
+        "模試 3-21 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "7b47df7f7b1f7479b401d882d502b4be6429a80781b581bf1e6e54fbca09f855",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "7b47df7f7b1f7479b401d882d502b4be6429a80781b581bf1e6e54fbca09f855"
+    },
+    {
+      "id": 278,
+      "file": "exam_3-21_q.png",
+      "usage": [
+        "模試 3-21 figImg"
+      ],
+      "exists": true,
+      "sha256": "844c77e14eddfe839d0ff6bc3f80acb51ccf647472d87377a8c1c55a8a89879c",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "844c77e14eddfe839d0ff6bc3f80acb51ccf647472d87377a8c1c55a8a89879c"
+    },
+    {
+      "id": 279,
+      "file": "exam_3-28_e.png",
+      "usage": [
+        "模試 3-28 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "cb617a2b44c0a908d6a27d4fc3acfc0a5899115a4c02efd87c6804daa8d5e78b",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "cb617a2b44c0a908d6a27d4fc3acfc0a5899115a4c02efd87c6804daa8d5e78b"
+    },
+    {
+      "id": 280,
+      "file": "exam_3-28_q.png",
+      "usage": [
+        "模試 3-28 figImg"
+      ],
+      "exists": true,
+      "sha256": "6aab27a3712ce8a1a3dc79dec7c16c1bd29a7f3fe8fccaeec56d9ca4f697b54e",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "6aab27a3712ce8a1a3dc79dec7c16c1bd29a7f3fe8fccaeec56d9ca4f697b54e"
+    },
+    {
+      "id": 281,
+      "file": "exam_3-31_e.png",
+      "usage": [
+        "模試 3-31 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "24e28cceae7652703b97428e3e0642733b0efd9f202ef00011a5f111ac97618f",
+      "width": 1800,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "24e28cceae7652703b97428e3e0642733b0efd9f202ef00011a5f111ac97618f"
+    },
+    {
+      "id": 282,
+      "file": "exam_3-31_q.png",
+      "usage": [
+        "模試 3-31 figImg"
+      ],
+      "exists": true,
+      "sha256": "53e4ae44352f75d70644c0802bd963801e82e0a91ecc0da039ca99b152c4510c",
+      "width": 1800,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "53e4ae44352f75d70644c0802bd963801e82e0a91ecc0da039ca99b152c4510c"
+    },
+    {
+      "id": 283,
+      "file": "exam_3-32_e.png",
+      "usage": [
+        "模試 3-32 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "c47fa359aff0fb7f0650c3a478ed977b2cccde056a86c210cec62b111a8553f6",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c47fa359aff0fb7f0650c3a478ed977b2cccde056a86c210cec62b111a8553f6"
+    },
+    {
+      "id": 284,
+      "file": "exam_3-32_q.png",
+      "usage": [
+        "模試 3-32 figImg"
+      ],
+      "exists": true,
+      "sha256": "b03b1d3e9a60ff455c32b2454306cfa99d175540b1afea86ee456ea05cac94dc",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "b03b1d3e9a60ff455c32b2454306cfa99d175540b1afea86ee456ea05cac94dc"
+    },
+    {
+      "id": 285,
+      "file": "exam_3-33_e.png",
+      "usage": [
+        "模試 3-33 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "2c75de2718795b9e49f6c63c2251de1694b740fab3644b1c60cf69e69fd8e6fe",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "2c75de2718795b9e49f6c63c2251de1694b740fab3644b1c60cf69e69fd8e6fe"
+    },
+    {
+      "id": 286,
+      "file": "exam_3-33_q.png",
+      "usage": [
+        "模試 3-33 figImg"
+      ],
+      "exists": true,
+      "sha256": "acadfc2fca2314d285b82e514258dc957bf7fc1c3fd34c980614dae5a9cea7df",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "acadfc2fca2314d285b82e514258dc957bf7fc1c3fd34c980614dae5a9cea7df"
+    },
+    {
+      "id": 287,
+      "file": "exam_3-34_e.png",
+      "usage": [
+        "模試 3-34 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "b6cc03d9be1bad868273b00f9d266a33ee3edf03f51514b232f347998c46c2e7",
+      "width": 1800,
+      "height": 820,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "b6cc03d9be1bad868273b00f9d266a33ee3edf03f51514b232f347998c46c2e7"
+    },
+    {
+      "id": 288,
+      "file": "exam_3-34_q.png",
+      "usage": [
+        "模試 3-34 figImg"
+      ],
+      "exists": true,
+      "sha256": "a0a229ffeb0299f5c85060b6553746f24656c2551a4bfc90775943876774775c",
+      "width": 1800,
+      "height": 820,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a0a229ffeb0299f5c85060b6553746f24656c2551a4bfc90775943876774775c"
+    },
+    {
+      "id": 289,
+      "file": "exam_3-35_e.png",
+      "usage": [
+        "模試 3-35 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "f16626ca7a55560ab5f396fbe797476545c179e2900d98eeafc6162ad3b63b3d",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f16626ca7a55560ab5f396fbe797476545c179e2900d98eeafc6162ad3b63b3d"
+    },
+    {
+      "id": 290,
+      "file": "exam_3-35_q.png",
+      "usage": [
+        "模試 3-35 figImg"
+      ],
+      "exists": true,
+      "sha256": "d80f14eedf038fb052e24638aec22f331aa921da3ea6cac049c4c6f2b271479b",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "d80f14eedf038fb052e24638aec22f331aa921da3ea6cac049c4c6f2b271479b"
+    },
+    {
+      "id": 291,
+      "file": "exam_4-12_e.png",
+      "usage": [
+        "模試 4-12 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "de839af1c951b3bef6fef89de7f38e829674c9235f921560b917668ba388289e",
+      "width": 1800,
+      "height": 900,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "de839af1c951b3bef6fef89de7f38e829674c9235f921560b917668ba388289e"
+    },
+    {
+      "id": 292,
+      "file": "exam_4-12_q.png",
+      "usage": [
+        "模試 4-12 figImg"
+      ],
+      "exists": true,
+      "sha256": "ff0569acbd88d6829e21a87f371d8e02d2b7bf69972d3ff3f2d123810e17f166",
+      "width": 1800,
+      "height": 900,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "ff0569acbd88d6829e21a87f371d8e02d2b7bf69972d3ff3f2d123810e17f166"
+    },
+    {
+      "id": 293,
+      "file": "exam_4-20_e.png",
+      "usage": [
+        "模試 4-20 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "a45dc6d391b4f1cbe1a6d7603e67eddccd9d74d25b4546aee8b1a699c201e76b",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a45dc6d391b4f1cbe1a6d7603e67eddccd9d74d25b4546aee8b1a699c201e76b"
+    },
+    {
+      "id": 294,
+      "file": "exam_4-21_e.png",
+      "usage": [
+        "模試 4-21 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "c84675624b51f4a445b479e931631990deb65275d5c8cf630d7f50881668eca5",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c84675624b51f4a445b479e931631990deb65275d5c8cf630d7f50881668eca5"
+    },
+    {
+      "id": 295,
+      "file": "exam_4-21_q.png",
+      "usage": [
+        "模試 4-21 figImg"
+      ],
+      "exists": true,
+      "sha256": "454cfaef60a3f9e310e054c4b2c5803345441809e5ac30b6c42b636bfd241f5f",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "454cfaef60a3f9e310e054c4b2c5803345441809e5ac30b6c42b636bfd241f5f"
+    },
+    {
+      "id": 296,
+      "file": "exam_4-22_e.png",
+      "usage": [
+        "模試 4-22 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "d8b2b5ce71e98ebab8f112db5ee11b060dd8eaec571fd4662ef852463855c91d",
+      "width": 1800,
+      "height": 1000,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "d8b2b5ce71e98ebab8f112db5ee11b060dd8eaec571fd4662ef852463855c91d"
+    },
+    {
+      "id": 297,
+      "file": "exam_4-22_q.png",
+      "usage": [
+        "模試 4-22 figImg"
+      ],
+      "exists": true,
+      "sha256": "751308c3dd76574ec27aece6e650b003cf73204602be6ffbcd9b20329475cdd6",
+      "width": 1800,
+      "height": 1000,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "751308c3dd76574ec27aece6e650b003cf73204602be6ffbcd9b20329475cdd6"
+    },
+    {
+      "id": 298,
+      "file": "exam_4-23_e.png",
+      "usage": [
+        "模試 4-23 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "dc336a6c9ff41f12b6be1b853d1447d763f761b7854248535bfccaa75a5f18f3",
+      "width": 1800,
+      "height": 820,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "dc336a6c9ff41f12b6be1b853d1447d763f761b7854248535bfccaa75a5f18f3"
+    },
+    {
+      "id": 299,
+      "file": "exam_4-23_q.png",
+      "usage": [
+        "模試 4-23 figImg"
+      ],
+      "exists": true,
+      "sha256": "64abbeabc646cb457492b6b52ba15d135a3f904addd153bb6137a9ec51ea7296",
+      "width": 1800,
+      "height": 820,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "64abbeabc646cb457492b6b52ba15d135a3f904addd153bb6137a9ec51ea7296"
+    },
+    {
+      "id": 300,
+      "file": "exam_4-24_e.png",
+      "usage": [
+        "模試 4-24 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "a91ad87902070167b1eea9d1b1aeb34e0c362cbdc3ce90c0ac7312122f3968da",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a91ad87902070167b1eea9d1b1aeb34e0c362cbdc3ce90c0ac7312122f3968da"
+    },
+    {
+      "id": 301,
+      "file": "exam_4-24_q.png",
+      "usage": [
+        "模試 4-24 figImg"
+      ],
+      "exists": true,
+      "sha256": "0a2dd1ed52d09ec994db46f1393c75508fb0be76e70f50c8c030bd7c702d5726",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "0a2dd1ed52d09ec994db46f1393c75508fb0be76e70f50c8c030bd7c702d5726"
+    },
+    {
+      "id": 302,
+      "file": "exam_4-25_e.png",
+      "usage": [
+        "模試 4-25 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "1ed639beb5ffcb42648d67d85b1316452c5ea4ba8fa5a7cec7c290d27dfc214b",
+      "width": 1600,
+      "height": 1200,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "1ed639beb5ffcb42648d67d85b1316452c5ea4ba8fa5a7cec7c290d27dfc214b"
+    },
+    {
+      "id": 303,
+      "file": "exam_4-25_q.png",
+      "usage": [
+        "模試 4-25 figImg"
+      ],
+      "exists": true,
+      "sha256": "4bd91baab86f7ef1076272635fd8e716a22bad0ba6d239bc445b4fd530aeb0b2",
+      "width": 1600,
+      "height": 1200,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "4bd91baab86f7ef1076272635fd8e716a22bad0ba6d239bc445b4fd530aeb0b2"
+    },
+    {
+      "id": 304,
+      "file": "exam_4-26_e.png",
+      "usage": [
+        "模試 4-26 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "a217c20d4fb9c4a182a5ebf56ceaece6bc7dfe009bd58f940b99661a1eb791c3",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a217c20d4fb9c4a182a5ebf56ceaece6bc7dfe009bd58f940b99661a1eb791c3"
+    },
+    {
+      "id": 305,
+      "file": "exam_4-26_q.png",
+      "usage": [
+        "模試 4-26 figImg"
+      ],
+      "exists": true,
+      "sha256": "6075f2bd742432cf30be127b2bdbdde9a0d2d4183ee2282333913939f448928d",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "6075f2bd742432cf30be127b2bdbdde9a0d2d4183ee2282333913939f448928d"
+    },
+    {
+      "id": 306,
+      "file": "exam_4-27_e.png",
+      "usage": [
+        "模試 4-27 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "100206a044fc445a4bc5bc200a17074be60b1ef3f246cb1132568344eea794a6",
+      "width": 1800,
+      "height": 1000,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "100206a044fc445a4bc5bc200a17074be60b1ef3f246cb1132568344eea794a6"
+    },
+    {
+      "id": 307,
+      "file": "exam_4-27_q.png",
+      "usage": [
+        "模試 4-27 figImg"
+      ],
+      "exists": true,
+      "sha256": "a5fff7cfb04cc65347c03a926af440338c4c50b1a73b4d3a404bc5d707f6aea2",
+      "width": 1800,
+      "height": 1000,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a5fff7cfb04cc65347c03a926af440338c4c50b1a73b4d3a404bc5d707f6aea2"
+    },
+    {
+      "id": 308,
+      "file": "exam_4-30_e.png",
+      "usage": [
+        "模試 4-30 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "044c3957aaec7e83ace11295ca0d073e1b4324dbd8e9444e25c29d9fc1feaf6b",
+      "width": 1800,
+      "height": 900,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "044c3957aaec7e83ace11295ca0d073e1b4324dbd8e9444e25c29d9fc1feaf6b"
+    },
+    {
+      "id": 309,
+      "file": "exam_4-30_q.png",
+      "usage": [
+        "模試 4-30 figImg"
+      ],
+      "exists": true,
+      "sha256": "fc8907c71a0e092dec4bd1eb27de4dc974ccffcd1e2d2e299beb9513ea22baf0",
+      "width": 1800,
+      "height": 900,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "fc8907c71a0e092dec4bd1eb27de4dc974ccffcd1e2d2e299beb9513ea22baf0"
+    },
+    {
+      "id": 310,
+      "file": "exam_4-8_e.png",
+      "usage": [
+        "模試 4-8 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "a3eb2118a91be20692692aa15e1a26a899046c0316d421059b012d015888dd71",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "1100c73c47b1ab5614e8818e9718a211e6a34de8e938a10b8ebc6a678b16beec",
+      "changes": [
+        "英語の解説を日本語化"
+      ]
+    },
+    {
+      "id": 311,
+      "file": "exam_4-8_q.png",
+      "usage": [
+        "模試 4-8 figImg"
+      ],
+      "exists": true,
+      "sha256": "c90be1130f09b960dac9d0e34f6dc645a047a31877291056736fb55a93e68286",
+      "width": 1690,
+      "height": 931,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c90be1130f09b960dac9d0e34f6dc645a047a31877291056736fb55a93e68286"
+    },
+    {
+      "id": 312,
+      "file": "exam_5-11_q.png",
+      "usage": [
+        "模試 5-11 figImg"
+      ],
+      "exists": true,
+      "sha256": "68955591c647448354f40de5db8e8b088f3db295b38213b931e5fb5ff8229d50",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "68955591c647448354f40de5db8e8b088f3db295b38213b931e5fb5ff8229d50"
+    },
+    {
+      "id": 313,
+      "file": "exam_5-22_e.png",
+      "usage": [
+        "模試 5-22 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "69172fd1e2960080061d310ebf223addac2601720db5b8f0c8c8089e0168c983",
+      "width": 1800,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "69172fd1e2960080061d310ebf223addac2601720db5b8f0c8c8089e0168c983"
+    },
+    {
+      "id": 314,
+      "file": "exam_5-22_q.png",
+      "usage": [
+        "模試 5-22 figImg"
+      ],
+      "exists": true,
+      "sha256": "6d7db419f5d5fc162ecc46cdb5e997dfc605ddd778a1eaaa1f811d112ac29ddb",
+      "width": 1800,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "6d7db419f5d5fc162ecc46cdb5e997dfc605ddd778a1eaaa1f811d112ac29ddb"
+    },
+    {
+      "id": 315,
+      "file": "exam_5-23_q.png",
+      "usage": [
+        "模試 5-23 figImg"
+      ],
+      "exists": true,
+      "sha256": "7043bd2d5ff3b00388087821c443ccfec3b6686356b14e192f45d9754594954a",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "7043bd2d5ff3b00388087821c443ccfec3b6686356b14e192f45d9754594954a"
+    },
+    {
+      "id": 316,
+      "file": "exam_5-25_e.png",
+      "usage": [
+        "模試 5-25 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "27e3b41f10fdc02ed8fa1bf2a0419fbddd0a13847ba202431c729df5fac2916a",
+      "width": 1800,
+      "height": 1260,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "27e3b41f10fdc02ed8fa1bf2a0419fbddd0a13847ba202431c729df5fac2916a"
+    },
+    {
+      "id": 317,
+      "file": "exam_5-25_q.png",
+      "usage": [
+        "模試 5-25 figImg"
+      ],
+      "exists": true,
+      "sha256": "b2a75a4e2ddc505559e4ced780eb3edd8c69f4aa23922581bac49906cae7aa0e",
+      "width": 1800,
+      "height": 1260,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "b2a75a4e2ddc505559e4ced780eb3edd8c69f4aa23922581bac49906cae7aa0e"
+    },
+    {
+      "id": 318,
+      "file": "exam_5-27_q.png",
+      "usage": [
+        "模試 5-27 figImg"
+      ],
+      "exists": true,
+      "sha256": "0ad308b93a71387f2591dffc0ee14bd4e5096c4e7d7ac4fa281393bb732e9e21",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "0ad308b93a71387f2591dffc0ee14bd4e5096c4e7d7ac4fa281393bb732e9e21"
+    },
+    {
+      "id": 319,
+      "file": "exam_5-29_q.png",
+      "usage": [
+        "模試 5-29 figImg"
+      ],
+      "exists": true,
+      "sha256": "d2bdcfea976045217f4145ec04ba2f8b5da4a9892877fce56fa179a051b32b64",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "d2bdcfea976045217f4145ec04ba2f8b5da4a9892877fce56fa179a051b32b64"
+    },
+    {
+      "id": 320,
+      "file": "exam_5-2_q.png",
+      "usage": [
+        "模試 5-2 figImg"
+      ],
+      "exists": true,
+      "sha256": "309c158d5dd24475a914161a0d36096b3408e2e834a6961193d8c6f230dcbe77",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "309c158d5dd24475a914161a0d36096b3408e2e834a6961193d8c6f230dcbe77"
+    },
+    {
+      "id": 321,
+      "file": "exam_5-9_q.png",
+      "usage": [
+        "模試 5-9 figImg"
+      ],
+      "exists": true,
+      "sha256": "e236ea9502dd615a54831edd8bc5cec77b7a9a3abad5344a177cee2cce770509",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "e236ea9502dd615a54831edd8bc5cec77b7a9a3abad5344a177cee2cce770509"
+    },
+    {
+      "id": 322,
+      "file": "exam_6-10_q.png",
+      "usage": [
+        "模試 6-10 figImg"
+      ],
+      "exists": true,
+      "sha256": "8c56bd2bd004cf2fef98371246da94ffc9839b037907ca1fe36ebbea47186cbc",
+      "width": 1690,
+      "height": 931,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "8c56bd2bd004cf2fef98371246da94ffc9839b037907ca1fe36ebbea47186cbc"
+    },
+    {
+      "id": 323,
+      "file": "exam_6-11_q.png",
+      "usage": [
+        "模試 6-11 figImg"
+      ],
+      "exists": true,
+      "sha256": "44276892dd12eb78bd6a5bb33e1990a4e9f453c3d396052c2f53dc031875d315",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "44276892dd12eb78bd6a5bb33e1990a4e9f453c3d396052c2f53dc031875d315"
+    },
+    {
+      "id": 324,
+      "file": "exam_6-21_q.png",
+      "usage": [
+        "模試 6-21 figImg"
+      ],
+      "exists": true,
+      "sha256": "468a55fd7339bf9699c443589e9377057e8027117b20bdeb4460a95563c965b4",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "468a55fd7339bf9699c443589e9377057e8027117b20bdeb4460a95563c965b4"
+    },
+    {
+      "id": 325,
+      "file": "exam_6-22_q.png",
+      "usage": [
+        "模試 6-22 figImg"
+      ],
+      "exists": true,
+      "sha256": "20c01e23009e6b9172a2233a92104cff4da78cad7932e81b8dd158be18070cb8",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "20c01e23009e6b9172a2233a92104cff4da78cad7932e81b8dd158be18070cb8"
+    },
+    {
+      "id": 326,
+      "file": "exam_6-23_e.png",
+      "usage": [
+        "模試 6-23 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "0bb5cc640d2d6fd9c466f2d16f00ee7fd51cd1d561069a3487b81594aa00b4c4",
+      "width": 1800,
+      "height": 1120,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "0bb5cc640d2d6fd9c466f2d16f00ee7fd51cd1d561069a3487b81594aa00b4c4"
+    },
+    {
+      "id": 327,
+      "file": "exam_6-23_q.png",
+      "usage": [
+        "模試 6-23 figImg"
+      ],
+      "exists": true,
+      "sha256": "8e0dfb070e54a6df26ebe9e2ea8e91181ab61b3b5c3443055196255d08d8b2c5",
+      "width": 1800,
+      "height": 1120,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "8e0dfb070e54a6df26ebe9e2ea8e91181ab61b3b5c3443055196255d08d8b2c5"
+    },
+    {
+      "id": 328,
+      "file": "exam_6-24_q.png",
+      "usage": [
+        "模試 6-24 figImg"
+      ],
+      "exists": true,
+      "sha256": "509051d4c8bdc29c5e6036ecad21a06aae6b357e7d4410a49614043aadff19e0",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "509051d4c8bdc29c5e6036ecad21a06aae6b357e7d4410a49614043aadff19e0"
+    },
+    {
+      "id": 329,
+      "file": "exam_6-25_q.png",
+      "usage": [
+        "模試 6-25 figImg"
+      ],
+      "exists": true,
+      "sha256": "b21f36e4ac21b1d8b7a056f3023aa94114ac4b8bd0c6d281ebcc82f326d0744d",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "b21f36e4ac21b1d8b7a056f3023aa94114ac4b8bd0c6d281ebcc82f326d0744d"
+    },
+    {
+      "id": 330,
+      "file": "exam_6-29_q.png",
+      "usage": [
+        "模試 6-29 figImg"
+      ],
+      "exists": true,
+      "sha256": "528ce8945e7a6af6f142afaf4ebfe01e6a44967d8ae942254dcf9540858d18c2",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "528ce8945e7a6af6f142afaf4ebfe01e6a44967d8ae942254dcf9540858d18c2"
+    },
+    {
+      "id": 331,
+      "file": "exam_7-11_q.png",
+      "usage": [
+        "模試 7-11 figImg"
+      ],
+      "exists": true,
+      "sha256": "cbebf6b4322afd97daf299b6a61f5e4128985cf3eaca33ad126b8ead4f70367e",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "cbebf6b4322afd97daf299b6a61f5e4128985cf3eaca33ad126b8ead4f70367e"
+    },
+    {
+      "id": 332,
+      "file": "exam_7-21_q.png",
+      "usage": [
+        "模試 7-21 figImg"
+      ],
+      "exists": true,
+      "sha256": "3e417dfdfd6210b03d23aee5365bae5b106f5d9cbe7684c5a8bc2df723776501",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "3e417dfdfd6210b03d23aee5365bae5b106f5d9cbe7684c5a8bc2df723776501"
+    },
+    {
+      "id": 333,
+      "file": "exam_7-22_q.png",
+      "usage": [
+        "模試 7-22 figImg"
+      ],
+      "exists": true,
+      "sha256": "aafa819e5475400ab4f265387351c2f49cf4a18f00bfaaefe1dcf0a9498ece7f",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "aafa819e5475400ab4f265387351c2f49cf4a18f00bfaaefe1dcf0a9498ece7f"
+    },
+    {
+      "id": 334,
+      "file": "exam_7-23_q.png",
+      "usage": [
+        "模試 7-23 figImg"
+      ],
+      "exists": true,
+      "sha256": "483b6571400e290ca91b4ebe07e13d90fe3aadf5fa21d585ed53a4322ad1572d",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "483b6571400e290ca91b4ebe07e13d90fe3aadf5fa21d585ed53a4322ad1572d"
+    },
+    {
+      "id": 335,
+      "file": "exam_7-24_q.png",
+      "usage": [
+        "模試 7-24 figImg"
+      ],
+      "exists": true,
+      "sha256": "c071f3b70532126df12d3dbcdcfa73a1ff1ea5ad7ee0a7fbcd50b68dd4b53053",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c071f3b70532126df12d3dbcdcfa73a1ff1ea5ad7ee0a7fbcd50b68dd4b53053"
+    },
+    {
+      "id": 336,
+      "file": "exam_7-27_e.png",
+      "usage": [
+        "模試 7-27 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "a6ed1b683487fb061e48280b0be11c3d819934a989717ff040b46a8df9eaab6f",
+      "width": 1800,
+      "height": 1240,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a6ed1b683487fb061e48280b0be11c3d819934a989717ff040b46a8df9eaab6f"
+    },
+    {
+      "id": 337,
+      "file": "exam_7-27_q.png",
+      "usage": [
+        "模試 7-27 figImg"
+      ],
+      "exists": true,
+      "sha256": "935cd7371d01cb7dcd34cb5052b3c5453d0a7b2eb5d7eb522c4edf0305d9bf5e",
+      "width": 1800,
+      "height": 1240,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "935cd7371d01cb7dcd34cb5052b3c5453d0a7b2eb5d7eb522c4edf0305d9bf5e"
+    },
+    {
+      "id": 338,
+      "file": "exam_7-28_q.png",
+      "usage": [
+        "模試 7-28 figImg"
+      ],
+      "exists": true,
+      "sha256": "c624ea3e399cf76c0c3240fc0c9c3112a5ef20b4d58dc2c8d35e0de3f90a0354",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c624ea3e399cf76c0c3240fc0c9c3112a5ef20b4d58dc2c8d35e0de3f90a0354"
+    },
+    {
+      "id": 339,
+      "file": "exam_7-8_q.png",
+      "usage": [
+        "模試 7-8 figImg"
+      ],
+      "exists": true,
+      "sha256": "7f06240f5ae5b3003547c98810bff6096610ed6c8d2dbf48eedca4d5c1ceef28",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "7f06240f5ae5b3003547c98810bff6096610ed6c8d2dbf48eedca4d5c1ceef28"
+    },
+    {
+      "id": 340,
+      "file": "exam_8-11_q.png",
+      "usage": [
+        "模試 8-11 figImg"
+      ],
+      "exists": true,
+      "sha256": "8a95ff286f83d5442ba02e38c901c57a8fcd12b54d1fe61671b760e9489fc186",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "8a95ff286f83d5442ba02e38c901c57a8fcd12b54d1fe61671b760e9489fc186"
+    },
+    {
+      "id": 341,
+      "file": "exam_8-1_q.png",
+      "usage": [
+        "模試 8-1 figImg"
+      ],
+      "exists": true,
+      "sha256": "b2a6e439d7b8a15baf3fbfbe4df2e7dea89b639e499da88d042ce40d445e9ff7",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "b2a6e439d7b8a15baf3fbfbe4df2e7dea89b639e499da88d042ce40d445e9ff7"
+    },
+    {
+      "id": 342,
+      "file": "exam_8-21_q.png",
+      "usage": [
+        "模試 8-21 figImg"
+      ],
+      "exists": true,
+      "sha256": "f313218a55374a8cc615870b584a14123a18b363cbb40131bf9d61c87791fab3",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f313218a55374a8cc615870b584a14123a18b363cbb40131bf9d61c87791fab3"
+    },
+    {
+      "id": 343,
+      "file": "exam_8-22_q.png",
+      "usage": [
+        "模試 8-22 figImg"
+      ],
+      "exists": true,
+      "sha256": "a47bad693aa10bcee561e8b216f9858e8c971210e9eb3dae44a3e4b58e48a68b",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "a47bad693aa10bcee561e8b216f9858e8c971210e9eb3dae44a3e4b58e48a68b"
+    },
+    {
+      "id": 344,
+      "file": "exam_8-23_q.png",
+      "usage": [
+        "模試 8-23 figImg"
+      ],
+      "exists": true,
+      "sha256": "b35262ae70a8fdd6fc3d1130373e435e51fcfd7e37a8dc695fc5089cc6994595",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "b35262ae70a8fdd6fc3d1130373e435e51fcfd7e37a8dc695fc5089cc6994595"
+    },
+    {
+      "id": 345,
+      "file": "exam_8-24_q.png",
+      "usage": [
+        "模試 8-24 figImg"
+      ],
+      "exists": true,
+      "sha256": "6de10db32fa97517a391c54e6672cb53b4b8653e07d15bc3899b77770d690a8f",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "6de10db32fa97517a391c54e6672cb53b4b8653e07d15bc3899b77770d690a8f"
+    },
+    {
+      "id": 346,
+      "file": "exam_8-26_e.png",
+      "usage": [
+        "模試 8-26 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "f37676ceddac6bfe80e2ecfe7996ba7b22d9a983d3961b403373d8d711346a98",
+      "width": 1800,
+      "height": 980,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f37676ceddac6bfe80e2ecfe7996ba7b22d9a983d3961b403373d8d711346a98"
+    },
+    {
+      "id": 347,
+      "file": "exam_8-26_q.png",
+      "usage": [
+        "模試 8-26 figImg"
+      ],
+      "exists": true,
+      "sha256": "ec440cc0b932f55872754e4f932b2f3bcda6328ddc4f3dac9372ad512f1312d0",
+      "width": 1800,
+      "height": 980,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "ec440cc0b932f55872754e4f932b2f3bcda6328ddc4f3dac9372ad512f1312d0"
+    },
+    {
+      "id": 348,
+      "file": "exam_8-28_q.png",
+      "usage": [
+        "模試 8-28 figImg"
+      ],
+      "exists": true,
+      "sha256": "920f0da4b5ba49bb2a33fb50de8a7d37617eb692908ce5d18f1fc65fbc8c1c45",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "920f0da4b5ba49bb2a33fb50de8a7d37617eb692908ce5d18f1fc65fbc8c1c45"
+    },
+    {
+      "id": 349,
+      "file": "exam_8-30_q.png",
+      "usage": [
+        "模試 8-30 figImg"
+      ],
+      "exists": true,
+      "sha256": "85ed1d8bc0c6177ea5fefb8f8be8743c0037159150169d405eb5bbdf4a415501",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "85ed1d8bc0c6177ea5fefb8f8be8743c0037159150169d405eb5bbdf4a415501"
+    },
+    {
+      "id": 350,
+      "file": "exam_8-3_e.png",
+      "usage": [
+        "模試 8-3 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "9261a9efa9c561b1e1a70855c56f2b1899463bc1b9b1d37741376bea164bf813",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "9261a9efa9c561b1e1a70855c56f2b1899463bc1b9b1d37741376bea164bf813"
+    },
+    {
+      "id": 351,
+      "file": "exam_8-5_e.png",
+      "usage": [
+        "模試 8-5 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "c5b0f7710591f9beeb7f311c6ab41b818ed77e65cb96ea8277df0a2137d55f2c",
+      "width": 1600,
+      "height": 880,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "c5b0f7710591f9beeb7f311c6ab41b818ed77e65cb96ea8277df0a2137d55f2c"
+    },
+    {
+      "id": 352,
+      "file": "exam_9-22_e.png",
+      "usage": [
+        "模試 9-22 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "faa747b930ee10120e5e1a867b66847258baff9c534e1914247c17a8cb122308",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "faa747b930ee10120e5e1a867b66847258baff9c534e1914247c17a8cb122308"
+    },
+    {
+      "id": 353,
+      "file": "exam_9-22_q.png",
+      "usage": [
+        "模試 9-22 figImg"
+      ],
+      "exists": true,
+      "sha256": "faa747b930ee10120e5e1a867b66847258baff9c534e1914247c17a8cb122308",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "faa747b930ee10120e5e1a867b66847258baff9c534e1914247c17a8cb122308"
+    },
+    {
+      "id": 354,
+      "file": "exam_9-32_e.png",
+      "usage": [
+        "模試 9-32 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "3a90730a0ac3a41daa27a6ae4620e4aed3be7b4e51501eefc2aa11c1c9054d4d",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "3a90730a0ac3a41daa27a6ae4620e4aed3be7b4e51501eefc2aa11c1c9054d4d"
+    },
+    {
+      "id": 355,
+      "file": "exam_9-32_q.png",
+      "usage": [
+        "模試 9-32 figImg"
+      ],
+      "exists": true,
+      "sha256": "3a90730a0ac3a41daa27a6ae4620e4aed3be7b4e51501eefc2aa11c1c9054d4d",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "3a90730a0ac3a41daa27a6ae4620e4aed3be7b4e51501eefc2aa11c1c9054d4d"
+    },
+    {
+      "id": 356,
+      "file": "exam_9-33_e.png",
+      "usage": [
+        "模試 9-33 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "190c9a776c18d164b745e087b79d7fe1af956c84e0937bb2ceb1c622d3977831",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "190c9a776c18d164b745e087b79d7fe1af956c84e0937bb2ceb1c622d3977831"
+    },
+    {
+      "id": 357,
+      "file": "exam_9-33_q.png",
+      "usage": [
+        "模試 9-33 figImg"
+      ],
+      "exists": true,
+      "sha256": "190c9a776c18d164b745e087b79d7fe1af956c84e0937bb2ceb1c622d3977831",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "190c9a776c18d164b745e087b79d7fe1af956c84e0937bb2ceb1c622d3977831"
+    },
+    {
+      "id": 358,
+      "file": "exam_9-35_e.png",
+      "usage": [
+        "模試 9-35 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "b5952e139e48e99e4575c8bf04b0a5dd71d16f72734bf4ca0b6ba5bfefa7c122",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "b5952e139e48e99e4575c8bf04b0a5dd71d16f72734bf4ca0b6ba5bfefa7c122"
+    },
+    {
+      "id": 359,
+      "file": "exam_9-35_q.png",
+      "usage": [
+        "模試 9-35 figImg"
+      ],
+      "exists": true,
+      "sha256": "b5952e139e48e99e4575c8bf04b0a5dd71d16f72734bf4ca0b6ba5bfefa7c122",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "b5952e139e48e99e4575c8bf04b0a5dd71d16f72734bf4ca0b6ba5bfefa7c122"
+    },
+    {
+      "id": 360,
+      "file": "exam_9-38_e.png",
+      "usage": [
+        "模試 9-38 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "fc278aa5d3a9c4f92bf72247d9026c55eaecf1ee70987bbcad38b1d85801e2c5",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "fc278aa5d3a9c4f92bf72247d9026c55eaecf1ee70987bbcad38b1d85801e2c5"
+    },
+    {
+      "id": 361,
+      "file": "exam_9-38_q.png",
+      "usage": [
+        "模試 9-38 figImg"
+      ],
+      "exists": true,
+      "sha256": "fc278aa5d3a9c4f92bf72247d9026c55eaecf1ee70987bbcad38b1d85801e2c5",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "fc278aa5d3a9c4f92bf72247d9026c55eaecf1ee70987bbcad38b1d85801e2c5"
+    },
+    {
+      "id": 362,
+      "file": "exam_9-39_e.png",
+      "usage": [
+        "模試 9-39 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "134f7a0d8bc5bd901728f17d56dffae29ce08c3d7c4436680c0a1ea80cd1e3b1",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "134f7a0d8bc5bd901728f17d56dffae29ce08c3d7c4436680c0a1ea80cd1e3b1"
+    },
+    {
+      "id": 363,
+      "file": "exam_9-39_q.png",
+      "usage": [
+        "模試 9-39 figImg"
+      ],
+      "exists": true,
+      "sha256": "134f7a0d8bc5bd901728f17d56dffae29ce08c3d7c4436680c0a1ea80cd1e3b1",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "134f7a0d8bc5bd901728f17d56dffae29ce08c3d7c4436680c0a1ea80cd1e3b1"
+    },
+    {
+      "id": 364,
+      "file": "exam_9-3_e.png",
+      "usage": [
+        "模試 9-3 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "f9e4b9d009d977ba5f294fefd925865ca158806486d1cfcfed34f38cc40cb231",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "f9e4b9d009d977ba5f294fefd925865ca158806486d1cfcfed34f38cc40cb231"
+    },
+    {
+      "id": 365,
+      "file": "exam_9-3_q.png",
+      "usage": [
+        "模試 9-3 figImg"
+      ],
+      "exists": true,
+      "sha256": "6390a4fe38d9e1f373c0aa0fc5c2169ce873f21a528aa4dc331ca1c603549756",
+      "width": 1723,
+      "height": 913,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": true,
+      "currentSHA256": "7c69b9357e399b6dcb3ca4a4e4ec72b97e9185da8aa5459866b86f17cb748c48",
+      "changes": [
+        "問題文にある破線の囲みを3D図に追加。Bは一組、Cはその中の素線、Aは中央を指す。"
+      ]
+    },
+    {
+      "id": 366,
+      "file": "exam_9-40_e.png",
+      "usage": [
+        "模試 9-40 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "dce05b2bbd4a4a43b0122b8f28f03fb1f65842cb0dbad05597a2c457f7d8b0e1",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "dce05b2bbd4a4a43b0122b8f28f03fb1f65842cb0dbad05597a2c457f7d8b0e1"
+    },
+    {
+      "id": 367,
+      "file": "exam_9-40_q.png",
+      "usage": [
+        "模試 9-40 figImg"
+      ],
+      "exists": true,
+      "sha256": "dce05b2bbd4a4a43b0122b8f28f03fb1f65842cb0dbad05597a2c457f7d8b0e1",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "dce05b2bbd4a4a43b0122b8f28f03fb1f65842cb0dbad05597a2c457f7d8b0e1"
+    },
+    {
+      "id": 368,
+      "file": "exam_9-5_e.png",
+      "usage": [
+        "模試 9-5 figImgExp"
+      ],
+      "exists": true,
+      "sha256": "6f3044b119afd76f5048a4e00b67b79f5219154ea8b95297fb875546b2be9393",
+      "width": 1360,
+      "height": 720,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "6f3044b119afd76f5048a4e00b67b79f5219154ea8b95297fb875546b2be9393"
+    },
+    {
+      "id": 369,
+      "file": "exam_9-5_q.png",
+      "usage": [
+        "模試 9-5 figImg"
+      ],
+      "exists": true,
+      "sha256": "91dbe0f934a3845598162040b80dd3800641a284b27b2644fb8eff4c06fa06fd",
+      "width": 1723,
+      "height": 913,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "91dbe0f934a3845598162040b80dd3800641a284b27b2644fb8eff4c06fa06fd"
+    },
+    {
+      "id": 370,
+      "file": "inspection_concept21.png",
+      "usage": [
+        "教材 1-12 日常の点検と、月次・年次の定期自主検査を組み合わせる。臨時点検や記録の条件は本文で確認する。",
+        "教材 2-3 日常の点検と、月次・年次の定期自主検査を組み合わせる。臨時点検や記録の条件は本文で確認する。",
+        "用語 2 定期自主検査"
+      ],
+      "exists": true,
+      "sha256": "315f56239a11cd5c9c365f6410f59c79117312d49669bc8be69a855715ea8c6e",
+      "width": 1774,
+      "height": 887,
+      "review": "一覧で目視確認。懸念箇所は原寸・本文・問題文を重点確認。",
+      "changed": false,
+      "currentSHA256": "315f56239a11cd5c9c365f6410f59c79117312d49669bc8be69a855715ea8c6e"
+    }
+  ]
+}

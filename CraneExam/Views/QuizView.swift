@@ -6,17 +6,19 @@ enum QuizMode { case full }
 struct QuizView: View {
     let exam: Exam
     var mode: QuizMode = .full
+    var timeLimitEnabled = true
 
     @EnvironmentObject var store: ExamStore
     @Environment(\.dismiss) private var dismiss
     @Environment(\.requestReview) private var requestReview
+    @Environment(\.scenePhase) private var scenePhase
 
     @State private var index = 0
     @State private var selected: Int? = nil     // 0始まり
     @State private var answered = false
-    @State private var correctCount = 0
-    @State private var perSubject: [String: [Int]] = [:]
-    @State private var wrongRefs: [WrongRef] = []
+    @State private var submittedAnswers: [Int: Int] = [:]
+    @State private var clock: MockExamClock?
+    @State private var showTimeExpiredAlert = false
     @State private var elapsed = 0
     @State private var finished = false
     @State private var result: ExamResult? = nil
@@ -38,10 +40,22 @@ struct QuizView: View {
         }
         .navigationBarBackButtonHidden(true)
         .toolbar(.hidden, for: .tabBar)
-        .onReceive(timer) { _ in if !finished { elapsed += 1 } }
+        .onAppear {
+            if clock == nil { clock = MockExamClock(limited: timeLimitEnabled, startedAt: Date()) }
+            updateClock()
+        }
+        .onReceive(timer) { date in updateClock(at: date) }
+        .onChange(of: scenePhase) { phase in
+            if phase == .active { updateClock() }
+        }
+        .alert("制限時間になりました", isPresented: $showTimeExpiredAlert) {
+            Button("結果を確認", role: .cancel) { }
+        } message: {
+            Text("150分が経過したため終了しました。選択済みの解答を採点し、未回答は不正解として記録しました。")
+        }
         .onChange(of: finished) { done in
             // 模試を完了した直後、1回目/7回目ならApp Store評価を一度だけ依頼する
-            guard done, store.pendingReview else { return }
+            guard done, !showTimeExpiredAlert, store.pendingReview else { return }
             store.pendingReview = false
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) { requestReview() }
         }
@@ -60,11 +74,17 @@ struct QuizView: View {
                     Spacer()
                     HStack(spacing: 5) {
                         Image(systemName: "clock")
-                        Text(timeString(elapsed)).monospacedDigit()
-                    }.font(.system(size: 13, weight: .semibold)).foregroundColor(Theme.accent2)
+                        Text(timeLimitEnabled
+                             ? "残り \(timeString(max(0, CraneExamFormat.durationSeconds - elapsed)))"
+                             : "経過 \(timeString(elapsed))").monospacedDigit()
+                    }.font(.system(size: 13, weight: .semibold))
+                        .foregroundColor(timeLimitEnabled && CraneExamFormat.durationSeconds - elapsed <= 300 ? Theme.warn : Theme.accent2)
                 }
                 ProgressView(value: Double(index + 1), total: Double(count))
                     .tint(Theme.accent)
+                Text(timeLimitEnabled ? "\(CraneExamFormat.durationMinutes)分で自動終了・採点" : "時間制限なし")
+                    .font(.system(size: 11)).foregroundColor(Theme.muted)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
             }
             .padding(.horizontal, 16).padding(.top, 8).padding(.bottom, 10)
             .background(Theme.bg)
@@ -143,6 +163,8 @@ struct QuizView: View {
     private func choiceButton(_ i: Int, _ text: String) -> some View {
         let state = choiceState(i)
         return Button {
+            updateClock()
+            guard !finished else { return }
             if !answered { selected = i }
         } label: {
             HStack(alignment: .top, spacing: 12) {
@@ -207,30 +229,49 @@ struct QuizView: View {
     }
 
     private func primaryAction() {
+        updateClock()
+        guard !finished else { return }
         if !answered {
-            guard let sel = selected else { return }
-            answered = true
-            var ps = perSubject[q.subject] ?? [0, 0]
-            ps[1] += 1
-            if sel == q.answer - 1 { correctCount += 1; ps[0] += 1 }
-            else { wrongRefs.append(WrongRef(round: exam.round, no: q.no, subject: q.subject)) }
-            perSubject[q.subject] = ps
-            store.recordAnswers(1)   // 学習の継続カード用に、今日の解答数を加算
+            submitCurrentAnswer()
         } else {
             if index == count - 1 { finish() }
-            else { index += 1; selected = nil; answered = false }
+            else { index += 1; restoreAnswer() }
         }
     }
 
-    private func goPrev() {
-        if index > 0 { index -= 1; selected = nil; answered = false }
+    private func submitCurrentAnswer() {
+        guard let sel = selected, submittedAnswers[q.no] == nil else { return }
+        submittedAnswers[q.no] = sel
+        answered = true
+        store.recordAnswers(1)
     }
 
-    private func finish() {
-        let r = ExamResult(round: exam.round, date: Date(), correct: correctCount,
-                           total: count, perSubject: perSubject, elapsed: elapsed)
-        store.saveResult(r, wrongRefs: wrongRefs)
-        result = r
+    private func restoreAnswer() {
+        selected = submittedAnswers[q.no]
+        answered = selected != nil
+    }
+
+    private func goPrev() {
+        updateClock()
+        guard !finished else { return }
+        if index > 0 { index -= 1; restoreAnswer() }
+    }
+
+    private func updateClock(at date: Date = Date()) {
+        guard !finished, let clock else { return }
+        elapsed = clock.elapsedSeconds(at: date)
+        if clock.hasExpired(at: date) { finish(timedOut: true) }
+    }
+
+    private func finish(timedOut: Bool = false) {
+        guard !finished else { return }
+        // 時間切れ直前に選択していた解答も採点対象にする。
+        if !answered { submitCurrentAnswer() }
+        let score = MockExamScore(exam: exam, answers: submittedAnswers, elapsed: elapsed)
+        store.saveResult(score.result, wrongRefs: score.wrongRefs)
+        result = score.result
+        selectedRef = nil
+        showTimeExpiredAlert = timedOut
         finished = true
     }
 

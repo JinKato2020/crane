@@ -1,5 +1,57 @@
 import Foundation
 
+/// 科目免除のない学科試験。案内と模試で同じ時間を表示する。
+enum CraneExamFormat {
+    static let durationMinutes = 150
+    static let durationLabel = "2時間30分"
+    static let durationSeconds = durationMinutes * 60
+}
+
+/// バックグラウンド中も開始時刻との差で測る。タイマーの通知回数には依存しない。
+struct MockExamClock {
+    let limited: Bool
+    let startedAt: Date
+
+    func elapsedSeconds(at date: Date) -> Int {
+        let seconds = max(0, Int(date.timeIntervalSince(startedAt)))
+        return limited ? min(seconds, CraneExamFormat.durationSeconds) : seconds
+    }
+
+    func remainingSeconds(at date: Date) -> Int {
+        max(0, CraneExamFormat.durationSeconds - elapsedSeconds(at: date))
+    }
+
+    func hasExpired(at date: Date) -> Bool {
+        limited && date.timeIntervalSince(startedAt) >= Double(CraneExamFormat.durationSeconds)
+    }
+}
+
+/// 未回答も科目ごとの分母に含める。解答は問題番号ごとに一度だけ採点する。
+struct MockExamScore {
+    let result: ExamResult
+    let wrongRefs: [WrongRef]
+
+    init(exam: Exam, answers: [Int: Int], elapsed: Int, date: Date = Date()) {
+        var correct = 0
+        var subjects: [String: [Int]] = [:]
+        var wrong: [WrongRef] = []
+        for question in exam.questions {
+            var counts = subjects[question.subject] ?? [0, 0]
+            counts[1] += 1
+            if answers[question.no] == question.answer - 1 {
+                correct += 1
+                counts[0] += 1
+            } else {
+                wrong.append(WrongRef(round: exam.round, no: question.no, subject: question.subject))
+            }
+            subjects[question.subject] = counts
+        }
+        result = ExamResult(round: exam.round, date: date, correct: correct,
+                            total: exam.questions.count, perSubject: subjects, elapsed: elapsed)
+        wrongRefs = wrong
+    }
+}
+
 /// 1回分の模擬試験
 struct Exam: Codable, Identifiable {
     let round: Int

@@ -31,6 +31,8 @@ jobs:
           python3 tools/verify_textbook_links.py
           swiftc CraneExam/Models.swift CraneExam/Textbook.swift tools/verify_reference_resolver.swift -o "$RUNNER_TEMP/verify-references"
           "$RUNNER_TEMP/verify-references" "$GITHUB_WORKSPACE/CraneExam/Resources"
+          swiftc CraneExam/Models.swift tools/verify_mock_exam.swift -o "$RUNNER_TEMP/verify-mock-exam"
+          "$RUNNER_TEMP/verify-mock-exam" "$GITHUB_WORKSPACE/CraneExam/Resources"
 
       - name: Install XcodeGen
         run: brew install xcodegen

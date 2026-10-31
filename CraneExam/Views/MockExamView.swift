@@ -7,6 +7,7 @@ struct MockExamView: View {
     @EnvironmentObject var store: ExamStore
     @EnvironmentObject var purchases: PurchaseStore
     @State private var showPaywall = false
+    @AppStorage("mockExamTimeLimitEnabled") private var timeLimitEnabled = true
 
     /// 無料で解放する回数(第1回まで無料)
     private let freeRounds = 1
@@ -16,6 +17,7 @@ struct MockExamView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 22) {
                     header
+                    timeLimitCard
                     if store.exams.isEmpty {
                         emptyState
                     } else {
@@ -24,7 +26,7 @@ struct MockExamView: View {
                         }
                         fieldSection
                     }
-                    Text("全問オリジナル作問。制限時間の目安は各40分です。")
+                    Text("全問オリジナル作問。本試験は40問・\(CraneExamFormat.durationLabel)。時間制限の有無を選んで練習できます。")
                         .font(.system(size: 12)).foregroundColor(Theme.faint)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .padding(.top, 4)
@@ -41,6 +43,23 @@ struct MockExamView: View {
     }
 
     // 画面上部のイントロ
+    private var timeLimitCard: some View {
+        Card(padding: 16) {
+            VStack(alignment: .leading, spacing: 8) {
+                Toggle(isOn: $timeLimitEnabled) {
+                    Text("時間制限（\(CraneExamFormat.durationMinutes)分）")
+                        .font(.system(size: 15, weight: .bold)).foregroundColor(Theme.fg)
+                }
+                .tint(Theme.accent)
+                Text(timeLimitEnabled
+                     ? "150分で自動終了・採点します。未回答は不正解になります。"
+                     : "時間制限なし。経過時間を表示し、自分のペースで最後まで学べます。")
+                    .font(.system(size: 12)).foregroundColor(Theme.muted)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+    }
+
     private var header: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("MOCK EXAM")
@@ -97,7 +116,7 @@ struct MockExamView: View {
                 Text("模擬試験 第\(exam.round)回").font(.system(size: 15.5, weight: .bold)).foregroundColor(Theme.fg)
                 HStack(spacing: 12) {
                     metaLabel("doc.text", "全\(exam.questions.count)問")
-                    metaLabel("clock", "40分")
+                    metaLabel("clock", timeLimitEnabled ? CraneExamFormat.durationLabel : "時間制限なし")
                 }
                 statusPill(locked: locked, result: result)
             }
@@ -132,7 +151,7 @@ struct MockExamView: View {
             Button { showPaywall = true } label: { primaryLabel("試験を始める", icon: "lock.fill") }
                 .buttonStyle(.plain)
         } else {
-            NavigationLink { QuizView(exam: exam, mode: .full) } label: { primaryLabel("試験を始める", icon: "play.fill") }
+            NavigationLink { QuizView(exam: exam, mode: .full, timeLimitEnabled: timeLimitEnabled) } label: { primaryLabel("試験を始める", icon: "play.fill") }
                 .buttonStyle(.plain)
         }
     }
