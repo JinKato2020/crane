@@ -188,6 +188,19 @@ struct SettingsView: View {
                 .rowStyle()
             }
             .buttonStyle(.plain)
+
+            Link(destination: URL(string: "https://apps.apple.com/app/id6818800945?action=write-review")!) {
+                HStack(spacing: 12) {
+                    iconBox("star.fill")
+                    Text("アプリを評価する")
+                        .font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg)
+                    Spacer()
+                    Image(systemName: "arrow.up.right")
+                        .font(.system(size: 13, weight: .bold)).foregroundColor(Theme.faint)
+                }
+                .rowStyle()
+            }
+            .buttonStyle(.plain)
         }
     }
 
