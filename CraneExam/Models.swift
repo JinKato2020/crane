@@ -63,9 +63,13 @@ struct Exam: Codable, Identifiable {
 /// 1問
 struct Question: Codable, Identifiable {
     let no: Int
+    /// 表示番号と保存用IDを分離し、科目順の変更で既存のしおり・誤答履歴をずらさない。
+    let displayNo: Int?
     let subject: String
     let text: String
     let choices: [String]
+    let choiceHeaders: [String]?
+    let choiceRows: [[String]]?
     let answer: Int          // 1始まりの正解番号
     let explanation: String
     let figure: String?      // 旧ASCII図（現在は未使用）
@@ -82,6 +86,7 @@ struct Question: Codable, Identifiable {
         return candidates.filter { seen.insert($0.id).inserted }
     }
     var id: Int { no }
+    var numberForDisplay: Int { displayNo ?? no }
 }
 
 /// 問題の解説から教材へ直リンクするための参照。
@@ -105,6 +110,19 @@ struct ExamResult: Codable, Identifiable {
     let elapsed: Int                  // 秒
     var id: String { "\(round)-\(Int(date.timeIntervalSince1970))" }
     var percent: Int { total == 0 ? 0 : Int((Double(correct) / Double(total) * 100).rounded()) }
+    var examScore: Int {
+        let weights = ["クレーンに関する知識": 3, "原動機・電気": 3, "力学": 2, "関係法令": 2]
+        return weights.reduce(0) { points, entry in
+            points + (perSubject[entry.key]?.first ?? 0) * entry.value
+        }
+    }
+    var meetsSubjectMinimums: Bool {
+        SUBJECTS.allSatisfy { subject in
+            guard let counts = perSubject[subject], counts.count == 2, counts[1] > 0 else { return false }
+            return counts[0] * 100 >= counts[1] * 40
+        }
+    }
+    var isPassing: Bool { examScore >= 60 && meetsSubjectMinimums }
 }
 
 /// 間違えた問題の記録

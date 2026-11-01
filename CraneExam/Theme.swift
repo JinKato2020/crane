@@ -50,6 +50,9 @@ enum Theme {
     /// 教材の重要語句。白背景でも読める青、暗い背景では明るい青。
     static let studyKey = dyn(0x8CC9FF, 0x185A92)
 
+    /// 模試で選択中の回答。ライトでは淡いゴールド、ダークでは柔らかい茶色。
+    static let selectedAnswer = dyn(0x3B3020, 0xFFF2D9)
+
     /// 暗記クイズの隠し帯（外観に馴染む自然な色。原色赤は使わず、ゴールド基調に寄せる）
     static let maskFill = dyn(0x5A4A2A, 0xE4D3A3)
 

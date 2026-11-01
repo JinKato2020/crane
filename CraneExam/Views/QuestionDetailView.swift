@@ -16,7 +16,7 @@ struct QuestionDetailView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 14) {
                     HStack {
-                        Text("第\(round)回 問\(q.no) · \(subjectShort(q.subject))")
+                        Text("第\(round)回 問\(q.numberForDisplay) · \(subjectShort(q.subject))")
                             .font(.system(size: 13, weight: .bold)).foregroundColor(Theme.muted)
                         Spacer()
                         Button { store.toggleBookmark(bookmarkID) } label: {

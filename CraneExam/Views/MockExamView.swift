@@ -52,7 +52,7 @@ struct MockExamView: View {
                 }
                 .tint(Theme.accent)
                 Text(timeLimitEnabled
-                     ? "150分で自動終了・採点します。未回答は不正解になります。"
+                     ? "150分で自動終了・採点。正解・解説は終了後に表示し、未回答は不正解になります。"
                      : "時間制限なし。経過時間を表示し、自分のペースで最後まで学べます。")
                     .font(.system(size: 12)).foregroundColor(Theme.muted)
                     .fixedSize(horizontal: false, vertical: true)
@@ -129,9 +129,9 @@ struct MockExamView: View {
         if locked {
             Pill(text: "PRO で解放", fg: Theme.accent2, bg: Theme.accent2.opacity(0.16))
         } else if let r = result {
-            Pill(text: "受験済 \(r.percent)点",
-                 fg: r.percent >= 60 ? Theme.good : Theme.accent2,
-                 bg: (r.percent >= 60 ? Theme.good : Theme.accent2).opacity(0.16))
+            Pill(text: "受験済 \(r.examScore)点",
+                 fg: r.isPassing ? Theme.good : Theme.accent2,
+                 bg: (r.isPassing ? Theme.good : Theme.accent2).opacity(0.16))
         } else {
             Pill(text: "未受験", fg: Color(hex: 0x5AA9FF), bg: Color(hex: 0x5AA9FF).opacity(0.16))
         }

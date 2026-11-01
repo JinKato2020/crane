@@ -89,6 +89,7 @@ struct PaywallView: View {
     }
 
     private var buttonTitle: String {
+        if purchases.hasLifetimeFreeAccess { return "無期限無料で利用できます" }
         if purchases.isPro { return "購入済み" }
         if let p = purchases.priceText { return "\(p) で解放(買い切り)" }
         return "Pro を購入"

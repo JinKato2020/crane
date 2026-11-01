@@ -113,7 +113,7 @@ struct QCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 9) {
             HStack(spacing: 10) {
-                Text("第\(round)回 問\(q.no) · \(subjectShort(q.subject))")
+                Text("第\(round)回 問\(q.numberForDisplay) · \(subjectShort(q.subject))")
                     .font(.system(size: 13, weight: .bold)).foregroundColor(Theme.fg)
                 Spacer()
                 Pill(text: tagText, fg: tagColor, bg: tagColor.opacity(0.18))

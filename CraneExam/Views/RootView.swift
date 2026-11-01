@@ -2,6 +2,7 @@ import SwiftUI
 
 struct RootView: View {
     @EnvironmentObject var router: Router
+    @AppStorage("cr_has_studied") private var hasStudied = false
     var body: some View {
         // 表示順＝ホーム/教材/用語/模試・成績/設定。
         // tag は router.tab の識別子（HomeView等が参照）なので値は固定し、並びだけ入れ替える。
@@ -18,5 +19,8 @@ struct RootView: View {
                 .tabItem { Label("設定", systemImage: "gearshape.fill") }.tag(4)
         }
         .tint(Theme.accent)
+        .onChange(of: router.tab) { tab in
+            if tab == 1 || tab == 3 { hasStudied = true }
+        }
     }
 }

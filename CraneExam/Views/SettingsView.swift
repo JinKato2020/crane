@@ -1,4 +1,5 @@
 import SwiftUI
+import StoreKit
 
 struct SettingsView: View {
     @EnvironmentObject var purchases: PurchaseStore
@@ -6,6 +7,18 @@ struct SettingsView: View {
     @AppStorage("cr_notify") private var notify: Bool = true
     @AppStorage("cr_appearance") private var appearance: Int = 0   // 0:システム 1:ライト 2:ダーク
     @State private var showPaywall = false
+    @State private var showFeedback = false
+    @Environment(\.requestReview) private var requestReview
+    @State private var developerToolsUnlocked = false
+    @State private var reviewTriggered = false
+
+    private var showDeveloperTools: Bool {
+        #if DEBUG
+        return true
+        #else
+        return developerToolsUnlocked || Bundle.main.appStoreReceiptURL?.lastPathComponent == "sandboxReceipt"
+        #endif
+    }
 
     // Info.plist(＝project.yml の MARKETING_VERSION / CURRENT_PROJECT_VERSION)から実行時に読む。
     // これでビルドのたびに手で書き換える必要がなく、実バージョンと必ず一致する。
@@ -34,7 +47,22 @@ struct SettingsView: View {
                     infoRow("externaldrive.fill", "学習データ", "この端末に保存")
 
                     group("アプリについて")
+                    Button { showFeedback = true } label: {
+                        HStack(spacing: 12) {
+                            iconBox("envelope.fill")
+                            Text("ご意見・リクエストを送る")
+                                .font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg)
+                            Spacer()
+                            Image(systemName: "chevron.right").foregroundColor(Theme.faint)
+                        }.rowStyle()
+                    }.buttonStyle(.plain)
                     infoRow("info.circle.fill", "バージョン", Self.appVersionText)
+                        .onTapGesture(count: 7) { developerToolsUnlocked = true }
+
+                    if showDeveloperTools {
+                        group("開発用・表示確認")
+                        developerPreviewSection
+                    }
 
                     Text("BUILD A SAFER TOMORROW")
                         .font(.system(size: 10, weight: .bold)).tracking(1)
@@ -47,6 +75,7 @@ struct SettingsView: View {
             .navigationTitle("設定")
             .navigationBarTitleDisplayMode(.inline)
             .sheet(isPresented: $showPaywall) { PaywallView() }
+            .sheet(isPresented: $showFeedback) { FeedbackView() }
             .alert("お知らせ", isPresented: Binding(
                 get: { purchases.message != nil },
                 set: { if !$0 { purchases.message = nil } }
@@ -56,6 +85,31 @@ struct SettingsView: View {
                 Text(purchases.message ?? "")
             }
         }
+    }
+
+    private var developerPreviewSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Button {
+                reviewTriggered = true
+                requestReview()
+            } label: {
+                Label("評価画面を呼び出す", systemImage: "star.bubble")
+                    .font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.accent2)
+                    .frame(maxWidth: .infinity, alignment: .leading).padding(.vertical, 4)
+            }.buttonStyle(.plain)
+            if reviewTriggered {
+                Text("評価APIを呼び出しました。")
+                    .font(.footnote).foregroundColor(Theme.muted)
+            }
+            Button { showFeedback = true } label: {
+                Label("リクエスト画面を開く", systemImage: "envelope")
+                    .font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.accent2)
+                    .frame(maxWidth: .infinity, alignment: .leading).padding(.vertical, 4)
+            }.buttonStyle(.plain)
+            Text("4日間の待機なしで確認できます。通常の依頼間隔は変更しません。評価画面の実表示はAppleが制御し、TestFlightでは表示されません。")
+                .font(.footnote).foregroundColor(Theme.muted)
+                .fixedSize(horizontal: false, vertical: true)
+        }.rowStyle()
     }
 
     // 教材・画像の更新状況と手動更新
@@ -96,8 +150,11 @@ struct SettingsView: View {
                 HStack(spacing: 12) {
                     iconBox("crown.fill")
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("クレーン Pro 有効").font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg)
-                        Text("すべての模擬試験が使えます").font(.system(size: 11)).foregroundColor(Theme.faint)
+                        Text(purchases.hasLifetimeFreeAccess ? "無期限無料で利用できます" : "クレーン Pro 有効")
+                            .font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg)
+                        Text("教材・模試12回・用語・相関図をすべて解放")
+                            .font(.system(size: 11)).foregroundColor(Theme.faint)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                     Spacer()
                     Image(systemName: "checkmark.seal.fill").foregroundColor(Theme.good).font(.system(size: 16))
@@ -109,7 +166,7 @@ struct SettingsView: View {
                         iconBox("crown.fill")
                         VStack(alignment: .leading, spacing: 2) {
                             Text("Proにアップグレード").font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg)
-                            Text("模擬試験 全8回を解放(買い切り)").font(.system(size: 11)).foregroundColor(Theme.faint)
+                            Text("模擬試験 全12回を解放(買い切り)").font(.system(size: 11)).foregroundColor(Theme.faint)
                         }
                         Spacer()
                         Image(systemName: "chevron.right").font(.system(size: 13, weight: .bold)).foregroundColor(Theme.faint)
@@ -124,7 +181,7 @@ struct SettingsView: View {
             } label: {
                 HStack(spacing: 12) {
                     iconBox("arrow.clockwise")
-                    Text("購入を復元").font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg)
+                    Text("利用権を復元").font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg)
                     Spacer()
                     if purchases.isWorking { ProgressView() }
                 }

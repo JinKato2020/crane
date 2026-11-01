@@ -29,10 +29,13 @@ jobs:
       - name: Verify textbook references and data compatibility
         run: |
           python3 tools/verify_textbook_links.py
+          python3 tools/verify_exam_quality.py
           swiftc CraneExam/Models.swift CraneExam/Textbook.swift tools/verify_reference_resolver.swift -o "$RUNNER_TEMP/verify-references"
           "$RUNNER_TEMP/verify-references" "$GITHUB_WORKSPACE/CraneExam/Resources"
           swiftc CraneExam/Models.swift tools/verify_mock_exam.swift -o "$RUNNER_TEMP/verify-mock-exam"
           "$RUNNER_TEMP/verify-mock-exam" "$GITHUB_WORKSPACE/CraneExam/Resources"
+          swiftc CraneExam/PromotionPolicy.swift tools/verify_promotion.swift -o "$RUNNER_TEMP/verify-promotion"
+          "$RUNNER_TEMP/verify-promotion"
 
       - name: Install XcodeGen
         run: brew install xcodegen

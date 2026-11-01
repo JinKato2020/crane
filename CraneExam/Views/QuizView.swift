@@ -1,5 +1,4 @@
 import SwiftUI
-import StoreKit
 
 enum QuizMode { case full }
 
@@ -10,7 +9,6 @@ struct QuizView: View {
 
     @EnvironmentObject var store: ExamStore
     @Environment(\.dismiss) private var dismiss
-    @Environment(\.requestReview) private var requestReview
     @Environment(\.scenePhase) private var scenePhase
 
     @State private var index = 0
@@ -52,12 +50,6 @@ struct QuizView: View {
             Button("結果を確認", role: .cancel) { }
         } message: {
             Text("150分が経過したため終了しました。選択済みの解答を採点し、未回答は不正解として記録しました。")
-        }
-        .onChange(of: finished) { done in
-            // 模試を完了した直後、1回目/7回目ならApp Store評価を一度だけ依頼する
-            guard done, !showTimeExpiredAlert, store.pendingReview else { return }
-            store.pendingReview = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) { requestReview() }
         }
     }
 
@@ -121,11 +113,24 @@ struct QuizView: View {
                         .background(Theme.card2).clipShape(RoundedRectangle(cornerRadius: 10))
                     }
 
+                    if let headers = q.choiceHeaders {
+                        HStack(spacing: 12) {
+                            Color.clear.frame(width: 26, height: 1)
+                            ForEach(headers.indices, id: \.self) { column in
+                                Text(headers[column])
+                                    .font(.system(size: 11, weight: .bold))
+                                    .foregroundColor(Theme.muted)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+                        }
+                        .padding(.horizontal, 13)
+                    }
                     ForEach(Array(q.choices.enumerated()), id: \.offset) { i, c in
                         choiceButton(i, c)
                     }
 
-                    if answered {
+                    if answered && !timeLimitEnabled {
                         explanationBox
                     }
                 }
@@ -148,8 +153,8 @@ struct QuizView: View {
                         .frame(maxWidth: .infinity, minHeight: 50)
                         .background(Theme.gold).clipShape(RoundedRectangle(cornerRadius: 13))
                 }
-                .disabled(selected == nil && !answered)
-                .opacity((selected == nil && !answered) ? 0.5 : 1)
+                .disabled(!timeLimitEnabled && selected == nil && !answered)
+                .opacity((!timeLimitEnabled && selected == nil && !answered) ? 0.5 : 1)
             }
             .padding(.horizontal, 16).padding(.top, 8).padding(.bottom, 10)
             .background(Theme.bg)
@@ -165,7 +170,7 @@ struct QuizView: View {
         return Button {
             updateClock()
             guard !finished else { return }
-            if !answered { selected = i }
+            if !answered || timeLimitEnabled { selected = i }
         } label: {
             HStack(alignment: .top, spacing: 12) {
                 Text("\(i + 1)")
@@ -173,11 +178,20 @@ struct QuizView: View {
                     .frame(width: 26, height: 26)
                     .background(state.numBg).foregroundColor(state.numFg)
                     .clipShape(Circle())
-                Text(text)
-                    .font(.system(size: 13.5)).foregroundColor(Theme.fg)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .lineSpacing(3)
+                if let rows = q.choiceRows, rows.indices.contains(i) {
+                    ForEach(rows[i].indices, id: \.self) { column in
+                        Text(rows[i][column])
+                            .font(.system(size: 13.5)).foregroundColor(Theme.fg)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                } else {
+                    Text(text)
+                        .font(.system(size: 13.5)).foregroundColor(Theme.fg)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .lineSpacing(3)
+                }
             }
             .padding(13)
             .background(state.bg)
@@ -190,12 +204,12 @@ struct QuizView: View {
     private struct CState { var bg: Color; var border: Color; var numBg: Color; var numFg: Color }
     private func choiceState(_ i: Int) -> CState {
         let correctIdx = q.answer - 1
-        if answered {
+        if answered && !timeLimitEnabled {
             if i == correctIdx { return CState(bg: Theme.good.opacity(0.14), border: Theme.good, numBg: Theme.good, numFg: Color(hex: 0x06230F)) }
             if i == selected { return CState(bg: Theme.warn.opacity(0.14), border: Theme.warn, numBg: Theme.warn, numFg: Color(hex: 0x2A0B07)) }
             return CState(bg: Theme.card, border: Theme.line, numBg: Theme.raise, numFg: Theme.muted)
         }
-        if i == selected { return CState(bg: Color(hex: 0x2A2211), border: Theme.accent, numBg: Theme.accent, numFg: Color(hex: 0x241703)) }
+        if i == selected { return CState(bg: Theme.selectedAnswer, border: Theme.accent, numBg: Theme.accent, numFg: Color(hex: 0x241703)) }
         return CState(bg: Theme.card, border: Theme.line, numBg: Theme.raise, numFg: Theme.muted)
     }
 
@@ -224,6 +238,7 @@ struct QuizView: View {
     }
 
     private var primaryLabel: String {
+        if timeLimitEnabled { return index == count - 1 ? "終了して採点" : (selected == nil ? "未回答で次へ" : "次の問題へ") }
         if !answered { return "解答する" }
         return index == count - 1 ? "結果を見る" : "次の問題へ"
     }
@@ -231,6 +246,12 @@ struct QuizView: View {
     private func primaryAction() {
         updateClock()
         guard !finished else { return }
+        if timeLimitEnabled {
+            submitCurrentAnswer()
+            if index == count - 1 { finish() }
+            else { index += 1; restoreAnswer() }
+            return
+        }
         if !answered {
             submitCurrentAnswer()
         } else {
@@ -240,10 +261,11 @@ struct QuizView: View {
     }
 
     private func submitCurrentAnswer() {
-        guard let sel = selected, submittedAnswers[q.no] == nil else { return }
+        guard let sel = selected else { return }
+        let isFirstSubmission = submittedAnswers[q.no] == nil
         submittedAnswers[q.no] = sel
         answered = true
-        store.recordAnswers(1)
+        if isFirstSubmission { store.recordAnswers(1) }
     }
 
     private func restoreAnswer() {
@@ -254,6 +276,7 @@ struct QuizView: View {
     private func goPrev() {
         updateClock()
         guard !finished else { return }
+        if timeLimitEnabled { submitCurrentAnswer() }
         if index > 0 { index -= 1; restoreAnswer() }
     }
 
@@ -266,7 +289,7 @@ struct QuizView: View {
     private func finish(timedOut: Bool = false) {
         guard !finished else { return }
         // 時間切れ直前に選択していた解答も採点対象にする。
-        if !answered { submitCurrentAnswer() }
+        if timeLimitEnabled || !answered { submitCurrentAnswer() }
         let score = MockExamScore(exam: exam, answers: submittedAnswers, elapsed: elapsed)
         store.saveResult(score.result, wrongRefs: score.wrongRefs)
         result = score.result

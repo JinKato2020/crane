@@ -25,6 +25,12 @@ for sid, section in sections.items():
         if b['type'] == 'table':
             assert all(len(row) == len(b['headers']) for row in b['rows']), sid
 questions = {f"{e['round']}-{q['no']}":q for e in exams for q in e['questions']}
+quality_path = ROOT/'tools/exam_quality/changes.json'
+quality = {r['id']:r for r in json.loads(quality_path.read_text(encoding='utf-8'))['changes']} if quality_path.exists() else {}
+quality_ref_changes = {key for key,r in quality.items() if 'refs' in r['fields']}
+for key,record in quality.items():
+    actual = hashlib.sha256(json.dumps(questions[key],ensure_ascii=False,sort_keys=True,separators=(',',':')).encode('utf-8')).hexdigest()
+    assert actual == record['afterSHA256'], ('未承認の模試変更',key)
 assert len(exams) == 12 and len(questions) == len(plan) == 480
 for exam in exams:
     assert {q['no'] for q in exam['questions']} == set(range(1,41))
@@ -46,13 +52,14 @@ for key,choice in {'1-6':'C, D','1-10':'A, D','2-18':'C, D'}.items():
     assert '\n\nA ' in q['text'] and '\n\nD ' in q['text'], key
     assert all(len(c) < 35 for c in q['choices']), key
 for expected,section in [('1-22','3-1'),('6-8','3-3'),('10-3','1-7'),('2-24','4-1'),('2-29','4-5'),('3-33','4-7'),('7-39','2-2')]:
-    assert questions[expected]['ref']['section'] == section, expected
+    if expected not in quality_ref_changes:
+        assert questions[expected]['ref']['section'] == section, expected
 assert questions['1-22']['ref']['blockID'] == 'lesson-rectify-smooth'
 assert questions['8-23']['ref']['blockID'] == 'lesson-force-direction'
 assert questions['8-16']['ref']['blockID'] == 'lesson-protection-roles'
 assert all(any(r['section']=='3-1' and r['blockID']=='lesson-transformer-ratio' for r in questions[k]['refs']) for k in ['1-22','7-20'])
 for record in plan:
-    if record['gap']:
+    if record['gap'] and record['id'] not in quality_ref_changes:
         applicable = {l['key'] for l in LESSONS if record['id'] in l['questions']}
         actual = {r['blockID'].removeprefix('lesson-') for r in questions[record['id']]['refs']}
         assert applicable and applicable <= actual, record['id']
@@ -87,8 +94,11 @@ if backups:
             assert [b for b in os['blocks'] if b['type'] in ('img','svg')] == [{k:v for k,v in b.items() if k!='id'} for b in ns['blocks'] if b['type'] in ('img','svg')]
     before_exams = json.loads(sorted(RES.glob('exams.json.bak_pre_link_repair_*'))[-1].read_text(encoding='utf-8'))
     for oe,ne in zip(before_exams,exams):
-        for oq,nq in zip(oe['questions'],ne['questions']):
+        current = {q['no']:q for q in ne['questions']}
+        for oq in oe['questions']:
+            nq=current[oq['no']]
             key=f"{oe['round']}-{oq['no']}"
             ignored={'ref','refs'}|({'text','choices'} if key in ('1-6','1-10','2-18') else set())
+            ignored |= set(quality.get(key,{}).get('fields',[]))
             assert {k:v for k,v in oq.items() if k not in ignored} == {k:v for k,v in nq.items() if k not in ignored},key
-    print('PASS: figures, glossary, section identities, 477 stems/choices and all answers/explanations preserved')
+    print('PASS: figures, glossary, section identities preserved; exam changes match the reviewed change ledger')

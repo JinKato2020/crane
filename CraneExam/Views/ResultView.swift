@@ -14,7 +14,7 @@ struct ResultView: View {
         var id: String { "\(round)-\(q.no)" }
     }
 
-    private var pass: Bool { result.percent >= 60 }
+    private var pass: Bool { result.isPassing }
 
     var body: some View {
         ScrollView {
@@ -72,10 +72,10 @@ struct ResultView: View {
             VStack(spacing: 8) {
                 Text("第\(exam.round)回 模擬試験 · \(dateStr(result.date))")
                     .font(.system(size: 12)).foregroundColor(Theme.muted)
-                Ring(progress: Double(result.percent) / 100, size: 128, line: 12,
-                     label: "\(result.correct)", sub: "点 / \(result.total)")
+                Ring(progress: Double(result.examScore) / 100, size: 128, line: 12,
+                     label: "\(result.examScore)", sub: "点 / 100")
                 Text("総合評価").font(.system(size: 12, weight: .bold)).foregroundColor(Theme.muted)
-                Text(pass ? "合格ライン(60%)を超えました。順調です！" : "合格ラインまであと少し。弱点を復習しましょう。")
+                Text(pass ? "総合60点以上・各科目40%以上を達成しました。" : "総合60点以上・各科目40%以上が合格の目安です。")
                     .font(.system(size: 12.5, weight: .bold))
                     .foregroundColor(pass ? Theme.good : Theme.accent2)
                     .multilineTextAlignment(.center)
@@ -88,7 +88,7 @@ struct ResultView: View {
         HStack(spacing: 10) {
             statCell("\(result.correct)/\(result.total)", "正答数")
             statCell(timeString(result.elapsed), "所要時間")
-            statCell("\(result.percent)%", "得点率", Theme.accent2)
+            statCell("\(result.percent)%", "正答率", Theme.accent2)
         }
     }
 

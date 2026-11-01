@@ -1,4 +1,5 @@
 import SwiftUI
+import StoreKit
 
 struct HomeView: View {
     @Environment(\.colorScheme) private var colorScheme
@@ -11,12 +12,20 @@ struct HomeView: View {
     @State private var showFavTerms = false
     @AppStorage("cr_exam_date") private var examEpoch: Double = 0   // 試験日(0=未設定, timeIntervalSince1970)
     @State private var showDateSheet = false
+    @Environment(\.requestReview) private var requestReview
+    @Environment(\.scenePhase) private var scenePhase
+    @AppStorage("cr_feedback_first_use") private var feedbackFirstUse: Double = 0
+    @AppStorage("cr_feedback_last_request") private var feedbackLastRequest: Double = 0
+    @AppStorage("cr_feedback_card_visible") private var feedbackCardVisible = false
+    @AppStorage("cr_has_studied") private var hasStudied = false
+    @State private var showFeedback = false
 
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
                 hero
                 VStack(spacing: 13) {
+                    if feedbackCardVisible { feedbackCard }
                     countdownCard
                     growthCard
                     cardsGrid
@@ -33,6 +42,47 @@ struct HomeView: View {
         .sheet(isPresented: $showBookmarks) { BookmarkView().environmentObject(store) }
         .sheet(isPresented: $showFavTerms) { FavoriteTermsScreen().environmentObject(store) }
         .sheet(isPresented: $showDateSheet) { ExamDateSheet(examEpoch: $examEpoch) }
+        .sheet(isPresented: $showFeedback) { FeedbackView() }
+        .onAppear { offerFeedbackIfDue() }
+        .onChange(of: scenePhase) { phase in
+            if phase == .active, router.tab == 0 { offerFeedbackIfDue() }
+        }
+    }
+
+    private func offerFeedbackIfDue(now: Date = Date()) {
+        if feedbackFirstUse == 0 { feedbackFirstUse = now.timeIntervalSince1970 }
+        guard router.tab == 0, scenePhase == .active,
+              !showGuide, !showRelationMap, !showBookmarks, !showFavTerms, !showDateSheet, !showFeedback,
+              FeedbackSchedule.isDue(
+                firstUse: Date(timeIntervalSince1970: feedbackFirstUse),
+                lastRequest: feedbackLastRequest > 0 ? Date(timeIntervalSince1970: feedbackLastRequest) : nil,
+                hasStudied: hasStudied || !store.results.isEmpty || !store.dailyAnswers.isEmpty,
+                now: now) else { return }
+        feedbackLastRequest = now.timeIntervalSince1970
+        feedbackCardVisible = true
+        // 評価の内容で分岐せず、全員に標準APIで依頼。実際の表示はAppleが制御する。
+        requestReview()
+    }
+
+    private var feedbackCard: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Text("使ってみて、いかがですか？").font(.headline).foregroundColor(Theme.fg)
+                Spacer()
+                Button { feedbackCardVisible = false } label: {
+                    Image(systemName: "xmark").foregroundColor(Theme.muted)
+                }.accessibilityLabel("ご意見の案内を閉じる")
+            }
+            Text("分かりにくい点や、欲しい機能を教えてください。")
+                .font(.subheadline).foregroundColor(Theme.muted)
+            Button { showFeedback = true } label: {
+                Label("ご意見・リクエストを送る", systemImage: "envelope")
+                    .font(.subheadline.bold()).foregroundColor(Theme.accent2)
+            }
+        }
+        .padding(16).frame(maxWidth: .infinity, alignment: .leading)
+        .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 14))
+        .overlay(RoundedRectangle(cornerRadius: 14).stroke(Theme.line, lineWidth: 1))
     }
 
     // 外観別の写真とオーバーレイで、ホームの背景と文字の読みやすさをそろえる。

@@ -1,0 +1,386 @@
+{
+  "date": "2026-11-01",
+  "verdict": "公式の本番試験と完全に同品質とは断言できない。出題形式・計算の偏り・科目順・採点の明確な差を修正したが、同一難度や合格予測精度を実証する受験者データはない。",
+  "scope": {
+    "appQuestions": 480,
+    "appRounds": 12,
+    "officialQuestionsDirectlyCompared": 80,
+    "officialPagesVisuallyReviewed": 52,
+    "substantiveItemsChanged": 104,
+    "spacingOnlyItemsChanged": 23,
+    "nativeChoiceTablesAdded": 3,
+    "neutral3DAssetsAdded": 2
+  },
+  "sources": [
+    {
+      "title": "令和8年10月 クレーン限定 公表試験問題",
+      "url": "https://www.exam.or.jp/wp-content/uploads/2026/10/LC20262108.pdf",
+      "questions": 40,
+      "pages": 26,
+      "figureQuestions": [
+        3,
+        4,
+        22,
+        31,
+        33,
+        34,
+        35,
+        36,
+        39,
+        40
+      ],
+      "tableQuestions": [
+        3,
+        28,
+        36
+      ]
+    },
+    {
+      "title": "令和8年4月 クレーン限定 公表試験問題",
+      "url": "https://www.exam.or.jp/wp-content/uploads/2026/04/LC20260408-1.pdf",
+      "questions": 40,
+      "pages": 26,
+      "figureQuestions": [
+        3,
+        4,
+        7,
+        32,
+        39,
+        40
+      ],
+      "tableQuestions": [
+        3,
+        5,
+        7,
+        15,
+        28
+      ]
+    },
+    {
+      "title": "公式の科目・配点・時間",
+      "url": "https://www.exam.or.jp/introduction/h_shokai206/"
+    },
+    {
+      "title": "クレーン等安全規則（玉掛用具等）",
+      "url": "https://www.mhlw.go.jp/web/t_doc?dataId=74020000"
+    },
+    {
+      "title": "既存の過去6回・240問を基にした作問基準（補助資料。今回の直接比較80問とは別）",
+      "local": "書籍/模試作成水準.md"
+    }
+  ],
+  "measurementNotes": [
+    "文字数は問題文＋選択肢の空白を除いた値。公式PDFには図中文字やルビが混入するため、厳密に同一条件の文章量測定ではない。",
+    "組合せ問題数は「組合せ／組み合わせ」を含む問いの集計。A〜E正誤判定だけでなく数値の組合せ等も含む。",
+    "公式の図・表は全52ページを目視分類。選択肢の列揃え等を表に含む。アプリの図数は回答前figImgの参照数で、解説図は含めない。",
+    "全480問を公式PDFの全問と一対一で全文照合したレビューではない。全数の構成・形式と修正対象の正誤・図表・参照を検証した。"
+  ],
+  "metrics": {
+    "official": {
+      "questions": 80,
+      "meanChars": 296.2,
+      "medianChars": 292.0,
+      "questionsContainingCombination": 18,
+      "negativeStem": 45,
+      "questionFigure": 16
+    },
+    "appBefore": {
+      "questions": 480,
+      "meanChars": 200.4,
+      "medianChars": 205.0,
+      "questionsContainingCombination": 60,
+      "negativeStem": 261,
+      "questionFigure": 100
+    },
+    "appAfter": {
+      "questions": 480,
+      "meanChars": 219.3,
+      "medianChars": 222.0,
+      "questionsContainingCombination": 89,
+      "negativeStem": 292,
+      "questionFigure": 96
+    },
+    "perRound": [
+      {
+        "round": 1,
+        "before": {
+          "questions": 40,
+          "meanChars": 231.8,
+          "medianChars": 243.5,
+          "questionsContainingCombination": 8,
+          "negativeStem": 25,
+          "questionFigure": 9
+        },
+        "after": {
+          "questions": 40,
+          "meanChars": 241.0,
+          "medianChars": 253.5,
+          "questionsContainingCombination": 9,
+          "negativeStem": 28,
+          "questionFigure": 8
+        }
+      },
+      {
+        "round": 2,
+        "before": {
+          "questions": 40,
+          "meanChars": 214.1,
+          "medianChars": 232.0,
+          "questionsContainingCombination": 1,
+          "negativeStem": 25,
+          "questionFigure": 6
+        },
+        "after": {
+          "questions": 40,
+          "meanChars": 239.4,
+          "medianChars": 253.5,
+          "questionsContainingCombination": 7,
+          "negativeStem": 24,
+          "questionFigure": 6
+        }
+      },
+      {
+        "round": 3,
+        "before": {
+          "questions": 40,
+          "meanChars": 185.8,
+          "medianChars": 201.0,
+          "questionsContainingCombination": 6,
+          "negativeStem": 21,
+          "questionFigure": 8
+        },
+        "after": {
+          "questions": 40,
+          "meanChars": 212.5,
+          "medianChars": 221.5,
+          "questionsContainingCombination": 9,
+          "negativeStem": 27,
+          "questionFigure": 8
+        }
+      },
+      {
+        "round": 4,
+        "before": {
+          "questions": 40,
+          "meanChars": 214.3,
+          "medianChars": 220.0,
+          "questionsContainingCombination": 2,
+          "negativeStem": 25,
+          "questionFigure": 10
+        },
+        "after": {
+          "questions": 40,
+          "meanChars": 238.8,
+          "medianChars": 242.5,
+          "questionsContainingCombination": 6,
+          "negativeStem": 27,
+          "questionFigure": 7
+        }
+      },
+      {
+        "round": 5,
+        "before": {
+          "questions": 40,
+          "meanChars": 200.5,
+          "medianChars": 205.0,
+          "questionsContainingCombination": 2,
+          "negativeStem": 19,
+          "questionFigure": 8
+        },
+        "after": {
+          "questions": 40,
+          "meanChars": 222.8,
+          "medianChars": 222.0,
+          "questionsContainingCombination": 6,
+          "negativeStem": 24,
+          "questionFigure": 9
+        }
+      },
+      {
+        "round": 6,
+        "before": {
+          "questions": 40,
+          "meanChars": 196.5,
+          "medianChars": 217.5,
+          "questionsContainingCombination": 4,
+          "negativeStem": 23,
+          "questionFigure": 8
+        },
+        "after": {
+          "questions": 40,
+          "meanChars": 225.8,
+          "medianChars": 236.5,
+          "questionsContainingCombination": 6,
+          "negativeStem": 24,
+          "questionFigure": 8
+        }
+      },
+      {
+        "round": 7,
+        "before": {
+          "questions": 40,
+          "meanChars": 181.2,
+          "medianChars": 196.0,
+          "questionsContainingCombination": 1,
+          "negativeStem": 23,
+          "questionFigure": 8
+        },
+        "after": {
+          "questions": 40,
+          "meanChars": 208.9,
+          "medianChars": 218.5,
+          "questionsContainingCombination": 6,
+          "negativeStem": 29,
+          "questionFigure": 7
+        }
+      },
+      {
+        "round": 8,
+        "before": {
+          "questions": 40,
+          "meanChars": 171.8,
+          "medianChars": 175.0,
+          "questionsContainingCombination": 6,
+          "negativeStem": 18,
+          "questionFigure": 9
+        },
+        "after": {
+          "questions": 40,
+          "meanChars": 211.9,
+          "medianChars": 219.0,
+          "questionsContainingCombination": 6,
+          "negativeStem": 25,
+          "questionFigure": 8
+        }
+      },
+      {
+        "round": 9,
+        "before": {
+          "questions": 40,
+          "meanChars": 204.2,
+          "medianChars": 204.5,
+          "questionsContainingCombination": 9,
+          "negativeStem": 20,
+          "questionFigure": 9
+        },
+        "after": {
+          "questions": 40,
+          "meanChars": 208.4,
+          "medianChars": 205.5,
+          "questionsContainingCombination": 10,
+          "negativeStem": 21,
+          "questionFigure": 9
+        }
+      },
+      {
+        "round": 10,
+        "before": {
+          "questions": 40,
+          "meanChars": 213.7,
+          "medianChars": 211.0,
+          "questionsContainingCombination": 7,
+          "negativeStem": 21,
+          "questionFigure": 8
+        },
+        "after": {
+          "questions": 40,
+          "meanChars": 218.0,
+          "medianChars": 216.5,
+          "questionsContainingCombination": 8,
+          "negativeStem": 21,
+          "questionFigure": 8
+        }
+      },
+      {
+        "round": 11,
+        "before": {
+          "questions": 40,
+          "meanChars": 200.4,
+          "medianChars": 201.5,
+          "questionsContainingCombination": 7,
+          "negativeStem": 19,
+          "questionFigure": 8
+        },
+        "after": {
+          "questions": 40,
+          "meanChars": 207.1,
+          "medianChars": 207.0,
+          "questionsContainingCombination": 8,
+          "negativeStem": 20,
+          "questionFigure": 9
+        }
+      },
+      {
+        "round": 12,
+        "before": {
+          "questions": 40,
+          "meanChars": 190.6,
+          "medianChars": 192.5,
+          "questionsContainingCombination": 7,
+          "negativeStem": 22,
+          "questionFigure": 9
+        },
+        "after": {
+          "questions": 40,
+          "meanChars": 196.5,
+          "medianChars": 194.5,
+          "questionsContainingCombination": 8,
+          "negativeStem": 22,
+          "questionFigure": 9
+        }
+      }
+    ]
+  },
+  "findings": [
+    {
+      "axis": "基本構造",
+      "before": "第2・4・5・6・7・8回の科目順が公式と異なる。",
+      "fix": "12回ともクレーン→法令→原動機・電気→力学へ。保存用noを維持し、表示番号displayNoを分離。"
+    },
+    {
+      "axis": "図・表",
+      "before": "総数は近いが力学の計算補助に偏り、部品識別が少ない。複数列の選択肢が文章として流れていた。",
+      "fix": "構造識別図を追加し、既存の誤答を示さない図も再利用。軸継手・二段歯車の中立な3D図2点を作成。3問の選択肢を列で整列。"
+    },
+    {
+      "axis": "文章量と条件",
+      "before": "公式より短く、一条件だけで選べる問いが多い。",
+      "fix": "A〜Eの独立判定、対象・作用部分・運転条件・法定値の区別を補強。空白改行の修正は内容改稿と分けて記録。なお平均文字数には差が残る。"
+    },
+    {
+      "axis": "誤答の種類",
+      "before": "単純な数値選択や、全否定だけで除外しやすい肢に偏る箇所がある。",
+      "fix": "二次側／一次側、回転子／回転磁界、荷の重量／張力、直列／並列、枝／全回路、断線前／後、用具別法定値などの取り違えを使用。回路は複数の量の整合を判定。"
+    },
+    {
+      "axis": "難易度",
+      "before": "第2〜8回等に計算が偏り、逆三角関数・転倒角・複数の計算を重ねる問題が混在。",
+      "fix": "明示的なsin・cos・tanを要求する問題を除き、係数比較や条件判定へ調整。単純な易化ではなく、複数記述の正誤や量の関係を確認する負荷を加えた。"
+    },
+    {
+      "axis": "解答位置",
+      "before": "第4回の法令の正解位置に長い規則的な循環がある。",
+      "fix": "正しい記述の意味を変えず並び順を変更。選択肢番号を引用する解説も更新。"
+    },
+    {
+      "axis": "採点・模試動作",
+      "before": "正答率60%だけで合格表示し、科目配点と足切りが反映されていない。時間制限ありでも直後に解説が見える。",
+      "fix": "3・2・3・2点の配点と各科目40%以上・総合60点以上を反映。時間制限ありは終了後に正解・解説を表示し、未回答で先に進む／戻って変更する操作に対応。"
+    }
+  ],
+  "verification": {
+    "referenceCheck": "480問・710参照・36追記教材の整合検証に合格",
+    "truthTables": 57,
+    "circuitsIndependentlyRecalculated": 10,
+    "coefficientChecks": 7,
+    "stableQuestionIDs": 480,
+    "exactDuplicateQuestions": 0,
+    "SwiftAndIOSRuntime": "ローカルにSwift環境がなく未実行。実モデルの時間境界・未回答・配点・足切りの検証をCIに追加。",
+    "statisticalDifficultyEquivalence": "未実証。受験者の正答率・識別力・所要時間のデータが必要。"
+  },
+  "publication": {
+    "OTA": false,
+    "build": false,
+    "push": false
+  }
+}
