@@ -3,7 +3,7 @@
   "status": "implemented-locally-ready-for-build-request",
   "features": [
     "OTA home_heroes.json catalog and immutable versioned images",
-    "8 hero choices plus no-image mode; persisted selection and cancelable preview",
+    "4 approved hero choices (existing, anime, 04-skyward, 05-homeward) plus no-image mode; persisted selection and cancelable preview",
     "future add/replace/order/remove/default management CLI",
     "bundled and original-image fallbacks",
     "home learning actions and compact exam date",
@@ -18,8 +18,8 @@
     "iosSDKAvailable": false,
     "nativeCompileOrSimulatorRun": false,
     "swiftBehaviorTestsAddedToCI": true,
-    "heroChoices": 8,
-    "heroResourceHashes": 9,
+    "heroChoices": 4,
+    "heroResourceHashes": 5,
     "textbookReferenceQuestions": 480,
     "textbookReferences": 710,
     "recallTargets": 424,
@@ -30,7 +30,7 @@
     "oldMigrationChecks": "Historical single-task baseline guards failed after subsequent approved figure/quiz edits; retained as historical tests. Current-resource, content, reference, and recall checks passed separately."
   },
   "versionFloor": "1.0.12",
-  "buildNumberFloor": 2042,
+  "buildNumberFloor": 2043,
   "buildMonitoring": false,
   "buildStateQueried": false,
   "notes": "iOS workflow starts on application-source/project pushes. Resource-only and docs-only pushes do not trigger native builds; OTA remains a separate manual workflow."
