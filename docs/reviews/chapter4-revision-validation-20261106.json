@@ -1,0 +1,143 @@
+{
+  "scope": "第4章 全8節",
+  "source_book": "書籍/05_第4章_クレーンの運転のために必要な力学に関する知識.pdf",
+  "source_printed_pages": "145–183",
+  "source_method": "全章の既存OCRを対照し、数式・方式・数値・図表を中心に下記の原本ページ画像を確認。全ページを一文字ずつ再OCRする監査ではない。",
+  "source_pdf_pages_visually_reviewed": [
+    145,
+    154,
+    160,
+    166,
+    173,
+    175,
+    176,
+    177,
+    182,
+    183
+  ],
+  "sling_guidance_checked": [
+    "https://www.mhlw.go.jp/content/11300000/000627864.pdf",
+    "https://www.mhlw.go.jp/web/t_doc?dataId=74020000&dataType=0"
+  ],
+  "original_anchor_ids_retained": 339,
+  "reference_checks": {
+    "working": {
+      "questions": 480,
+      "references": 710,
+      "chapter4_references": 175
+    },
+    "published": {
+      "questions": 480,
+      "references": 696,
+      "chapter4_references": 161
+    }
+  },
+  "other_chapters_unchanged": true,
+  "exam_questions_unchanged": true,
+  "counts": {
+    "p": 244,
+    "sub": 67,
+    "img": 41,
+    "table": 15,
+    "ul": 20,
+    "svg": 14
+  },
+  "styles": {
+    "lead": 8,
+    "normal": 292,
+    "figure": 55,
+    "tip": 8,
+    "question": 18,
+    "answer": 18,
+    "matrix": 1,
+    "caution": 1
+  },
+  "mobile_browser_width": 390,
+  "mobile_sections_checked": 8,
+  "svg_clipping_checked": 14,
+  "pdf": {
+    "pages": 60,
+    "size_bytes": 8237329,
+    "text_preserved_after_compression": true,
+    "recompressed_images": 41,
+    "sparse_pages": [],
+    "rendered_pages": [
+      1,
+      2,
+      3,
+      12,
+      13,
+      14,
+      15,
+      18,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      42,
+      45,
+      46,
+      47,
+      48,
+      49,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "contact_sheets": [
+      "pdf-sheet-1.jpg",
+      "pdf-sheet-2.jpg",
+      "pdf-sheet-3.jpg"
+    ]
+  },
+  "fingerprints": {
+    "textbook.json": {
+      "sha256": "620dd81c5b4de34cc0287c9f89cf21df129b75a315d73c7152d667caece200d7",
+      "size": 707700
+    },
+    "images/4-1_trig_ratios_20261106.svg": {
+      "sha256": "3652d562844c0a0d7c5a448adf6eab8319edf1427647d6324719deaf503b877c",
+      "size": 2408
+    },
+    "images/4-1_balance_example5_20261106.svg": {
+      "sha256": "ceaa7d0e9170cfd8bab8d0c78b756cff5ef75322a90d2b602f8c49dc44555a25",
+      "size": 4023
+    },
+    "images/4-1_couple_20261106.svg": {
+      "sha256": "4286d35d1a572a473b44d1eaae81a2f635513c4015e693db942c61d6b13e2db0",
+      "size": 2043
+    },
+    "images/4-3_tipping_triangle_20261106.svg": {
+      "sha256": "93453884e7e1cd0d34a472d4377cfb723932a15bb9b7186dcfac7695e0beeaf0",
+      "size": 3490
+    },
+    "images/4-4_tension_acceleration_20261106.svg": {
+      "sha256": "082e1adec6c7aff728526e8d520fecb9a296939de4eba6ac8505409428955443",
+      "size": 3477
+    },
+    "images/4-6_cos35_20261106.svg": {
+      "sha256": "bb98220083ebed40875a23949242658e99b10c0fd5982e3739ef9ba0acc12835",
+      "size": 3145
+    },
+    "images/4-7_efficiency_20261106.svg": {
+      "sha256": "23121105f23ea4000e5601948f4925ea39a3f30a9c21b5eb61a568d608eb0f25",
+      "size": 2622
+    }
+  },
+  "native_ios_compile_performed": false,
+  "ota_deployed": true,
+  "ui_note": "第4章の本文・図・PDFは公開済み。節内目次とマトリクス表の表示変更はアプリ更新で反映する。"
+}

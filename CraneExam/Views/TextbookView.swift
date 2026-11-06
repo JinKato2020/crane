@@ -264,7 +264,7 @@ struct SectionContentView: View {
 
                 if hasMasks { quizBar }
 
-                if (section.id.hasPrefix("1-") || section.id.hasPrefix("2-") || section.id.hasPrefix("3-")), sectionHeadings.count > 4 {
+                if (section.id.hasPrefix("1-") || section.id.hasPrefix("2-") || section.id.hasPrefix("3-") || section.id.hasPrefix("4-")), sectionHeadings.count > 4 {
                     DisclosureGroup(isExpanded: $contentsExpanded) {
                         VStack(alignment: .leading, spacing: 0) {
                             ForEach(sectionHeadings, id: \.index) { heading in
@@ -474,7 +474,8 @@ struct BlockView: View {
 
         case "table":
             TableBlock(headers: block.headers ?? [], rows: block.rows ?? [],
-                       terms: block.quizTerms ?? [], numberStyle: block.style == "numbers")
+                       terms: block.quizTerms ?? [], numberStyle: block.style == "numbers",
+                       matrixStyle: block.style == "matrix")
 
         case "point":
             VStack(alignment: .leading, spacing: 12) {
@@ -566,12 +567,13 @@ struct BlockView: View {
     }
 }
 
-/// 表の描画(2列はキー/値、3列以上は行カード)
+/// 通常は2列の表／行カード。係数の比較表はmatrixで列をそろえる。
 struct TableBlock: View {
     let headers: [String]
     let rows: [[String]]
     var terms: [String] = []
     var numberStyle = false
+    var matrixStyle = false
 
     var body: some View {
         if numberStyle {
@@ -588,6 +590,17 @@ struct TableBlock: View {
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
             }
+        } else if matrixStyle && headers.count == 4 {
+            VStack(spacing: 0) {
+                matrixRow(headers, isHeader: true)
+                    .background(Theme.raise)
+                ForEach(Array(rows.enumerated()), id: \.offset) { i, row in
+                    matrixRow(row, isHeader: false)
+                        .background(i % 2 == 0 ? Theme.card : Theme.card2)
+                }
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.line, lineWidth: 1))
         } else if headers.count <= 2 {
             VStack(spacing: 0) {
                 if !headers.isEmpty {
@@ -641,6 +654,22 @@ struct TableBlock: View {
                 }
             }
         }
+    }
+
+    private func matrixRow(_ values: [String], isHeader: Bool) -> some View {
+        HStack(alignment: .center, spacing: 0) {
+            ForEach(0..<headers.count, id: \.self) { column in
+                MaskableText(raw: column < values.count ? values[column] : "",
+                             terms: terms, size: isHeader ? 13 : 15,
+                             weight: isHeader || column == 0 ? .semibold : .regular,
+                             color: isHeader ? Theme.muted : Theme.fg, lineSpacingV: 5)
+                    .padding(.horizontal, 8)
+                    .frame(width: column == 0 ? 120 : nil, alignment: .leading)
+                    .frame(maxWidth: column == 0 ? nil : .infinity, alignment: .center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .padding(.vertical, 12)
     }
 
     private func attr(_ s: String) -> AttributedString {

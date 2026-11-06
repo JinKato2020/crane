@@ -1,0 +1,238 @@
+{
+  "date": "2026-11-06",
+  "scope": "第4章 全8節",
+  "changes": [
+    {
+      "title": "導入と単位",
+      "implementation": "質量×重力加速度→重量の順を維持し、kg・tとN・kNを表で区別。地表・月面の既存図を保持。",
+      "basis": "書籍 pp.145–146"
+    },
+    {
+      "title": "力とモーメント",
+      "implementation": "支点反力の例題が曲げモーメントの説明で中断されていたため順序を整理。三角比は基本例題の後へ移動し、5・12・13の三角形と比の表を追加。偶力はハンドルで図示。",
+      "basis": "書籍 pp.146–155／既存模試対応の補足"
+    },
+    {
+      "title": "例題5の条件",
+      "implementation": "書籍の70cmは棒全長。旧教材では支点〜右端を70cmとして17.5kgだった条件を、書籍と同じ支点〜右端35cmにそろえ、図・問題文・計算結果35kgを一体で修正。旧条件での計算ミスと判定したものではない。",
+      "basis": "原本 p.154 の図と解答"
+    },
+    {
+      "title": "質量・体積",
+      "implementation": "密度と材料表を計算例の前へ移動。鋼7.8、コンクリート2.3、水1.0を強調。中空体積と直径倍率を自習問題で確認。",
+      "basis": "書籍 pp.156–158"
+    },
+    {
+      "title": "重心・安定",
+      "implementation": "重心の鉛直線と支点の関係を、直立した箱と傾けた箱で比較。転倒限界tanθ＝0.3÷0.8を図で読めるように追加。",
+      "basis": "書籍 pp.159–161／既存模試対応の補足"
+    },
+    {
+      "title": "運動・摩擦",
+      "implementation": "基準による動きの違い、F＝ma、旋回中の作業半径増大、接線方向を補足。張力を加速度の向きで3比較。静止摩擦の現在値・最大値・動摩擦を分ける表を追加。",
+      "basis": "書籍 pp.162–168"
+    },
+    {
+      "title": "荷重・応力",
+      "implementation": "荷重のかけ方を短い比較表へ。集中・分布荷重、たるんだロープの急巻上げによる衝撃を補足。比例限度・引張強さ・破断点の基本を優先。用語集の応力／曲線に対応する画像を修正。",
+      "basis": "書籍 pp.169–174"
+    },
+    {
+      "title": "ロープと係数",
+      "implementation": "必要切断荷重746.172kNで終わっていた例題に直径別の選択肢と答え40mmを追加。モード係数の範囲を2行に整理し、4本掛けは原則3本用という書籍の扱いを明記。cos35°＝0.82の書籍例を図と3段階で追加。",
+      "basis": "原本 pp.175–177／厚生労働省"
+    },
+    {
+      "title": "滑車・仕事",
+      "implementation": "定滑車と動滑車の設置場所・方向の役割を補足。階段式は下のロープ端が上の滑車の軸を引く関係を明記。巻上げ機構の効率を入力・有効出力・損失の図で示す。",
+      "basis": "書籍 pp.178–183／既存模試対応の補足"
+    },
+    {
+      "title": "学習と表示",
+      "implementation": "全8節に計18問の回答開閉式の確認問題。図55点（新規7点のうち1点は旧図を差替え）、比較表15個。技術系3D画像と既存の良い模式図は保持。節内目次と4列マトリクス表のネイティブUIを実装。",
+      "basis": "本文・図・SwiftUIソース"
+    },
+    {
+      "title": "確認範囲",
+      "implementation": "既存339アンカーを保持し、作業版710参照・公開版696参照を確認。390px幅の全8節、320px幅の係数表、SVG14点の文字切れ、最終PDF60ページを一覧と主要ページの拡大で点検。",
+      "basis": "ブラウザ再現とPDF。iOS実機・コンパイルは未実施"
+    }
+  ],
+  "verification": {
+    "scope": "第4章 全8節",
+    "source_book": "書籍/05_第4章_クレーンの運転のために必要な力学に関する知識.pdf",
+    "source_printed_pages": "145–183",
+    "source_method": "全章の既存OCRを対照し、数式・方式・数値・図表を中心に下記の原本ページ画像を確認。全ページを一文字ずつ再OCRする監査ではない。",
+    "source_pdf_pages_visually_reviewed": [
+      145,
+      154,
+      160,
+      166,
+      173,
+      175,
+      176,
+      177,
+      182,
+      183
+    ],
+    "sling_guidance_checked": [
+      "https://www.mhlw.go.jp/content/11300000/000627864.pdf",
+      "https://www.mhlw.go.jp/web/t_doc?dataId=74020000&dataType=0"
+    ],
+    "original_anchor_ids_retained": 339,
+    "reference_checks": {
+      "working": {
+        "questions": 480,
+        "references": 710,
+        "chapter4_references": 175
+      },
+      "published": {
+        "questions": 480,
+        "references": 696,
+        "chapter4_references": 161
+      }
+    },
+    "other_chapters_unchanged": true,
+    "exam_questions_unchanged": true,
+    "counts": {
+      "p": 244,
+      "sub": 67,
+      "img": 41,
+      "table": 15,
+      "ul": 20,
+      "svg": 14
+    },
+    "styles": {
+      "lead": 8,
+      "normal": 292,
+      "figure": 55,
+      "tip": 8,
+      "question": 18,
+      "answer": 18,
+      "matrix": 1,
+      "caution": 1
+    },
+    "mobile_browser_width": 390,
+    "mobile_sections_checked": 8,
+    "svg_clipping_checked": 14,
+    "pdf": {
+      "pages": 60,
+      "size_bytes": 8237329,
+      "text_preserved_after_compression": true,
+      "recompressed_images": 41,
+      "sparse_pages": [],
+      "rendered_pages": [
+        1,
+        2,
+        3,
+        12,
+        13,
+        14,
+        15,
+        18,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        42,
+        45,
+        46,
+        47,
+        48,
+        49,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "contact_sheets": [
+        "pdf-sheet-1.jpg",
+        "pdf-sheet-2.jpg",
+        "pdf-sheet-3.jpg"
+      ]
+    },
+    "fingerprints": {
+      "textbook.json": {
+        "sha256": "620dd81c5b4de34cc0287c9f89cf21df129b75a315d73c7152d667caece200d7",
+        "size": 707700
+      },
+      "images/4-1_trig_ratios_20261106.svg": {
+        "sha256": "3652d562844c0a0d7c5a448adf6eab8319edf1427647d6324719deaf503b877c",
+        "size": 2408
+      },
+      "images/4-1_balance_example5_20261106.svg": {
+        "sha256": "ceaa7d0e9170cfd8bab8d0c78b756cff5ef75322a90d2b602f8c49dc44555a25",
+        "size": 4023
+      },
+      "images/4-1_couple_20261106.svg": {
+        "sha256": "4286d35d1a572a473b44d1eaae81a2f635513c4015e693db942c61d6b13e2db0",
+        "size": 2043
+      },
+      "images/4-3_tipping_triangle_20261106.svg": {
+        "sha256": "93453884e7e1cd0d34a472d4377cfb723932a15bb9b7186dcfac7695e0beeaf0",
+        "size": 3490
+      },
+      "images/4-4_tension_acceleration_20261106.svg": {
+        "sha256": "082e1adec6c7aff728526e8d520fecb9a296939de4eba6ac8505409428955443",
+        "size": 3477
+      },
+      "images/4-6_cos35_20261106.svg": {
+        "sha256": "bb98220083ebed40875a23949242658e99b10c0fd5982e3739ef9ba0acc12835",
+        "size": 3145
+      },
+      "images/4-7_efficiency_20261106.svg": {
+        "sha256": "23121105f23ea4000e5601948f4925ea39a3f30a9c21b5eb61a568d608eb0f25",
+        "size": 2622
+      }
+    },
+    "native_ios_compile_performed": false,
+    "ota_deployed": true,
+    "ui_note": "第4章の節内目次と、4列表をマトリクス形式で表示するソース変更あり。第3章公開後の変更で、まだビルド・配信していない。"
+  },
+  "pdf": {
+    "path": "C:\\Users\\jwpsa\\Documents\\desktop\\claude\\クレーン\\アプリ\\教材\\クレーン教材_第4章_クレーンの運転のために必要な力学に関する知識.pdf",
+    "pages": 60,
+    "size_bytes": 8237329,
+    "sha256": "46849802d53e1b841e8c7d0990d9a0f6aebaf5c5d5d68331615f29f156ad7e51"
+  },
+  "visual_review": {
+    "contact_sheets": [
+      1,
+      2,
+      3
+    ],
+    "phone_section_openings": 8,
+    "new_svg_figures": 7,
+    "detail_pdf_pages": [
+      47
+    ],
+    "native_ios": false
+  },
+  "release": {
+    "ota_uploaded": true,
+    "source_pushed": false,
+    "build_requested": false,
+    "requires_new_build": [
+      "第4章の節内目次",
+      "4列のマトリクス表表示"
+    ],
+    "ota_compatible": [
+      "本文・図・用語集"
+    ],
+    "note": "第4章の本文・図・PDFを公開し、公開URLとのSHA-256一致を確認。UI変更を含むソースを同じ公開作業で準備。ビルド状態の照会・監視は行わない。",
+    "publication_receipt": "chapter4-ota-published-20261106.json",
+    "source_prepared": true
+  }
+}

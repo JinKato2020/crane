@@ -226,14 +226,18 @@
   },
   "release": {
     "ota_uploaded": true,
-    "build_requested": false,
+    "build_requested": true,
     "requires_new_build": [
       "第3章の節内目次への適用"
     ],
     "ota_compatible": [
       "本文・表・図・用語集"
     ],
-    "note": "第3章の本文・図・PDFを公開し公開URLとのSHA-256一致を確認。UI変更も公開するためソースを準備済み。ビルド状態は照会しない。",
-    "publication_receipt": "chapter3-ota-published-20261106.json"
+    "note": "第3章の本文・図・PDFを公開し公開URLとのSHA-256一致を確認。UI変更を含むソースを7f94684でPush済み。ビルド状態は照会していない。",
+    "publication_receipt": "chapter3-ota-published-20261106.json",
+    "source_pushed": true,
+    "source_commit": "7f94684",
+    "build_trigger": "git push origin main",
+    "build_status_queried": false
   }
 }
