@@ -1,0 +1,26 @@
+[
+  {
+    "id": "photo",
+    "file": "hero-photo.png",
+    "name": "現場の朝",
+    "type": "実写調",
+    "prompt": "Use case: UI hero illustration for a Japanese crane-operator exam learning app. Create ONLY background artwork, no phone, screen UI, text, lettering, logos, watermarks, badges or frames. Panoramic horizontal composition suitable for crop to roughly2:1. Clear crane identity, aspirational but calm professional mood. Main subject in upper-right and right two-thirds; lower-left quarter has uncluttered dark blue/teal negative space for white Japanese UI text that will be added separately. Clean readable silhouette at mobile size. Crane load not over any person, no unsafe activity. Palette deep navy, steel blue, restrained amber morning light; avoid dramatic storm darkness and oversaturated orange. Leave cropping safety on every edge.\nStyle: premium photorealistic editorial industrial photograph, physically credible machinery and materials. Scene: bright early morning at a clean Japanese harbor, a recognizable large stationary portal jib crane on rails on the quay at right, lattice jib rising diagonally left across upper sky, empty hook suspended freely in clear air near center-right. Body and supporting portal visible, harbor and low distant industrial buildings subtly recede. No people, no vehicles in foreground, no readable signs. Morning blue sky and warm sun edges on brushed metal, professional reliability and a welcoming start of a working day. Low contrast atmospheric foreground at left gives room for text. NOT a mobile crane truck, not a tower crane on a skyscraper, no fictional complex mashup. Wide panoramic cinematic but natural photography, thoughtful generous sky.",
+    "source": "C:\\Users\\jwpsa\\.codex\\generated_images\\01a14a5b-6e30-70c2-86f9-e75dbf7b4cda\\exec-e5f88050-9113-45dc-9208-103f7f9966fc.png",
+    "generator": "built-in image_gen",
+    "purpose": "proposal-only",
+    "status": "rejected-by-user",
+    "active": false
+  },
+  {
+    "id": "simple",
+    "file": "hero-simple.png",
+    "name": "静かな集中",
+    "type": "シンプル",
+    "prompt": "Use case: UI hero illustration for a Japanese crane-operator exam learning app. Create ONLY background artwork, no phone, screen UI, text, lettering, logos, watermarks, badges or frames. Panoramic horizontal composition suitable for crop to roughly2:1. Clear crane identity, aspirational but calm professional mood. Main subject in upper-right and right two-thirds; lower-left quarter has uncluttered dark blue/teal negative space for white Japanese UI text that will be added separately. Clean readable silhouette at mobile size. Crane load not over any person, no unsafe activity. Palette deep navy, steel blue, restrained amber morning light; avoid dramatic storm darkness and oversaturated orange. Leave cropping safety on every edge.\nStyle: refined minimal editorial2D vector-like illustration, simple geometric silhouettes, limited flat palette of navy, bluegreen, pale skyblue and small mutedgold details, crisp clean shapes, no heavy cartoon outlines, no3Drender, no photo textures, no visual clutter. Scene: same recognizable stationary harbor portal jib crane at right, lattice boom described with a few precise slender diagonals; empty small hook near center-right, calm waterfront horizontal layers, pale warm circular morning sun toward upperleft, lots of open sky. Crane silhouette navy against airy sky, bottom-left foreground simple darkteal horizontal layer provides text contrast. Architectural and calm, not childish or toy-like. Subtle paperlike flat softness but no noisy texture or gradients needed. Highend app illustration with exceptionally clean composition.",
+    "source": "C:\\Users\\jwpsa\\.codex\\generated_images\\01a14a5b-6e30-70c2-86f9-e75dbf7b4cda\\exec-7b4b7e15-2228-4da3-b57b-d80077955701.png",
+    "generator": "built-in image_gen",
+    "purpose": "proposal-only",
+    "status": "rejected-by-user",
+    "active": false
+  }
+]

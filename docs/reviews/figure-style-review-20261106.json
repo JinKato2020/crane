@@ -1,0 +1,188 @@
+{
+  "status": "integrated-locally",
+  "generator": "built-in image_gen",
+  "auditUniqueFigures": 194,
+  "auditScope": "全章の教材・用語集の図を一覧で視覚確認。今回の14図は個別に確認・再作成。全図の公式書籍との内容照合を意味しない。",
+  "replacementCount": 14,
+  "changes": [
+    {
+      "location": "1-4/1-4-e9eebcbb17e0",
+      "id": "overview",
+      "kind": "textbook"
+    },
+    {
+      "location": "1-4/1-4-26b6a8b46c1a",
+      "id": "overhead",
+      "kind": "textbook"
+    },
+    {
+      "location": "1-4/1-4-bd1515ae4569",
+      "id": "climbing",
+      "kind": "textbook"
+    },
+    {
+      "location": "1-4/1-4-8f81e6269ab4",
+      "id": "jibtypes",
+      "kind": "textbook"
+    },
+    {
+      "location": "1-4/1-4-40fd693b7f2a",
+      "id": "stacker",
+      "kind": "textbook"
+    },
+    {
+      "location": "1-4/1-4-b4f3799d8ee0",
+      "id": "luffing",
+      "kind": "textbook"
+    },
+    {
+      "location": "1-4/1-4-60286b435232",
+      "id": "hoist",
+      "kind": "textbook"
+    },
+    {
+      "location": "1-13/1-13-b8a5976e6f0c",
+      "id": "drum",
+      "kind": "textbook"
+    },
+    {
+      "location": "1-12/1-12-rev26-oil-figure",
+      "id": "oilbath",
+      "kind": "textbook"
+    },
+    {
+      "location": "1/天井クレーン",
+      "id": "overhead",
+      "kind": "glossary"
+    },
+    {
+      "location": "1/ジブクレーン",
+      "id": "jibtypes",
+      "kind": "glossary"
+    },
+    {
+      "location": "1/引込みクレーン",
+      "id": "luffing",
+      "kind": "glossary"
+    },
+    {
+      "location": "1/橋形クレーン",
+      "id": "overview",
+      "kind": "glossary"
+    },
+    {
+      "location": "1/スタッカークレーン",
+      "id": "stacker",
+      "kind": "glossary"
+    },
+    {
+      "location": "1/ホイストの横行方式",
+      "id": "hoist",
+      "kind": "glossary"
+    },
+    {
+      "location": "1/すて巻／エコライザシーブ・D/d",
+      "id": "drum",
+      "kind": "glossary"
+    },
+    {
+      "location": "1/油浴潤滑",
+      "id": "oilbath",
+      "kind": "glossary"
+    },
+    {
+      "location": "3-4/3-4-81e1c42a8df6",
+      "id": "contactor",
+      "kind": "textbook"
+    },
+    {
+      "location": "3-4/3-4-1b2385aab869",
+      "id": "cabinet",
+      "kind": "textbook"
+    },
+    {
+      "location": "3-4/3-4-07af76b42691",
+      "id": "breaker",
+      "kind": "textbook"
+    },
+    {
+      "location": "3-7/3-7-83923f3fb4ff",
+      "id": "meggerconnect",
+      "kind": "textbook"
+    },
+    {
+      "location": "3-7/3-7-f8b1fbde48ff",
+      "id": "meggerreadings",
+      "kind": "textbook"
+    },
+    {
+      "location": "3/絶縁／絶縁抵抗／漏えい電流",
+      "id": "meggerconnect",
+      "kind": "glossary"
+    }
+  ],
+  "rolePolicy": {
+    "technical": "形状・構造・接続位置は清潔なリアル3D",
+    "concept": "変化・原理・比較は簡潔な2D",
+    "calculation": "計算・力・寸法関係は正確な2D/SVG"
+  },
+  "preserved": [
+    "本文",
+    "例題",
+    "クイズの出題語",
+    "教材参照アンカー",
+    "用語の解説"
+  ],
+  "distribution": "not-published",
+  "nativeDeviceQA": "not-performed",
+  "manifestTextbook": {
+    "sha256": "b942fadf5c836079a7e1cdb76d9eb72eeb97610e634e860507068b389130e2b3",
+    "size": 891464
+  },
+  "webPreviewQA": {
+    "phoneConditions": [
+      {
+        "width": 320,
+        "theme": "light",
+        "horizontalOverflow": false,
+        "allImagesLoaded": true
+      },
+      {
+        "width": 320,
+        "theme": "dark",
+        "horizontalOverflow": false,
+        "allImagesLoaded": true
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "horizontalOverflow": false,
+        "allImagesLoaded": true
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "horizontalOverflow": false,
+        "allImagesLoaded": true
+      }
+    ],
+    "zoomAndClose": true,
+    "nativeAppTest": false
+  },
+  "integrityQA": {
+    "changedTextbookFigures": {
+      "1-4": 7,
+      "1-13": 1,
+      "1-12": 1,
+      "3-4": 3,
+      "3-7": 2
+    },
+    "quizTerms": 424,
+    "glossaryTerms": 207,
+    "canonicalCopyIdentical": true,
+    "manifestHashesVerified": true,
+    "questionReferencesVerified": 710,
+    "examQuestionsVerified": 480,
+    "proseAndQuizTermsUnchangedFromTaskBaseline": true
+  }
+}

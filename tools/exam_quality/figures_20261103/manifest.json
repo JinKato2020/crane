@@ -1,0 +1,716 @@
+[
+  {
+    "before": "exam_1-21_e",
+    "after": "exam_1-21_e_v20261103",
+    "source": "模試画像\\第1回\\SVG\\回答後\\1-21.svg",
+    "svg": "exam_1-21_e_v20261103.svg"
+  },
+  {
+    "before": "exam_1-21_q",
+    "after": "exam_1-21_q_v20261103",
+    "source": "模試画像\\第1回\\SVG\\回答前\\1-21.svg",
+    "svg": "exam_1-21_q_v20261103.svg"
+  },
+  {
+    "before": "exam_1-31_e",
+    "after": "exam_1-31_e_v20261103",
+    "source": "模試画像\\第1回\\SVG\\回答後\\1-31.svg",
+    "svg": "exam_1-31_e_v20261103.svg"
+  },
+  {
+    "before": "exam_1-31_q",
+    "after": "exam_1-31_q_v20261103",
+    "source": "模試画像\\第1回\\SVG\\回答前\\1-31.svg",
+    "svg": "exam_1-31_q_v20261103.svg"
+  },
+  {
+    "before": "exam_1-32_e",
+    "after": "exam_1-32_e_v20261103",
+    "source": "模試画像\\第1回\\SVG\\回答後\\1-32.svg",
+    "svg": "exam_1-32_e_v20261103.svg"
+  },
+  {
+    "before": "exam_1-32_q",
+    "after": "exam_1-32_q_v20261103",
+    "source": "模試画像\\第1回\\SVG\\回答前\\1-32.svg",
+    "svg": "exam_1-32_q_v20261103.svg"
+  },
+  {
+    "before": "exam_1-33_e",
+    "after": "exam_1-33_e_v20261103",
+    "source": "模試画像\\第1回\\SVG\\回答後\\1-33.svg",
+    "svg": "exam_1-33_e_v20261103.svg"
+  },
+  {
+    "before": "exam_1-33_q",
+    "after": "exam_1-33_q_v20261103",
+    "source": "模試画像\\第1回\\SVG\\回答前\\1-33.svg",
+    "svg": "exam_1-33_q_v20261103.svg"
+  },
+  {
+    "before": "exam_1-34_q",
+    "after": "exam_1-34_q_v20261103",
+    "source": "模試画像\\第1回\\SVG\\回答前\\1-34.svg",
+    "svg": "exam_1-34_q_v20261103.svg"
+  },
+  {
+    "before": "exam_1-36_e",
+    "after": "exam_1-36_e_v20261103",
+    "source": "模試画像\\第1回\\SVG\\回答後\\1-36.svg",
+    "svg": "exam_1-36_e_v20261103.svg"
+  },
+  {
+    "before": "exam_1-36_q",
+    "after": "exam_1-36_q_v20261103",
+    "source": "模試画像\\第1回\\SVG\\回答前\\1-36.svg",
+    "svg": "exam_1-36_q_v20261103.svg"
+  },
+  {
+    "before": "exam_1-37_e",
+    "after": "exam_1-37_e_v20261103",
+    "source": "模試画像\\第1回\\SVG\\回答後\\1-37.svg",
+    "svg": "exam_1-37_e_v20261103.svg"
+  },
+  {
+    "before": "exam_1-37_q",
+    "after": "exam_1-37_q_v20261103",
+    "source": "模試画像\\第1回\\SVG\\回答前\\1-37.svg",
+    "svg": "exam_1-37_q_v20261103.svg"
+  },
+  {
+    "before": "exam_10-22_q",
+    "after": "exam_10-22_q_v20261103",
+    "source": "模試画像\\第10回\\SVG\\回答前\\10-22.svg",
+    "svg": "exam_10-22_q_v20261103.svg"
+  },
+  {
+    "before": "exam_10-32_e",
+    "after": "exam_10-32_e_v20261103",
+    "source": "模試画像\\第10回\\SVG\\回答後\\10-32.svg",
+    "svg": "exam_10-32_e_v20261103.svg"
+  },
+  {
+    "before": "exam_10-32_q",
+    "after": "exam_10-32_q_v20261103",
+    "source": "模試画像\\第10回\\SVG\\回答前\\10-32.svg",
+    "svg": "exam_10-32_q_v20261103.svg"
+  },
+  {
+    "before": "exam_10-33_e",
+    "after": "exam_10-33_e_v20261103",
+    "source": "模試画像\\第10回\\SVG\\回答後\\10-33.svg",
+    "svg": "exam_10-33_e_v20261103.svg"
+  },
+  {
+    "before": "exam_10-33_q",
+    "after": "exam_10-33_q_v20261103",
+    "source": "模試画像\\第10回\\SVG\\回答前\\10-33.svg",
+    "svg": "exam_10-33_q_v20261103.svg"
+  },
+  {
+    "before": "exam_10-36_e",
+    "after": "exam_10-36_e_v20261103",
+    "source": "模試画像\\第10回\\SVG\\回答後\\10-36.svg",
+    "svg": "exam_10-36_e_v20261103.svg"
+  },
+  {
+    "before": "exam_10-36_q",
+    "after": "exam_10-36_q_v20261103",
+    "source": "模試画像\\第10回\\SVG\\回答前\\10-36.svg",
+    "svg": "exam_10-36_q_v20261103.svg"
+  },
+  {
+    "before": "exam_10-38_q",
+    "after": "exam_10-38_q_v20261103",
+    "source": "模試画像\\第10回\\SVG\\回答前\\10-38.svg",
+    "svg": "exam_10-38_q_v20261103.svg"
+  },
+  {
+    "before": "exam_10-40_e",
+    "after": "exam_10-40_e_v20261103",
+    "source": "模試画像\\第10回\\SVG\\回答後\\10-40.svg",
+    "svg": "exam_10-40_e_v20261103.svg"
+  },
+  {
+    "before": "exam_10-40_q",
+    "after": "exam_10-40_q_v20261103",
+    "source": "模試画像\\第10回\\SVG\\回答前\\10-40.svg",
+    "svg": "exam_10-40_q_v20261103.svg"
+  },
+  {
+    "before": "exam_11-22_q",
+    "after": "exam_11-22_q_v20261103",
+    "source": "模試画像\\第11回\\SVG\\回答前\\11-22.svg",
+    "svg": "exam_11-22_q_v20261103.svg"
+  },
+  {
+    "before": "exam_11-31_e",
+    "after": "exam_11-31_e_v20261103",
+    "source": "模試画像\\第11回\\SVG\\回答後\\11-31.svg",
+    "svg": "exam_11-31_e_v20261103.svg"
+  },
+  {
+    "before": "exam_11-31_q",
+    "after": "exam_11-31_q_v20261103",
+    "source": "模試画像\\第11回\\SVG\\回答前\\11-31.svg",
+    "svg": "exam_11-31_q_v20261103.svg"
+  },
+  {
+    "before": "exam_11-32_e",
+    "after": "exam_11-32_e_v20261103",
+    "source": "模試画像\\第11回\\SVG\\回答後\\11-32.svg",
+    "svg": "exam_11-32_e_v20261103.svg"
+  },
+  {
+    "before": "exam_11-32_q",
+    "after": "exam_11-32_q_v20261103",
+    "source": "模試画像\\第11回\\SVG\\回答前\\11-32.svg",
+    "svg": "exam_11-32_q_v20261103.svg"
+  },
+  {
+    "before": "exam_11-33_e",
+    "after": "exam_11-33_e_v20261103",
+    "source": "模試画像\\第11回\\SVG\\回答後\\11-33.svg",
+    "svg": "exam_11-33_e_v20261103.svg"
+  },
+  {
+    "before": "exam_11-33_q",
+    "after": "exam_11-33_q_v20261103",
+    "source": "模試画像\\第11回\\SVG\\回答前\\11-33.svg",
+    "svg": "exam_11-33_q_v20261103.svg"
+  },
+  {
+    "before": "exam_11-34_e",
+    "after": "exam_11-34_e_v20261103",
+    "source": "模試画像\\第11回\\SVG\\回答後\\11-34.svg",
+    "svg": "exam_11-34_e_v20261103.svg"
+  },
+  {
+    "before": "exam_11-34_q",
+    "after": "exam_11-34_q_v20261103",
+    "source": "模試画像\\第11回\\SVG\\回答前\\11-34.svg",
+    "svg": "exam_11-34_q_v20261103.svg"
+  },
+  {
+    "before": "exam_11-38_q",
+    "after": "exam_11-38_q_v20261103",
+    "source": "模試画像\\第11回\\SVG\\回答前\\11-38.svg",
+    "svg": "exam_11-38_q_v20261103.svg"
+  },
+  {
+    "before": "exam_11-40_e",
+    "after": "exam_11-40_e_v20261103",
+    "source": "模試画像\\第11回\\SVG\\回答後\\11-40.svg",
+    "svg": "exam_11-40_e_v20261103.svg"
+  },
+  {
+    "before": "exam_11-40_q",
+    "after": "exam_11-40_q_v20261103",
+    "source": "模試画像\\第11回\\SVG\\回答前\\11-40.svg",
+    "svg": "exam_11-40_q_v20261103.svg"
+  },
+  {
+    "before": "exam_12-22_q",
+    "after": "exam_12-22_q_v20261103",
+    "source": "模試画像\\第12回\\SVG\\回答前\\12-22.svg",
+    "svg": "exam_12-22_q_v20261103.svg"
+  },
+  {
+    "before": "exam_12-32_e",
+    "after": "exam_12-32_e_v20261103",
+    "source": "模試画像\\第12回\\SVG\\回答後\\12-32.svg",
+    "svg": "exam_12-32_e_v20261103.svg"
+  },
+  {
+    "before": "exam_12-32_q",
+    "after": "exam_12-32_q_v20261103",
+    "source": "模試画像\\第12回\\SVG\\回答前\\12-32.svg",
+    "svg": "exam_12-32_q_v20261103.svg"
+  },
+  {
+    "before": "exam_12-33_e",
+    "after": "exam_12-33_e_v20261103",
+    "source": "模試画像\\第12回\\SVG\\回答後\\12-33.svg",
+    "svg": "exam_12-33_e_v20261103.svg"
+  },
+  {
+    "before": "exam_12-33_q",
+    "after": "exam_12-33_q_v20261103",
+    "source": "模試画像\\第12回\\SVG\\回答前\\12-33.svg",
+    "svg": "exam_12-33_q_v20261103.svg"
+  },
+  {
+    "before": "exam_12-35_e",
+    "after": "exam_12-35_e_v20261103",
+    "source": "模試画像\\第12回\\SVG\\回答後\\12-35.svg",
+    "svg": "exam_12-35_e_v20261103.svg"
+  },
+  {
+    "before": "exam_12-35_q",
+    "after": "exam_12-35_q_v20261103",
+    "source": "模試画像\\第12回\\SVG\\回答前\\12-35.svg",
+    "svg": "exam_12-35_q_v20261103.svg"
+  },
+  {
+    "before": "exam_12-38_q",
+    "after": "exam_12-38_q_v20261103",
+    "source": "模試画像\\第12回\\SVG\\回答前\\12-38.svg",
+    "svg": "exam_12-38_q_v20261103.svg"
+  },
+  {
+    "before": "exam_12-39_e",
+    "after": "exam_12-39_e_v20261103",
+    "source": "模試画像\\第12回\\SVG\\回答後\\12-39.svg",
+    "svg": "exam_12-39_e_v20261103.svg"
+  },
+  {
+    "before": "exam_12-39_q",
+    "after": "exam_12-39_q_v20261103",
+    "source": "模試画像\\第12回\\SVG\\回答前\\12-39.svg",
+    "svg": "exam_12-39_q_v20261103.svg"
+  },
+  {
+    "before": "exam_12-40_e",
+    "after": "exam_12-40_e_v20261103",
+    "source": "模試画像\\第12回\\SVG\\回答後\\12-40.svg",
+    "svg": "exam_12-40_e_v20261103.svg"
+  },
+  {
+    "before": "exam_12-40_q",
+    "after": "exam_12-40_q_v20261103",
+    "source": "模試画像\\第12回\\SVG\\回答前\\12-40.svg",
+    "svg": "exam_12-40_q_v20261103.svg"
+  },
+  {
+    "before": "exam_2-11_q",
+    "after": "exam_2-11_q_v20261103",
+    "source": "模試画像\\第2回\\SVG\\回答前\\2-11.svg",
+    "svg": "exam_2-11_q_v20261103.svg"
+  },
+  {
+    "before": "exam_2-21_e",
+    "after": "exam_2-21_e_v20261103",
+    "source": "模試画像\\第2回\\SVG\\回答後\\2-21.svg",
+    "svg": "exam_2-21_e_v20261103.svg"
+  },
+  {
+    "before": "exam_2-21_q",
+    "after": "exam_2-21_q_v20261103",
+    "source": "模試画像\\第2回\\SVG\\回答前\\2-21.svg",
+    "svg": "exam_2-21_q_v20261103.svg"
+  },
+  {
+    "before": "exam_2-23_e",
+    "after": "exam_2-23_e_v20261103",
+    "source": "模試画像\\第2回\\SVG\\回答後\\2-23.svg",
+    "svg": "exam_2-23_e_v20261103.svg"
+  },
+  {
+    "before": "exam_2-23_q",
+    "after": "exam_2-23_q_v20261103",
+    "source": "模試画像\\第2回\\SVG\\回答前\\2-23.svg",
+    "svg": "exam_2-23_q_v20261103.svg"
+  },
+  {
+    "before": "exam_2-24_e",
+    "after": "exam_2-24_e_v20261103",
+    "source": "模試画像\\第2回\\SVG\\回答後\\2-24.svg",
+    "svg": "exam_2-24_e_v20261103.svg"
+  },
+  {
+    "before": "exam_2-24_q",
+    "after": "exam_2-24_q_v20261103",
+    "source": "模試画像\\第2回\\SVG\\回答前\\2-24.svg",
+    "svg": "exam_2-24_q_v20261103.svg"
+  },
+  {
+    "before": "exam_2-25_q",
+    "after": "exam_2-25_q_v20261103",
+    "source": "模試画像\\第2回\\SVG\\回答前\\2-25.svg",
+    "svg": "exam_2-25_q_v20261103.svg"
+  },
+  {
+    "before": "exam_3-21_q",
+    "after": "exam_3-21_q_v20261103",
+    "source": "模試画像\\第3回\\SVG\\回答前\\3-21.svg",
+    "svg": "exam_3-21_q_v20261103.svg"
+  },
+  {
+    "before": "exam_3-28_e",
+    "after": "exam_3-28_e_v20261103",
+    "source": "模試画像\\第3回\\SVG\\回答後\\3-28.svg",
+    "svg": "exam_3-28_e_v20261103.svg"
+  },
+  {
+    "before": "exam_3-28_q",
+    "after": "exam_3-28_q_v20261103",
+    "source": "模試画像\\第3回\\SVG\\回答前\\3-28.svg",
+    "svg": "exam_3-28_q_v20261103.svg"
+  },
+  {
+    "before": "exam_3-31_e",
+    "after": "exam_3-31_e_v20261103",
+    "source": "模試画像\\第3回\\SVG\\回答後\\3-31.svg",
+    "svg": "exam_3-31_e_v20261103.svg"
+  },
+  {
+    "before": "exam_3-31_q",
+    "after": "exam_3-31_q_v20261103",
+    "source": "模試画像\\第3回\\SVG\\回答前\\3-31.svg",
+    "svg": "exam_3-31_q_v20261103.svg"
+  },
+  {
+    "before": "exam_3-32_e",
+    "after": "exam_3-32_e_v20261103",
+    "source": "模試画像\\第3回\\SVG\\回答後\\3-32.svg",
+    "svg": "exam_3-32_e_v20261103.svg"
+  },
+  {
+    "before": "exam_3-32_q",
+    "after": "exam_3-32_q_v20261103",
+    "source": "模試画像\\第3回\\SVG\\回答前\\3-32.svg",
+    "svg": "exam_3-32_q_v20261103.svg"
+  },
+  {
+    "before": "exam_3-33_e",
+    "after": "exam_3-33_e_v20261103",
+    "source": "模試画像\\第3回\\SVG\\回答後\\3-33.svg",
+    "svg": "exam_3-33_e_v20261103.svg"
+  },
+  {
+    "before": "exam_3-33_q",
+    "after": "exam_3-33_q_v20261103",
+    "source": "模試画像\\第3回\\SVG\\回答前\\3-33.svg",
+    "svg": "exam_3-33_q_v20261103.svg"
+  },
+  {
+    "before": "exam_3-34_q",
+    "after": "exam_3-34_q_v20261103",
+    "source": "模試画像\\第3回\\SVG\\回答前\\3-34.svg",
+    "svg": "exam_3-34_q_v20261103.svg"
+  },
+  {
+    "before": "exam_4-12_q",
+    "after": "exam_4-12_q_v20261103",
+    "source": "模試画像\\第4回\\SVG\\回答前\\4-12.svg",
+    "svg": "exam_4-12_q_v20261103.svg"
+  },
+  {
+    "before": "exam_4-20_e",
+    "after": "exam_4-20_e_v20261103",
+    "source": "模試画像\\第4回\\SVG\\回答後\\4-20.svg",
+    "svg": "exam_4-20_e_v20261103.svg"
+  },
+  {
+    "before": "exam_4-21_e",
+    "after": "exam_4-21_e_v20261103",
+    "source": "模試画像\\第4回\\SVG\\回答後\\4-21.svg",
+    "svg": "exam_4-21_e_v20261103.svg"
+  },
+  {
+    "before": "exam_4-21_q",
+    "after": "exam_4-21_q_v20261103",
+    "source": "模試画像\\第4回\\SVG\\回答前\\4-21.svg",
+    "svg": "exam_4-21_q_v20261103.svg"
+  },
+  {
+    "before": "exam_4-22_e",
+    "after": "exam_4-22_e_v20261103",
+    "source": "模試画像\\第4回\\SVG\\回答後\\4-22.svg",
+    "svg": "exam_4-22_e_v20261103.svg"
+  },
+  {
+    "before": "exam_4-22_q",
+    "after": "exam_4-22_q_v20261103",
+    "source": "模試画像\\第4回\\SVG\\回答前\\4-22.svg",
+    "svg": "exam_4-22_q_v20261103.svg"
+  },
+  {
+    "before": "exam_4-23_q",
+    "after": "exam_4-23_q_v20261103",
+    "source": "模試画像\\第4回\\SVG\\回答前\\4-23.svg",
+    "svg": "exam_4-23_q_v20261103.svg"
+  },
+  {
+    "before": "exam_4-25_e",
+    "after": "exam_4-25_e_v20261103",
+    "source": "模試画像\\第4回\\SVG\\回答後\\4-25.svg",
+    "svg": "exam_4-25_e_v20261103.svg"
+  },
+  {
+    "before": "exam_4-25_q",
+    "after": "exam_4-25_q_v20261103",
+    "source": "模試画像\\第4回\\SVG\\回答前\\4-25.svg",
+    "svg": "exam_4-25_q_v20261103.svg"
+  },
+  {
+    "before": "exam_4-26_e",
+    "after": "exam_4-26_e_v20261103",
+    "source": "模試画像\\第4回\\SVG\\回答後\\4-26.svg",
+    "svg": "exam_4-26_e_v20261103.svg"
+  },
+  {
+    "before": "exam_4-26_q",
+    "after": "exam_4-26_q_v20261103",
+    "source": "模試画像\\第4回\\SVG\\回答前\\4-26.svg",
+    "svg": "exam_4-26_q_v20261103.svg"
+  },
+  {
+    "before": "exam_5-11_q",
+    "after": "exam_5-11_q_v20261103",
+    "source": "模試画像\\第5回\\SVG\\回答前\\5-11.svg",
+    "svg": "exam_5-11_q_v20261103.svg"
+  },
+  {
+    "before": "exam_5-22_e",
+    "after": "exam_5-22_e_v20261103",
+    "source": "模試画像\\第5回\\SVG\\回答後\\5-22.svg",
+    "svg": "exam_5-22_e_v20261103.svg"
+  },
+  {
+    "before": "exam_5-22_q",
+    "after": "exam_5-22_q_v20261103",
+    "source": "模試画像\\第5回\\SVG\\回答前\\5-22.svg",
+    "svg": "exam_5-22_q_v20261103.svg"
+  },
+  {
+    "before": "exam_5-23_q",
+    "after": "exam_5-23_q_v20261103",
+    "source": "模試画像\\第5回\\SVG\\回答前\\5-23.svg",
+    "svg": "exam_5-23_q_v20261103.svg"
+  },
+  {
+    "before": "exam_5-25_e",
+    "after": "exam_5-25_e_v20261103",
+    "source": "模試画像\\第5回\\SVG\\回答後\\5-25.svg",
+    "svg": "exam_5-25_e_v20261103.svg"
+  },
+  {
+    "before": "exam_5-25_q",
+    "after": "exam_5-25_q_v20261103",
+    "source": "模試画像\\第5回\\SVG\\回答前\\5-25.svg",
+    "svg": "exam_5-25_q_v20261103.svg"
+  },
+  {
+    "before": "exam_5-27_q",
+    "after": "exam_5-27_q_v20261103",
+    "source": "模試画像\\第5回\\SVG\\回答前\\5-27.svg",
+    "svg": "exam_5-27_q_v20261103.svg"
+  },
+  {
+    "before": "exam_5-29_q",
+    "after": "exam_5-29_q_v20261103",
+    "source": "模試画像\\第5回\\SVG\\回答前\\5-29.svg",
+    "svg": "exam_5-29_q_v20261103.svg"
+  },
+  {
+    "before": "exam_5-9_q",
+    "after": "exam_5-9_q_v20261103",
+    "source": "模試画像\\第5回\\SVG\\回答前\\5-9.svg",
+    "svg": "exam_5-9_q_v20261103.svg"
+  },
+  {
+    "before": "exam_6-11_q",
+    "after": "exam_6-11_q_v20261103",
+    "source": "模試画像\\第6回\\SVG\\回答前\\6-11.svg",
+    "svg": "exam_6-11_q_v20261103.svg"
+  },
+  {
+    "before": "exam_6-21_q",
+    "after": "exam_6-21_q_v20261103",
+    "source": "模試画像\\第6回\\SVG\\回答前\\6-21.svg",
+    "svg": "exam_6-21_q_v20261103.svg"
+  },
+  {
+    "before": "exam_6-22_q",
+    "after": "exam_6-22_q_v20261103",
+    "source": "模試画像\\第6回\\SVG\\回答前\\6-22.svg",
+    "svg": "exam_6-22_q_v20261103.svg"
+  },
+  {
+    "before": "exam_6-23_e",
+    "after": "exam_6-23_e_v20261103",
+    "source": "模試画像\\第6回\\SVG\\回答後\\6-23.svg",
+    "svg": "exam_6-23_e_v20261103.svg"
+  },
+  {
+    "before": "exam_6-23_q",
+    "after": "exam_6-23_q_v20261103",
+    "source": "模試画像\\第6回\\SVG\\回答前\\6-23.svg",
+    "svg": "exam_6-23_q_v20261103.svg"
+  },
+  {
+    "before": "exam_6-24_q",
+    "after": "exam_6-24_q_v20261103",
+    "source": "模試画像\\第6回\\SVG\\回答前\\6-24.svg",
+    "svg": "exam_6-24_q_v20261103.svg"
+  },
+  {
+    "before": "exam_6-29_q",
+    "after": "exam_6-29_q_v20261103",
+    "source": "模試画像\\第6回\\SVG\\回答前\\6-29.svg",
+    "svg": "exam_6-29_q_v20261103.svg"
+  },
+  {
+    "before": "exam_7-11_q",
+    "after": "exam_7-11_q_v20261103",
+    "source": "模試画像\\第7回\\SVG\\回答前\\7-11.svg",
+    "svg": "exam_7-11_q_v20261103.svg"
+  },
+  {
+    "before": "exam_7-21_q",
+    "after": "exam_7-21_q_v20261103",
+    "source": "模試画像\\第7回\\SVG\\回答前\\7-21.svg",
+    "svg": "exam_7-21_q_v20261103.svg"
+  },
+  {
+    "before": "exam_7-22_q",
+    "after": "exam_7-22_q_v20261103",
+    "source": "模試画像\\第7回\\SVG\\回答前\\7-22.svg",
+    "svg": "exam_7-22_q_v20261103.svg"
+  },
+  {
+    "before": "exam_7-23_q",
+    "after": "exam_7-23_q_v20261103",
+    "source": "模試画像\\第7回\\SVG\\回答前\\7-23.svg",
+    "svg": "exam_7-23_q_v20261103.svg"
+  },
+  {
+    "before": "exam_7-24_q",
+    "after": "exam_7-24_q_v20261103",
+    "source": "模試画像\\第7回\\SVG\\回答前\\7-24.svg",
+    "svg": "exam_7-24_q_v20261103.svg"
+  },
+  {
+    "before": "exam_7-28_q",
+    "after": "exam_7-28_q_v20261103",
+    "source": "模試画像\\第7回\\SVG\\回答前\\7-28.svg",
+    "svg": "exam_7-28_q_v20261103.svg"
+  },
+  {
+    "before": "exam_7-8_q",
+    "after": "exam_7-8_q_v20261103",
+    "source": "模試画像\\第7回\\SVG\\回答前\\7-8.svg",
+    "svg": "exam_7-8_q_v20261103.svg"
+  },
+  {
+    "before": "exam_8-11_q",
+    "after": "exam_8-11_q_v20261103",
+    "source": "模試画像\\第8回\\SVG\\回答前\\8-11.svg",
+    "svg": "exam_8-11_q_v20261103.svg"
+  },
+  {
+    "before": "exam_8-1_q",
+    "after": "exam_8-1_q_v20261103",
+    "source": "模試画像\\第8回\\SVG\\回答前\\8-1.svg",
+    "svg": "exam_8-1_q_v20261103.svg"
+  },
+  {
+    "before": "exam_8-21_q",
+    "after": "exam_8-21_q_v20261103",
+    "source": "模試画像\\第8回\\SVG\\回答前\\8-21.svg",
+    "svg": "exam_8-21_q_v20261103.svg"
+  },
+  {
+    "before": "exam_8-22_q",
+    "after": "exam_8-22_q_v20261103",
+    "source": "模試画像\\第8回\\SVG\\回答前\\8-22.svg",
+    "svg": "exam_8-22_q_v20261103.svg"
+  },
+  {
+    "before": "exam_8-23_q",
+    "after": "exam_8-23_q_v20261103",
+    "source": "模試画像\\第8回\\SVG\\回答前\\8-23.svg",
+    "svg": "exam_8-23_q_v20261103.svg"
+  },
+  {
+    "before": "exam_8-28_q",
+    "after": "exam_8-28_q_v20261103",
+    "source": "模試画像\\第8回\\SVG\\回答前\\8-28.svg",
+    "svg": "exam_8-28_q_v20261103.svg"
+  },
+  {
+    "before": "exam_8-30_q",
+    "after": "exam_8-30_q_v20261103",
+    "source": "模試画像\\第8回\\SVG\\回答前\\8-30.svg",
+    "svg": "exam_8-30_q_v20261103.svg"
+  },
+  {
+    "before": "exam_9-22_q",
+    "after": "exam_9-22_q_v20261103",
+    "source": "模試画像\\第9回\\SVG\\回答前\\9-22.svg",
+    "svg": "exam_9-22_q_v20261103.svg"
+  },
+  {
+    "before": "exam_9-32_e",
+    "after": "exam_9-32_e_v20261103",
+    "source": "模試画像\\第9回\\SVG\\回答後\\9-32.svg",
+    "svg": "exam_9-32_e_v20261103.svg"
+  },
+  {
+    "before": "exam_9-32_q",
+    "after": "exam_9-32_q_v20261103",
+    "source": "模試画像\\第9回\\SVG\\回答前\\9-32.svg",
+    "svg": "exam_9-32_q_v20261103.svg"
+  },
+  {
+    "before": "exam_9-33_e",
+    "after": "exam_9-33_e_v20261103",
+    "source": "模試画像\\第9回\\SVG\\回答後\\9-33.svg",
+    "svg": "exam_9-33_e_v20261103.svg"
+  },
+  {
+    "before": "exam_9-33_q",
+    "after": "exam_9-33_q_v20261103",
+    "source": "模試画像\\第9回\\SVG\\回答前\\9-33.svg",
+    "svg": "exam_9-33_q_v20261103.svg"
+  },
+  {
+    "before": "exam_9-35_e",
+    "after": "exam_9-35_e_v20261103",
+    "source": "模試画像\\第9回\\SVG\\回答後\\9-35.svg",
+    "svg": "exam_9-35_e_v20261103.svg"
+  },
+  {
+    "before": "exam_9-35_q",
+    "after": "exam_9-35_q_v20261103",
+    "source": "模試画像\\第9回\\SVG\\回答前\\9-35.svg",
+    "svg": "exam_9-35_q_v20261103.svg"
+  },
+  {
+    "before": "exam_9-38_e",
+    "after": "exam_9-38_e_v20261103",
+    "source": "模試画像\\第9回\\SVG\\回答後\\9-38.svg",
+    "svg": "exam_9-38_e_v20261103.svg"
+  },
+  {
+    "before": "exam_9-38_q",
+    "after": "exam_9-38_q_v20261103",
+    "source": "模試画像\\第9回\\SVG\\回答前\\9-38.svg",
+    "svg": "exam_9-38_q_v20261103.svg"
+  },
+  {
+    "before": "exam_9-39_e",
+    "after": "exam_9-39_e_v20261103",
+    "source": "模試画像\\第9回\\SVG\\回答後\\9-39.svg",
+    "svg": "exam_9-39_e_v20261103.svg"
+  },
+  {
+    "before": "exam_9-39_q",
+    "after": "exam_9-39_q_v20261103",
+    "source": "模試画像\\第9回\\SVG\\回答前\\9-39.svg",
+    "svg": "exam_9-39_q_v20261103.svg"
+  },
+  {
+    "before": "exam_9-40_e",
+    "after": "exam_9-40_e_v20261103",
+    "source": "模試画像\\第9回\\SVG\\回答後\\9-40.svg",
+    "svg": "exam_9-40_e_v20261103.svg"
+  },
+  {
+    "before": "exam_9-40_q",
+    "after": "exam_9-40_q_v20261103",
+    "source": "模試画像\\第9回\\SVG\\回答前\\9-40.svg",
+    "svg": "exam_9-40_q_v20261103.svg"
+  }
+]

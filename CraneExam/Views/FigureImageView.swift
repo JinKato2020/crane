@@ -31,8 +31,8 @@ struct FigureImageView: View {
 
                     // 拡大ヒント
                     HStack(spacing: 3) {
-                        Image(systemName: "arrow.up.left.and.arrow.down.right").font(.system(size: 9, weight: .bold))
-                        Text("タップで拡大").font(.system(size: 9, weight: .bold))
+                        Image(systemName: "arrow.up.left.and.arrow.down.right").font(.caption.weight(.semibold))
+                        Text("タップで拡大").font(.caption.weight(.semibold))
                     }
                     .padding(.horizontal, 7).padding(.vertical, 4)
                     .background(Capsule().fill(Color.black.opacity(0.6)))
@@ -41,6 +41,11 @@ struct FigureImageView: View {
                 }
                 .contentShape(Rectangle())
                 .onTapGesture { zooming = true }
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(caption ?? "教材の図")
+                .accessibilityAddTraits(.isButton)
+                .accessibilityHint("図を全画面で拡大します")
+                .accessibilityAction { zooming = true }
 
                 if showLegend, !legend.isEmpty {
                     VStack(alignment: .leading, spacing: 2) {

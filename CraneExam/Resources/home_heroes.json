@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "defaultID": "existing",
+  "heroes": [
+    {
+      "id": "existing",
+      "title": "いつもの景色",
+      "subtitle": "これまでのヒーロー",
+      "imageName": "home_hero_existing_4ddb4e993516"
+    },
+    {
+      "id": "anime",
+      "title": "未来の自分",
+      "subtitle": "アニメ調",
+      "imageName": "home_hero_anime_823628fb242f"
+    },
+    {
+      "id": "cinematic",
+      "title": "仕事の余韻",
+      "subtitle": "シネマ調",
+      "imageName": "home_hero_cinematic_8bc3185acc1a"
+    },
+    {
+      "id": "01-cabin-twilight",
+      "title": "窓の向こうの明日",
+      "subtitle": "実写調",
+      "imageName": "home_hero_01_cabin_twilight_d0d3f13ccbad"
+    },
+    {
+      "id": "02-rain-harbor",
+      "title": "雨上がりの灯",
+      "subtitle": "実写調",
+      "imageName": "home_hero_02_rain_harbor_a00c63a0dea5"
+    },
+    {
+      "id": "03-first-light",
+      "title": "始まりの光",
+      "subtitle": "実写調",
+      "imageName": "home_hero_03_first_light_54f1032d8627"
+    },
+    {
+      "id": "04-skyward",
+      "title": "空へ伸びる",
+      "subtitle": "アニメ調",
+      "imageName": "home_hero_04_skyward_d84c20ea0ca5"
+    },
+    {
+      "id": "05-homeward",
+      "title": "帰り道の余韻",
+      "subtitle": "アニメ調",
+      "imageName": "home_hero_05_homeward_5348428d1034"
+    }
+  ]
+}

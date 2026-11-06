@@ -1,0 +1,31 @@
+[
+  {
+    "id": "existing",
+    "file": "hero-existing.jpg",
+    "name": "いつもの景色",
+    "type": "既存の画像",
+    "source": "CraneExam/Assets.xcassets/Hero.imageset/hero.jpg",
+    "generator": "existing-app-asset-reused-without-modification",
+    "purpose": "proposal-only"
+  },
+  {
+    "id": "anime",
+    "file": "hero-anime.png",
+    "name": "未来の自分",
+    "type": "アニメ調",
+    "prompt": "Use case: UI hero illustration for a Japanese crane-operator exam learning app. Create ONLY background artwork, no phone, screen UI, text, lettering, logos, watermarks, badges or frames. Panoramic horizontal composition suitable for crop to roughly2:1. Clear crane identity, aspirational but calm professional mood. Main subject in upper-right and right two-thirds; lower-left quarter has uncluttered dark blue/teal negative space for white Japanese UI text that will be added separately. Clean readable silhouette at mobile size. Crane load not over any person, no unsafe activity. Palette deep navy, steel blue, restrained amber morning light; avoid dramatic storm darkness and oversaturated orange. Leave cropping safety on every edge.\nStyle: original mature Japanese anime background painting, clean elegant linework, restrained cel shading and beautifully soft morning light, professional editorial illustration, not cute chibi, not a game poster or photorealism. Scene: on a clean harbor marked pedestrian observation walkway, an adult Japanese crane operator seen from behind/three-quarter back at right foreground, wearing white hardhat with fastened chin strap and tidy navy workwear, relaxed confident posture looking toward a stationary portal jib crane across the safe separated work area. Person about25%of image width, upperbody enough visible, no face closeup, no weapon or clipboard, no lifting controls, no person under suspended load. Crane lattice jib clearly recognizable behind, calm blue sea and warm sunrise sky. Subtle golden rimlight along hardhat/shoulders. Sense of one's future professional self, human and quietly encouraging. Keep bottom-left darkteal seawall or soft shadow, enough empty area for two lines of app text later.",
+    "source": "C:\\Users\\jwpsa\\.codex\\generated_images\\01a14a5b-6e30-70c2-86f9-e75dbf7b4cda\\exec-480ab135-3d84-448c-8229-3a7e4ab3cac3.png",
+    "generator": "built-in image_gen",
+    "purpose": "proposal-only"
+  },
+  {
+    "id": "cinematic",
+    "file": "hero-cinematic.png",
+    "name": "仕事の余韻",
+    "type": "シネマ調",
+    "prompt": "Use case: photorealistic-natural. Asset type: a premium panoramic hero background for a Japanese crane-operator exam learning app. Generate one new cinematic photograph-like artwork, wide landscape approximately 2:1 (ideally 2048x1024), no text, no UI, no typography, no borders, no logos or watermarks. Creative direction: an emotionally resonant, quiet end-of-day scene inside a tall Japanese industrial workshop; the feeling of aspiring to master a skilled profession, dignity of working life, gentle nostalgia and hope. Camera: floor-level viewpoint from a protected side aisle, looking diagonally UPWARD through the spacious hall with a 24mm wide-angle lens. A recognisable double-girder overhead travelling bridge crane spans the hall, shown in three-quarter perspective in the upper/right two-thirds; its trolley and hanging compact hook block are clear toward the middle-right. This must be a genuinely different composition from a distant harbor crane at sunset or a rear-view worker portrait. Physically credible industrial structure: the bridge rests on two parallel elevated runway rails along opposite walls, supported by steel columns; two main bridge beams, one trolley, straight vertical wire rope falls terminating in one unloaded hook block with a single hook and visible latch. No dangling disconnected ropes, duplicated hooks, floating machinery or impossible beams. No people or vehicles, no load suspended. Warm late-afternoon sunlight enters through tall distant workshop windows at the right, with subtle shafts of light in clean air, soft gold reflections on gently worn metal, restrained warm rim light on the crane against desaturated steel blue and deep blue-green shadows. Architectural depth, fine photographic texture and subtle film grain, elegant restrained film color grading, realistic materials, emotionally evocative but not gloomy, no apocalyptic smoke, no heavy rust, no dramatic sparks, no neon or oversaturated orange/teal. Keep the lower-left third quieter and darker, uncluttered soft factory-floor/shadow area for large white Japanese overlay copy that will be added in the app, not painted into the image. Bridge and hook should remain identifiable at a small 358x180 mobile hero crop. Allow generous edge margins, avoid crucial details at extreme edges; very clean carefully composed photographic frame with generous atmospheric space. This is atmospheric promotional photography, not a labeled technical diagram.",
+    "source": "C:/Users/jwpsa/.codex/generated_images/01a14a5b-6e30-70c2-86f9-e75dbf7b4cda/exec-8efcbe40-a1f1-4892-ae84-104f6b967178.png",
+    "generator": "built-in image_gen",
+    "purpose": "proposal-only"
+  }
+]

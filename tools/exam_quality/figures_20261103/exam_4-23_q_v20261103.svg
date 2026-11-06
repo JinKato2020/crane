@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="786" viewBox="-31.5 -31.5 963 473" role="img" aria-labelledby="title">
+<title id="title">第4回・問23 問題図</title>
+<rect width="900" height="410" fill="white" />
+<defs><marker id="navyArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1F3A65" /></marker><marker id="redArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#C82D2D" /></marker></defs>
+<text x="240.000" y="30.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">変更前</text>
+<line x1="240.000" y1="58.000" x2="140.000" y2="231.205" stroke="#1F3A65" stroke-width="3.15" />
+<line x1="240.000" y1="58.000" x2="340.000" y2="231.205" stroke="#1F3A65" stroke-width="3.15" />
+<line x1="240.000" y1="67.000" x2="240.000" y2="231.205" stroke="#888888" stroke-width="3.15" stroke-dasharray="5 4" />
+<circle cx="240" cy="58" r="3" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<path d="M 216.000,99.569 A 48,48 0 0 0 264.000,99.569" fill="none" stroke="#888888" stroke-width="3.15" />
+<text x="240.000" y="134.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600" paint-order="stroke" stroke="white" stroke-width="4.5" stroke-linejoin="round">60°</text>
+<rect x="132.000" y="231.205" width="216.000" height="44.000" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<text x="240.000" y="260.205" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">同じ荷</text>
+<text x="660.000" y="30.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">変更後</text>
+<line x1="660.000" y1="58.000" x2="518.579" y2="199.421" stroke="#1F3A65" stroke-width="3.15" />
+<line x1="660.000" y1="58.000" x2="801.421" y2="199.421" stroke="#1F3A65" stroke-width="3.15" />
+<line x1="660.000" y1="67.000" x2="660.000" y2="199.421" stroke="#888888" stroke-width="3.15" stroke-dasharray="5 4" />
+<circle cx="660" cy="58" r="3" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<path d="M 626.059,91.941 A 48,48 0 0 0 693.941,91.941" fill="none" stroke="#888888" stroke-width="3.15" />
+<text x="660.000" y="134.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600" paint-order="stroke" stroke="white" stroke-width="4.5" stroke-linejoin="round">90°</text>
+<rect x="510.579" y="199.421" width="298.843" height="44.000" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<text x="660.000" y="228.421" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">同じ荷</text>
+</svg>

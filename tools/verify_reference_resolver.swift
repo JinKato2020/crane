@@ -45,6 +45,45 @@ struct ReferenceVerification {
         let emptyRefs = String(legacy.dropLast()) + #", "refs":[]}"#
         let empty = try decoder.decode(Question.self, from: Data(emptyRefs.utf8))
         precondition(empty.textbookReferences.count == 1)
+        // Glossary data: optional additions, stable IDs, real destinations and search.
+        let oldTerm = try decoder.decode(TBTerm.self, from: Data(#"{"term":"旧用語","def":"以前の説明","img":"legacy"}"#.utf8))
+        precondition(oldTerm.id == "旧用語" && oldTerm.introduction == "以前の説明")
+        precondition(oldTerm.illustrations.first?.file == "legacy.png")
+        let plainOldTerm = try decoder.decode(TBTerm.self, from: Data(#"{"term":"図なし","def":"説明"}"#.utf8))
+        precondition(plainOldTerm.illustrations.isEmpty && !plainOldTerm.hasDetails)
+        var glossaryRefs = 0
+        for chapter in textbook.chapters {
+            var figureNames = Set<String>()
+            for term in chapter.glossary ?? [] {
+                precondition(term.id == term.term && !term.def.isEmpty)
+                precondition(term.matches(term.term) && term.matches(" 　"))
+                if let reading = term.reading { precondition(term.matches(reading)) }
+                for alias in term.aliases ?? [] { precondition(term.matches(alias)) }
+                if let comparison = term.comparison {
+                    precondition(comparison.headers.count == 2)
+                    precondition(comparison.rows.allSatisfy { $0.count == comparison.headers.count })
+                }
+                for figure in term.illustrations {
+                    precondition(figureNames.insert(figure.file).inserted, "同章で図が重複: \(figure.file)")
+                    precondition(FileManager.default.fileExists(atPath: root.appendingPathComponent("images/\(figure.file)").path))
+                }
+                for reference in term.references ?? [] {
+                    guard let target = sections[reference.section],
+                          let index = TextbookReferenceResolver.index(in: target, for: reference) else {
+                        fatalError("用語の参照失敗: \(term.term)")
+                    }
+                    precondition(target.blocks[index].id == reference.blockID)
+                    glossaryRefs += 1
+                }
+            }
+        }
+        let terms = textbook.chapters.flatMap { $0.glossary ?? [] }
+        let rotor = terms.first { $0.term.contains("かご形／巻線形") }!
+        precondition(rotor.matches("かご型") && rotor.matches("カゴガタ"))
+        precondition(rotor.matches("かごがた") && rotor.matches("ｶｺﾞｶﾞﾀ"))
+        precondition(rotor.matches("巻線形 すべり") && !rotor.matches("巻線形 存在しない語句"))
+        precondition(TBTerm.searchKey("ＶＶＶＦ") == TBTerm.searchKey("vvvf"))
+        print("PASS: glossary references \(glossaryRefs), legacy decoding, unique figures, kana/alias/AND search")
         print("PASS: 480 questions / \(count) references; stable IDs, table/list fallback and legacy data")
     }
 }

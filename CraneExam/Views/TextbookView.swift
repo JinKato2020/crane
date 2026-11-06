@@ -215,6 +215,16 @@ struct SectionPagerView: View {
         .onChange(of: secs.count) { count in
             index = min(index, max(0, count - 1))
         }
+        .onAppear { rememberSection() }
+        .onChange(of: index) { _ in rememberSection() }
+        .trackStudyCompletion(kind: .textbook)
+    }
+
+    private func rememberSection() {
+        guard secs.indices.contains(index) else { return }
+        let section = secs[index]
+        store.rememberStudy(StudyPlace(kind: .textbook, title: section.title,
+                                       chapterID: chapter.id, sectionID: section.id))
     }
 }
 
@@ -224,27 +234,21 @@ struct SectionContentView: View {
     let position: Int
     let total: Int
 
-    // 暗記クイズ（赤シート）：この節だけに効く状態
-    @State private var quizOn = false
-    @State private var quizSeed = 0
-    @State private var quizCat = "all"
-    @State private var answersVisible = false
+    @StateObject private var quiz: StudyQuizSession
     @State private var contentsExpanded = false
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+
+    init(section: TBSection, position: Int, total: Int) {
+        self.section = section
+        self.position = position
+        self.total = total
+        _quiz = StateObject(wrappedValue: StudyQuizSession(section: section))
+    }
 
     private var sectionHeadings: [(index: Int, title: String)] {
         section.blocks.enumerated().compactMap { index, block in
             guard block.type == "sub", let title = block.text else { return nil }
             return (index, title)
-        }
-    }
-
-    /// この節に {{ }} の印が1つでもあるか（あるときだけクイズのトグルを出す）
-    private var hasMasks: Bool {
-        section.blocks.contains { b in
-            if !(b.quizTerms ?? []).isEmpty { return true }
-            if MaskParser.hasMask(b.text) { return true }
-            if (b.rows ?? []).joined().contains(where: { MaskParser.hasMask($0) }) { return true }
-            return (b.items ?? []).contains { MaskParser.hasMask($0) }
         }
     }
 
@@ -262,7 +266,7 @@ struct SectionContentView: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.top, 10).padding(.bottom, 2)
 
-                if hasMasks { quizBar }
+                if !quiz.candidates.isEmpty { quizBar }
 
                 if (section.id.hasPrefix("1-") || section.id.hasPrefix("2-") || section.id.hasPrefix("3-") || section.id.hasPrefix("4-")), sectionHeadings.count > 4 {
                     DisclosureGroup(isExpanded: $contentsExpanded) {
@@ -299,7 +303,7 @@ struct SectionContentView: View {
                 }
 
                 ForEach(Array(section.blocks.enumerated()), id: \.offset) { i, b in
-                    BlockView(block: b)
+                    BlockView(block: b, quizBlockID: StudyQuiz.blockID(section: section.id, index: i))
                         .id(i)
                 }
 
@@ -313,72 +317,122 @@ struct SectionContentView: View {
             .padding(.horizontal, 20).padding(.vertical, 22)
         }
         .background(Theme.bg.ignoresSafeArea())
-        .environment(\.quizMode, quizOn)
-        .environment(\.quizSeed, quizSeed)
-        .environment(\.quizCategory, quizCat)
-        .environment(\.quizAnswersVisible, answersVisible)
-        .onChange(of: quizOn) { _ in answersVisible = false; quizSeed += 1 }
-        .onChange(of: quizCat) { _ in answersVisible = false; quizSeed += 1 }
+        .environment(\.quizMode, quiz.isOn)
+        .environment(\.studyQuizSession, quiz)
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            if quiz.isOn && !quiz.selected.isEmpty { quizToolbar }
+        }
         }
     }
 
-    // 暗記クイズの操作バー
-    private var quizBar: some View {
-        VStack(alignment: .leading, spacing: 13) {
-            HStack(spacing: 11) {
-                Image(systemName: "rectangle.on.rectangle.angled")
-                    .font(.system(size: 15, weight: .bold)).foregroundColor(Theme.accent)
-                    .frame(width: 34, height: 34)
-                    .background(Theme.accent.opacity(0.14)).clipShape(RoundedRectangle(cornerRadius: 10))
-                VStack(alignment: .leading, spacing: 1) {
-                    Text("暗記クイズ").font(.system(size: 14.5, weight: .heavy)).foregroundColor(Theme.fg)
-                    Text("重要語句をかくして思い出す").font(.system(size: 11)).foregroundColor(Theme.faint)
-                }
-                Spacer()
-                Toggle("暗記クイズ", isOn: $quizOn).labelsHidden().tint(Theme.accent)
-            }
-            if quizOn {
-                Picker("", selection: $quizCat) {
-                    Text("すべて").tag("all")
-                    Text("用語").tag("key")
-                    Text("数値").tag("num")
-                }
-                .pickerStyle(.segmented)
+    private func categoryTitle(_ category: String) -> String {
+        switch category {
+        case "key": return "用語・式"
+        case "num": return "数値"
+        default: return "すべて"
+        }
+    }
 
-                HStack(spacing: 10) {
-                    Button { answersVisible.toggle() } label: {
-                        HStack(spacing: 7) {
-                            Image(systemName: answersVisible ? "eye.slash.fill" : "eye.fill").font(.system(size: 13, weight: .bold))
-                            Text(answersVisible ? "答えを隠す" : "答えを表示").font(.system(size: 14.5, weight: .heavy))
-                        }
-                        .foregroundColor(Color(hex: 0x241703))
-                        .frame(maxWidth: .infinity, minHeight: 46)
-                        .background(Theme.gold).clipShape(RoundedRectangle(cornerRadius: 12))
-                    }
-                    .buttonStyle(.plain)
-                    Button { answersVisible = false; quizSeed += 1 } label: {
-                        Image(systemName: "arrow.counterclockwise").font(.system(size: 15, weight: .bold))
-                            .foregroundColor(Theme.accent2)
-                            .frame(width: 46, height: 46)
-                            .background(Theme.raise).clipShape(RoundedRectangle(cornerRadius: 12))
-                            .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.line, lineWidth: 1))
-                    }
-                    .buttonStyle(.plain)
+    private var quizBar: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Toggle(isOn: $quiz.isOn) {
+                VStack(alignment: .leading, spacing: 5) {
+                    Label("暗記クイズ", systemImage: "brain.head.profile")
+                        .font(.headline).foregroundColor(Theme.fg)
+                    Text("本文の空欄を、頭の中で答える")
+                        .font(.subheadline).foregroundColor(Theme.muted)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
-                Text("かくれた部分をタップで1つずつ、または「答えを表示」でまとめて確認できます。")
-                    .font(.system(size: 11.5)).foregroundColor(Theme.faint).lineSpacing(3)
+            }
+            .tint(Theme.studyKey)
+            .frame(minHeight: 44)
+            .accessibilityHint("この節の重要な語句や数値を空欄にします")
+            if quiz.isOn {
+                if quiz.categories.count > 2 {
+                    HStack {
+                        Text("出題する内容").font(.subheadline).foregroundColor(Theme.muted)
+                        Spacer(minLength: 4)
+                        Picker("出題する内容", selection: $quiz.category) {
+                            ForEach(quiz.categories, id: \.self) { category in
+                                Text(categoryTitle(category)).tag(category)
+                            }
+                        }
+                        .pickerStyle(.menu).tint(Theme.studyKey)
+                        .frame(minHeight: 44)
+                    }
+                }
+                Text("空欄をタップすると答えを確認できます。もう一度タップで隠せます。")
+                    .font(.subheadline).foregroundColor(Theme.fg).lineSpacing(4)
+                    .fixedSize(horizontal: false, vertical: true)
+                Text("1回に最大10か所。見出しや図はヒントに使えます。")
+                    .font(.footnote).foregroundColor(Theme.muted)
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }
-        .padding(15)
+        .padding(18)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Theme.card2).clipShape(RoundedRectangle(cornerRadius: 14))
-        .overlay(RoundedRectangle(cornerRadius: 14).stroke(Theme.line, lineWidth: 1))
+        .background(Theme.studyKey.opacity(0.06))
+        .clipShape(RoundedRectangle(cornerRadius: 14))
+        .overlay(RoundedRectangle(cornerRadius: 14).stroke(Theme.studyKey.opacity(0.22), lineWidth: 1))
+    }
+
+    private var quizToolbar: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            HStack(alignment: .center) {
+                Label("答えを確認 \(quiz.revealed.count) / \(quiz.selected.count)",
+                      systemImage: quiz.allRevealed ? "checkmark.circle.fill" : "square.dashed")
+                    .font(.subheadline.weight(.semibold)).foregroundColor(Theme.studyKey)
+                    .monospacedDigit()
+                    .accessibilityLabel("\(quiz.selected.count)か所のうち\(quiz.revealed.count)か所の答えを表示中")
+                Spacer(minLength: 8)
+                Button("終了") { quiz.isOn = false }
+                    .font(.subheadline).foregroundColor(Theme.muted)
+                    .frame(minWidth: 44, minHeight: 44)
+                    .accessibilityLabel("暗記クイズを終了して本文を読む")
+            }
+            if dynamicTypeSize.isAccessibilitySize {
+                VStack(spacing: 8) { answerButton; if quiz.canChange { nextQuizButton } }
+            } else {
+                HStack(spacing: 10) { answerButton; if quiz.canChange { nextQuizButton } }
+            }
+        }
+        .padding(.horizontal, 16).padding(.top, 4).padding(.bottom, 10)
+        .background(Theme.card)
+        .overlay(alignment: .top) { Rectangle().fill(Theme.line).frame(height: 1) }
+    }
+
+    private var answerButton: some View {
+        Button { quiz.toggleAll() } label: {
+            Label(quiz.answerLabel, systemImage: quiz.allRevealed ? "eye.slash" : "eye")
+                .font(.body.weight(.semibold))
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, minHeight: 48)
+                .padding(.horizontal, 10)
+                .foregroundColor(Theme.bg)
+                .background(Theme.studyKey)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+        }
+        .buttonStyle(.plain)
+    }
+
+    private var nextQuizButton: some View {
+        Button { quiz.nextRound() } label: {
+            Text("別の出題").font(.subheadline.weight(.semibold))
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(minHeight: 48).padding(.horizontal, 12)
+                .foregroundColor(Theme.studyKey)
+                .background(Theme.studyKey.opacity(0.08))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+        }
+        .buttonStyle(.plain)
+        .accessibilityHint("この節の別の重要語句に切り替えて、答えを隠します")
     }
 }
 
 /// 1ブロックを描画
 struct BlockView: View {
     let block: TBBlock
+    var quizBlockID: String? = nil
     @State private var answerExpanded = false
     @State private var textbookReference: TextRef?
 
@@ -397,10 +451,10 @@ struct BlockView: View {
 
         case "ul":
             VStack(alignment: .leading, spacing: 13) {
-                ForEach(Array((block.items ?? []).enumerated()), id: \.offset) { _, s in
+                ForEach(Array((block.items ?? []).enumerated()), id: \.offset) { i, s in
                     HStack(alignment: .top, spacing: 12) {
                         Circle().fill(Theme.accent).frame(width: 5, height: 5).padding(.top, 9)
-                        MaskableText(raw: s, terms: block.quizTerms ?? [], size: 15, color: Theme.fg, lineSpacingV: 7)
+                        MaskableText(raw: s, terms: block.quizTerms ?? [], quizField: StudyQuiz.fieldID(quizBlockID, "items:\(i)"), size: 15, color: Theme.fg, lineSpacingV: 7)
                     }
                 }
             }
@@ -435,7 +489,7 @@ struct BlockView: View {
                 }
                 if let leg = block.legend, !leg.isEmpty {
                     VStack(alignment: .leading, spacing: 5) {
-                        ForEach(Array(leg.enumerated()), id: \.offset) { _, s in
+                        ForEach(Array(leg.enumerated()), id: \.offset) { i, s in
                             Text("・" + s).font(.system(size: 12)).foregroundColor(Theme.muted)
                                 .lineSpacing(4)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -460,7 +514,7 @@ struct BlockView: View {
                 }
                 if let leg = block.legend, !leg.isEmpty {
                     VStack(alignment: .leading, spacing: 5) {
-                        ForEach(Array(leg.enumerated()), id: \.offset) { _, s in
+                        ForEach(Array(leg.enumerated()), id: \.offset) { i, s in
                             Text("・" + s).font(.system(size: 12)).foregroundColor(Theme.muted)
                                 .lineSpacing(4)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -475,7 +529,7 @@ struct BlockView: View {
         case "table":
             TableBlock(headers: block.headers ?? [], rows: block.rows ?? [],
                        terms: block.quizTerms ?? [], numberStyle: block.style == "numbers",
-                       matrixStyle: block.style == "matrix")
+                       matrixStyle: block.style == "matrix", quizBlockID: quizBlockID)
 
         case "point":
             VStack(alignment: .leading, spacing: 12) {
@@ -483,10 +537,10 @@ struct BlockView: View {
                     Image(systemName: "lightbulb.fill").font(.system(size: 13)).foregroundColor(Theme.accent)
                     Text("ここを覚える").font(.system(size: 16, weight: .heavy)).foregroundColor(Theme.accent2)
                 }
-                ForEach(Array((block.items ?? []).enumerated()), id: \.offset) { _, s in
+                ForEach(Array((block.items ?? []).enumerated()), id: \.offset) { i, s in
                     HStack(alignment: .top, spacing: 11) {
                         Text("▶").font(.system(size: 9)).foregroundColor(Theme.accent).padding(.top, 6)
-                        MaskableText(raw: s, terms: block.quizTerms ?? [], size: 16, weight: .medium, color: Theme.fg, lineSpacingV: 7)
+                        MaskableText(raw: s, terms: block.quizTerms ?? [], quizField: StudyQuiz.fieldID(quizBlockID, "items:\(i)"), size: 16, weight: .medium, color: Theme.fg, lineSpacingV: 7)
                     }
                 }
             }
@@ -535,11 +589,11 @@ struct BlockView: View {
                     .padding(.top, 12)
             } label: {
                 Label(answerExpanded ? "答えと理由を閉じる" : "答えと理由を見る", systemImage: "checkmark.circle")
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(Theme.accent2)
-                    .frame(minHeight: 32)
+                    .font(.body.weight(.semibold))
+                    .foregroundColor(Theme.studyKey)
+                    .frame(minHeight: 44)
             }
-            .tint(Theme.accent2)
+            .tint(Theme.studyKey)
             .padding(16)
             .background(Theme.studyKey.opacity(0.06))
             .clipShape(RoundedRectangle(cornerRadius: 12))
@@ -553,6 +607,7 @@ struct BlockView: View {
                       systemImage: style == "lead" ? "bookmark.fill" : (style == "tip" ? "lightbulb" : "exclamationmark.circle"))
                     .font(.system(size: 13, weight: .bold)).foregroundColor(studyColor)
                 MaskableText(raw: block.text ?? "", terms: block.quizTerms ?? [],
+                             quizField: block.style == "lead" ? nil : StudyQuiz.fieldID(quizBlockID, "text"),
                              size: style == "lead" ? 18 : 16,
                              weight: style == "lead" ? .semibold : .regular,
                              color: Theme.fg, lineSpacingV: 7)
@@ -561,7 +616,7 @@ struct BlockView: View {
             .background(studyColor.opacity(0.07))
             .clipShape(RoundedRectangle(cornerRadius: 14))
         } else {
-            MaskableText(raw: block.text ?? "", terms: block.quizTerms ?? [], size: 16, color: Theme.fg, lineSpacingV: 8)
+            MaskableText(raw: block.text ?? "", terms: block.quizTerms ?? [], quizField: StudyQuiz.fieldID(quizBlockID, "text"), size: 16, color: Theme.fg, lineSpacingV: 8)
                 .padding(.vertical, 2)
         }
     }
@@ -569,20 +624,22 @@ struct BlockView: View {
 
 /// 通常は2列の表／行カード。係数の比較表はmatrixで列をそろえる。
 struct TableBlock: View {
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     let headers: [String]
     let rows: [[String]]
     var terms: [String] = []
     var numberStyle = false
     var matrixStyle = false
+    var quizBlockID: String? = nil
 
     var body: some View {
         if numberStyle {
             VStack(alignment: .leading, spacing: 12) {
-                ForEach(Array(rows.enumerated()), id: \.offset) { _, row in
+                ForEach(Array(rows.enumerated()), id: \.offset) { i, row in
                     let value = row.dropFirst().joined(separator: " ／ ")
                     VStack(alignment: .leading, spacing: 9) {
                         MaskableText(raw: row.first ?? "", size: 14, weight: .semibold, color: Theme.muted, lineSpacingV: 5)
-                        MaskableText(raw: value, terms: terms,
+                        MaskableText(raw: value, terms: terms, quizField: StudyQuiz.fieldID(quizBlockID, "rows:\(i):value"),
                                      size: value.count > 36 ? 16 : 22, weight: .bold, color: Theme.fg, lineSpacingV: 7)
                     }
                     .padding(18).frame(maxWidth: .infinity, alignment: .leading)
@@ -590,12 +647,14 @@ struct TableBlock: View {
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
             }
+        } else if dynamicTypeSize.isAccessibilitySize {
+            accessibleRows
         } else if matrixStyle && headers.count == 4 {
             VStack(spacing: 0) {
-                matrixRow(headers, isHeader: true)
+                matrixRow(headers, isHeader: true, rowIndex: nil)
                     .background(Theme.raise)
                 ForEach(Array(rows.enumerated()), id: \.offset) { i, row in
-                    matrixRow(row, isHeader: false)
+                    matrixRow(row, isHeader: false, rowIndex: i)
                         .background(i % 2 == 0 ? Theme.card : Theme.card2)
                 }
             }
@@ -617,10 +676,10 @@ struct TableBlock: View {
                 }
                 ForEach(Array(rows.enumerated()), id: \.offset) { i, r in
                     HStack(alignment: .top, spacing: 12) {
-                        MaskableText(raw: r.first ?? "", terms: terms, size: 15, weight: .semibold, color: Theme.fg, lineSpacingV: 5)
+                        MaskableText(raw: r.first ?? "", terms: terms, quizField: StudyQuiz.fieldID(quizBlockID, "rows:\(i):0"), size: 15, weight: .semibold, color: Theme.fg, lineSpacingV: 5)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         if r.count > 1 {
-                            MaskableText(raw: r[1], terms: terms, size: 15, color: Theme.fg, lineSpacingV: 6)
+                            MaskableText(raw: r[1], terms: terms, quizField: StudyQuiz.fieldID(quizBlockID, "rows:\(i):1"), size: 15, color: Theme.fg, lineSpacingV: 6)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }
@@ -633,15 +692,15 @@ struct TableBlock: View {
         } else {
             // 3列以上: 1行=1カード
             VStack(spacing: 12) {
-                ForEach(Array(rows.enumerated()), id: \.offset) { _, r in
+                ForEach(Array(rows.enumerated()), id: \.offset) { i, r in
                     VStack(alignment: .leading, spacing: 8) {
-                        MaskableText(raw: r.first ?? "", terms: terms, size: 16, weight: .bold, color: Theme.fg, lineSpacingV: 5)
+                        MaskableText(raw: r.first ?? "", terms: terms, quizField: StudyQuiz.fieldID(quizBlockID, "rows:\(i):0"), size: 16, weight: .bold, color: Theme.fg, lineSpacingV: 5)
                         ForEach(1..<max(1, r.count), id: \.self) { j in
                             if j < headers.count {
                                 HStack(alignment: .top, spacing: 8) {
                                     Text(headers[j]).font(.system(size: 11.5, weight: .semibold)).foregroundColor(Theme.accent2)
                                         .frame(width: 62, alignment: .leading)
-                                    MaskableText(raw: r[j], terms: terms, size: 15, color: Theme.fg, lineSpacingV: 6)
+                                    MaskableText(raw: r[j], terms: terms, quizField: StudyQuiz.fieldID(quizBlockID, "rows:\(i):\(j)"), size: 15, color: Theme.fg, lineSpacingV: 6)
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                 }
                             }
@@ -656,11 +715,41 @@ struct TableBlock: View {
         }
     }
 
-    private func matrixRow(_ values: [String], isHeader: Bool) -> some View {
+    /// At accessibility sizes, preserve row relationships without squeezing two or four columns.
+    private var accessibleRows: some View {
+        VStack(spacing: 14) {
+            ForEach(Array(rows.enumerated()), id: \.offset) { i, row in
+                let count = min(row.count, headers.count <= 2 ? 2 : headers.count)
+                VStack(alignment: .leading, spacing: 14) {
+                    ForEach(0..<count, id: \.self) { column in
+                        if column > 0 { Divider().overlay(Theme.line) }
+                        VStack(alignment: .leading, spacing: 6) {
+                            if column < headers.count {
+                                Text(headers[column])
+                                    .font(.caption.weight(.semibold)).foregroundColor(Theme.muted)
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+                            MaskableText(raw: row[column], terms: terms,
+                                         quizField: StudyQuiz.fieldID(quizBlockID, "rows:\(i):\(column)"),
+                                         size: 16, weight: column == 0 ? .semibold : .regular,
+                                         color: Theme.fg, lineSpacingV: 7)
+                        }
+                    }
+                }
+                .padding(18).frame(maxWidth: .infinity, alignment: .leading)
+                .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 12))
+                .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.line, lineWidth: 1))
+            }
+        }
+    }
+
+    private func matrixRow(_ values: [String], isHeader: Bool, rowIndex: Int?) -> some View {
         HStack(alignment: .center, spacing: 0) {
             ForEach(0..<headers.count, id: \.self) { column in
                 MaskableText(raw: column < values.count ? values[column] : "",
-                             terms: terms, size: isHeader ? 13 : 15,
+                             terms: terms,
+                             quizField: !isHeader ? rowIndex.flatMap { StudyQuiz.fieldID(quizBlockID, "rows:\($0):\(column)") } : nil,
+                             size: isHeader ? 13 : 15,
                              weight: isHeader || column == 0 ? .semibold : .regular,
                              color: isHeader ? Theme.muted : Theme.fg, lineSpacingV: 5)
                     .padding(.horizontal, 8)

@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-03",
+  "verdict": "本番形式に沿った模試だが、本番と完全に同品質・同難度とは断言できない。図の不整合、表の不足、条件の省略、露骨な誤答と説明のずれを改善した。実際の受験者の正答率・識別力・解答時間の比較は未実施。",
+  "scope": {
+    "rounds": 12,
+    "questionsStructurallyChecked": 480,
+    "referencesChecked": 710,
+    "originalUniqueFiguresVisuallySurveyed": 142,
+    "independentlyRecalculatedScalarQuestions": 55,
+    "independentlyRecalculatedPairedQuestions": 8,
+    "additionalExistingCircuitChecks": 10,
+    "coverageNote": "全480問を公式書籍と一対一で全文照合したものではない。前回の公式80問との比較を基準とし、今回は全数の構成・参照・選択肢整合、全使用図の一覧目視、計算問題と修正対象の内容を重点点検した。"
+  },
+  "changes": {
+    "questionsChangedIncludingFigureReferences": 107,
+    "stemsChanged": 17,
+    "explanationsChanged": 8,
+    "choiceSetsRewritten": 1,
+    "choiceTablesAdded": 23,
+    "choiceTablesBefore": 3,
+    "choiceTablesAfter": 26,
+    "nativeDiagramsRebuilt": 119,
+    "newTechnical3DImages": 1,
+    "questionFigureCountBeforeAndAfter": 96,
+    "uniqueFiguresAfter": 131,
+    "answerIndicesChanged": 0,
+    "stableIDsChanged": 0
+  },
+  "findings": [
+    {"area": "出題形式", "assessment": "40問・五肢択一・4科目各10問。公式の科目順を維持。問題図は平均8問/回で、比較した公式2回分の平均8問/回と同じ。ただし枚数の一致は難度の同等性を保証しない。"},
+    {"area": "誤答の質", "items": ["2-3"], "action": "『ロープを常に緩める』『磁力だけでコンテナを保持』等の露骨な誤答から、支持ロープと開閉ロープの操作の取り違えを問う構成に変更。正答番号は2のまま、適切な記述を問う形式から不適切な記述を問う形式へ変更。"},
+    {"area": "条件", "items": ["5-23", "6-24", "7-23", "7-24", "8-21", "8-22", "8-30"], "action": "計算で使う重力加速度9.8m/s²を設問に明記。3-37、5-26、8-25には鉛直な1本のロープと作用する力の条件を追加。"},
+    {"area": "説明", "items": ["1-2", "2-22", "3-30", "5-21", "6-24", "9-38"], "action": "編集者向けの文を除去。静止摩擦、通電時間とジュール熱の誤答理由を直接説明。不要な三角関数を除き、9-38には張力係数を明示。"},
+    {"area": "力の図", "items": ["1-31", "1-32", "1-37", "3-31", "4-26", "6-21", "7-21", "9-35", "12-32"], "action": "矢印の長さを力・速度の比に合わせる。合成速度を合力と混同しない表示にする。つり合う引張力と摩擦力は同じ長さにする。"},
+    {"area": "画像規格", "action": "技術部品の識別は教材由来の3D図を再利用。12-3は専用の中立な3D図を作成。計算・回路・運動方向・幾何形状は白背景と紺の模式図。横1600pxを基準とし、余白、文字の太さ、注記の日本語化、線のコントラストを統一。問題図には正答の名称を追加しない。"},
+    {"area": "表", "action": "名称・数値の組合せ23問をアプリ既存のchoiceHeaders/choiceRows方式へ変更。選択肢の意味と順番は維持し、各セルが元の選択肢に含まれることを検証。"}
+  ],
+  "sources": [
+    {"title": "令和8年10月 クレーン限定 公表試験問題", "url": "https://www.exam.or.jp/wp-content/uploads/2026/10/LC20262108.pdf", "note": "前回取得済みの公式PDF・抽出テキストを継続使用"},
+    {"title": "令和8年4月 クレーン限定 公表試験問題", "url": "https://www.exam.or.jp/wp-content/uploads/2026/04/LC20260408-1.pdf"},
+    {"title": "試験科目・配点・時間", "url": "https://www.exam.or.jp/introduction/h_shokai206/"},
+    {"title": "ユーザー提供の公式書籍抽出テキスト", "path": "../テキスト/書籍1.txt", "note": "複索式グラブバケット：2311〜2330行付近。公式書籍を正誤の基準とする。"},
+    {"title": "教材の画像仕様", "path": "../教材図_作図仕様_ChatGPT用.md", "note": "技術系3D、概念系模式図、パイプ図の文字と余白を基準"}
+  ],
+  "validation": [
+    "tools/verify_exam_quality.py：480問の形式、57正誤表、10回路、7係数確認、55数値問題・8組合せ問題の独立計算",
+    "tools/verify_textbook_links.py：480問・710参照・36教材節の整合",
+    "119 SVGをChromeで再描画し、文字の画像外へのはみ出しを検査。layout_check.jsonに結果を記録",
+    "画像は一覧と問題箇所の拡大表示で目視。iOS実機での表示確認とSwiftのビルドは未実施"
+  ],
+  "delivery": "ローカルの問題データ・画像・配信用manifestを更新。今回の依頼ではコミット・Push・OTA配信・ビルドは実施しない。",
+  "auditLedger": "../tools/exam_quality/changes_20261103.json"
+}

@@ -9,6 +9,9 @@ on:
       - '.gitignore'
       - '.github/**'
       - 'tools/**'
+      - 'docs/**'
+      # Hero/textbook/image-only changes are distributed through the OTA workflow.
+      - 'CraneExam/Resources/**'
 
 concurrency:
   group: ios-${{ github.ref }}
@@ -30,8 +33,14 @@ jobs:
         run: |
           python3 tools/verify_textbook_links.py
           python3 tools/verify_exam_quality.py
+          python3 tools/verify_home_heroes.py
+          python3 tools/verify_current_learning_data.py
+          swiftc CraneExam/HomeExperience.swift tools/verify_home_experience.swift -o "$RUNNER_TEMP/verify-home"
+          "$RUNNER_TEMP/verify-home" "$GITHUB_WORKSPACE/CraneExam/Resources"
           swiftc CraneExam/Models.swift CraneExam/Textbook.swift tools/verify_reference_resolver.swift -o "$RUNNER_TEMP/verify-references"
           "$RUNNER_TEMP/verify-references" "$GITHUB_WORKSPACE/CraneExam/Resources"
+          swiftc CraneExam/Models.swift CraneExam/Textbook.swift CraneExam/StudyQuiz.swift tools/verify_study_quiz.swift -o "$RUNNER_TEMP/verify-study-quiz"
+          "$RUNNER_TEMP/verify-study-quiz" "$GITHUB_WORKSPACE/CraneExam/Resources"
           swiftc CraneExam/Models.swift tools/verify_mock_exam.swift -o "$RUNNER_TEMP/verify-mock-exam"
           "$RUNNER_TEMP/verify-mock-exam" "$GITHUB_WORKSPACE/CraneExam/Resources"
           swiftc CraneExam/PromotionPolicy.swift tools/verify_promotion.swift -o "$RUNNER_TEMP/verify-promotion"

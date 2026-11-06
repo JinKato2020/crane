@@ -1,0 +1,302 @@
+{
+  "status": "PASS",
+  "nativeSwiftExecuted": false,
+  "selectionModelChecks": 882,
+  "candidateCount": 424,
+  "sections": [
+    {
+      "section": "1-0",
+      "title": "はじめに――まず「荷が動くまで」を思い浮かべる",
+      "candidates": 0,
+      "firstRound": 0,
+      "numbers": 0
+    },
+    {
+      "section": "1-1",
+      "title": "クレーンとは何か――「つり上げる」と「水平に運ぶ」",
+      "candidates": 5,
+      "firstRound": 5,
+      "numbers": 1
+    },
+    {
+      "section": "1-3",
+      "title": "全体の形と動き――どの部分が動いているのか",
+      "candidates": 8,
+      "firstRound": 6,
+      "numbers": 0
+    },
+    {
+      "section": "1-2",
+      "title": "基本用語――荷重・距離・角度を分けて読む",
+      "candidates": 12,
+      "firstRound": 10,
+      "numbers": 0
+    },
+    {
+      "section": "1-4",
+      "title": "クレーンの種類――形・走路・荷のつかみ方で覚える",
+      "candidates": 15,
+      "firstRound": 10,
+      "numbers": 0
+    },
+    {
+      "section": "1-5",
+      "title": "荷を支える骨組み――力が伝わる道を追う",
+      "candidates": 12,
+      "firstRound": 10,
+      "numbers": 0
+    },
+    {
+      "section": "1-6",
+      "title": "作動装置――電動機の回転を荷の動きへ変える",
+      "candidates": 11,
+      "firstRound": 10,
+      "numbers": 2
+    },
+    {
+      "section": "1-9",
+      "title": "歯車・軸・軸受・ボルト――回転を伝えて支える部品",
+      "candidates": 18,
+      "firstRound": 10,
+      "numbers": 0
+    },
+    {
+      "section": "1-13",
+      "title": "ドラムとシーブ――巻き取る円筒と、案内する滑車",
+      "candidates": 10,
+      "firstRound": 10,
+      "numbers": 1
+    },
+    {
+      "section": "1-7",
+      "title": "ワイヤロープ――細い鋼線を二段階でより合わせる",
+      "candidates": 16,
+      "firstRound": 10,
+      "numbers": 0
+    },
+    {
+      "section": "1-8",
+      "title": "荷をつかむつり具――荷の形や材質に合わせる",
+      "candidates": 9,
+      "firstRound": 9,
+      "numbers": 0
+    },
+    {
+      "section": "1-10",
+      "title": "安全装置――どんな危険を防ぐのか",
+      "candidates": 14,
+      "firstRound": 10,
+      "numbers": 5
+    },
+    {
+      "section": "1-11",
+      "title": "ブレーキ――止める働きと、保持する働き",
+      "candidates": 10,
+      "firstRound": 10,
+      "numbers": 1
+    },
+    {
+      "section": "1-14",
+      "title": "安全運転――荷を上げる前に問題を見つける",
+      "candidates": 7,
+      "firstRound": 7,
+      "numbers": 0
+    },
+    {
+      "section": "1-12",
+      "title": "給油と点検――動き続けるために状態を保つ",
+      "candidates": 7,
+      "firstRound": 7,
+      "numbers": 0
+    },
+    {
+      "section": "1-15",
+      "title": "この章の確認――数字の前に意味を説明する",
+      "candidates": 0,
+      "firstRound": 0,
+      "numbers": 0
+    },
+    {
+      "section": "2-0",
+      "title": "はじめに ― 法令の読み方と用語",
+      "candidates": 4,
+      "firstRound": 4,
+      "numbers": 0
+    },
+    {
+      "section": "2-1",
+      "title": "クレーンを作る・据え付けるときの決まり",
+      "candidates": 20,
+      "firstRound": 10,
+      "numbers": 15
+    },
+    {
+      "section": "2-2",
+      "title": "使うとき・働くときの決まり",
+      "candidates": 16,
+      "firstRound": 10,
+      "numbers": 4
+    },
+    {
+      "section": "2-3",
+      "title": "定期的な検査と点検",
+      "candidates": 12,
+      "firstRound": 9,
+      "numbers": 6
+    },
+    {
+      "section": "2-4",
+      "title": "検査証の更新と変更・廃止の手続き",
+      "candidates": 11,
+      "firstRound": 9,
+      "numbers": 5
+    },
+    {
+      "section": "2-5",
+      "title": "玉掛用具の安全基準",
+      "candidates": 16,
+      "firstRound": 10,
+      "numbers": 14
+    },
+    {
+      "section": "2-6",
+      "title": "運転士免許と玉掛けの資格",
+      "candidates": 16,
+      "firstRound": 10,
+      "numbers": 7
+    },
+    {
+      "section": "2-matome",
+      "title": "この章のまとめ(重要数値)",
+      "candidates": 0,
+      "firstRound": 0,
+      "numbers": 0
+    },
+    {
+      "section": "3-0",
+      "title": "はじめに――電気を「見えない水の流れ」としてイメージする",
+      "candidates": 0,
+      "firstRound": 0,
+      "numbers": 0
+    },
+    {
+      "section": "3-1",
+      "title": "電気の基礎――電流・電圧・抵抗",
+      "candidates": 16,
+      "firstRound": 10,
+      "numbers": 1
+    },
+    {
+      "section": "3-2",
+      "title": "オームの法則と電気回路の計算",
+      "candidates": 14,
+      "firstRound": 10,
+      "numbers": 0
+    },
+    {
+      "section": "3-3",
+      "title": "クレーンを回す電動機（モーター）",
+      "candidates": 18,
+      "firstRound": 10,
+      "numbers": 0
+    },
+    {
+      "section": "3-4",
+      "title": "制御器と付属機器",
+      "candidates": 14,
+      "firstRound": 10,
+      "numbers": 0
+    },
+    {
+      "section": "3-5",
+      "title": "給電装置――動く本体へ電気を送る",
+      "candidates": 9,
+      "firstRound": 8,
+      "numbers": 0
+    },
+    {
+      "section": "3-6",
+      "title": "電動機の速度制御",
+      "candidates": 15,
+      "firstRound": 10,
+      "numbers": 3
+    },
+    {
+      "section": "3-7",
+      "title": "電気設備の保守――絶縁・感電対策・測定・故障",
+      "candidates": 17,
+      "firstRound": 10,
+      "numbers": 0
+    },
+    {
+      "section": "3-matome",
+      "title": "この章の確認――数字と意味を結びつける",
+      "candidates": 0,
+      "firstRound": 0,
+      "numbers": 0
+    },
+    {
+      "section": "4-0",
+      "title": "はじめに ― 質量と、地球が引く力を知る",
+      "candidates": 4,
+      "firstRound": 4,
+      "numbers": 1
+    },
+    {
+      "section": "4-1",
+      "title": "力・モーメント・力の合成",
+      "candidates": 9,
+      "firstRound": 9,
+      "numbers": 0
+    },
+    {
+      "section": "4-2",
+      "title": "質量・比重・体積の計算",
+      "candidates": 4,
+      "firstRound": 4,
+      "numbers": 1
+    },
+    {
+      "section": "4-3",
+      "title": "重心と安定",
+      "candidates": 4,
+      "firstRound": 4,
+      "numbers": 0
+    },
+    {
+      "section": "4-4",
+      "title": "速度・加速度と摩擦",
+      "candidates": 14,
+      "firstRound": 10,
+      "numbers": 0
+    },
+    {
+      "section": "4-5",
+      "title": "荷重の種類と応力",
+      "candidates": 15,
+      "firstRound": 10,
+      "numbers": 0
+    },
+    {
+      "section": "4-6",
+      "title": "つり角度と張力・モード係数",
+      "candidates": 11,
+      "firstRound": 10,
+      "numbers": 4
+    },
+    {
+      "section": "4-7",
+      "title": "滑車装置のしくみ",
+      "candidates": 11,
+      "firstRound": 10,
+      "numbers": 1
+    }
+  ],
+  "preserved": [
+    "textbook prose",
+    "glossary",
+    "figures",
+    "exam data",
+    "unrelated manifest entries"
+  ]
+}

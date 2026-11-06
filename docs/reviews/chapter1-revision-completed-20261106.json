@@ -166,7 +166,6 @@
   },
   "release": {
     "ota_uploaded": true,
-    "build_started": false,
     "native_ios_compile_performed": false,
     "requires_new_build": [
       "節内目次",
@@ -181,6 +180,9 @@
     ],
     "old_client": "新しいstyleは既存のpブロックとして読める。目次・開閉・参照ボタン等は新ビルドで有効になる。",
     "pdf_url": "https://content.safa-lang.com/crane/pdf/chapter1.pdf",
-    "native_build_operation": "mainへのPushでiOS Build & TestFlightを開始する。状態照会・監視は行わない。"
+    "native_build_operation": "コミット0549ef3をmainへPush済み。既存ワークフローのビルド・TestFlight提出を要求。状態照会・監視・完了確認なし。",
+    "build_requested": true,
+    "trigger_commit": "0549ef3",
+    "build_result_checked": false
   }
 }

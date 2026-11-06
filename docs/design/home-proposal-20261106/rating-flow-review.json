@@ -1,0 +1,33 @@
+{
+  "status": "proposal-only-awaiting-user-review",
+  "date": "2026-11-06",
+  "appFilesUnchanged": 796,
+  "qa": [
+    {
+      "screen": "campaign",
+      "primaryVisibleWithoutScroll": true,
+      "noHorizontalOverflow": true,
+      "demoHasNoExternalAction": true
+    },
+    {
+      "screen": "settings",
+      "primaryVisibleWithoutScroll": true,
+      "noHorizontalOverflow": true,
+      "demoHasNoExternalAction": true
+    }
+  ],
+  "published": false,
+  "buildStarted": false,
+  "existingSchedulePreserved": {
+    "firstDay": 3,
+    "repeatMinimumDays": 7,
+    "studySeconds": 30
+  },
+  "screenshots": [
+    "05-campaign-review-flow.png",
+    "rating-campaign.png",
+    "rating-settings.png"
+  ],
+  "reviewSubmissionObservable": false,
+  "nativeAppViewed": false
+}

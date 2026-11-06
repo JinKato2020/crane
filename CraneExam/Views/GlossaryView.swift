@@ -1,420 +1,502 @@
 import SwiftUI
-import UIKit
 
-/// 「用語」タブ：全4章の用語集（学科から独立した専用タブ）。
+/// Shared glossary presentation. Favorite IDs remain the original `term` strings.
 struct GlossaryView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    header
+                LazyVStack(alignment: .leading, spacing: 22) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("用語で確かめる").font(.title2.bold()).foregroundColor(Theme.fg)
+                        Text("まずひとことで理解。図・ポイントを開いて、違いや数字を確かめましょう。")
+                            .font(.subheadline).foregroundColor(Theme.muted)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
                     GlossaryContent()
                 }
-                .padding(.horizontal, 20)
-                .padding(.top, 10)
-                .padding(.bottom, 28)
+                .padding(16)
             }
+            .scrollDismissesKeyboard(.interactively)
             .background(Theme.bg.ignoresSafeArea())
             .navigationTitle("用語")
             .navigationBarTitleDisplayMode(.inline)
         }
-    }
-
-    private var header: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("GLOSSARY")
-                .font(.system(size: 11, weight: .semibold)).tracking(2)
-                .foregroundColor(Theme.accent2)
-            Text("用語で確かめる")
-                .font(.system(size: 24, weight: .heavy)).foregroundColor(Theme.fg)
-            Text("全4章の重要用語を、図つきで検索できます。")
-                .font(.system(size: 12.5)).foregroundColor(Theme.muted)
-                .fixedSize(horizontal: false, vertical: true)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.vertical, 2)
+        .trackStudyCompletion(kind: .glossary)
     }
 }
 
-/// 1用語のカード(用語集で共有)。図は教材のラベルを重ねて表示し、タップで全画面拡大。
+private struct GlossaryRichText: View {
+    let value: String
+    var body: some View {
+        Text((try? AttributedString(markdown: value, options: .init(interpretedSyntax: .inlineOnlyPreservingWhitespace))) ?? AttributedString(value))
+            .font(.body).foregroundColor(Theme.fg).lineSpacing(5)
+            .fixedSize(horizontal: false, vertical: true)
+            .textSelection(.enabled)
+    }
+}
+
+private struct GlossarySearchField: View {
+    @Binding var query: String
+    let prompt: String
+    var body: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "magnifyingglass").foregroundColor(Theme.muted).accessibilityHidden(true)
+            TextField(prompt, text: $query)
+                .font(.body).foregroundColor(Theme.fg)
+                .autocorrectionDisabled(true).textInputAutocapitalization(.never)
+                .submitLabel(.search).accessibilityLabel(prompt)
+                .frame(minHeight: 44)
+            if !query.isEmpty {
+                Button { query = "" } label: {
+                    Image(systemName: "xmark.circle.fill").foregroundColor(Theme.muted)
+                        .frame(width: 44, height: 44).contentShape(Rectangle())
+                }
+                .buttonStyle(.plain).accessibilityLabel("検索を消去")
+            }
+        }
+        .padding(.leading, 14).padding(.trailing, query.isEmpty ? 14 : 2).padding(.vertical, 4)
+        .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 14))
+        .overlay(RoundedRectangle(cornerRadius: 14).stroke(Theme.line, lineWidth: 1))
+    }
+}
+
 private struct GlossaryTermCard: View {
-    @EnvironmentObject var store: ExamStore
+    @EnvironmentObject private var store: ExamStore
     let term: TBTerm
-    let striped: Bool
-    var locked: Bool = false
-    var onLockedTap: (() -> Void)? = nil
+    var locked = false
+    var onLockedTap: (() -> Void)?
+    @State private var expanded = false
+    @State private var selectedReference: TextRef?
 
     var body: some View {
-        if locked {
-            Button { onLockedTap?() } label: { lockedBody }
-                .buttonStyle(.plain)
-        } else {
-            normalBody
-        }
-    }
-
-    // ロック時：用語名だけ見せ、定義・図は隠してProへ誘導する。
-    private var lockedBody: some View {
-        HStack(spacing: 10) {
-            Image(systemName: "lock.fill").font(.system(size: 14)).foregroundColor(Theme.accent2)
-            VStack(alignment: .leading, spacing: 2) {
-                Text(term.term).font(.system(size: 14, weight: .bold)).foregroundColor(Theme.fg)
-                    .fixedSize(horizontal: false, vertical: true)
-                Text("この用語は Pro で解放").font(.system(size: 11.5)).foregroundColor(Theme.muted)
-            }
-            Spacer(minLength: 6)
-            Text("PRO").font(.system(size: 10, weight: .heavy)).foregroundColor(Theme.accent2)
-                .padding(.horizontal, 7).padding(.vertical, 3)
-                .background(Theme.accent2.opacity(0.14)).clipShape(Capsule())
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.horizontal, 15).padding(.vertical, 13)
-        .background(striped ? Theme.card2 : Theme.card)
-    }
-
-    private var normalBody: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            HStack(alignment: .top, spacing: 8) {
-                Text(term.term).font(.system(size: 14, weight: .bold)).foregroundColor(Theme.accent2)
-                    .fixedSize(horizontal: false, vertical: true)
-                Spacer(minLength: 6)
-                Button { store.toggleFavTerm(term.id) } label: {
-                    Image(systemName: store.isFavTerm(term.id) ? "heart.fill" : "heart")
-                        .font(.system(size: 15))
-                        .foregroundColor(store.isFavTerm(term.id) ? Theme.accent2 : Theme.muted)
-                        .contentShape(Rectangle())
+        Group {
+            if locked {
+                Button { onLockedTap?() } label: {
+                    HStack(alignment: .top, spacing: 12) {
+                        Image(systemName: "lock.fill").foregroundColor(Theme.studyKey)
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text(term.title).font(.headline).foregroundColor(Theme.fg)
+                            Text("この用語は Pro で解放").font(.subheadline).foregroundColor(Theme.muted)
+                        }
+                        .fixedSize(horizontal: false, vertical: true)
+                        Spacer(minLength: 0)
+                        Image(systemName: "chevron.right").foregroundColor(Theme.muted)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading).padding(16)
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel(store.isFavTerm(term.id) ? "お気に入り解除" : "お気に入りに追加")
-            }
-            Text(term.def).font(.system(size: 12.5)).foregroundColor(Theme.muted)
-                .lineSpacing(3).fixedSize(horizontal: false, vertical: true)
-            if let name = term.img {
-                let info = store.figureInfo[name]
-                FigureImageView(assetName: name,
-                                labels: info?.labels ?? [],
-                                legend: info?.legend ?? [],
-                                caption: info?.caption ?? term.term,
-                                thumbMaxHeight: 150,
-                                showLegend: false)
-                    .padding(.top, 6)
+            } else {
+                contents
             }
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.horizontal, 15).padding(.vertical, 13)
-        .background(striped ? Theme.card2 : Theme.card)
-    }
-}
-
-/// 複数用語をひとまとめのカードにする
-private struct GlossaryTermList: View {
-    let items: [TBTerm]
-    var lockedIDs: Set<String> = []
-    var onLockedTap: (() -> Void)? = nil
-    var body: some View {
-        VStack(spacing: 0) {
-            ForEach(Array(items.enumerated()), id: \.offset) { i, t in
-                GlossaryTermCard(term: t, striped: i % 2 == 1,
-                                 locked: lockedIDs.contains(t.id), onLockedTap: onLockedTap)
-            }
+        .background(Theme.card)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .overlay(RoundedRectangle(cornerRadius: 16).stroke(Theme.line, lineWidth: 1))
+        .sheet(item: $selectedReference) { ref in
+            TextbookRefSheet(ref: ref, closeLabel: "用語に戻る")
         }
-        .clipShape(RoundedRectangle(cornerRadius: 13))
-        .overlay(RoundedRectangle(cornerRadius: 13).stroke(Theme.line, lineWidth: 1))
-    }
-}
-
-/// 全4章の重要用語集（学科タブ「用語」に埋め込み）。
-/// 検索していないときは「章を選ぶ」一覧 → 章ごとの用語へ。検索中は全章横断のフラット結果。
-struct GlossaryContent: View {
-    @EnvironmentObject var store: ExamStore
-    @EnvironmentObject var purchases: PurchaseStore
-    @State private var query: String = ""
-    @State private var showPaywall = false
-
-    /// 表示中の用語のうちロックすべきID（無料は先頭10語以外）。
-    private func locked(_ items: [TBTerm]) -> Set<String> {
-        purchases.isPro ? [] : Set(items.map { $0.id }).subtracting(store.freeGlossaryTermIDs)
     }
 
-    private var chapters: [TBChapter] { store.textbook?.chapters ?? [] }
-
-    private func terms(_ ch: TBChapter) -> [TBTerm] {
-        let all = ch.glossary ?? []
-        let q = query.trimmingCharacters(in: .whitespaces)
-        if q.isEmpty { return all }
-        return all.filter { $0.term.localizedCaseInsensitiveContains(q) || $0.def.localizedCaseInsensitiveContains(q) }
+    private var contents: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(alignment: .top, spacing: 6) {
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(term.title).font(.headline).foregroundColor(Theme.fg)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .accessibilityAddTraits(.isHeader)
+                    if let reading = term.reading {
+                        Text(reading).font(.caption).foregroundColor(Theme.muted)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                Button { store.toggleFavTerm(term.id) } label: {
+                    Image(systemName: store.isFavTerm(term.id) ? "heart.fill" : "heart")
+                        .font(.title3).foregroundColor(store.isFavTerm(term.id) ? Theme.studyKey : Theme.muted)
+                        .frame(width: 44, height: 44).contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("\(term.title)をお気に入り\(store.isFavTerm(term.id) ? "から解除" : "に追加")")
+            }
+            GlossaryRichText(value: term.introduction)
+            if term.hasDetails {
+                Button { expanded.toggle() } label: {
+                    HStack(spacing: 9) {
+                        Image(systemName: expanded ? "chevron.up" : (term.illustrations.isEmpty ? "text.alignleft" : "photo"))
+                        Text(expanded ? "ポイントを閉じる" : (term.illustrations.isEmpty ? "ポイントを見る" : "図・ポイントを見る"))
+                            .font(.subheadline.weight(.semibold))
+                        Spacer(minLength: 0)
+                        if !expanded { Image(systemName: "chevron.down") }
+                    }
+                    .foregroundColor(Theme.studyKey).frame(minHeight: 44).contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityValue(expanded ? "展開中" : "折りたたみ中")
+                .accessibilityHint("\(term.title)の詳しい説明を\(expanded ? "閉じます" : "開きます")")
+            }
+            if expanded { details }
+        }
+        .padding(16)
     }
 
-    private var totalCount: Int { chapters.reduce(0) { $0 + ($1.glossary?.count ?? 0) } }
-    private var searching: Bool { !query.trimmingCharacters(in: .whitespaces).isEmpty }
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            // 検索
-            HStack(spacing: 10) {
-                Image(systemName: "magnifyingglass").font(.system(size: 14)).foregroundColor(Theme.faint)
-                TextField("用語を検索（全章から）", text: $query)
-                    .font(.system(size: 15)).foregroundColor(Theme.fg)
-                    .autocorrectionDisabled(true)
-                if !query.isEmpty {
-                    Button { query = "" } label: {
-                        Image(systemName: "xmark.circle.fill").font(.system(size: 15)).foregroundColor(Theme.faint)
+    private var details: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            Rectangle().fill(Theme.line).frame(height: 1).accessibilityHidden(true)
+            if let points = term.points, !points.isEmpty {
+                VStack(alignment: .leading, spacing: 14) {
+                    Text("覚えるポイント").font(.subheadline.bold()).foregroundColor(Theme.studyKey)
+                    ForEach(Array(points.enumerated()), id: \.offset) { _, point in
+                        HStack(alignment: .top, spacing: 10) {
+                            Text("•").font(.body.bold()).foregroundColor(Theme.studyKey).accessibilityHidden(true)
+                            GlossaryRichText(value: point)
+                        }
                     }
                 }
             }
-            .padding(.horizontal, 14).padding(.vertical, 13)
-            .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 13))
-            .overlay(RoundedRectangle(cornerRadius: 13).stroke(Theme.line, lineWidth: 1))
-
-            if searching {
-                searchResults
-            } else {
-                chapterList
+            if let example = term.example {
+                VStack(alignment: .leading, spacing: 8) {
+                    Label("例でつかむ", systemImage: "lightbulb").font(.subheadline.bold()).foregroundColor(Theme.studyKey)
+                    GlossaryRichText(value: example)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading).padding(14)
+                .background(Theme.studyKey.opacity(0.07)).clipShape(RoundedRectangle(cornerRadius: 12))
+            }
+            if let comparison = term.comparison {
+                GlossaryComparisonView(comparison: comparison)
+            }
+            if !term.illustrations.isEmpty {
+                VStack(alignment: .leading, spacing: 18) {
+                    Label("図で確かめる · タップで拡大", systemImage: "arrow.up.left.and.arrow.down.right")
+                        .font(.subheadline.weight(.semibold)).foregroundColor(Theme.muted)
+                    ForEach(term.illustrations) { figure in
+                        VStack(alignment: .leading, spacing: 10) {
+                            if figure.isSVG {
+                                SVGFigureView(file: figure.file, caption: figure.caption, thumbMaxHeight: 480)
+                            } else {
+                                let info = store.figureInfo[figure.assetName]
+                                FigureImageView(assetName: figure.assetName,
+                                                labels: info?.labels ?? [], legend: info?.legend ?? [],
+                                                caption: figure.caption ?? term.title, thumbMaxHeight: 480, showLegend: false)
+                            }
+                            if let caption = figure.caption, !caption.isEmpty {
+                                Text(caption).font(.subheadline).foregroundColor(Theme.muted)
+                                    .lineSpacing(3).fixedSize(horizontal: false, vertical: true)
+                            }
+                        }
+                    }
+                }
+            }
+            if let refs = term.references, !refs.isEmpty {
+                VStack(alignment: .leading, spacing: 8) {
+                    ForEach(refs) { ref in
+                        Button { selectedReference = ref } label: {
+                            HStack(alignment: .center, spacing: 10) {
+                                Image(systemName: "book")
+                                VStack(alignment: .leading, spacing: 3) {
+                                    Text("教材で詳しく").font(.subheadline.bold())
+                                    Text(ref.label ?? term.title).font(.subheadline)
+                                        .fixedSize(horizontal: false, vertical: true)
+                                }
+                                Spacer(minLength: 0)
+                                Image(systemName: "chevron.right")
+                            }
+                            .foregroundColor(Theme.studyKey).frame(minHeight: 44)
+                            .padding(12).background(Theme.raise).clipShape(RoundedRectangle(cornerRadius: 12))
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
             }
         }
-        .sheet(isPresented: $showPaywall) { PaywallView() }
+    }
+}
+
+private struct GlossaryComparisonView: View {
+    @Environment(\.dynamicTypeSize) private var textSize
+    let comparison: TBTermComparison
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text(comparison.title).font(.subheadline.bold()).foregroundColor(Theme.studyKey)
+            VStack(spacing: 0) {
+                if textSize < .xxxLarge {
+                    row(comparison.headers, header: true)
+                        .background(Theme.raise)
+                }
+                ForEach(Array(comparison.rows.enumerated()), id: \.offset) { index, cells in
+                    Rectangle().fill(Theme.line).frame(height: 1).accessibilityHidden(true)
+                    Group {
+                        if textSize >= .xxxLarge {
+                            VStack(alignment: .leading, spacing: 14) {
+                                ForEach(Array(cells.enumerated()), id: \.offset) { column, cell in
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        if comparison.headers.indices.contains(column) {
+                                            Text(comparison.headers[column]).font(.subheadline)
+                                                .foregroundColor(Theme.muted)
+                                        }
+                                        Text(cell).font(.body.weight(.semibold)).foregroundColor(Theme.fg)
+                                    }
+                                    .fixedSize(horizontal: false, vertical: true)
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading).padding(12)
+                            .accessibilityElement(children: .combine)
+                        } else {
+                            row(cells, header: false)
+                        }
+                    }
+                        .background(index.isMultiple(of: 2) ? Theme.card : Theme.card2)
+                }
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.line, lineWidth: 1))
+        }
+    }
+    private func row(_ cells: [String], header: Bool) -> some View {
+        HStack(alignment: .top, spacing: 14) {
+            ForEach(Array(cells.enumerated()), id: \.offset) { _, cell in
+                Text(cell).font(header ? .subheadline.weight(.semibold) : .body)
+                    .foregroundColor(Theme.fg)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+        }
+        .padding(12).accessibilityElement(children: .combine)
+    }
+}
+
+private struct GlossaryTermList: View {
+    let items: [TBTerm]
+    var lockedIDs: Set<String> = []
+    var onLockedTap: (() -> Void)?
+    var body: some View {
+        LazyVStack(spacing: 14) {
+            ForEach(items) { term in
+                GlossaryTermCard(term: term, locked: lockedIDs.contains(term.id), onLockedTap: onLockedTap)
+            }
+        }
+    }
+}
+
+private struct GlossaryEmptyResults: View {
+    var reset: () -> Void
+    var body: some View {
+        VStack(spacing: 14) {
+            Image(systemName: "magnifyingglass").font(.largeTitle).foregroundColor(Theme.muted).accessibilityHidden(true)
+            Text("一致する用語がありません").font(.headline).foregroundColor(Theme.fg)
+            Text("読み仮名や短い言葉でも検索できます。分野の絞り込みも確認してください。")
+                .font(.body).foregroundColor(Theme.muted).multilineTextAlignment(.center)
+            Button("検索・絞り込みをリセット", action: reset)
+                .font(.body.weight(.semibold)).foregroundColor(Theme.studyKey).frame(minHeight: 44)
+        }
+        .frame(maxWidth: .infinity).padding(.vertical, 32)
+    }
+}
+
+private struct GlossaryChapterHeading: View {
+    let chapter: TBChapter
+    let count: Int
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text("第\(chapter.id)章 · \(count)項目").font(.subheadline.bold()).foregroundColor(Theme.studyKey)
+            Text(chapter.title).font(.headline).foregroundColor(Theme.fg)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .accessibilityElement(children: .combine).accessibilityAddTraits(.isHeader)
+    }
+}
+
+struct GlossaryContent: View {
+    @EnvironmentObject private var store: ExamStore
+    @EnvironmentObject private var purchases: PurchaseStore
+    @State private var query = ""
+    @State private var showPaywall = false
+    private var chapters: [TBChapter] { store.textbook?.chapters ?? [] }
+    private var searching: Bool { !query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+    private var totalCount: Int { chapters.reduce(0) { $0 + ($1.glossary?.count ?? 0) } }
+    private func terms(_ chapter: TBChapter) -> [TBTerm] { (chapter.glossary ?? []).filter { $0.matches(query) } }
+    private func locked(_ items: [TBTerm]) -> Set<String> {
+        purchases.isPro ? [] : Set(items.map(\.id)).subtracting(store.freeGlossaryTermIDs)
     }
 
-    // 章を選ぶ一覧
-    private var chapterList: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            NavigationLink { FavoriteTermsView() } label: { favEntryRow }
-                .buttonStyle(.plain)
-            HStack {
-                Text("章を選ぶ").font(.system(size: 13, weight: .heavy)).foregroundColor(Theme.fg)
-                Spacer()
-                Text("全\(totalCount)語").font(.system(size: 11)).foregroundColor(Theme.muted)
-            }
-            .padding(.bottom, -2)
-
-            if chapters.isEmpty {
-                Text("用語データを読み込めませんでした。")
-                    .foregroundColor(Theme.muted).font(.system(size: 13)).padding()
+    var body: some View {
+        LazyVStack(alignment: .leading, spacing: 20) {
+            GlossarySearchField(query: $query, prompt: "全章から検索・読み仮名もOK")
+            if searching {
+                Text("検索結果 \(chapters.reduce(0) { $0 + terms($1).count })項目")
+                    .font(.subheadline).foregroundColor(Theme.muted)
+                ForEach(chapters) { chapter in
+                    let items = terms(chapter)
+                    if !items.isEmpty {
+                        GlossaryChapterHeading(chapter: chapter, count: items.count)
+                        GlossaryTermList(items: items, lockedIDs: locked(items), onLockedTap: { showPaywall = true })
+                    }
+                }
+                if chapters.allSatisfy({ terms($0).isEmpty }) {
+                    GlossaryEmptyResults { query = "" }
+                }
             } else {
-                ForEach(chapters) { ch in
-                    NavigationLink {
-                        GlossaryChapterView(chapter: ch)
-                    } label: {
-                        chapterRow(ch)
+                NavigationLink { FavoriteTermsView() } label: {
+                    HStack(spacing: 14) {
+                        Image(systemName: "heart.fill").foregroundColor(Theme.studyKey).font(.title2)
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text("お気に入りの用語").font(.headline).foregroundColor(Theme.fg)
+                            Text("繰り返し確かめたい用語を集める · \(store.favoriteTerms().count)項目")
+                                .font(.subheadline).foregroundColor(Theme.muted)
+                        }
+                        Spacer(minLength: 0)
+                        Image(systemName: "chevron.right").foregroundColor(Theme.muted)
+                    }
+                    .padding(16).frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 16))
+                }
+                .buttonStyle(.plain)
+                Text("章を選ぶ · 全\(totalCount)項目").font(.subheadline.bold()).foregroundColor(Theme.muted)
+                if chapters.isEmpty {
+                    Text("用語データを読み込めませんでした。設定から教材データを更新してください。")
+                        .font(.body).foregroundColor(Theme.muted)
+                }
+                ForEach(chapters) { chapter in
+                    NavigationLink { GlossaryChapterView(chapter: chapter) } label: {
+                        HStack(alignment: .top, spacing: 14) {
+                            Text("\(chapter.id)").font(.title2.bold()).foregroundColor(Theme.studyKey)
+                                .frame(width: 42, height: 44).background(Theme.raise).clipShape(RoundedRectangle(cornerRadius: 10))
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text(chapter.title).font(.headline).foregroundColor(Theme.fg)
+                                Text(chapter.summary).font(.subheadline).foregroundColor(Theme.muted)
+                                Text("\(chapter.glossary?.count ?? 0)項目").font(.subheadline).foregroundColor(Theme.studyKey)
+                            }
+                            .fixedSize(horizontal: false, vertical: true)
+                            Spacer(minLength: 0)
+                            Image(systemName: "chevron.right").foregroundColor(Theme.muted).padding(.top, 12)
+                        }
+                        .padding(16).frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 16))
+                        .overlay(RoundedRectangle(cornerRadius: 16).stroke(Theme.line, lineWidth: 1))
                     }
                     .buttonStyle(.plain)
                 }
             }
         }
-    }
-
-    // お気に入り用語への入口（章一覧の先頭に表示）
-    private var favEntryRow: some View {
-        HStack(spacing: 14) {
-            Image(systemName: "heart.fill").font(.system(size: 16, weight: .bold))
-                .foregroundColor(Theme.accent2)
-                .frame(width: 44, height: 44)
-                .background(Theme.accent2.opacity(0.12)).clipShape(RoundedRectangle(cornerRadius: 12))
-            VStack(alignment: .leading, spacing: 3) {
-                Text("お気に入りの用語").font(.system(size: 14.5, weight: .bold)).foregroundColor(Theme.fg)
-                Text("ハートを付けた用語をまとめて見直す").font(.system(size: 11.5)).foregroundColor(Theme.muted)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            Spacer(minLength: 6)
-            Text("\(store.favoriteTerms().count)語").font(.system(size: 12, weight: .bold)).foregroundColor(Theme.accent2)
-            Image(systemName: "chevron.right").font(.system(size: 13, weight: .bold)).foregroundColor(Theme.faint)
-        }
-        .padding(14)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 14))
-        .overlay(RoundedRectangle(cornerRadius: 14).stroke(Theme.line, lineWidth: 1))
-    }
-
-    private func chapterRow(_ ch: TBChapter) -> some View {
-        HStack(spacing: 16) {
-            VStack(spacing: 1) {
-                Text("\(ch.id)").font(.system(size: 23, weight: .bold, design: .rounded)).foregroundColor(Theme.accent2)
-                Text("章").font(.system(size: 9)).foregroundColor(Theme.muted)
-            }
-            .frame(width: 54, height: 54)
-            .background(Theme.raise).clipShape(RoundedRectangle(cornerRadius: 14))
-            .overlay(RoundedRectangle(cornerRadius: 14).stroke(Theme.line, lineWidth: 1))
-
-            VStack(alignment: .leading, spacing: 5) {
-                Text(ch.title).font(.system(size: 15.5, weight: .bold)).foregroundColor(Theme.fg)
-                    .fixedSize(horizontal: false, vertical: true)
-                Text(ch.summary).font(.system(size: 12)).foregroundColor(Theme.muted)
-                    .lineLimit(2).lineSpacing(2).fixedSize(horizontal: false, vertical: true)
-                Text("用語 \(ch.glossary?.count ?? 0)語").font(.system(size: 11)).foregroundColor(Theme.faint)
-                    .padding(.top, 1)
-            }
-            Spacer(minLength: 6)
-            Image(systemName: "chevron.right").font(.system(size: 14, weight: .bold)).foregroundColor(Theme.faint)
-        }
-        .padding(18)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 16))
-        .overlay(RoundedRectangle(cornerRadius: 16).stroke(Theme.line, lineWidth: 1))
-    }
-
-    // 検索結果(全章横断)
-    private var searchResults: some View {
-        VStack(alignment: .leading, spacing: 18) {
-            ForEach(chapters) { ch in
-                let items = terms(ch)
-                if !items.isEmpty {
-                    VStack(alignment: .leading, spacing: 11) {
-                        HStack(spacing: 9) {
-                            Text("第\(ch.id)章").font(.system(size: 11, weight: .bold)).foregroundColor(Color(hex: 0x241703))
-                                .padding(.horizontal, 9).padding(.vertical, 4)
-                                .background(Theme.gold).clipShape(Capsule())
-                            Text(ch.title).font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg)
-                                .lineLimit(1)
-                            Spacer()
-                            Text("\(items.count)語").font(.system(size: 11)).foregroundColor(Theme.muted)
-                        }
-                        GlossaryTermList(items: items, lockedIDs: locked(items), onLockedTap: { showPaywall = true })
-                    }
-                }
-            }
-
-            if chapters.allSatisfy({ terms($0).isEmpty }) {
-                VStack(spacing: 11) {
-                    Image(systemName: "character.book.closed").font(.system(size: 38)).foregroundColor(Theme.faint)
-                    Text("「\(query)」に一致する用語はありません。")
-                        .font(.system(size: 13)).foregroundColor(Theme.muted).multilineTextAlignment(.center)
-                }
-                .frame(maxWidth: .infinity).padding(.vertical, 54)
-            }
-        }
+        .sheet(isPresented: $showPaywall) { PaywallView() }
     }
 }
 
-/// 章を選んだ後の「その章の用語一覧」
 struct GlossaryChapterView: View {
     @EnvironmentObject private var store: ExamStore
     @EnvironmentObject private var purchases: PurchaseStore
     let chapter: TBChapter
-    @State private var query: String = ""
+    @State private var query = ""
+    @State private var category = ""
     @State private var showPaywall = false
-
-    private var lockedIDs: Set<String> {
-        purchases.isPro ? [] : Set(allItems.map { $0.id }).subtracting(store.freeGlossaryTermIDs)
+    // Follow OTA updates while this screen is open.
+    private var current: TBChapter { store.textbook?.chapters.first(where: { $0.id == chapter.id }) ?? chapter }
+    private var allItems: [TBTerm] { current.glossary ?? [] }
+    private var categories: [String] {
+        allItems.compactMap(\.category).reduce(into: [String]()) { result, item in
+            if !result.contains(item) { result.append(item) }
+        }
     }
-
-    private var allItems: [TBTerm] { chapter.glossary ?? [] }
     private var items: [TBTerm] {
-        let q = query.trimmingCharacters(in: .whitespaces)
-        if q.isEmpty { return allItems }
-        return allItems.filter { $0.term.localizedCaseInsensitiveContains(q) || $0.def.localizedCaseInsensitiveContains(q) }
+        allItems.filter { (category.isEmpty || $0.category == category) && $0.matches(query) }
+    }
+    private var lockedIDs: Set<String> {
+        purchases.isPro ? [] : Set(allItems.map(\.id)).subtracting(store.freeGlossaryTermIDs)
     }
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 14) {
-                // 章タイトル
-                VStack(alignment: .leading, spacing: 6) {
-                    Text("第\(chapter.id)章").font(.system(size: 12, weight: .bold)).foregroundColor(Theme.accent2)
-                    Text(chapter.title).font(.system(size: 21, weight: .heavy)).foregroundColor(Theme.fg)
-                        .fixedSize(horizontal: false, vertical: true)
-                    Text("用語 全\(allItems.count)語").font(.system(size: 12)).foregroundColor(Theme.muted)
-                }
-                .padding(.top, 4).padding(.bottom, 2)
-
-                if !purchases.isPro && lockedIDs.count > 0 {
-                    HStack(spacing: 8) {
-                        Image(systemName: "lock.fill").font(.system(size: 12, weight: .bold)).foregroundColor(Theme.accent2)
-                        Text("無料プランでは各章の先頭10語まで読めます。残りは Pro で解放。")
-                            .font(.system(size: 11.5)).foregroundColor(Theme.accent2)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(11)
-                    .background(Theme.accent2.opacity(0.10)).clipShape(RoundedRectangle(cornerRadius: 10))
-                }
-
-                // この章の中で検索
-                HStack(spacing: 10) {
-                    Image(systemName: "magnifyingglass").font(.system(size: 14)).foregroundColor(Theme.faint)
-                    TextField("この章の用語を検索", text: $query)
-                        .font(.system(size: 15)).foregroundColor(Theme.fg)
-                        .autocorrectionDisabled(true)
-                    if !query.isEmpty {
-                        Button { query = "" } label: {
-                            Image(systemName: "xmark.circle.fill").font(.system(size: 15)).foregroundColor(Theme.faint)
+            LazyVStack(alignment: .leading, spacing: 18) {
+                GlossaryChapterHeading(chapter: current, count: allItems.count)
+                GlossarySearchField(query: $query, prompt: "この章から検索")
+                if !categories.isEmpty {
+                    Menu {
+                        Picker("分野", selection: $category) {
+                            Text("すべての分野").tag("")
+                            ForEach(categories, id: \.self) { Text($0).tag($0) }
                         }
+                    } label: {
+                        HStack(spacing: 8) {
+                            Image(systemName: "line.3.horizontal.decrease.circle")
+                            Text(category.isEmpty ? "すべての分野" : category)
+                                .fixedSize(horizontal: false, vertical: true)
+                            Spacer(minLength: 0)
+                            Image(systemName: "chevron.down")
+                        }
+                        .font(.subheadline.weight(.semibold)).foregroundColor(Theme.studyKey)
+                        .frame(minHeight: 44).padding(.horizontal, 14)
+                        .background(Theme.raise).clipShape(RoundedRectangle(cornerRadius: 12))
                     }
+                    .accessibilityLabel("分野の絞り込み")
+                    .accessibilityValue(category.isEmpty ? "すべての分野" : category)
                 }
-                .padding(.horizontal, 14).padding(.vertical, 12)
-                .background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 12))
-                .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.line, lineWidth: 1))
-
+                if !lockedIDs.isEmpty {
+                    Text("無料プランでは各章の先頭10項目まで。残りは Pro で解放できます。")
+                        .font(.subheadline).foregroundColor(Theme.muted)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Text("\(items.count)項目 · 図や詳しい説明はカードから")
+                    .font(.subheadline).foregroundColor(Theme.muted)
                 if items.isEmpty {
-                    VStack(spacing: 11) {
-                        Image(systemName: "character.book.closed").font(.system(size: 36)).foregroundColor(Theme.faint)
-                        Text(allItems.isEmpty ? "この章の用語データがありません。" : "「\(query)」に一致する用語はありません。")
-                            .font(.system(size: 13)).foregroundColor(Theme.muted).multilineTextAlignment(.center)
-                    }
-                    .frame(maxWidth: .infinity).padding(.vertical, 48)
+                    GlossaryEmptyResults { query = ""; category = "" }
                 } else {
                     GlossaryTermList(items: items, lockedIDs: lockedIDs, onLockedTap: { showPaywall = true })
                 }
             }
             .padding(16)
         }
+        .scrollDismissesKeyboard(.interactively)
         .background(Theme.bg.ignoresSafeArea())
         .sheet(isPresented: $showPaywall) { PaywallView() }
-        .navigationTitle("第\(chapter.id)章 用語")
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle("第\(chapter.id)章 用語").navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            store.rememberStudy(StudyPlace(kind: .glossary, title: "第\(chapter.id)章の用語", chapterID: chapter.id))
+        }
     }
 }
 
-/// お気に入り登録した用語の一覧（本体）。NavigationStackは持たない＝用語タブからはpush、ホームからはsheetで包む。
 struct FavoriteTermsView: View {
-    @EnvironmentObject var store: ExamStore
-
+    @EnvironmentObject private var store: ExamStore
+    @EnvironmentObject private var purchases: PurchaseStore
+    @State private var query = ""
+    @State private var showPaywall = false
+    private var groups: [(chapter: TBChapter, terms: [TBTerm])] {
+        let favorites = store.favoriteTerms().filter { $0.term.matches(query) }
+        return (store.textbook?.chapters ?? []).compactMap { chapter in
+            let items = favorites.filter { $0.chapter.id == chapter.id }.map(\.term)
+            return items.isEmpty ? nil : (chapter, items)
+        }
+    }
     var body: some View {
-        let groups = groupByChapter(store.favoriteTerms())
-        return ScrollView {
-            VStack(alignment: .leading, spacing: 18) {
-                if groups.isEmpty {
-                    VStack(spacing: 12) {
-                        Image(systemName: "heart").font(.system(size: 40)).foregroundColor(Theme.faint)
-                        Text("お気に入りの用語はありません").font(.system(size: 14, weight: .bold)).foregroundColor(Theme.fg)
+        ScrollView {
+            LazyVStack(alignment: .leading, spacing: 18) {
+                if store.favoriteTerms().isEmpty {
+                    VStack(spacing: 14) {
+                        Image(systemName: "heart").font(.largeTitle).foregroundColor(Theme.studyKey)
+                        Text("お気に入りの用語はありません").font(.headline).foregroundColor(Theme.fg)
                         Text("用語カードのハートを押すと、ここに集まります。")
-                            .font(.system(size: 12)).foregroundColor(Theme.muted).multilineTextAlignment(.center)
+                            .font(.body).foregroundColor(Theme.muted).multilineTextAlignment(.center)
                     }
-                    .frame(maxWidth: .infinity).padding(.vertical, 60)
+                    .frame(maxWidth: .infinity).padding(.vertical, 40)
                 } else {
-                    ForEach(groups, id: \.0.id) { ch, items in
-                        VStack(alignment: .leading, spacing: 11) {
-                            HStack(spacing: 9) {
-                                Text("第\(ch.id)章").font(.system(size: 11, weight: .bold)).foregroundColor(Color(hex: 0x241703))
-                                    .padding(.horizontal, 9).padding(.vertical, 4)
-                                    .background(Theme.gold).clipShape(Capsule())
-                                Text(ch.title).font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg).lineLimit(1)
-                                Spacer()
-                                Text("\(items.count)語").font(.system(size: 11)).foregroundColor(Theme.muted)
-                            }
-                            GlossaryTermList(items: items)
-                        }
+                    GlossarySearchField(query: $query, prompt: "お気に入りから検索")
+                    ForEach(groups, id: \.chapter.id) { group in
+                        GlossaryChapterHeading(chapter: group.chapter, count: group.terms.count)
+                        GlossaryTermList(items: group.terms,
+                                         lockedIDs: purchases.isPro ? [] : Set(group.terms.map(\.id)).subtracting(store.freeGlossaryTermIDs),
+                                         onLockedTap: { showPaywall = true })
                     }
+                    if groups.isEmpty { GlossaryEmptyResults { query = "" } }
                 }
             }
             .padding(16)
         }
+        .scrollDismissesKeyboard(.interactively)
         .background(Theme.bg.ignoresSafeArea())
-        .navigationTitle("お気に入りの用語")
-        .navigationBarTitleDisplayMode(.inline)
-    }
-
-    private func groupByChapter(_ items: [(chapter: TBChapter, term: TBTerm)]) -> [(TBChapter, [TBTerm])] {
-        var order: [Int] = []
-        var map: [Int: (TBChapter, [TBTerm])] = [:]
-        for it in items {
-            if map[it.chapter.id] == nil { map[it.chapter.id] = (it.chapter, []); order.append(it.chapter.id) }
-            map[it.chapter.id]?.1.append(it.term)
-        }
-        return order.compactMap { map[$0] }
+        .sheet(isPresented: $showPaywall) { PaywallView() }
+        .navigationTitle("お気に入りの用語").navigationBarTitleDisplayMode(.inline)
     }
 }
 
-/// ホームからお気に入り用語をsheetで開くためのラッパ（NavigationStack＋閉じる）。
 struct FavoriteTermsScreen: View {
     @Environment(\.dismiss) private var dismiss
     var body: some View {

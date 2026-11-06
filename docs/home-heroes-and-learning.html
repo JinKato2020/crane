@@ -1,0 +1,26 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><title>ホーム・ヒーローの運用</title>
+<style>body{max-width:920px;margin:40px auto;padding:0 24px;font-family:Meiryo,sans-serif;color:#203d50;line-height:1.9}h1{font-size:26px}h2{font-size:20px;margin-top:28px}code,pre{font-family:Consolas,monospace}pre{padding:18px;background:#eff4f7;border-radius:12px;overflow:auto}li{margin:8px 0}a{color:#276b83}</style>
+<h1>ホームとヒーローの更新方法</h1><p>2026年11月6日。今回の対応版をインストールした後は、画像と候補一覧をOTAで更新できます。画面構造やアプリの挙動を変更するときは新しいビルドが必要です。</p>
+<h2>ユーザーができること</h2><ul><li>ホームの「背景を選ぶ」または設定の「ホームの背景」から変更。プレビュー後、「この背景にする」で保存。×で閉じた場合は変更しません。</li><li>既存画像を既定に、アニメ調・工場内・追加5枚、計8枚を収録。「画像なし」も選べます。前回却下された実写の朝景色・シンプル図は含みません。</li><li>選択は端末に保存。画像の選択とライト／ダークは独立。新しい候補を受け取っても、既存の選択を勝手に変更しません。</li><li>選択した候補が配信一覧から削除された場合は、その一覧の既定画像で表示。壊れた一覧・通信失敗時は同梱一覧、壊れた画像は元のHero画像へフォールバックします。</li></ul>
+<h2>画像を追加・差し替える</h2><p><code>CraneExam/Resources/home_heroes.json</code>が候補一覧です。画像は<code>Resources/images/home_hero_*</code>に配置します。管理コマンドは画像を変更せずコピーし、ファイル名に内容のハッシュを付け、manifestを再生成します。</p>
+<pre>python tools/manage_home_heroes.py list
+
+# 新しいIDなら追加。同じIDなら画像・表示名を差し替え
+python tools/manage_home_heroes.py set --id harbor-night --title "夜の港" --subtitle "実写調" --image "C:/path/to/image.png"
+
+# 選択肢の並び順（現在のIDをすべて1回ずつ指定）
+python tools/manage_home_heroes.py order existing anime cinematic 01-cabin-twilight 02-rain-harbor 03-first-light 04-skyward 05-homeward harbor-night
+
+# 未選択ユーザーの既定画像
+python tools/manage_home_heroes.py default existing
+
+# 一覧から外す。旧画像ファイルは既存キャッシュのため保持
+python tools/manage_home_heroes.py remove harbor-night
+
+python tools/verify_home_heroes.py</pre>
+<p>コミット・Push後、既存の <code>deploy-content-crane.yml</code> を実行して配信します。ResourcesとドキュメントだけのPushはiOSビルドを起動しません。今回の土台版が入っている端末は起動時、復帰時、設定の「教材・画像を更新」から取り込みます。古いアプリにヒーロー選択画面をOTAだけで追加することはできません。</p>
+<p>同じ候補を差し替えるときは <strong>id を維持</strong>してください。新しい別候補には新しいidを付けます。画像は先に取得し、取得に失敗した場合は新しい一覧への切り替えを保留します。</p>
+<h2>ホーム・学習記録</h2><ul><li>学習再開を上部に配置。教材は前回の節、用語は前回の章から開きます。模試は「模試を開く」としてタブへ戻ります。中断した模試の解答を新たに永続化する機能ではありません。</li><li>教材・用語・模試を30秒以上アクティブ表示して離れたとき、種類別に端末へ記録。週の学習日は重複させず、既存の模試解答日も含めます。学習の記録を理解度・合格保証と表現しません。</li><li>成績の詳細はホームの専用入口から確認できます。お気に入り・ブックマーク・相関図・総合解説も保持しています。</li></ul>
+<h2>無料キャンペーンと評価</h2><ul><li>無料利用権があるユーザーに、最初の案内を表示。閉じるか学習を開始したら再表示しません。既存の購入済み権利・無料付与の条件は変更していません。</li><li>利用3日目以降、30秒以上の学習を終えたときに評価APIを呼びます。次回は7暦日以上後。約2秒の遷移待ちの間に新しい学習やタップが始まった場合、別のシート表示中、非アクティブ時は見送ります。</li><li>Apple標準の評価画面を使用。別の評価ポップアップや「満足した人だけApp Storeへ」の分岐は設けません。表示・評価送信・星数はアプリ側で取得できません。</li><li>設定の利用権復元の下に、App Storeのレビュー直リンクとご意見の入口を常設。同時にリクエストカードを自動表示する旧処理は撤去。無料利用は評価・メール送信の有無に関係なく継続します。</li></ul>
+<h2>検証とビルド運用</h2><p>Pythonで画像・manifest、480問・教材参照、クイズ424回答・882パターン、207用語を検証。Swift構文解析を実施。純粋Swiftの背景選択・週記録・永続化テストはmacOS CIへ追加しました。WindowsにはiOS SDKがなく、SwiftUIの実機表示・コンパイル結果はこの時点で未確認です。</p><p>過去の単一作業用テストは、後続の承認済み図改訂を「変更」と判定します。今回は履歴の比較結果を上書きせず、<code>verify_current_learning_data.py</code>で現行教材・用語・参照・全manifestを検証しています。</p><p>「ビルドして」は開始まで。ビルドの状態照会・監視・完了待ちは行いません。</p>
+</html>

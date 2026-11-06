@@ -39,6 +39,7 @@ struct QuizView: View {
         .navigationBarBackButtonHidden(true)
         .toolbar(.hidden, for: .tabBar)
         .onAppear {
+            store.rememberStudy(StudyPlace(kind: .exam, title: "模擬試験 第\(exam.round)回", examRound: exam.round))
             if clock == nil { clock = MockExamClock(limited: timeLimitEnabled, startedAt: Date()) }
             updateClock()
         }
@@ -51,6 +52,7 @@ struct QuizView: View {
         } message: {
             Text("150分が経過したため終了しました。選択済みの解答を採点し、未回答は不正解として記録しました。")
         }
+        .trackStudyCompletion(kind: .exam)
     }
 
     private var quiz: some View {

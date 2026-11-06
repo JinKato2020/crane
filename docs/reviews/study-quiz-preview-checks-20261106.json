@@ -1,0 +1,240 @@
+{
+  "status": "PASS",
+  "type": "browser approximation (not native iOS)",
+  "cases": [
+    {
+      "section": "1-10",
+      "width": 320,
+      "theme": "light",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "1-10",
+      "width": 320,
+      "theme": "light",
+      "large": true,
+      "status": "PASS"
+    },
+    {
+      "section": "1-10",
+      "width": 320,
+      "theme": "dark",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "1-10",
+      "width": 320,
+      "theme": "dark",
+      "large": true,
+      "status": "PASS"
+    },
+    {
+      "section": "1-10",
+      "width": 390,
+      "theme": "light",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "1-10",
+      "width": 390,
+      "theme": "light",
+      "large": true,
+      "status": "PASS"
+    },
+    {
+      "section": "1-10",
+      "width": 390,
+      "theme": "dark",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "1-10",
+      "width": 390,
+      "theme": "dark",
+      "large": true,
+      "status": "PASS"
+    },
+    {
+      "section": "2-1",
+      "width": 320,
+      "theme": "light",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "2-1",
+      "width": 320,
+      "theme": "light",
+      "large": true,
+      "status": "PASS"
+    },
+    {
+      "section": "2-1",
+      "width": 320,
+      "theme": "dark",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "2-1",
+      "width": 320,
+      "theme": "dark",
+      "large": true,
+      "status": "PASS"
+    },
+    {
+      "section": "2-1",
+      "width": 390,
+      "theme": "light",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "2-1",
+      "width": 390,
+      "theme": "light",
+      "large": true,
+      "status": "PASS"
+    },
+    {
+      "section": "2-1",
+      "width": 390,
+      "theme": "dark",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "2-1",
+      "width": 390,
+      "theme": "dark",
+      "large": true,
+      "status": "PASS"
+    },
+    {
+      "section": "3-2",
+      "width": 320,
+      "theme": "light",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "3-2",
+      "width": 320,
+      "theme": "light",
+      "large": true,
+      "status": "PASS"
+    },
+    {
+      "section": "3-2",
+      "width": 320,
+      "theme": "dark",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "3-2",
+      "width": 320,
+      "theme": "dark",
+      "large": true,
+      "status": "PASS"
+    },
+    {
+      "section": "3-2",
+      "width": 390,
+      "theme": "light",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "3-2",
+      "width": 390,
+      "theme": "light",
+      "large": true,
+      "status": "PASS"
+    },
+    {
+      "section": "3-2",
+      "width": 390,
+      "theme": "dark",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "3-2",
+      "width": 390,
+      "theme": "dark",
+      "large": true,
+      "status": "PASS"
+    },
+    {
+      "section": "4-6",
+      "width": 320,
+      "theme": "light",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "4-6",
+      "width": 320,
+      "theme": "light",
+      "large": true,
+      "status": "PASS"
+    },
+    {
+      "section": "4-6",
+      "width": 320,
+      "theme": "dark",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "4-6",
+      "width": 320,
+      "theme": "dark",
+      "large": true,
+      "status": "PASS"
+    },
+    {
+      "section": "4-6",
+      "width": 390,
+      "theme": "light",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "4-6",
+      "width": 390,
+      "theme": "light",
+      "large": true,
+      "status": "PASS"
+    },
+    {
+      "section": "4-6",
+      "width": 390,
+      "theme": "dark",
+      "large": false,
+      "status": "PASS"
+    },
+    {
+      "section": "4-6",
+      "width": 390,
+      "theme": "dark",
+      "large": true,
+      "status": "PASS"
+    }
+  ],
+  "consoleErrors": [],
+  "interactions": [
+    "individual reveal/hide",
+    "show/hide all",
+    "different selection",
+    "numeric category",
+    "exit/restart",
+    "footer clearance",
+    "no horizontal overflow"
+  ]
+}

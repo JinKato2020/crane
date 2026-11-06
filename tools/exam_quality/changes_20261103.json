@@ -1,0 +1,1173 @@
+{
+  "date": "2026-11-03",
+  "changes": [
+    {
+      "id": "1-2",
+      "displayNo": 2,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows",
+        "explanation"
+      ],
+      "reason": "編集者向けの注意を学習者向けの説明に修正／対応関係を選択肢表として整列",
+      "beforeSHA256": "d42a7cea3a111969d21b45118ff84cd9b878f8860baf745d950a315652e35970",
+      "afterSHA256": "6b0d55f620b3c8b2a66ce6fa7bda85d133d57e531bc3eaecb1f108a0d6dddf9e"
+    },
+    {
+      "id": "1-21",
+      "displayNo": 21,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "36d404c0ecccc5b8c5c81642277867cc3b794c4b5d4cdc89b685080b3d0e1c4a",
+      "afterSHA256": "e80a43045bb2a0d1615c0afb4d0b602a52b86812c3a57dee62c7f50d17077627"
+    },
+    {
+      "id": "1-24",
+      "displayNo": 24,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows"
+      ],
+      "reason": "対応関係を選択肢表として整列",
+      "beforeSHA256": "950370f451b4d0341196196c8d0d84f2b0c786c888d8993d86661de4a7d8e9c5",
+      "afterSHA256": "c96a476fc983b0ead58c3674ff97b40fa831bda9713636b149056605e6a49605"
+    },
+    {
+      "id": "1-31",
+      "displayNo": 31,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "051b4ab3071aaf1dade8d92c92c7587ac78fd949260e7b37148ecbc4d5d9dbef",
+      "afterSHA256": "910de48c71cbeeb616db8c82867630ccac4aec7e83a7f2a72fef2148ec1e939b"
+    },
+    {
+      "id": "1-32",
+      "displayNo": 32,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "547575ed2c63802938f2d0bae555488227367080745944d88c5efd7132fb5a23",
+      "afterSHA256": "36a055f66f5920125b2a1394a7f2da079ba119dc31e23d3f7a11c7461bbc160f"
+    },
+    {
+      "id": "1-33",
+      "displayNo": 33,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows",
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "70f4c25f80273d55c989e0d4946d2a5927aa1a61585b82429363e42fcfe8d812",
+      "afterSHA256": "3be9066d8f19728a17497ea2ec0dd253fc16500a73e6178c1b1b85b3bc818c8e"
+    },
+    {
+      "id": "1-34",
+      "displayNo": 34,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "d0c0d00ba39491d00f8dae7c2014fb26605365f18150978b422a6c1abfbfe790",
+      "afterSHA256": "301c0401bbaf4740dbe95b05a3f10958fc26018c5ec3ff054af52ca1cb9f36ca"
+    },
+    {
+      "id": "1-36",
+      "displayNo": 36,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "cd405fe1fad60054f49aa24ad1aaa00adee21b6f9f614ca0fdb020dbaecc3739",
+      "afterSHA256": "c1c943e4ea88c7f8246551cfe91746c7709ed2db0802a9b36c1efd312d1efe64"
+    },
+    {
+      "id": "1-37",
+      "displayNo": 37,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "8d8aca336e433f4d47f3deaceffa0905ca807524914d01a1512ac202892d645d",
+      "afterSHA256": "0ce485fad0bee8d63f6bdaf833babdde9c2e906e87bff2d53cbbd3fee18af431"
+    },
+    {
+      "id": "2-3",
+      "displayNo": 3,
+      "fields": [
+        "choices",
+        "explanation",
+        "text"
+      ],
+      "reason": "露骨な誤答を除き、公式書籍の開閉・昇降操作の区別を問う",
+      "beforeSHA256": "abd1473157a352e587ca744de1698207f3efca95fdc15377298730e299e17979",
+      "afterSHA256": "21e0c8020ed357149b2c47cbbfd300e94f82a6eb10627d67d45e56ce1a4ba81d"
+    },
+    {
+      "id": "2-11",
+      "displayNo": 21,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "9cb1bffb7611ce2e6435e5d46be204cdbb1cf93b8c35a27209f9b837e4dd175c",
+      "afterSHA256": "e4c917ba8997f5343f45ac5198b542562a1aeee2f3610dbeb989908ef6890913"
+    },
+    {
+      "id": "2-21",
+      "displayNo": 31,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "6723489d49bb630dd3cf6e64bc728c6b3b2f514d59a4b5e53fddb027520cfd48",
+      "afterSHA256": "9f7358301030d3551ca92a3455575589375f2df75ede4d930ca4d8b21cfa8ef3"
+    },
+    {
+      "id": "2-22",
+      "displayNo": 32,
+      "fields": [
+        "explanation"
+      ],
+      "reason": "誤っている選択肢の理由を直接説明",
+      "beforeSHA256": "999fdddd847f34e8439ed891b1f5aec2d31021cb0e944d642a2f35e09c05f9d7",
+      "afterSHA256": "21b08a69655c4a137d262ede0070274ca77930d0bca5fcd09b6e867f7517f797"
+    },
+    {
+      "id": "2-23",
+      "displayNo": 33,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "856520887dcf9fae1bd80f16bd63f707d77ae554f188f1d5cae137cb8c31d021",
+      "afterSHA256": "1c84465504d4e40dd9e50b8bf53f23bbe4207875691272294ee418104e666468"
+    },
+    {
+      "id": "2-24",
+      "displayNo": 34,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "76fa3573c19fc82f5098dd8647421e4a9c99164bb78afb2f374e86521117f4c3",
+      "afterSHA256": "b4a1529b5b8fa09225ce1f893b22fb0652cc670a8b655d7a387c1a81ab601933"
+    },
+    {
+      "id": "2-25",
+      "displayNo": 35,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "63a2150832f18f2c9c2a8a2e07a4499e1dc501b9f6a740ae9dffb134a0d5665b",
+      "afterSHA256": "82698b029228f77c8f93baac9e6afbd9e91a50d445a4027adf4438814c306f0c"
+    },
+    {
+      "id": "3-10",
+      "displayNo": 10,
+      "fields": [
+        "figImg",
+        "figImgExp",
+        "text"
+      ],
+      "reason": "3D図とネイティブ選択肢表に合わせ重複見出しを除去／問題図と解説図を教材由来の同じ中立3D図に統一",
+      "beforeSHA256": "5e5f0dda7a86886bd2a51b73428aeeee4e21de741b7cb9694ca1056ca8b072a6",
+      "afterSHA256": "3a1de118f19e01fabc73111ecf7890b1bea920f1e48cf4f86ecce6928ecf3a64"
+    },
+    {
+      "id": "3-11",
+      "displayNo": 11,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows"
+      ],
+      "reason": "対応関係を選択肢表として整列",
+      "beforeSHA256": "924fd4c4d5a3d8204e293d7cee7176423e4ad388d2c5931b56cc2edf7afe726d",
+      "afterSHA256": "db6aeddae622c680342db47b185c7cadbba04a9ef6c5cef16d13f9e2c8acda57"
+    },
+    {
+      "id": "3-21",
+      "displayNo": 21,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "10897fc22af1bcf57b8fe7daef635114d385166f2d454fd999d55f2daabe980b",
+      "afterSHA256": "113e2807f01b953518817d900b3d11d6024b5c69740adb9e2e99237a04de1c06"
+    },
+    {
+      "id": "3-28",
+      "displayNo": 28,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "60a0b310c933607fa53ebf6a3590dcffe143010fb35576a669ba06c17f359122",
+      "afterSHA256": "0e94fc2816c4cea6cd54800726abc1dae0cdc019067c8e9a5eb5e9138b9c9c23"
+    },
+    {
+      "id": "3-30",
+      "displayNo": 30,
+      "fields": [
+        "explanation"
+      ],
+      "reason": "時間を問う誤答に対して時間の比例関係を説明",
+      "beforeSHA256": "3c27c4bbdda3c38133dc7b7fe990773155bb10b9e01647115dd3022da132fff3",
+      "afterSHA256": "9891b80e56d7e6dad4f589a8a87e65a31b8e8acf6d5f9863e0d7a22667a651df"
+    },
+    {
+      "id": "3-31",
+      "displayNo": 31,
+      "fields": [
+        "figImg",
+        "figImgExp",
+        "text"
+      ],
+      "reason": "矢印を数値の比で描き直したため旧注記を除去／図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "76ecd64e79bc832661c090e0f129dd8fcb5468259cdf7a4aa26a07698539750e",
+      "afterSHA256": "fbfc79bc7412fd5e664cddbce157a1e642fee7b4ecc7c51848ea002978c4f623"
+    },
+    {
+      "id": "3-32",
+      "displayNo": 32,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "5439c306ca05bc171eab35d3dbb530f7766a455e363f533a4796a1e8fa6bffbb",
+      "afterSHA256": "d971e80552aa02aecb6164d288433561f895a061c872130449cecd2001a586a1"
+    },
+    {
+      "id": "3-33",
+      "displayNo": 33,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows",
+        "figImg",
+        "figImgExp",
+        "text"
+      ],
+      "reason": "表の見出しの本文への重複を除去／対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "5d98b23e2a46c43eb23cce569ce58545336b5e028e487006975de4403a87efc9",
+      "afterSHA256": "1e52036df0238992f4c47f794390245cd47a106eabfd9f70eb07565f0b7b4274"
+    },
+    {
+      "id": "3-34",
+      "displayNo": 34,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "313f248e81b8edd9120f6aacbdc720d2ca5387187d2598aa514ac37cdeaa34f3",
+      "afterSHA256": "a51f22a17096742037dfebb8f7f2e85a7482e4da3245dd11f6147afa88c2c161"
+    },
+    {
+      "id": "3-37",
+      "displayNo": 37,
+      "fields": [
+        "text"
+      ],
+      "reason": "ロープ張力の成立条件を問題文に明記",
+      "beforeSHA256": "e293ef5899a4c1f527a314beb3d82e70274cea25812175ad1db8295a81753a85",
+      "afterSHA256": "ee0e42ae63cddb8e9b61cc586aea44bc2b873439c6a663e695ed019da7a4cb1b"
+    },
+    {
+      "id": "4-8",
+      "displayNo": 8,
+      "fields": [
+        "figImgExp"
+      ],
+      "reason": "古い技術系線画の解説図を教材と同じ3D図に統一",
+      "beforeSHA256": "1276525f504144aba65b1feeb562b6b7ede6784b4cbb9fe856da9cdd0bf32617",
+      "afterSHA256": "56bf790b4d11defbdd8e173a8367b373f70bec8aad6708ee7951065a9e6a75d3"
+    },
+    {
+      "id": "4-12",
+      "displayNo": 22,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "97638bb51467ba48ad0856b136711338e9d0ba54253c3d6f5814b0b1c24bdacb",
+      "afterSHA256": "f17322ad758b555567adcffa4dfe4babf1907055061803059c6839e7c8345f24"
+    },
+    {
+      "id": "4-20",
+      "displayNo": 30,
+      "fields": [
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "09d696262a439f1c592068e25a704f365a916e3204a52d6e7d534752270b08d2",
+      "afterSHA256": "d20f85d8d1f99aaa0fe415afba111d8a1ee1aeb3f004301eb99d7bd92c95ac25"
+    },
+    {
+      "id": "4-21",
+      "displayNo": 31,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "3b0e9a9b87e9f280d7c0c0a08a8954a9775cabce18093e4765a3b9311eeb381f",
+      "afterSHA256": "57cae1b684e24b947c0b048c9bf5478a4fd22642ddeb708f0ecf5f65a51b398a"
+    },
+    {
+      "id": "4-22",
+      "displayNo": 32,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows",
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "3c53131db225688e7f033d4d6b5acc687dc40f5a897aa5d1ea694e9c038ecee7",
+      "afterSHA256": "d2770a386232d53e8a5e3921ca941bf6a2fed006116cd4a3032b6dde6dbc0f51"
+    },
+    {
+      "id": "4-23",
+      "displayNo": 33,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "c3dbcde4ab649c052aa2cf2ff95ea7e1bea22fd5b49330f1cea8d7f2d6f8b823",
+      "afterSHA256": "cf65e88cc78797e891199c0489b3777fc6f12bff8865697c08890a23fb2e3d45"
+    },
+    {
+      "id": "4-25",
+      "displayNo": 35,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "7b457504288e4266b395f0b5ccf9abac258d3d38c5647c450532d293450dc5ae",
+      "afterSHA256": "7c2fb0d1228633a28dad05bea02439da8d79b750bacc118b1feea3bb7566d17d"
+    },
+    {
+      "id": "4-26",
+      "displayNo": 36,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "ab1dd0ccb3362e69a24afdc8e6d9af98f4c115a7cd65c4aca08487e4cce0ca4e",
+      "afterSHA256": "d75b54a359afd46d2882269080d0729e44422878a572ee78601bc9f7a5e492dd"
+    },
+    {
+      "id": "5-6",
+      "displayNo": 6,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows"
+      ],
+      "reason": "対応関係を選択肢表として整列",
+      "beforeSHA256": "9cc0bb259c1c3aa87a6d7b9e61fbd57c9f79c08740fcd2b1986dcb9b3928641b",
+      "afterSHA256": "a30f7bd2969697b7abb97960594f461952159d1e9dd283c7eac6b71749ee2a3d"
+    },
+    {
+      "id": "5-9",
+      "displayNo": 9,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "e7944c5969bdd3f15c3199469c4bceafb60483a4468e89b156241b24174b6e79",
+      "afterSHA256": "ea0bc38dd10ca7d368e270f7313f9ed598b063b4e9f23ecb34e8e6f37e2f888f"
+    },
+    {
+      "id": "5-11",
+      "displayNo": 21,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "e6045ae5f6686e0af00aceaa8d2f40c2975afec751fbeccf9ba6d23d37eba782",
+      "afterSHA256": "2fa272101f919764b5157e576e82fc68d95816645eed2beda181f770b799e23f"
+    },
+    {
+      "id": "5-14",
+      "displayNo": 24,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows"
+      ],
+      "reason": "対応関係を選択肢表として整列",
+      "beforeSHA256": "e249a31d31bb7ed033ea56cf957081cb1def7228d54d0b31c9a2f4836a0c3864",
+      "afterSHA256": "18452038428c02ac5a3b6edbf4e959ac1f3aa2f830f1a936841cb65f84ea6fa3"
+    },
+    {
+      "id": "5-21",
+      "displayNo": 31,
+      "fields": [
+        "explanation"
+      ],
+      "reason": "三角関数の追加学習を要求しない説明",
+      "beforeSHA256": "34bf802a4bbec35f34bf102004b6041143aa4831e546accbb9f39a47d03701d7",
+      "afterSHA256": "fa1eba316d563f511d09f212e2bad7b5c41d4542bc0a2ed57db5a4d494f33825"
+    },
+    {
+      "id": "5-22",
+      "displayNo": 32,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "d0e13c58cd5a43a84cdd4b20c6e65449c96506afbefee9c0869bf215fef18be8",
+      "afterSHA256": "b2744cb8199d873dbef3812aedf1b2e665e6a31d928180c557afb08917aa1291"
+    },
+    {
+      "id": "5-23",
+      "displayNo": 33,
+      "fields": [
+        "figImg",
+        "text"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一／数値計算に必要な重力加速度を明記",
+      "beforeSHA256": "b4f91066a7971a917f25ed3b935cf237dac29ee902f014f261a8efe06f175d6b",
+      "afterSHA256": "de7d9ce95d1efacaacfe2ee74e2f6342785f0f9dfcc8ced7f7cee1d9f506201b"
+    },
+    {
+      "id": "5-25",
+      "displayNo": 35,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "897476d41b78fd03cbbfdd1d8c87b2f5c0b838e6c09466692d09975f3c153394",
+      "afterSHA256": "68f9dd66cec64456ce7ebca22c202bf9f225232ab58272fd07e09b7c327939f5"
+    },
+    {
+      "id": "5-26",
+      "displayNo": 36,
+      "fields": [
+        "text"
+      ],
+      "reason": "ロープ張力の成立条件を問題文に明記",
+      "beforeSHA256": "3e598e864880afb9045531408df28d03f1232dfbfc9d6c416a6b21e37c52b5c2",
+      "afterSHA256": "c5d0e23b6e126577ab13eb15dbdc0eef04de8c8506fe6dab82d44f33f40aedff"
+    },
+    {
+      "id": "5-27",
+      "displayNo": 37,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "9d79fb3fb02ebdeeee621ae670f0195a3942a7bdf2be478d3af57d95e93e9615",
+      "afterSHA256": "8f2b1f1126dbc1e7e6c055f240f23f09f1a1a34b9da94afe5c10c56b68c57002"
+    },
+    {
+      "id": "5-29",
+      "displayNo": 39,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "2a14ba6d71940467b915f794ade71ecf7fee4cda99dc8863ae92dccf5ee7bccb",
+      "afterSHA256": "b716ccb3e9ea33491970a7f8a492a210956e329e83278055e849680b5f67d80d"
+    },
+    {
+      "id": "6-11",
+      "displayNo": 21,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "2e9bfa07d74cda219cad3a06cc8231542757b646c83cb21332f772ef79eae313",
+      "afterSHA256": "4bbbac594a2aa0eeacc4b07721c7e947c1c63c56ff9a8f4a38e667056225177e"
+    },
+    {
+      "id": "6-21",
+      "displayNo": 31,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "9dd2d6cb5d998ad75394de66949df21a79b3e1e5cd0815a31645876b5a4212fe",
+      "afterSHA256": "a61da2cbea10b2e26b0c0c0ecf6e5af25e60e035a83befe56f8b7bff4c74657d"
+    },
+    {
+      "id": "6-22",
+      "displayNo": 32,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "9156ee36f322172f81c559718d6975066d5b2e98e5719c0dde79537918180c24",
+      "afterSHA256": "5d73e6e539d38d0ccdd2baa33cb362777e85f085ca48e81582aeb1b87e15941f"
+    },
+    {
+      "id": "6-23",
+      "displayNo": 33,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows",
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "aab5be7ab02bc88eff3dab02048cf5aadaf1d79d6269eb5427f3584072899bff",
+      "afterSHA256": "2773b8964bd1ba818236ed4dfd00002c0fcfab62081b9836109f15ed95890bf9"
+    },
+    {
+      "id": "6-24",
+      "displayNo": 34,
+      "fields": [
+        "explanation",
+        "figImg",
+        "text"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一／数値計算に必要な重力加速度を明記／鉛直成分を問う問題に不要な三角関数を除去",
+      "beforeSHA256": "39bc7cb95e9e48e61f7386fdc799fc8634c790c31f5754aa93d7033cc7da8daa",
+      "afterSHA256": "415b8c7c2a5e2d747edb103b421ae6093623966920a6f994684e8bf1a8b0ae57"
+    },
+    {
+      "id": "6-29",
+      "displayNo": 39,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "efe1b79d688d9437fd781864bf943796d256fd919e61a07b9703df70d4ce1c4f",
+      "afterSHA256": "a044610110afb985fd0e19577b9badfd0550d8fe498a8e08be9ac243d481178b"
+    },
+    {
+      "id": "7-8",
+      "displayNo": 8,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "1c6c3be1268f6a6212c7d89e6ca53d398b004100ccb4369169c71657ac574bc2",
+      "afterSHA256": "db13fcc653acf6cafee5fb01d511145a8628109a6fca2b9c56652bdb52abed17"
+    },
+    {
+      "id": "7-11",
+      "displayNo": 21,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "fa78173aea955d9a8c54326c52aa5f6c457a3007e56b0be220998019d3074ef9",
+      "afterSHA256": "8c577992289e809dceecb1b1dc86080eb40fcc02e1fc911ad65367a7cec0ebe1"
+    },
+    {
+      "id": "7-21",
+      "displayNo": 31,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "dd6a27ce337211ff98ba9589fdafd384110ed1bde0cca6c4257697033ddd07d7",
+      "afterSHA256": "459690f426ca1eb1ee87c369cf0245f5c48dd2184dbce89ad2e364463facd0ce"
+    },
+    {
+      "id": "7-22",
+      "displayNo": 32,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "9c6f5f3b0fc5e71cfd7696304a64f0dffa61d40da9311c257db2b84b176d66fe",
+      "afterSHA256": "6adc181054d4ce9bb474e28b65c769f1a71d45a092ac7c76476ae4db86d25af0"
+    },
+    {
+      "id": "7-23",
+      "displayNo": 33,
+      "fields": [
+        "figImg",
+        "text"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一／数値計算に必要な重力加速度を明記",
+      "beforeSHA256": "ea36d9a0f8bf73ee434690121b8b79057239f150ad806edd7ad1f2945fa9d424",
+      "afterSHA256": "0369174425c813fef8c03d076079879003bd66fc26e51276b94fcc38d1fc72bf"
+    },
+    {
+      "id": "7-24",
+      "displayNo": 34,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows",
+        "figImg",
+        "text"
+      ],
+      "reason": "対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一／数値計算に必要な重力加速度を明記",
+      "beforeSHA256": "7970b1080e4e8ed9f88049dc12d6fa23293f6e409681efd3022700f3c18d281e",
+      "afterSHA256": "67f4e84e3c4d0dc552a91b0e64f697517af4a485c8b492443391c94edbba96d2"
+    },
+    {
+      "id": "7-28",
+      "displayNo": 38,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "534dc1e109e957058ee4121f1fc88971ee86656be9b5cb59e7bc8c4dc434df5c",
+      "afterSHA256": "adf0715f201450a09c465332304cc4d5ef418626da2bd3d31e7301510c886b6d"
+    },
+    {
+      "id": "8-1",
+      "displayNo": 1,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows",
+        "figImg"
+      ],
+      "reason": "対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "f31525f436f75250bd736fa84b34df60f3c253e4498be38d6e8a352640859a3c",
+      "afterSHA256": "6009886d8c4bd0a6577e4ddc96d58a868c72eb3ffe0fcdaeba81e8a2a90ee19f"
+    },
+    {
+      "id": "8-3",
+      "displayNo": 3,
+      "fields": [
+        "figImgExp"
+      ],
+      "reason": "古い技術系線画の解説図を教材と同じ3D図に統一",
+      "beforeSHA256": "d6f18a156c6b9fd0d881ba8fa7e3edc9544a731d1ae33245d94fe61047fd9abd",
+      "afterSHA256": "ddeba8bc91f566b7691c9102d09510ad0d13a4c69303e3a1d128d7993b376962"
+    },
+    {
+      "id": "8-5",
+      "displayNo": 5,
+      "fields": [
+        "figImgExp"
+      ],
+      "reason": "古い技術系線画の解説図を教材と同じ3D図に統一",
+      "beforeSHA256": "7de7cb1050dea47515458084bf4c128666e99fc1d998557ecdfbc9917ecb0c53",
+      "afterSHA256": "895abfbc422571c41264e5fb8ddc590596addec8fa283955ecf3f0b55d1f844b"
+    },
+    {
+      "id": "8-11",
+      "displayNo": 21,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "ac6edf79cfcc3fb3ef62500081750c4473fa9fece628bb5b5af4b24cadfb0fb2",
+      "afterSHA256": "53c76dd5bb84179d22b92ea9778053e2182fc106b6cf41610896d72fcf31983a"
+    },
+    {
+      "id": "8-21",
+      "displayNo": 31,
+      "fields": [
+        "figImg",
+        "text"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一／数値計算に必要な重力加速度を明記",
+      "beforeSHA256": "ab8a40a97c8423f87e14ca827ac081b9e8edd33da903f3d20954e39237614967",
+      "afterSHA256": "7f3a950b9e68b5926a68ccdf11de035ec3bf62f82f2e0ce39ffffe0c9c774298"
+    },
+    {
+      "id": "8-22",
+      "displayNo": 32,
+      "fields": [
+        "figImg",
+        "text"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一／数値計算に必要な重力加速度を明記",
+      "beforeSHA256": "5cbf88ae5f075e9739495fc6a93428062ad5e50bc646a8ec20f7382b160cf363",
+      "afterSHA256": "3f33c5415abb9cb5535121eae9dedcdcd4df6c32316e9a9c5437ceb04a0f04ae"
+    },
+    {
+      "id": "8-23",
+      "displayNo": 33,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "11dc736a019e6a148de3668c2d45d6e034b5726fdfeee47fcfc2b250727ed4f9",
+      "afterSHA256": "7dde090cf08de55b9c67c85899e7b48032c51cf1f870d8436aa0f705b236b8f4"
+    },
+    {
+      "id": "8-25",
+      "displayNo": 35,
+      "fields": [
+        "text"
+      ],
+      "reason": "ロープ張力の成立条件を問題文に明記",
+      "beforeSHA256": "d722b8e16c82d796589e9e99c6e6b61d8479844fcf759b80266989cc79f3b56f",
+      "afterSHA256": "9fa796a90c77329ca82978d57ba9b69764edad2f4758adfe79a929d22f7bf81a"
+    },
+    {
+      "id": "8-28",
+      "displayNo": 38,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "7ad8a062aa34d2bc819cedb481f819166489f99dc5bcca64b46149b8a5beab26",
+      "afterSHA256": "57f2e8b69e5614215e97e32b85463be1d363b63a2ad5bbc8fc8c60fe95c776fe"
+    },
+    {
+      "id": "8-30",
+      "displayNo": 40,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows",
+        "figImg",
+        "text"
+      ],
+      "reason": "対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一／数値計算に必要な重力加速度を明記",
+      "beforeSHA256": "3d79e67b0a79bfb520d854c670c3f10e1a99eaae7c628c293bc7e54ea5a8c727",
+      "afterSHA256": "11fe8d24950feee128a4cfc30c04082152d768c5fae8ba77f28f2415190fa94b"
+    },
+    {
+      "id": "9-3",
+      "displayNo": 3,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows",
+        "figImgExp"
+      ],
+      "reason": "古い技術系線画の解説図を教材と同じ3D図に統一／対応関係を選択肢表として整列",
+      "beforeSHA256": "e91d53a7a11bba305f1d07c2ba791f05f8e46c1a93408a25ed3909031683268a",
+      "afterSHA256": "b64e7793aab38f8a5c442d5c2a2753c577d4a031c682d43da61748c8d131598f"
+    },
+    {
+      "id": "9-5",
+      "displayNo": 5,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows",
+        "figImgExp"
+      ],
+      "reason": "古い技術系線画の解説図を教材と同じ3D図に統一／対応関係を選択肢表として整列",
+      "beforeSHA256": "86e4aa97cf365557c4ffdbcac70e6393194d2c2349088b50764223fbc8997131",
+      "afterSHA256": "27dfb3de2b21057df2baf58fd58cbb2cec195fa655b252b53f575b05fc3a8f4d"
+    },
+    {
+      "id": "9-20",
+      "displayNo": 20,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows"
+      ],
+      "reason": "対応関係を選択肢表として整列",
+      "beforeSHA256": "583d7975894970167d6188c71ec542792a178f7abbe0084e3cbea98d6f45d92f",
+      "afterSHA256": "66266cd955c88284d5ffd29cc34b6095f3f127d71a4947f07705de8cbd780848"
+    },
+    {
+      "id": "9-22",
+      "displayNo": 22,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "091083345bcc397246b8e57147786ab81fd4d5ee23462ddde242c116298b0ea6",
+      "afterSHA256": "e3d5e61b70c94ee43dc23d409a5ad3b2d81dff0dac1e055472469bd8f592393d"
+    },
+    {
+      "id": "9-32",
+      "displayNo": 32,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "256e594fba4c7ea3c2d78779941eb2be332308cf5fc0a7756b0ae75a533b9479",
+      "afterSHA256": "937cad93aa4bbc214a60b6bced30b8ddbede4c91b99acf42ff5552707e27d1dc"
+    },
+    {
+      "id": "9-33",
+      "displayNo": 33,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows",
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "d0bd3e2d5a3926af45042b1e054b3c23de9aa05c64dc6e86a86c886579273c88",
+      "afterSHA256": "2318185e310af11cbd3ed9a9d6d83e8da66aab65ae9ac855728503c55b10e85d"
+    },
+    {
+      "id": "9-34",
+      "displayNo": 34,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows"
+      ],
+      "reason": "対応関係を選択肢表として整列",
+      "beforeSHA256": "aa9849a6ab8005af4c336a469e4a16b07d300c831f68b5f27da0fb6e2366230a",
+      "afterSHA256": "78dba57f446ff3243ccaffba6d7241bf6294b3bbb0d7234d994fbe3c96cd0d20"
+    },
+    {
+      "id": "9-35",
+      "displayNo": 35,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "844354ad4d4354b1b10a187cb77395c950b140e85ad4b190b8cf3d0345b70b97",
+      "afterSHA256": "f855d475e46cad783282aface8b9d7a7cc3243bb23e59db7b43f78c4b4c7311c"
+    },
+    {
+      "id": "9-38",
+      "displayNo": 38,
+      "fields": [
+        "explanation",
+        "figImg",
+        "figImgExp",
+        "text"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一／他のつり角度問題と同じく張力係数を与える／張力係数で解ける説明に統一",
+      "beforeSHA256": "3d9cf84b592ca346aaa4ff97427b6783424a19b53c2b1eed7dd40bb89a4c77d6",
+      "afterSHA256": "d7010b7a06765c6c6e93bb8487e366054521aae6fbcf4f541cbb1681363b1436"
+    },
+    {
+      "id": "9-39",
+      "displayNo": 39,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "f490774d2999717fc13d9ecc580ca15a9339bfcf0b769626751573b33f035bd3",
+      "afterSHA256": "ecef7fcd9ba61bfefe71fff3d6e39248369794269456efb5007ddd01e3ab481c"
+    },
+    {
+      "id": "9-40",
+      "displayNo": 40,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "9e450200015795761c62ef3fd00e14fbd0b08872c80389463573c6cdd0a66dfc",
+      "afterSHA256": "cebb4ff0f3b63a7d8f8779711928bb618104f070115b6266c46dce17cbd1439a"
+    },
+    {
+      "id": "10-3",
+      "displayNo": 3,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows",
+        "figImgExp"
+      ],
+      "reason": "古い技術系線画の解説図を教材と同じ3D図に統一／対応関係を選択肢表として整列",
+      "beforeSHA256": "82aefa88583da5986bcc210f9e705a118d34ff0a574fb5ec7e567697bee03250",
+      "afterSHA256": "1039bec3ecf88dd163f483118f40dfb67eab4a33cae50195c887da81205a50e7"
+    },
+    {
+      "id": "10-5",
+      "displayNo": 5,
+      "fields": [
+        "figImgExp"
+      ],
+      "reason": "古い技術系線画の解説図を教材と同じ3D図に統一",
+      "beforeSHA256": "b6bdb249ee0db2ace3bd4495237c4f6ae8e67a11c372e7669fab44b461c04fe3",
+      "afterSHA256": "76d56fe5413c3f0fee2b2f1114b1fe359719927eceee8d932035bf935df3fa86"
+    },
+    {
+      "id": "10-20",
+      "displayNo": 20,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows"
+      ],
+      "reason": "対応関係を選択肢表として整列",
+      "beforeSHA256": "95f43f854c04942766912cf65140575bd2376b718884b2af131289ce07b5d649",
+      "afterSHA256": "ee6502a69e1d72c86d213fbf7d9635f4d693fbada0a723eb623a795fadecd11d"
+    },
+    {
+      "id": "10-22",
+      "displayNo": 22,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "a1c847e844ab5522548520c531c2b1ebc642222b8abf1a0e44252922eeb1b962",
+      "afterSHA256": "58dad2bf2fc6e6df24603e0cca4bd1a35a536625f4ec358f6fb7a10f7e5382fd"
+    },
+    {
+      "id": "10-32",
+      "displayNo": 32,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "6dc7ca56b14ed3ad5e5d8ac84c6411da7daa9bea5709e08db764391fadeff92b",
+      "afterSHA256": "42bf82443696e487c67b42bd4d6faaf17ad7cea4a5647ea84f594de966dadb68"
+    },
+    {
+      "id": "10-33",
+      "displayNo": 33,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "9f612a94b2b55c4596b840ad0d28885c686c25186aa9d166dc29e809f797680d",
+      "afterSHA256": "90006ed023095ac2b7e6be34b825d1fb5c3a0513026400a0f01e6374bf06d628"
+    },
+    {
+      "id": "10-36",
+      "displayNo": 36,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "9e0e08a50f1396affbba3d3d8115f3e0fd833d2cbbe579b5cac48057cc880cc1",
+      "afterSHA256": "7b8d0095d7b4bbc7d6780260bbdf451ed4a997fe88f01de7b8a92a93fef658c4"
+    },
+    {
+      "id": "10-38",
+      "displayNo": 38,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "b2c062584b29447149889abfd3ef17de8e156a947062ca87bfef2afebf58c1f4",
+      "afterSHA256": "d2a3d740796ff0dc19f599b6a5dfa1c154d24c3b8a145bf3ae816400bf3d0cd0"
+    },
+    {
+      "id": "10-40",
+      "displayNo": 40,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "cb5f3aafad3bd0c41c3dfdbfcc97907a13c30a81b9027c0b4b852054afd55617",
+      "afterSHA256": "a2311effba14bf033f7bc8ac6d3d2313761dada757123dc14e3f477bdba4502a"
+    },
+    {
+      "id": "11-3",
+      "displayNo": 3,
+      "fields": [
+        "figImgExp"
+      ],
+      "reason": "古い技術系線画の解説図を教材と同じ3D図に統一",
+      "beforeSHA256": "35d5d2f616ec20e8aac419e30966896c9e3d93b1edae530ad8e1c704c711a30f",
+      "afterSHA256": "674b38166c769334cc9e40594f13c74b9650489c294994c67eb3083e3fe10427"
+    },
+    {
+      "id": "11-20",
+      "displayNo": 20,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows"
+      ],
+      "reason": "対応関係を選択肢表として整列",
+      "beforeSHA256": "7d5c66c8d0245e223a986708f464e6f25435f31fef2fd2f82efdf59b35aa046c",
+      "afterSHA256": "d45d0461855197700f627858980e0c2975567405dc0ce4655878583208695481"
+    },
+    {
+      "id": "11-22",
+      "displayNo": 22,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "406b0ecf14a2fa4c709edc884d5da06a82a44baf34848af1c118b25b546800df",
+      "afterSHA256": "fbfd082f4134a183fbca1565f9c14e1984ee666dab106fb0edd1be5ffd5e626c"
+    },
+    {
+      "id": "11-31",
+      "displayNo": 31,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "7c2436490e7bb18353e24ff130d9cc2c6de63d9559f2b55880e5e57e9e43d863",
+      "afterSHA256": "ee4fcc13d365d03890bca0b924498fa9045075e12186f79cb1547a30b291d2d2"
+    },
+    {
+      "id": "11-32",
+      "displayNo": 32,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "52703621d61ee43701ab6cd524839d9f30c63ae4adab429d2548819a4e33da63",
+      "afterSHA256": "960bd5775e715f7a8add251e419ac2c3c9aa11e70b4757928d3bd37084127645"
+    },
+    {
+      "id": "11-33",
+      "displayNo": 33,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "479321f827e26a120271540d9577978f065c42b5d457ce173b60b1511b24f391",
+      "afterSHA256": "83cbfe7519a3e2ef1c2c36c7abb0a08b4ac617dff57d42b3f9476696ddeabc87"
+    },
+    {
+      "id": "11-34",
+      "displayNo": 34,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "62a836ab5b0a0537f2760a926bd3ffd538ec9ae39604908331c6bc94679d76ff",
+      "afterSHA256": "63ca55f5aa2726bf7a22e7eaf97b41ed9d8cb69bfdd332736293ab43feb5e1b3"
+    },
+    {
+      "id": "11-38",
+      "displayNo": 38,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "d41d663ff5b2287755b3cf7d239d12c040aa1b6545b29b9a3d302027f7ce61a0",
+      "afterSHA256": "8b7dbb82cf53a322718f8f48f19063a4d6973ed95fc9031eb0748f2c10451fd8"
+    },
+    {
+      "id": "11-40",
+      "displayNo": 40,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "76ed0463669366ea1320216ea3df21ce784c574e426e0dc232cc0784186ca31e",
+      "afterSHA256": "e67e26eeb6f5a0aeb43a4d8e5e8df77bf6cdf870426b9a8f9c67b9b83258d447"
+    },
+    {
+      "id": "12-3",
+      "displayNo": 3,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows",
+        "explanation",
+        "figImg",
+        "figImgExp",
+        "text"
+      ],
+      "reason": "より方向の抽象的な斜線を技術系3D図に変更／対応関係を選択肢表として整列",
+      "beforeSHA256": "734de81572a7e3fedf55a0804b73cbf575bd1dcc1aa49c98f2e49dd60fad5393",
+      "afterSHA256": "6b2ef13dd3bcce4e9d34d9f312807ca2575addbb0c61e6b9ea81eeff9c88020b"
+    },
+    {
+      "id": "12-5",
+      "displayNo": 5,
+      "fields": [
+        "figImg",
+        "figImgExp",
+        "text"
+      ],
+      "reason": "二段歯車を教材と同じ3D図へ変更／問題図と解説図を教材由来の同じ中立3D図に統一",
+      "beforeSHA256": "233304bebbacca7c2c3081edcf529af00d0c40737b5bad83dbc0d6f2544f73c9",
+      "afterSHA256": "01c57aafab20f27943e636718b891d671518a7ae601cd800002aa324ae3b4095"
+    },
+    {
+      "id": "12-20",
+      "displayNo": 20,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows"
+      ],
+      "reason": "対応関係を選択肢表として整列",
+      "beforeSHA256": "223999d37a65669578bfd717a0c0a33a7776de0e5570aabc8d4d3f3510413177",
+      "afterSHA256": "1c3e57b2141af9cff64ac788f2f8f354b65ae1a022cb07c5b23261390f54df3a"
+    },
+    {
+      "id": "12-22",
+      "displayNo": 22,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "91c093f2cb87094cf3fe0e7fd7eb94918d67853c43c6c5d8d35801e0f10baadd",
+      "afterSHA256": "659c222adf6fa50281cce19fc8977e4362db4b97e8abecc12a001cdad212cf32"
+    },
+    {
+      "id": "12-32",
+      "displayNo": 32,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "21b3815e20bb55f671f3602ff95522cc191699ea727aee6e08129401e7373929",
+      "afterSHA256": "9814968e456fbc54d96d5555458cc77416655e59639867e6df3d2e98c47a068a"
+    },
+    {
+      "id": "12-33",
+      "displayNo": 33,
+      "fields": [
+        "choiceHeaders",
+        "choiceRows",
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "81838b51c1b3322de64d9e26b8c8b84b13ddd03aa96245c4fac67b13c9b3cf62",
+      "afterSHA256": "92f2ae6200b96c9432f68e4f6cf2344cedf5220b2520673e9d819f86560cdd05"
+    },
+    {
+      "id": "12-35",
+      "displayNo": 35,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "9961ff1b232955cb5f7d3eaa29a2eaaf4057d185ac008dea2b678a29dbf7ff74",
+      "afterSHA256": "c7f0041e05f8b0cb6fa8dcfe6714ef44d8fbd0a803c25744baf25a0886e55c53"
+    },
+    {
+      "id": "12-38",
+      "displayNo": 38,
+      "fields": [
+        "figImg"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "4d3752bc1f877a621d3aca89116e83eae0d4be9d75aaaf3e5b9bdbaf3cfad649",
+      "afterSHA256": "87421dcb032ce5b3735e2af06b2253757c8733d0fac3035ec3430401b3896dc7"
+    },
+    {
+      "id": "12-39",
+      "displayNo": 39,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "c196b34e762c78eb157600be77c817a15a149a75c50a6d77366a5005dadb6e92",
+      "afterSHA256": "6434cd4fb8417a87b0c18734f5ac3c442ae60871950852ebe0868d9ea4d34d0c"
+    },
+    {
+      "id": "12-40",
+      "displayNo": 40,
+      "fields": [
+        "figImg",
+        "figImgExp"
+      ],
+      "reason": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "beforeSHA256": "a19cf76f68e599f6d4737a92dabdd52f1dee4bd217f2504933442c6885c7c8cf",
+      "afterSHA256": "c9aef96400ee9e1538b75eea8b07dfc8291d5ff5c0d7a6c4d87bd679e3101107"
+    }
+  ]
+}

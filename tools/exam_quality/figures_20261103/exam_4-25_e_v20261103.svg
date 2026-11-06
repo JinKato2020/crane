@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1226" viewBox="-28 -28 856 656" role="img" aria-labelledby="title">
+<title id="title">第4回 問25 解説図</title>
+<rect width="800" height="600" fill="white" />
+<defs><marker id="navyArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1F3A65" /></marker><marker id="redArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#C82D2D" /></marker></defs>
+<text x="400.000" y="35.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.0" fill="#1F3A65" font-weight="600">鋼板の正面図・長方形の貫通穴</text>
+<rect x="300.000" y="90.000" width="160.000" height="320.000" fill="#E1E7F2" stroke="#1F3A65" stroke-width="2.8000000000000003" />
+<rect x="348" y="170" width="64" height="160" fill="white" stroke="#1F3A65" stroke-width="2.8000000000000003" />
+<line x1="260.000" y1="90.000" x2="260.000" y2="410.000" stroke="#888888" stroke-width="2.8000000000000003" />
+<line x1="250.000" y1="90.000" x2="292.000" y2="90.000" stroke="#888888" stroke-width="2.8000000000000003" />
+<line x1="250.000" y1="410.000" x2="292.000" y2="410.000" stroke="#888888" stroke-width="2.8000000000000003" />
+<text x="228.000" y="260.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="21.0" fill="#1F3A65" font-weight="600">2.0 m</text>
+<line x1="300.000" y1="448.000" x2="460.000" y2="448.000" stroke="#888888" stroke-width="2.8000000000000003" />
+<line x1="300.000" y1="417.000" x2="300.000" y2="458.000" stroke="#888888" stroke-width="2.8000000000000003" />
+<line x1="460.000" y1="417.000" x2="460.000" y2="458.000" stroke="#888888" stroke-width="2.8000000000000003" />
+<text x="380.000" y="481.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="21.0" fill="#1F3A65" font-weight="600">1.0 m</text>
+<line x1="428.000" y1="170.000" x2="428.000" y2="330.000" stroke="#888888" stroke-width="2.8000000000000003" />
+<line x1="416.000" y1="170.000" x2="437.000" y2="170.000" stroke="#888888" stroke-width="2.8000000000000003" />
+<line x1="416.000" y1="330.000" x2="437.000" y2="330.000" stroke="#888888" stroke-width="2.8000000000000003" />
+<text x="500" y="257.000" text-anchor="start" font-family="Yu Gothic, Meiryo, sans-serif" font-size="20.8" fill="#1F3A65" font-weight="600">1.0 m</text>
+<line x1="348.000" y1="140.000" x2="412.000" y2="140.000" stroke="#888888" stroke-width="2.8000000000000003" />
+<line x1="348.000" y1="130.000" x2="348.000" y2="166.000" stroke="#888888" stroke-width="2.8000000000000003" />
+<line x1="412.000" y1="130.000" x2="412.000" y2="166.000" stroke="#888888" stroke-width="2.8000000000000003" />
+<text x="380.000" y="123.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="20.8" fill="#1F3A65" font-weight="600">0.40 m</text>
+<text x="600.000" y="370.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="21.0" fill="#1F3A65" font-weight="600">厚さ 0.05 m</text>
+<text x="600.000" y="405.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="20.8" fill="#1F3A65" font-weight="600">密度 7,800 kg/m³</text>
+<text x="400.000" y="530.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="21.0" fill="#C82D2D" font-weight="600">V = (2.0 × 1.0 − 1.0 × 0.40) × 0.05</text>
+<text x="400.000" y="572.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.0" fill="#C82D2D" font-weight="600">m = 7,800 × 0.080 = 624 kg</text>
+</svg>

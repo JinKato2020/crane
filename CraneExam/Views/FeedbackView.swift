@@ -1,6 +1,46 @@
 import SwiftUI
 import MessageUI
 
+/// 読んだ画面を離れた時を、評価依頼の候補にする。バックグラウンド時間は数えない。
+private struct StudyCompletionModifier: ViewModifier {
+    let kind: StudyKind
+    @EnvironmentObject private var store: ExamStore
+    @Environment(\.scenePhase) private var scenePhase
+    @State private var exposure = StudyExposure()
+    @State private var isVisible = false
+    @State private var screenID = UUID()
+
+    func body(content: Content) -> some View {
+        content
+            .onAppear {
+                guard !isVisible else { return }
+                isVisible = true
+                store.beginStudyScreen(screenID)
+                if scenePhase == .active { exposure.resume(at: Date()) }
+            }
+            .onChange(of: scenePhase) { phase in
+                if phase == .active && isVisible {
+                    exposure.resume(at: Date())
+                } else {
+                    exposure.pause(at: Date())
+                }
+            }
+            .onDisappear {
+                guard isVisible else { return }
+                let now = Date()
+                store.endStudyScreen(screenID)
+                if exposure.finish(at: now) {
+                    store.recordStudyCompletion(kind: kind, at: now)
+                }
+                isVisible = false
+            }
+    }
+}
+
+extension View {
+    func trackStudyCompletion(kind: StudyKind) -> some View { modifier(StudyCompletionModifier(kind: kind)) }
+}
+
 /// メールはユーザーが内容を確認し、送信を押したときにだけ送る。
 struct FeedbackView: View {
     @Environment(\.dismiss) private var dismiss

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="896" viewBox="-23.8 -23.8 727.6 407.6">
+<rect width="680" height="360" fill="white" />
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#1F3A65" /></marker></defs>
+<g fill="none" stroke="#1F3A65" stroke-width="2.38" stroke-linecap="round" stroke-linejoin="round"><line x1="340" y1="75" x2="106" y2="210" /><line x1="340" y1="75" x2="574" y2="210" /><rect x="106" y="210" width="468" height="65" /><circle cx="340" cy="70" r="5" /><path d="M305.36 95 A40 40 0 0 0 374.64 95" /></g>
+<g fill="#1F3A65" font-family="Yu Gothic, Meiryo, sans-serif" font-size="22.0" text-anchor="middle" font-weight="600"><text x="340" y="145" font-family="Yu Gothic, Meiryo, sans-serif" font-weight="600" paint-order="stroke" stroke="white" stroke-width="3.4" stroke-linejoin="round">120°</text><text x="340" y="253" font-family="Yu Gothic, Meiryo, sans-serif" font-weight="600">750 kg</text></g>
+</svg>

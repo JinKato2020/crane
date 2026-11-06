@@ -80,8 +80,8 @@ struct SVGFigureView: View {
                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(Theme.line, lineWidth: 1))
                 .overlay(alignment: .bottomTrailing) {
                     HStack(spacing: 3) {
-                        Image(systemName: "arrow.up.left.and.arrow.down.right").font(.system(size: 9, weight: .bold))
-                        Text("タップで拡大").font(.system(size: 9, weight: .bold))
+                        Image(systemName: "arrow.up.left.and.arrow.down.right").font(.caption.weight(.semibold))
+                        Text("タップで拡大").font(.caption.weight(.semibold))
                     }
                     .padding(.horizontal, 7).padding(.vertical, 4)
                     .background(Capsule().fill(Color.black.opacity(0.6)))
@@ -90,6 +90,11 @@ struct SVGFigureView: View {
                 }
                 .contentShape(Rectangle())
                 .onTapGesture { zooming = true }
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel(caption ?? "教材の図")
+                .accessibilityAddTraits(.isButton)
+                .accessibilityHint("図を全画面で拡大します")
+                .accessibilityAction { zooming = true }
                 .fullScreenCover(isPresented: $zooming) {
                     ZoomableSVGView(svg: svg, caption: caption) { zooming = false }
                 }
@@ -116,7 +121,7 @@ struct ZoomableSVGView: View {
                 .background(Color.white)
             if let c = caption, !c.isEmpty {
                 Text("図：\(c)")
-                    .font(.system(size: 12, weight: .bold)).foregroundColor(.white)
+                    .font(.subheadline).foregroundColor(.white)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(14)
                     .background(Color.black)
@@ -133,7 +138,7 @@ struct ZoomCloseBar: View {
     var body: some View {
         HStack {
             Text("ピンチ/ダブルタップで拡大")
-                .font(.system(size: 11)).foregroundColor(.white)
+                .font(.subheadline).foregroundColor(.white)
                 .padding(.horizontal, 10).padding(.vertical, 6)
                 .background(Capsule().fill(Color.white.opacity(0.18)))
             Spacer()
@@ -142,6 +147,7 @@ struct ZoomCloseBar: View {
                     .font(.system(size: 32))
                     .symbolRenderingMode(.palette)
                     .foregroundStyle(Color.white, Color.white.opacity(0.28))
+                    .frame(width: 44, height: 44)
             }
             .contentShape(Rectangle())
             .accessibilityLabel("閉じる")

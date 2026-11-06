@@ -1,0 +1,51 @@
+{
+  "status": "additional-candidates-complete",
+  "generator": "built-in image_gen",
+  "images": [
+    {
+      "file": "01-cabin-twilight.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "unchangedOriginal": true
+    },
+    {
+      "file": "02-rain-harbor.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "unchangedOriginal": true
+    },
+    {
+      "file": "03-first-light.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "unchangedOriginal": true
+    },
+    {
+      "file": "04-skyward.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "unchangedOriginal": true
+    },
+    {
+      "file": "05-homeward.png",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "unchangedOriginal": true
+    }
+  ],
+  "appFilesUnchanged": 796,
+  "activeHeroOptionsChanged": false,
+  "preview": "index.html",
+  "comparison": "comparison.png",
+  "zip": "hero-emotive-five.zip"
+}

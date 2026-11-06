@@ -32,6 +32,7 @@ jobs:
       - name: Rebuild content manifest
         run: |
           python tools/content_manifest.py
+          python tools/verify_home_heroes.py
           echo "::notice::manifest 再生成完了"
 
       - name: Sync content & manifest to Cloudflare R2
@@ -61,6 +62,7 @@ jobs:
           #    （manifest が指すのにまだ無いファイル、を配信中に作らない＝DL失敗を防ぐ）
           rclone copyto "$RES/exams.json"     "$DEST/content/exams.json"     "${FLAGS[@]}"
           rclone copyto "$RES/textbook.json"  "$DEST/content/textbook.json"  "${FLAGS[@]}"
+          rclone copyto "$RES/home_heroes.json" "$DEST/content/home_heroes.json" "${FLAGS[@]}"
           # 図(images/)も content/images/ へ。jpg/png/svg のみ。manifest より前に上げる。
           rclone copy   "$RES/images"         "$DEST/content/images" \
             --include "*.jpg" --include "*.png" --include "*.svg" "${FLAGS[@]}"

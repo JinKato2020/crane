@@ -1,0 +1,11 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "mode": "edit",
+  "asset": "CraneExam/Resources/images/exam_wire_lay_3d_20261103.png",
+  "reference": "CraneExam/Resources/images/1-7_wire_lay.jpg",
+  "prompts": [
+    "Edit the reference into a neutral Japanese crane exam question illustration, realistic polished technical 3D steel rendering on white background, generous margins, two equal panels labeled only A and B in navy sans-serif. Preserve the scientifically important opposite lay directions in left A ordinary lay versus same directions in right B Lang lay. Show each main wire rope vertical with a separate magnified strand beside it so the strand helix versus wire helix are clearly visible. Preserve the meaning of blue and orange curved direction arrows in reference, make them precise and legible, no green arrows. The small strand in A must have opposite handedness to the whole rope, B same handedness. Remove ALL Japanese title, captions, names, explanations, footers; the ONLY text anywhere is A at top left panel, B at top right panel. Photorealistic metallic technical 3D comparable to an engineering textbook product rendering, not cartoon hatching, no scenic background, no decorative shadows. Wide 1600x1000 approximately. Avoid showing answers or the words ordinary/Lang. Ensure the blue and orange arrows depict opposite directions for A and same for B when viewed from the same axial end.",
+    "Keep the two steel wire ropes and magnified strands exactly as drawn, same metallic 3D rendering, same helix directions and strand structure. Remove all blue and orange arrows completely. Remove the two rounded rectangular panel frames. Reduce A and B letters to 70% of current size. Keep only labels A and B, magnification circles and their navy leader lines. White background, generous whitespace. Do not change the ropes or helix directions. No other text."
+  ],
+  "review": "初稿の回転矢印は軸の見方で紛らわしいため除去。最終稿はAのロープと拡大したストランドのよりが逆、Bは同方向であることを目視。名称・解答・施工指示は記載しない。"
+}

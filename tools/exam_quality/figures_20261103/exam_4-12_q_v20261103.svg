@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="852" viewBox="-31.5 -31.5 963 513" role="img" aria-labelledby="title">
+<title id="title">第4回 問12 問題図</title>
+<rect width="900" height="450" fill="white" />
+<defs><marker id="navyArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1F3A65" /></marker><marker id="redArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#C82D2D" /></marker></defs>
+<text x="450.000" y="30.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">3Ωの枝が断線した後の回路</text>
+<line x1="170.000" y1="100.000" x2="330.000" y2="100.000" stroke="#1F3A65" stroke-width="3.15" />
+<rect x="330.000" y="84.000" width="120.000" height="32.000" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<text x="390.000" y="73.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">4 Ω</text>
+<line x1="450.000" y1="100.000" x2="540.000" y2="100.000" stroke="#1F3A65" stroke-width="3.15" />
+<line x1="540.000" y1="100.000" x2="540.000" y2="170.000" stroke="#1F3A65" stroke-width="3.15" />
+<line x1="540.000" y1="170.000" x2="570.000" y2="170.000" stroke="#1F3A65" stroke-width="3.15" />
+<rect x="570.000" y="154.000" width="100.000" height="32.000" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<text x="620.000" y="145.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">6 Ω</text>
+<line x1="670.000" y1="170.000" x2="740.000" y2="170.000" stroke="#1F3A65" stroke-width="3.15" />
+<line x1="740.000" y1="170.000" x2="740.000" y2="300.000" stroke="#1F3A65" stroke-width="3.15" />
+<line x1="540.000" y1="170.000" x2="540.000" y2="245.000" stroke="#1F3A65" stroke-width="3.15" />
+<line x1="540.000" y1="245.000" x2="560.000" y2="245.000" stroke="#1F3A65" stroke-width="3.15" />
+<line x1="582.000" y1="245.000" x2="590.000" y2="245.000" stroke="#1F3A65" stroke-width="3.15" />
+<circle cx="560" cy="245" r="3" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<circle cx="582" cy="245" r="3" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<rect x="590.000" y="229.000" width="80.000" height="32.000" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<text x="630.000" y="284.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">3 Ω</text>
+<line x1="670.000" y1="245.000" x2="740.000" y2="245.000" stroke="#1F3A65" stroke-width="3.15" />
+<text x="525.000" y="225.000" text-anchor="end" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">断線</text>
+<line x1="170.000" y1="100.000" x2="170.000" y2="185.000" stroke="#1F3A65" stroke-width="3.15" />
+<line x1="150.000" y1="185.000" x2="190.000" y2="185.000" stroke="#1F3A65" stroke-width="3.15" />
+<line x1="158.000" y1="199.000" x2="182.000" y2="199.000" stroke="#1F3A65" stroke-width="3.15" />
+<line x1="170.000" y1="199.000" x2="170.000" y2="300.000" stroke="#1F3A65" stroke-width="3.15" />
+<line x1="170.000" y1="300.000" x2="740.000" y2="300.000" stroke="#1F3A65" stroke-width="3.15" />
+<text x="115.000" y="196.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">24 V</text>
+<text x="450.000" y="382.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">電源から流れる電流 I = ?</text>
+</svg>

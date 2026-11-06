@@ -20,7 +20,7 @@ from datetime import datetime, timezone
 # ---- CONFIG -------------------------------------------------------------
 APP_ID = "crane"
 RES_DIR = os.path.join("CraneExam", "Resources")      # Resources の場所
-CONTENT_FILES = ["exams.json", "textbook.json"]       # OTA対象(問題・教材/用語)
+CONTENT_FILES = ["exams.json", "textbook.json", "home_heroes.json"]
 MANIFEST_OUT = os.path.join(RES_DIR, "_manifest.json")  # 同梱baseline兼配信ファイル
 # ------------------------------------------------------------------------
 

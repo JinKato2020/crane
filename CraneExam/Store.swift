@@ -2,6 +2,34 @@ import SwiftUI
 
 /// 問題データの読み込みと学習状態（結果・ブックマーク・弱点）の保存
 final class ExamStore: ObservableObject {
+    /// この起動中に学習画面を見終えた時だけ更新する。起動だけでは依頼しない。
+    @Published private(set) var feedbackOpportunityAt: Date? = nil
+
+    @Published private(set) var studyActivity = StudyActivityLog()
+    @Published private(set) var lastStudyPlace: StudyPlace?
+    @Published private(set) var homeHeroes = HomeHeroCatalog.fallbackCatalog
+    private(set) var activeStudyScreens = Set<UUID>()
+    private(set) var studyInteractionRevision = 0
+
+    func beginStudyScreen(_ id: UUID) {
+        activeStudyScreens.insert(id)
+        studyInteractionRevision += 1
+    }
+
+    func endStudyScreen(_ id: UUID) { activeStudyScreens.remove(id) }
+    func cancelPendingReview() { studyInteractionRevision += 1 }
+
+    func rememberStudy(_ place: StudyPlace) {
+        guard lastStudyPlace != place else { return }
+        lastStudyPlace = place
+        UserDefaults.standard.set(try? JSONEncoder().encode(place), forKey: "cr_last_study_place")
+    }
+
+    func recordStudyCompletion(kind: StudyKind, at date: Date = Date()) {
+        studyActivity.record(kind, at: date)
+        UserDefaults.standard.set(try? JSONEncoder().encode(studyActivity), forKey: "cr_study_activity")
+        feedbackOpportunityAt = date
+    }
     @Published private(set) var exams: [Exam] = []
     @Published private(set) var textbook: Textbook? = nil
     @Published private(set) var isSyncingContent = false
@@ -28,6 +56,7 @@ final class ExamStore: ObservableObject {
     init() {
         loadExams()
         loadTextbook()
+        loadHomeHeroes()
         load()
         // OTA: 裏で棚(R2)の最新コンテンツを取り込み、更新があれば同じ起動中に反映する。
         // 通信断などで失敗しても内蔵データで動く(壊れない)。反映は次回起動 or ここでの再読込。
@@ -53,6 +82,7 @@ final class ExamStore: ObservableObject {
         if result.updated > 0 {
             loadExams()
             loadTextbook()
+            loadHomeHeroes()
             contentRevision += 1
         }
         if let message = result.message {
@@ -70,6 +100,17 @@ final class ExamStore: ObservableObject {
         }
         textbook = decoded
         buildFigureInfo()
+    }
+
+    private func loadHomeHeroes() {
+        if let data = ContentOTA.contentData(key: "content/home_heroes.json", bundledResource: "home_heroes"),
+           let catalog = HomeHeroCatalog.decode(data),
+           catalog.heroes.allSatisfy({ ContentOTA.imagePath(name: $0.imageName) != nil }) {
+            homeHeroes = catalog
+        } else if let url = Bundle.main.url(forResource: "home_heroes", withExtension: "json"),
+                  let data = try? Data(contentsOf: url), let catalog = HomeHeroCatalog.decode(data) {
+            homeHeroes = catalog
+        } else { homeHeroes = .fallbackCatalog }
     }
 
     /// 教材の全imgブロックを走査し、アセット名→ラベル/凡例/キャプションの表を作る
@@ -96,6 +137,10 @@ final class ExamStore: ObservableObject {
 
     private func load() {
         let d = UserDefaults.standard
+        if let data = d.data(forKey: "cr_study_activity"),
+           let value = try? JSONDecoder().decode(StudyActivityLog.self, from: data) { studyActivity = value }
+        if let data = d.data(forKey: "cr_last_study_place"),
+           let value = try? JSONDecoder().decode(StudyPlace.self, from: data) { lastStudyPlace = value }
         if let r = d.data(forKey: kResults),
            let v = try? JSONDecoder().decode([ExamResult].self, from: r) { results = v }
         if let b = d.stringArray(forKey: kBookmarks) { bookmarks = Set(b) }

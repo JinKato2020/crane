@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="940" viewBox="-23.8 -23.8 727.6 427.6">
+<rect width="680" height="380" fill="white" />
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#1F3A65" /></marker></defs>
+<g fill="none" stroke="#1F3A65" stroke-width="2.38" stroke-linejoin="round" stroke-linecap="round">
+<line x1="105" y1="195" x2="600" y2="195" /><path d="M285 197 L265 229 H305 Z" /><line x1="256" y1="235" x2="314" y2="235" /><line x1="105" y1="94" x2="105" y2="192" marker-end="url(#arrow)" /><line x1="600" y1="94" x2="600" y2="192" marker-end="url(#arrow)" /><line x1="105" y1="273" x2="285" y2="273" marker-start="url(#arrow)" marker-end="url(#arrow)" /><line x1="285" y1="273" x2="600" y2="273" marker-start="url(#arrow)" marker-end="url(#arrow)" /><line x1="105" y1="252" x2="105" y2="286" /><line x1="285" y1="252" x2="285" y2="286" /><line x1="600" y1="252" x2="600" y2="286" />
+</g>
+<g fill="#1F3A65" font-family="Yu Gothic, Meiryo, sans-serif" font-size="22.0" text-anchor="middle" font-weight="600">
+<text x="105" y="70" font-family="Yu Gothic, Meiryo, sans-serif" font-weight="600">8.4 kN</text><text x="600" y="70" font-family="Yu Gothic, Meiryo, sans-serif" font-weight="600">F</text><text x="105" y="218" font-family="Yu Gothic, Meiryo, sans-serif" font-weight="600">A</text><text x="285" y="175" font-family="Yu Gothic, Meiryo, sans-serif" font-weight="600">O</text><text x="600" y="218" font-family="Yu Gothic, Meiryo, sans-serif" font-weight="600">B</text><text x="195" y="313" font-family="Yu Gothic, Meiryo, sans-serif" font-weight="600">1.2 m</text><text x="442" y="313" font-family="Yu Gothic, Meiryo, sans-serif" font-weight="600">2.1 m</text>
+</g>
+</svg>

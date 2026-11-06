@@ -1,184 +1,131 @@
 import SwiftUI
 
-// MARK: - 暗記クイズ（赤シート）用の環境値
-// 節単位で「クイズON/OFF」「出題パターン(seed)」「カテゴリ」を配り、各本文(MaskableText)が従う。
-
 private struct QuizModeKey: EnvironmentKey { static let defaultValue = false }
-private struct QuizSeedKey: EnvironmentKey { static let defaultValue = 0 }
-private struct QuizCategoryKey: EnvironmentKey { static let defaultValue = "all" }
-private struct QuizAnswersKey: EnvironmentKey { static let defaultValue = false }
+private struct StudyQuizSessionKey: EnvironmentKey { static let defaultValue: StudyQuizSession? = nil }
 
 extension EnvironmentValues {
-    var quizAnswersVisible: Bool { get { self[QuizAnswersKey.self] } set { self[QuizAnswersKey.self] = newValue } }
     var quizMode: Bool { get { self[QuizModeKey.self] } set { self[QuizModeKey.self] = newValue } }
-    var quizSeed: Int { get { self[QuizSeedKey.self] } set { self[QuizSeedKey.self] = newValue } }
-    var quizCategory: String { get { self[QuizCategoryKey.self] } set { self[QuizCategoryKey.self] = newValue } }
-}
-
-// MARK: - 本文の {{ }} をパースする
-
-enum MaskSeg {
-    case plain(String)
-    case masked(id: Int, text: String, cat: String)
-}
-
-enum MaskParser {
-    /// 本文に {{ }} が含まれるか（トグル表示の判定に使う）
-    static func hasMask(_ s: String?) -> Bool { (s ?? "").contains("{{") }
-
-    /// {{語句}} / {{語句::num}} を分解。cat 既定は "key"(用語)。
-    static func parse(_ raw: String) -> [MaskSeg] {
-        var segs: [MaskSeg] = []
-        var id = 0
-        var rest = Substring(raw)
-        while let open = rest.range(of: "{{") {
-            let before = rest[rest.startIndex..<open.lowerBound]
-            if !before.isEmpty { segs.append(.plain(String(before))) }
-            let afterOpen = rest[open.upperBound...]
-            guard let close = afterOpen.range(of: "}}") else {
-                segs.append(.plain(String(afterOpen)))
-                return segs
-            }
-            let inner = String(afterOpen[afterOpen.startIndex..<close.lowerBound])
-            let parts = inner.components(separatedBy: "::")
-            let text = parts.first ?? ""
-            let cat = parts.count > 1 ? parts[1] : "key"
-            segs.append(.masked(id: id, text: text, cat: cat))
-            id += 1
-            rest = afterOpen[close.upperBound...]
-        }
-        if !rest.isEmpty { segs.append(.plain(String(rest))) }
-        return segs
+    var studyQuizSession: StudyQuizSession? {
+        get { self[StudyQuizSessionKey.self] }
+        set { self[StudyQuizSessionKey.self] = newValue }
     }
 }
 
-// MARK: - 赤シート表示の本文
+/// One session per section: individual taps and the answer toolbar always agree.
+final class StudyQuizSession: ObservableObject {
+    let candidates: [StudyQuizBlank]
+    @Published var isOn = false { didSet { revealed.removeAll() } }
+    @Published var category = "all" { didSet { round = 0; refresh() } }
+    @Published private(set) var selected: [StudyQuizBlank] = []
+    @Published private(set) var revealed = Set<String>()
+    private var round = 0
 
-/// {{ }} で囲まれた語句を、クイズON時に赤い帯で隠す。1語ずつタップで解除。
-/// クイズOFF時は従来の Text(markdown) と同じ見た目で描く。
+    init(section: TBSection) {
+        candidates = StudyQuiz.candidates(in: StudyQuiz.fields(in: section))
+        refresh()
+    }
+
+    var categories: [String] {
+        ["all", "key", "num"].filter { cat in cat == "all" || candidates.contains { $0.category == cat } }
+    }
+    var allRevealed: Bool { !selected.isEmpty && revealed.count == selected.count }
+    var canChange: Bool {
+        candidates.filter { category == "all" || $0.category == category }.count > selected.count
+    }
+    var answerLabel: String {
+        allRevealed ? "もう一度隠す" : (revealed.isEmpty ? "答えを表示" : "残りの答えを表示")
+    }
+
+    func toggle(_ id: String) {
+        guard isOn, selected.contains(where: { $0.id == id }) else { return }
+        if revealed.contains(id) { revealed.remove(id) } else { revealed.insert(id) }
+    }
+    func toggleAll() {
+        if allRevealed { revealed.removeAll() } else { revealed = Set(selected.map(\.id)) }
+    }
+    func nextRound() {
+        let previous = Set(selected.map(\.id))
+        for _ in 0..<max(1, candidates.count) {
+            round += 1
+            let next = StudyQuiz.selection(from: candidates, category: category, round: round)
+            if Set(next.map(\.id)) != previous { selected = next; revealed.removeAll(); return }
+        }
+        revealed.removeAll()
+    }
+    private func refresh() {
+        selected = StudyQuiz.selection(from: candidates, category: category, round: round)
+        revealed.removeAll()
+    }
+}
+
+/// Ordinary Markdown outside a quiz. Selection belongs to the whole section.
 struct MaskableText: View {
     @ScaledMetric(relativeTo: .body) private var textScale: CGFloat = 1
     @Environment(\.quizMode) private var quizMode
-    @Environment(\.quizSeed) private var quizSeed
-    @Environment(\.quizCategory) private var quizCategory
-    @Environment(\.quizAnswersVisible) private var quizAnswersVisible
-
+    @Environment(\.studyQuizSession) private var session
     let raw: String
-    var terms: [String] = []
+    var terms: [String] = [] // Source compatibility; candidates are collected by StudyQuiz.
+    var quizField: String? = nil
     var size: CGFloat = 15
     var weight: Font.Weight = .regular
     var color: Color = Theme.fg
     var lineSpacingV: CGFloat = 9
 
-    @State private var revealed: Set<Int> = []
-
-    // A案（毎回ちがう一部だけを隠す）用：本文ごとに固定のソルト
-    private var salt: Int { raw.hashValue }
-
     var body: some View {
-        Text(attributed)
-            .font(.system(size: size * textScale, weight: weight))
-            .foregroundColor(color)
-            .lineSpacing(lineSpacingV)
-            .tint(Theme.accent)   // 隠し語=リンク。既定リンク色をアクセントに（各runで上書きするので保険）
-            .fixedSize(horizontal: false, vertical: true)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .environment(\.openURL, OpenURLAction { url in
-                if url.scheme == "mask", let h = url.host, let i = Int(h) {
-                    revealed.insert(i)
-                    return .handled
-                }
-                return .systemAction
-            })
-            .onChange(of: quizSeed) { _ in revealed.removeAll() }
-            .onChange(of: quizMode) { _ in revealed.removeAll() }
-            .onChange(of: quizCategory) { _ in revealed.removeAll() }
-            .onChange(of: quizAnswersVisible) { visible in
-                if !visible { revealed.removeAll() }
+        Group {
+            if quizMode, let session = session, let field = quizField {
+                QuizFieldText(raw: raw, fieldID: field, session: session)
+            } else {
+                Text(Self.emphasized(raw))
             }
+        }
+        .font(.system(size: size * textScale, weight: weight))
+        .foregroundColor(color)
+        .tint(Theme.studyKey)
+        .lineSpacing(lineSpacingV)
+        .fixedSize(horizontal: false, vertical: true)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 
-    private var attributed: AttributedString {
-        var source = raw
-        if !MaskParser.hasMask(source), !terms.isEmpty {
-            let pattern = terms.sorted { $0.count > $1.count }
-                .map { NSRegularExpression.escapedPattern(for: $0) }.joined(separator: "|")
-            if let regex = try? NSRegularExpression(pattern: pattern) {
-                let matches = regex.matches(in: source, range: NSRange(source.startIndex..., in: source))
-                for match in matches.reversed() {
-                    if let range = Range(match.range, in: source) {
-                        let word = String(source[range])
-                        let cat = word.rangeOfCharacter(from: .decimalDigits) == nil ? "key" : "num"
-                        source.replaceSubrange(range, with: "{{\(word)::\(cat)}}")
-                    }
-                }
-            }
-        }
-        var formatted = ""
-        var candidates: [Int: String] = [:]
-        for seg in MaskParser.parse(source) {
-            switch seg {
-            case .plain(let s):
-                formatted += s
-            case .masked(let id, let text, let cat):
-                if isCandidate(id: id, cat: cat) {
-                    formatted += "[\(text)](mask://\(id))"
-                    candidates[id] = cat
-                } else { formatted += text }
-            }
-        }
-        var out = markdown(formatted)
-        // 太字は「読む場所」が分かる控えめなマーカーに。隠し語の処理はこの後に優先する。
-        for run in Array(out.runs) {
-            if run.inlinePresentationIntent?.contains(.stronglyEmphasized) == true {
-                out[run.range].foregroundColor = Theme.studyKey
-                out[run.range].backgroundColor = Theme.studyKey.opacity(0.09)
-            }
-        }
-        for run in Array(out.runs) {
-            guard let url = run.link, url.scheme == "mask", let host = url.host,
-                  let id = Int(host), let cat = candidates[id] else { continue }
-            let range = run.range
-            if isHiddenNow(id: id, cat: cat) {
-                // 隠し中＝空欄。文字を透明にし、淡いアクセントの下地だけ残す
-                // （黒塗りの“検閲バー”でなく「ここを思い出す空欄」に見えるように）。
-                out[range].foregroundColor = .clear
-                out[range].backgroundColor = Theme.accent.opacity(0.20)
-            } else {
-                // 表示中＝その語句を淡くハイライトし「ここが出題部分だった」と分かる。
-                out[range].link = nil
-                out[range].foregroundColor = color
-                out[range].backgroundColor = Theme.accent2.opacity(0.18)
-            }
+    static func emphasized(_ raw: String) -> AttributedString {
+        emphasized(StudyQuiz.attributed(raw))
+    }
+
+    static func emphasized(_ value: AttributedString) -> AttributedString {
+        var out = value
+        for run in Array(out.runs) where run.inlinePresentationIntent?.contains(.stronglyEmphasized) == true {
+            out[run.range].foregroundColor = Theme.studyKey
+            out[run.range].backgroundColor = Theme.studyKey.opacity(0.09)
         }
         return out
     }
+}
 
-    /// クイズが有効で、選んだカテゴリに属する語句のうち、その回に隠す分だけを出題する。
-    private func isCandidate(id: Int, cat: String) -> Bool {
-        guard quizMode else { return false }
-        guard quizCategory == "all" || quizCategory == cat else { return false }
-        // A案：毎回ちがう約6割だけを隠す（「もう一度」で別の組み合わせになる）
-        return shouldHide(id: id)
+private struct QuizFieldText: View {
+    let raw: String
+    let fieldID: String
+    @ObservedObject var session: StudyQuizSession
+
+    var body: some View {
+        Text(attributed)
+            .environment(\.openURL, OpenURLAction { url in
+                guard url.scheme == "studyquiz", let value = URLComponents(url: url, resolvingAgainstBaseURL: false)?
+                    .queryItems?.first(where: { $0.name == "id" })?.value else { return .systemAction }
+                session.toggle(value)
+                return .handled
+            })
     }
 
-    /// seed・id・本文ソルトから決まる擬似乱数で、その回に隠すかを決める（約60%）。
-    /// quizSeed は「もう一度」やトグルのたびに変わるので、回ごとに顔ぶれが変わる。
-    private func shouldHide(id: Int) -> Bool {
-        var h = UInt64(bitPattern: Int64((id &+ 1) &* 2654435761))
-        h ^= UInt64(bitPattern: Int64((quizSeed &+ 1) &* 40503))
-        h ^= UInt64(bitPattern: Int64(salt))
-        h = h &* 0x9E3779B97F4A7C15
-        h ^= (h >> 29)
-        return Int(h % 100) < 60
-    }
-
-    private func isHiddenNow(id: Int, cat: String) -> Bool {
-        isCandidate(id: id, cat: cat) && !quizAnswersVisible && !revealed.contains(id)
-    }
-
-    private func markdown(_ s: String) -> AttributedString {
-        if let a = try? AttributedString(markdown: s, options: .init(interpretedSyntax: .inlineOnlyPreservingWhitespace)) { return a }
-        return AttributedString(s)
+    private var attributed: AttributedString {
+        let blanks = session.selected.filter { $0.fieldID == fieldID }
+        var out = MaskableText.emphasized(StudyQuiz.presentation(raw, blanks: blanks, revealed: session.revealed))
+        for run in Array(out.runs) {
+            guard let url = run.link, url.scheme == "studyquiz",
+                  let id = URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems?
+                    .first(where: { $0.name == "id" })?.value else { continue }
+            out[run.range].foregroundColor = Theme.studyKey
+            out[run.range].backgroundColor = Theme.studyKey.opacity(session.revealed.contains(id) ? 0.08 : 0.16)
+        }
+        return out
     }
 }

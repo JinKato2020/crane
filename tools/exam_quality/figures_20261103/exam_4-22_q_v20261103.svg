@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="935" viewBox="-31.5 -31.5 963 563" role="img" aria-labelledby="title">
+<title id="title">第4回・問22 問題図</title>
+<rect width="900" height="500" fill="white" />
+<defs><marker id="navyArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#1F3A65" /></marker><marker id="redArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#C82D2D" /></marker></defs>
+<line x1="120.000" y1="40.000" x2="820.000" y2="40.000" stroke="#888888" stroke-width="3.15" />
+<circle cx="280" cy="260" r="55" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<circle cx="280" cy="260" r="3" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<circle cx="500" cy="260" r="55" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<circle cx="500" cy="260" r="3" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<circle cx="390" cy="120" r="55" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<circle cx="390" cy="120" r="3" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<circle cx="610" cy="120" r="55" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<circle cx="610" cy="120" r="3" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<path d="M 225,40 L 225,260 A 55,55 0 0 0 335,260 L 335,120 A 55,55 0 0 1 445,120 L 445,260 A 55,55 0 0 0 555,260 L 555,120 A 55,55 0 0 1 665,120 L 665,365" fill="none" stroke="#1F3A65" stroke-width="3.15" />
+<line x1="390.000" y1="40.000" x2="390.000" y2="120.000" stroke="#888888" stroke-width="3.15" />
+<line x1="610.000" y1="40.000" x2="610.000" y2="120.000" stroke="#888888" stroke-width="3.15" />
+<line x1="280.000" y1="260.000" x2="280.000" y2="345.000" stroke="#888888" stroke-width="3.15" />
+<line x1="500.000" y1="260.000" x2="500.000" y2="345.000" stroke="#888888" stroke-width="3.15" />
+<line x1="280.000" y1="345.000" x2="500.000" y2="345.000" stroke="#888888" stroke-width="3.15" />
+<line x1="390.000" y1="345.000" x2="390.000" y2="370.000" stroke="#1F3A65" stroke-width="3.15" />
+<rect x="320.000" y="370.000" width="140.000" height="45.000" fill="#E1E7F2" stroke="#1F3A65" stroke-width="3.15" />
+<text x="390.000" y="401.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">1.2 t</text>
+<text x="130.000" y="95.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">固定端</text>
+<line x1="170.000" y1="90.000" x2="225.000" y2="43.000" stroke="#888888" stroke-width="3.15" />
+<line x1="700.000" y1="260.000" x2="700.000" y2="350.000" stroke="#1F3A65" stroke-width="3.15" marker-end="url(#navyArrow)" />
+<text x="735.000" y="220.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">自由端</text>
+<text x="735.000" y="250.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">0.40 m/s</text>
+<text x="390.000" y="448.000" text-anchor="middle" font-family="Yu Gothic, Meiryo, sans-serif" font-size="23.4" fill="#1F3A65" font-weight="600">荷は鉛直に等速上昇</text>
+</svg>

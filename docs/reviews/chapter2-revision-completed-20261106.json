@@ -194,14 +194,17 @@
   },
   "release": {
     "ota_uploaded": true,
-    "build_requested": false,
+    "build_requested": true,
     "requires_new_build": [
       "第2章の節内目次への適用"
     ],
     "ota_compatible": [
       "本文・表・図・用語集"
     ],
-    "note": "第2章の教材・掲載図・PDFを公開済み。節内目次のUI変更は、これからmainへPushしてビルドを開始する。監視は行わない。",
-    "pdf_url": "https://content.safa-lang.com/crane/pdf/chapter2.pdf"
+    "note": "第2章の本文・図・PDFは公開URLのSHA-256照合済み。第2章のUIを含む変更を1976215でPush。ビルド状態は取得していない。",
+    "pdf_url": "https://content.safa-lang.com/crane/pdf/chapter2.pdf",
+    "source_commit": "1976215",
+    "source_pushed": true,
+    "build_monitored": false
   }
 }

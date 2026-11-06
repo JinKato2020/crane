@@ -1,0 +1,25 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>教材クイズ 改修記録 2026-11-06</title>
+<style>body{max-width:850px;margin:40px auto;padding:0 20px;font:17px/1.9 system-ui,sans-serif;color:#1a1d22;background:#f4f6f9}h1,h2,a{color:#185a92}section{background:white;padding:24px;border-radius:14px;margin:22px 0}li{margin:8px 0}code{overflow-wrap:anywhere}</style>
+<h1>教材の暗記クイズ：読みながら思い出す</h1>
+<p>2026-11-06 ローカル修正済み。教材本文・図・用語集・模試の内容は維持し、出題指定とアプリ表示を変更。</p>
+<section><h2>学習の設計</h2><ul>
+<li>36節の424個の重要事項を選定。数値は単位と「以上・未満」などの条件を含めて出題。</li>
+<li>1回に最大10か所、同じ答えは1回だけ。本文は1箇所の文章につき最大2個、表は1行に最大1個。見出し・導入・図・例題の問いと解答は手掛かりとして残す。</li>
+<li>「用語？」「数値？」「式？」をタップして個別に表示／非表示。下部からまとめて表示／隠す。「別の出題」で同じ節の別の候補を復習。</li>
+<li>確認した空欄の数を表示。正解率や得点として扱わない。</li>
+</ul></section>
+<section><h2>表示・アクセシビリティ</h2><ul>
+<li>教材・用語集と同じ青。文字はDynamic Typeに対応し、主操作は48pt以上。</li>
+<li>文字拡大時は表を縦のカードにし、列見出しを各項目に付ける。下部操作はsafeAreaInsetで本文と重ならないようにする。</li>
+<li>隠した答えを透明化する旧方式をやめ、表示テキスト自体を空欄へ置換。VoiceOver用の本文にも隠した答えを残さない。</li>
+<li>旧形式の{{語句::num}}に対応。不完全な記号は原文を維持。語句の一部（「加速度」の「速度」など）や数字の一部を誤って隠さない。</li>
+</ul></section>
+<section><h2>検証</h2><ul>
+<li>データ・選択モデル：882通りのカテゴリ／出題巡回、424候補の到達性、重複・空出題・本文等の非改変を検証。</li>
+<li>ブラウザ近似プレビュー：320／390px、ライト／ダーク、標準／拡大文字、4節の32条件。個別表示、まとめて表示、隠す、別の出題、数値の選択、終了／再開、横はみ出し、末尾の余白を検証。</li>
+<li>既存の教材参照検証：480問・710参照・36レッスン・19数値検証を通過。</li>
+<li>主要な文字と背景のコントラスト比：青6.65／10.96、補助文5.07／6.18（ライト／ダーク）。</li>
+<li>Swiftの実装を直接検証するテストを追加し、既存CIの検証手順に接続。Windows環境のためSwiftテストの実行、iOSビルド・実機確認は未実施。</li>
+</ul><p><a href="study-quiz-preview-20261106.html">操作できる表示確認プレビュー</a>（iOS実画面ではありません）</p></section>
+<section><h2>反映範囲</h2><p>本文のquizTermsと正本・マニフェストを同期。StudyQuiz.swift、MaskableText.swift、TextbookView.swiftを改修。先行していた用語集等の変更を保持。</p><p>OTA配信・コミット・Push・ビルド開始は今回実施していません。新しい表示・操作をアプリへ反映するにはアプリのビルド更新が必要です。ビルド状況の監視は行いません。</p></section></html>

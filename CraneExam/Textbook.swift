@@ -20,7 +20,57 @@ struct TBTerm: Codable, Identifiable {
     let term: String
     let def: String
     let img: String?     // 対応する図(あれば)
+    // Optional fields keep previously downloaded / bundled glossary data readable.
+    let displayTerm: String?
+    let reading: String?
+    let summary: String?
+    let category: String?
+    let points: [String]?
+    let example: String?
+    let comparison: TBTermComparison?
+    let aliases: [String]?
+    let figures: [TBTermFigure]?
+    let references: [TextRef]?
     var id: String { term }
+    var title: String { displayTerm ?? term }
+    var introduction: String { summary ?? def }
+    var illustrations: [TBTermFigure] {
+        if let figures = figures { return figures }
+        return img.map { [TBTermFigure(file: $0 + ".png", caption: nil)] } ?? []
+    }
+    var hasDetails: Bool {
+        !(points ?? []).isEmpty || example != nil || comparison != nil || !illustrations.isEmpty || !(references ?? []).isEmpty
+    }
+
+    /// AND search: kanji, kana readings, common alternate names and explanations.
+    func matches(_ query: String) -> Bool {
+        let words = Self.searchKey(query).split(whereSeparator: { $0.isWhitespace })
+        if words.isEmpty { return true }
+        let values = [term, title, reading ?? "", summary ?? "", def, category ?? "", example ?? ""]
+            + (points ?? []) + (aliases ?? [])
+        let haystack = Self.searchKey(values.joined(separator: " "))
+        return words.allSatisfy { haystack.contains($0) }
+    }
+
+    static func searchKey(_ value: String) -> String {
+        let folded = value.folding(options: [.caseInsensitive, .widthInsensitive], locale: Locale(identifier: "ja_JP"))
+        return (folded.applyingTransform(.hiraganaToKatakana, reverse: false) ?? folded).lowercased()
+    }
+}
+
+struct TBTermFigure: Codable, Identifiable {
+    let file: String
+    let caption: String?
+    var id: String { file }
+    var isSVG: Bool { file.lowercased().hasSuffix(".svg") }
+    var assetName: String { (file as NSString).deletingPathExtension }
+}
+
+/// Short two-column comparisons wrap with Dynamic Type instead of shrinking text.
+struct TBTermComparison: Codable {
+    let title: String
+    let headers: [String]
+    let rows: [[String]]
 }
 
 /// 章の中の1節

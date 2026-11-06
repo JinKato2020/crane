@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-03T05:49:54Z",
+  "scope": "相関図4枚のみ。既存配信済みのその他ファイルのmanifestエントリを維持。",
+  "files": [
+    {
+      "key": "content/images/chapter1_relation_map.svg",
+      "sha256": "45d4ad3c040c7cb9a507f9a0efda57c62857fa1396754a610fb5996ce0728113",
+      "size": 15689
+    },
+    {
+      "key": "content/images/chapter2_relation_map.svg",
+      "sha256": "9059a3afd76ed936ebb32d45badd5c656ef9f49569c56d36b8805d7b04c0f7bf",
+      "size": 16957
+    },
+    {
+      "key": "content/images/chapter3_relation_map.svg",
+      "sha256": "80a84d7bfad61e6592c703b2705ee7ac8e169a7bba4208a7e63fa289e93f4e43",
+      "size": 16397
+    },
+    {
+      "key": "content/images/chapter4_relation_map.svg",
+      "sha256": "f02e882591c027af5bb552ffaa579f7fa73ca558b85c1819826b9cc414379bf9",
+      "size": 18670
+    }
+  ],
+  "publicVerified": [
+    "https://content.safa-lang.com/crane/_manifest.json",
+    "https://content.safa-lang.com/crane/content/images/chapter1_relation_map.svg",
+    "https://content.safa-lang.com/crane/content/images/chapter2_relation_map.svg",
+    "https://content.safa-lang.com/crane/content/images/chapter3_relation_map.svg",
+    "https://content.safa-lang.com/crane/content/images/chapter4_relation_map.svg"
+  ],
+  "review": {
+    "chapter1": "作業半径・揚程の測定基準、制動と保持",
+    "chapter2": "落成検査対象、風と地震の条件、記録保存対象、再開検査",
+    "chapter3": "電流と電圧の区別、三相、誘導作用と通常運転",
+    "chapter4": "重量の単位、支持面、摩擦、応力、左右対称二本づり、係数、滑車"
+  },
+  "sourcePages": {
+    "chapter1": [
+      10,
+      13,
+      37,
+      72,
+      73
+    ],
+    "chapter2": [
+      85,
+      87,
+      95,
+      97,
+      100,
+      101
+    ],
+    "chapter3": [
+      113,
+      114,
+      119
+    ],
+    "chapter4": [
+      146,
+      161,
+      167,
+      168,
+      172,
+      175,
+      177,
+      178,
+      179,
+      183
+    ]
+  },
+  "validation": [
+    "4枚をChromeで描画して目視確認",
+    "全ラベルの領域・重なりを生成時に検証",
+    "教材の章節参照を検証",
+    "R2と公開CDNの4図・manifestのSHA256一致"
+  ],
+  "build": "不要・未実施"
+}

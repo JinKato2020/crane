@@ -16,6 +16,7 @@ enum ContentOTA {
     static let targets: [(key: String, bundledResource: String)] = [
         ("content/exams.json", "exams"),
         ("content/textbook.json", "textbook"),
+        ("content/home_heroes.json", "home_heroes"),
     ]
 
     struct Entry: Decodable { let sha256: String; let size: Int? }
@@ -160,13 +161,18 @@ enum ContentOTA {
         var cached = storedBundleTag() == bundleTag() ? readShas() : [:]
         let have = effectiveShas(cached)
         let pending = remote.files.filter { isOtaTarget($0.key) && have[$0.key] != $0.value.sha256 }
-            .sorted { $0.key < $1.key } // content/images/ → content/textbook.json
+            .sorted {
+                // Fetch image dependencies before switching any catalog that refers to them.
+                let leftImage = $0.key.hasPrefix("content/images/")
+                let rightImage = $1.key.hasPrefix("content/images/")
+                return leftImage == rightImage ? $0.key < $1.key : leftImage
+            }
         var updated = 0
         var failed = 0
         if let onProgress { await onProgress(0, pending.count) }
         for (index, item) in pending.enumerated() {
             let (key, entry) = item
-            if key == "content/textbook.json", failed > 0 {
+            if ["content/textbook.json", "content/home_heroes.json"].contains(key), failed > 0 {
                 failed += 1
                 if let onProgress { await onProgress(index + 1, pending.count) }
                 continue
@@ -183,6 +189,11 @@ enum ContentOTA {
                (fresp as? HTTPURLResponse)?.statusCode == 200,
                entry.size.map({ $0 == fdata.count }) ?? true,
                SHA256.hash(data: fdata).map({ String(format: "%02x", $0) }).joined() == entry.sha256 {
+                if key == "content/home_heroes.json", HomeHeroCatalog.decode(fdata) == nil {
+                    failed += 1
+                    if let onProgress { await onProgress(index + 1, pending.count) }
+                    continue
+                }
                 let dest = cacheDir.appendingPathComponent(localName(key))
                 if (try? fdata.write(to: dest, options: .atomic)) != nil {
                     cached[key] = entry.sha256

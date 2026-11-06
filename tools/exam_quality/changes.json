@@ -15,11 +15,17 @@
       "id": "1-2",
       "displayNo": 2,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "displayNo",
+        "explanation",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "2f79a5f77c5d9412dae983b5f7238b03b2d00fbf348b6e94c35055100808d12a",
-      "afterSHA256": "d42a7cea3a111969d21b45118ff84cd9b878f8860baf745d950a315652e35970"
+      "afterSHA256": "ecbb9eea186ebe66501955fe3e8805f6f7707a1bf660917bdf79f9848f69fa70",
+      "followup20261103": "編集者向けの注意を学習者向けの説明に修正／対応関係を選択肢表として整列",
+      "followupFullBook20261103": "書籍p11のスパンの測定基準に統一"
     },
     {
       "id": "1-3",
@@ -79,11 +85,13 @@
       "id": "1-7",
       "displayNo": 7,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "a566098f5492847b048d8c348a0121f5cfa21058a4bd11530eebfd522a2b77d0",
-      "afterSHA256": "2ffc26cb38e3987b8b63c37ceeb3fcd9c2b9f5160646f75161f76e7fa4046432"
+      "afterSHA256": "3a8a3ca70a2ef9ae545abc7b4097f74123722eeac671557df1db1b681542ca80",
+      "followupFullBook20261103": "ジブの位置による定格荷重の変化を、つり上げ荷重と区別"
     },
     {
       "id": "1-8",
@@ -129,11 +137,13 @@
       "id": "1-12",
       "displayNo": 12,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "4226cb088a9a53c3ab53a8e86f7cfd977fb0288815c13552b11d06fe378b6582",
-      "afterSHA256": "8f585c97f1f7de0ed2816d4f975e76e6badc332ca170e392dd144bcee8174dfc"
+      "afterSHA256": "176e32fb322c4cb52d906e401c03e6ad2e278d296b42fd44f8132535a1d460ab",
+      "followupFullBook20261103": "登録性能検査機関の根拠条文も示す"
     },
     {
       "id": "1-13",
@@ -220,11 +230,14 @@
       "id": "1-21",
       "displayNo": 21,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "ae9e07cf430b30cb3244aa0271723a8c72352f56732786f2b6bca6fa8aadaee4",
-      "afterSHA256": "36d404c0ecccc5b8c5c81642277867cc3b794c4b5d4cdc89b685080b3d0e1c4a"
+      "afterSHA256": "e80a43045bb2a0d1615c0afb4d0b602a52b86812c3a57dee62c7f50d17077627",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "1-22",
@@ -250,11 +263,14 @@
       "id": "1-24",
       "displayNo": 24,
       "fields": [
+        "choiceHeaders",
+        "choiceRows",
         "displayNo"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "3172ca7bd019118d2e6f3f00669f6ec86c297907aa806c42526925686cc89b4a",
-      "afterSHA256": "950370f451b4d0341196196c8d0d84f2b0c786c888d8993d86661de4a7d8e9c5"
+      "afterSHA256": "c96a476fc983b0ead58c3674ff97b40fa831bda9713636b149056605e6a49605",
+      "followup20261103": "対応関係を選択肢表として整列"
     },
     {
       "id": "1-25",
@@ -320,31 +336,42 @@
       "id": "1-31",
       "displayNo": 31,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "28e60a801bb83808737c0c81048950b2a0dd6f7ffb4250a0c6dc01c83ee94319",
-      "afterSHA256": "051b4ab3071aaf1dade8d92c92c7587ac78fd949260e7b37148ecbc4d5d9dbef"
+      "afterSHA256": "910de48c71cbeeb616db8c82867630ccac4aec7e83a7f2a72fef2148ec1e939b",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "1-32",
       "displayNo": 32,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "50df29ecb1d141fe858f6fc417834454e8be3a946dd1e9009a4b5bad71f7a58d",
-      "afterSHA256": "547575ed2c63802938f2d0bae555488227367080745944d88c5efd7132fb5a23"
+      "afterSHA256": "36a055f66f5920125b2a1394a7f2da079ba119dc31e23d3f7a11c7461bbc160f",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "1-33",
       "displayNo": 33,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "6a5161cbae260d13df42dce9c7d07c312d97cac0ee468e4a69351536d5d923dc",
-      "afterSHA256": "70f4c25f80273d55c989e0d4946d2a5927aa1a61585b82429363e42fcfe8d812"
+      "afterSHA256": "3be9066d8f19728a17497ea2ec0dd253fc16500a73e6178c1b1b85b3bc818c8e",
+      "followup20261103": "対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "1-34",
@@ -352,12 +379,14 @@
       "fields": [
         "displayNo",
         "explanation",
+        "figImg",
         "figImgExp",
         "text"
       ],
       "reason": "三角関数の表記を、つり角度別の張力係数に置換（答えの大小関係は維持）",
       "beforeSHA256": "eb555531a27ab5810b491c29accb6fd19dfcfd8509f149d5fd8d68740ca75e85",
-      "afterSHA256": "d0c0d00ba39491d00f8dae7c2014fb26605365f18150978b422a6c1abfbfe790"
+      "afterSHA256": "301c0401bbaf4740dbe95b05a3f10958fc26018c5ec3ff054af52ca1cb9f36ca",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "1-35",
@@ -373,21 +402,27 @@
       "id": "1-36",
       "displayNo": 36,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "765dea3502a20ad4fc6ffc224d7a358efc076a05924febea20f130d5422ebcdb",
-      "afterSHA256": "cd405fe1fad60054f49aa24ad1aaa00adee21b6f9f614ca0fdb020dbaecc3739"
+      "afterSHA256": "c1c943e4ea88c7f8246551cfe91746c7709ed2db0802a9b36c1efd312d1efe64",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "1-37",
       "displayNo": 37,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "ac7e3bf91a22d133305b4d326b8f3f6e761c1a59bd431d6660d99d1327c5641c",
-      "afterSHA256": "8d8aca336e433f4d47f3deaceffa0905ca807524914d01a1512ac202892d645d"
+      "afterSHA256": "0ce485fad0bee8d63f6bdaf833babdde9c2e906e87bff2d53cbbd3fee18af431",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "1-38",
@@ -465,11 +500,15 @@
       "id": "2-3",
       "displayNo": 3,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "05f267cb26bdee8155e0a0cc7c8440d67af9f56be7c4c17dfb9a5cab0a4b38a6",
-      "afterSHA256": "abd1473157a352e587ca744de1698207f3efca95fdc15377298730e299e17979"
+      "afterSHA256": "21e0c8020ed357149b2c47cbbfd300e94f82a6eb10627d67d45e56ce1a4ba81d",
+      "followup20261103": "露骨な誤答を除き、公式書籍の開閉・昇降操作の区別を問う"
     },
     {
       "id": "2-4",
@@ -568,6 +607,7 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "figImgExp",
         "ref",
         "refs",
@@ -575,7 +615,9 @@
       ],
       "reason": "回路の一つの数値当てから、電流・電圧・抵抗・電力の関連した判定へ調整",
       "beforeSHA256": "9d138461971ba06fb769fa93a65d04d1483b3aec45e5de04882ac3b8c3175d6e",
-      "afterSHA256": "9cb1bffb7611ce2e6435e5d46be204cdbb1cf93b8c35a27209f9b837e4dd175c"
+      "afterSHA256": "d7b7fd8e484987bdc9e25670832a1be85718f8d75abc5d925e4e369c873300a7",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "断線のない設問から共通テンプレートの不要条件を削除"
     },
     {
       "id": "2-12",
@@ -689,11 +731,14 @@
       "id": "2-21",
       "displayNo": 31,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "f88a5bc4a2aef94735bba36e7f4c9f758d2b41972ef4d6460cdd7912cc8c123e",
-      "afterSHA256": "6723489d49bb630dd3cf6e64bc728c6b3b2f514d59a4b5e53fddb027520cfd48"
+      "afterSHA256": "9f7358301030d3551ca92a3455575589375f2df75ede4d930ca4d8b21cfa8ef3",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "2-22",
@@ -709,27 +754,34 @@
       ],
       "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
       "beforeSHA256": "7a509f90ff6acbd3489cf840b67fa5abd872d48bf38b3842bd3068f7115f9db8",
-      "afterSHA256": "999fdddd847f34e8439ed891b1f5aec2d31021cb0e944d642a2f35e09c05f9d7"
+      "afterSHA256": "21b08a69655c4a137d262ede0070274ca77930d0bca5fcd09b6e867f7517f797",
+      "followup20261103": "誤っている選択肢の理由を直接説明"
     },
     {
       "id": "2-23",
       "displayNo": 33,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "2e32efd62479d5a29738851697c86ab3c5fae02f1f1d6e1b12eb80b23b19b0b9",
-      "afterSHA256": "856520887dcf9fae1bd80f16bd63f707d77ae554f188f1d5cae137cb8c31d021"
+      "afterSHA256": "1c84465504d4e40dd9e50b8bf53f23bbe4207875691272294ee418104e666468",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "2-24",
       "displayNo": 34,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "bef09a279f24279f102fe071df8d9b506484d500bf99134edcd4703f61d6f532",
-      "afterSHA256": "76fa3573c19fc82f5098dd8647421e4a9c99164bb78afb2f374e86521117f4c3"
+      "afterSHA256": "b4a1529b5b8fa09225ce1f893b22fb0652cc670a8b655d7a387c1a81ab601933",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "2-25",
@@ -738,12 +790,14 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "figImgExp",
         "text"
       ],
       "reason": "三角関数の表記を、つり角度別の張力係数に置換（答えの大小関係は維持）",
       "beforeSHA256": "8323ea3551b75965ae93132e1c83747ede7f7df1d3b6b0bb5d936e79f805f4c3",
-      "afterSHA256": "63a2150832f18f2c9c2a8a2e07a4499e1dc501b9f6a740ae9dffb134a0d5665b"
+      "afterSHA256": "82698b029228f77c8f93baac9e6afbd9e91a50d445a4027adf4438814c306f0c",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "2-26",
@@ -974,7 +1028,8 @@
       ],
       "reason": "A〜Eの記述を改行し、条件の読み落としを防止",
       "beforeSHA256": "b786768a605032f8b34527f90682b017554a357e3504883cd8ed97e4bb182683",
-      "afterSHA256": "7f8701ed90478450a7e1e98c51581d6a1278e4d6b4f7885f6310d5e7e3a49300"
+      "afterSHA256": "0801f18e8d3198ef9f1b6934f8048333bdb07fc3e23f4f090b114722c176273e",
+      "followupFullBook20261103": "連結していたA〜Dの記述を段落分け"
     },
     {
       "id": "3-7",
@@ -1018,21 +1073,30 @@
       "fields": [
         "choiceHeaders",
         "choiceRows",
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp",
+        "text"
       ],
       "reason": "／2列の選択肢を表として整列",
       "beforeSHA256": "6a980ff40a92e8ee42fa19377fb23ccc2fda73aabc76ef46ec3d354fe9687100",
-      "afterSHA256": "5e5f0dda7a86886bd2a51b73428aeeee4e21de741b7cb9694ca1056ca8b072a6"
+      "afterSHA256": "3a1de118f19e01fabc73111ecf7890b1bea920f1e48cf4f86ecce6928ecf3a64",
+      "followup20261103": "3D図とネイティブ選択肢表に合わせ重複見出しを除去／問題図と解説図を教材由来の同じ中立3D図に統一"
     },
     {
       "id": "3-11",
       "displayNo": 11,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "displayNo",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "990dcf87f6881f485d54fe4d6130cccc47b251240842942046fa98fee4895292",
-      "afterSHA256": "924fd4c4d5a3d8204e293d7cee7176423e4ad388d2c5931b56cc2edf7afe726d"
+      "afterSHA256": "c7913acb5bf02b2ef1341dc425ea037114128eb0893d35e969a4702bab5e0d03",
+      "followup20261103": "対応関係を選択肢表として整列",
+      "followupFullBook20261103": "表と重複する見出しを本文から除去"
     },
     {
       "id": "3-12",
@@ -1053,7 +1117,8 @@
       ],
       "reason": "A〜Eの記述を改行し、条件の読み落としを防止",
       "beforeSHA256": "f532f04ec34bc1ee9101460e41d70de6e8d1e83ecba7c6e8efb00de263487f8d",
-      "afterSHA256": "9bcce5508ae5035ac1d845ced554a3bd0d54f7dd441ecbddd3652377629ca66f"
+      "afterSHA256": "39013bea762eb8a877453326bb416481d4221a2fbb9015c50c4d4bbd1b625647",
+      "followupFullBook20261103": "連結していたA〜Dの記述を段落分け"
     },
     {
       "id": "3-14",
@@ -1140,6 +1205,7 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "figImgExp",
         "ref",
         "refs",
@@ -1147,7 +1213,9 @@
       ],
       "reason": "回路の一つの数値当てから、電流・電圧・抵抗・電力の関連した判定へ調整",
       "beforeSHA256": "a968ffe167c02522dae57a87c54acecc3012b3f6f2d4daba9fbd8eb41d5cc903",
-      "afterSHA256": "10897fc22af1bcf57b8fe7daef635114d385166f2d454fd999d55f2daabe980b"
+      "afterSHA256": "fec55fe90fd22cb247e6c264b9e768aca790f515d1f2d232dcf4f7d962129ae2",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "断線のない設問から共通テンプレートの不要条件を削除"
     },
     {
       "id": "3-22",
@@ -1198,7 +1266,8 @@
       ],
       "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
       "beforeSHA256": "10f29ab181e3d4f1f8a5e5613c4523651c70929af1fdeede358e817c7c8d1722",
-      "afterSHA256": "213e643e7c7bb32a39f1862fb916e7332e156346a342282e243d4e953536fc36"
+      "afterSHA256": "56cf177d22e3c224cabdfd1ef6a44f96232895761c6618c61cb8da04d41c26f0",
+      "followupFullBook20261103": "誤答の誘導作用を直接説明"
     },
     {
       "id": "3-26",
@@ -1224,11 +1293,14 @@
       "id": "3-28",
       "displayNo": 28,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "30b4841931640eb97cd05f251c41572b5d53e9c192b640693a3e5b67083bae1a",
-      "afterSHA256": "60a0b310c933607fa53ebf6a3590dcffe143010fb35576a669ba06c17f359122"
+      "afterSHA256": "0e94fc2816c4cea6cd54800726abc1dae0cdc019067c8e9a5eb5e9138b9c9c23",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "3-29",
@@ -1254,37 +1326,51 @@
       ],
       "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
       "beforeSHA256": "b299436431d3672d6ee309613a7db45ca1f67f4bdf89c2289a57093079ce8852",
-      "afterSHA256": "3c27c4bbdda3c38133dc7b7fe990773155bb10b9e01647115dd3022da132fff3"
+      "afterSHA256": "9891b80e56d7e6dad4f589a8a87e65a31b8e8acf6d5f9863e0d7a22667a651df",
+      "followup20261103": "時間を問う誤答に対して時間の比例関係を説明"
     },
     {
       "id": "3-31",
       "displayNo": 31,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "ef27caee82386e785eea6fd1546c470e290715449a5b0a9712a762dd4ff877ec",
-      "afterSHA256": "76ecd64e79bc832661c090e0f129dd8fcb5468259cdf7a4aa26a07698539750e"
+      "afterSHA256": "fbfc79bc7412fd5e664cddbce157a1e642fee7b4ecc7c51848ea002978c4f623",
+      "followup20261103": "矢印を数値の比で描き直したため旧注記を除去／図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "3-32",
       "displayNo": 32,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "8b67a7bea21f8e210742e94a904aef691e96d80a1d0fa1a414382782b1eedd6c",
-      "afterSHA256": "5439c306ca05bc171eab35d3dbb530f7766a455e363f533a4796a1e8fa6bffbb"
+      "afterSHA256": "d971e80552aa02aecb6164d288433561f895a061c872130449cecd2001a586a1",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "3-33",
       "displayNo": 33,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "displayNo",
+        "figImg",
+        "figImgExp",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "c8fadbe87caeccde65d2fdebab311a219e89e5b9970c5b2cccf222c2e19a2a79",
-      "afterSHA256": "5d98b23e2a46c43eb23cce569ce58545336b5e028e487006975de4403a87efc9"
+      "afterSHA256": "1e52036df0238992f4c47f794390245cd47a106eabfd9f70eb07565f0b7b4274",
+      "followup20261103": "表の見出しの本文への重複を除去／対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "3-34",
@@ -1292,12 +1378,14 @@
       "fields": [
         "displayNo",
         "explanation",
+        "figImg",
         "figImgExp",
         "text"
       ],
       "reason": "三角関数の表記を、つり角度別の張力係数に置換（答えの大小関係は維持）",
       "beforeSHA256": "76fe061e4b2f13941ca2bc4a52f8d619c15353942b8086d49dea7a6e79e16cba",
-      "afterSHA256": "313f248e81b8edd9120f6aacbdc720d2ca5387187d2598aa514ac37cdeaa34f3"
+      "afterSHA256": "a51f22a17096742037dfebb8f7f2e85a7482e4da3245dd11f6147afa88c2c161",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "3-35",
@@ -1340,7 +1428,8 @@
       ],
       "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
       "beforeSHA256": "0582ac325e13f9fe2886d05ac11e8a172f302470e9cd348801a674c9ec1b30c6",
-      "afterSHA256": "e293ef5899a4c1f527a314beb3d82e70274cea25812175ad1db8295a81753a85"
+      "afterSHA256": "ee0e42ae63cddb8e9b61cc586aea44bc2b873439c6a663e695ed019da7a4cb1b",
+      "followup20261103": "ロープ張力の成立条件を問題文に明記"
     },
     {
       "id": "3-38",
@@ -1458,17 +1547,20 @@
       ],
       "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
       "beforeSHA256": "e12aad507808694403388c46b87218494ad4427a0c5ef319bb1bd6757c1874a4",
-      "afterSHA256": "a46671a9f47cbefad945516240349c48ed5eaad82062ed47885933e98ddc8eb5"
+      "afterSHA256": "da61fe8c68b164669adfd61777a39a7b09d09ec7446035bb085fb283fb28c1e6",
+      "followupFullBook20261103": "トップランニング式ホイストの移動名を横行に統一"
     },
     {
       "id": "4-8",
       "displayNo": 8,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "c506d55647bcab7fde178ba24d23b649691c86588ff535844d1de188b563fe70",
-      "afterSHA256": "1276525f504144aba65b1feeb562b6b7ede6784b4cbb9fe856da9cdd0bf32617"
+      "afterSHA256": "56bf790b4d11defbdd8e173a8367b373f70bec8aad6708ee7951065a9e6a75d3",
+      "followup20261103": "古い技術系線画の解説図を教材と同じ3D図に統一"
     },
     {
       "id": "4-9",
@@ -1505,7 +1597,8 @@
       ],
       "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
       "beforeSHA256": "17eb9d5a7c999b6ae3dfa0e4d65db9256cd2d6faa4f028308e1bf37391037ae3",
-      "afterSHA256": "e2f535d9d6ec99b42a185b8e8b7592b4e1a1e34bb8048a54673ff8bb392d773c"
+      "afterSHA256": "d0a46e05341b8224a01f1c5a0608614baaf2cc25acacf046d56b0de707ebaccc",
+      "followupFullBook20261103": "書籍p117・118の電力量の式に沿って誤答を説明"
     },
     {
       "id": "4-12",
@@ -1515,6 +1608,7 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "figImgExp",
         "ref",
         "refs",
@@ -1522,7 +1616,9 @@
       ],
       "reason": "回路の一つの数値当てから、電流・電圧・抵抗・電力の関連した判定へ調整",
       "beforeSHA256": "eadcb77bcbf7dad29e1a3b6cc5cb33f084e2f4ce6dbb8b58bb4f7fc2b90ad948",
-      "afterSHA256": "97638bb51467ba48ad0856b136711338e9d0ba54253c3d6f5814b0b1c24bdacb"
+      "afterSHA256": "3e703db278028582e8cfbf8672c75f6d846226c82266ccff97fcf006b0cc9545",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "断線後の枝であることを直接説明"
     },
     {
       "id": "4-13",
@@ -1604,31 +1700,41 @@
       "id": "4-20",
       "displayNo": 30,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "32b20bb41aaa732608617eeee51b3280df1b3663aacf1745d1c3f8b7d406dcc5",
-      "afterSHA256": "09d696262a439f1c592068e25a704f365a916e3204a52d6e7d534752270b08d2"
+      "afterSHA256": "d20f85d8d1f99aaa0fe415afba111d8a1ee1aeb3f004301eb99d7bd92c95ac25",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "4-21",
       "displayNo": 31,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "4d372d696a8b605051d40eb9f997783e0a6982178fd0405c93d43096e8235109",
-      "afterSHA256": "3b0e9a9b87e9f280d7c0c0a08a8954a9775cabce18093e4765a3b9311eeb381f"
+      "afterSHA256": "57cae1b684e24b947c0b048c9bf5478a4fd22642ddeb708f0ecf5f65a51b398a",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "4-22",
       "displayNo": 32,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "c229f85b35b939914f6e1bd715e0c44fd2816ffcc7f245557006e616e0a51f46",
-      "afterSHA256": "3c53131db225688e7f033d4d6b5acc687dc40f5a897aa5d1ea694e9c038ecee7"
+      "afterSHA256": "d2770a386232d53e8a5e3921ca941bf6a2fed006116cd4a3032b6dde6dbc0f51",
+      "followup20261103": "対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "4-23",
@@ -1636,12 +1742,14 @@
       "fields": [
         "displayNo",
         "explanation",
+        "figImg",
         "figImgExp",
         "text"
       ],
       "reason": "三角関数の表記を、つり角度別の張力係数に置換（答えの大小関係は維持）",
       "beforeSHA256": "d72b3cef7b70f343f9e143fbffa85382d7065e4cd9394c9f754e35e3d8602f3a",
-      "afterSHA256": "c3dbcde4ab649c052aa2cf2ff95ea7e1bea22fd5b49330f1cea8d7f2d6f8b823"
+      "afterSHA256": "cf65e88cc78797e891199c0489b3777fc6f12bff8865697c08890a23fb2e3d45",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "4-24",
@@ -1664,21 +1772,27 @@
       "id": "4-25",
       "displayNo": 35,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "87b2718b9d1586ce6f0247546753751da5821913299b1681ee90344b414493f5",
-      "afterSHA256": "7b457504288e4266b395f0b5ccf9abac258d3d38c5647c450532d293450dc5ae"
+      "afterSHA256": "7c2fb0d1228633a28dad05bea02439da8d79b750bacc118b1feea3bb7566d17d",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "4-26",
       "displayNo": 36,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "99495a51746296dbb7c3be959dba57799b7244e7d3baa799d2d912aaedc82400",
-      "afterSHA256": "ab1dd0ccb3362e69a24afdc8e6d9af98f4c115a7cd65c4aca08487e4cce0ca4e"
+      "afterSHA256": "d75b54a359afd46d2882269080d0729e44422878a572ee78601bc9f7a5e492dd",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "4-27",
@@ -1782,7 +1896,8 @@
       ],
       "reason": "正答肢の意味を保ったまま、正解位置の長い規則的な循環を解消",
       "beforeSHA256": "cb11e305a9e23c124fa2b996c9cf35046b9351b18eb124e281eb38860e3be077",
-      "afterSHA256": "fcf827720cd1afd5744d46b404558e048f6aafd96764d5d838851272457beccd"
+      "afterSHA256": "85799a0b7ffaec75b4e9bd817d8850fe890c00b0965fcf7598b185d792462e97",
+      "followupFullBook20261103": "正しい選択肢の範囲を修正"
     },
     {
       "id": "4-35",
@@ -1856,7 +1971,8 @@
       ],
       "reason": "正答肢の意味を保ったまま、正解位置の長い規則的な循環を解消",
       "beforeSHA256": "8ca9304716b7b85d6449244eecdbd4499d65000c23144998fdc17460140eb51f",
-      "afterSHA256": "8517e5587454b6973fc63bbe6de94ee39f4c832e3655f2f4d71fe9c11ea59ff8"
+      "afterSHA256": "8c831476801c8c1c3fd708a372c4e9054bb87eb70edbbbe038405d1361804dad",
+      "followupFullBook20261103": "選択肢入替後に残った逆順の範囲を修正"
     },
     {
       "id": "5-1",
@@ -1872,7 +1988,8 @@
       ],
       "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
       "beforeSHA256": "9c00422e017cb1acff6da5c77fbcbf1090dfc06841499e99b2e5d6a4829ec33c",
-      "afterSHA256": "d99088d614f6ed4ed2d314a19cdb57df11b3048414b99091d6138eb1809166f4"
+      "afterSHA256": "5c3d722d93f68bf52817c615df73917dcea62073b330e5f2c5763d1fae897066",
+      "followupFullBook20261103": "設問にないテルハの説明を引込みの説明に置換"
     },
     {
       "id": "5-2",
@@ -1930,6 +2047,8 @@
       "id": "5-6",
       "displayNo": 6,
       "fields": [
+        "choiceHeaders",
+        "choiceRows",
         "choices",
         "displayNo",
         "explanation",
@@ -1940,17 +2059,20 @@
       ],
       "reason": "部品の識別とクリップの取付け方向を組み合わせて問う",
       "beforeSHA256": "a445ad2ab97a75486f4ee43f783f0394d787b13d4d0be3a901e7039818fbfaf3",
-      "afterSHA256": "9cc0bb259c1c3aa87a6d7b9e61fbd57c9f79c08740fcd2b1986dcb9b3928641b"
+      "afterSHA256": "a30f7bd2969697b7abb97960594f461952159d1e9dd283c7eac6b71749ee2a3d",
+      "followup20261103": "対応関係を選択肢表として整列"
     },
     {
       "id": "5-7",
       "displayNo": 7,
       "fields": [
+        "choices",
         "displayNo"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "8f17982face647da4a20f101b113a8bebbf02b3333179403489814f4f38f7a3f",
-      "afterSHA256": "8dcfe12b382f3162426b7f893cf3c7939f62de7edaca6d7aae77fc12c805551e"
+      "afterSHA256": "4d892699a9adf2cb9011210ddcccea3817a4b2c54d9e9fc8f46f0ac1801dba07",
+      "followupFullBook20261103": "書籍p64・67にある警報式等の違いを排除しない表現にする"
     },
     {
       "id": "5-8",
@@ -1970,13 +2092,15 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "ref",
         "refs",
         "text"
       ],
       "reason": "三角関数による作業半径計算を、図を使った定義の判別へ変更",
       "beforeSHA256": "76bfba2c70005f84982e840b0cfa533daa4935fdebe3c47c1d641038e68d2560",
-      "afterSHA256": "e7944c5969bdd3f15c3199469c4bceafb60483a4468e89b156241b24174b6e79"
+      "afterSHA256": "ea0bc38dd10ca7d368e270f7313f9ed598b063b4e9f23ecb34e8e6f37e2f888f",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "5-10",
@@ -1996,13 +2120,16 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "ref",
         "refs",
         "text"
       ],
       "reason": "回路の一つの数値当てから、電流・電圧・抵抗・電力の関連した判定へ調整",
       "beforeSHA256": "a25a46b03c3a40add845fcaca838f0ab132af3dcbe3e710f796c4fce4a1a4ffd",
-      "afterSHA256": "e6045ae5f6686e0af00aceaa8d2f40c2975afec751fbeccf9ba6d23d37eba782"
+      "afterSHA256": "0aabf5d2d3016ad4e759d761d6e96d310e010f02221ead50c016546ca9818416",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "断線後の枝であることを直接説明"
     },
     {
       "id": "5-12",
@@ -2017,7 +2144,8 @@
       ],
       "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
       "beforeSHA256": "bfe06746789ad9810055f1ecc08bc583749a4e4e543bf76904049f2512cdffa6",
-      "afterSHA256": "5e8722a93564b02f909f893bf94bc7043ad1b4bbb91b6ed48266b8eb9760d7cf"
+      "afterSHA256": "004d8d542f29a18ddbf48798a94fb65e5189e6f0f900feadccfa8c94ce9b5c16",
+      "followupFullBook20261103": "書籍p117・118の電力と電力量の関係で誤答を説明"
     },
     {
       "id": "5-13",
@@ -2033,11 +2161,14 @@
       "id": "5-14",
       "displayNo": 24,
       "fields": [
+        "choiceHeaders",
+        "choiceRows",
         "displayNo"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "5373403c74e440baa0eca9eb41641469931d965a88129e09b568a6b396ad1501",
-      "afterSHA256": "e249a31d31bb7ed033ea56cf957081cb1def7228d54d0b31c9a2f4836a0c3864"
+      "afterSHA256": "18452038428c02ac5a3b6edbf4e959ac1f3aa2f830f1a936841cb65f84ea6fa3",
+      "followup20261103": "対応関係を選択肢表として整列"
     },
     {
       "id": "5-15",
@@ -2103,31 +2234,39 @@
       "id": "5-21",
       "displayNo": 31,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "21de9a68e79c810c7a6766cf9780a25b8fd6ad3a600f0c5075f69bbc3b6f0143",
-      "afterSHA256": "34bf802a4bbec35f34bf102004b6041143aa4831e546accbb9f39a47d03701d7"
+      "afterSHA256": "fa1eba316d563f511d09f212e2bad7b5c41d4542bc0a2ed57db5a4d494f33825",
+      "followup20261103": "三角関数の追加学習を要求しない説明"
     },
     {
       "id": "5-22",
       "displayNo": 32,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "1defec05da2a9f6cb9c3b04d08fba0b47ec19208cb9b94d66dc6a1a15687c953",
-      "afterSHA256": "d0e13c58cd5a43a84cdd4b20c6e65449c96506afbefee9c0869bf215fef18be8"
+      "afterSHA256": "b2744cb8199d873dbef3812aedf1b2e665e6a31d928180c557afb08917aa1291",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "5-23",
       "displayNo": 33,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "52f9e8e1fe23adb056c764f6b0ec85a9296bd3d3fd4fd7eb053e96313a2ecb72",
-      "afterSHA256": "b4f91066a7971a917f25ed3b935cf237dac29ee902f014f261a8efe06f175d6b"
+      "afterSHA256": "de7d9ce95d1efacaacfe2ee74e2f6342785f0f9dfcc8ced7f7cee1d9f506201b",
+      "followup20261103": "数値計算に必要な重力加速度を明記"
     },
     {
       "id": "5-24",
@@ -2143,11 +2282,14 @@
       "id": "5-25",
       "displayNo": 35,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "e13a8ffa6cf7568adf2e8f8a0d7b804a519502a2ad6d5a8ffd29bd506d20ac48",
-      "afterSHA256": "897476d41b78fd03cbbfdd1d8c87b2f5c0b838e6c09466692d09975f3c153394"
+      "afterSHA256": "68f9dd66cec64456ce7ebca22c202bf9f225232ab58272fd07e09b7c327939f5",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "5-26",
@@ -2163,7 +2305,8 @@
       ],
       "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
       "beforeSHA256": "85463153a891966ca6228b5c745c8769eb2caeedbf1f13d3d091a193f5b5a6a1",
-      "afterSHA256": "3e598e864880afb9045531408df28d03f1232dfbfc9d6c416a6b21e37c52b5c2"
+      "afterSHA256": "c5d0e23b6e126577ab13eb15dbdc0eef04de8c8506fe6dab82d44f33f40aedff",
+      "followup20261103": "ロープ張力の成立条件を問題文に明記"
     },
     {
       "id": "5-27",
@@ -2173,31 +2316,40 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "text"
       ],
       "reason": "三角関数の表記を、つり角度別の張力係数に置換（答えの大小関係は維持）",
       "beforeSHA256": "63daf20582afdf17525d47eb3d2c0455539c77d0293d9312c734f8a40adca890",
-      "afterSHA256": "9d79fb3fb02ebdeeee621ae670f0195a3942a7bdf2be478d3af57d95e93e9615"
+      "afterSHA256": "8f2b1f1126dbc1e7e6c055f240f23f09f1a1a34b9da94afe5c10c56b68c57002",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "5-28",
       "displayNo": 38,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "c59335619e6bbd0bb1d506cc2c3a1505ad74ea4008d45cfa95159875dff58c45",
-      "afterSHA256": "8e29a7b9a32fb4eeebad3367a4b0ee2cf84bfac676c734597617587df17e10fd"
+      "afterSHA256": "d0e5ce7ed4a6f34c8769828bb1f7dc9d16563959d55ed2b42dac40ddd09b6294",
+      "followupFullBook20261103": "書籍p172・173の応力とひずみの説明に絞る"
     },
     {
       "id": "5-29",
       "displayNo": 39,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation",
+        "figImg",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "dc6b52b996c284566f7ed24d1e8570ae582ba1ec4caf198a3b4100eb054550fc",
-      "afterSHA256": "2a14ba6d71940467b915f794ade71ecf7fee4cda99dc8863ae92dccf5ee7bccb"
+      "afterSHA256": "da4a2b18cb602d21b35f22b31fb3add3abf9efebc1d817cb863cfb04c6c51e07",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "公式書籍p167の用語「静止摩擦係数」に統一"
     },
     {
       "id": "5-30",
@@ -2239,11 +2391,13 @@
       "id": "5-33",
       "displayNo": 13,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "1b6af11228bd11117945c2d78c8d118d98ab66867e77183d4f34393317f79578",
-      "afterSHA256": "49310b8c253a5271223bb06c6d8fcc8347868c1a3396fde27b463d0139658e25"
+      "afterSHA256": "2aee0e76210655ab4e638bb402845927726b11e3474183a9eb861b4a7ff9b9ad",
+      "followupFullBook20261103": "検査証を必要とするクレーンが対象であると明示"
     },
     {
       "id": "5-34",
@@ -2373,11 +2527,13 @@
       "id": "6-5",
       "displayNo": 5,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "0e5238bde1914e2024b5a586889e56e34519a28e090bac1f6d58439da7b4e997",
-      "afterSHA256": "d6db3dbed6d85e0001b4b1dae192726d11a860235900429aed433b692ece9997"
+      "afterSHA256": "c408dea9b4445f7e4ef9811c9eab6626f5f079c498a22402c4c891efb1219b8c",
+      "followupFullBook20261103": "バキューム式の説明を通常の使用条件に限定"
     },
     {
       "id": "6-6",
@@ -2444,13 +2600,16 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "ref",
         "refs",
         "text"
       ],
       "reason": "回路の一つの数値当てから、電流・電圧・抵抗・電力の関連した判定へ調整",
       "beforeSHA256": "09eedb5fc733e09dc5b3ef06f96782316512461d6a59ee3dfd85ad791256d884",
-      "afterSHA256": "2e9bfa07d74cda219cad3a06cc8231542757b646c83cb21332f772ef79eae313"
+      "afterSHA256": "df8ea08de17fb72c2c54735272a71a7988ae353f060b49c2225280c9206fb887",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "断線のない設問から共通テンプレートの不要条件を削除"
     },
     {
       "id": "6-12",
@@ -2466,7 +2625,8 @@
       ],
       "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
       "beforeSHA256": "f7caf6477ca575090644f7fdeab9ba2c6b5107362612c551c3503ab69701b75d",
-      "afterSHA256": "59a1923ebced117c68f62704875f6a5c3869bfd90c4b9ff3dbc52e34552e4e15"
+      "afterSHA256": "c4eab27b1f245288d081499173a30f087c83b7b7c854fb830415ded4e0ae44a2",
+      "followupFullBook20261103": "書籍p115の直径と断面積の関係を解説"
     },
     {
       "id": "6-13",
@@ -2567,41 +2727,54 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "text"
       ],
       "reason": "逆三角関数による方向の計算を除き、二力の合成を問う",
       "beforeSHA256": "a6289f4e5ed68d71fb5e7c53170f7cf03fe50ce2c7a83100f997eb7bff63394c",
-      "afterSHA256": "9dd2d6cb5d998ad75394de66949df21a79b3e1e5cd0815a31645876b5a4212fe"
+      "afterSHA256": "a61da2cbea10b2e26b0c0c0ecf6e5af25e60e035a83befe56f8b7bff4c74657d",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "6-22",
       "displayNo": 32,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "510014f32d2c94edefcf94d9c9a721ce5910f704aca6d0258ec4de9dc31444cc",
-      "afterSHA256": "9156ee36f322172f81c559718d6975066d5b2e98e5719c0dde79537918180c24"
+      "afterSHA256": "5d73e6e539d38d0ccdd2baa33cb362777e85f085ca48e81582aeb1b87e15941f",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "6-23",
       "displayNo": 33,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "3fcaf6292cfb72bd7c6171b1c1219c997642fbab0288062a373ae4af55008b39",
-      "afterSHA256": "aab5be7ab02bc88eff3dab02048cf5aadaf1d79d6269eb5427f3584072899bff"
+      "afterSHA256": "2773b8964bd1ba818236ed4dfd00002c0fcfab62081b9836109f15ed95890bf9",
+      "followup20261103": "対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "6-24",
       "displayNo": 34,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation",
+        "figImg",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "4fc83b3c5c4a3a87fb626bcbd2b8bb8eb82879ac7b6dcd7f9a7e0ce6a1a40a25",
-      "afterSHA256": "39bc7cb95e9e48e61f7386fdc799fc8634c790c31f5754aa93d7033cc7da8daa"
+      "afterSHA256": "415b8c7c2a5e2d747edb103b421ae6093623966920a6f994684e8bf1a8b0ae57",
+      "followup20261103": "数値計算に必要な重力加速度を明記／鉛直成分を問う問題に不要な三角関数を除去"
     },
     {
       "id": "6-25",
@@ -2659,11 +2832,13 @@
       "id": "6-29",
       "displayNo": 39,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "acad22151be3358e7c494a7f79c0e86b0bb878f89b64e12c15664add5aaae34f",
-      "afterSHA256": "efe1b79d688d9437fd781864bf943796d256fd919e61a07b9703df70d4ce1c4f"
+      "afterSHA256": "a044610110afb985fd0e19577b9badfd0550d8fe498a8e08be9ac243d481178b",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "6-30",
@@ -2783,11 +2958,13 @@
       "id": "6-40",
       "displayNo": 20,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "024631a5859d234c265e7804302de50643b0e36f6c85b3ceff39b08e981eac01",
-      "afterSHA256": "484400cabbe5e998b0604f205109c9678649022b1e25a939589e961d22d0e0d7"
+      "afterSHA256": "16d385f5f6bd0e3c5f4b4bbca3e10e943174b8855c6c2697b04091d2d78f2e8c",
+      "followupFullBook20261103": "検査証を必要とするクレーンが対象であると明示"
     },
     {
       "id": "7-1",
@@ -2813,11 +2990,13 @@
       "id": "7-3",
       "displayNo": 3,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "01ba5a8bab4db29b55d5c5fef1462f1b2d3bf2efdaf67370200ac740e078456c",
-      "afterSHA256": "ec8593d11cd09ae3740f62128c0397bc7c78d0fb7a1f3d40a2facac0db020b70"
+      "afterSHA256": "b3286a685fd0c3ac8054f616a2af583d2de576e77419172cce685344057da83a",
+      "followupFullBook20261103": "学習者向けでない編集指示を削除"
     },
     {
       "id": "7-4",
@@ -2839,11 +3018,13 @@
       "id": "7-5",
       "displayNo": 5,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "678d0531e4e193b435d858889274b20025e4d19104ea52a00527ccb2670f204d",
-      "afterSHA256": "9b2d7a42c9c91f20786dccf29fbb2c6b0845cd0312b13dc9a01032435f720c9e"
+      "afterSHA256": "d591886ea6011e81b0b307784690086f91014a86aa78c90e82e8032bf8b38871",
+      "followupFullBook20261103": "設問の電磁式に説明を絞る"
     },
     {
       "id": "7-6",
@@ -2869,11 +3050,13 @@
       "id": "7-8",
       "displayNo": 8,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "247b351e1851c6440a961d6574fd45ad3422875611c53a1c73a6af6548ebd0ee",
-      "afterSHA256": "1c6c3be1268f6a6212c7d89e6ca53d398b004100ccb4369169c71657ac574bc2"
+      "afterSHA256": "db13fcc653acf6cafee5fb01d511145a8628109a6fca2b9c56652bdb52abed17",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "7-9",
@@ -2909,13 +3092,16 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "ref",
         "refs",
         "text"
       ],
       "reason": "回路の一つの数値当てから、電流・電圧・抵抗・電力の関連した判定へ調整",
       "beforeSHA256": "3f3cedec7afb0dda44fbcb84a20322fc2ef5809883f6f758c1959d1ef55fe157",
-      "afterSHA256": "fa78173aea955d9a8c54326c52aa5f6c457a3007e56b0be220998019d3074ef9"
+      "afterSHA256": "e5bf174d825b3084c6a38cedbf9caa70e2993154b7408842dadc7e43eb05a0be",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "断線のない設問から共通テンプレートの不要条件を削除"
     },
     {
       "id": "7-12",
@@ -2931,7 +3117,8 @@
       ],
       "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
       "beforeSHA256": "391fa33e93f5981d4a5645b377eceeecb17ac493fe608ec3bfa56587b83077ee",
-      "afterSHA256": "cee40dd823d45e478f077d5a65158d373f6641579d67040d3e738544c955c04a"
+      "afterSHA256": "7a5198b78530fc111305b46c6a391fd5175ba58874554ff37546fa05a812a812",
+      "followupFullBook20261103": "書籍p117・118の式を各記述に当てはめる"
     },
     {
       "id": "7-13",
@@ -2967,11 +3154,13 @@
       "id": "7-16",
       "displayNo": 26,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "eee69884dbd50d6ffe4ba822a23a150f760063be2973e3a7b4bf99e58f84b5d6",
-      "afterSHA256": "fad21cdba5fc173f331ccf0e495cc4f9e36fd34d9f4f08fbe98819d239fd3d08"
+      "afterSHA256": "cd4ad5a38c00b9c89ef035f489fda468cd9a5cc82c00ded2cf6b4d012dbd8757",
+      "followupFullBook20261103": "設問の解説に不要な編集上の注記・別論点を除去"
     },
     {
       "id": "7-17",
@@ -3028,41 +3217,53 @@
       "id": "7-21",
       "displayNo": 31,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "2560830182f7f71c2a58c14bddc45b51277f405d97f090f4e917e9d69c30e60b",
-      "afterSHA256": "dd6a27ce337211ff98ba9589fdafd384110ed1bde0cca6c4257697033ddd07d7"
+      "afterSHA256": "459690f426ca1eb1ee87c369cf0245f5c48dd2184dbce89ad2e364463facd0ce",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "7-22",
       "displayNo": 32,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "515d849412285bd072023b974d4fd1a0df3f10faee9fc30e6de3bdfe4feeaf89",
-      "afterSHA256": "9c6f5f3b0fc5e71cfd7696304a64f0dffa61d40da9311c257db2b84b176d66fe"
+      "afterSHA256": "6adc181054d4ce9bb474e28b65c769f1a71d45a092ac7c76476ae4db86d25af0",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "7-23",
       "displayNo": 33,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "f9bdfc5a58300888ff1cfd57bc24a5e88ed4d2497b081cdc0096b9e970a897d1",
-      "afterSHA256": "ea36d9a0f8bf73ee434690121b8b79057239f150ad806edd7ad1f2945fa9d424"
+      "afterSHA256": "0369174425c813fef8c03d076079879003bd66fc26e51276b94fcc38d1fc72bf",
+      "followup20261103": "数値計算に必要な重力加速度を明記"
     },
     {
       "id": "7-24",
       "displayNo": 34,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "displayNo",
+        "figImg",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "ab22923e87d4262579d532de64b5f805bec677e1bd66e23d8f86d7328b743b20",
-      "afterSHA256": "7970b1080e4e8ed9f88049dc12d6fa23293f6e409681efd3022700f3c18d281e"
+      "afterSHA256": "67f4e84e3c4d0dc552a91b0e64f697517af4a485c8b492443391c94edbba96d2",
+      "followup20261103": "数値計算に必要な重力加速度を明記／対応関係を選択肢表として整列"
     },
     {
       "id": "7-25",
@@ -3106,21 +3307,28 @@
       "id": "7-28",
       "displayNo": 38,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "903deebd2cd70333711c1b046873cc5f5f323ce7a8be7babe9d0049f94463ea9",
-      "afterSHA256": "534dc1e109e957058ee4121f1fc88971ee86656be9b5cb59e7bc8c4dc434df5c"
+      "afterSHA256": "d9f10722c6ebfb6789a2e46bd692aeb89688cb9dfcb0b85b6c5c5171e9b89320",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "公式書籍p167の用語「静止摩擦係数」に統一"
     },
     {
       "id": "7-29",
       "displayNo": 39,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "a2b6f36353bd487bd7d0549bde004b7a34f96323eea057a3d6c3ad541ead8c4b",
-      "afterSHA256": "051151de4834ab091c61d53043645d41039da3c789b2eb5a4c295aa4cab13c52"
+      "afterSHA256": "51cf4e2768d14ec462e6290461b7e91b616160198642ce668ef413239caf2714",
+      "followupFullBook20261103": "公式書籍p156の比重の基準を明示"
     },
     {
       "id": "7-30",
@@ -3141,11 +3349,13 @@
       "id": "7-31",
       "displayNo": 11,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "612d03b73eec83a49d7702759c3f3882fdb0bb1f8b4b5f16781df13007286877",
-      "afterSHA256": "70e889159e82a9cf3fcd4d8c41e58b721439c9509a32f4d28c114653dd97d177"
+      "afterSHA256": "431019a614e65e9bf112fb746832ee20eb7ed6a4da56ee23b9f6fbcce9cb9d67",
+      "followupFullBook20261103": "転倒のおそれのないクレーンの安定度試験の扱いと条件文を整合"
     },
     {
       "id": "7-32",
@@ -3242,21 +3452,27 @@
       "id": "7-40",
       "displayNo": 20,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "cdbacc84aa3d8008a2a3649d4f0fb24012f465931be4b344495b5aa72e19cf7e",
-      "afterSHA256": "08edfad113b50e229437dce6ed3a4de098ff8055db7acd6c555fa61fefddfde6"
+      "afterSHA256": "470f5b504da542042f56d69df7f466770c87e5d862c23de4ce6cbf16375a18ef",
+      "followupFullBook20261103": "学習者向けでない出題編集上の注記を削除"
     },
     {
       "id": "8-1",
       "displayNo": 1,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "displayNo",
+        "figImg"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "dbd63ea084eda86fb2a4bcf8ce5fdadb16f2de8a33ebf0545bbd5950debe717c",
-      "afterSHA256": "f31525f436f75250bd736fa84b34df60f3c253e4498be38d6e8a352640859a3c"
+      "afterSHA256": "6009886d8c4bd0a6577e4ddc96d58a868c72eb3ffe0fcdaeba81e8a2a90ee19f",
+      "followup20261103": "対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "8-2",
@@ -3272,11 +3488,13 @@
       "id": "8-3",
       "displayNo": 3,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "8b652e0acd04580ff590323fda3613e34ec7a4690545075c82a5d75cca1e48ad",
-      "afterSHA256": "d6f18a156c6b9fd0d881ba8fa7e3edc9544a731d1ae33245d94fe61047fd9abd"
+      "afterSHA256": "ddeba8bc91f566b7691c9102d09510ad0d13a4c69303e3a1d128d7993b376962",
+      "followup20261103": "古い技術系線画の解説図を教材と同じ3D図に統一"
     },
     {
       "id": "8-4",
@@ -3292,11 +3510,13 @@
       "id": "8-5",
       "displayNo": 5,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "827efd5418b481db30db3c6e88cbf55d17ea3745efe5e986a953e728659e349f",
-      "afterSHA256": "7de7cb1050dea47515458084bf4c128666e99fc1d998557ecdfbc9917ecb0c53"
+      "afterSHA256": "895abfbc422571c41264e5fb8ddc590596addec8fa283955ecf3f0b55d1f844b",
+      "followup20261103": "古い技術系線画の解説図を教材と同じ3D図に統一"
     },
     {
       "id": "8-6",
@@ -3363,13 +3583,15 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "ref",
         "refs",
         "text"
       ],
       "reason": "並列回路の一つの電力だけでなく、電源電流と分流の関係も確認させる",
       "beforeSHA256": "f928e6970ce42939c735578d4f31a984dd508c67b4dc7ce9069c36403c548feb",
-      "afterSHA256": "ac6edf79cfcc3fb3ef62500081750c4473fa9fece628bb5b5af4b24cadfb0fb2"
+      "afterSHA256": "53c76dd5bb84179d22b92ea9778053e2182fc106b6cf41610896d72fcf31983a",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "8-12",
@@ -3432,11 +3654,13 @@
       "id": "8-16",
       "displayNo": 26,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "6c4ce09950aa9736d63543f4e2dcc42dd81aabd92679752108aaaad49a35e5f8",
-      "afterSHA256": "fb24660f7f9f4e9d05ca960a235a8505799579d2aad68f870fe8bc6043ec464f"
+      "afterSHA256": "2d7093f97dc573d4728fbd9d445b5f3becccc88401814120b6ff2864afd19022",
+      "followupFullBook20261103": "設問の解説に不要な編集上の注記・別論点を除去"
     },
     {
       "id": "8-17",
@@ -3482,21 +3706,27 @@
       "id": "8-21",
       "displayNo": 31,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "feb3dd057c2bd0f2f52140782704d7ae02a75a1757812bfa0941cabc3c4ede4d",
-      "afterSHA256": "ab8a40a97c8423f87e14ca827ac081b9e8edd33da903f3d20954e39237614967"
+      "afterSHA256": "7f3a950b9e68b5926a68ccdf11de035ec3bf62f82f2e0ce39ffffe0c9c774298",
+      "followup20261103": "数値計算に必要な重力加速度を明記"
     },
     {
       "id": "8-22",
       "displayNo": 32,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "dd61f3549adb0c8e1105d3287701e921001804ba9fbd4f6f6af47a605ab76487",
-      "afterSHA256": "5cbf88ae5f075e9739495fc6a93428062ad5e50bc646a8ec20f7382b160cf363"
+      "afterSHA256": "3f33c5415abb9cb5535121eae9dedcdcd4df6c32316e9a9c5437ceb04a0f04ae",
+      "followup20261103": "数値計算に必要な重力加速度を明記"
     },
     {
       "id": "8-23",
@@ -3506,11 +3736,13 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "text"
       ],
       "reason": "水平分力の三角関数計算を、公式でも使われるつり角度と張力の計算へ調整",
       "beforeSHA256": "8762b17a95cbcb96e2cd2d7717cf8b61269bf83ce707631923a7391884782f64",
-      "afterSHA256": "11dc736a019e6a148de3668c2d45d6e034b5726fdfeee47fcfc2b250727ed4f9"
+      "afterSHA256": "7dde090cf08de55b9c67c85899e7b48032c51cf1f870d8436aa0f705b236b8f4",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "8-24",
@@ -3543,7 +3775,8 @@
       ],
       "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
       "beforeSHA256": "da338a2c07ee37f851d6a7180e1f3b741b1ba797cf718e257563529af44b04e1",
-      "afterSHA256": "d722b8e16c82d796589e9e99c6e6b61d8479844fcf759b80266989cc79f3b56f"
+      "afterSHA256": "9fa796a90c77329ca82978d57ba9b69764edad2f4758adfe79a929d22f7bf81a",
+      "followup20261103": "ロープ張力の成立条件を問題文に明記"
     },
     {
       "id": "8-26",
@@ -3577,11 +3810,15 @@
       "id": "8-28",
       "displayNo": 38,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "a4ab6a2bab5af54d3034581c933a1e3e8debca527f4047ee4bd9ad5dc888ffad",
-      "afterSHA256": "7ad8a062aa34d2bc819cedb481f819166489f99dc5bcca64b46149b8a5beab26"
+      "afterSHA256": "db3b4b8bfc8725ba93aa6cedb0982f0ce877a3a53edc18b46b443ea1a4cf737f",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "公式書籍p167の用語「静止摩擦係数」に統一"
     },
     {
       "id": "8-29",
@@ -3603,11 +3840,16 @@
       "id": "8-30",
       "displayNo": 40,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "displayNo",
+        "figImg",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "f9ba21fab59159c2b1680328777a39ab294da195196f91b40429812cf4131bca",
-      "afterSHA256": "3d79e67b0a79bfb520d854c670c3f10e1a99eaae7c628c293bc7e54ea5a8c727"
+      "afterSHA256": "11fe8d24950feee128a4cfc30c04082152d768c5fae8ba77f28f2415190fa94b",
+      "followup20261103": "数値計算に必要な重力加速度を明記／対応関係を選択肢表として整列"
     },
     {
       "id": "8-31",
@@ -3638,17 +3880,20 @@
       ],
       "reason": "A〜Eの記述を改行し、条件の読み落としを防止",
       "beforeSHA256": "e375dcda69e341b79de852b6b3d605cf59d78618cbc58749bcebfc45e8ffa732",
-      "afterSHA256": "09a97084ffe3a75eb648557f1b93928f9c56f7ac2a43b8cbc7f87bf8b530f63a"
+      "afterSHA256": "fe3ee3b13e117e80f7d58d0c94aba6d5cd8ec4482ffcd8b37f52aeddbcb43307",
+      "followupFullBook20261103": "連結していたA〜Dの記述を段落分け"
     },
     {
       "id": "8-34",
       "displayNo": 14,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "26de6795fbb031e5c3460001f035f4b06fc67e140ced22c888663ab879542f14",
-      "afterSHA256": "0041b956080da54332c62c1ec44730ddf83b48dd9b6f4cdfc90bd987118e81e0"
+      "afterSHA256": "02d534d1ca37405f4b5d7190db1d662dfe5d70433f2a664a5bf946280f13def5",
+      "followupFullBook20261103": "設問にない警報装置の説明を点検の解説に置換"
     },
     {
       "id": "8-35",
@@ -3705,11 +3950,13 @@
       "id": "8-39",
       "displayNo": 19,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "92eb8b82815a1281e3b62c55b2850526b7285e0d146454839d93feadd957187b",
-      "afterSHA256": "44619ba46ccb87870a3158120e45d29e5ea8e33b6a80fd25bcc9d3d91c495a52"
+      "afterSHA256": "9b328c901414853c0419bfd0bc6011b3a25a9270dcf57254f3e2c1f89cbddcec",
+      "followupFullBook20261103": "学習者向けでない出題編集上の注記を削除"
     },
     {
       "id": "8-40",
@@ -3735,21 +3982,27 @@
       "id": "9-2",
       "displayNo": 2,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "bb804e7cd433d2d4e440be0cf659621bf100711e4d45a74302211b4d594ad7c1",
-      "afterSHA256": "38d418618958aeef2f9ac1d9b0f181f445e712ea98dc686dace09dc9b6960621"
+      "afterSHA256": "c6edb9264af9dae9e519a6441a6be06e17063717a17ddd34cb3b157895d8c3cf",
+      "followupFullBook20261103": "揺脚の説明を指定書籍p33の荷重によるたわみに合わせる"
     },
     {
       "id": "9-3",
       "displayNo": 3,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "displayNo",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "2c87c3c944b38b69c53a2e68dd37b6cf3bbf0d0b9dc3f734833527c218049c4f",
-      "afterSHA256": "e91d53a7a11bba305f1d07c2ba791f05f8e46c1a93408a25ed3909031683268a"
+      "afterSHA256": "b64e7793aab38f8a5c442d5c2a2753c577d4a031c682d43da61748c8d131598f",
+      "followup20261103": "古い技術系線画の解説図を教材と同じ3D図に統一／対応関係を選択肢表として整列"
     },
     {
       "id": "9-4",
@@ -3760,17 +4013,22 @@
       ],
       "reason": "A〜Eの記述を改行し、条件の読み落としを防止",
       "beforeSHA256": "67c4a05fa230bca68795f834ff5f3139de25572dad6661dc05e35de37e3d02b8",
-      "afterSHA256": "263ee11f4f2a0f94a2d608623e1f5f8e76155fb9c930165c85c0a824d1dc1619"
+      "afterSHA256": "489617b48af35e23d197bfbd7280362df5f5ab643d377a08c02e3e143f513e99",
+      "followupFullBook20261103": "連結していたA〜Dの記述を段落分け"
     },
     {
       "id": "9-5",
       "displayNo": 5,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "displayNo",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "020839768cb5ba9b0f04ef8dab9d1e33af1b54ec793d66fbed444a5c4ae00b11",
-      "afterSHA256": "86e4aa97cf365557c4ffdbcac70e6393194d2c2349088b50764223fbc8997131"
+      "afterSHA256": "27dfb3de2b21057df2baf58fd58cbb2cec195fa655b252b53f575b05fc3a8f4d",
+      "followup20261103": "古い技術系線画の解説図を教材と同じ3D図に統一／対応関係を選択肢表として整列"
     },
     {
       "id": "9-6",
@@ -3918,11 +4176,14 @@
       "id": "9-20",
       "displayNo": 20,
       "fields": [
+        "choiceHeaders",
+        "choiceRows",
         "displayNo"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "04c80f930b5b3db42997215e0de7a992c280d1cf9f88bce8593dbab7360862ab",
-      "afterSHA256": "583d7975894970167d6188c71ec542792a178f7abbe0084e3cbea98d6f45d92f"
+      "afterSHA256": "66266cd955c88284d5ffd29cc34b6095f3f127d71a4947f07705de8cbd780848",
+      "followup20261103": "対応関係を選択肢表として整列"
     },
     {
       "id": "9-21",
@@ -3942,6 +4203,7 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "figImgExp",
         "ref",
         "refs",
@@ -3949,7 +4211,9 @@
       ],
       "reason": "回路の一つの数値当てから、電流・電圧・抵抗・電力の関連した判定へ調整",
       "beforeSHA256": "64d880528a74b6f7ce069da0ef1d790abd8c581527727dc61af697f7f7b8ffdb",
-      "afterSHA256": "091083345bcc397246b8e57147786ab81fd4d5ee23462ddde242c116298b0ea6"
+      "afterSHA256": "23a052ee12ef8e43438e74e94c650ad226d38b94f07f00c2d236dae7cf3cb312",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "断線のない設問から共通テンプレートの不要条件を削除"
     },
     {
       "id": "9-23",
@@ -4052,41 +4316,57 @@
       "id": "9-32",
       "displayNo": 32,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "c41a6fe6b1b33a5a0686734c416bd3da3b3bf0b51711b3a52d097490375cf4b4",
-      "afterSHA256": "256e594fba4c7ea3c2d78779941eb2be332308cf5fc0a7756b0ae75a533b9479"
+      "afterSHA256": "937cad93aa4bbc214a60b6bced30b8ddbede4c91b99acf42ff5552707e27d1dc",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "9-33",
       "displayNo": 33,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "5d98463e4789c48d163e15fa29f1504c196e520844a4e8693cd372c170bfa2f9",
-      "afterSHA256": "d0bd3e2d5a3926af45042b1e054b3c23de9aa05c64dc6e86a86c886579273c88"
+      "afterSHA256": "2318185e310af11cbd3ed9a9d6d83e8da66aab65ae9ac855728503c55b10e85d",
+      "followup20261103": "対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "9-34",
       "displayNo": 34,
       "fields": [
+        "choiceHeaders",
+        "choiceRows",
         "displayNo"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "68f6be190172eb03bf6da023a6ec7abf281f2c4256d9a23173f4769f4347ca2a",
-      "afterSHA256": "aa9849a6ab8005af4c336a469e4a16b07d300c831f68b5f27da0fb6e2366230a"
+      "afterSHA256": "78dba57f446ff3243ccaffba6d7241bf6294b3bbb0d7234d994fbe3c96cd0d20",
+      "followup20261103": "対応関係を選択肢表として整列"
     },
     {
       "id": "9-35",
       "displayNo": 35,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "8373cd873b8d56e7863ee6e4eccd3485e45f43136b074ec86144ad7d12be6562",
-      "afterSHA256": "844354ad4d4354b1b10a187cb77395c950b140e85ad4b190b8cf3d0345b70b97"
+      "afterSHA256": "17a10fb485382c6afb4a099e9e8b7be470e323ab96eb85ff3cac2aaa56c2e582",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "設問の解説に不要な編集上の注記・別論点を除去"
     },
     {
       "id": "9-36",
@@ -4102,51 +4382,67 @@
       "id": "9-37",
       "displayNo": 37,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "2cfb3b9165a2e89148f3269da59376a0d0c767051d978341087087b16773ea0f",
-      "afterSHA256": "df91a393165b9dce488ced7cee766fe6da8c3640161d47d64944fb484e7935d8"
+      "afterSHA256": "123b5f700fe40c3bf9a50b19fe61f1adab7868253a02c28537f25e215179a029",
+      "followupFullBook20261103": "書籍p169に直接記載された回転軸のねじり荷重で出題"
     },
     {
       "id": "9-38",
       "displayNo": 38,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation",
+        "figImg",
+        "figImgExp",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "2ffd9461aeec31592ef7e5750d291b7e721bb987cffdacd65644c8768f50c18b",
-      "afterSHA256": "3d9cf84b592ca346aaa4ff97427b6783424a19b53c2b1eed7dd40bb89a4c77d6"
+      "afterSHA256": "d7010b7a06765c6c6e93bb8487e366054521aae6fbcf4f541cbb1681363b1436",
+      "followup20261103": "他のつり角度問題と同じく張力係数を与える／張力係数で解ける説明に統一"
     },
     {
       "id": "9-39",
       "displayNo": 39,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "f3cfb0b613f84018cff9782c5e944e7112c66aad53ebf7655b1d2fc5ee5dd325",
-      "afterSHA256": "f490774d2999717fc13d9ecc580ca15a9339bfcf0b769626751573b33f035bd3"
+      "afterSHA256": "ecef7fcd9ba61bfefe71fff3d6e39248369794269456efb5007ddd01e3ab481c",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "9-40",
       "displayNo": 40,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "26fbde99aa0c24cfa3586a2abcca68b79594c4cd4ce43f517aed7f8e635b3283",
-      "afterSHA256": "9e450200015795761c62ef3fd00e14fbd0b08872c80389463573c6cdd0a66dfc"
+      "afterSHA256": "cebb4ff0f3b63a7d8f8779711928bb618104f070115b6266c46dce17cbd1439a",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "10-1",
       "displayNo": 1,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "80e020bf8558861acf800bd7f7398b76fdcba307c3770572e7f99d247009a27d",
-      "afterSHA256": "10152876164fb1fc3e4326a22bd2bbc55f49b380ee6436d456e89748493bd991"
+      "afterSHA256": "c9c1639293a87d902433c1c3d06620fdba305b110fa302076b2fe5a6b64db15f",
+      "followupFullBook20261103": "寄りの測定基準を指定書籍p13に合わせる"
     },
     {
       "id": "10-2",
@@ -4162,11 +4458,17 @@
       "id": "10-3",
       "displayNo": 3,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "displayNo",
+        "explanation",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "c153d6ee861cd8ce31064a8f402836db266f5140f63f8d3089ed310aed46e8d8",
-      "afterSHA256": "82aefa88583da5986bcc210f9e705a118d34ff0a574fb5ec7e567697bee03250"
+      "afterSHA256": "1649a4e30cf462293cb7af46258237e33dcd55aa684e15b15eed14851b952dc3",
+      "followup20261103": "古い技術系線画の解説図を教材と同じ3D図に統一／対応関係を選択肢表として整列",
+      "followupFullBook20261103": "解説に不要な図の編集注記を除去"
     },
     {
       "id": "10-4",
@@ -4183,11 +4485,13 @@
       "id": "10-5",
       "displayNo": 5,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "f3314aa53592759bd3f98c51b08d0a5788a9140d6938f18ea96e8cb2b87997c4",
-      "afterSHA256": "b6bdb249ee0db2ace3bd4495237c4f6ae8e67a11c372e7669fab44b461c04fe3"
+      "afterSHA256": "76d56fe5413c3f0fee2b2f1114b1fe359719927eceee8d932035bf935df3fa86",
+      "followup20261103": "古い技術系線画の解説図を教材と同じ3D図に統一"
     },
     {
       "id": "10-6",
@@ -4335,11 +4639,14 @@
       "id": "10-20",
       "displayNo": 20,
       "fields": [
+        "choiceHeaders",
+        "choiceRows",
         "displayNo"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "84ea9d98ff30d9ebf713aff325f1675a01b34044dba998abc1f25b77c3103c2c",
-      "afterSHA256": "95f43f854c04942766912cf65140575bd2376b718884b2af131289ce07b5d649"
+      "afterSHA256": "ee6502a69e1d72c86d213fbf7d9635f4d693fbada0a723eb623a795fadecd11d",
+      "followup20261103": "対応関係を選択肢表として整列"
     },
     {
       "id": "10-21",
@@ -4359,6 +4666,7 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "figImgExp",
         "ref",
         "refs",
@@ -4366,7 +4674,9 @@
       ],
       "reason": "回路の一つの数値当てから、電流・電圧・抵抗・電力の関連した判定へ調整",
       "beforeSHA256": "ecf2e24b100e3ff309f01e1cd1dfeef058dd0073419193e503e1ee2d96046b67",
-      "afterSHA256": "a1c847e844ab5522548520c531c2b1ebc642222b8abf1a0e44252922eeb1b962"
+      "afterSHA256": "a55cadd3b1c35e3b558c71d6da9b3b0cf5972f28cd84e87132a2456896f888ef",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "断線のない設問から共通テンプレートの不要条件を削除"
     },
     {
       "id": "10-23",
@@ -4463,21 +4773,27 @@
       "id": "10-32",
       "displayNo": 32,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "d240720800dc19dd05f16e425e14b4bb6b0f606c0659127f2e809005d9aaa72d",
-      "afterSHA256": "6dc7ca56b14ed3ad5e5d8ac84c6411da7daa9bea5709e08db764391fadeff92b"
+      "afterSHA256": "42bf82443696e487c67b42bd4d6faaf17ad7cea4a5647ea84f594de966dadb68",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "10-33",
       "displayNo": 33,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "338875a525c58f8f927f4ea254e4330cc1b0a0b3ae98a1db8a3986ff5d11bedc",
-      "afterSHA256": "9f612a94b2b55c4596b840ad0d28885c686c25186aa9d166dc29e809f797680d"
+      "afterSHA256": "90006ed023095ac2b7e6be34b825d1fb5c3a0513026400a0f01e6374bf06d628",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "10-34",
@@ -4494,21 +4810,28 @@
       "id": "10-35",
       "displayNo": 35,
       "fields": [
+        "choices",
         "displayNo"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "b33634ab3e4d0471b2ebc44f053f7ea949ac33a057a4779c7061d985296205fa",
-      "afterSHA256": "487e66c1a9fd2aa32234377202f3ae5ad26a85cb08310017577f6ec2001f47d3"
+      "afterSHA256": "76a399f85ed0d2f9531e337fc45740359c903cbb823b544f189876185f4f1672",
+      "followupFullBook20261103": "向心力の比較に不足していた半径一定の条件を補う"
     },
     {
       "id": "10-36",
       "displayNo": 36,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "397a6774820b25d87794ff9dcc89e4c46fe94549661b98682d527ea39fa59357",
-      "afterSHA256": "9e0e08a50f1396affbba3d3d8115f3e0fd833d2cbbe579b5cac48057cc880cc1"
+      "afterSHA256": "342f351e49b6427b27958ac5c8b750c08cb41ea6030b2e75842e39d0152562d1",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "設問の解説に不要な編集上の注記・別論点を除去"
     },
     {
       "id": "10-37",
@@ -4526,12 +4849,14 @@
       "fields": [
         "displayNo",
         "explanation",
+        "figImg",
         "figImgExp",
         "text"
       ],
       "reason": "三角関数の表記を、つり角度別の張力係数に置換（答えの大小関係は維持）",
       "beforeSHA256": "f32de105306f69af1ebad2dd23d854e5745327334df62f73453e16f7bbaf1480",
-      "afterSHA256": "b2c062584b29447149889abfd3ef17de8e156a947062ca87bfef2afebf58c1f4"
+      "afterSHA256": "d2a3d740796ff0dc19f599b6a5dfa1c154d24c3b8a145bf3ae816400bf3d0cd0",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "10-39",
@@ -4547,17 +4872,21 @@
       ],
       "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
       "beforeSHA256": "06b7204612b12b4d800c20274da1d26073ede6c4e5f67a35afe5a54552418260",
-      "afterSHA256": "813aadd28bd3ce6e019b225802d90fe989ba538ce95c27fd08709fb5f2797cc5"
+      "afterSHA256": "5cf054c24535f83a18bed6f1b2dd5882f7b2649fee08c7e0158bbab41b0ec761",
+      "followupFullBook20261103": "書籍p172・173に基づき各記述を直接説明"
     },
     {
       "id": "10-40",
       "displayNo": 40,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "4457b94a42672e1f422f6cf4a385b01565c3140b795b4eb003e825b1f800694a",
-      "afterSHA256": "cb5f3aafad3bd0c41c3dfdbfcc97907a13c30a81b9027c0b4b852054afd55617"
+      "afterSHA256": "a2311effba14bf033f7bc8ac6d3d2313761dada757123dc14e3f477bdba4502a",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "11-1",
@@ -4583,11 +4912,13 @@
       "id": "11-3",
       "displayNo": 3,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "ed3e160c073a464832ba1ca4eecf5268fbe92d457631ebaed211c0e53d08cbe0",
-      "afterSHA256": "35d5d2f616ec20e8aac419e30966896c9e3d93b1edae530ad8e1c704c711a30f"
+      "afterSHA256": "674b38166c769334cc9e40594f13c74b9650489c294994c67eb3083e3fe10427",
+      "followup20261103": "古い技術系線画の解説図を教材と同じ3D図に統一"
     },
     {
       "id": "11-4",
@@ -4661,11 +4992,13 @@
       "id": "11-10",
       "displayNo": 10,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "88a9a8ab09f87a8408d1e7cec7b87bbbb5d8a81dd5023050a60ffc761fb344e1",
-      "afterSHA256": "1489399f4e2c88cb287ccf6467ee75337144655c6ce9bcaaacc353bbeb7f7f9c"
+      "afterSHA256": "cb2093e547031fb0fa55ea4fe01b8ff3f3ae68016dce0cf773215632b2e46bd6",
+      "followupFullBook20261103": "書籍p77の荷振れ防止操作である追いノッチとの混同を防ぐ"
     },
     {
       "id": "11-11",
@@ -4712,11 +5045,13 @@
       "id": "11-15",
       "displayNo": 15,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "3c30cbe496aaa7314f906e6cb40393bdaa0a6116fdca1597a46328126a327e30",
-      "afterSHA256": "aac0be755165d6c2d726354961cb315bad47882d7ebe524bb240a0eb1bf99211"
+      "afterSHA256": "fc20ddada2606d043d776a055e7f2d754df479906b0982bb81b7484a0a702cc6",
+      "followupFullBook20261103": "転倒のおそれのないクレーンの安定度試験の扱いと条件文を整合"
     },
     {
       "id": "11-16",
@@ -4762,11 +5097,14 @@
       "id": "11-20",
       "displayNo": 20,
       "fields": [
+        "choiceHeaders",
+        "choiceRows",
         "displayNo"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "fd1a6df661afcda54843d2992c94870cb0bd9108b4485f485aa76e8e0465ea86",
-      "afterSHA256": "7d5c66c8d0245e223a986708f464e6f25435f31fef2fd2f82efdf59b35aa046c"
+      "afterSHA256": "d45d0461855197700f627858980e0c2975567405dc0ce4655878583208695481",
+      "followup20261103": "対応関係を選択肢表として整列"
     },
     {
       "id": "11-21",
@@ -4786,6 +5124,7 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "figImgExp",
         "ref",
         "refs",
@@ -4793,7 +5132,9 @@
       ],
       "reason": "回路の一つの数値当てから、電流・電圧・抵抗・電力の関連した判定へ調整",
       "beforeSHA256": "65d16167931f3eccaa96bb5b3f89e256bae232a7b5c439e336de06e70731e051",
-      "afterSHA256": "406b0ecf14a2fa4c709edc884d5da06a82a44baf34848af1c118b25b546800df"
+      "afterSHA256": "2933b04839c90efb407c5532d7620aa6ff845ceaa434d2245747e6f7f5172c7b",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "断線のない設問から共通テンプレートの不要条件を削除"
     },
     {
       "id": "11-23",
@@ -4880,41 +5221,55 @@
       "id": "11-31",
       "displayNo": 31,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "84e63ce87a45e47c69922b62b9c71533952c63e8079ab062d329dfdeadcccadb",
-      "afterSHA256": "7c2436490e7bb18353e24ff130d9cc2c6de63d9559f2b55880e5e57e9e43d863"
+      "afterSHA256": "ee4fcc13d365d03890bca0b924498fa9045075e12186f79cb1547a30b291d2d2",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "11-32",
       "displayNo": 32,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "6438acabe582b917f1d0f60dfd5d998b756233920c50471404dc1ef58320f432",
-      "afterSHA256": "52703621d61ee43701ab6cd524839d9f30c63ae4adab429d2548819a4e33da63"
+      "afterSHA256": "960bd5775e715f7a8add251e419ac2c3c9aa11e70b4757928d3bd37084127645",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "11-33",
       "displayNo": 33,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "855fdccd80bdfe64a0631a4d3298182edc7d1af7c08859fa6091a3dcbca0a8c6",
-      "afterSHA256": "479321f827e26a120271540d9577978f065c42b5d457ce173b60b1511b24f391"
+      "afterSHA256": "83cbfe7519a3e2ef1c2c36c7abb0a08b4ac617dff57d42b3f9476696ddeabc87",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "11-34",
       "displayNo": 34,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "d460f6bd291187d87c809140eccad4776f187d85be629049fc4a7bae3cce40f1",
-      "afterSHA256": "62a836ab5b0a0537f2760a926bd3ffd538ec9ae39604908331c6bc94679d76ff"
+      "afterSHA256": "6931610b855bda0a8e7e946bf14eae54b8ad08b412f0b45bc2d6d0b6fb50b587",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "設問の解説に不要な編集上の注記・別論点を除去"
     },
     {
       "id": "11-35",
@@ -4953,12 +5308,14 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "figImgExp",
         "text"
       ],
       "reason": "三角関数の表記を、つり角度別の張力係数に置換（答えの大小関係は維持）",
       "beforeSHA256": "68a8277ce06ebe88984e533b2692a3c44de78b36688c4a23e96209f3800578dc",
-      "afterSHA256": "d41d663ff5b2287755b3cf7d239d12c040aa1b6545b29b9a3d302027f7ce61a0"
+      "afterSHA256": "8b7dbb82cf53a322718f8f48f19063a4d6973ed95fc9031eb0748f2c10451fd8",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "11-39",
@@ -4974,17 +5331,21 @@
       ],
       "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
       "beforeSHA256": "b116ba1c00047a08d256702f26bf0501b6c993fb6dc2f07deba6a66dac644696",
-      "afterSHA256": "b94e63d1adc5fc5fe5eee6c85dfe55ae06a2331091659e7e1ac13334ff7052ea"
+      "afterSHA256": "75caaca5ce99a5f6f296d1763d4cf50801ba5307ceccd3d0717cd973bfdce06f",
+      "followupFullBook20261103": "書籍p171〜173に基づき長さと応力・疲労を直接説明"
     },
     {
       "id": "11-40",
       "displayNo": 40,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "778b65ab629bfac97b6978128032066d40e3a3498aab20569e57eb4f371888af",
-      "afterSHA256": "76ed0463669366ea1320216ea3df21ce784c574e426e0dc232cc0784186ca31e"
+      "afterSHA256": "e67e26eeb6f5a0aeb43a4d8e5e8df77bf6cdf870426b9a8f9c67b9b83258d447",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "12-1",
@@ -5010,11 +5371,18 @@
       "id": "12-3",
       "displayNo": 3,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "displayNo",
+        "explanation",
+        "figImg",
+        "figImgExp",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "610f69948b6c69460a4900d6652e0d621df0d243c7896483f2ba7ae96d420d12",
-      "afterSHA256": "734de81572a7e3fedf55a0804b73cbf575bd1dcc1aa49c98f2e49dd60fad5393"
+      "afterSHA256": "6b2ef13dd3bcce4e9d34d9f312807ca2575addbb0c61e6b9ea81eeff9c88020b",
+      "followup20261103": "より方向の抽象的な斜線を技術系3D図に変更／対応関係を選択肢表として整列"
     },
     {
       "id": "12-4",
@@ -5031,11 +5399,15 @@
       "id": "12-5",
       "displayNo": 5,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp",
+        "text"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "b70f59813c4ea4d57fb11c884ba90603bd9cc1c2f14689a144fae7237844b1fe",
-      "afterSHA256": "233304bebbacca7c2c3081edcf529af00d0c40737b5bad83dbc0d6f2544f73c9"
+      "afterSHA256": "01c57aafab20f27943e636718b891d671518a7ae601cd800002aa324ae3b4095",
+      "followup20261103": "二段歯車を教材と同じ3D図へ変更／問題図と解説図を教材由来の同じ中立3D図に統一"
     },
     {
       "id": "12-6",
@@ -5183,11 +5555,14 @@
       "id": "12-20",
       "displayNo": 20,
       "fields": [
+        "choiceHeaders",
+        "choiceRows",
         "displayNo"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "33d595234a14de8ded2b98585fb83e137fc0201fa37223269e4ed929a6081a4e",
-      "afterSHA256": "223999d37a65669578bfd717a0c0a33a7776de0e5570aabc8d4d3f3510413177"
+      "afterSHA256": "1c3e57b2141af9cff64ac788f2f8f354b65ae1a022cb07c5b23261390f54df3a",
+      "followup20261103": "対応関係を選択肢表として整列"
     },
     {
       "id": "12-21",
@@ -5207,6 +5582,7 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "figImgExp",
         "ref",
         "refs",
@@ -5214,7 +5590,9 @@
       ],
       "reason": "回路の一つの数値当てから、電流・電圧・抵抗・電力の関連した判定へ調整",
       "beforeSHA256": "d9e5d4e2711828e3d831d117a50f27a5912583ee9bb2ed62f6b3d40130d5556d",
-      "afterSHA256": "91c093f2cb87094cf3fe0e7fd7eb94918d67853c43c6c5d8d35801e0f10baadd"
+      "afterSHA256": "b3c9d1d206f7954446f7b876868983d1218cf3870376fcbcf2516360c95c3e3f",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一",
+      "followupFullBook20261103": "断線のない設問から共通テンプレートの不要条件を削除"
     },
     {
       "id": "12-23",
@@ -5311,21 +5689,29 @@
       "id": "12-32",
       "displayNo": 32,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "c9c61db1a5ead22d43bcec638c1f37a8220301e5b8c4ba19a231bd71045b7c19",
-      "afterSHA256": "21b3815e20bb55f671f3602ff95522cc191699ea727aee6e08129401e7373929"
+      "afterSHA256": "9814968e456fbc54d96d5555458cc77416655e59639867e6df3d2e98c47a068a",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "12-33",
       "displayNo": 33,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "9291509b806ac87e87069c5b41b7786e38806c4282cf05e3dc566eb87e57abb8",
-      "afterSHA256": "81838b51c1b3322de64d9e26b8c8b84b13ddd03aa96245c4fac67b13c9b3cf62"
+      "afterSHA256": "92f2ae6200b96c9432f68e4f6cf2344cedf5220b2520673e9d819f86560cdd05",
+      "followup20261103": "対応関係を選択肢表として整列／図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "12-34",
@@ -5341,11 +5727,14 @@
       "id": "12-35",
       "displayNo": 35,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "3c22e26f9c29b9c44ba98319226ffb4476a9dc2339a0d51874bf6f70b5e617e3",
-      "afterSHA256": "9961ff1b232955cb5f7d3eaa29a2eaaf4057d185ac008dea2b678a29dbf7ff74"
+      "afterSHA256": "c7f0041e05f8b0cb6fa8dcfe6714ef44d8fbd0a803c25744baf25a0886e55c53",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "12-36",
@@ -5367,11 +5756,13 @@
       "id": "12-37",
       "displayNo": 37,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "644fa34162e0897cec75dfb8b6da0daf6976dd0a9cd279fde39d47d71da06230",
-      "afterSHA256": "bb74debf530d4ece66260d87f0003f1a05a3cae3e9a45b2026de76c39d4cae2e"
+      "afterSHA256": "cfbc17b294e50fe253b16579920ae9b485b555e4634a9a3e4236f8f930227c49",
+      "followupFullBook20261103": "書籍p171どおり片振りを向き一定・大きさ変化と説明"
     },
     {
       "id": "12-38",
@@ -5380,32 +5771,40 @@
         "choices",
         "displayNo",
         "explanation",
+        "figImg",
         "figImgExp",
         "text"
       ],
       "reason": "三角関数の表記を、つり角度別の張力係数に置換（答えの大小関係は維持）",
       "beforeSHA256": "ffefa32c37d257a3b6f8e9b31b7d313c181e54bc1d82176ed1707f6d282d8f36",
-      "afterSHA256": "4d3752bc1f877a621d3aca89116e83eae0d4be9d75aaaf3e5b9bdbaf3cfad649"
+      "afterSHA256": "87421dcb032ce5b3735e2af06b2253757c8733d0fac3035ec3430401b3896dc7",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "12-39",
       "displayNo": 39,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "6b13ded45b45b2aaad265cf38f72a87ac5dcc3f24af591f88424668c7fece91f",
-      "afterSHA256": "c196b34e762c78eb157600be77c817a15a149a75c50a6d77366a5005dadb6e92"
+      "afterSHA256": "6434cd4fb8417a87b0c18734f5ac3c442ae60871950852ebe0868d9ea4d34d0c",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
       "id": "12-40",
       "displayNo": 40,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "figImg",
+        "figImgExp"
       ],
       "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
       "beforeSHA256": "072dabc8851b8bc11465a2baf8e54a22af31f60eb6244136ef00e9486163ca0d",
-      "afterSHA256": "a19cf76f68e599f6d4737a92dabdd52f1dee4bd217f2504933442c6885c7c8cf"
+      "afterSHA256": "c9aef96400ee9e1538b75eea8b07dfc8291d5ff5c0d7a6c4d87bd679e3101107",
+      "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     }
   ],
   "truthChecks": {

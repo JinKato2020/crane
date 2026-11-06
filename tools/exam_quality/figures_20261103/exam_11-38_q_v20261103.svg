@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="940" viewBox="-23.8 -23.8 727.6 427.6">
+<rect width="680" height="380" fill="white" />
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#1F3A65" /></marker></defs>
+<g fill="none" stroke="#1F3A65" stroke-width="2.38" stroke-linejoin="round" stroke-linecap="round">
+<line x1="340" y1="80" x2="190" y2="230" /><line x1="340" y1="80" x2="490" y2="230" /><rect x="190" y="230" width="300" height="72" /><circle cx="340" cy="76" r="4" /><path d="M318.79 101.21 A30 30 0 0 0 361.21 101.21" />
+</g>
+<g fill="#1F3A65" font-family="Yu Gothic, Meiryo, sans-serif" font-size="22.0" text-anchor="middle" font-weight="600">
+<text x="340" y="140" font-family="Yu Gothic, Meiryo, sans-serif" font-weight="600" paint-order="stroke" stroke="white" stroke-width="3.4" stroke-linejoin="round">90°</text><text x="340" y="276" font-family="Yu Gothic, Meiryo, sans-serif" font-weight="600">m</text><text x="340" y="349" font-family="Yu Gothic, Meiryo, sans-serif" font-weight="600">g = 9.8 m/s²</text>
+</g>
+</svg>

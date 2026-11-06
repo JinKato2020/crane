@@ -1,0 +1,298 @@
+{
+  "chapters": [
+    {
+      "chapter": 1,
+      "before": 69,
+      "after": 72,
+      "figures": 49
+    },
+    {
+      "chapter": 2,
+      "before": 42,
+      "after": 44,
+      "figures": 13
+    },
+    {
+      "chapter": 3,
+      "before": 52,
+      "after": 53,
+      "figures": 39
+    },
+    {
+      "chapter": 4,
+      "before": 35,
+      "after": 38,
+      "figures": 35
+    }
+  ],
+  "original_terms_preserved": 198,
+  "terms": 207,
+  "figures": 136,
+  "unique_files": 134,
+  "references": 222,
+  "textbook_sections_unchanged": true,
+  "exams_unchanged": true,
+  "search_tests": [
+    {
+      "q": "かごがた",
+      "ok": true
+    },
+    {
+      "q": "ｶｺﾞｶﾞﾀ",
+      "ok": true
+    },
+    {
+      "q": "カゴガタ",
+      "ok": true
+    },
+    {
+      "q": "巻線型",
+      "ok": true
+    },
+    {
+      "q": "巻線形　すべり",
+      "ok": true
+    },
+    {
+      "q": "ＶＶＶＦ",
+      "ok": true
+    },
+    {
+      "q": "さんようそ",
+      "ok": true
+    },
+    {
+      "q": "すてまき",
+      "ok": true
+    }
+  ],
+  "phone_layouts": [
+    {
+      "width": 390,
+      "dark": false,
+      "large_text": false,
+      "chapter": 1,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "dark": false,
+      "large_text": false,
+      "chapter": 2,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "dark": false,
+      "large_text": false,
+      "chapter": 3,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "dark": false,
+      "large_text": false,
+      "chapter": 4,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "dark": true,
+      "large_text": false,
+      "chapter": 1,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "dark": true,
+      "large_text": false,
+      "chapter": 2,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "dark": true,
+      "large_text": false,
+      "chapter": 3,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "dark": true,
+      "large_text": false,
+      "chapter": 4,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "dark": false,
+      "large_text": true,
+      "chapter": 1,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "dark": false,
+      "large_text": true,
+      "chapter": 2,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "dark": false,
+      "large_text": true,
+      "chapter": 3,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "dark": false,
+      "large_text": true,
+      "chapter": 4,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "dark": true,
+      "large_text": true,
+      "chapter": 1,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "dark": true,
+      "large_text": true,
+      "chapter": 2,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "dark": true,
+      "large_text": true,
+      "chapter": 3,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "dark": true,
+      "large_text": true,
+      "chapter": 4,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": false,
+      "large_text": false,
+      "chapter": 1,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": false,
+      "large_text": false,
+      "chapter": 2,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": false,
+      "large_text": false,
+      "chapter": 3,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": false,
+      "large_text": false,
+      "chapter": 4,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": true,
+      "large_text": false,
+      "chapter": 1,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": true,
+      "large_text": false,
+      "chapter": 2,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": true,
+      "large_text": false,
+      "chapter": 3,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": true,
+      "large_text": false,
+      "chapter": 4,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": false,
+      "large_text": true,
+      "chapter": 1,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": false,
+      "large_text": true,
+      "chapter": 2,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": false,
+      "large_text": true,
+      "chapter": 3,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": false,
+      "large_text": true,
+      "chapter": 4,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": true,
+      "large_text": true,
+      "chapter": 1,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": true,
+      "large_text": true,
+      "chapter": 2,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": true,
+      "large_text": true,
+      "chapter": 3,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "dark": true,
+      "large_text": true,
+      "chapter": 4,
+      "overflow": false
+    }
+  ],
+  "browser_errors": [],
+  "native_build": "not run (Windows; no iOS SDK)",
+  "published": false
+}

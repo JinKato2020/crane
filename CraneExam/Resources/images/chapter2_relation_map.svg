@@ -22,10 +22,12 @@
 <text x="108" y="458.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">設置届＝据え付け工事の前</text>
 <path d="M 1080 430 C 1025 430 1040 660 990 660 L 740 660" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
 <text x="755" y="642" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">使い始める前</text>
-<path d="M 740 660 C 690 660 695 628.0 640 628.0 L 90 628.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
-<text x="108" y="614.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">落成検査 → 検査証</text>
-<path d="M 740 660 C 690 660 695 692.0 640 692.0 L 90 692.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
-<text x="108" y="678.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">建物・歩道との間隔も確保</text>
+<path d="M 740 660 C 690 660 695 596.0 640 596.0 L 90 596.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="582.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">検査証の対象 → 落成検査</text>
+<path d="M 740 660 C 690 660 695 660.0 640 660.0 L 90 660.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="646.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">小型は設置報告・所定の試験</text>
+<path d="M 740 660 C 690 660 695 724.0 640 724.0 L 90 724.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
+<text x="108" y="710.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">建物・歩道との間隔も確保</text>
 <path d="M 1510 1100 C 1440 1100 1450 1090 1390 1090 L 1080 1090" fill="none" stroke="#527D94" stroke-width="17" opacity="1"/>
 <text x="1090" y="1062" text-anchor="start" font-size="48" font-weight="700" fill="#527D94">使うときに</text>
 <path d="M 1080 1090 C 1025 1090 1040 880 990 880 L 740 880" fill="none" stroke="#527D94" stroke-width="7" opacity="0.85"/>
@@ -42,10 +44,12 @@
 <text x="108" y="1118.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">荷をつったまま運転位置を離れない</text>
 <path d="M 1080 1090 C 1025 1090 1040 1320 990 1320 L 740 1320" fill="none" stroke="#527D94" stroke-width="7" opacity="0.85"/>
 <text x="755" y="1302" text-anchor="start" font-size="36" font-weight="700" fill="#527D94">風・修理対策</text>
-<path d="M 740 1320 C 690 1320 695 1288.0 640 1288.0 L 90 1288.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
-<text x="108" y="1274.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">強風時は作業中止・逸走防止</text>
-<path d="M 740 1320 C 690 1320 695 1352.0 640 1352.0 L 90 1352.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
-<text x="108" y="1338.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">修理中の運転を防ぐ</text>
+<path d="M 740 1320 C 690 1320 695 1256.0 640 1256.0 L 90 1256.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1242.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">危険が予想される強風 → 中止</text>
+<path d="M 740 1320 C 690 1320 695 1320.0 640 1320.0 L 90 1320.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1306.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">屋外走行：30m/s超の恐れ → 逸走防止</text>
+<path d="M 740 1320 C 690 1320 695 1384.0 640 1384.0 L 90 1384.0" fill="none" stroke="#527D94" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1370.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">修理中の運転を防ぐ</text>
 <path d="M 1510 1100 C 1440 1100 1450 1750 1390 1750 L 1080 1750" fill="none" stroke="#398574" stroke-width="17" opacity="1"/>
 <text x="1090" y="1722" text-anchor="start" font-size="48" font-weight="700" fill="#398574">点検を続ける</text>
 <path d="M 1080 1750 C 1025 1750 1040 1540 990 1540 L 740 1540" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
@@ -54,14 +58,20 @@
 <text x="108" y="1526.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">作業開始前・月次・年次</text>
 <path d="M 1080 1750 C 1025 1750 1040 1760 990 1760 L 740 1760" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
 <text x="755" y="1742" text-anchor="start" font-size="36" font-weight="700" fill="#398574">特別な点検</text>
+<path d="M 740 1760 C 690 1760 695 1696.0 640 1696.0 L 90 1696.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1682.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">屋外：瞬間風速30m/s超の暴風後</text>
 <path d="M 740 1760 C 690 1760 695 1760.0 640 1760.0 L 90 1760.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
-<text x="108" y="1746.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">暴風・地震の後も状態を確認</text>
+<text x="108" y="1746.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">屋内も対象：中震以上の地震後</text>
+<path d="M 740 1760 C 690 1760 695 1824.0 640 1824.0 L 90 1824.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1810.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">作業前に各部分の異常を点検</text>
 <path d="M 1080 1750 C 1025 1750 1040 1980 990 1980 L 740 1980" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
 <text x="755" y="1962" text-anchor="start" font-size="36" font-weight="700" fill="#398574">異常への対応</text>
-<path d="M 740 1980 C 690 1980 695 1948.0 640 1948.0 L 90 1948.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
-<text x="108" y="1934.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">直ちに補修する</text>
-<path d="M 740 1980 C 690 1980 695 2012.0 640 2012.0 L 90 2012.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
-<text x="108" y="1998.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">検査・点検記録を保存</text>
+<path d="M 740 1980 C 690 1980 695 1916.0 640 1916.0 L 90 1916.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1902.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">異常は直ちに補修</text>
+<path d="M 740 1980 C 690 1980 695 1980.0 640 1980.0 L 90 1980.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1966.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">定期検査・暴風後等の記録は3年</text>
+<path d="M 740 1980 C 690 1980 695 2044.0 640 2044.0 L 90 2044.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="2030.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">作業開始前点検は保存規定の対象外</text>
 <path d="M 1890 1100 C 1960 1100 1950 430 2010 430 L 2320 430" fill="none" stroke="#AF792D" stroke-width="17" opacity="1"/>
 <text x="2310" y="402" text-anchor="end" font-size="48" font-weight="700" fill="#AF792D">変える・やめる</text>
 <path d="M 2320 430 C 2375 430 2360 220 2410 220 L 2660 220" fill="none" stroke="#AF792D" stroke-width="7" opacity="0.85"/>
@@ -74,10 +84,12 @@
 <text x="3292" y="426.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">変更内容に応じた届出・検査</text>
 <path d="M 2320 430 C 2375 430 2360 660 2410 660 L 2660 660" fill="none" stroke="#AF792D" stroke-width="7" opacity="0.85"/>
 <text x="2645" y="642" text-anchor="end" font-size="36" font-weight="700" fill="#AF792D">休止から廃止へ</text>
-<path d="M 2660 660 C 2710 660 2705 628.0 2760 628.0 L 3310 628.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
-<text x="3292" y="614.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">使用再開には必要な検査</text>
-<path d="M 2660 660 C 2710 660 2705 692.0 2760 692.0 L 3310 692.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
-<text x="3292" y="678.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">廃止などでは検査証を返還</text>
+<path d="M 2660 660 C 2710 660 2705 596.0 2760 596.0 L 3310 596.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="582.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">検査証の期限を超える休止</text>
+<path d="M 2660 660 C 2710 660 2705 660.0 2760 660.0 L 3310 660.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="646.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">→ 再開時に使用再開検査</text>
+<path d="M 2660 660 C 2710 660 2705 724.0 2760 724.0 L 3310 724.0" fill="none" stroke="#AF792D" stroke-width="3" opacity="0.55"/>
+<text x="3292" y="710.0" text-anchor="end" font-size="32" font-weight="500" fill="#233C50">廃止などでは検査証を返還</text>
 <path d="M 1890 1100 C 1960 1100 1950 1090 2010 1090 L 2320 1090" fill="none" stroke="#B46758" stroke-width="17" opacity="1"/>
 <text x="2310" y="1062" text-anchor="end" font-size="48" font-weight="700" fill="#B46758">玉掛用具を選ぶ</text>
 <path d="M 2320 1090 C 2375 1090 2360 880 2410 880 L 2660 880" fill="none" stroke="#B46758" stroke-width="7" opacity="0.85"/>

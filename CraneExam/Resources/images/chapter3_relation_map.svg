@@ -11,11 +11,11 @@
 <path d="M 1080 430 C 1025 430 1040 220 990 220 L 740 220" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
 <text x="755" y="202" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">流れと抵抗</text>
 <path d="M 740 220 C 690 220 695 156.0 640 156.0 L 90 156.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
-<text x="108" y="142.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">電流＝流れる量 ／ 電圧＝押す力</text>
+<text x="108" y="142.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">電流＝1秒に流れる電気の量</text>
 <path d="M 740 220 C 690 220 695 220.0 640 220.0 L 90 220.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
-<text x="108" y="206.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">抵抗＝流れにくさ</text>
+<text x="108" y="206.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">水のたとえ：電圧は圧力の差</text>
 <path d="M 740 220 C 690 220 695 284.0 640 284.0 L 90 284.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
-<text x="108" y="270.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">水の流れにたとえて考える</text>
+<text x="108" y="270.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">抵抗＝電流の流れにくさ</text>
 <path d="M 1080 430 C 1025 430 1040 440 990 440 L 740 440" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
 <text x="755" y="422" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">直流と交流</text>
 <path d="M 740 440 C 690 440 695 408.0 640 408.0 L 90 408.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
@@ -25,7 +25,7 @@
 <path d="M 1080 430 C 1025 430 1040 660 990 660 L 740 660" fill="none" stroke="#326F9B" stroke-width="7" opacity="0.85"/>
 <text x="755" y="642" text-anchor="start" font-size="36" font-weight="700" fill="#326F9B">三相と周波数</text>
 <path d="M 740 660 C 690 660 695 628.0 640 628.0 L 90 628.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
-<text x="108" y="614.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">三相＝タイミングがずれた交流</text>
+<text x="108" y="614.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">三相＝位相が120°ずれた3つの交流</text>
 <path d="M 740 660 C 690 660 695 692.0 640 692.0 L 90 692.0" fill="none" stroke="#326F9B" stroke-width="3" opacity="0.55"/>
 <text x="108" y="678.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">周波数＝1秒間の繰返し数</text>
 <path d="M 1510 1100 C 1440 1100 1450 1090 1390 1090 L 1080 1090" fill="none" stroke="#527D94" stroke-width="17" opacity="1"/>
@@ -52,8 +52,10 @@
 <text x="1090" y="1722" text-anchor="start" font-size="48" font-weight="700" fill="#398574">回るしくみ</text>
 <path d="M 1080 1750 C 1025 1750 1040 1540 990 1540 L 740 1540" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
 <text x="755" y="1522" text-anchor="start" font-size="36" font-weight="700" fill="#398574">磁界と回転子</text>
-<path d="M 740 1540 C 690 1540 695 1540.0 640 1540.0 L 90 1540.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
-<text x="108" y="1526.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">回る磁界 → 誘導電流 → 回す力</text>
+<path d="M 740 1540 C 690 1540 695 1508.0 640 1508.0 L 90 1508.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1494.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">回る磁界 → 回転子に誘導電流</text>
+<path d="M 740 1540 C 690 1540 695 1572.0 640 1572.0 L 90 1572.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
+<text x="108" y="1558.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">磁界と電流の作用 → 回す力</text>
 <path d="M 1080 1750 C 1025 1750 1040 1760 990 1760 L 740 1760" fill="none" stroke="#398574" stroke-width="7" opacity="0.85"/>
 <text x="755" y="1742" text-anchor="start" font-size="36" font-weight="700" fill="#398574">かご形・巻線形</text>
 <path d="M 740 1760 C 690 1760 695 1728.0 640 1728.0 L 90 1728.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
@@ -65,7 +67,7 @@
 <path d="M 740 1980 C 690 1980 695 1948.0 640 1948.0 L 90 1948.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
 <text x="108" y="1934.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">同期速度＝磁界が回る速さ</text>
 <path d="M 740 1980 C 690 1980 695 2012.0 640 2012.0 L 90 2012.0" fill="none" stroke="#398574" stroke-width="3" opacity="0.55"/>
-<text x="108" y="1998.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">回転子は磁界より少し遅れる</text>
+<text x="108" y="1998.0" text-anchor="start" font-size="32" font-weight="500" fill="#233C50">通常の電動運転：回転子は少し遅い</text>
 <path d="M 1890 1100 C 1960 1100 1950 430 2010 430 L 2320 430" fill="none" stroke="#AF792D" stroke-width="17" opacity="1"/>
 <text x="2310" y="402" text-anchor="end" font-size="48" font-weight="700" fill="#AF792D">動きを操る</text>
 <path d="M 2320 430 C 2375 430 2360 220 2410 220 L 2660 220" fill="none" stroke="#AF792D" stroke-width="7" opacity="0.85"/>
