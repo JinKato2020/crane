@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-06",
+  "status": "validated-and-ready-for-requested-build",
+  "homeLayoutBaseline": "67ef627",
+  "preservedFeatureBaseline": "423c439",
+  "restored": [
+    "original Hero image",
+    "original exam countdown",
+    "score radar and learning history layout",
+    "original six cards and ExamGuideBg banner"
+  ],
+  "removed": [
+    "new home dashboard",
+    "hero selection UI and its settings row"
+  ],
+  "preserved": [
+    "settings review and feedback cards including styling",
+    "current native review schedule and study exposure tracking",
+    "free-license campaign and purchases",
+    "textbook, glossary and mock exam improvements",
+    "current weighted score calculation"
+  ],
+  "validation": {
+    "swiftSyntaxFiles": 32,
+    "originalHomeLayoutBlocksMatch": true,
+    "currentReviewUIAndBehaviorPreserved": true,
+    "nativeCompileOrSimulatorRun": false
+  },
+  "versionFloor": "1.0.12",
+  "buildNumberFloor": 2044,
+  "buildTrigger": "push to main",
+  "buildRequested": true,
+  "buildStateQueried": false
+}

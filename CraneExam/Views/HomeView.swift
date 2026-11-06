@@ -1,17 +1,164 @@
 import SwiftUI
 
-/// Detailed scores remain available from Home, without crowding its learning actions.
-struct HomeProgressView: View {
-    @EnvironmentObject private var store: ExamStore
-    @Environment(\.dismiss) private var dismiss
+struct HomeView: View {
+    @Environment(\.colorScheme) private var colorScheme
+    @EnvironmentObject var store: ExamStore
+    @EnvironmentObject var purchases: PurchaseStore
+    @EnvironmentObject var router: Router
+    @State private var showGuide = false
+    @State private var showRelationMap = false
+    @State private var showBookmarks = false
+    @State private var showFavTerms = false
+    @AppStorage("cr_exam_date") private var examEpoch: Double = 0   // 試験日(0=未設定, timeIntervalSince1970)
+    @State private var showDateSheet = false
     var body: some View {
-        NavigationStack {
-            ScrollView { growthCard.padding(16) }
-                .background(Theme.bg.ignoresSafeArea())
-                .navigationTitle("学習の成績").navigationBarTitleDisplayMode(.inline)
-                .toolbar { ToolbarItem(placement: .cancellationAction) { Button("閉じる") { dismiss() } } }
+        ScrollView {
+            VStack(spacing: 0) {
+                hero
+                VStack(spacing: 13) {
+                    countdownCard
+                    growthCard
+                    cardsGrid
+                    guideCard
+                    streakCard
+                    motivationFooter
+                }
+                .padding(16)
+            }
+        }
+        .background(Theme.bg.ignoresSafeArea())   // 背景は最上端まで(白余白なし)。ヒーロー自体はステータスバー下に収め、クレーン上部まで見えるようにする
+        .sheet(isPresented: $showGuide) { ExamGuideView() }
+        .sheet(isPresented: $showRelationMap) { ChapterRelationMapView().environmentObject(store).environmentObject(purchases) }
+        .sheet(isPresented: $showBookmarks) { BookmarkView().environmentObject(store) }
+        .sheet(isPresented: $showFavTerms) { FavoriteTermsScreen().environmentObject(store).trackStudyCompletion(kind: .glossary) }
+        .sheet(isPresented: $showDateSheet) { ExamDateSheet(examEpoch: $examEpoch) }
+    }
+
+    // 外観別の写真とオーバーレイで、ホームの背景と文字の読みやすさをそろえる。
+    private var guideCard: some View {
+        Button { showGuide = true } label: {
+            ZStack(alignment: .bottomLeading) {
+                Image("ExamGuideBg")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 112)
+                    .clipped()
+                LinearGradient(colors: colorScheme == .dark
+                               ? [Color.black.opacity(0.12), Color.black.opacity(0.74)]
+                               : [Color.white.opacity(0.08), Color.white.opacity(0.92)],
+                               startPoint: .top, endPoint: .bottom)
+                HStack(alignment: .bottom) {
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("クレーン試験 総合解説")
+                            .font(.system(size: 15.5, weight: .heavy)).foregroundColor(guideTextColor)
+                        Text("配点・合格基準・学び方がひと目でわかる")
+                            .font(.system(size: 11.5, weight: .semibold)).foregroundColor(guideTextColor.opacity(0.9))
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                    Spacer(minLength: 6)
+                    Image(systemName: "chevron.right").font(.system(size: 14, weight: .bold)).foregroundColor(guideTextColor.opacity(0.9))
+                }
+                .padding(14)
+                .shadow(color: colorScheme == .dark ? .black.opacity(0.6) : .clear, radius: 4, y: 1)
+            }
+            .frame(height: 112)
+            .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(Theme.line, lineWidth: 1))
         }
     }
+
+    private var guideTextColor: Color {
+        colorScheme == .dark ? .white : Color(hex: 0x1F3349)
+    }
+
+    // ヒーロー(画像全体を切らずに表示=fit。上に余白を作らず横幅いっぱい・縦は縦横比なり)
+    private var hero: some View {
+        ZStack(alignment: .bottomLeading) {
+            Image("Hero")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(maxWidth: .infinity)
+            LinearGradient(
+                colors: [Color.black.opacity(0.18), Color.clear, Theme.bg],
+                startPoint: .top, endPoint: .bottom)
+            VStack(alignment: .leading, spacing: 4) {
+                Text("KNOWLEDGE BUILDS TOMORROW")
+                    .font(.system(size: 10, weight: .semibold)).tracking(2)
+                    .foregroundColor(Theme.accent2)
+                Text("クレーン・デリック運転士 試験対策")
+                    .font(.system(size: 20, weight: .heavy))
+                    .foregroundColor(.white)
+                    .fixedSize(horizontal: false, vertical: true)
+                Text("確かな知識で、安全な現場をつくる。")
+                    .font(.system(size: 12)).foregroundColor(.white.opacity(0.85))
+            }
+            .shadow(color: .black.opacity(0.7), radius: 8)
+            .padding(16)
+        }
+        .frame(maxWidth: .infinity)
+    }
+
+    // 試験までの残り日数（ヒーロー直下に大きく表示）。未設定ならタップで設定を促す。
+    private var examDate: Date? { examEpoch > 0 ? Date(timeIntervalSince1970: examEpoch) : nil }
+    private var daysLeft: Int? {
+        guard let d = examDate else { return nil }
+        let cal = Calendar.current
+        return cal.dateComponents([.day], from: cal.startOfDay(for: Date()), to: cal.startOfDay(for: d)).day
+    }
+    private func examDateText(_ d: Date) -> String {
+        let f = DateFormatter()
+        f.calendar = Calendar(identifier: .gregorian)
+        f.locale = Locale(identifier: "ja_JP")
+        f.dateFormat = "yyyy年M月d日(E)"
+        return f.string(from: d)
+    }
+    private var inkColor: Color { Color(hex: 0x241703) }   // ゴールド地に合う濃茶文字
+
+    private var countdownCard: some View {
+        Button { showDateSheet = true } label: {
+            HStack(spacing: 14) {
+                Image(systemName: "calendar")
+                    .font(.system(size: 20, weight: .bold)).foregroundColor(inkColor)
+                    .frame(width: 46, height: 46)
+                    .background(Color.white.opacity(0.28)).clipShape(RoundedRectangle(cornerRadius: 12))
+                countdownBody
+                Spacer(minLength: 6)
+                Image(systemName: daysLeft == nil ? "plus.circle.fill" : "pencil.circle.fill")
+                    .font(.system(size: 18, weight: .bold)).foregroundColor(inkColor.opacity(0.75))
+            }
+            .padding(15)
+            .frame(maxWidth: .infinity)
+            .background(Theme.gold)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+        }
+    }
+
+    @ViewBuilder private var countdownBody: some View {
+        if let n = daysLeft {
+            VStack(alignment: .leading, spacing: 2) {
+                if n > 0 {
+                    HStack(alignment: .firstTextBaseline, spacing: 5) {
+                        Text("試験まで").font(.system(size: 12, weight: .bold)).foregroundColor(inkColor.opacity(0.8))
+                        Text("あと\(n)日").font(.system(size: 22, weight: .heavy)).foregroundColor(inkColor)
+                    }
+                } else if n == 0 {
+                    Text("試験当日です").font(.system(size: 20, weight: .heavy)).foregroundColor(inkColor)
+                } else {
+                    Text("試験日は過ぎました").font(.system(size: 17, weight: .heavy)).foregroundColor(inkColor)
+                }
+                if let d = examDate {
+                    Text(examDateText(d)).font(.system(size: 11.5, weight: .semibold)).foregroundColor(inkColor.opacity(0.8))
+                }
+            }
+        } else {
+            VStack(alignment: .leading, spacing: 2) {
+                Text("試験日を設定").font(.system(size: 16, weight: .heavy)).foregroundColor(inkColor)
+                Text("残り日数をここに大きく表示します").font(.system(size: 11.5, weight: .semibold)).foregroundColor(inkColor.opacity(0.8))
+            }
+        }
+    }
+
     // 成長レーダー：分野別の正答率を「現在／2週前／1ヶ月前」で3段比較。合否で色分け（40%未満=赤・合格圏=緑）。
     private var growthCard: some View {
         let now = store.subjectAccuracy()
@@ -90,6 +237,101 @@ struct HomeProgressView: View {
             HStack(spacing: 3) {
                 ForEach(0..<4, id: \.self) { _ in Circle().fill(color).frame(width: 3, height: 3) }
             }
+        }
+    }
+
+    // ホーム最下部の“決めゼリフ”。ゴールドのグラデ文字＋英語キッカーでモチベを上げる。
+    private var motivationFooter: some View {
+        VStack(spacing: 9) {
+            HStack(spacing: 8) {
+                Rectangle().fill(Theme.gold).frame(width: 22, height: 2).opacity(0.9)
+                Image(systemName: "flame.fill").font(.system(size: 11)).foregroundStyle(Theme.gold)
+                Rectangle().fill(Theme.gold).frame(width: 22, height: 2).opacity(0.9)
+            }
+            Text("挑戦が、現場を動かす。")
+                .font(.system(size: 16, weight: .heavy))
+                .foregroundStyle(Theme.gold)
+                .shadow(color: Theme.accent.opacity(0.25), radius: 6, y: 1)
+            Text("CHALLENGE MOVES THE FIELD")
+                .font(.system(size: 9, weight: .bold)).tracking(2.5)
+                .foregroundColor(Theme.faint)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.top, 16).padding(.bottom, 4)
+    }
+
+    // 学習の継続カード：直近14日の「解いた問題数」を棒で示し、連続学習日数を添える。
+    private var streakCard: some View {
+        let data = store.recentDaily(14)
+        let maxC = max(data.map { $0.count }.max() ?? 0, 1)
+        let streak = store.studyStreak
+        return Card {
+            VStack(alignment: .leading, spacing: 11) {
+                HStack {
+                    Label("学習の継続", systemImage: "flame.fill")
+                        .font(.system(size: 15, weight: .bold))
+                        .foregroundColor(Theme.fg)
+                    Spacer()
+                    Text(streak > 0 ? "\(streak)日連続" : "今日から始めよう")
+                        .font(.system(size: 13, weight: .heavy))
+                        .foregroundColor(streak > 0 ? Theme.accent2 : Theme.muted)
+                }
+                HStack(alignment: .bottom, spacing: 5) {
+                    ForEach(Array(data.enumerated()), id: \.offset) { _, item in
+                        RoundedRectangle(cornerRadius: 3)
+                            .fill(item.count > 0 ? AnyShapeStyle(Theme.gold) : AnyShapeStyle(Theme.line))
+                            .frame(maxWidth: .infinity)
+                            .frame(height: barHeight(item.count, maxC))
+                    }
+                }
+                .frame(height: 56, alignment: .bottom)
+                HStack {
+                    Text("14日前").font(.system(size: 10)).foregroundColor(Theme.faint)
+                    Spacer()
+                    Text("今日").font(.system(size: 10)).foregroundColor(Theme.faint)
+                }
+                Text("解いた問題数の推移。毎日つづけて、連続日数をのばそう。")
+                    .font(.system(size: 11)).foregroundColor(Theme.muted)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+    }
+    private func barHeight(_ c: Int, _ maxC: Int) -> CGFloat {
+        let minH: CGFloat = 4, maxH: CGFloat = 52
+        guard c > 0 else { return minH }
+        return minH + (maxH - minH) * CGFloat(c) / CGFloat(maxC)
+    }
+
+    // 2x2 カード
+    private var cardsGrid: some View {
+        let cols = [GridItem(.flexible(), spacing: 11), GridItem(.flexible(), spacing: 11)]
+        return LazyVGrid(columns: cols, spacing: 11) {
+            homeCard("book.fill", "教材で学ぶ", "全4章の解説・図表") { router.tab = 1 }
+            homeCard("character.book.closed.fill", "用語集", "全4章の重要用語") { router.tab = 3 }
+            homeCard("doc.text.fill", "模擬試験", "本番形式で力試し") { router.tab = 2 }
+            homeCard("point.3.connected.trianglepath.dotted", "相関図", "第1〜4章のつながりをつかむ") { showRelationMap = true }
+            homeCard("heart.fill", "お気に入りの用語", "ハートを付けた用語を見直す") { showFavTerms = true }
+            homeCard("bookmark.fill", "ブックマーク", "あとで見返す問題") { showBookmarks = true }
+        }
+    }
+
+    private func homeCard(_ icon: String, _ title: String, _ sub: String, _ action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            VStack(alignment: .leading, spacing: 3) {
+                Image(systemName: icon)
+                    .foregroundColor(Theme.accent)
+                    .frame(width: 36, height: 36)
+                    .background(Theme.raise).clipShape(RoundedRectangle(cornerRadius: 10))
+                    .padding(.bottom, 6)
+                Text(title).font(.system(size: 13.5, weight: .bold)).foregroundColor(Theme.fg)
+                Text(sub).font(.system(size: 11)).foregroundColor(Theme.faint)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(14)
+            .background(Theme.card)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(RoundedRectangle(cornerRadius: 12).stroke(Theme.line, lineWidth: 1))
         }
     }
 
@@ -200,7 +442,7 @@ private struct GrowthRadar: View {
 }
 
 /// 試験日を設定するシート（日付ピッカー）。保存値は timeIntervalSince1970。
-struct ExamDateSheet: View {
+private struct ExamDateSheet: View {
     @Environment(\.dismiss) private var dismiss
     @Binding var examEpoch: Double
     @State private var date: Date

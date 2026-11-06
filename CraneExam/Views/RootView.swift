@@ -13,7 +13,7 @@ struct RootView: View {
         // 表示順＝ホーム/教材/用語/模試・成績/設定。
         // tag は router.tab の識別子（HomeView等が参照）なので値は固定し、並びだけ入れ替える。
         TabView(selection: $router.tab) {
-            HomeDashboardView()
+            HomeView()
                 .tabItem { Label("ホーム", systemImage: "house.fill") }.tag(0)
             StudyView()
                 .tabItem { Label("教材", systemImage: "book.fill") }.tag(1)

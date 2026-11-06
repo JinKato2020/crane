@@ -1,12 +1,18 @@
 import SwiftUI
 
+// Keep the current review card's colors independent of the reverted home redesign.
+private enum ReviewSupportStyle {
+    static let teal = Color(Theme.uiDyn(0x95D5CA, 0x286D70))
+    static let tealFill = Color(Theme.uiDyn(0x203D42, 0xE8F3F0))
+}
+
 /// A persistent, voluntary App Store link; automatic prompts use StoreKit only.
 struct ReviewSupportCard: View {
     @State private var showFeedback = false
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
             VStack(alignment: .leading, spacing: 12) {
-                Text("App Storeで感想を共有").font(.subheadline.bold()).foregroundColor(HomeStyle.teal)
+                Text("App Storeで感想を共有").font(.subheadline.bold()).foregroundColor(ReviewSupportStyle.teal)
                 Text("その感想が、次に学ぶ人の参考に。")
                     .font(.title3.bold()).foregroundColor(Theme.fg).fixedSize(horizontal: false, vertical: true)
                 Text("教材の分かりやすさや使い心地など、使って感じたことをお聞かせください。")
@@ -27,9 +33,9 @@ struct ReviewSupportCard: View {
                     .font(.subheadline).foregroundColor(Theme.muted).fixedSize(horizontal: false, vertical: true)
                 Button { showFeedback = true } label: {
                     Label("ご意見・リクエストを送る", systemImage: "envelope")
-                        .font(.subheadline.bold()).foregroundColor(HomeStyle.teal)
+                        .font(.subheadline.bold()).foregroundColor(ReviewSupportStyle.teal)
                         .frame(maxWidth: .infinity, minHeight: 48).padding(.vertical, 3)
-                        .background(HomeStyle.tealFill).clipShape(RoundedRectangle(cornerRadius: 12))
+                        .background(ReviewSupportStyle.tealFill).clipShape(RoundedRectangle(cornerRadius: 12))
                 }.buttonStyle(.plain)
             }.padding(18).background(Theme.card).clipShape(RoundedRectangle(cornerRadius: 16))
                 .overlay(RoundedRectangle(cornerRadius: 16).stroke(Theme.line, lineWidth: 1))

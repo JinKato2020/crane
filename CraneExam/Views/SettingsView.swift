@@ -8,7 +8,6 @@ struct SettingsView: View {
     @AppStorage("cr_appearance") private var appearance: Int = 0   // 0:システム 1:ライト 2:ダーク
     @State private var showPaywall = false
     @State private var showFeedback = false
-    @State private var showHeroPicker = false
     @Environment(\.requestReview) private var requestReview
     @State private var developerToolsUnlocked = false
     @State private var reviewTriggered = false
@@ -42,17 +41,6 @@ struct SettingsView: View {
 
                     group("表示")
                     appearanceRow
-                    Button { showHeroPicker = true } label: {
-                        HStack(spacing: 12) {
-                            iconBox("photo")
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text("ホームの背景").font(.subheadline.bold()).foregroundColor(Theme.fg)
-                                Text("好きな景色を選ぶ").font(.caption).foregroundColor(Theme.muted)
-                            }
-                            Spacer()
-                            Image(systemName: "chevron.right").foregroundColor(Theme.muted)
-                        }.rowStyle()
-                    }.buttonStyle(.plain)
 
                     group("データ")
                     contentUpdateSection
@@ -79,7 +67,6 @@ struct SettingsView: View {
             .navigationBarTitleDisplayMode(.inline)
             .sheet(isPresented: $showPaywall) { PaywallView() }
             .sheet(isPresented: $showFeedback) { FeedbackView() }
-            .sheet(isPresented: $showHeroPicker) { HomeHeroPicker() }
             .alert("お知らせ", isPresented: Binding(
                 get: { purchases.message != nil },
                 set: { if !$0 { purchases.message = nil } }

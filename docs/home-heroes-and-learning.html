@@ -1,6 +1,6 @@
 <!doctype html><html lang="ja"><meta charset="utf-8"><title>ホーム・ヒーローの運用</title>
 <style>body{max-width:920px;margin:40px auto;padding:0 24px;font-family:Meiryo,sans-serif;color:#203d50;line-height:1.9}h1{font-size:26px}h2{font-size:20px;margin-top:28px}code,pre{font-family:Consolas,monospace}pre{padding:18px;background:#eff4f7;border-radius:12px;overflow:auto}li{margin:8px 0}a{color:#276b83}</style>
-<h1>ホームとヒーローの更新方法</h1><p>2026年11月6日。今回の対応版をインストールした後は、画像と候補一覧をOTAで更新できます。画面構造やアプリの挙動を変更するときは新しいビルドが必要です。</p>
+<h1>ホームとヒーローの更新方法</h1><p><strong>現状（2026年11月6日・ホーム刷新の取り消し）：</strong>ユーザー指定により、ホームは刷新前の固定ヒーロー・試験日カウント・成績・従来カード配置へ戻しました。背景選択の画面と設定項目は撤去しています。設定の評価・リクエスト、現在の評価依頼タイミング、無料ライセンス、教材の改善は維持しています。以下の背景選択・新ホームの説明は再導入用の記録です。画像素材・候補一覧は保管していますが、現在のホームはこれらを表示しません。</p><p>この復元を端末へ反映するため、ユーザーの依頼によりmainへのPushでiOSビルドを要求します。採番下限は1.0.12（2044）。ビルドの状態照会・監視・完了待ちは行いません。</p>
 <h2>ユーザーができること</h2><ul><li>ホームの「背景を選ぶ」または設定の「ホームの背景」から変更。プレビュー後、「この背景にする」で保存。×で閉じた場合は変更しません。</li><li>採用画像は、既存画像「いつもの景色」・アニメ画像「未来の自分」・追加候補4枚目「空へ伸びる」・5枚目「帰り道の余韻」の計4枚。既存画像を既定にし、「画像なし」も選べます。それ以外の候補は選択一覧に表示しません。</li><li>選択は端末に保存。画像の選択とライト／ダークは独立。新しい候補を受け取っても、既存の選択を勝手に変更しません。</li><li>選択した候補が配信一覧から削除された場合は、その一覧の既定画像で表示。壊れた一覧・通信失敗時は同梱一覧、壊れた画像は元のHero画像へフォールバックします。</li></ul>
 <h2>画像を追加・差し替える</h2><p><code>CraneExam/Resources/home_heroes.json</code>が候補一覧です。画像は<code>Resources/images/home_hero_*</code>に配置します。管理コマンドは画像を変更せずコピーし、ファイル名に内容のハッシュを付け、manifestを再生成します。</p>
 <pre>python tools/manage_home_heroes.py list
