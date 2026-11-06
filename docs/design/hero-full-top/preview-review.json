@@ -1,0 +1,35 @@
+{
+  "kind": "HTML framing approximation",
+  "nativeAppViewed": false,
+  "cases": [
+    {
+      "width": 320,
+      "cameraBottom": 20,
+      "tipY": 46.6,
+      "imageStartsAtTop": true,
+      "fullAspectRatio": true
+    },
+    {
+      "width": 375,
+      "cameraBottom": 20,
+      "tipY": 54.6,
+      "imageStartsAtTop": true,
+      "fullAspectRatio": true
+    },
+    {
+      "width": 393,
+      "cameraBottom": 45,
+      "tipY": 57.2,
+      "imageStartsAtTop": true,
+      "fullAspectRatio": true
+    },
+    {
+      "width": 430,
+      "cameraBottom": 45,
+      "tipY": 59.7,
+      "imageStartsAtTop": true,
+      "fullAspectRatio": true
+    }
+  ],
+  "javascriptErrors": []
+}

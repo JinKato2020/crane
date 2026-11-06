@@ -1,0 +1,39 @@
+{
+  "tool": "built-in image_gen",
+  "intent": "edit existing hero; extend complete crane top and natural sky",
+  "prompt": "Use case: precise-object-edit (upward outpainting / composition extension). Input image 1 is the EDIT TARGET: the existing crane-exam app hero photograph, a dark lattice jib crane at the right of a construction site against an orange sunset, suspended empty hook near the center, blue-gray clouded sky and building framework below.\nPrimary request: keep THIS SAME IMAGE and scene, but restore the crane's complete top, which currently extends outside the upper frame. Expand the view UPWARD and widen the view only as much as necessary to show the entire lattice boom tip, its head sheaves and connected cables clearly inside the frame. Preserve the recognizable crane type and orientation, tower at right, hanging hook to its left, building scaffolding, sun position, dramatic photographic rendering, navy/steel blue shadows, orange sunset, original lighting and mood. Do not redesign the crane or replace the scene.\nOutput: a single landscape 4:3 image, ideally 2048x1536. Composition is intended to fill a phone's whole screen width including the top status-bar area. Reserve the UPPER 22 percent of the final canvas as continuous natural dark blue-gray SKY with no crane parts or focal objects; this is real sky, not an empty white margin. The highest crane tip should be roughly 25-28 percent below the top edge, visibly separated from the frame and from a centered phone camera cutout. Keep the entire recognizable boom and all head sheaves intact and comfortably inside the left/right boundaries, its steel structure and connected suspension lines physically coherent. Show uninterrupted vertical hoist lines from the boom head to the original hanging hook. Zoom out/reframe only as needed for this extra headroom; preserve the reference's construction site and right-heavy crane silhouette below. Keep the lower-left dark enough for the app's existing white caption. No white border or letterboxing. No text, labels, logo, UI, phone frame, new people or equipment. This must look like the original photograph expanded, not a different artwork.",
+  "source": "docs/design/hero-full-top/original-hero.jpg",
+  "output": "CraneExam/Assets.xcassets/Hero.imageset/hero-full-top.png",
+  "sourceGenerationPath": "C:/Users/jwpsa/.codex/generated_images/01a14a5b-6e30-70c2-86f9-e75dbf7b4cda/exec-51b191bb-dadc-4102-8637-e715473c78f1.png",
+  "layoutChange": "Home scroll view ignores the top container safe area; image retains aspect-fit sizing; bottom tab safe area unchanged",
+  "nativeAppViewed": false,
+  "buildRequested": true,
+  "buildNumberFloor": 2045,
+  "buildMonitoring": false,
+  "validation": {
+    "imageSize": [
+      1448,
+      1086
+    ],
+    "sourcePreservedInReviewFolder": true,
+    "swiftSyntaxPassed": true,
+    "previewWidths": [
+      320,
+      375,
+      393,
+      430
+    ],
+    "nativeCompileOrSimulatorRun": false,
+    "settingsAndReviewUnchanged": true
+  },
+  "outputSha256": "9012e95f7daf516acf9380042550abbcba0c1cbe70749c5011232ccd27424f91",
+  "release": {
+    "date": "2026-11-07",
+    "otaReceipt": "docs/reviews/all-content-ota-published-20261107.json",
+    "otaChangesPublished": 170,
+    "otaPublicObjectsVerified": 171,
+    "heroDelivery": "Native application bundle",
+    "buildTrigger": "Push to main",
+    "buildStateQueried": false
+  }
+}

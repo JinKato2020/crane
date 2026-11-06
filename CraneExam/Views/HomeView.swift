@@ -26,7 +26,9 @@ struct HomeView: View {
                 .padding(16)
             }
         }
-        .background(Theme.bg.ignoresSafeArea())   // 背景は最上端まで(白余白なし)。ヒーロー自体はステータスバー下に収め、クレーン上部まで見えるようにする
+        // Extend the photograph itself behind the status bar. Keep the bottom safe area for the tabs.
+        .ignoresSafeArea(.container, edges: .top)
+        .background(Theme.bg.ignoresSafeArea())
         .sheet(isPresented: $showGuide) { ExamGuideView() }
         .sheet(isPresented: $showRelationMap) { ChapterRelationMapView().environmentObject(store).environmentObject(purchases) }
         .sheet(isPresented: $showBookmarks) { BookmarkView().environmentObject(store) }
@@ -72,7 +74,7 @@ struct HomeView: View {
         colorScheme == .dark ? .white : Color(hex: 0x1F3349)
     }
 
-    // ヒーロー(画像全体を切らずに表示=fit。上に余白を作らず横幅いっぱい・縦は縦横比なり)
+    // 描き足した空をスマホ上端まで表示。fitでクレーンの先端を含めた画像全体を保つ。
     private var hero: some View {
         ZStack(alignment: .bottomLeading) {
             Image("Hero")

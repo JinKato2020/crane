@@ -1,6 +1,6 @@
 {
   "images" : [
-    { "filename" : "hero.jpg", "idiom" : "universal" }
+    { "filename" : "hero-full-top.png", "idiom" : "universal" }
   ],
   "info" : { "author" : "xcode", "version" : 1 }
 }
