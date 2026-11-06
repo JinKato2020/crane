@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-07",
+  "request": "相関図を、固定の3項目ずつの分類から、意味のある関係が読める構成へ整理",
+  "changes": {
+    "chapter1": "巻上げの動力伝達と、荷重を支える経路を分けて接続。安全・点検の役割を破線で関連づける。",
+    "chapter2": "使用開始の条件、資格・用具、安全使用、点検と補修の循環、更新等の手続きを結ぶ。作業開始前点検を使用前にも明記。",
+    "chapter3": "給電→制御→電動機→荷の動きに、電気の基本、エネルギー、回転子、速度制御、保護を関連づける。",
+    "chapter4": "体積→質量→重量→働く力から、動き、静的つり合い、滑車、玉掛け、応力へ関連づける。",
+    "nativeView": "章別の読み方へ変更。案内文にDynamic Type対応の標準フォントを使用。"
+  },
+  "sources": [
+    "CraneExam/Resources/textbook.json（現行のレビュー済み教材）",
+    "docs/relation-maps-review-ota-20261103.json（従来図の公式書籍照合記録。本作業でPDFを再度全文照合したものではない）",
+    "https://www.mhlw.go.jp/web/t_doc?dataId=74020000&dataType=0（クレーン等安全規則：作業開始前点検・異常時の補修の順序を確認）"
+  ],
+  "validation": {
+    "mapGeometry": "4枚のSVGを解析。文字・枠の重なり、キャンバス外の文字、他の枠を通過する矢印を検査。",
+    "sectionReferences": "教材の節IDに照合。各章の主要節に対応する内容を含む。",
+    "visual": "Chromeで4枚を描画し確認。390 CSS pxの全体表示も確認。細かな文章は既存の拡大表示で読む想定。",
+    "swift": "変更したビューのtree-sitter構文解析に合格。iOS実機での起動確認は未実施。",
+    "learningData": "既存チェックに合格：424 recall answers / 882 rotation cases / 207 terms / 222 glossary references / 678 hashes",
+    "manifestChangedKeys": [
+      "content/images/chapter1_relation_map.svg",
+      "content/images/chapter2_relation_map.svg",
+      "content/images/chapter3_relation_map.svg",
+      "content/images/chapter4_relation_map.svg"
+    ],
+    "diffWhitespace": "passed"
+  },
+  "deployment": {
+    "otaPublished": false,
+    "buildRequested": true,
+    "trigger": "push to main (ios.yml)",
+    "versionFloor": "1.0.12 (2046)",
+    "monitoringEnabled": false,
+    "buildStatusQueried": false
+  },
+  "previews": [
+    "docs/design/relation-maps-20261107/chapter1.png",
+    "docs/design/relation-maps-20261107/chapter2.png",
+    "docs/design/relation-maps-20261107/chapter3.png",
+    "docs/design/relation-maps-20261107/chapter4.png"
+  ],
+  "releasePreflight": {
+    "requiredPythonChecks": "passed",
+    "changedSwiftSyntax": "passed",
+    "diffWhitespace": "passed",
+    "remoteMainDivergence": "0 ahead, 0 behind before commit",
+    "bundledManifestDate": "2026-11-06T16:14:08Z",
+    "remoteManifestDate": "2026-11-06T15:13:11Z",
+    "olderOtaCannotReplaceNewBundledMaps": true
+  }
+}

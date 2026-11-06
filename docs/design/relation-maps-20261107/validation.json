@@ -1,0 +1,93 @@
+[
+  {
+    "chapter": 1,
+    "nodes": 12,
+    "relationships": 11,
+    "sectionReferences": [
+      "1-0",
+      "1-1",
+      "1-10",
+      "1-11",
+      "1-12",
+      "1-13",
+      "1-14",
+      "1-15",
+      "1-2",
+      "1-3",
+      "1-4",
+      "1-5",
+      "1-6",
+      "1-7",
+      "1-8",
+      "1-9"
+    ],
+    "size": [
+      1680,
+      1550
+    ],
+    "minimumFontSize": 22,
+    "geometryChecks": "passed"
+  },
+  {
+    "chapter": 2,
+    "nodes": 8,
+    "relationships": 9,
+    "sectionReferences": [
+      "2-0",
+      "2-1",
+      "2-2",
+      "2-3",
+      "2-4",
+      "2-5",
+      "2-6"
+    ],
+    "size": [
+      1680,
+      1670
+    ],
+    "minimumFontSize": 22,
+    "geometryChecks": "passed"
+  },
+  {
+    "chapter": 3,
+    "nodes": 9,
+    "relationships": 8,
+    "sectionReferences": [
+      "3-0",
+      "3-1",
+      "3-2",
+      "3-3",
+      "3-4",
+      "3-5",
+      "3-6",
+      "3-7"
+    ],
+    "size": [
+      1680,
+      1900
+    ],
+    "minimumFontSize": 22,
+    "geometryChecks": "passed"
+  },
+  {
+    "chapter": 4,
+    "nodes": 9,
+    "relationships": 9,
+    "sectionReferences": [
+      "4-0",
+      "4-1",
+      "4-2",
+      "4-3",
+      "4-4",
+      "4-5",
+      "4-6",
+      "4-7"
+    ],
+    "size": [
+      1680,
+      1900
+    ],
+    "minimumFontSize": 22,
+    "geometryChecks": "passed"
+  }
+]

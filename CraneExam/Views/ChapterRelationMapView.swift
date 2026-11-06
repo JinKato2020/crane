@@ -13,6 +13,19 @@ struct ChapterRelationMapView: View {
             ?? ["クレーンに関する知識", "関係法令", "原動機及び電気に関する知識", "クレーンの運転のために必要な力学に関する知識"][selectedChapter - 1]
     }
 
+    private var mapGuide: String {
+        switch selectedChapter {
+        case 1:
+            return "回転が荷の動きに変わる流れと、荷の重さを支える流れを見比べます。矢印の言葉を読みながら、部品の役割をつなげてみましょう。"
+        case 2:
+            return "準備から使用、点検・補修へ。資格や用具の条件、設備を変更するときの手続きが、どこに関わるかをたどります。"
+        case 3:
+            return "給電から制御、電動機、荷の動きへ。電気の公式や回転子のしくみが、この流れのどこに関わるかを確かめます。"
+        default:
+            return "質量から重量を求め、働く力を描きます。そこから、動き・つり合い・ロープ・部材の負担へつなげて考えます。"
+        }
+    }
+
     // 無料プランで第2章以降を選んだときのロック表示。
     private var lockCard: some View {
         VStack(spacing: 12) {
@@ -52,12 +65,12 @@ struct ChapterRelationMapView: View {
                     if selectedChapter != 1 && !purchases.isPro {
                         lockCard
                     } else {
-                        Text("6つのテーマから、役割としくみを整理します。中心から外へ、太い枝から細い枝へたどってください。")
-                            .font(.system(size: 14)).lineSpacing(5).foregroundColor(Theme.muted)
+                        Text(mapGuide)
+                            .font(.subheadline).lineSpacing(5).foregroundColor(Theme.muted)
                         SVGFigureView(file: "chapter\(selectedChapter)_relation_map.svg", caption: "第\(selectedChapter)章の相関図", thumbMaxHeight: 440)
                             .id(selectedChapter)
-                        Label("図をタップして全画面へ。ピンチで枝の先まで拡大できます。", systemImage: "hand.draw")
-                            .font(.system(size: 13)).lineSpacing(5)
+                        Label("図をタップして全画面へ。ピンチで文字や矢印を拡大できます。", systemImage: "hand.draw")
+                            .font(.footnote).lineSpacing(5)
                             .foregroundColor(Theme.muted)
                         if let chapter = store.textbook?.chapters.first(where: { $0.id == selectedChapter }) {
                             NavigationLink {
