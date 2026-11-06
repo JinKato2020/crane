@@ -264,7 +264,7 @@ struct SectionContentView: View {
 
                 if hasMasks { quizBar }
 
-                if section.id.hasPrefix("1-"), sectionHeadings.count > 4 {
+                if (section.id.hasPrefix("1-") || section.id.hasPrefix("2-")), sectionHeadings.count > 4 {
                     DisclosureGroup(isExpanded: $contentsExpanded) {
                         VStack(alignment: .leading, spacing: 0) {
                             ForEach(sectionHeadings, id: \.index) { heading in

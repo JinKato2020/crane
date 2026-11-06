@@ -1,0 +1,113 @@
+{
+  "scope": "第2章 全8節",
+  "source_book": "書籍/03_第2章_関係法令.pdf",
+  "source_printed_pages": "82–111",
+  "source_method": "全章の既存OCRを対照し、条件・数値・図表は下記ページをPDF原本のページ画像で再確認。全ページの文字単位の再OCR監査ではない。",
+  "source_pdf_pages_visually_reviewed": [
+    84,
+    85,
+    88,
+    92,
+    93,
+    96,
+    104,
+    105,
+    108,
+    109,
+    110
+  ],
+  "current_law_checked": "https://laws.e-gov.go.jp/law/347M50002000034",
+  "original_anchor_ids_retained": 184,
+  "reference_checks": {
+    "working": {
+      "questions": 480,
+      "references": 710,
+      "chapter2_references": 171
+    },
+    "published_snapshot": {
+      "questions": 480,
+      "references": 696,
+      "chapter2_references": 172
+    }
+  },
+  "other_chapters_unchanged": true,
+  "exam_questions_unchanged": true,
+  "counts": {
+    "p": 126,
+    "sub": 55,
+    "table": 46,
+    "point": 8,
+    "img": 8,
+    "svg": 8
+  },
+  "styles": {
+    "lead": 8,
+    "normal": 175,
+    "tip": 12,
+    "question": 19,
+    "answer": 19,
+    "figure": 16,
+    "reference": 1,
+    "caution": 1
+  },
+  "mobile_browser_width": 390,
+  "mobile_sections_checked": 8,
+  "svg_clipping_checked": 8,
+  "pdf": {
+    "pages": 41,
+    "size_bytes": 4457386,
+    "text_preserved_after_compression": true,
+    "recompressed_images": 19,
+    "sparse_pages": [],
+    "rendered_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      13,
+      17,
+      19,
+      20,
+      22,
+      23,
+      24,
+      25,
+      28,
+      29,
+      30,
+      31,
+      33,
+      34,
+      35,
+      36,
+      37,
+      40,
+      41
+    ],
+    "contact_sheets": [
+      "pdf-sheet-1.jpg",
+      "pdf-sheet-2.jpg",
+      "pdf-sheet-3.jpg"
+    ]
+  },
+  "fingerprints": {
+    "textbook.json": {
+      "sha256": "1e1a19d0f04fb0bc9255d08e2a121fa662ac3cda064cd14e999e7532a1f93948",
+      "size": 674985
+    },
+    "images/2-3_annual_exception_20261106.svg": {
+      "sha256": "110af69124155d1198c93d72fe6ffe4f2174e773ca2d15dfd93f86f7c465bc26",
+      "size": 2273
+    },
+    "images/2-2_inner_angle_20261106.svg": {
+      "sha256": "527361ffa92c84bc22f0983201602cf5d9f52519dc6344a207f13937c49a6161",
+      "size": 1977
+    }
+  },
+  "native_ios_compile_performed": false,
+  "ota_deployed": true,
+  "ui_note": "第2章の節内目次は今回のPushでビルドを開始する。実機・コンパイル・ビルド結果の確認は行っていない。"
+}

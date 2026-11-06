@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" role="img">
+<style>text{font-family:Meiryo,'Noto Sans JP',sans-serif;fill:#19354a;font-size:38px}.title{font-size:46px;font-weight:700}.label{font-weight:700}.muted{fill:#586c7a;font-size:32px}.blue{fill:#216b9a}.red{fill:#ad4338}</style>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#216b9a"/></marker><marker id="redarrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#ad4338"/></marker></defs>
+<rect width="1000" height="900" rx="20" fill="#fff"/>
+<text x="500" y="80" class="title" text-anchor="middle">ロープの「内角側」はどちら？</text>
+<text x="500" y="135" text-anchor="middle" class="muted">上から見た概念図</text>
+<path d="M130 595L500 280L870 595Z" fill="#f9e9e4"/>
+<path d="M130 595L478 280Q500 260 522 280L870 595" stroke="#385565" stroke-width="15" fill="none"/>
+<circle cx="500" cy="300" r="37" fill="#d5e0e6" stroke="#19354a" stroke-width="5"/>
+<circle cx="500" cy="300" r="9" fill="#19354a"/>
+<path d="M500 260V190H650" stroke="#526b7a" stroke-width="4" fill="none"/>
+<text x="670" y="205">シーブ</text>
+<text x="160" y="330" transform="rotate(-41 160 330)" class="muted">張ったロープ</text>
+<text x="500" y="460" text-anchor="middle" class="red label">内角側</text>
+<path d="M500 485V570" stroke="#ad4338" stroke-width="7" marker-end="url(#redarrow)"/>
+<path d="M130 595H870" stroke="#ad4338" stroke-width="4" stroke-dasharray="14 12"/>
+<circle cx="130" cy="595" r="12" fill="#19354a"/><circle cx="870" cy="595" r="12" fill="#19354a"/>
+<text x="500" y="690" text-anchor="middle">シーブ等が壊れると、</text>
+<text x="500" y="745" text-anchor="middle">ロープが内角側へ跳ねるおそれ</text>
+<text x="500" y="835" text-anchor="middle" class="red label">危険のおそれのある箇所は立入禁止</text>
+</svg>

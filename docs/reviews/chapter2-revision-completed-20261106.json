@@ -1,0 +1,207 @@
+{
+  "date": "2026-11-06",
+  "scope": "第2章 全8節",
+  "changes": [
+    {
+      "title": "読み方の導入",
+      "implementation": "「対象・期限・相手・行うこと」に分ける例を表に整理。「以上・超える」の説明の重複を削減。",
+      "basis": "書籍 pp.82–83／本文の編集"
+    },
+    {
+      "title": "製造と設置",
+      "implementation": "製造許可・設置届・設置報告書を比較。製造と設置の図を導入直後へ移動。設計審査の原則・局長審査の書類を整理。",
+      "basis": "書籍 p.84／現行安全規則3条・3条の2"
+    },
+    {
+      "title": "落成検査",
+      "implementation": "1.25倍・1.27倍・200t超の条件、準備・立会い・申請添付書類を短い表へ。",
+      "basis": "書籍 pp.85–86"
+    },
+    {
+      "title": "検査証と間隔",
+      "implementation": "交付・再交付・書替えを場面別に整理。間隔の3D図を寸法の説明へ移し、「0.3m以下」の意味を説明。",
+      "basis": "書籍 pp.86–88"
+    },
+    {
+      "title": "作業の安全",
+      "implementation": "巻過ぎ、過負荷特例、合図、搭乗、立入禁止、修理、強風、組立てを条件別の表に分割。請負人への周知、不良品除去を補足。",
+      "basis": "書籍 pp.89–96"
+    },
+    {
+      "title": "内角側の図",
+      "implementation": "シーブで折れ曲がるロープの内側と、跳ねる危険の方向を概念図で追加。",
+      "basis": "書籍 p.93"
+    },
+    {
+      "title": "検査の時期",
+      "implementation": "日次・月次・年次、暴風前後を区別。年次荷重試験の前後2か月は別の出来事を指すため時間軸の図を追加。",
+      "basis": "書籍 pp.96–98"
+    },
+    {
+      "title": "更新・変更・休止",
+      "implementation": "4列表を2列表へ。変更届と構造部分の変更検査を区別。期限切れにわたる休止と自主検査を分ける。",
+      "basis": "書籍 pp.98–101"
+    },
+    {
+      "title": "玉掛用具",
+      "implementation": "安全係数・材料の伸び・使用後の劣化を区別。ワイヤ、チェーン、金具の画像を説明の近くへ移動。",
+      "basis": "書籍 pp.102–106"
+    },
+    {
+      "title": "玉掛用具の境界値",
+      "implementation": "断線10％以上、直径減少7％超、チェーン5％超・10％超を保持。チェーンのき裂と金具の変形・き裂を明示。アイスプライスの2通りを表に整理。",
+      "basis": "書籍 pp.103–106"
+    },
+    {
+      "title": "運転と玉掛けの資格",
+      "implementation": "機械の能力→操作方式の順に説明。限定免許の取得経路、取消しと返還の相手、軽い荷の判断例を整理。",
+      "basis": "書籍 pp.107–111"
+    },
+    {
+      "title": "用語集との一致",
+      "implementation": "変更届のスタッカー式、使用再開の期限切れ条件、床上操作式の資格等の8用語を本文と整合。",
+      "basis": "書籍 pp.93–110"
+    },
+    {
+      "title": "学習のレイアウト",
+      "implementation": "比較表46個はすべて2列。確認問題19問、図16点（追加2点）。長い節には節内目次を適用するソース変更。",
+      "basis": "既存教材UI／表示検証"
+    },
+    {
+      "title": "配信・検証の範囲",
+      "implementation": "第2章はローカル改訂版。模試の184既存教材アンカーを保持。第1・3・4章や模試本文に変更なし。",
+      "basis": "自動検証結果"
+    }
+  ],
+  "verification": {
+    "scope": "第2章 全8節",
+    "source_book": "書籍/03_第2章_関係法令.pdf",
+    "source_printed_pages": "82–111",
+    "source_method": "全章の既存OCRを対照し、条件・数値・図表は下記ページをPDF原本のページ画像で再確認。全ページの文字単位の再OCR監査ではない。",
+    "source_pdf_pages_visually_reviewed": [
+      84,
+      85,
+      88,
+      92,
+      93,
+      96,
+      104,
+      105,
+      108,
+      109,
+      110
+    ],
+    "current_law_checked": "https://laws.e-gov.go.jp/law/347M50002000034",
+    "original_anchor_ids_retained": 184,
+    "reference_checks": {
+      "working": {
+        "questions": 480,
+        "references": 710,
+        "chapter2_references": 171
+      },
+      "published_snapshot": {
+        "questions": 480,
+        "references": 696,
+        "chapter2_references": 172
+      }
+    },
+    "other_chapters_unchanged": true,
+    "exam_questions_unchanged": true,
+    "counts": {
+      "p": 126,
+      "sub": 55,
+      "table": 46,
+      "point": 8,
+      "img": 8,
+      "svg": 8
+    },
+    "styles": {
+      "lead": 8,
+      "normal": 175,
+      "tip": 12,
+      "question": 19,
+      "answer": 19,
+      "figure": 16,
+      "reference": 1,
+      "caution": 1
+    },
+    "mobile_browser_width": 390,
+    "mobile_sections_checked": 8,
+    "svg_clipping_checked": 8,
+    "pdf": {
+      "pages": 41,
+      "size_bytes": 4457386,
+      "text_preserved_after_compression": true,
+      "recompressed_images": 19,
+      "sparse_pages": [],
+      "rendered_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        13,
+        17,
+        19,
+        20,
+        22,
+        23,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31,
+        33,
+        34,
+        35,
+        36,
+        37,
+        40,
+        41
+      ],
+      "contact_sheets": [
+        "pdf-sheet-1.jpg",
+        "pdf-sheet-2.jpg",
+        "pdf-sheet-3.jpg"
+      ]
+    },
+    "fingerprints": {
+      "textbook.json": {
+        "sha256": "1e1a19d0f04fb0bc9255d08e2a121fa662ac3cda064cd14e999e7532a1f93948",
+        "size": 674985
+      },
+      "images/2-3_annual_exception_20261106.svg": {
+        "sha256": "110af69124155d1198c93d72fe6ffe4f2174e773ca2d15dfd93f86f7c465bc26",
+        "size": 2273
+      },
+      "images/2-2_inner_angle_20261106.svg": {
+        "sha256": "527361ffa92c84bc22f0983201602cf5d9f52519dc6344a207f13937c49a6161",
+        "size": 1977
+      }
+    },
+    "native_ios_compile_performed": false,
+    "ota_deployed": true,
+    "ui_note": "第2章にも節内目次を適用するソース変更あり。第1章のPush後の変更であり、まだビルド・配信していない。"
+  },
+  "pdf": {
+    "path": "C:\\Users\\jwpsa\\Documents\\desktop\\claude\\クレーン\\アプリ\\教材\\クレーン教材_第2章_関係法令.pdf",
+    "pages": 41,
+    "size_bytes": 4457386,
+    "sha256": "3bdcf8669fd9760830826584e2c48ba07019085150fc26f75c4e7ed52b2c2a99"
+  },
+  "release": {
+    "ota_uploaded": true,
+    "build_requested": false,
+    "requires_new_build": [
+      "第2章の節内目次への適用"
+    ],
+    "ota_compatible": [
+      "本文・表・図・用語集"
+    ],
+    "note": "第2章の教材・掲載図・PDFを公開済み。節内目次のUI変更は、これからmainへPushしてビルドを開始する。監視は行わない。",
+    "pdf_url": "https://content.safa-lang.com/crane/pdf/chapter2.pdf"
+  }
+}

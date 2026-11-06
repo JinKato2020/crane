@@ -1,0 +1,35 @@
+{
+  "scope": "第2章の教材と掲載図のみ",
+  "files": [
+    "content/images/2-1_clearance_elevation.svg",
+    "content/images/2-1_clearance_plan.svg",
+    "content/images/2-2_inner_angle_20261106.svg",
+    "content/images/2-2_no_entry_patterns.svg",
+    "content/images/2-2_overwind_gap.svg",
+    "content/images/2-3_annual_exception_20261106.svg",
+    "content/images/2-6_chain_reject.svg",
+    "content/images/2-6_wire_reject.svg",
+    "content/textbook.json"
+  ],
+  "bytes": 8193818,
+  "live_exam_references_verified": 696,
+  "unaffected_files_preserved": true,
+  "pdf_url": "https://content.safa-lang.com/crane/pdf/chapter2.pdf",
+  "publishedAt": "2026-11-06T01:37:30.110387+00:00",
+  "public_sha256_verified": [
+    "_manifest.json",
+    "content/images/2-1_clearance_elevation.svg",
+    "content/images/2-1_clearance_plan.svg",
+    "content/images/2-2_inner_angle_20261106.svg",
+    "content/images/2-2_no_entry_patterns.svg",
+    "content/images/2-2_overwind_gap.svg",
+    "content/images/2-3_annual_exception_20261106.svg",
+    "content/images/2-6_chain_reject.svg",
+    "content/images/2-6_wire_reject.svg",
+    "content/textbook.json",
+    "pdf/chapter2.pdf"
+  ],
+  "textbook_sha256": "1e1a19d0f04fb0bc9255d08e2a121fa662ac3cda064cd14e999e7532a1f93948",
+  "pdf_sha256": "3bdcf8669fd9760830826584e2c48ba07019085150fc26f75c4e7ed52b2c2a99",
+  "native_build_status_queried": false
+}

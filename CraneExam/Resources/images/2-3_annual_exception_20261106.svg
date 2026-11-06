@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 880" role="img">
+<style>text{font-family:Meiryo,'Noto Sans JP',sans-serif;fill:#19354a;font-size:38px}.title{font-size:46px;font-weight:700}.label{font-weight:700}.muted{fill:#586c7a;font-size:32px}.blue{fill:#216b9a}.red{fill:#ad4338}</style>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#216b9a"/></marker><marker id="redarrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#ad4338"/></marker></defs>
+<rect width="1000" height="880" rx="20" fill="#fff"/>
+<text x="500" y="80" class="title" text-anchor="middle">年次の荷重試験を省略できる時期</text>
+<text x="500" y="135" text-anchor="middle" class="muted">見るのは「自主検査の日」から前と後</text>
+<rect x="50" y="185" width="900" height="270" rx="18" fill="#f0f5f8"/>
+<text x="85" y="245" class="label">① 前の２か月以内に、試験を済ませた</text>
+<path d="M130 350H850" stroke="#b4c3cd" stroke-width="5"/>
+<path d="M160 350H530" stroke="#216b9a" stroke-width="9"/>
+<circle cx="160" cy="350" r="12" fill="#216b9a"/><circle cx="530" cy="350" r="12" fill="#19354a"/>
+<text x="155" y="310" class="blue label">荷重試験</text>
+<text x="530" y="310" class="label" text-anchor="middle">自主検査</text>
+<text x="345" y="410" class="blue" text-anchor="middle">２か月以内</text>
+<text x="700" y="410" class="muted">性能検査で実施</text>
+<rect x="50" y="485" width="900" height="270" rx="18" fill="#f0f5f8"/>
+<text x="85" y="545" class="label">② 後の２か月以内に、検査証が満了</text>
+<path d="M130 650H850" stroke="#b4c3cd" stroke-width="5"/>
+<path d="M460 650H830" stroke="#216b9a" stroke-width="9"/>
+<circle cx="460" cy="650" r="12" fill="#19354a"/><circle cx="830" cy="650" r="12" fill="#216b9a"/>
+<text x="460" y="610" class="label" text-anchor="middle">自主検査</text>
+<text x="830" y="610" class="blue label" text-anchor="middle">満了日</text>
+<text x="645" y="710" class="blue" text-anchor="middle">２か月以内</text>
+<text x="500" y="825" text-anchor="middle" class="label">①・②の、どちらかに当てはまればよい</text>
+</svg>
