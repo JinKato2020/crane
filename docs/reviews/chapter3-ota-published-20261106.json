@@ -1,0 +1,35 @@
+{
+  "scope": "第3章の教材と掲載図のみ",
+  "files": [
+    "content/images/3-1_rectify_smooth_20261106.svg",
+    "content/images/3-2_mixed_practice_20261106.svg",
+    "content/images/3-3_motor_efficiency_20261106.svg",
+    "content/images/3-4_coasting_20261106.svg",
+    "content/images/3-6_supplement_f40_20261023.svg",
+    "content/images/3-6_supplement_f43_20261023.svg",
+    "content/images/3-6_supplement_f45_20261023.svg",
+    "content/images/3-7_supplement_f47_20261023.svg",
+    "content/textbook.json"
+  ],
+  "bytes": 722153,
+  "live_exam_references_verified": 696,
+  "unaffected_files_preserved": true,
+  "pdf_url": "https://content.safa-lang.com/crane/pdf/chapter3.pdf",
+  "publishedAt": "2026-11-06T02:06:26.091621+00:00",
+  "public_sha256_verified": [
+    "_manifest.json",
+    "content/images/3-1_rectify_smooth_20261106.svg",
+    "content/images/3-2_mixed_practice_20261106.svg",
+    "content/images/3-3_motor_efficiency_20261106.svg",
+    "content/images/3-4_coasting_20261106.svg",
+    "content/images/3-6_supplement_f40_20261023.svg",
+    "content/images/3-6_supplement_f43_20261023.svg",
+    "content/images/3-6_supplement_f45_20261023.svg",
+    "content/images/3-7_supplement_f47_20261023.svg",
+    "content/textbook.json",
+    "pdf/chapter3.pdf"
+  ],
+  "textbook_sha256": "dda08ecf6fec7b28f1061ac2163e861c44ade12573a3d066b0677b8f4493b637",
+  "pdf_sha256": "d2cb904080200e5f382f632ba01c88d734d9153fa69b8780293ecd163c472e4b",
+  "native_build_status_queried": false
+}

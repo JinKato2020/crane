@@ -1,0 +1,141 @@
+{
+  "scope": "第3章 全9節",
+  "source_book": "書籍/04_第3章_原動機及び電気に関する知識.pdf",
+  "source_printed_pages": "112–144",
+  "source_method": "全章の既存OCRを対照し、数式・方式・数値・図表を中心に下記の原本ページ画像を確認。全ページを一文字ずつ再OCRする監査ではない。",
+  "source_pdf_pages_visually_reviewed": [
+    112,
+    116,
+    119,
+    125,
+    129,
+    131,
+    133,
+    135,
+    140,
+    141,
+    144
+  ],
+  "rescue_guidance_checked": [
+    "https://www.fdma.go.jp/relocation/e-college/cat65/cat65/cat44/1-15.html",
+    "https://internal.fdma.go.jp/hiyarihatto/juyo/anzenkanri_h28/html/23a00.html"
+  ],
+  "original_anchor_ids_retained": 334,
+  "reference_checks": {
+    "working": {
+      "questions": 480,
+      "references": 710,
+      "chapter3_references": 195
+    },
+    "published": {
+      "questions": 480,
+      "references": 696,
+      "chapter3_references": 190
+    }
+  },
+  "other_chapters_unchanged": true,
+  "exam_questions_unchanged": true,
+  "counts": {
+    "p": 237,
+    "img": 47,
+    "table": 29,
+    "sub": 72,
+    "svg": 9,
+    "point": 2,
+    "ul": 6
+  },
+  "styles": {
+    "lead": 9,
+    "figure": 56,
+    "normal": 284,
+    "tip": 9,
+    "question": 21,
+    "answer": 21,
+    "caution": 1,
+    "reference": 1
+  },
+  "mobile_browser_width": 390,
+  "mobile_sections_checked": 9,
+  "svg_clipping_checked": 9,
+  "pdf": {
+    "pages": 67,
+    "size_bytes": 9988495,
+    "text_preserved_after_compression": true,
+    "recompressed_images": 47,
+    "sparse_pages": [],
+    "rendered_pages": [
+      1,
+      6,
+      7,
+      11,
+      12,
+      13,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24,
+      25,
+      26,
+      32,
+      33,
+      34,
+      35,
+      36,
+      39,
+      40,
+      41,
+      42,
+      43,
+      45,
+      48,
+      49,
+      50,
+      51,
+      52,
+      54,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66
+    ],
+    "contact_sheets": [
+      "pdf-sheet-1.jpg",
+      "pdf-sheet-2.jpg",
+      "pdf-sheet-3.jpg",
+      "pdf-sheet-4.jpg"
+    ]
+  },
+  "fingerprints": {
+    "textbook.json": {
+      "sha256": "dda08ecf6fec7b28f1061ac2163e861c44ade12573a3d066b0677b8f4493b637",
+      "size": 686803
+    },
+    "images/3-1_rectify_smooth_20261106.svg": {
+      "sha256": "ac7e946363f357aec73d44d09b47162fdb6b40dcf92600fbcff610b2c4a100f5",
+      "size": 11683
+    },
+    "images/3-2_mixed_practice_20261106.svg": {
+      "sha256": "61de48543a83957f1896590978eaf7775ee34b9670aa4d91921c35821f713cc6",
+      "size": 2656
+    },
+    "images/3-3_motor_efficiency_20261106.svg": {
+      "sha256": "ce0372bb350a0a331740ec145101f376f15643896cf813c9723613224e5d3aae",
+      "size": 2075
+    },
+    "images/3-4_coasting_20261106.svg": {
+      "sha256": "66b334cafe64c5805747e137f35364ffadd4a5d61c51be3a253b60a71b55f311",
+      "size": 2853
+    }
+  },
+  "native_ios_compile_performed": false,
+  "ota_deployed": false,
+  "ui_note": "第3章にも節内目次を適用するソース変更あり。第2章の公開後に行った変更で、まだビルド・配信していない。"
+}

@@ -1,0 +1,239 @@
+{
+  "date": "2026-11-06",
+  "scope": "第3章 全9節",
+  "changes": [
+    {
+      "title": "基礎の順序",
+      "implementation": "電流・電圧・抵抗を先にまとめ、直流・交流→整流→変圧器→三相・周波数へ。電線の長さ・直径・温度、実効値を短い文で区別。",
+      "basis": "書籍 pp.112–115"
+    },
+    {
+      "title": "整流と平滑化",
+      "implementation": "交流・脈流・平滑化後を、同じ時間軸の3段の図で比較。波の形と説明を対応させる。",
+      "basis": "既存教材の補足／回路の基本"
+    },
+    {
+      "title": "計算",
+      "implementation": "直列・並列の公式を図だけでなく本文にも記載。混合回路を3段階で解き、電圧・電流の検算を表に整理。100Ω＋（200Ωと600Ωの並列）の自習図を追加。",
+      "basis": "書籍 pp.115–117"
+    },
+    {
+      "title": "電動機",
+      "implementation": "一次・二次、界磁・電機子を役割で比較。入力8kW→出力6kW＋損失2kWを図示。かご形の従来の特徴とインバーター普及、動作別の電動機を補足。",
+      "basis": "書籍 pp.118–121"
+    },
+    {
+      "title": "制御器",
+      "implementation": "方式名を繰り返す表を、主回路をどう操作するかの比較へ。直接・間接・半間接、無線から機上運転への切替えを整理。",
+      "basis": "書籍 pp.121–125"
+    },
+    {
+      "title": "惰走・保護",
+      "implementation": "長い箇条書きを操作・電源順序・保護の表へ。コースチングのモーター無通電／ブレーキ開放／0ノッチで制動を図示。",
+      "basis": "書籍 pp.125–127"
+    },
+    {
+      "title": "図と項目の誤対応",
+      "implementation": "共用保護盤の図に付いていた「継電器」の説明を修正。用語集のスリップリング給電に付いていたトロリ給電図を正しい図へ差替え。",
+      "basis": "掲載画像と書籍 pp.126・131"
+    },
+    {
+      "title": "給電",
+      "implementation": "支持方式を4つに分け、特殊チェーン式とケーブルキャリア式の違いを明記。集電子の2方式、リング側・ブラシ側の回転の両配置を説明。図を該当箇所へ移動。",
+      "basis": "書籍 pp.128–131"
+    },
+    {
+      "title": "速度制御",
+      "implementation": "書籍の「巻上げは通常全電圧始動」を基本として説明。緩始動の部品、極数比2：1、巻下げと二次抵抗、軽荷重・重荷重の渦電流制御を補足。方式と数値の表を分割。",
+      "basis": "書籍 pp.131–136"
+    },
+    {
+      "title": "電気保守",
+      "implementation": "絶縁と漏れ電流、絶縁抵抗と接地抵抗を区別。感電の数値は指定書籍の扱いで記載。救助の記述は消防庁の安全確保・119番・AEDの案内と照合。故障表を症状別に3分割。",
+      "basis": "書籍 pp.137–144／消防庁"
+    },
+    {
+      "title": "学習と表示",
+      "implementation": "技術系3D図を保持。重複する一般的な電動機図1点は参照リンクへ。合計56図、29比較表、21問の回答開閉式の確認問題。第3章の節内目次をソースへ追加。",
+      "basis": "教材UIの既存部品"
+    },
+    {
+      "title": "検証",
+      "implementation": "334既存アンカーを保持。現行710参照・公開版696参照を検証。390px幅の全9節、SVG9図の文字切れ、PDF67ページの一覧を確認。",
+      "basis": "自動検証・ブラウザ表示・PDF目視"
+    }
+  ],
+  "verification": {
+    "scope": "第3章 全9節",
+    "source_book": "書籍/04_第3章_原動機及び電気に関する知識.pdf",
+    "source_printed_pages": "112–144",
+    "source_method": "全章の既存OCRを対照し、数式・方式・数値・図表を中心に下記の原本ページ画像を確認。全ページを一文字ずつ再OCRする監査ではない。",
+    "source_pdf_pages_visually_reviewed": [
+      112,
+      116,
+      119,
+      125,
+      129,
+      131,
+      133,
+      135,
+      140,
+      141,
+      144
+    ],
+    "rescue_guidance_checked": [
+      "https://www.fdma.go.jp/relocation/e-college/cat65/cat65/cat44/1-15.html",
+      "https://internal.fdma.go.jp/hiyarihatto/juyo/anzenkanri_h28/html/23a00.html"
+    ],
+    "original_anchor_ids_retained": 334,
+    "reference_checks": {
+      "working": {
+        "questions": 480,
+        "references": 710,
+        "chapter3_references": 195
+      },
+      "published": {
+        "questions": 480,
+        "references": 696,
+        "chapter3_references": 190
+      }
+    },
+    "other_chapters_unchanged": true,
+    "exam_questions_unchanged": true,
+    "counts": {
+      "p": 237,
+      "img": 47,
+      "table": 29,
+      "sub": 72,
+      "svg": 9,
+      "point": 2,
+      "ul": 6
+    },
+    "styles": {
+      "lead": 9,
+      "figure": 56,
+      "normal": 284,
+      "tip": 9,
+      "question": 21,
+      "answer": 21,
+      "caution": 1,
+      "reference": 1
+    },
+    "mobile_browser_width": 390,
+    "mobile_sections_checked": 9,
+    "svg_clipping_checked": 9,
+    "pdf": {
+      "pages": 67,
+      "size_bytes": 9988495,
+      "text_preserved_after_compression": true,
+      "recompressed_images": 47,
+      "sparse_pages": [],
+      "rendered_pages": [
+        1,
+        6,
+        7,
+        11,
+        12,
+        13,
+        18,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        26,
+        32,
+        33,
+        34,
+        35,
+        36,
+        39,
+        40,
+        41,
+        42,
+        43,
+        45,
+        48,
+        49,
+        50,
+        51,
+        52,
+        54,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "contact_sheets": [
+        "pdf-sheet-1.jpg",
+        "pdf-sheet-2.jpg",
+        "pdf-sheet-3.jpg",
+        "pdf-sheet-4.jpg"
+      ]
+    },
+    "fingerprints": {
+      "textbook.json": {
+        "sha256": "dda08ecf6fec7b28f1061ac2163e861c44ade12573a3d066b0677b8f4493b637",
+        "size": 686803
+      },
+      "images/3-1_rectify_smooth_20261106.svg": {
+        "sha256": "ac7e946363f357aec73d44d09b47162fdb6b40dcf92600fbcff610b2c4a100f5",
+        "size": 11683
+      },
+      "images/3-2_mixed_practice_20261106.svg": {
+        "sha256": "61de48543a83957f1896590978eaf7775ee34b9670aa4d91921c35821f713cc6",
+        "size": 2656
+      },
+      "images/3-3_motor_efficiency_20261106.svg": {
+        "sha256": "ce0372bb350a0a331740ec145101f376f15643896cf813c9723613224e5d3aae",
+        "size": 2075
+      },
+      "images/3-4_coasting_20261106.svg": {
+        "sha256": "66b334cafe64c5805747e137f35364ffadd4a5d61c51be3a253b60a71b55f311",
+        "size": 2853
+      }
+    },
+    "native_ios_compile_performed": false,
+    "ota_deployed": true,
+    "ui_note": "第3章の節内目次を適用するソース変更を含む。アプリ更新で反映。ビルド結果は照会しない。"
+  },
+  "pdf": {
+    "path": "C:\\Users\\jwpsa\\Documents\\desktop\\claude\\クレーン\\アプリ\\教材\\クレーン教材_第3章_原動機及び電気に関する知識.pdf",
+    "pages": 67,
+    "size_bytes": 9988495,
+    "sha256": "d2cb904080200e5f382f632ba01c88d734d9153fa69b8780293ecd163c472e4b"
+  },
+  "visual_review": {
+    "contact_sheets": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "phone_section_openings": 9,
+    "new_svg_figures": 4,
+    "detail_pdf_pages": [
+      52
+    ],
+    "native_ios": false
+  },
+  "release": {
+    "ota_uploaded": true,
+    "build_requested": false,
+    "requires_new_build": [
+      "第3章の節内目次への適用"
+    ],
+    "ota_compatible": [
+      "本文・表・図・用語集"
+    ],
+    "note": "第3章の本文・図・PDFを公開し公開URLとのSHA-256一致を確認。UI変更も公開するためソースを準備済み。ビルド状態は照会しない。",
+    "publication_receipt": "chapter3-ota-published-20261106.json"
+  }
+}
