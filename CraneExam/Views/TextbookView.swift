@@ -229,6 +229,14 @@ struct SectionContentView: View {
     @State private var quizSeed = 0
     @State private var quizCat = "all"
     @State private var answersVisible = false
+    @State private var contentsExpanded = false
+
+    private var sectionHeadings: [(index: Int, title: String)] {
+        section.blocks.enumerated().compactMap { index, block in
+            guard block.type == "sub", let title = block.text else { return nil }
+            return (index, title)
+        }
+    }
 
     /// この節に {{ }} の印が1つでもあるか（あるときだけクイズのトグルを出す）
     private var hasMasks: Bool {
@@ -241,6 +249,7 @@ struct SectionContentView: View {
     }
 
     var body: some View {
+        ScrollViewReader { proxy in
         ScrollView {
             VStack(alignment: .leading, spacing: 18) {
                 Text(section.title)
@@ -255,8 +264,43 @@ struct SectionContentView: View {
 
                 if hasMasks { quizBar }
 
-                ForEach(Array(section.blocks.enumerated()), id: \.offset) { _, b in
+                if section.id.hasPrefix("1-"), sectionHeadings.count > 4 {
+                    DisclosureGroup(isExpanded: $contentsExpanded) {
+                        VStack(alignment: .leading, spacing: 0) {
+                            ForEach(sectionHeadings, id: \.index) { heading in
+                                Button {
+                                    withAnimation { proxy.scrollTo(heading.index, anchor: .top) }
+                                } label: {
+                                    HStack(alignment: .top, spacing: 10) {
+                                        Text(heading.title)
+                                            .font(.system(size: 15, weight: .medium))
+                                            .fixedSize(horizontal: false, vertical: true)
+                                        Spacer(minLength: 4)
+                                        Image(systemName: "arrow.down").font(.system(size: 12))
+                                    }
+                                    .foregroundColor(Theme.accent2)
+                                    .frame(maxWidth: .infinity, minHeight: 44, alignment: .leading)
+                                    .padding(.vertical, 5)
+                                    .contentShape(Rectangle())
+                                }
+                                .buttonStyle(.plain)
+                            }
+                        }
+                        .padding(.top, 8)
+                    } label: {
+                        Label("この節の目次", systemImage: "list.bullet")
+                            .font(.system(size: 15, weight: .bold)).foregroundColor(Theme.fg)
+                            .frame(minHeight: 32)
+                    }
+                    .tint(Theme.accent2)
+                    .padding(16)
+                    .background(Theme.card2)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+
+                ForEach(Array(section.blocks.enumerated()), id: \.offset) { i, b in
                     BlockView(block: b)
+                        .id(i)
                 }
 
                 HStack(spacing: 6) {
@@ -266,7 +310,7 @@ struct SectionContentView: View {
                 }
                 .frame(maxWidth: .infinity).padding(.vertical, 20)
             }
-            .padding(.horizontal, 24).padding(.vertical, 22)
+            .padding(.horizontal, 20).padding(.vertical, 22)
         }
         .background(Theme.bg.ignoresSafeArea())
         .environment(\.quizMode, quizOn)
@@ -275,6 +319,7 @@ struct SectionContentView: View {
         .environment(\.quizAnswersVisible, answersVisible)
         .onChange(of: quizOn) { _ in answersVisible = false; quizSeed += 1 }
         .onChange(of: quizCat) { _ in answersVisible = false; quizSeed += 1 }
+        }
     }
 
     // 暗記クイズの操作バー
@@ -334,6 +379,8 @@ struct SectionContentView: View {
 /// 1ブロックを描画
 struct BlockView: View {
     let block: TBBlock
+    @State private var answerExpanded = false
+    @State private var textbookReference: TextRef?
 
     var body: some View {
         switch block.type {
@@ -377,11 +424,12 @@ struct BlockView: View {
                                     labels: block.labels ?? [],
                                     legend: block.legend ?? [],
                                     caption: block.caption,
-                                    thumbMaxHeight: 300,
+                                    thumbMaxHeight: block.style == "figure" ? 620 : 300,
                                     showLegend: false)
                 }
                 if let cap = block.caption, !cap.isEmpty {
-                    Text("図：" + cap).font(.system(size: 12)).foregroundColor(Theme.muted)
+                    Text("図：" + cap).font(.system(size: 13)).foregroundColor(Theme.muted)
+                        .lineSpacing(4)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -402,10 +450,11 @@ struct BlockView: View {
         case "svg":
             VStack(alignment: .leading, spacing: 10) {
                 if let f = block.file {
-                    SVGFigureView(file: f, caption: block.caption, thumbMaxHeight: 320)
+                    SVGFigureView(file: f, caption: block.caption, thumbMaxHeight: block.style == "figure" ? 620 : 320)
                 }
                 if let cap = block.caption, !cap.isEmpty {
-                    Text("図：" + cap).font(.system(size: 12)).foregroundColor(Theme.muted)
+                    Text("図：" + cap).font(.system(size: 13)).foregroundColor(Theme.muted)
+                        .lineSpacing(4)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -456,7 +505,48 @@ struct BlockView: View {
     }
 
     @ViewBuilder private var paragraph: some View {
-        if let style = block.style, ["lead", "tip", "caution"].contains(style) {
+        if block.style == "reference", let sectionID = block.file {
+            Button {
+                textbookReference = TextRef(section: sectionID, blockID: nil, anchor: nil, label: block.text)
+            } label: {
+                HStack(spacing: 10) {
+                    Image(systemName: "book")
+                    Text(block.text ?? "関連する教材")
+                        .fixedSize(horizontal: false, vertical: true)
+                    Spacer(minLength: 0)
+                    Image(systemName: "arrow.up.forward").font(.system(size: 12))
+                }
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundColor(Theme.accent2)
+                .frame(maxWidth: .infinity, minHeight: 44, alignment: .leading)
+                .padding(12)
+                .background(Theme.card2)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+            }
+            .buttonStyle(.plain)
+            .sheet(item: $textbookReference) { ref in
+                TextbookRefSheet(ref: ref, closeLabel: "教材に戻る")
+            }
+        } else if block.style == "answer" {
+            DisclosureGroup(isExpanded: $answerExpanded) {
+                MaskableText(raw: block.text ?? "", size: 16, color: Theme.fg, lineSpacingV: 7)
+                    .environment(\.quizMode, false)
+                    .padding(.top, 12)
+            } label: {
+                Label(answerExpanded ? "答えと理由を閉じる" : "答えと理由を見る", systemImage: "checkmark.circle")
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundColor(Theme.accent2)
+                    .frame(minHeight: 32)
+            }
+            .tint(Theme.accent2)
+            .padding(16)
+            .background(Theme.studyKey.opacity(0.06))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+        } else if block.style == "question" {
+            MaskableText(raw: block.text ?? "", size: 17, weight: .medium, color: Theme.fg, lineSpacingV: 8)
+                .environment(\.quizMode, false)
+                .padding(.vertical, 6)
+        } else if let style = block.style, ["lead", "tip", "caution"].contains(style) {
             VStack(alignment: .leading, spacing: 10) {
                 Label(style == "lead" ? "まず、これだけ" : (style == "tip" ? "なるほど" : "取り違え注意"),
                       systemImage: style == "lead" ? "bookmark.fill" : (style == "tip" ? "lightbulb" : "exclamationmark.circle"))

@@ -1,0 +1,25 @@
+{
+  "generated": {
+    "1-7_end_fittings_20261106.png": "exec-5960f6cc-efa0-4a5b-b6dd-6dd1334dcddb.png",
+    "1-9_supplement_f17_20261023.png": "exec-f47f21fe-604d-429d-a131-f413b37663cc.png",
+    "1-11_supplement_f30_20261023.png": "exec-d9affba8-9467-4250-be68-bf38ebbc20ff.png",
+    "1-4_supplement_f05_20261023.png": "exec-8c05647f-2cae-40e3-ad9c-89b24b472d08.png",
+    "1-5_rigid_pin_legs_readable21.png": "exec-fa45c59a-07bb-4c14-a76e-36dddcc65675.png",
+    "1-12_oil_bath_20261106.png": "exec-de4b6119-c45b-4ed6-ae4a-19548ecb2760.png",
+    "1-15_fastener_check_20261106.png": "exec-e0aaaa03-f68c-416c-bf2d-cd315dc140cb.png",
+    "1-9_couplings_20261106.png": "exec-184800b8-23dc-4ad4-a8c2-824ea429f1dd.png"
+  },
+  "svg_edited": [
+    "1-3.svg",
+    "1-2_lifting_load.svg",
+    "1-2_jib_radius.svg",
+    "1-9_two_stage_gear.svg",
+    "1-9_couplings.svg",
+    "1-7_end_fittings.svg"
+  ],
+  "svg_added": [
+    "1-2_radius_projection_20261106.svg",
+    "1-14_notch_start_20261106.svg",
+    "1-14_notch_stop_20261106.svg"
+  ]
+}

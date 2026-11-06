@@ -1,0 +1,35 @@
+{
+  "questions": 480,
+  "valid_references": 710,
+  "other_chapters_unchanged": true,
+  "exam_questions_unchanged": true,
+  "section_ids_unchanged": true,
+  "glossary_definitions_aligned": [
+    "剛脚／揺脚",
+    "クラブトロリ／ホイスト"
+  ],
+  "counts": {
+    "p": 335,
+    "sub": 109,
+    "img": 48,
+    "svg": 22,
+    "table": 13,
+    "point": 1
+  },
+  "styles": {
+    "lead": 16,
+    "normal": 407,
+    "figure": 70,
+    "question": 14,
+    "answer": 14,
+    "tip": 4,
+    "reference": 2,
+    "caution": 1
+  },
+  "browser_preview_width": 390,
+  "browser_sections_verified": 16,
+  "svg_clipping_checked": 9,
+  "manifest_fingerprints_verified": 18,
+  "native_ios_compile_performed": false,
+  "ota_deployed": false
+}

@@ -27,11 +27,12 @@ struct TextRefButton: View {
 
 /// 「テキストで確認」で開く、教材の該当箇所シート。
 /// 指定の節を表示し、anchor（小見出しキーワード）があればそこへスクロール＋ハイライト。
-/// 上部に常に「問題に戻る」を置くので、閉じれば必ず元の問題に戻れる（別タブへ移動して迷子にならない）。
+/// 閉じるボタンで呼び出し元へ戻る。教材内の参照ではラベルを変更できる。
 struct TextbookRefSheet: View {
     @EnvironmentObject var store: ExamStore
     @Environment(\.dismiss) private var dismiss
     let ref: TextRef
+    var closeLabel: String = "問題に戻る"
 
     /// section ID から（章, 節）を探す
     private var found: (chapter: TBChapter, section: TBSection)? {
@@ -69,7 +70,7 @@ struct TextbookRefSheet: View {
                     Button { dismiss() } label: {
                         HStack(spacing: 4) {
                             Image(systemName: "chevron.left")
-                            Text("問題に戻る")
+                            Text(closeLabel)
                         }
                         .font(.system(size: 15, weight: .bold))
                     }

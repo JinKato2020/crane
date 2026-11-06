@@ -1,0 +1,74 @@
+{
+  "mode": "built-in image_gen",
+  "jobs": [
+    {
+      "key": "spring_nut",
+      "args": {
+        "referenced_image_paths": [
+          "C:/Users/jwpsa/Documents/desktop/claude/クレーン/crane-app/CraneExam/Resources/images/1-9_supplement_f17_20261023.png",
+          "C:/Users/jwpsa/Documents/desktop/claude/クレーン/tmp/ch1_precision_20261106/book-print-55.png"
+        ],
+        "transparent_background": false,
+        "prompt": "Use case precise-object-edit. Rebuild the first educational illustration for a Japanese crane exam app. First image is old illustration to replace. Second scanned book page is mechanical authority, ONLY use the bottom spring nut photograph and description to determine correct shape; do not reproduce book page or its layout. Correct the misleading plate/clip nut: here ばねナット is SPRING STEEL WIRE COILED 2–3 TURNS at bolt thread helix angle, with the two ends bound together, installed ABOVE a tightened ordinary hex nut. It is a small circular coil wire locknut, NOT a rectangular plate, not a U clip, not a flat split washer. Draw two large realistic silver/blue-gray 3D views on white: left isolated coiled wire spring nut, right installed on a bolt immediately atop ordinary hex nut holding two plates. Accurate screw/coil geometry, soft studio lighting, uncluttered engineering rendering. Large generous margins. Main title only 'ばねナット'. Large label left '単体', right '六角ナットの上に取り付ける'. Two short large labels with leaders 'ばね鋼を2〜3巻き' and '六角ナット'. No other parts, no disc washer or double nuts or footnote, no instructions visible, no tiny type. Keep the style of first image but simplify composition. Wide aspect 3:2. Navy Japanese sans-serif labels, restrained red leader dot, consistent type size."
+      }
+    },
+    {
+      "key": "band_brake",
+      "args": {
+        "referenced_image_paths": [
+          "C:/Users/jwpsa/Documents/desktop/claude/クレーン/crane-app/CraneExam/Resources/images/1-11_supplement_f30_20261023.png",
+          "C:/Users/jwpsa/Documents/desktop/claude/クレーン/tmp/ch1_precision_20261106/book-print-73.png"
+        ],
+        "transparent_background": false,
+        "prompt": "Use case precise-object-edit. Edit first Japanese 3D technical educational illustration of external band brake. Keep realistic silver metallic drum, dark blue frame, restrained red lining on white, tasteful generous white margins. The second book page is reference for the band-brake paragraph at bottom: adjuster bolts allow the band to release evenly. Recompose as one large simplified band brake in released condition with visibly small UNIFORM clearance between band and drum, mounted on fixed supports. Include a stationary external support yoke with radial adjustable threaded stop screws positioned around outside of band to set released clearance; show screws contact/support band, NOT rotating drum; a small separate close-up detail shows one adjustment screw threaded through stationary support against outer band, small clearance between lining and drum. Main labels large enough for mobile, only exact text 'バンドブレーキ', 'バンド', 'ドラム', '調整用ボルト', and close-up '緩めたときのすき間'. Leader for 調整用ボルト must actually touch adjustment screw, no pointer to friction lining or lever pivot. No long sentence footer, no spinning arrow, no crowded repeated labels. Mechanical band wrap with fixed end and lever-actuated end must remain credible. Wide aspect 3:2, consistent navy Japanese sans-serif. Do not render these instructions."
+      }
+    },
+    {
+      "key": "spring_nut_final",
+      "args": {
+        "referenced_image_paths": [
+          "C:/Users/jwpsa/.codex/generated_images/01a14a5b-6e30-70c2-86f9-e75dbf7b4cda/exec-c663ea20-eefd-4393-8767-33802bdb67ca.png"
+        ],
+        "transparent_background": false,
+        "prompt": "Correct only mechanical fit in right-hand installed view. The spring coil nut currently has a large air gap around the bolt, so it looks like a loose ring. Its inner wire surface MUST engage tightly into the bolt's thread grooves, matching the helix and pitch, just above the ordinary hex nut. Reduce inner diameter of the coil until it contacts bolt threads around entire circumference; retain 2–3 turns, bound ends, not a plate or split washer. Make isolated left part consistent with this coil form. Keep all Japanese text unchanged and readable, keep white space, realistic silver 3D, two-panel arrangement and labels. No extra text."
+      }
+    },
+    {
+      "key": "jib_types",
+      "args": {
+        "referenced_image_paths": [
+          "C:/Users/jwpsa/Documents/desktop/claude/クレーン/crane-app/CraneExam/Resources/images/1-4_supplement_f05_20261023.png"
+        ],
+        "transparent_background": false,
+        "prompt": "Edit this Japanese technical 3D crane types illustration. Preserve each of the five crane mechanisms, their support structures and realistic blue/silver rendering, white background. Correct terminology everywhere: replace 低脚 with 低床. Simplify title to 'ジブクレーンの形'. Re-layout five illustrations in spacious two-column grid, 3 rows, with bottom row wall crane alone centered. Consistent large navy sans-serif labels underneath: '高脚ジブクレーン', '低床ジブクレーン', 'ポスト形', 'つち形', '壁クレーン'. Arrange high-leg then low-floor first row, post then hammerhead second row, wall last. Give every image enough margin; labels large about 5% image width, matching font size. No subtitles, no footer, no additional text. All main mechanical geometry remain coherent. Portrait 4:5 or square composition suitable for app tap enlargement."
+      }
+    },
+    {
+      "key": "rigid_legs",
+      "args": {
+        "referenced_image_paths": [
+          "C:/Users/jwpsa/Documents/desktop/claude/クレーン/crane-app/CraneExam/Resources/images/1-5_rigid_pin_legs_readable21.png"
+        ],
+        "transparent_background": false,
+        "prompt": "Edit this Japanese crane technical 3D diagram. Preserve the gantry crane geometry, realistic blue-gray/silver steel, rigid left frame, pinned right connection, crane wheels and rails, white background and uncluttered space. Remove the long technical footer and all pin-joint footnotes. Simplify large navy title to '剛脚と揺脚'. Only two large labels above sides: left '剛脚：垂直・水平荷重', right '揺脚：垂直荷重'. One restrained red horizontal double-headed arrow above girder, label 'ガーダの伸縮'. Keep small enlarged pin detail on right with a leader precisely to the upper pin, label '動けるつなぎ目'. No load arrows needed, no extra paragraphs, no grey text, no instructions. Landscape 3:2, generous margins, each label clearly legible in phone preview."
+      }
+    },
+    {
+      "key": "couplings",
+      "args": {
+        "referenced_image_paths": [
+          "C:/Users/jwpsa/Documents/desktop/claude/クレーン/tmp/ch1_precision_20261106/figure-37.png"
+        ],
+        "transparent_background": false,
+        "prompt": "Re-layout this Japanese technical shaft coupling illustration into a clean spacious 2 by 2 grid to make mobile labels legible. Preserve mechanical distinctions but render realistic silver blue-gray 3D: top-left split sleeve fixed coupling, top-right rigid flange coupling, bottom-left flexible flange coupling with distinct rubber bushes surrounding bolts, bottom-right universal joint with angular shafts. Plain white background and generous margins. Main title only '軸継手の種類'. Labels in same large navy Japanese sans-serif size, each under its mechanism: '割形軸継手', 'フランジ形固定軸継手', 'フランジ形たわみ軸継手', '自在軸継手'. No explanatory footer and no extra text. Thin light dividing lines optional, no crowded type or gradients behind text. Square composition. Use sufficient gap that four mechanisms never touch."
+      }
+    },
+    {
+      "key": "oil_bath",
+      "args": {
+        "transparent_background": false,
+        "prompt": "Use case scientific-educational. Japanese crane examination app technical diagram. Accurate realistic 3D cutaway of a simple enclosed reduction gearbox showing oil-bath splash lubrication. White background, navy text, blue-gray cast housing cut away at front, two clearly meshed silver gears on parallel shafts, transparent amber oil in bottom sump; ONLY lower edge of larger gear dips into shallow oil; a restrained blue curved arrow and a few amber droplets show rotating gear lifting oil to teeth/bearings. Do not submerge whole gear. No photoreal workshop, no unnecessary bolts, generous white margins, compact 3:2 landscape. Main title '油浴式の給油'. Only two large labels '歯車が油をはね上げる' with leader to gear rim, 'ギヤー油' with leader to sump. One short large footer '密閉されていても、油は点検・交換する'. Labels readable at 350px-wide display, bold Japanese sans serif, no small text. Do not show any instructional or English prompt text."
+      }
+    }
+  ]
+}

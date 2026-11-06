@@ -4,6 +4,7 @@ import hashlib
 import json
 import math
 import re
+import sys
 from pathlib import Path
 from link_repair.lessons import LESSONS
 
@@ -83,9 +84,19 @@ for name,(actual,expected) in checks.items():
     assert math.isclose(actual,expected,rel_tol=1e-10,abs_tol=1e-10), name
 print(f'PASS: 480 questions, {reference_count} references, {len(LESSONS)} lessons, 3 choice repairs, {len(checks)} numeric checks')
 
-# ローカルにバックアップがあれば、今回触る必要のない図・用語集・問題本文等の保持も確認。
+# 過去のリンク修復作業だけを再検証する任意モード。
+# 通常の検証で旧画像・旧用語定義を固定すると、その後の教材改訂を誤って拒否する。
+# 現在の図は参照する実ファイルを検証する。
+for section in sections.values():
+    for block in section['blocks']:
+        if block['type'] == 'svg':
+            assert (RES/'images'/block['file']).is_file(), block['id']
+        elif block['type'] == 'img':
+            assert any((RES/'images'/(block['asset']+ext)).is_file() for ext in ('.png','.jpg','.jpeg')), block['id']
+        if block.get('style') == 'reference':
+            assert block.get('file') in sections, block['id']
 backups = sorted(RES.glob('textbook.json.bak_pre_link_repair_*'))
-if backups:
+if backups and '--link-repair-baseline' in sys.argv:
     before = json.loads(backups[-1].read_text(encoding='utf-8'))
     for old,new in zip(before['chapters'],book['chapters']):
         assert old['glossary'] == new['glossary']

@@ -1,0 +1,7 @@
+{
+  "asset": "1-15_fastener_check_20261106.png",
+  "prompt": {
+    "transparent_background": false,
+    "prompt": "Use case scientific-educational. Create an original visual practice question for Japanese crane exam app. White background, spacious 2x2 grid of FOUR accurate realistic silver steel 3D fasteners, soft light, navy Japanese sans serif. Header '形を見分けよう'. Each quadrant has ONLY a large letter, no component names and no answer. A top left: a round spring nut formed of spring steel wire wound two to three turns at the pitch of a screw, its two ends bound together, small circular coiled nut NOT plate clip and NOT single split washer. B top right: single-turn split helical spring washer, clearly only one cut ring. C bottom left: two normal hexagonal nuts stacked on one threaded bolt, tightened against each other (double nut). D bottom right: castellated slotted nut on a threaded bolt with a cotter pin through slot and transverse hole. A is isolated uninstalled so its 2-3 coil turns can be seen; B isolated too. Label only A B C D at consistent large size. No extra objects, no repeated text, no footer, no tiny text. Accurate basic geometry, avoid toy/cartoon look. Match premium mechanical textbook 3D style. Square composition, generous margins."
+  }
+}
