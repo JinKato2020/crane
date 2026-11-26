@@ -33,7 +33,10 @@ for key,record in ledger['truthChecks'].items():
   expected=bad if record['asksFalse'] else set(range(1,6))-bad
   chosen={ord(c)-ord('A')+1 for c in re.findall('[A-E]',q['choices'][q['answer']-1])}
   assert chosen==expected,(key,chosen,expected)
- else:assert bad=={q['answer']},key
+ else:
+  assert record['statements']==q['choices'],key
+  keyed=bad if record['asksFalse'] else set(range(1,6))-bad
+  assert keyed=={q['answer']},key
 for key,d in ledger['circuitFixtures'].items():
  rp=Fraction(d['a']) if d['openB'] else 1/(Fraction(1,d['a'])+Fraction(1,d['b']))
  rt=rp+d['series'];current=Fraction(d['voltage'])/rt
@@ -61,7 +64,7 @@ scalar_cases={
  '4-19':50/2000*1000,'4-21':300*2/3,'4-23':1.41/1.16,'4-25':(2*1-1*.4)*.05*7800,'4-26':2000*9.8*.3/1000,
  '5-22':600/200,'5-23':(400+80)*9.8/4,'5-25':(2*1-.4*.5)*.05*7800,'5-27':2/1.16,'5-29':500*9.8*.3,
  '6-21':math.hypot(12,5),'6-22':500*1.2/300,'6-24':2*9.8/2,'6-29':(.4*.3-.2*.1)*2*7800,
- '7-21':math.hypot(12-5,24),'7-22':600*.5/1.5,'7-23':2*9.8/2,'7-25':1/2000,'7-28':196,
+ '7-21':math.hypot(12-5,24),'7-22':(600*.8-200*.4)/2,'7-23':2*9.8/2,'7-25':1/2000,'7-28':196,
  '8-21':2*(9.8+.4)/2,'8-22':300*9.8*.8/2.4,'8-23':4*9.8/2*2,'8-28':200*9.8*.3,
  '9-32':18*3.5/6,'9-35':math.hypot(24,18),'9-38':750*9.8/2*2/1000,'9-39':180*9.8/(3.14*9**2),'9-40':360*9.8/2,
  '10-32':8.4*1.2/2.1,'10-33':.4*.3*.25*7800,'10-36':300*9.8*.25,'10-40':420*9.8/3,
@@ -85,12 +88,32 @@ for key,expected in pairs.items():
  rows=[[numbers(c)[0] for c in row] for row in qs[key]['choiceRows']]
  valid=[i+1 for i,row in enumerate(rows) if all(math.isclose(a,b,rel_tol=.005) for a,b in zip(row,expected))]
  assert valid==[qs[key]['answer']],(key,rows,expected)
+# These items present pairs as ordinary prose. Verify the keyed alternative
+# using physical quantities, not just the saved position of the answer.
+frequency=60
+poles=6
+synchronous=120*frequency/poles
+prose_pairs={
+ '2-12': (100*5,100*5/1000*30/60),
+ '6-13': (120*50/4,120*60/4),
+ '7-14': (synchronous,(synchronous-1164)/synchronous*100),
+ '5-13': (100,round(100*math.sqrt(2))),
+}
+for key,expected in prose_pairs.items():
+ q=qs[key]
+ assert numbers(q['choices'][q['answer']-1])==list(expected),(key,expected)
 before=RES/'exams.json.bak_pre_quality_20261101'
 if before.exists():
  old={f"{e['round']}-{q['no']}":q for e in json.loads(before.read_text(encoding='utf-8')) for q in e['questions']}
  assert set(old)==set(qs)
  for key in [f'4-{i}' for i in range(31,41)]:
+  if key=='4-35':
+   # The exception for a railway telpher is now phrased as a 6 t case.
+   chosen=qs[key]['choices'][qs[key]['answer']-1]
+   assert '6tの跨線テルハ' in chosen and '特別教育の修了では足りない' in chosen
+   assert sorted(c for c in old[key]['choices'] if c!=old[key]['choices'][old[key]['answer']-1])==sorted(c for c in qs[key]['choices'] if c!=chosen)
+   continue
   assert sorted(old[key]['choices'])==sorted(qs[key]['choices'])
   assert old[key]['choices'][old[key]['answer']-1]==qs[key]['choices'][qs[key]['answer']-1]
 print(f'PASS: 480 stable IDs, official subject order, {len(ledger["truthChecks"])} truth tables, {len(ledger["circuitFixtures"])} circuits, 7 coefficient checks, choice tables and figure references')
-print(f'PASS: {len(scalar_cases)} independently calculated numerical answers and {len(pairs)} paired answers')
+print(f'PASS: {len(scalar_cases)} independently calculated numerical answers and {len(pairs)+len(prose_pairs)} paired answers')

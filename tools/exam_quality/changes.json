@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-01",
+  "date": "2026-11-26",
   "changes": [
     {
       "id": "1-1",
@@ -137,12 +137,15 @@
       "id": "1-12",
       "displayNo": 12,
       "fields": [
+        "choices",
         "displayNo",
-        "explanation"
+        "explanation",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 現場条件から義務・例外・基準点を読み分ける法令問題",
       "beforeSHA256": "4226cb088a9a53c3ab53a8e86f7cfd977fb0288815c13552b11d06fe378b6582",
-      "afterSHA256": "176e32fb322c4cb52d906e401c03e6ad2e278d296b42fd44f8132535a1d460ab",
+      "afterSHA256": "1d6e70689e8c879ca336bde688a8fababaeb703d96cd6c390879c57b6e5921ca",
       "followupFullBook20261103": "登録性能検査機関の根拠条文も示す"
     },
     {
@@ -253,11 +256,16 @@
       "id": "1-23",
       "displayNo": 23,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "593499456b33c471a2fc1cc625c5a3587dcab21f025b2063780728fe5be8d129",
-      "afterSHA256": "912ff53dacb72fdee934b7dde09bad6f6c58fcbfc91cf911d6b911c5c9cc4faa"
+      "afterSHA256": "f95bcda49d935ba5e4ec0d8996439c79761a50afe6512bbe6c46e5861193a02f"
     },
     {
       "id": "1-24",
@@ -306,11 +314,14 @@
       "id": "1-28",
       "displayNo": 28,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "364079ba6a07d74b18dc7f7a97314478adaca89b2d89107a6e69d33ca37a90ba",
-      "afterSHA256": "48f10b12d7aec10bcd1d7b32e1422fb7b964074922a919bd584ddb9ee1f37ecd"
+      "afterSHA256": "320373316596e0a7c8af1a2863ee852b6bcbd8c095d8f5129f155c9956e191db"
     },
     {
       "id": "1-29",
@@ -438,9 +449,9 @@
         "refs",
         "text"
       ],
-      "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
+      "reason": "計算偏重を、条件・対象・比例関係の判定へ調整 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "20e07126f260880240873decfe200794986e30bf7d72d60b1f5217773b5e76cf",
-      "afterSHA256": "ebfb53b3191c7360a3d0275601f0a7fa712fc421237915222a00f079ab675b7d"
+      "afterSHA256": "63e0af96c68b821d6d4cfa006b242b4820ba8b6f4da0fcffc05b4da06ab67f93"
     },
     {
       "id": "1-39",
@@ -631,9 +642,9 @@
         "refs",
         "text"
       ],
-      "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
+      "reason": "計算偏重を、条件・対象・比例関係の判定へ調整 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "8d1f4be9a7e17180fbee7dd78dd4258482f358e2e95f4ba83590006c08048bf2",
-      "afterSHA256": "ca194b14ab18f99b4948652ab4b7eba0ca8ebf597b1e8f540c6147957206f30a"
+      "afterSHA256": "a4918463d0150d0d51ce6af970227599489567dea7b9653c62bfdec4a7f221ff"
     },
     {
       "id": "2-13",
@@ -649,11 +660,16 @@
       "id": "2-14",
       "displayNo": 24,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "8f666662004be005afe016f4debd40049526333f876f174da7c181383b31dd09",
-      "afterSHA256": "1a135e7274a99ce12643c1dd58137f29e25710d74c87baace9c31000d921df9d"
+      "afterSHA256": "6ed1d15ca2f39836c4b9fa74bf5991f47c1e05aff83e504752f0900e33c8ed79"
     },
     {
       "id": "2-15",
@@ -721,11 +737,15 @@
       "id": "2-20",
       "displayNo": 30,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "fbe3fac5aa07eeaae37da4978a798c4fe3772fcd7e63f26cf582aa8b8fc38a0f",
-      "afterSHA256": "3ed91fa11044ff0bab72bf6cfab7d1655559d4e472c8b732956bea567a052d5f"
+      "afterSHA256": "ca7c0caa3e51054dc7ee0b3b7c5f0e2e9c62a76fe9b187d7c4f54fe0d7b0df69"
     },
     {
       "id": "2-21",
@@ -963,11 +983,16 @@
       "id": "2-40",
       "displayNo": 20,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 現場条件から義務・例外・基準点を読み分ける法令問題",
       "beforeSHA256": "46543c6d18b8ed3a5f6436c2d2116974a759e5f02d33914c7f20db2417b63d9b",
-      "afterSHA256": "6c257732264da77bfd61c6500516d4655a447ee8754b840aa9fa9eb136c42ad1"
+      "afterSHA256": "c5556b293973df2e0b25430bf59335aafa11710cbf4c9322925b28952054672e"
     },
     {
       "id": "3-1",
@@ -983,11 +1008,20 @@
       "id": "3-2",
       "displayNo": 2,
       "fields": [
-        "displayNo"
+        "choiceHeaders",
+        "choiceRows",
+        "choices",
+        "displayNo",
+        "explanation",
+        "figImg",
+        "figImgExp",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 締結部品3種類を2方向の線図から判別 11/26 解説図に名称と識別点を表示",
       "beforeSHA256": "99e6b16e029068dc3f9ebda339c56d740863b57335ea87a247036e4fe0e6a9ed",
-      "afterSHA256": "c580ec96077775b0d609a40ab5c4555499f9245fdc638e53334ae6005642c50e"
+      "afterSHA256": "db02d7375cbe6281ca1e4877827acd6e930f09aecad9895d0c0641501e19f1c7"
     },
     {
       "id": "3-3",
@@ -1132,9 +1166,9 @@
         "refs",
         "text"
       ],
-      "reason": "一項目の名称当てを、日常点検と定期検査の対象の区別へ変更",
+      "reason": "一項目の名称当てを、日常点検と定期検査の対象の区別へ変更 2026-11-26 点検周期が重なる場面で義務を判別",
       "beforeSHA256": "182d18ec6d10c8987749eae5aa80e6d5680b91bbb54f1d9aa8f91f1756132d73",
-      "afterSHA256": "5faf57c69d1313a2d290b9ed12facbe97594d0fcc2c1534bb896cd17e8a54d9e"
+      "afterSHA256": "b148a3671a5161b3f4ff8a1f6cd29eb17399c7dce5f501584aad8735062289df"
     },
     {
       "id": "3-15",
@@ -1228,9 +1262,9 @@
         "refs",
         "text"
       ],
-      "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
+      "reason": "計算偏重を、条件・対象・比例関係の判定へ調整 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "176b90e8cdb40ae54fc10a2744bbf72a3b4c65e88a4380817e8ec6997f9696bc",
-      "afterSHA256": "eb3798cd7cc2daba0cc9fb189f7d16241ffdd180dd271726a3352ade45d9e4cd"
+      "afterSHA256": "d6b2963aa6b0d4dc250acb06f609d5f8759fe20036fb4ec54545e79b118dec8c"
     },
     {
       "id": "3-23",
@@ -1273,11 +1307,16 @@
       "id": "3-26",
       "displayNo": 26,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "e8f851896f3ae766d40ec4fb1feca7b83196ed6574b3c849182b1768ac0fb10a",
-      "afterSHA256": "e02239a15314e9a92ab9d96e92d978853a02b88def196f87d4cd58f02395e565"
+      "afterSHA256": "3105fcf2258a8ef6d8974ad584e5e7a885c19407893e1aadc6d84e9869b9915a"
     },
     {
       "id": "3-27",
@@ -1306,11 +1345,14 @@
       "id": "3-29",
       "displayNo": 29,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "a4f108e013c71ca25730ec70918b7c5cdf8554e1f00ef0c509f20a3a7824eb27",
-      "afterSHA256": "c8ab609042e8a8088801afa612164bd52af355231e66d6b3b5942d5112c8e24b"
+      "afterSHA256": "f6c0165b53b3b4d103470650059c83132e4e3624e085e0cfd9257885b47c0ef4"
     },
     {
       "id": "3-30",
@@ -1348,12 +1390,13 @@
       "displayNo": 32,
       "fields": [
         "displayNo",
+        "explanation",
         "figImg",
         "figImgExp"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 質量と力の区別、両辺の重力加速度が消える理由",
       "beforeSHA256": "8b67a7bea21f8e210742e94a904aef691e96d80a1d0fa1a414382782b1eedd6c",
-      "afterSHA256": "d971e80552aa02aecb6164d288433561f895a061c872130449cecd2001a586a1",
+      "afterSHA256": "506349a8a91f08285c6966806d7d4bce3bc3cb10efa6bf37f6442613f6241dd1",
       "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
@@ -1408,11 +1451,13 @@
       "id": "3-36",
       "displayNo": 36,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "7b9ebccfd8bb8ef436139613f2427894689380fd8d6a7e4f53644dee65fd117e",
-      "afterSHA256": "aa3629aa235db63ead6fbe656a244a27ec5c0f277cfe363a9dab54a759a40a31"
+      "afterSHA256": "5bc98ced77291b542305842fbe4b393fef12be91ccac0eb76b5275b2ab1fdefe"
     },
     {
       "id": "3-37",
@@ -1445,11 +1490,13 @@
       "id": "3-39",
       "displayNo": 39,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "3aac098247c97ad3595d030c5e31331fa21091ec4e80333f9b52438c976db301",
-      "afterSHA256": "25b81b3c29e38dbccc1fa14fe3a9e1fde0b9c341f4888ea00856a815b967f357"
+      "afterSHA256": "aab87ecaf176e2bd70e1a3b84a009a4aafb8e86611d31a5e30f1294ebf394d4e"
     },
     {
       "id": "3-40",
@@ -1624,11 +1671,16 @@
       "id": "4-13",
       "displayNo": 23,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "56543a41be71e0e191577e35f03d17e89f5060ebf5a807506c3e26df7a1fba14",
-      "afterSHA256": "76bb07b7db6b792617005f4ea489e18f645ea988dc1d0bfa311b532ce0ea7ffc"
+      "afterSHA256": "5741aec35075af2cb2df432c67f355d652f4c47aa3068c4a94d1c566fa853f41"
     },
     {
       "id": "4-14",
@@ -1670,21 +1722,25 @@
       "id": "4-17",
       "displayNo": 27,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "c7f819e56dbcf7ccec21840224e8d220e6101c3eaab7abaa51bf88fb5ebb51da",
-      "afterSHA256": "d7fd8edb22d9684127b7b11e0042e3da9be821d61243715d8aee6c049b650a50"
+      "afterSHA256": "88d8d98b6e1c7bc419cbcb9d2f6cb833d8b4fe649f3634beaa59c5344e6fead5"
     },
     {
       "id": "4-18",
       "displayNo": 28,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 絶縁抵抗と接地抵抗を電流経路から区別",
       "beforeSHA256": "59331ea23d1d544c136e5f43757786f441434114c3652b013925e7a2941d196c",
-      "afterSHA256": "faa5bd2e6ef1ac8ea0f7612a57b00ef0e576a5670aa7f16fbd5cc1c0c9a977fe"
+      "afterSHA256": "089950f03cac538e986767a72b33c5bb0a4f249ca4ab4f7d728089c9431842aa"
     },
     {
       "id": "4-19",
@@ -1713,12 +1769,13 @@
       "displayNo": 31,
       "fields": [
         "displayNo",
+        "explanation",
         "figImg",
         "figImgExp"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 質量と力の区別、両辺の重力加速度が消える理由",
       "beforeSHA256": "4d372d696a8b605051d40eb9f997783e0a6982178fd0405c93d43096e8235109",
-      "afterSHA256": "57cae1b684e24b947c0b048c9bf5478a4fd22642ddeb708f0ecf5f65a51b398a",
+      "afterSHA256": "05824d30afa0a2f5f4bd8130d5a19cc6c7410de1915ee012d844758fb54fe3f7",
       "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
@@ -1908,9 +1965,9 @@
         "displayNo",
         "explanation"
       ],
-      "reason": "正答肢の意味を保ったまま、正解位置の長い規則的な循環を解消",
+      "reason": "正答肢の意味を保ったまま、正解位置の長い規則的な循環を解消 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "8afa9f55012e69c255077a6d0df28595b21669bb52286cbba69b7780d76bf514",
-      "afterSHA256": "89bb2a57f1311582318aa688bc26130a12ae1b06e619d6923dde28b619b38fad"
+      "afterSHA256": "7d43fe52555aa11dfab9d5fe9687c92fa392c8e4307b151a59bb5155bdd1098d"
     },
     {
       "id": "4-36",
@@ -2037,11 +2094,12 @@
       "id": "5-5",
       "displayNo": 5,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 11/26 二段階のより方向を解説",
       "beforeSHA256": "252dfacdcad88b0b34f503f8a42f044bb78bee15eaff3d43c54a2303b5f35866",
-      "afterSHA256": "511e47f2e62ebd0ce35a94236acfe51abb7c0288bbd74e2dcc73542312423f15"
+      "afterSHA256": "2559f20afec1eef1745dd03e023695a6c6ff9d910373d5b9cac41e8c3d656e44"
     },
     {
       "id": "5-6",
@@ -2151,11 +2209,16 @@
       "id": "5-13",
       "displayNo": 23,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "4cc30d1fdd2cc18c8b9753003a558b5624470e4721a4a26d83798c84f1f45ef3",
-      "afterSHA256": "c26c0cbd176d8c0c04eaa65149c10c9ae724b2104635d8ad221c5625684fb798"
+      "afterSHA256": "55b59224df34d081cd90d9b8b82cc85c824ec820f2e6484b3bc98bbcf92fa586"
     },
     {
       "id": "5-14",
@@ -2174,11 +2237,16 @@
       "id": "5-15",
       "displayNo": 25,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "335d56157bd09668d0723a6c64fdef39dabc7b7493b0b27428c21946085778e7",
-      "afterSHA256": "77a63244ba8afa3d02f1a0cd9de346719930223b3496062d86a4bb52a7e49ddb"
+      "afterSHA256": "128a82596a446b4bfa057333d3a824aee3ca009b6b96214c08ff88fce3a4ee35"
     },
     {
       "id": "5-16",
@@ -2214,21 +2282,25 @@
       "id": "5-19",
       "displayNo": 29,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 11/26 漏電遮断と保護接地の役割",
       "beforeSHA256": "e290372d6beb1547b1257fc65853000b2066ec14d0a9625f8a3b78cc182039c6",
-      "afterSHA256": "061b90a5d165fdd10fcd477671ac8b25ab0aeec97562501d8fcd1a45906fde78"
+      "afterSHA256": "81634c99234bcb98ac7fd55cd12e3104d609585ff5d207f081fb99fd2c639668"
     },
     {
       "id": "5-20",
       "displayNo": 30,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "3a4f3202fa17eb1a7be0babc42553d2507603032085428b1e360f5ba46604d3c",
-      "afterSHA256": "ae7581ff64cec9aba957952627a4bfcd6947f153ebd9a5582e2b20f7a9088853"
+      "afterSHA256": "8646282a8e86f7cede9cabdf3208671bfee63233978caed045e7b0ef35e1a55f"
     },
     {
       "id": "5-21",
@@ -2272,11 +2344,13 @@
       "id": "5-24",
       "displayNo": 34,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "354919cf9c683e596f4734bc2e03f6f0084d26f7be51050cc0592517583ef365",
-      "afterSHA256": "43189ad87f4e9c367ee279fa2ba0cdd99e08fbf8fcfea1b6e8e00266fd96a7a3"
+      "afterSHA256": "273a059e241b1b6928a1a5fef1d0b8edcd436e8e53c5be60120f1b9dbc3310d2"
     },
     {
       "id": "5-25",
@@ -2381,11 +2455,15 @@
       "id": "5-32",
       "displayNo": 12,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 現場条件から義務・例外・基準点を読み分ける法令問題",
       "beforeSHA256": "20d81c7afe58c9730b17b1cb31dc8c05e6249c31ee722745a0fb42f26140a057",
-      "afterSHA256": "6cb4fe99127c743d4b86198b884d596c0ddbb7da6355eb125705ce81e1db3d69"
+      "afterSHA256": "bff2c6c8cfcda8351bda7151d21fb87a2b2987f14fb6e028f234e8b6ec95163d"
     },
     {
       "id": "5-33",
@@ -2632,11 +2710,16 @@
       "id": "6-13",
       "displayNo": 23,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "fad8607292f88f43c5b85e193e4e8c625b9022ccfca018f1bd8df27ec4dce668",
-      "afterSHA256": "6c047d07877b07ac0999947dc590d6c5b3f04ae13e2ccfd8223f38f3785d06c9"
+      "afterSHA256": "01487a0e40a8677520e53d36be1db4febecd4068fe869ae8ea0aaf17dbe0352c"
     },
     {
       "id": "6-14",
@@ -2658,11 +2741,16 @@
       "id": "6-15",
       "displayNo": 25,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "1e1c0a8105dd86ea9b3edd7f17dd0e2782b64ae44cbbdef5d424ea40a0e0c232",
-      "afterSHA256": "32a81bda8bf119b27586e6a0699491a0f3589f80b91c40c3fec63c830e9405c1"
+      "afterSHA256": "ceb700ed8d624b1e82b260e409ad684e4361978d3682eadf75708bc51bd8e1d8"
     },
     {
       "id": "6-16",
@@ -2678,11 +2766,16 @@
       "id": "6-17",
       "displayNo": 27,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "ab0c48f6e74ef8711110bfc74aea4e5661bcaeffd556a0892393c048998b820c",
-      "afterSHA256": "a65b28cc9ad8d1018ca2c98509382c610c353e7c9c3e051e4d1f9348c815d86b"
+      "afterSHA256": "02187da82a9a641c570b4872a77c5c3855443a3ca6a7e349764d08f8da1d6b04"
     },
     {
       "id": "6-18",
@@ -2844,11 +2937,13 @@
       "id": "6-30",
       "displayNo": 40,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "359e0789a1c77a7d4fd1bd70c7e2aa7cd22ecc3cce791e2f74642e4e1259a18c",
-      "afterSHA256": "fbb26cd8f8455c306c7a2d271ca925d8930fa6e8fb1ed2d0a19071bf75845944"
+      "afterSHA256": "2b0347c8284640c9ce13d73f5e44218c908c15e12a49382e35773714557842dd"
     },
     {
       "id": "6-31",
@@ -2938,11 +3033,16 @@
       "fields": [
         "choiceHeaders",
         "choiceRows",
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "／2列の選択肢を表として整列",
+      "reason": "／2列の選択肢を表として整列 2026-11-26 現場条件から義務・例外・基準点を読み分ける法令問題",
       "beforeSHA256": "8be33b06efb0fc1fa11cd18aa88f1c913b8af19ee54b62d1eac5f5e68a969657",
-      "afterSHA256": "7babb2383ec2d1f9d3d233de46bc34ffa6440be90a9af70b0d56001a3fd36c32"
+      "afterSHA256": "69fad2974a21af594c01264be12890e5a9e23fef3e778f63ff4b37634d37c31d"
     },
     {
       "id": "6-39",
@@ -3051,11 +3151,12 @@
       "displayNo": 8,
       "fields": [
         "displayNo",
-        "figImg"
+        "figImg",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 数値を表から読み取る出題",
       "beforeSHA256": "247b351e1851c6440a961d6574fd45ad3422875611c53a1c73a6af6548ebd0ee",
-      "afterSHA256": "db13fcc653acf6cafee5fb01d511145a8628109a6fca2b9c56652bdb52abed17",
+      "afterSHA256": "7ab1a606d82e8accd2c0b6b98535ea9fb7f98a84a58b46a60d0f529c8192aa37",
       "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
@@ -3134,11 +3235,16 @@
       "id": "7-14",
       "displayNo": 24,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "2e601ff5a9105272f5dc6c5e9827a057e7490f5170a1ba0e6c380c9c84a7c096",
-      "afterSHA256": "17c90d48665434e638e1d83146f24cccad24448f11190dc79de7e3766561d9da"
+      "afterSHA256": "42b009bfe84279501ffa1b45f3bc9072857a16a7f8f668ef0f6bcff0378c0f8b"
     },
     {
       "id": "7-15",
@@ -3154,12 +3260,16 @@
       "id": "7-16",
       "displayNo": 26,
       "fields": [
+        "choices",
         "displayNo",
-        "explanation"
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "eee69884dbd50d6ffe4ba822a23a150f760063be2973e3a7b4bf99e58f84b5d6",
-      "afterSHA256": "cd4ad5a38c00b9c89ef035f489fda468cd9a5cc82c00ded2cf6b4d012dbd8757",
+      "afterSHA256": "188338c796f99cb4dd1c29632df3c181d021b1c2e1d539cf4d0f18a353a28475",
       "followupFullBook20261103": "設問の解説に不要な編集上の注記・別論点を除去"
     },
     {
@@ -3183,19 +3293,21 @@
         "refs",
         "text"
       ],
-      "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
+      "reason": "計算偏重を、条件・対象・比例関係の判定へ調整 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "8cf99813167441892a2d3e7e1710d6b6de9ecd2cbda45861e7e579373b9ef7b9",
-      "afterSHA256": "4d465c54f50b797d6a5572152d25e5a717f3b1b8e5eff59717d41a0b9b94b1b8"
+      "afterSHA256": "f61179cd69ddc167cc91fa4dc184e5a26f243ac71bb7d6b7b32bbc101990e703"
     },
     {
       "id": "7-19",
       "displayNo": 29,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation",
+        "refs"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 絶縁抵抗と接地抵抗を電流経路から区別",
       "beforeSHA256": "26dc4142f6435017a6392e2fa8bd39b6dab45bd0ba7a461a36620a30faee53a8",
-      "afterSHA256": "4894687a416d06fd35aecc275d3e6c116b87141f780c0d69b024d9c6cacece74"
+      "afterSHA256": "230e599d85ae7da59eb9d706592c7d50f4f9227d1e70b5006b22e8a22ae487f0"
     },
     {
       "id": "7-20",
@@ -3229,12 +3341,17 @@
       "id": "7-22",
       "displayNo": 32,
       "fields": [
+        "choices",
         "displayNo",
-        "figImg"
+        "explanation",
+        "figImg",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 三つの荷の回転方向・腕の長さを読んで計算",
       "beforeSHA256": "515d849412285bd072023b974d4fd1a0df3f10faee9fc30e6de3bdfe4feeaf89",
-      "afterSHA256": "6adc181054d4ce9bb474e28b65c769f1a71d45a092ac7c76476ae4db86d25af0",
+      "afterSHA256": "516ebfb64cdd69446da77a61cb127d7ca0f6dc646e90aee0c2f7150fca79ea2f",
       "followup20261103": "図の文字・線・余白・日本語注記を教材規格に統一"
     },
     {
@@ -3361,11 +3478,14 @@
       "id": "7-32",
       "displayNo": 12,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "9527c7b6dba60f86a9e48743fdd03777dcf00815bd14010e9a23fa5a24380db3",
-      "afterSHA256": "b835c1eb6cf2ab2ed0d5472fff0d624b6d1f3494090dd4d201681b566f3d28b9"
+      "afterSHA256": "49bfafd991d3cca3212ade3d9f814140ebe70dda435e9489b1edf5af4c4ef2ad"
     },
     {
       "id": "7-33",
@@ -3422,11 +3542,12 @@
       "id": "7-37",
       "displayNo": 17,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 11/26 玉掛けの資格を判断する荷重の区別",
       "beforeSHA256": "393ed57eb0a63e6082a8237c0204b7f3ac321867d6cd016007b58240c6c0c3d0",
-      "afterSHA256": "027f84b82091e824c1fec0a1780bf95828b891d1f8371cc9571247625e220280"
+      "afterSHA256": "5d0ae91740e9f53a80f0fc129b382c313cde9fad291dd070aad3905fbc7ee2d4"
     },
     {
       "id": "7-38",
@@ -3569,11 +3690,12 @@
       "id": "8-10",
       "displayNo": 10,
       "fields": [
+        "choices",
         "displayNo"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "b47b5560a72b161ae42d8ce495fe8243a179d1703059a92fffedcbf534f1a063",
-      "afterSHA256": "523d07f292967c36a4f8072415a615109750fd795a736f573ee8b48f2f8e8667"
+      "afterSHA256": "6daf26ee6121659a623ec0b0a8f0493b9002c3a6531f4565ecb8b09a9ef0d94c"
     },
     {
       "id": "8-11",
@@ -3654,12 +3776,16 @@
       "id": "8-16",
       "displayNo": 26,
       "fields": [
+        "choices",
         "displayNo",
-        "explanation"
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "6c4ce09950aa9736d63543f4e2dcc42dd81aabd92679752108aaaad49a35e5f8",
-      "afterSHA256": "2d7093f97dc573d4728fbd9d445b5f3becccc88401814120b6ff2864afd19022",
+      "afterSHA256": "6148eddf4e810de0d2973cab1f460b119b01ef6fc4962fee539d455e2d8df274",
       "followupFullBook20261103": "設問の解説に不要な編集上の注記・別論点を除去"
     },
     {
@@ -3686,11 +3812,15 @@
       "id": "8-19",
       "displayNo": 29,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "109dbe94a34fd2cebb6bde89c949ee046a28ceaeb749031268d907792baa8aca",
-      "afterSHA256": "a66c9efd1c2966239ae902c2052e230e92a2bd4bb0f35333d47fe3a25a326e98"
+      "afterSHA256": "88192f111c7397a1ca75dac4445677156f228c3ba5da12cb7707b148d8fc826f"
     },
     {
       "id": "8-20",
@@ -3773,9 +3903,9 @@
         "refs",
         "text"
       ],
-      "reason": "計算偏重を、条件・対象・比例関係の判定へ調整",
+      "reason": "計算偏重を、条件・対象・比例関係の判定へ調整 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "da338a2c07ee37f851d6a7180e1f3b741b1ba797cf718e257563529af44b04e1",
-      "afterSHA256": "9fa796a90c77329ca82978d57ba9b69764edad2f4758adfe79a929d22f7bf81a",
+      "afterSHA256": "6e2655efa1319abb2b87d271828a8cf4a85dc1589cdb51abf327bb86cd438c58",
       "followup20261103": "ロープ張力の成立条件を問題文に明記"
     },
     {
@@ -3962,11 +4092,13 @@
       "id": "8-40",
       "displayNo": 20,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "explanation",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 風速の予測・実測・再開を時系列で判別",
       "beforeSHA256": "b8ff6cd1b051664adc56fc31ed4e1ee6b45d1d7a2b0b194b3d34072d971347c3",
-      "afterSHA256": "19856ed679be7f8a605268a6c3c55efa9a2959645f795b44f8929dda2ede167f"
+      "afterSHA256": "0969f2ff6f0aef225bf366bf25490a6e72cc924529be44a4b6b2ccc8caecf09a"
     },
     {
       "id": "9-1",
@@ -4022,12 +4154,18 @@
       "fields": [
         "choiceHeaders",
         "choiceRows",
+        "choices",
         "displayNo",
-        "figImgExp"
+        "explanation",
+        "figImg",
+        "figImgExp",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 取付状態と回転を止める部位の対応 11/26 解説図で回転を止める部位を明示",
       "beforeSHA256": "020839768cb5ba9b0f04ef8dab9d1e33af1b54ec793d66fbed444a5c4ae00b11",
-      "afterSHA256": "27dfb3de2b21057df2baf58fd58cbb2cec195fa655b252b53f575b05fc3a8f4d",
+      "afterSHA256": "495d439669812b41fcabadf9a1d0014b76cd21a16085e359aaba0590beb13ff0",
       "followup20261103": "古い技術系線画の解説図を教材と同じ3D図に統一／対応関係を選択肢表として整列"
     },
     {
@@ -4105,11 +4243,16 @@
       "id": "9-13",
       "displayNo": 13,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 現場条件から義務・例外・基準点を読み分ける法令問題",
       "beforeSHA256": "602d900b57480f2028ab8a1922860a7c94cb7828b4ee70d2564f8459c0d98210",
-      "afterSHA256": "f8d35fc7aab08e38f4bbc4918b6382f82c0114190f0ed66d4c826f96d8a39b66"
+      "afterSHA256": "1004b07c98ec7f85b91609241ba811906e42c0cf620d45fdbffa3d379b94765b"
     },
     {
       "id": "9-14",
@@ -4219,11 +4362,16 @@
       "id": "9-23",
       "displayNo": 23,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "9f6b949d959cf7c68ccfa5d558039680d43c8eea64cc08a8aa71e2abbc1b0ca6",
-      "afterSHA256": "f3c761fee247b435fd3f0cb7eae0312abbbbe46aebc71df9de9ea62df1f9b66f"
+      "afterSHA256": "e2a7b6a9835a37abcca50b82a44cd3ca04bdeb48682ec011c3da494bcf3a7825"
     },
     {
       "id": "9-24",
@@ -4286,11 +4434,14 @@
       "id": "9-29",
       "displayNo": 29,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "bcd0424394a1f2f572733ed49cf396665827b11de367414a5df9f793d95287bf",
-      "afterSHA256": "8aee575d41eaebe3084e02ea12bffeacc120e9b71ea5e6ef6ab84f6ed0b3cae9"
+      "afterSHA256": "2cf22aa8c5fab969fa2343cefb8c78d36b2bd6d7474a1c4c07d265aee8dd1421"
     },
     {
       "id": "9-30",
@@ -4306,11 +4457,13 @@
       "id": "9-31",
       "displayNo": 31,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "8951470dac64def11f2a23ec21aa7115678557e0a0a7cfb515356e8c4339c8ed",
-      "afterSHA256": "b563ec39afbc94f2f05edb8af83e5db3c379e92a7ebdab4eba5fecac248eb0d2"
+      "afterSHA256": "da17a81deb52e89be295461227ca2ba539615cc57500cab45d805258e716b27e"
     },
     {
       "id": "9-32",
@@ -4448,11 +4601,13 @@
       "id": "10-2",
       "displayNo": 2,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "1d360fecefb3e39a5e25be04d861c085a7089d0235c20956959bde300912a114",
-      "afterSHA256": "23a1d5fe980f621134ed49ab2511e34358d8068d0c8a1664b6f17407d4d7bcae"
+      "afterSHA256": "6f08e3c94c122b20ec3d595b8379f8bb7f962664137a4e06602d638624b38a0b"
     },
     {
       "id": "10-3",
@@ -4507,11 +4662,13 @@
       "id": "10-7",
       "displayNo": 7,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "e3f332db9db4be88fa6d57018f839a127cd7d81c477cae299bb87888de8c5cb0",
-      "afterSHA256": "ef035264c86be22e19e0c7ad4b0c650ca944aad91000d4ab711715f5095085f4"
+      "afterSHA256": "797c3d7618a5c670f7613589fdfda5d0c877399a675984955b482a41f7c0b6a9"
     },
     {
       "id": "10-8",
@@ -4589,11 +4746,16 @@
       "id": "10-15",
       "displayNo": 15,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 現場条件から義務・例外・基準点を読み分ける法令問題",
       "beforeSHA256": "5b6aeb7389d29718576405f39ff2cfa4c4da25eb8384323ef14324a7ba09ed5e",
-      "afterSHA256": "d4ea11e78ab75aa9e74df2c0e84ae7b017180725f6f2944f486daa7b07f77554"
+      "afterSHA256": "c8187c22d3765da3324f64688f3eaf945af1bc2f12781c6f0598f874fc90fcc5"
     },
     {
       "id": "10-16",
@@ -4682,11 +4844,16 @@
       "id": "10-23",
       "displayNo": 23,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "7df213d320652c8087269f0219f716bd92f02660c672331a5bdb6047b25497e6",
-      "afterSHA256": "cbdc6ec365b7b96b75debbcfd3352789cfaee020c1f0bc475a4ddedb2d31d272"
+      "afterSHA256": "2fb5f872828abc271cd0dc4a0eb602624dcda34a237df60ff7fc0c6f62341b17"
     },
     {
       "id": "10-24",
@@ -4702,11 +4869,15 @@
       "id": "10-25",
       "displayNo": 25,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "aa55afecde22d435b4ae6ce43b1206fff56c8f4e740f637242f36137760c26f6",
-      "afterSHA256": "d229b9c0c2204da836f5e2ca1a29e6c65defd67cb24fdd3fac276d44b75939c6"
+      "afterSHA256": "e6b44104ab206628020e4933c566c0f22bb8e0a578d151cb628866dfdb421cb8"
     },
     {
       "id": "10-26",
@@ -4813,9 +4984,9 @@
         "choices",
         "displayNo"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "b33634ab3e4d0471b2ebc44f053f7ea949ac33a057a4779c7061d985296205fa",
-      "afterSHA256": "76a399f85ed0d2f9531e337fc45740359c903cbb823b544f189876185f4f1672",
+      "afterSHA256": "b1f7630e37d3094bafa0d8de8d30efaae21786b2ffc062e112d966390b32a6c7",
       "followupFullBook20261103": "向心力の比較に不足していた半径一定の条件を補う"
     },
     {
@@ -4982,11 +5153,15 @@
       "id": "11-9",
       "displayNo": 9,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "baf6427797e8fab0ff1eb1cf6be365ae18441585500bd6ca383a7ce0887c437b",
-      "afterSHA256": "5f088b0cb8c119ac609129bf993069b9f149e908e824774a24ec98dd7c43e137"
+      "afterSHA256": "482d809409ba7e52a4f0608afb5884e73c35a9fa28342aad205a652467cd02ca"
     },
     {
       "id": "11-10",
@@ -5087,11 +5262,12 @@
       "id": "11-19",
       "displayNo": 19,
       "fields": [
-        "displayNo"
+        "displayNo",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 設備条件の異なる二台について使用時の措置を判別",
       "beforeSHA256": "56cdeb4b15e3dd742fa599a44d2b6a1c125272007634fed8d1a5f8be33b03177",
-      "afterSHA256": "e589cd7b36fba9d70ef3ce571fe18d2c8e04988179bbd0445857e9c59d1941ee"
+      "afterSHA256": "b2d377ace320e3b97aaddd6a3159224dc1068e915469e493a05ac1cc770afd1a"
     },
     {
       "id": "11-20",
@@ -5170,11 +5346,16 @@
       "id": "11-26",
       "displayNo": 26,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "c71fe55ceac3a16371bc0c1ddbc50841199534c3b1211d9d7df7fd7e122119db",
-      "afterSHA256": "2a597f2dd5fa5c6e930bedde839efad21a72af5fa99fba3cc07d0aca8df55f22"
+      "afterSHA256": "7491a2a21401d018cc7a3f4a3d2b560c4273490e420ecaa5976bd99de38fe939"
     },
     {
       "id": "11-27",
@@ -5190,11 +5371,14 @@
       "id": "11-28",
       "displayNo": 28,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "72914e6aa6e41b3edfbbd9e642190714cb894373b9641a3ac8d201c1b01989d6",
-      "afterSHA256": "f303787cfe1492c71220f2151f8b95922c71efd5934a7f45bde7814f00bbddf6"
+      "afterSHA256": "1d50e939e359cdad2f5ad3d1935ddbbd5ae3db03155fc58f9b0f6b6db58267f9"
     },
     {
       "id": "11-29",
@@ -5423,11 +5607,15 @@
       "id": "12-7",
       "displayNo": 7,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "1203f24bdc5fd428997472758490b90dbbd60d21b37f7048c28040337b1b9e0a",
-      "afterSHA256": "f93c06bc102b89b5b9c228a63bed69de53c29a0bc7dde54088ff828aaeda7442"
+      "afterSHA256": "0cd172b79681c7b11f11e1e702256db63ab5020d2a7c50488ac566c3989d5288"
     },
     {
       "id": "12-8",
@@ -5545,11 +5733,13 @@
       "id": "12-19",
       "displayNo": 19,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 合図者の指名と過負荷特例の条件を区別",
       "beforeSHA256": "4b5c4bbf07b9adc0cf2f11b91705b803045593cbc50a22df71d05dd987092e08",
-      "afterSHA256": "a8ff6d6504ac1f181c742801ae2841d0e747774b4604b0b67ec74cde7d0a6a72"
+      "afterSHA256": "081b61a19ce97cfa4df08e9f5f419af3332877cff62caa1e8a895a7271ae2043"
     },
     {
       "id": "12-20",
@@ -5608,11 +5798,16 @@
       "id": "12-24",
       "displayNo": 24,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "ref",
+        "refs",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "76246a75708973ec3598826dcb7935fd84084f67f0c5008002113398c8c3726c",
-      "afterSHA256": "8cf3c784efcfa15f3e2bafbe0d0c90a81ea49a1a3e29f221ba77686baabb1534"
+      "afterSHA256": "6688dbe93d0b2ed0e98b401b979e6b786fe8cb9b59a87bb957f2d9013acf69ce"
     },
     {
       "id": "12-25",
@@ -5658,11 +5853,14 @@
       "id": "12-29",
       "displayNo": 29,
       "fields": [
-        "displayNo"
+        "choices",
+        "displayNo",
+        "explanation",
+        "text"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 肯定形で機器・条件を識別させ、誤答の根拠を解説",
       "beforeSHA256": "16dc60beae4e039e494973731298cb10e1b9664eee20c1ebbd890f4748d78f5f",
-      "afterSHA256": "425ebf9b52c89c66812ab0b465e8a8738f13edb1744e63c8cbdad5ccb865d0f7"
+      "afterSHA256": "02553713820fc70c4a0340031b8bc349b396e2024390b22632c06c1430d1f38f"
     },
     {
       "id": "12-30",
@@ -5679,11 +5877,12 @@
       "id": "12-31",
       "displayNo": 31,
       "fields": [
+        "choices",
         "displayNo"
       ],
-      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。",
+      "reason": "公式の科目順に合わせた表示番号。保存IDは変更しない。 2026-11-26 断定語による判別を避け、対象・条件・機構の取り違えを出題",
       "beforeSHA256": "9e441d8989d4f9971244ccd87bc630f785093aa5a30f627f58b33eecdfe744cb",
-      "afterSHA256": "c917637ab11ddb7fbbb36fd41429fcb8d8101562b114f00eaa8eb35f6f363296"
+      "afterSHA256": "9631e444031c4a1d183eb42d7e81d25718886f1102b51a588d1a78d98dbabcd0"
     },
     {
       "id": "12-32",
@@ -5814,7 +6013,7 @@
       ],
       "statements": [
         "水平な床上で物体が静止しているとき、床面に平行な外力と静止摩擦力は、大きさが等しく向きが反対になる。",
-        "静止摩擦力は、床面に平行な外力がどのような大きさであっても、常に最大静止摩擦力と同じ大きさである。",
+        "水平な床の上で箱を弱く押しても動かなければ、そのときの摩擦力から、動き出す直前の最大静止摩擦力を求められる。",
         "最大静止摩擦力は、接触面の静止摩擦係数と、面に垂直に作用する抗力との積で求められる。",
         "物体が滑り始めた後に働く摩擦力は動摩擦力であり、通常は最大静止摩擦力より小さい。",
         "同じ材質・表面状態、同じ垂直抗力を仮定する基本的な乾燥摩擦のモデルでは、見かけの接触面積を変えても摩擦力は変わらない。"
@@ -6020,7 +6219,7 @@
         "上昇中の荷を減速させるとき、加速度は下向きとなり、ロープが張っていれば張力は荷の重量より小さくなる。",
         "荷を下向きに加速させるとき、ロープが張っている範囲では、張力は荷の重量より小さくなる。",
         "荷を上向きに加速させているとき、ロープの張力は荷の重量より大きい。",
-        "荷が上昇しているときは、等速運動でも張力は常に荷の重量を上回る。"
+        "荷を一定の速さで巻き上げている間、張力から重力を引いた上向きの力が荷の上昇速度を保つ。"
       ],
       "combination": false,
       "asksFalse": true
@@ -6097,17 +6296,20 @@
     },
     "2-12": {
       "falseIndices": [
-        5
+        1,
+        2,
+        3,
+        4
       ],
       "statements": [
-        "同じ材質で温度も同じ電線では、電線を長くすると電気抵抗は大きくなる。",
-        "同じ材質・長さ・温度の電線では、断面積を大きくすると電気抵抗は小さくなる。",
-        "抵抗だけを接続した直流回路では、電圧を電流で除した値が、その回路の電気抵抗となる。",
-        "電力量は使用した電力と時間との積で表し、kWhは電力量の単位として用いられる。",
-        "電力が同じ電熱器を使用する場合、使用時間を2倍にすると、消費する電力量は変わらない。"
+        "20W、0.01kWh。",
+        "500W、0.50kWh。",
+        "500W、15kWh。",
+        "0.50W、0.25kWh。",
+        "500W、0.25kWh。"
       ],
       "combination": false,
-      "asksFalse": true
+      "asksFalse": false
     },
     "6-12": {
       "falseIndices": [
@@ -6181,17 +6383,20 @@
     },
     "3-22": {
       "falseIndices": [
-        4
+        1,
+        2,
+        3,
+        5
       ],
       "statements": [
-        "直流100Vの抵抗負荷に12Aが流れるとき、その電力は1.2kWである。",
-        "電力1.2kWの負荷を一定の状態で5時間使用すると、電力量は6kWhとなる。",
-        "電力が一定なら、30分間に消費する電力量は、1時間に消費する電力量の半分となる。",
-        "同じ抵抗負荷に加える電圧を2倍にすると、抵抗が変わらない限り、電力は2倍となる。",
-        "kWは電力、kWhは電力量の単位であり、両者は使用時間を考慮して区別する。"
+        "電流を2倍にすると熱量は2倍になり、発熱線の両端の電圧は変わらない。",
+        "電圧を半分にすると流れる電流も半分になり、熱量はもとの半分になる。",
+        "発熱線で使った電力量の単位はWで、使用時間は換算に含めない。",
+        "電流を2倍にすると発生する熱量は4倍になる。",
+        "熱量をJで出すときは、電力の値に使用時間を時間単位で掛ける。"
       ],
       "combination": false,
-      "asksFalse": true
+      "asksFalse": false
     },
     "3-30": {
       "falseIndices": [
@@ -6252,17 +6457,20 @@
     },
     "7-18": {
       "falseIndices": [
-        3
+        1,
+        2,
+        4,
+        5
       ],
       "statements": [
-        "絶縁抵抗計は、電動機の巻線と金属製外箱との間などの絶縁状態を測定するために用いる。",
-        "絶縁抵抗を測定する前には、対象機器の電源を遮断し、他の者が誤って電源を投入しないようにする。",
-        "測定電圧は大きいほど測定が確実になるので、対象機器の定格や電子回路の有無に関係なく最高の電圧を選ぶ。",
-        "測定後に電荷が残る場合があるので、機器の仕様に従い、放電を確認してから測定箇所を扱う。",
-        "測定値は周囲の温度や湿度などでも変わるので、条件や過去の記録も踏まえて絶縁状態を判断する。"
+        "電源の遮断を確認できれば、接続した電子回路の耐電圧は測定条件から除ける。",
+        "直流の試験電圧は交流機器を傷めないので、計器の最高レンジから測る。",
+        "機器の仕様を確かめ、試験電圧の影響を受ける電子回路を切り離すなど、対象に合った条件で測る。",
+        "低圧回路では、絶縁抵抗計の代わりにクランプ電流計を停止中の電線に掛けて抵抗を読む。",
+        "金属製の外箱は電気が流れない部分なので、巻線と外箱の間は測定対象から除く。"
       ],
       "combination": false,
-      "asksFalse": true
+      "asksFalse": false
     },
     "7-20": {
       "falseIndices": [
@@ -6635,6 +6843,575 @@
         "極数と周波数が同じであれば、負荷が変わって回転子の速度が下がったとき、回転磁界の同期速度も同じ割合だけ下がる。"
       ],
       "combination": true,
+      "asksFalse": false
+    },
+    "1-12": {
+      "falseIndices": [
+        5
+      ],
+      "statements": [
+        "今回の更新では、原則として登録性能検査機関の性能検査を受ける。",
+        "性能検査では、各部分の構造と機能を点検し、荷重試験も行う。",
+        "更新後の有効期間は原則2年で、性能検査の結果によって異なる場合がある。",
+        "将来ガーダに変更を加えたときは、所轄労働基準監督署長が検査の必要がないと認めた場合を除き、変更検査を受ける。",
+        "今回の性能検査でつる試験荷重は、定格荷重9.5tの1.25倍に当たる11.875tである。"
+      ],
+      "combination": false,
+      "asksFalse": true
+    },
+    "1-23": {
+      "falseIndices": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "statements": [
+        "かご形では固定子の導体棒を両端の環で短絡し、回転子の三相巻線へ給電する。",
+        "かご形も巻線形も固定子の巻線が回転磁界をつくる。両者で作りが異なるのは回転子である。",
+        "巻線形では固定子側のスリップリングを通じ、一次巻線に始動抵抗を入れる。",
+        "かご形の回転子には、整流子とブラシで外部から直流を供給する。",
+        "巻線形の回転子電流は、固定子と回転子の電気的な接触によって生じる。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "1-28": {
+      "falseIndices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "statements": [
+        "電圧計を抵抗器の枝に直列に入れ、電流計を抵抗器の両端につなぐ。",
+        "電圧計と電流計をともに抵抗器の両端につなぎ、それぞれの指示値を読む。",
+        "電圧計と電流計を同じ枝に直列に入れ、電源との間に抵抗器をつなぐ。",
+        "電流計を分岐前の幹線に置くと、並列の別の枝に流れる電流を除いて測れる。",
+        "電圧計を抵抗器の両端に、電流計を抵抗器の枝に直列につなぐ。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "2-40": {
+      "falseIndices": [
+        4
+      ],
+      "statements": [
+        "乙と甲が衝突する危険を防ぐため、監視人を置く、ランウェイにストッパーを設けるなど、必要な措置を講じる。",
+        "甲のガーダに点検作業者がいる間は、甲の運転を禁止する。",
+        "甲を運転できないことは、運転しようとする人に分かるよう、甲の操作部分に表示する。",
+        "乙との衝突防止のために監視人を配置すれば、甲の運転を禁止していることを甲の操作部分に表示する措置も満たす。",
+        "乙との衝突を防ぐ措置を選ぶ際には、乙の走行が継続する条件で甲の点検者に及ぶ危険を考える。"
+      ],
+      "combination": false,
+      "asksFalse": true
+    },
+    "2-14": {
+      "falseIndices": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "statements": [
+        "回転子と回転磁界が同じ速さのとき、回転子に生じる誘導電流が最も大きい。",
+        "回転子が回転磁界を追い越すことで、電源から受ける電力が軸の出力に変わる。",
+        "軸に加わる負荷が増すと、電源周波数と極数が同じでも同期速度が低くなる。",
+        "回転子は回転磁界より少し遅く回り、両者の速度差が回転子に電流を誘導する。",
+        "すべりとは、電動機に入る電力のうち熱として失われる割合を表す。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "2-20": {
+      "falseIndices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "statements": [
+        "ハンドルの接点に電動機の主電流を通し、接触器には位置の表示だけを行わせる。",
+        "接触器のコイルと電動機を直列につなぎ、コイルの電圧降下で速度を調整する。",
+        "主幹制御器は過電流を検出して溶断し、接触器がハンドルの操作位置を保持する。",
+        "間接制御ではハンドル側の接点を大型にし、主回路側の接点に操作回路電流を流す。",
+        "主幹制御器は接触器のコイルに指令を出し、接触器の主接点が電動機の主回路を開閉する。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "3-2": {
+      "falseIndices": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "statements": [
+        "A：ばね座金　B：勾配座金　C：舌付き座金",
+        "A：ばね座金　B：舌付き座金　C：勾配座金",
+        "A：平座金　B：舌付き座金　C：勾配座金",
+        "A：ばねナット　B：舌付き座金　C：平座金",
+        "A：舌付き座金　B：平座金　C：ばね座金"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "3-26": {
+      "falseIndices": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "statements": [
+        "接触器の主接点を電磁石で引き寄せる力を測り、巻上げの高さを判定する。",
+        "電流による発熱を利用して過負荷を検出し、接触器を介して電動機を停止させる。",
+        "電源から出る電流と戻る電流との差を見て、大地へ漏れた電流を検出する。",
+        "熱動形の素子が溶け切るたびに交換することで回路を保護する。",
+        "電動機のケースに試験電圧を加え、巻線の絶縁抵抗が下がると運転を止める。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "3-29": {
+      "falseIndices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "statements": [
+        "荷に回される電動機が発電機として働き、電気エネルギーを電源側へ戻すことができる。",
+        "電源の二相を入れ替え、反対向きのトルクを生じさせることを回生制動という。",
+        "荷を下ろす際に生じた電力を制動抵抗の熱として消費する方式を、電源回生という。",
+        "ブレーキ片がディスクを押す摩擦によって、電気エネルギーが電源に戻る。",
+        "荷を下ろすときは電動機から荷へ機械エネルギーを送り続けることが回生の条件になる。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "4-13": {
+      "falseIndices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "statements": [
+        "電源周波数が同じなら、6極機の同期速度は4極機の1.5倍である。",
+        "極数が同じなら、50Hzでの同期速度は60Hzのときより高い。",
+        "周波数を一定にして軸の負荷を大きくすると、同期速度も低くなる。",
+        "4極機では、電源が1周期変化する間に回転磁界が2回転する。",
+        "電源周波数が同じなら、4極機の同期速度は6極機の1.5倍である。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "4-17": {
+      "falseIndices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "statements": [
+        "鉄心が十分に吸い付かず、接点のばたつきや異常音が生じることがある。",
+        "吸引力が弱いと鉄心の空隙が小さくなり、主接点の接触圧は通常より高くなる。",
+        "コイルの端子電圧が低下しても、主回路が定格電圧ならば鉄心は定格時と同じ力で吸引される。",
+        "制御回路の電圧低下で生じる症状は電動機の回転速度低下だけで、接触器の主接点は安定して閉じる。",
+        "点検時に見るのは主回路側の電圧であり、接触器のコイル端子で電圧を確認する必要はない。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "5-32": {
+      "falseIndices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "statements": [
+        "年次自主検査で定格荷重の荷重試験を行い記録を保存すると、検査証はその検査日から2年間延長される。",
+        "検査証の有効期間を超えて使用を休止するときは、有効期間が満了した後で休止の報告をすればよい。",
+        "検査証の有効期間を超えて休止した後に使用を再開するときは、月次自主検査を行い記録すれば使用再開検査に代えられる。",
+        "クレーンを廃止しても有効な検査証が残る場合は、満了日まで保管した後に返還する。",
+        "使用を続けるために登録性能検査機関の性能検査を受けて合格した場合は、検査証の有効期間が更新される。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "5-13": {
+      "falseIndices": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "statements": [
+        "直流100Vのときと同じ熱量が発生し、交流電圧の最大値は約71Vである。",
+        "直流100Vを加えたときと同じ熱量が発生し、交流電圧の最大値は約141Vである。",
+        "実効値は瞬間電圧を1周期平均した値なので、1周期で見れば熱量はゼロである。",
+        "正負の半周期の両方で発熱するため、直流100Vのときの2倍の熱量になる。",
+        "交流の最大値が100Vであり、直流約71Vを加えたときと同じ熱量になる。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "5-15": {
+      "falseIndices": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "statements": [
+        "固定子巻線の端を整流子につなぎ、単相の直流に変えて回転子へ送る。",
+        "かごの導体棒の両端を短絡環で閉じているため、その外側に二次抵抗を直列に接続できる。",
+        "回転子巻線の端をスリップリングとブラシを介して外へ引き出せる。",
+        "固定子の磁極数を抵抗値で変え、始動時だけ磁界の回転速度を下げられる。",
+        "外部抵抗をブラシに接続すると電源の周波数が変わり、同期速度が変わる。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "5-20": {
+      "falseIndices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "statements": [
+        "制動用の回路と抵抗を備える構成では、抵抗に電流を流して熱として消費する。",
+        "制動抵抗は回生電力を交流に変換し、商用電源へ送り返す役目を持つ。",
+        "減速機の歯数比を変え、発生した電気エネルギーを巻上げ側の電源へ戻す。",
+        "同期速度を下げた分だけ発生電力は消失するので、エネルギーの行き先を考えずに済む。",
+        "機械ブレーキのコイルが接地線に電流を流し、回生電力を大地へ逃がす。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "6-38": {
+      "falseIndices": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "statements": [
+        "甲も乙も適合する。両方とも0.05m以上あればよい。",
+        "甲も乙も適合しない。両方とも0.25m以上が必要である。",
+        "甲は適合せず、乙は適合する。甲には0.25m以上、乙には0.05m以上が必要である。",
+        "甲は適合し、乙は適合しない。甲は0.05m以上だが、乙は0.25mに達していない。",
+        "甲も乙も適合する。甲は0.05m以上、乙は0.25m以下という基準を満たす。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "6-13": {
+      "falseIndices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "statements": [
+        "1,500 min⁻¹から1,250 min⁻¹へ下がる。",
+        "3,000 min⁻¹から3,600 min⁻¹へ上がる。",
+        "750 min⁻¹から900 min⁻¹へ上がる。",
+        "1,500 min⁻¹のままで、回転子のすべりだけが変化する。",
+        "1,500 min⁻¹から1,800 min⁻¹へ上がる。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "6-15": {
+      "falseIndices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "statements": [
+        "主幹制御器、電磁接触器、過負荷継電器。",
+        "電磁接触器、主幹制御器、過負荷継電器。",
+        "過負荷継電器、電磁接触器、主幹制御器。",
+        "主幹制御器、過負荷継電器、電磁接触器。",
+        "電磁接触器、過負荷継電器、主幹制御器。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "6-17": {
+      "falseIndices": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "statements": [
+        "黒鉛は非金属なので磁器と同じ絶縁材料に分類され、雲母が導体に分類される。",
+        "黒鉛と塩水は電気を通し、乾いた雲母や磁器は絶縁材料として使える。",
+        "塩水に電圧をかけてもイオンは電流を運ばず、乾いた空気より電気を通しにくい。",
+        "乾いたガラスと雲母は導体、鉛とアルミニウムは半導体に分類される。",
+        "黒鉛と磁器はともに導体で、電流を通しながら回転部に接触するブラシに用いられる。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "7-14": {
+      "falseIndices": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "statements": [
+        "1,200 min⁻¹、97%。",
+        "1,164 min⁻¹、3%。",
+        "1,800 min⁻¹、約35%。",
+        "1,200 min⁻¹、3%。",
+        "1,800 min⁻¹、約65%。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "7-16": {
+      "falseIndices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "statements": [
+        "コイルで鉄心を吸引して主接点を閉じ、短絡した部分の抵抗を増やす。",
+        "大地へ流れた電流の大きさだけを検出し、操作回路の電圧を下げる。",
+        "可溶体がいったん離れても、電流が下がると冷えて再接続する。",
+        "負荷に並列に入れ、負荷へ向かう過電流を別の枝へ流して遮断する。",
+        "内部の可溶体が発熱して切れ、電流の通り道を断つ。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "8-16": {
+      "falseIndices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "statements": [
+        "ゼロノッチインターロックは操作器の停止位置を確認して再始動を防ぎ、熱動形過負荷継電器は電動機の過負荷を検出する。",
+        "ゼロノッチインターロックは、運転中に過負荷継電器が作動したときだけ働き、操作器の位置は検出しない。",
+        "過負荷継電器が復電時のハンドルの位置を検出し、ゼロノッチインターロックが運転中の負荷電流を監視する。",
+        "停電中に主接点が開けば、復電時にはハンドルの位置にかかわらず主接点を閉じることが、ゼロノッチインターロックの役割である。",
+        "熱動形過負荷継電器は、主幹制御器の操作電流を測ることで、電動機に流れる主電流の過負荷を検出する。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "8-19": {
+      "falseIndices": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "statements": [
+        "保護接地が漏電を検出して主回路を開き、漏電遮断器は外箱と大地を導線で結ぶ。",
+        "接地線の抵抗を大きくすると、漏電時の外箱の対地電圧を低く保ちやすい。",
+        "保護接地は故障時の外箱の対地電圧を抑える働きがあり、漏電遮断器は漏れを検出して回路を遮断する。",
+        "外箱の接地は正常時の負荷電流を大地へ戻すために設ける。",
+        "漏電遮断器の主な目的は、線間の負荷電流の大きさから外箱の絶縁抵抗を表示することである。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "9-5": {
+      "falseIndices": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "statements": [
+        "Aは上側のナットから突き出た舌を折って下側のナットに掛ける。Bは二つのナットを互いに締め合わせる。",
+        "Aは二つのナットで板を上下から挟む。Bはばね座金の切れ目にピンを通して座面を押す。",
+        "Aは二つのナットを互いに締め合わせる。Bはナットの溝とボルトの穴に割りピンを通して回転を止める。",
+        "Aは二つのナットを同じねじに掛け、間にすき間を残して回転を止める。Bは溝にばねナットをはめて固定する。",
+        "Aは板との間に入れた勾配座金で上側のナットを固定する。Bは割りピンをナットと板の間に挟む。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "9-13": {
+      "falseIndices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "statements": [
+        "素線は9本切断し、直径は公称径の20.0mmから18.6mmになっている。",
+        "素線は10本切断し、直径は公称径の20.0mmから19.0mmになっている。",
+        "素線は5本切断し、直径は公称径の20.0mmから18.5mmになっている。",
+        "素線は切断していないが、ロープにキンクが生じている。",
+        "直径の減少は公称径の3%であるが、ロープに著しい腐食がある。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "9-23": {
+      "falseIndices": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "statements": [
+        "三相巻線をスリップリングへ引き出した回転子は、かご形誘導電動機に用いる。",
+        "導体棒と短絡環を備える回転子は、外部に二次抵抗をつなぐ巻線形に用いる。",
+        "円周を絶縁された多数の片に分けた整流子は、巻線形誘導電動機の二次抵抗の接続に用いる。",
+        "棒状の導体を両端の環でつないだ回転子は、かご形誘導電動機に用いる。",
+        "かご形と巻線形の名称は、電動機の冷却ファンを囲む保護枠の形で決まる。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "9-29": {
+      "falseIndices": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "statements": [
+        "往路と復路をまとめてクランプし、二つの電流を加えた表示を2で割る。",
+        "電流計の両端子を負荷と並列につなぎ、クランプを開いた状態で読む。",
+        "往路か復路のどちらか1本をクランプに通して測る。",
+        "往路をクランプに入れず、絶縁被覆の外側へクランプの先を接触させて測る。",
+        "負荷へ電流が流れていない状態で保護接地線を挟み、運転時の負荷電流を読む。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "10-15": {
+      "falseIndices": [
+        4
+      ],
+      "statements": [
+        "ガーダは構造部分に当たるので、変更に際して所定の変更届を提出する。",
+        "この条件でガーダに変更を加えた後は、所轄労働基準監督署長の変更検査を受ける。",
+        "今回とは別に検査証の有効期間を更新しようとする場合は、原則として登録性能検査機関による性能検査を受ける。",
+        "定格荷重を増やさずガーダを変更する場合は、年次自主検査における荷重試験を行えば、今回の変更検査をそれに代えることができる。",
+        "検査証の有効期間を超えて使用を休止したクレーンを再び使う場合には、使用再開検査を受ける。"
+      ],
+      "combination": false,
+      "asksFalse": true
+    },
+    "10-23": {
+      "falseIndices": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "statements": [
+        "電機子は外枠に固定して磁界をつくる部分で、界磁が回転して軸を駆動する。",
+        "界磁は磁界をつくり、電機子巻線に流れる電流と磁界の作用で回転力が生じる。",
+        "ブラシは回転する整流子とともに回り、固定した電源線を巻き取る。",
+        "整流子は連続した一つの導体環でできており、回転しても電機子巻線の接続は変わらない。",
+        "電機子巻線には外部から給電せず、固定子との速さの差により電流を誘導する。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "10-25": {
+      "falseIndices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "statements": [
+        "走行路に沿って設けた導体に、クレーン側の集電子を接触させたまま移動する。",
+        "固定した集電子にクレーン側で巻き取るケーブルを接触させ、その外被から受電する。",
+        "走行路のレールと導体は、がいしを介さず同じ金属枠へ導通させて各相を支持する。",
+        "トロリダクトの内部には導体を設けず、移動する集電子とダクトの間の空気を通じて給電する。",
+        "絶縁トロリでは各相の給電部分を絶縁物で覆うので、集電子も導体に触れず受電する。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "11-26": {
+      "falseIndices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "statements": [
+        "運転指令で主電流を操作器へ流し、操作器が電動機へ送り出した後に接触器が電流を測る。",
+        "接触器の主接点を人が動かし、操作器の接点が電磁力で追従する。",
+        "制御回路に電流が流れると、主回路の電圧は制御回路の電圧と同じ値にそろう。",
+        "操作器が出す指令の電流が、そのまま電動機の固定子巻線を流れる。",
+        "操作器の操作で制御回路に指令が入り、接触器のコイルが励磁されると主接点が動く。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "11-28": {
+      "falseIndices": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "statements": [
+        "水に塩を溶かすと自由に動く電荷が減り、純水より抵抗が高くなる。",
+        "塩水はイオンが電荷を運ぶため、一般に純水よりも電流が流れやすい。",
+        "黒鉛は金属光沢をもつが電気を通しにくいため、接触器の絶縁台に適する。",
+        "乾いた磁器は電気をよく通すため、トロリ線の集電子に用いられる。",
+        "銅とニクロムは電流が流れると発熱するので、導体と絶縁体の区別では後者に分類する。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "12-24": {
+      "falseIndices": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "statements": [
+        "直接制御器の可動接点は指令用であり、電動機の主電流は別置きの接触器で開閉する。",
+        "間接制御器のコイルは主回路と直列であるため、電動機と同じ負荷電流を流して接点を閉じる。",
+        "間接制御では、電動機の容量を大きくするとハンドルの接点にもその主電流を流す必要がある。",
+        "直接制御では操作器自身の接点、間接制御では指令を受けた電磁接触器の主接点に流れる。",
+        "間接制御の主幹制御器がゼロ位置にあるときは、接触器の主接点を閉じた状態に保つのが通常の巻上げ回路である。"
+      ],
+      "combination": false,
+      "asksFalse": false
+    },
+    "12-29": {
+      "falseIndices": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "statements": [
+        "短絡といい、二つの相が低抵抗で接続された状態なので、残りの相の電圧も等しくなる。",
+        "欠相といい、停止中は始動しにくく、運転中には回り続けても過熱するおそれがある。",
+        "逆相といい、磁界の回転方向が正常時と逆になるため、通常と同じトルクで逆転する。",
+        "漏電といい、回路が途切れた相の負荷電流が金属製外箱へ流れる状態を示す。",
+        "電源の周波数が低下した状態で、三相の電圧は正常な対称性を保つ。"
+      ],
+      "combination": false,
       "asksFalse": false
     }
   },
