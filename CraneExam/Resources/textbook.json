@@ -106,7 +106,7 @@
             },
             {
               "type": "img",
-              "asset": "1-1_supplement_f01_20261023",
+              "asset": "ch1_plate_01_20261128",
               "labels": [],
               "legend": [],
               "caption": "同じ「つって運ぶ」機械でも、構造によって区分が違う。",
@@ -168,11 +168,11 @@
               "id": "1-3-e7655746ca7a"
             },
             {
-              "type": "svg",
-              "file": "1-3.svg",
+              "type": "img",
               "caption": "上下・横行・走行・起伏・旋回。矢印の向きと、動く部分を対応させる。",
               "id": "1-3-2b73d7fdb4a2",
-              "style": "figure"
+              "style": "figure",
+              "asset": "ch1_plate_02_20261128"
             },
             {
               "id": "1-3-rev26-motions",
@@ -314,11 +314,11 @@
               "id": "1-2-8a16221bd33c"
             },
             {
-              "type": "svg",
-              "file": "1-2_lifting_load.svg",
+              "type": "img",
               "caption": "つり上げ荷重と定格荷重",
               "id": "1-2-009c83cc7f78",
-              "style": "figure"
+              "style": "figure",
+              "asset": "ch1_plate_03_20261128"
             },
             {
               "type": "p",
@@ -346,11 +346,11 @@
               "id": "1-2-c8aedd83e4ce"
             },
             {
-              "type": "svg",
-              "file": "1-2_radius_overload.svg",
+              "type": "img",
               "caption": "作業半径と過負荷。数値は説明用の例。機械の姿勢は模式。実際の機種・ジブ長さ・姿勢に対応した定格荷重表を確認する",
               "id": "1-2-e739a3c591c4",
-              "style": "figure"
+              "style": "figure",
+              "asset": "ch1_plate_04_20261128"
             },
             {
               "type": "p",
@@ -407,11 +407,11 @@
               "id": "1-2-32c377eb63c1"
             },
             {
-              "type": "svg",
-              "file": "1-2_supplement_f02_20261023.svg",
+              "type": "img",
               "caption": "スパンは走行レールの中心間、揚程はつり具の上限から下限まで。同じ部分の位置を比べる。",
               "id": "1-2-a7e5395a3345",
-              "style": "figure"
+              "style": "figure",
+              "asset": "ch1_plate_05_20261128"
             },
             {
               "type": "sub",
@@ -435,11 +435,11 @@
               ]
             },
             {
-              "type": "svg",
-              "file": "1-2_jib_radius.svg",
+              "type": "img",
               "caption": "ジブ傾斜角と作業半径",
               "id": "1-2-3baa6281d600",
-              "style": "figure"
+              "style": "figure",
+              "asset": "ch1_plate_06_20261128"
             },
             {
               "type": "p",
@@ -495,7 +495,7 @@
             },
             {
               "type": "img",
-              "asset": "1-2_camber_concept21",
+              "asset": "ch1_plate_07_20261128",
               "caption": "キャンバは無負荷時の上向きのそり。荷をつると、荷重によってはりが下向きにたわむ。",
               "id": "1-2-e57a172e3586",
               "style": "figure"
@@ -525,7 +525,7 @@
             },
             {
               "type": "img",
-              "asset": "1-2_runway_rail_readable21",
+              "asset": "ch1_plate_08_20261128",
               "caption": "ランウェイと走行レール。赤の細長い部材＝走行レール　｜　受け桁・支持・継目・固定部を含む範囲＝ランウェイ",
               "legend": [],
               "labels": [],
@@ -538,11 +538,11 @@
               "id": "1-2-a09c3accf748"
             },
             {
-              "type": "svg",
-              "file": "1-2_supplement_f03_20261023.svg",
+              "type": "img",
               "caption": "荷のつり位置が動ける範囲の模式図。固定ジブの実際の範囲は旋回制限・作業半径などで決まる。",
               "id": "1-2-8d699d07a661",
-              "style": "figure"
+              "style": "figure",
+              "asset": "ch1_plate_09_20261128"
             },
             {
               "type": "sub",
@@ -551,10 +551,10 @@
             },
             {
               "id": "1-2-rev26-projection",
-              "type": "svg",
-              "file": "1-2_radius_projection_20261106.svg",
+              "type": "img",
               "caption": "2mと、ジブの水平分5mを足す。角度は水平面から測る。",
-              "style": "figure"
+              "style": "figure",
+              "asset": "ch1_plate_10_20261128"
             },
             {
               "type": "p",
@@ -912,11 +912,11 @@
               ]
             },
             {
-              "type": "svg",
-              "file": "1-5_overhead_parts.svg",
+              "type": "img",
               "caption": "天井クレーン主要部品",
               "id": "1-5-d34713191b90",
-              "style": "figure"
+              "style": "figure",
+              "asset": "ch1_plate_18_20261128"
             },
             {
               "id": "1-5-rev26-structure",
@@ -966,7 +966,7 @@
             },
             {
               "type": "img",
-              "asset": "1-5_girder_sections_readable21",
+              "asset": "ch1_plate_19_20261128",
               "caption": "ガーダの構造比較。特徴：トラスは軽量化しやすい。I・プレートは曲げ、ボックスはねじりへの抵抗を確保しやすい。 強さは寸法・材質・接合・荷重条件で決まる。断面形式だけで優劣を断定しない",
               "legend": [],
               "labels": [],
@@ -1101,7 +1101,7 @@
             },
             {
               "type": "img",
-              "asset": "1-5_trolley_types_readable21",
+              "asset": "ch1_plate_22_20261128",
               "caption": "トロリの種類。巻上装置を台車に搭載／外部の巻上装置からロープを導く／運転室を台車に設ける",
               "legend": [],
               "labels": [],
@@ -1153,7 +1153,7 @@
             },
             {
               "type": "img",
-              "asset": "1-6_hoist_system_readable21",
+              "asset": "ch1_plate_23_20261128",
               "caption": "巻上装置。電動機 → 制動用ブレーキ → 減速機 → ドラム → ワイヤロープ → フック 制動用ブレーキは荷を保持し、巻上げ・巻下げを停止させる。図は代表的な配置",
               "legend": [],
               "labels": [],
@@ -1220,7 +1220,7 @@
             },
             {
               "type": "img",
-              "asset": "1-6_travel_drive_readable21",
+              "asset": "ch1_plate_24_20261128",
               "caption": "走行装置の電動機配置",
               "legend": [],
               "labels": [],
@@ -1264,11 +1264,11 @@
               "id": "1-6-9386be2836f0"
             },
             {
-              "type": "svg",
-              "file": "1-6_slewing.svg",
+              "type": "img",
               "caption": "旋回装置(センターポスト方式)。外歯かみ合いの原理を示す模式図。実際の駆動装置・支持構造は機種により異なる",
               "id": "1-6-424358a9b14a",
-              "style": "figure"
+              "style": "figure",
+              "asset": "ch1_plate_27_20261128"
             },
             {
               "type": "p",
@@ -1465,7 +1465,7 @@
             },
             {
               "type": "img",
-              "asset": "1-9_bearings_readable21",
+              "asset": "ch1_plate_31_20261128",
               "caption": "軸受。受けられる荷重の種類・大きさは軸受の形式による。玉軸受の対応範囲も形式で異なる",
               "legend": [],
               "labels": [],
@@ -1493,7 +1493,7 @@
             },
             {
               "type": "img",
-              "asset": "1-9_thrust_bearing_readable21",
+              "asset": "ch1_plate_32_20261128",
               "caption": "スラスト軸受",
               "legend": [],
               "labels": [],
@@ -1507,7 +1507,7 @@
             },
             {
               "type": "img",
-              "asset": "1-9_supplement_f19_20261023",
+              "asset": "ch1_plate_33_20261128",
               "labels": [],
               "legend": [],
               "caption": "円すいころ軸受はラジアル荷重と片方向のアキシアル荷重を受ける例。プランマブロックは軸受を収める軸受箱。",
@@ -1566,11 +1566,11 @@
               "id": "1-9-e404789400e6"
             },
             {
-              "type": "svg",
-              "file": "1-9_washers_locking.svg",
+              "type": "img",
               "caption": "平座金は座面を保護し、舌付き座金は舌を折り曲げて回り止めにする。",
               "id": "1-9-f4db742414ef",
-              "style": "figure"
+              "style": "figure",
+              "asset": "ch1_plate_35_20261128"
             },
             {
               "type": "p",
@@ -1692,11 +1692,11 @@
               "id": "1-9-83fb64d30399"
             },
             {
-              "type": "svg",
-              "file": "1-9_key.svg",
+              "type": "img",
               "caption": "キーによる固定",
               "id": "1-9-09b7b565fb55",
-              "style": "figure"
+              "style": "figure",
+              "asset": "ch1_plate_39_20261128"
             },
             {
               "type": "p",
@@ -1813,11 +1813,11 @@
               "id": "1-13-cacc71eea4a2"
             },
             {
-              "type": "svg",
-              "file": "1-13_supplement_f22_20261023.svg",
+              "type": "img",
               "caption": "Dはロープの中心が通るピッチ円の直径、dはロープ径。同じdなら、Dが大きいほど曲がりが緩やか。",
               "id": "1-13-27db75f80b9b",
-              "style": "figure"
+              "style": "figure",
+              "asset": "ch1_plate_42_20261128"
             },
             {
               "type": "p",
@@ -1958,7 +1958,7 @@
             },
             {
               "type": "img",
-              "asset": "1-7_wire_structure_readable21",
+              "asset": "ch1_plate_43_20261128",
               "caption": "ワイヤ構造。心綱はストランドを支え、柔軟性や潤滑に関わる。構成・心綱の材質は製品で異なる",
               "legend": [],
               "labels": [],
@@ -2017,7 +2017,7 @@
             },
             {
               "type": "img",
-              "asset": "1-7_supplement_f13_20261023",
+              "asset": "ch1_plate_45_20261128",
               "labels": [],
               "legend": [],
               "caption": "Zより・Sよりはロープのより方向。普通より・ラングよりは、素線とストランドのより方向の組合せで区別する。",
@@ -2140,11 +2140,11 @@
               "id": "1-7-cc6cfb14ef2f"
             },
             {
-              "type": "svg",
-              "file": "1-7_end_fittings.svg",
+              "type": "img",
               "caption": "見分ける目印はロープの端。ソケット止めは筒に素線を広げて固定、圧縮止めはスリーブを押し締める。アイスプライスは編込み、クリップ止めはUボルトと受け台、くさび止めはくさびで固定する。",
               "id": "1-7-3301873fe87c",
-              "style": "figure"
+              "style": "figure",
+              "asset": "ch1_plate_47_20261128"
             },
             {
               "id": "1-7-6a78a6453c9d",
@@ -2278,7 +2278,7 @@
             },
             {
               "type": "img",
-              "asset": "1-8_hook_slings_readable21",
+              "asset": "ch1_plate_48_20261128",
               "caption": "つり具の種類。マグネットは磁性体、バキューム式は表面状態など、各つり具の使用条件を確認する",
               "legend": [],
               "labels": [],
@@ -2286,11 +2286,11 @@
               "style": "figure"
             },
             {
-              "type": "svg",
-              "file": "1-8_hook_latch.svg",
+              "type": "img",
               "caption": "フックの外れ止め",
               "id": "1-8-341d78dad5e5",
-              "style": "figure"
+              "style": "figure",
+              "asset": "ch1_plate_49_20261128"
             },
             {
               "type": "p",
@@ -2472,7 +2472,7 @@
             },
             {
               "type": "img",
-              "asset": "1-10_supplement_f23_20261023",
+              "asset": "ch1_plate_52_20261128",
               "labels": [],
               "legend": [],
               "caption": "重錘形・ロッド形は、つり具の動きを直接検出する例。ねじ形はドラムの回転から位置を検出する例。連動部・停止回路の細部は省略。",
@@ -2594,11 +2594,11 @@
               "id": "1-10-178c4f7c8d05"
             },
             {
-              "type": "svg",
-              "file": "1-12_wheel_stop.svg",
+              "type": "img",
               "caption": "横行レールの車輪止め。クレーン構造規格 第39条。寸法はレールの走行面を基準に測る。寸法の位置を示す模式図",
               "id": "1-10-311dd32b8420",
-              "style": "figure"
+              "style": "figure",
+              "asset": "ch1_plate_53_20261128"
             },
             {
               "id": "1-10-466e51bbb3f8",
@@ -2624,7 +2624,7 @@
             },
             {
               "type": "img",
-              "asset": "1-10_supplement_f24_20261023",
+              "asset": "ch1_plate_54_20261128",
               "labels": [],
               "legend": [],
               "caption": "車輪止めで走行を制限し、緩衝装置で衝撃を和らげる。",
@@ -2646,7 +2646,7 @@
             },
             {
               "type": "img",
-              "asset": "1-10_supplement_f25_20261023",
+              "asset": "ch1_plate_55_20261128",
               "labels": [],
               "legend": [],
               "caption": "接近を検出して停止させ、クレーン同士の衝突を防ぐ。",
@@ -2704,7 +2704,7 @@
             },
             {
               "type": "img",
-              "asset": "1-10_supplement_f26_20261023",
+              "asset": "ch1_plate_56_20261128",
               "labels": [],
               "legend": [],
               "caption": "レールを挟むか、地面側へ固定して、風による逸走を防ぐ。",
@@ -2841,7 +2841,7 @@
             },
             {
               "type": "img",
-              "asset": "1-11_supplement_f28_20261023",
+              "asset": "ch1_plate_58_20261128",
               "labels": [],
               "legend": [],
               "caption": "ばねで制動し、通電した電磁石で開放する方式の模式図。部品の形による分類と、作動方式による分類を分ける。",
@@ -2902,7 +2902,7 @@
             },
             {
               "type": "img",
-              "asset": "1-11_supplement_f31_20261023",
+              "asset": "ch1_plate_61_20261128",
               "labels": [],
               "legend": [],
               "caption": "足で加えた力を油圧で伝え、パッドで円板を挟んで制動する模式図。押上機ブレーキの開放動作とは区別する。",
@@ -3135,7 +3135,7 @@
             },
             {
               "type": "img",
-              "asset": "1-14_supplement_f33_20261023",
+              "asset": "ch1_plate_65_20261128",
               "labels": [],
               "legend": [],
               "caption": "切った後も少し進むため、短い操作で位置を合わせる。",
@@ -3272,7 +3272,7 @@
             },
             {
               "type": "img",
-              "asset": "1-7_wire_reject_readable21",
+              "asset": "ch1_plate_67_20261128",
               "caption": "ワイヤ損傷の例",
               "legend": [],
               "labels": [],
@@ -3338,7 +3338,7 @@
             },
             {
               "type": "img",
-              "asset": "1-12_lubrication_readable21",
+              "asset": "ch1_plate_68_20261128",
               "caption": "グリースカップ・グリースガン・集中給油。周期は上の表で確認する。",
               "legend": [],
               "labels": [],
